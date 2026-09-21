@@ -1,0 +1,107 @@
+{
+  "ticker": "GBIL",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 10,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "US GOVT T-BILL 08 OCT 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "7.2",
+      "Market Value": "567194400",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 27 NOV 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "7.15",
+      "Market Value": "563255550",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 22 OCT 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "6.8",
+      "Market Value": "535683600",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 29 OCT 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "6.56",
+      "Market Value": "516777120",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 27 OCT 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "6.52",
+      "Market Value": "513626040",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 25 FEB 2027",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "4.18",
+      "Market Value": "329287860",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT 3.875% 31 JUL 2027",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.93",
+      "Market Value": "309593610",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT T-BILL 24 NOV 2026",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.84",
+      "Market Value": "302503680",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT 3.875% 31 MAR 2027",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.68",
+      "Market Value": "289899360",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    },
+    {
+      "Name": "US GOVT 3.75% 30 APR 2027",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.66",
+      "Market Value": "288323820",
+      "Shares Held": "-",
+      "Asset Category": "Fixed Income"
+    }
+  ]
+}

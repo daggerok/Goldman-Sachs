@@ -1,0 +1,267 @@
+{
+  "ticker": "GBIL",
+  "name": "Goldman Sachs Access Treasury 0-1 Year ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
+    "productPageRendering": "offline seed snapshot of the official fund page (2026-09-21)",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": null,
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GBIL",
+    "holdingsSource": "offline seed snapshot: official top-10 holdings transcribed from the fund page (full sheet refreshes from SEC EDGAR Form N-PORT-P in CI)",
+    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
+    "distributionsSource": "offline seed snapshot: official fund-page Distributions table (2026-09-21)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "381430529",
+    "isin": "US3814305294",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "FTSE US Treasury 0-1 Year Composite Select Index (Total Return, Unhedged, USD)",
+    "exchange": "NYSE Arca",
+    "morningstarCategory": null,
+    "navTicker": "GBIL.NV",
+    "iopvTicker": "GBILIV"
+  },
+  "expenseRatio": {
+    "display": "0.12%",
+    "value": 0.12,
+    "gross": 0.14,
+    "kind": "Net Expense Ratio published on the official fund page"
+  },
+  "nav": {
+    "display": "$99.98",
+    "value": 99.98,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$99.99",
+    "value": 99.99,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$7.88 B",
+    "value": 7877700000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 40,
+    "bidAskMidpoint": 99.99,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": 14,
+    "atNavDays": 32,
+    "discountDays": 16
+  },
+  "yields": {
+    "dividendYield": 3.67,
+    "dividendYieldText": "3.67%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 3.67,
+    "secYield": 3.69,
+    "secYieldText": "3.69%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.31,
+      "mo1Text": "0.31%",
+      "mo3": 0.89,
+      "mo3Text": "0.89%",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": 2.3,
+      "ytdText": "2.30%",
+      "yr1": 3.7,
+      "yr1Text": "3.70%",
+      "yr3": 4.52,
+      "yr3Text": "4.52%",
+      "yr5": 3.5,
+      "yr5Text": "3.50%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 2.31,
+      "sinceInceptionText": "2.31%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 3.81,
+      "yr3": null,
+      "yr5": 3.37,
+      "yr10": null,
+      "sinceInception": 2.29
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.29,
+      "mo1Text": "0.29%",
+      "mo3": 0.89,
+      "mo3Text": "0.89%",
+      "ytd": 2.28,
+      "ytdText": "2.28%",
+      "yr1": 3.69,
+      "yr1Text": "3.69%",
+      "yr3": 4.5,
+      "yr3Text": "4.50%",
+      "yr5": 3.5,
+      "yr5Text": "3.50%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 25.64,
+      "sinceInceptionText": "25.64%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 3.82,
+      "yr1Text": "3.82%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 3.36,
+      "yr5Text": "3.36%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 2.29,
+      "sinceInceptionText": "2.29%"
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "offline seed snapshot: official fund-page Distributions table (2026-09-21)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/31/2025",
+        "0.3382"
+      ],
+      [
+        "02/02/2026",
+        "0.2731"
+      ],
+      [
+        "03/02/2026",
+        "0.2747"
+      ],
+      [
+        "04/01/2026",
+        "0.3022"
+      ],
+      [
+        "05/01/2026",
+        "0.2935"
+      ],
+      [
+        "06/01/2026",
+        "0.2777"
+      ],
+      [
+        "07/01/2026",
+        "0.3109"
+      ],
+      [
+        "08/03/2026",
+        "0.3053"
+      ],
+      [
+        "09/01/2026",
+        "0.3047"
+      ]
+    ]
+  },
+  "topHoldings": {
+    "asOfDate": "Sep 17 2026",
+    "asOf": "Sep 17 2026",
+    "top10Pct": 53.52,
+    "rows": [
+      {
+        "name": "US GOVT T-BILL 08 OCT 2026",
+        "weight": 7.2
+      },
+      {
+        "name": "US GOVT T-BILL 27 NOV 2026",
+        "weight": 7.15
+      },
+      {
+        "name": "US GOVT T-BILL 22 OCT 2026",
+        "weight": 6.8
+      },
+      {
+        "name": "US GOVT T-BILL 29 OCT 2026",
+        "weight": 6.56
+      },
+      {
+        "name": "US GOVT T-BILL 27 OCT 2026",
+        "weight": 6.52
+      },
+      {
+        "name": "US GOVT T-BILL 25 FEB 2027",
+        "weight": 4.18
+      },
+      {
+        "name": "US GOVT 3.875% 31 JUL 2027",
+        "weight": 3.93
+      },
+      {
+        "name": "US GOVT T-BILL 24 NOV 2026",
+        "weight": 3.84
+      },
+      {
+        "name": "US GOVT 3.875% 31 MAR 2027",
+        "weight": 3.68
+      },
+      {
+        "name": "US GOVT 3.75% 30 APR 2027",
+        "weight": 3.66
+      }
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 10,
+    "asOfDate": "2026-09-17",
+    "asOf": "Sep 17 2026",
+    "source": "offline seed snapshot: official top-10 holdings transcribed from the fund page (full sheet refreshes from SEC EDGAR Form N-PORT-P in CI)",
+    "marketValueBasis": "derived: published top-10 weight x Total Fund Assets (Daily)",
+    "publishedTotalHoldings": 40
+  },
+  "history": {
+    "pages": [],
+    "pageSize": 1000,
+    "totalRows": 0,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+  }
+}

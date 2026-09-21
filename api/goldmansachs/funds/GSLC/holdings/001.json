@@ -1,0 +1,107 @@
+{
+  "ticker": "GSLC",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 10,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "NVIDIA Corp",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "8.01",
+      "Market Value": "1209391452",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Apple Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "7.45",
+      "Market Value": "1124839740",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Microsoft Corp",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.25",
+      "Market Value": "792672300",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Amazon.com Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.42",
+      "Market Value": "516369384",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Alphabet Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.95",
+      "Market Value": "445406340",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Meta Platforms Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.23",
+      "Market Value": "336696996",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Broadcom Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.19",
+      "Market Value": "330657588",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Alphabet Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1.84",
+      "Market Value": "277812768",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "Micron Technology Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1.27",
+      "Market Value": "191751204",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    },
+    {
+      "Name": "JPMorgan Chase & Co",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1.24",
+      "Market Value": "187221648",
+      "Shares Held": "-",
+      "Asset Category": "Equity"
+    }
+  ]
+}

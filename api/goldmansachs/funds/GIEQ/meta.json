@@ -1,0 +1,141 @@
+{
+  "ticker": "GIEQ",
+  "name": "Goldman Sachs Data Enhanced International Equity ETF",
+  "category": "Equity",
+  "categoryPath": "Equity",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
+    "productPageRendering": "offline seed snapshot: fund finder card only (detail refresh in CI)",
+    "productPageAsOf": null,
+    "holdingsDownload": null,
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIEQ",
+    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
+    "distributionsSource": "offline seed snapshot carries no distribution history for this fund",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W382",
+    "isin": "US38149W3824",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": null,
+    "exchange": null,
+    "morningstarCategory": null,
+    "navTicker": null,
+    "iopvTicker": null
+  },
+  "expenseRatio": {
+    "display": "—",
+    "value": null,
+    "gross": null,
+    "kind": "Net Expense Ratio published on the official fund page"
+  },
+  "nav": {
+    "display": "$42.17",
+    "value": 42.17,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "Sep 17 2026",
+    "source": "offline seed snapshot carries no market price for this fund"
+  },
+  "premiumDiscount": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "Sep 17 2026",
+    "source": "offline seed snapshot carries no premium/discount for this fund"
+  },
+  "aum": {
+    "display": "—",
+    "value": null,
+    "asOfDate": "—",
+    "source": "offline seed snapshot carries no AUM for this fund"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": null,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "offline seed snapshot carries no distribution rate for this fund",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "offline seed snapshot carries no SEC yield for this fund"
+  },
+  "returns": {
+    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "monthEnd": {
+      "asOfDate": "—",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": {
+      "asOfDate": "—",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
+    }
+  },
+  "officialMarketPriceReturns": null,
+  "distributions": {
+    "frequency": "Annually",
+    "frequencyCode": "12 - Annually",
+    "paymentsPerYear": 1,
+    "source": "offline seed snapshot carries no distribution history for this fund",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [],
+    "pageSize": 250,
+    "totalRows": 0,
+    "asOfDate": null,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+  },
+  "history": {
+    "pages": [],
+    "pageSize": 1000,
+    "totalRows": 0,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+  }
+}
