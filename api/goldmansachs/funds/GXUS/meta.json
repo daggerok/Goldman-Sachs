@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1882879/000094040026028142/0000940400-26-028142.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,16 +22,16 @@
     "cusip": "38150W206",
     "isin": "US38150W2061",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Solactive GBS Global ex United States Large & Mid Cap Index NTR(Net Total Return",
+    "exchange": "NYSE",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GXUS.NV",
+    "iopvTicker": "GXUSIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
+    "display": "0.18%",
+    "value": 0.18,
+    "gross": 0.18,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$637.02 M",
-    "value": 637020750.07,
-    "asOfDate": "May 29 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-29)"
+    "display": "$641.99 M",
+    "value": 641990000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 2584,
     "bidAskMidpoint": 64.08,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -229,7 +229,8 @@
     "asOfDate": "2026-05-29",
     "asOf": "May 29 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028142, report period 2026-05-29)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 2584
   },
   "history": {
     "pages": [

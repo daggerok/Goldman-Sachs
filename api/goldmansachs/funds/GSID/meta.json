@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103362/381430180/goldman-sachs-market-beta-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103362/381430180/goldman-sachs-market-beta-international-equity-etf",
-    "productPageRendering": "not fetched in this run",
-    "productPageAsOf": null,
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028084/0000940400-26-028084.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,16 +22,16 @@
     "cusip": "381430180",
     "isin": "US3814301806",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Solactive GBS Developed Markets ex North America Large & Mid Cap Index",
+    "exchange": "Cboe BZX",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GSID.NV",
+    "iopvTicker": "GSIDIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
+    "display": "0.2%",
+    "value": 0.2,
+    "gross": 0.25,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -40,28 +40,28 @@
     "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$76.12",
-    "value": 76.12,
-    "asOfDate": "Sep 18 2026",
-    "source": "Yahoo Finance last regular-session price"
+    "display": "$76.94",
+    "value": 76.94,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.81%",
-    "value": -0.81,
+    "display": "0.26%",
+    "value": 0.26,
     "asOfDate": "Sep 17 2026",
-    "source": "computed from market price / fund-page NAV"
+    "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.05 B",
-    "value": 1046010860.14,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$1.09 B",
+    "value": 1089740000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": null,
+    "publishedTotalHoldings": 895,
+    "bidAskMidpoint": 76.82,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,48 +69,87 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": 4.69,
-    "dividendYieldText": "4.69%",
-    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not published on the official fund page for this fund"
+    "dividendYield": 2.39,
+    "dividendYieldText": "2.39%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 2.39,
+    "secYield": 2.09,
+    "secYieldText": "2.09%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns",
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 18 2026",
-      "mo1": -1.9,
-      "mo1Text": "-1.90%",
-      "mo3": null,
-      "mo3Text": "—",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.99,
+      "mo1Text": "1.99%",
+      "mo3": 4.06,
+      "mo3Text": "4.06%",
       "qtd": 2.01,
       "qtdText": "2.01%",
-      "ytd": 11.52,
-      "ytdText": "11.52%",
-      "yr1": 17.21,
-      "yr1Text": "17.21%",
-      "yr3": 17.69,
-      "yr3Text": "17.69%",
-      "yr5": 8.68,
-      "yr5Text": "8.68%",
+      "ytd": 14.06,
+      "ytdText": "14.06%",
+      "yr1": 21.8,
+      "yr1Text": "21.80%",
+      "yr3": 18.3,
+      "yr3Text": "18.30%",
+      "yr5": 9.26,
+      "yr5Text": "9.26%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 13.52,
-      "sinceInceptionText": "13.52%"
+      "sinceInception": 14.05,
+      "sinceInceptionText": "14.05%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
+      "yr1": 20.58,
       "yr3": null,
-      "yr5": null,
+      "yr5": 8.9,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 13.7
     }
   },
-  "officialMarketPriceReturns": null,
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.82,
+      "mo1Text": "1.82%",
+      "mo3": 4.05,
+      "mo3Text": "4.05%",
+      "ytd": 13.97,
+      "ytdText": "13.97%",
+      "yr1": 21.76,
+      "yr1Text": "21.76%",
+      "yr3": 18.25,
+      "yr3Text": "18.25%",
+      "yr5": 9.14,
+      "yr5Text": "9.14%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 14,
+      "sinceInceptionText": "14.00%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 20.48,
+      "yr1Text": "20.48%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 8.89,
+      "yr5Text": "8.89%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 13.77,
+      "sinceInceptionText": "13.77%"
+    }
+  },
   "distributions": {
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
@@ -232,7 +271,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028084, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 895
   },
   "history": {
     "pages": [
