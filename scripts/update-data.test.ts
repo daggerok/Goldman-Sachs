@@ -15,6 +15,7 @@ import {
   mergeOfficialReturns,
   monthDateToIso,
   normalizeHoldingName,
+  normalizeMarkdownLinks,
   nportUrlFor,
   numberOrNull,
   parseAumRange,
@@ -483,6 +484,24 @@ describe('Goldman Sachs fund finder parser', () => {
     expect(aaau.returns.sinceInception).toBe(17.36);
     expect(aaau.inception).toBe('2018-07-26');
     expect(aaau.fundPage).toBe('https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf');
+  });
+
+  test('normalizeMarkdownLinks absolutizes relative links and inlines reference links', () => {
+    expect(normalizeMarkdownLinks('[a](/en-us/x)')).toBe('[a](https://am.gs.com/en-us/x)');
+    expect(normalizeMarkdownLinks('[a](https://am.gs.com/en-us/x)')).toBe('[a](https://am.gs.com/en-us/x)');
+    expect(normalizeMarkdownLinks('[a](//cdn/x)')).toBe('[a](//cdn/x)');
+    expect(normalizeMarkdownLinks('[a][1]\n\n[1]: https://am.gs.com/en-us/x')).toBe('[a](https://am.gs.com/en-us/x)\n\n[1]: https://am.gs.com/en-us/x');
+    expect(normalizeMarkdownLinks('[a][9]')).toBe('[a][9]');
+  });
+
+  test('resolves relative finder links before parsing cards', () => {
+    const relative = FUND_FINDER_MARKDOWN.replaceAll('](https://am.gs.com/', '](/');
+    const funds = parseCatalogText(relative);
+    expect(funds.map((fund) => fund.ticker)).toEqual(['GBIL', 'GEMQ', 'GSLC']);
+    const gbil = funds.find((fund) => fund.ticker === 'GBIL')!;
+    expect(gbil.fundPage).toBe('https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf');
+    expect(gbil.frequency).toBe('Monthly');
+    expect(gbil.inception).toBe('2016-09-06');
   });
 
   test('throws when no fund rows are present', () => {

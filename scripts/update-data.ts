@@ -676,8 +676,23 @@ const FINDER_CARD_LINK = /\[([^\]]+?)\]\((https?:\/\/[^)\s]*\/funds\/detail\/(PV
  * Frequency | Documents). The finder prints no expense ratios or AUM, so
  * those stay null until the fund-page pass.
  */
+/**
+ * Normalizes markdown links for card parsing. The rendering proxy usually
+ * emits absolute inline links, but some renders use site-relative URLs or
+ * reference-style links (`[name][id]` + `[id]: url`); both hide cards from
+ * the link pattern, so relatives are absolutized and references inlined.
+ * Unknown references and protocol-relative URLs are left untouched.
+ */
+export function normalizeMarkdownLinks(text: string, base = 'https://am.gs.com'): string {
+  const refs = new Map<string, string>();
+  for (const match of String(text ?? '').matchAll(/^\s*\[([^\]]+)\]:\s*(\S+)/gm)) refs.set(match[1], match[2]);
+  let out = String(text ?? '');
+  if (refs.size) out = out.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (full, label, id) => (refs.has(id) ? `[${label}](${refs.get(id)})` : full));
+  return out.replace(/(\[[^\]]*\]\()\/(?!\/)([^)\s]*)\)/g, `$1${base}/$2)`);
+}
+
 export function parseCatalogText(text: string): CatalogFund[] {
-  const source = htmlToText(stripProxyPreamble(text));
+  const source = htmlToText(stripProxyPreamble(normalizeMarkdownLinks(text)));
   const lines = source.split('\n');
   const funds = new Map<string, CatalogFund>();
   for (let index = 0; index < lines.length; index += 1) {
@@ -868,6 +883,12 @@ const ISSUER_DIRECT_DENIAL_LIMIT = 2;
  * bot-wall/HTML error pages so that the fallback is taken instead of parsing
  * garbage.
  */
+/** Short text preview for fetch diagnostics (reveals rate-limit and bot-wall bodies). */
+function responseSnippet(text: string): string {
+  const snippet = cleanText(String(text ?? '').replace(/<[^>]+>/g, ' ')).slice(0, 200);
+  return snippet ? `"${snippet}"` : '(empty body)';
+}
+
 async function fetchIssuerText(url: string, label: string, config: UpdaterConfig, validate: (text: string) => boolean, accept = 'text/html,application/xhtml+xml,text/csv,text/plain;q=0.9,*/*;q=0.8', options: { cache?: boolean } = {}): Promise<{ text: string; via: 'direct' | 'proxy' }> {
   let lastError: unknown = new Error('direct request skipped (issuer CDN denies this network)');
   if (issuerDirectDenials < ISSUER_DIRECT_DENIAL_LIMIT) {
@@ -877,7 +898,7 @@ async function fetchIssuerText(url: string, label: string, config: UpdaterConfig
         issuerDirectDenials = 0;
         return { text, via: 'direct' };
       }
-      lastError = new Error('direct response did not contain the expected content');
+      lastError = new Error(`direct response did not contain the expected content (${text.length} chars: ${responseSnippet(text)})`);
     } catch (error) {
       lastError = error;
       if (/\b403\b/.test(error instanceof Error ? error.message : String(error))) {
@@ -886,17 +907,29 @@ async function fetchIssuerText(url: string, label: string, config: UpdaterConfig
       }
     }
   }
-  try {
-    const headers: Record<string, string> = { 'User-Agent': SEC_UA, Accept: 'text/plain,text/markdown;q=0.9,*/*;q=0.8' };
-    if (options.cache === false) headers['X-No-Cache'] = 'true';
-    const text = stripProxyPreamble(await fetchText(proxyUrl(url), `${label} (proxy)`, config, headers));
-    if (validate(text)) return { text, via: 'proxy' };
-    throw new Error('proxy response did not contain the expected content');
-  } catch (error) {
-    const first = lastError instanceof Error ? lastError.message : String(lastError);
-    const second = error instanceof Error ? error.message : String(error);
-    throw new Error(`${label}: ${first}; ${second}`);
+  // A proxy response that fails validation is retried once after a short
+  // backoff: reader renders occasionally come back truncated or throttled.
+  // Transport errors break out immediately (fetchText already retried those).
+  let proxyError: unknown = new Error('proxy request skipped');
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const headers: Record<string, string> = { 'User-Agent': SEC_UA, Accept: 'text/plain,text/markdown;q=0.9,*/*;q=0.8' };
+      if (options.cache === false) headers['X-No-Cache'] = 'true';
+      const text = stripProxyPreamble(await fetchText(proxyUrl(url), `${label} (proxy)`, config, headers));
+      if (validate(text)) return { text, via: 'proxy' };
+      proxyError = new Error(`proxy response did not contain the expected content (${text.length} chars: ${responseSnippet(text)})`);
+      if (attempt < 2) {
+        console.warn(`${label} (proxy): unexpected content, retrying once after a short backoff`);
+        await sleep(8000);
+      }
+    } catch (error) {
+      proxyError = error;
+      break;
+    }
   }
+  const first = lastError instanceof Error ? lastError.message : String(lastError);
+  const second = proxyError instanceof Error ? proxyError.message : String(proxyError);
+  throw new Error(`${label}: ${first}; ${second}`);
 }
 
 // ---------------------------------------------------------------------------
