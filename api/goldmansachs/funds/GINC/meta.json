@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,17 +22,17 @@
     "cusip": "38151N882",
     "isin": "US38151N8829",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Bloomberg US Aggregate Bond Index",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GINC.NV",
+    "iopvTicker": "N/A"
   },
   "expenseRatio": {
     "display": "0.4%",
     "value": 0.4,
     "gross": 0.4,
-    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$49.39",
@@ -55,12 +55,12 @@
     "display": "$147.86 M",
     "value": 147860000,
     "asOfDate": "Sep 17 2026",
-    "source": "previous run"
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 479,
     "bidAskMidpoint": 49.35,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -133,9 +133,9 @@
     "quarterEnd": null
   },
   "distributions": {
-    "frequency": "Unknown",
-    "frequencyCode": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
     "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",
@@ -155,7 +155,8 @@
     "totalRows": 0,
     "asOfDate": null,
     "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "publishedTotalHoldings": 479
   },
   "history": {
     "pages": [

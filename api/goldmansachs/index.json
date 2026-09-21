@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T03:31:10Z",
+  "generatedAt": "2026-09-21T03:50:12Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -432,9 +432,9 @@
       "closePriceValue": 49.38,
       "premiumDiscount": "-0.08%",
       "premiumDiscountValue": -0.08,
-      "frequencyCode": "00 - Unknown",
+      "frequencyCode": "01 - Monthly",
       "distributions": {
-        "frequency": "Unknown",
+        "frequency": "Monthly",
         "exDate": "09/01/2026",
         "dividend": "0.13"
       },
@@ -458,8 +458,8 @@
           "yr5Text": "-0.22%",
           "yr10": 1.81,
           "yr10Text": "1.81%",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 3.47,
+          "sinceInceptionText": "3.47%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -480,7 +480,7 @@
         "cagr3y": 4.92,
         "cagr5y": -0.22,
         "cagr10y": 1.81,
-        "siAnn": null,
+        "siAnn": 3.47,
         "dividendYield": 0.36,
         "dividendYieldText": "0.36%",
         "secYield": null,
@@ -511,9 +511,9 @@
       "closePriceValue": 37.25,
       "premiumDiscount": "0.03%",
       "premiumDiscountValue": 0.03,
-      "frequencyCode": "12 - Annually",
+      "frequencyCode": "04 - Quarterly",
       "distributions": {
-        "frequency": "Annual",
+        "frequency": "Quarterly",
         "exDate": "12/23/2025",
         "dividend": "0.113"
       },
@@ -590,9 +590,9 @@
       "closePriceValue": 51.22,
       "premiumDiscount": "1.19%",
       "premiumDiscountValue": 1.19,
-      "frequencyCode": "04 - Quarterly",
+      "frequencyCode": "12 - Annually",
       "distributions": {
-        "frequency": "Quarterly",
+        "frequency": "Annually",
         "exDate": "12/23/2025",
         "dividend": "0.958"
       },
@@ -616,8 +616,8 @@
           "yr5Text": "8.27%",
           "yr10": 8.79,
           "yr10Text": "8.79%",
-          "sinceInception": 9.36,
-          "sinceInceptionText": "9.36%"
+          "sinceInception": 9.24,
+          "sinceInceptionText": "9.24%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -638,7 +638,7 @@
         "cagr3y": 22.57,
         "cagr5y": 8.27,
         "cagr10y": 8.79,
-        "siAnn": 9.36,
+        "siAnn": 9.24,
         "dividendYield": 1.87,
         "dividendYieldText": "1.87%",
         "secYield": 1.86,
@@ -1134,11 +1134,11 @@
       "terValue": 0.29,
       "nav": "$49.04",
       "navValue": 49.04,
-      "aum": "$187.09 M",
-      "aumValue": 187092041.8,
+      "aum": "$231.71 M",
+      "aumValue": 231710000,
       "asOfDate": "Sep 17 2026",
       "inceptionDate": "Jun 24 2025",
-      "exchange": "PCX",
+      "exchange": "NYSE Arca",
       "closePrice": "$49.11",
       "closePriceValue": 49.11,
       "premiumDiscount": "0.14%",
@@ -1217,14 +1217,14 @@
       "aumValue": 147860000,
       "asOfDate": "Sep 17 2026",
       "inceptionDate": "Dec 3 2019",
-      "exchange": "PCX",
+      "exchange": "NYSE Arca",
       "closePrice": "$49.35",
       "closePriceValue": 49.35,
       "premiumDiscount": "-0.09%",
       "premiumDiscountValue": -0.09,
-      "frequencyCode": "00 - Unknown",
+      "frequencyCode": "01 - Monthly",
       "distributions": {
-        "frequency": "Unknown",
+        "frequency": "Monthly",
         "exDate": "09/01/2026",
         "dividend": "0.294"
       },
@@ -1933,9 +1933,9 @@
       "closePriceValue": 68.95,
       "premiumDiscount": "1.21%",
       "premiumDiscountValue": 1.21,
-      "frequencyCode": "04 - Quarterly",
+      "frequencyCode": "12 - Annually",
       "distributions": {
-        "frequency": "Quarterly",
+        "frequency": "Annually",
         "exDate": "12/23/2025",
         "dividend": "1.423"
       },
@@ -2012,9 +2012,9 @@
       "closePriceValue": 48.94,
       "premiumDiscount": "-0.03%",
       "premiumDiscountValue": -0.03,
-      "frequencyCode": "06 - Semi-annually",
+      "frequencyCode": "04 - Quarterly",
       "distributions": {
-        "frequency": "Semi-Annual",
+        "frequency": "Quarterly",
         "exDate": "06/24/2026",
         "dividend": "0.412"
       },
@@ -2038,8 +2038,8 @@
           "yr5Text": "8.84%",
           "yr10": 9.88,
           "yr10Text": "9.88%",
-          "sinceInception": 9.18,
-          "sinceInceptionText": "9.18%"
+          "sinceInception": 10.02,
+          "sinceInceptionText": "10.02%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -2060,7 +2060,7 @@
         "cagr3y": 17.74,
         "cagr5y": 8.84,
         "cagr10y": 9.88,
-        "siAnn": 9.18,
+        "siAnn": 10.02,
         "dividendYield": 2.69,
         "dividendYieldText": "2.69%",
         "secYield": 2.26,
@@ -2196,8 +2196,8 @@
           "yr5Text": "10.89%",
           "yr10": 17.27,
           "yr10Text": "17.27%",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 8.75,
+          "sinceInceptionText": "8.75%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -2218,7 +2218,7 @@
         "cagr3y": 22.26,
         "cagr5y": 10.89,
         "cagr10y": 17.27,
-        "siAnn": null,
+        "siAnn": 8.75,
         "dividendYield": 0,
         "dividendYieldText": "0.00%",
         "secYield": 0.04,
@@ -2319,11 +2319,11 @@
       "terValue": 0.25,
       "nav": "$47.21",
       "navValue": 47.21,
-      "aum": "$6.02 B",
-      "aumValue": 6024170000,
+      "aum": "$5.82 B",
+      "aumValue": 5815314989.1,
       "asOfDate": "Sep 17 2026",
       "inceptionDate": "Nov 6 2015",
-      "exchange": "NYSE Arca",
+      "exchange": "PCX",
       "closePrice": "$47.28",
       "closePriceValue": 47.28,
       "premiumDiscount": "0.15%",
@@ -2354,8 +2354,8 @@
           "yr5Text": "9.19%",
           "yr10": 9.74,
           "yr10Text": "9.74%",
-          "sinceInception": 8.82,
-          "sinceInceptionText": "8.82%"
+          "sinceInception": 9.06,
+          "sinceInceptionText": "9.06%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -2376,7 +2376,7 @@
         "cagr3y": 18.65,
         "cagr5y": 9.19,
         "cagr10y": 9.74,
-        "siAnn": 8.82,
+        "siAnn": 9.06,
         "dividendYield": 2.45,
         "dividendYieldText": "2.45%",
         "secYield": 2.13,
@@ -2407,9 +2407,9 @@
       "closePriceValue": 56.1,
       "premiumDiscount": "0.89%",
       "premiumDiscountValue": 0.89,
-      "frequencyCode": "06 - Semi-annually",
+      "frequencyCode": "04 - Quarterly",
       "distributions": {
-        "frequency": "Semi-Annual",
+        "frequency": "Quarterly",
         "exDate": "06/24/2026",
         "dividend": "0.412"
       },
@@ -2433,8 +2433,8 @@
           "yr5Text": "9.89%",
           "yr10": 9.5,
           "yr10Text": "9.50%",
-          "sinceInception": 9.52,
-          "sinceInceptionText": "9.52%"
+          "sinceInception": 9.75,
+          "sinceInceptionText": "9.75%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -2455,7 +2455,7 @@
         "cagr3y": 19.44,
         "cagr5y": 9.89,
         "cagr10y": 9.5,
-        "siAnn": 9.52,
+        "siAnn": 9.75,
         "dividendYield": 1.95,
         "dividendYieldText": "1.95%",
         "secYield": 1.39,
@@ -2512,8 +2512,8 @@
           "yr5Text": "11.38%",
           "yr10": 14.48,
           "yr10Text": "14.48%",
-          "sinceInception": 13.97,
-          "sinceInceptionText": "13.97%"
+          "sinceInception": 14.03,
+          "sinceInceptionText": "14.03%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -2534,7 +2534,7 @@
         "cagr3y": 19.58,
         "cagr5y": 11.38,
         "cagr10y": 14.48,
-        "siAnn": 13.97,
+        "siAnn": 14.03,
         "dividendYield": 0.92,
         "dividendYieldText": "0.92%",
         "secYield": 0.97,
@@ -3065,8 +3065,8 @@
           "yr5Text": "12.86%",
           "yr10": 20.42,
           "yr10Text": "20.42%",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 10.74,
+          "sinceInceptionText": "10.74%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -3087,7 +3087,7 @@
         "cagr3y": 28.42,
         "cagr5y": 12.86,
         "cagr10y": 20.42,
-        "siAnn": null,
+        "siAnn": 10.74,
         "dividendYield": 0,
         "dividendYieldText": "0.00%",
         "secYield": -0.21,
@@ -3355,9 +3355,9 @@
       "closePriceValue": 45.52,
       "premiumDiscount": "0.03%",
       "premiumDiscountValue": 0.03,
-      "frequencyCode": "00 - Unknown",
+      "frequencyCode": "12 - Annually",
       "distributions": {
-        "frequency": "Unknown",
+        "frequency": "Annually",
         "exDate": "12/23/2025",
         "dividend": "0.295"
       },
@@ -3381,8 +3381,8 @@
           "yr5Text": "12.20%",
           "yr10": 15.53,
           "yr10Text": "15.53%",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 12.67,
+          "sinceInceptionText": "12.67%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -3403,7 +3403,7 @@
         "cagr3y": 19.12,
         "cagr5y": 12.2,
         "cagr10y": 15.53,
-        "siAnn": null,
+        "siAnn": 12.67,
         "dividendYield": 0.64,
         "dividendYieldText": "0.64%",
         "secYield": 0.59,
@@ -3425,18 +3425,18 @@
       "terValue": 0.45,
       "nav": "$168.80",
       "navValue": 168.8,
-      "aum": "$565.47 M",
-      "aumValue": 565470000,
+      "aum": "$569.67 M",
+      "aumValue": 569667997.08,
       "asOfDate": "Sep 17 2026",
       "inceptionDate": "Nov 1 2016",
-      "exchange": "NYSE Arca",
+      "exchange": "PCX",
       "closePrice": "$169.07",
       "closePriceValue": 169.07,
       "premiumDiscount": "0.16%",
       "premiumDiscountValue": 0.16,
-      "frequencyCode": "12 - Annually",
+      "frequencyCode": "04 - Quarterly",
       "distributions": {
-        "frequency": "Annual",
+        "frequency": "Quarterly",
         "exDate": "12/23/2025",
         "dividend": "0.519"
       },
@@ -3513,9 +3513,9 @@
       "closePriceValue": 47.96,
       "premiumDiscount": "0.05%",
       "premiumDiscountValue": 0.05,
-      "frequencyCode": "00 - Unknown",
+      "frequencyCode": "12 - Annually",
       "distributions": {
-        "frequency": "Unknown",
+        "frequency": "Annually",
         "exDate": "12/23/2025",
         "dividend": "0.474"
       },
@@ -3539,8 +3539,8 @@
           "yr5Text": "11.37%",
           "yr10": 12.13,
           "yr10Text": "12.13%",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 10.93,
+          "sinceInceptionText": "10.93%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
@@ -3561,7 +3561,7 @@
         "cagr3y": 17.22,
         "cagr5y": 11.37,
         "cagr10y": 12.13,
-        "siAnn": null,
+        "siAnn": 10.93,
         "dividendYield": 0.98,
         "dividendYieldText": "0.98%",
         "secYield": 0.98,
@@ -3662,15 +3662,15 @@
       "terValue": 0.18,
       "nav": "$63.53",
       "navValue": 63.53,
-      "aum": "$637.02 M",
-      "aumValue": 637020750.07,
+      "aum": "$641.99 M",
+      "aumValue": 641990000,
       "asOfDate": "Sep 17 2026",
       "inceptionDate": "May 31 2023",
-      "exchange": "PCX",
-      "closePrice": "$63.71",
-      "closePriceValue": 63.7128,
-      "premiumDiscount": "0.29%",
-      "premiumDiscountValue": 0.29,
+      "exchange": "NYSE",
+      "closePrice": "$64.10",
+      "closePriceValue": 64.1,
+      "premiumDiscount": "0.89%",
+      "premiumDiscountValue": 0.89,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
@@ -3678,53 +3678,53 @@
         "dividend": "0.56"
       },
       "returns": {
-        "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns",
+        "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
         "monthEnd": {
-          "asOfDate": "Sep 18 2026",
-          "mo1": -0.42,
-          "mo1Text": "-0.42%",
-          "mo3": null,
-          "mo3Text": "—",
+          "asOfDate": "Aug 31 2026",
+          "mo1": 2.57,
+          "mo1Text": "2.57%",
+          "mo3": 2.1,
+          "mo3Text": "2.10%",
           "qtd": 2.39,
           "qtdText": "2.39%",
-          "ytd": 15.96,
-          "ytdText": "15.96%",
-          "yr1": 21.83,
-          "yr1Text": "21.83%",
-          "yr3": 18.93,
-          "yr3Text": "18.93%",
+          "ytd": 16.73,
+          "ytdText": "16.73%",
+          "yr1": 26.67,
+          "yr1Text": "26.67%",
+          "yr3": 19.77,
+          "yr3Text": "19.77%",
           "yr5": null,
           "yr5Text": "—",
           "yr10": null,
           "yr10Text": "—",
-          "sinceInception": 16.65,
-          "sinceInceptionText": "16.65%"
+          "sinceInception": 18.77,
+          "sinceInceptionText": "18.77%"
         },
         "quarterEnd": {
           "asOfDate": "Jun 30 2026",
           "ytd": null,
-          "yr1": null,
+          "yr1": 27.36,
           "yr3": null,
           "yr5": null,
           "yr10": null,
-          "sinceInception": null
+          "sinceInception": 18.8
         }
       },
       "metrics": {
-        "ytd": 15.96,
-        "tr1y": 21.83,
-        "tr3y": 68.22,
+        "ytd": 16.73,
+        "tr1y": 26.67,
+        "tr3y": 71.81,
         "tr5y": null,
         "tr10y": null,
-        "cagr3y": 18.93,
+        "cagr3y": 19.77,
         "cagr5y": null,
         "cagr10y": null,
-        "siAnn": 16.65,
+        "siAnn": 18.77,
         "dividendYield": 2.23,
         "dividendYieldText": "2.23%",
         "secYield": 1.97,
         "secYieldText": "1.97%",
-        "returnsBasis": "adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns"
+        "returnsBasis": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values"
       },
       "holdings": 2467,
       "history": 820

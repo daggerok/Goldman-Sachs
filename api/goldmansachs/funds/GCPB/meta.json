@@ -97,8 +97,8 @@
       "yr5Text": "-0.22%",
       "yr10": 1.81,
       "yr10Text": "1.81%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 3.47,
+      "sinceInceptionText": "3.47%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -133,9 +133,9 @@
     "quarterEnd": null
   },
   "distributions": {
-    "frequency": "Unknown",
-    "frequencyCode": "00 - Unknown",
-    "paymentsPerYear": null,
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
     "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",

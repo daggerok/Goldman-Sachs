@@ -151,9 +151,9 @@
     }
   },
   "distributions": {
-    "frequency": "Quarterly",
-    "frequencyCode": "04 - Quarterly",
-    "paymentsPerYear": 4,
+    "frequency": "Annually",
+    "frequencyCode": "12 - Annually",
+    "paymentsPerYear": 1,
     "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",
