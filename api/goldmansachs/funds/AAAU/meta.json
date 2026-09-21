@@ -1,0 +1,184 @@
+{
+  "ticker": "AAAU",
+  "name": "Goldman Sachs Physical Gold ETF",
+  "category": "Commodities",
+  "categoryPath": "Commodities",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": null,
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/AAAU",
+    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38150K103",
+    "isin": "US38150K1034",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "London Gold Fixed Price (Price Return, USD, Unhedged)",
+    "exchange": "Cboe BZX",
+    "morningstarCategory": null,
+    "navTicker": "AAAU.NV",
+    "iopvTicker": "AAAUIV"
+  },
+  "expenseRatio": {
+    "display": "0.18%",
+    "value": 0.18,
+    "gross": 0.18,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$43.05",
+    "value": 43.05,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$42.82",
+    "value": 42.82,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "-0.53%",
+    "value": -0.53,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$2.81 B",
+    "value": 2807570000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": 42.83,
+    "lbmaGoldPrice": 4328.2,
+    "lbmaGoldPriceAsOf": "Sep 16 2026",
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 0,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not published on the official fund page for this fund"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 13.27,
+      "mo1Text": "13.27%",
+      "mo3": 0.31,
+      "mo3Text": "0.31%",
+      "qtd": 8.34,
+      "qtdText": "8.34%",
+      "ytd": 5.79,
+      "ytdText": "5.79%",
+      "yr1": 32.81,
+      "yr1Text": "32.81%",
+      "yr3": 32.65,
+      "yr3Text": "32.65%",
+      "yr5": 20.02,
+      "yr5Text": "20.02%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 17.36,
+      "sinceInceptionText": "17.36%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 22.27,
+      "yr3": null,
+      "yr5": 17.74,
+      "yr10": null,
+      "sinceInception": 15.93
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 9.89,
+      "mo1Text": "9.89%",
+      "mo3": -2.08,
+      "mo3Text": "-2.08%",
+      "ytd": 3.13,
+      "ytdText": "3.13%",
+      "yr1": 28.68,
+      "yr1Text": "28.68%",
+      "yr3": 31.63,
+      "yr3Text": "31.63%",
+      "yr5": 19.42,
+      "yr5Text": "19.42%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 17.01,
+      "sinceInceptionText": "17.01%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 21.08,
+      "yr1Text": "21.08%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 17.58,
+      "yr5Text": "17.58%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 15.88,
+      "sinceInceptionText": "15.88%"
+    }
+  },
+  "distributions": {
+    "frequency": "None",
+    "frequencyCode": "00 - None",
+    "paymentsPerYear": null,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [],
+    "pageSize": 250,
+    "totalRows": 0,
+    "asOfDate": null,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2034,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

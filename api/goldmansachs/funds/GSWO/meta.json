@@ -1,0 +1,253 @@
+{
+  "ticker": "GSWO",
+  "name": "Goldman Sachs ActiveBeta World Equity ETF",
+  "category": "Equity",
+  "categoryPath": "Equity",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": null,
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSWO",
+    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W739",
+    "isin": "US38149W7395",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "Goldman Sachs ActiveBeta World Equity NR Index (Net Total Return, Unhedged, USD)",
+    "exchange": "Cboe BZX",
+    "morningstarCategory": null,
+    "navTicker": "GSWO.NV",
+    "iopvTicker": "GSWOIV"
+  },
+  "expenseRatio": {
+    "display": "0.15%",
+    "value": 0.15,
+    "gross": 0.15,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$65.10",
+    "value": 65.1,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$65.13",
+    "value": 65.13,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$1.79 B",
+    "value": 1794140000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 743,
+    "bidAskMidpoint": 65.11,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 1.49,
+    "dividendYieldText": "1.49%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 1.49,
+    "secYield": 1.22,
+    "secYieldText": "1.22%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.75,
+      "mo1Text": "2.75%",
+      "mo3": 2.71,
+      "mo3Text": "2.71%",
+      "qtd": 2.71,
+      "qtdText": "2.71%",
+      "ytd": 14.36,
+      "ytdText": "14.36%",
+      "yr1": 18.23,
+      "yr1Text": "18.23%",
+      "yr3": 18.73,
+      "yr3Text": "18.73%",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 13.44,
+      "sinceInceptionText": "13.44%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 17.87,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 13.11
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.75,
+      "mo1Text": "2.75%",
+      "mo3": 2.67,
+      "mo3Text": "2.67%",
+      "ytd": 14.34,
+      "ytdText": "14.34%",
+      "yr1": 18.01,
+      "yr1Text": "18.01%",
+      "yr3": 18.68,
+      "yr3Text": "18.68%",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 13.42,
+      "sinceInceptionText": "13.42%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 17.77,
+      "yr1Text": "17.77%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 13.16,
+      "sinceInceptionText": "13.16%"
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "frequencyCode": "04 - Quarterly",
+    "paymentsPerYear": 4,
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "06/24/2022",
+        "0.305"
+      ],
+      [
+        "09/26/2022",
+        "0.159"
+      ],
+      [
+        "12/27/2022",
+        "0.198"
+      ],
+      [
+        "03/27/2023",
+        "0.165"
+      ],
+      [
+        "06/26/2023",
+        "0.314"
+      ],
+      [
+        "09/25/2023",
+        "0.161"
+      ],
+      [
+        "12/26/2023",
+        "0.259"
+      ],
+      [
+        "03/22/2024",
+        "0.15"
+      ],
+      [
+        "06/24/2024",
+        "0.32"
+      ],
+      [
+        "09/24/2024",
+        "0.184"
+      ],
+      [
+        "12/23/2024",
+        "0.213"
+      ],
+      [
+        "03/25/2025",
+        "0.163"
+      ],
+      [
+        "06/24/2025",
+        "0.374"
+      ],
+      [
+        "09/24/2025",
+        "0.242"
+      ],
+      [
+        "12/23/2025",
+        "0.226"
+      ],
+      [
+        "03/25/2026",
+        "0.188"
+      ],
+      [
+        "06/24/2026",
+        "0.317"
+      ]
+    ]
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [],
+    "pageSize": 250,
+    "totalRows": 0,
+    "asOfDate": null,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "publishedTotalHoldings": 743
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1130,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

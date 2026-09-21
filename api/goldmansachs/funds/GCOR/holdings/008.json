@@ -1,0 +1,217 @@
+{
+  "ticker": "GCOR",
+  "page": 8,
+  "pageSize": 250,
+  "totalRows": 1768,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "BRIGHTHOUSE FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "10922NAF0",
+      "Weight": "0.006592533614",
+      "Market Value": "54178.28",
+      "Shares Held": "75000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.70000000",
+      "Maturity": "2047-06-22"
+    },
+    {
+      "Name": "APPLE INC",
+      "Ticker": "-",
+      "Identifier": "037833DW7",
+      "Weight": "0.022119047924",
+      "Market Value": "181777.15",
+      "Shares Held": "292000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.65000000",
+      "Maturity": "2050-05-11"
+    },
+    {
+      "Name": "INTUIT INC",
+      "Ticker": "-",
+      "Identifier": "46124HAF3",
+      "Weight": "0.007412017155",
+      "Market Value": "60912.9",
+      "Shares Held": "60000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.12500000",
+      "Maturity": "2028-09-15"
+    },
+    {
+      "Name": "CHARTER COMMUNICATIONS OPERATING LLC / CHARTER COMMUNICATION OPERATING CAPITAL CORP",
+      "Ticker": "-",
+      "Identifier": "161175BM5",
+      "Weight": "0.014783366895",
+      "Market Value": "121491.59",
+      "Shares Held": "136000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.37500000",
+      "Maturity": "2038-04-01"
+    },
+    {
+      "Name": "GENERAL DYNAMICS CORP",
+      "Ticker": "-",
+      "Identifier": "369550BM9",
+      "Weight": "0.024681098792",
+      "Market Value": "202832.41",
+      "Shares Held": "209000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.62500000",
+      "Maturity": "2030-04-01"
+    },
+    {
+      "Name": "JOHNSON & JOHNSON",
+      "Ticker": "-",
+      "Identifier": "478160AJ3",
+      "Weight": "0.006596855767",
+      "Market Value": "54213.8",
+      "Shares Held": "50000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.95000000",
+      "Maturity": "2029-09-01"
+    },
+    {
+      "Name": "FORTIVE CORP",
+      "Ticker": "-",
+      "Identifier": "34959JAH1",
+      "Weight": "0.001493717444",
+      "Market Value": "12275.56",
+      "Shares Held": "15000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.30000000",
+      "Maturity": "2046-06-15"
+    },
+    {
+      "Name": "UBER TECHNOLOGIES INC",
+      "Ticker": "-",
+      "Identifier": "90353TAU4",
+      "Weight": "0.011858078769",
+      "Market Value": "97451.2",
+      "Shares Held": "100000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.80000000",
+      "Maturity": "2035-09-15"
+    },
+    {
+      "Name": "APPLE INC",
+      "Ticker": "-",
+      "Identifier": "037833DY3",
+      "Weight": "0.010766759572",
+      "Market Value": "88482.6",
+      "Shares Held": "100000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.25000000",
+      "Maturity": "2030-08-20"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CPC9",
+      "Weight": "0.167512152325",
+      "Market Value": "1376636.18",
+      "Shares Held": "1393000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.50000000",
+      "Maturity": "2028-10-15"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06051GGM5",
+      "Weight": "0.043925118217",
+      "Market Value": "360982.21",
+      "Shares Held": "394000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.24400000",
+      "Maturity": "2038-04-24"
+    },
+    {
+      "Name": "BRIGHTHOUSE FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "10922NAG8",
+      "Weight": "0.004932347586",
+      "Market Value": "40534.66",
+      "Shares Held": "40000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.62500000",
+      "Maturity": "2030-05-15"
+    },
+    {
+      "Name": "ELEVANCE HEALTH INC",
+      "Ticker": "-",
+      "Identifier": "036752AP8",
+      "Weight": "0.010144034971",
+      "Market Value": "83364.97",
+      "Shares Held": "92000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.55000000",
+      "Maturity": "2031-03-15"
+    },
+    {
+      "Name": "UNION PACIFIC CORP",
+      "Ticker": "-",
+      "Identifier": "907818GB8",
+      "Weight": "0.035384217345",
+      "Market Value": "290792",
+      "Shares Held": "292000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.50000000",
+      "Maturity": "2033-01-20"
+    },
+    {
+      "Name": "GILEAD SCIENCES INC",
+      "Ticker": "-",
+      "Identifier": "375558CA9",
+      "Weight": "0.01199251329",
+      "Market Value": "98556",
+      "Shares Held": "100000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.55000000",
+      "Maturity": "2053-10-15"
+    },
+    {
+      "Name": "PEPSICO INC",
+      "Ticker": "-",
+      "Identifier": "713448FY9",
+      "Weight": "0.014145485556",
+      "Market Value": "116249.4",
+      "Shares Held": "116000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.80000000",
+      "Maturity": "2034-07-17"
+    },
+    {
+      "Name": "TRUIST FINANCIAL CORP",
+      "Ticker": "-",
+      "Identifier": "89788NAA8",
+      "Weight": "0.023409425854",
+      "Market Value": "192381.64",
+      "Shares Held": "196000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.91600000",
+      "Maturity": "2033-07-28"
+    },
+    {
+      "Name": "FEDERAL NATIONAL MORTGAGE ASSOCIATION",
+      "Ticker": "-",
+      "Identifier": "31418DYX4",
+      "Weight": "0.338696463668",
+      "Market Value": "2783450.63",
+      "Shares Held": "3453887.80030000",
+      "Asset Category": "ABS-MBS",
+      "Coupon": "2.00000000",
+      "Maturity": "2051-05-01"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "ticker": "GIEQ",
+  "name": "Goldman Sachs Data Enhanced International Equity ETF",
+  "category": "Equity",
+  "categoryPath": "Equity",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028136/0000940400-26-028136.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIEQ",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028136, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W382",
+    "isin": "US38149W3824",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "MSCI EAFE (net)",
+    "exchange": "NASDAQ",
+    "morningstarCategory": null,
+    "navTicker": "GIEQ.NV",
+    "iopvTicker": "N/A"
+  },
+  "expenseRatio": {
+    "display": "0.3%",
+    "value": 0.3,
+    "gross": 0.3,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$42.17",
+    "value": 42.17,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$42.27",
+    "value": 42.27,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.24%",
+    "value": 0.24,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$40.06 M",
+    "value": 40060000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 283,
+    "bidAskMidpoint": 42.27,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
+    "distributionRate": null,
+    "secYield": 2.03,
+    "secYieldText": "2.03%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.07,
+      "mo1Text": "2.07%",
+      "mo3": 4.15,
+      "mo3Text": "4.15%",
+      "qtd": 1.87,
+      "qtdText": "1.87%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 2.97
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2,
+      "mo1Text": "2.00%",
+      "mo3": 4.34,
+      "mo3Text": "4.34%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.35,
+      "sinceInceptionText": "3.35%"
+    }
+  },
+  "distributions": {
+    "frequency": "Annually",
+    "frequencyCode": "12 - Annually",
+    "paymentsPerYear": 1,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 249,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028136, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 283
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 83,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "ticker": "GUSA",
+  "page": 5,
+  "pageSize": 250,
+  "totalRows": 1013,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "BROADCOM INC",
+      "Ticker": "AVGO",
+      "Identifier": "11135F101",
+      "Weight": "2.947054997186",
+      "Market Value": "69666633.18",
+      "Shares Held": "155934.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTUITIVE SURGICAL INC",
+      "Ticker": "ISRG",
+      "Identifier": "46120E602",
+      "Weight": "0.213367191187",
+      "Market Value": "5043873.92",
+      "Shares Held": "11878.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIGURE TECHNOLOGY SOLUTIONS INC",
+      "Ticker": "FIGR",
+      "Identifier": "349381103",
+      "Weight": "0.007630946424",
+      "Market Value": "180391.05",
+      "Shares Held": "5103.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AUTODESK INC",
+      "Ticker": "ADSK",
+      "Identifier": "052769106",
+      "Weight": "0.069786137385",
+      "Market Value": "1649702.92",
+      "Shares Held": "7132.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CASEY'S GENERAL STORES INC",
+      "Ticker": "CASY",
+      "Identifier": "147528103",
+      "Weight": "0.040759390919",
+      "Market Value": "963527.84",
+      "Shares Held": "1256.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PALO ALTO NETWORKS INC",
+      "Ticker": "PANW",
+      "Identifier": "697435105",
+      "Weight": "0.324535513027",
+      "Market Value": "7671827.15",
+      "Shares Held": "27235.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PEGASYSTEMS INC",
+      "Ticker": "PEGA",
+      "Identifier": "705573103",
+      "Weight": "0.004189764957",
+      "Market Value": "99043.56",
+      "Shares Held": "2772.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FEDERAL SIGNAL CORP",
+      "Ticker": "-",
+      "Identifier": "313855108",
+      "Weight": "0.00912208576",
+      "Market Value": "215640.7",
+      "Shares Held": "2021.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AVANTOR INC",
+      "Ticker": "AVTR",
+      "Identifier": "05352A100",
+      "Weight": "0.008697009958",
+      "Market Value": "205592.16",
+      "Shares Held": "22543.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LOEWS CORP",
+      "Ticker": "L",
+      "Identifier": "540424108",
+      "Weight": "0.025362501453",
+      "Market Value": "599554.5",
+      "Shares Held": "5790.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAIA INC",
+      "Ticker": "SAIA",
+      "Identifier": "78709Y105",
+      "Weight": "0.018163921201",
+      "Market Value": "429384.33",
+      "Shares Held": "909.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PROCTER & GAMBLE COMPANY (THE)",
+      "Ticker": "PG",
+      "Identifier": "742718109",
+      "Weight": "0.473869192042",
+      "Market Value": "11201986.8",
+      "Shares Held": "78030.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FACTSET RESEARCH SYSTEMS INC",
+      "Ticker": "FDS",
+      "Identifier": "303075105",
+      "Weight": "0.013436808166",
+      "Market Value": "317638.18",
+      "Shares Held": "1294.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

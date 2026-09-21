@@ -1,0 +1,170 @@
+{
+  "ticker": "GCPB",
+  "name": "Goldman Sachs Core Plus Bond ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": null,
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCPB",
+    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38151N809",
+    "isin": "US38151N8092",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "Bloomberg US Aggregate Bond Index",
+    "exchange": "NYSE",
+    "morningstarCategory": null,
+    "navTicker": "GCPB.NV",
+    "iopvTicker": "N/A"
+  },
+  "expenseRatio": {
+    "display": "0.4%",
+    "value": 0.4,
+    "gross": 0.4,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$49.42",
+    "value": 49.42,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$49.38",
+    "value": 49.38,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "-0.08%",
+    "value": -0.08,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$150.59 M",
+    "value": 150590000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 342,
+    "bidAskMidpoint": 49.38,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 0.36,
+    "dividendYieldText": "0.36%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 0.36,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not published on the official fund page for this fund"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.56,
+      "mo1Text": "0.56%",
+      "mo3": -0.72,
+      "mo3Text": "-0.72%",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": -0.41,
+      "ytdText": "-0.41%",
+      "yr1": 2.32,
+      "yr1Text": "2.32%",
+      "yr3": 4.92,
+      "yr3Text": "4.92%",
+      "yr5": -0.22,
+      "yr5Text": "-0.22%",
+      "yr10": 1.81,
+      "yr10Text": "1.81%",
+      "sinceInception": 3.47,
+      "sinceInceptionText": "3.47%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 4.92,
+      "yr3": null,
+      "yr5": 0.25,
+      "yr10": 2.04,
+      "sinceInception": null
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": -0.02,
+      "mo1Text": "-0.02%",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": null
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "09/01/2026",
+        "0.13"
+      ]
+    ]
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [],
+    "pageSize": 250,
+    "totalRows": 0,
+    "asOfDate": null,
+    "asOf": "—",
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "publishedTotalHoldings": 342
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 29,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

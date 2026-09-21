@@ -1,0 +1,186 @@
+{
+  "ticker": "GTOP",
+  "name": "Goldman Sachs Technology Opportunities ETF",
+  "category": "Equity",
+  "categoryPath": "Equity",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109507/38149W432/goldman-sachs-technology-opportunities-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109507/38149W432/goldman-sachs-technology-opportunities-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028133/0000940400-26-028133.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTOP",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028133, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W432",
+    "isin": "US38149W4327",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": null,
+    "exchange": "NASDAQ",
+    "morningstarCategory": null,
+    "navTicker": "GTOP.NV",
+    "iopvTicker": "N/A"
+  },
+  "expenseRatio": {
+    "display": "0.65%",
+    "value": 0.65,
+    "gross": 0.65,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$49.62",
+    "value": 49.62,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$49.62",
+    "value": 49.62,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$724.94 M",
+    "value": 724940000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 36,
+    "bidAskMidpoint": 49.61,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 0,
+    "secYield": -0.21,
+    "secYieldText": "-0.21%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 3.03,
+      "mo1Text": "3.03%",
+      "mo3": -1.12,
+      "mo3Text": "-1.12%",
+      "qtd": 1.47,
+      "qtdText": "1.47%",
+      "ytd": 22.95,
+      "ytdText": "22.95%",
+      "yr1": 30.5,
+      "yr1Text": "30.50%",
+      "yr3": 28.42,
+      "yr3Text": "28.42%",
+      "yr5": 12.86,
+      "yr5Text": "12.86%",
+      "yr10": 20.42,
+      "yr10Text": "20.42%",
+      "sinceInception": 10.74,
+      "sinceInceptionText": "10.74%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 36.91,
+      "yr3": null,
+      "yr5": 15,
+      "yr10": 21.59,
+      "sinceInception": null
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 3.09,
+      "mo1Text": "3.09%",
+      "mo3": -1.05,
+      "mo3Text": "-1.05%",
+      "ytd": 22.93,
+      "ytdText": "22.93%",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    }
+  },
+  "distributions": {
+    "frequency": "Annually",
+    "frequencyCode": "12 - Annually",
+    "paymentsPerYear": 1,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 38,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028133, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 36
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 196,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

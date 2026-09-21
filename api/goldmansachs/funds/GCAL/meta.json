@@ -1,0 +1,288 @@
+{
+  "ticker": "GCAL",
+  "name": "Goldman Sachs Dynamic California Municipal Income ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028071/0000940400-26-028071.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCAL",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028071, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W564",
+    "isin": "US38149W5647",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "Bloomberg Municipal Bond Quality Intermediate-California (TR, Unhedged, USD)",
+    "exchange": "NYSE Arca",
+    "morningstarCategory": null,
+    "navTicker": "GCAL.NV",
+    "iopvTicker": "GCALIV"
+  },
+  "expenseRatio": {
+    "display": "0.3%",
+    "value": 0.3,
+    "gross": 0.35,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$49.38",
+    "value": 49.38,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$49.49",
+    "value": 49.49,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.21%",
+    "value": 0.21,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$190.12 M",
+    "value": 190120000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 370,
+    "bidAskMidpoint": 49.5,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 3.62,
+    "dividendYieldText": "3.62%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 3.62,
+    "secYield": 3.58,
+    "secYieldText": "3.58%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.13,
+      "mo1Text": "0.13%",
+      "mo3": -0.45,
+      "mo3Text": "-0.45%",
+      "qtd": -2.68,
+      "qtdText": "-2.68%",
+      "ytd": 1.04,
+      "ytdText": "1.04%",
+      "yr1": 4.63,
+      "yr1Text": "4.63%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.45,
+      "sinceInceptionText": "3.45%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 6.67,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 4.36
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": -0.06,
+      "mo1Text": "-0.06%",
+      "mo3": -0.41,
+      "mo3Text": "-0.41%",
+      "ytd": 0.91,
+      "ytdText": "0.91%",
+      "yr1": 4.58,
+      "yr1Text": "4.58%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.47,
+      "sinceInceptionText": "3.47%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 6.49,
+      "yr1Text": "6.49%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 4.4,
+      "sinceInceptionText": "4.40%"
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "09/03/2024",
+        "0.156"
+      ],
+      [
+        "10/01/2024",
+        "0.147"
+      ],
+      [
+        "11/01/2024",
+        "0.131"
+      ],
+      [
+        "12/02/2024",
+        "0.132"
+      ],
+      [
+        "12/31/2024",
+        "0.141"
+      ],
+      [
+        "02/03/2025",
+        "0.132"
+      ],
+      [
+        "03/03/2025",
+        "0.101"
+      ],
+      [
+        "04/01/2025",
+        "0.145"
+      ],
+      [
+        "05/01/2025",
+        "0.109"
+      ],
+      [
+        "06/02/2025",
+        "0.133"
+      ],
+      [
+        "07/01/2025",
+        "0.133"
+      ],
+      [
+        "08/01/2025",
+        "0.058"
+      ],
+      [
+        "09/02/2025",
+        "0.139"
+      ],
+      [
+        "10/01/2025",
+        "0.158"
+      ],
+      [
+        "11/03/2025",
+        "0.153"
+      ],
+      [
+        "12/01/2025",
+        "0.14"
+      ],
+      [
+        "12/31/2025",
+        "0.156"
+      ],
+      [
+        "02/02/2026",
+        "0.155"
+      ],
+      [
+        "03/02/2026",
+        "0.144"
+      ],
+      [
+        "04/01/2026",
+        "0.16"
+      ],
+      [
+        "05/01/2026",
+        "0.151"
+      ],
+      [
+        "06/01/2026",
+        "0.145"
+      ],
+      [
+        "07/01/2026",
+        "0.163"
+      ],
+      [
+        "08/03/2026",
+        "0.155"
+      ],
+      [
+        "09/01/2026",
+        "0.15"
+      ]
+    ]
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 342,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028071, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 370
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 536,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

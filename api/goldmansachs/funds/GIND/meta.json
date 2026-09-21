@@ -1,0 +1,186 @@
+{
+  "ticker": "GIND",
+  "name": "Goldman Sachs India Equity ETF",
+  "category": "Equity",
+  "categoryPath": "Equity",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028078/0000940400-26-028078.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIND",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028078, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W481",
+    "isin": "US38149W4814",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "MSCI India IMI, Net returns, Unhedged, USD",
+    "exchange": "NASDAQ",
+    "morningstarCategory": null,
+    "navTicker": "GIND",
+    "iopvTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.75%",
+    "value": 0.75,
+    "gross": 0.75,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$24.37",
+    "value": 24.37,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$24.38",
+    "value": 24.38,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.03%",
+    "value": 0.03,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$163.27 M",
+    "value": 163270000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 129,
+    "bidAskMidpoint": 24.38,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 0,
+    "secYield": -0.22,
+    "secYieldText": "-0.22%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.3,
+      "mo1Text": "2.30%",
+      "mo3": 7.64,
+      "mo3Text": "7.64%",
+      "qtd": 0.53,
+      "qtdText": "0.53%",
+      "ytd": -3.1,
+      "ytdText": "-3.10%",
+      "yr1": -1.25,
+      "yr1Text": "-1.25%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 1.13,
+      "sinceInceptionText": "1.13%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": -11.93,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": -2.39
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.41,
+      "mo1Text": "1.41%",
+      "mo3": 5.14,
+      "mo3Text": "5.14%",
+      "ytd": -5.19,
+      "ytdText": "-5.19%",
+      "yr1": -3.4,
+      "yr1Text": "-3.40%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 0.24,
+      "sinceInceptionText": "0.24%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": -11.74,
+      "yr1Text": "-11.74%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -1.87,
+      "sinceInceptionText": "-1.87%"
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "frequencyCode": "04 - Quarterly",
+    "paymentsPerYear": 4,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 122,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028078, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 129
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 367,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

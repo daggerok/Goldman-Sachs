@@ -1,0 +1,480 @@
+{
+  "ticker": "GTIP",
+  "name": "Goldman Sachs Access Inflation Protected USD Bond ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028184/0000940400-26-028184.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTIP",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028184, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "381430362",
+    "isin": "US3814303620",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "FTSE Goldman Sachs Treasury Inflation Protected USD Bond Index",
+    "exchange": "Cboe BZX",
+    "morningstarCategory": null,
+    "navTicker": "GTIP.NV",
+    "iopvTicker": "GTIPIV"
+  },
+  "expenseRatio": {
+    "display": "0.12%",
+    "value": 0.12,
+    "gross": 0.12,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$47.06",
+    "value": 47.06,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$47.11",
+    "value": 47.11,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.10%",
+    "value": 0.1,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$291.80 M",
+    "value": 291800000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 38,
+    "bidAskMidpoint": 47.1,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 5.98,
+    "dividendYieldText": "5.98%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 5.98,
+    "secYield": -2.33,
+    "secYieldText": "-2.33%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.04,
+      "mo1Text": "0.04%",
+      "mo3": -1.17,
+      "mo3Text": "-1.17%",
+      "qtd": -1.86,
+      "qtdText": "-1.86%",
+      "ytd": 0.51,
+      "ytdText": "0.51%",
+      "yr1": 0.97,
+      "yr1Text": "0.97%",
+      "yr3": 3.9,
+      "yr3Text": "3.90%",
+      "yr5": 0.3,
+      "yr5Text": "0.30%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.01,
+      "sinceInceptionText": "3.01%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 3.39,
+      "yr3": null,
+      "yr5": 0.94,
+      "yr10": null,
+      "sinceInception": 3.18
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.09,
+      "mo1Text": "0.09%",
+      "mo3": -1.14,
+      "mo3Text": "-1.14%",
+      "ytd": 0.57,
+      "ytdText": "0.57%",
+      "yr1": 0.89,
+      "yr1Text": "0.89%",
+      "yr3": 3.87,
+      "yr3Text": "3.87%",
+      "yr5": 0.29,
+      "yr5Text": "0.29%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.01,
+      "sinceInceptionText": "3.01%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 3.34,
+      "yr1Text": "3.34%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 0.94,
+      "yr5Text": "0.94%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.18,
+      "sinceInceptionText": "3.18%"
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "11/01/2018",
+        "0.046"
+      ],
+      [
+        "12/03/2018",
+        "0.154"
+      ],
+      [
+        "12/27/2018",
+        "0.128"
+      ],
+      [
+        "05/01/2019",
+        "0.069"
+      ],
+      [
+        "06/03/2019",
+        "0.313"
+      ],
+      [
+        "07/01/2019",
+        "0.296"
+      ],
+      [
+        "08/01/2019",
+        "0.133"
+      ],
+      [
+        "09/03/2019",
+        "0.035"
+      ],
+      [
+        "10/01/2019",
+        "0.108"
+      ],
+      [
+        "11/01/2019",
+        "0.014"
+      ],
+      [
+        "12/02/2019",
+        "0.056"
+      ],
+      [
+        "12/27/2019",
+        "0.202"
+      ],
+      [
+        "04/01/2020",
+        "0.131"
+      ],
+      [
+        "05/01/2020",
+        "0.113"
+      ],
+      [
+        "10/01/2020",
+        "0.144"
+      ],
+      [
+        "11/02/2020",
+        "0.131"
+      ],
+      [
+        "12/01/2020",
+        "0.038"
+      ],
+      [
+        "12/29/2020",
+        "0.042"
+      ],
+      [
+        "04/01/2021",
+        "0.115"
+      ],
+      [
+        "05/03/2021",
+        "0.221"
+      ],
+      [
+        "06/01/2021",
+        "0.255"
+      ],
+      [
+        "07/01/2021",
+        "0.353"
+      ],
+      [
+        "08/02/2021",
+        "0.292"
+      ],
+      [
+        "09/01/2021",
+        "0.386"
+      ],
+      [
+        "10/01/2021",
+        "0.174"
+      ],
+      [
+        "11/01/2021",
+        "0.033"
+      ],
+      [
+        "12/01/2021",
+        "0.067"
+      ],
+      [
+        "12/28/2021",
+        "0.339"
+      ],
+      [
+        "02/01/2022",
+        "0.177"
+      ],
+      [
+        "03/01/2022",
+        "0.095"
+      ],
+      [
+        "04/01/2022",
+        "0.387"
+      ],
+      [
+        "05/03/2022",
+        "0.398"
+      ],
+      [
+        "06/01/2022",
+        "0.624"
+      ],
+      [
+        "07/01/2022",
+        "0.22"
+      ],
+      [
+        "08/01/2022",
+        "0.501"
+      ],
+      [
+        "09/01/2022",
+        "0.65"
+      ],
+      [
+        "12/27/2022",
+        "0.081"
+      ],
+      [
+        "04/03/2023",
+        "0.042"
+      ],
+      [
+        "05/01/2023",
+        "0.254"
+      ],
+      [
+        "06/01/2023",
+        "0.136"
+      ],
+      [
+        "07/03/2023",
+        "0.228"
+      ],
+      [
+        "08/01/2023",
+        "0.116"
+      ],
+      [
+        "09/01/2023",
+        "0.149"
+      ],
+      [
+        "10/02/2023",
+        "0.082"
+      ],
+      [
+        "11/01/2023",
+        "0.219"
+      ],
+      [
+        "12/01/2023",
+        "0.131"
+      ],
+      [
+        "04/01/2024",
+        "0.123"
+      ],
+      [
+        "05/01/2024",
+        "0.379"
+      ],
+      [
+        "06/03/2024",
+        "0.366"
+      ],
+      [
+        "07/01/2024",
+        "0.222"
+      ],
+      [
+        "08/01/2024",
+        "0.14"
+      ],
+      [
+        "09/03/2024",
+        "0.052"
+      ],
+      [
+        "10/01/2024",
+        "0.097"
+      ],
+      [
+        "11/01/2024",
+        "0.082"
+      ],
+      [
+        "12/02/2024",
+        "0.119"
+      ],
+      [
+        "12/31/2024",
+        "0.117"
+      ],
+      [
+        "02/03/2025",
+        "0.005"
+      ],
+      [
+        "03/03/2025",
+        "0.057"
+      ],
+      [
+        "04/01/2025",
+        "0.386"
+      ],
+      [
+        "05/01/2025",
+        "0.289"
+      ],
+      [
+        "06/02/2025",
+        "0.17"
+      ],
+      [
+        "07/01/2025",
+        "0.219"
+      ],
+      [
+        "08/01/2025",
+        "0.167"
+      ],
+      [
+        "09/02/2025",
+        "0.218"
+      ],
+      [
+        "10/01/2025",
+        "0.152"
+      ],
+      [
+        "11/03/2025",
+        "0.211"
+      ],
+      [
+        "12/01/2025",
+        "0.175"
+      ],
+      [
+        "12/31/2025",
+        "0.2"
+      ],
+      [
+        "04/01/2026",
+        "0.115"
+      ],
+      [
+        "05/01/2026",
+        "0.301"
+      ],
+      [
+        "06/01/2026",
+        "0.537"
+      ],
+      [
+        "07/01/2026",
+        "0.534"
+      ],
+      [
+        "08/03/2026",
+        "0.398"
+      ]
+    ]
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 38,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028184, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 38
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1989,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

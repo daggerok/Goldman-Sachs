@@ -1,0 +1,2381 @@
+{
+  "ticker": "GPRF",
+  "page": 2,
+  "pageSize": 250,
+  "totalRows": 486,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "EQUITABLE HOLDINGS INC",
+      "Ticker": "EQH",
+      "Identifier": "29452E408",
+      "Weight": "0.076908456435",
+      "Market Value": "67682.16",
+      "Shares Held": "4132.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128B622",
+      "Weight": "0.377854323524",
+      "Market Value": "332525.16",
+      "Shares Held": "17292.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "DTE ENERGY COMPANY",
+      "Ticker": "DTE",
+      "Identifier": "233331826",
+      "Weight": "0.053030233683",
+      "Market Value": "46668.48",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SYNCHRONY FINANCIAL",
+      "Ticker": "SYF",
+      "Identifier": "87165B202",
+      "Weight": "0.130355809728",
+      "Market Value": "114717.72",
+      "Shares Held": "5844.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AXIS SPECIALTY FINANCE LLC",
+      "Ticker": "-",
+      "Identifier": "05463HAC5",
+      "Weight": "0.211359385774",
+      "Market Value": "186003.73",
+      "Shares Held": "190000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.90000000",
+      "Maturity": "2040-01-15"
+    },
+    {
+      "Name": "EVERSOURCE ENERGY",
+      "Ticker": "-",
+      "Identifier": "30040WBD9",
+      "Weight": "0.286526525785",
+      "Market Value": "252153.47",
+      "Shares Held": "252000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.35000000",
+      "Maturity": "2056-08-15"
+    },
+    {
+      "Name": "XCEL ENERGY INC",
+      "Ticker": "-",
+      "Identifier": "98389BBF6",
+      "Weight": "0.288688041241",
+      "Market Value": "254055.68",
+      "Shares Held": "256000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.75000000",
+      "Maturity": "2056-12-03"
+    },
+    {
+      "Name": "SOUTHERN COMPANY (THE)",
+      "Ticker": "-",
+      "Identifier": "842587EJ2",
+      "Weight": "0.113351231351",
+      "Market Value": "99753.09",
+      "Shares Held": "99000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.00000000",
+      "Maturity": "2058-04-01"
+    },
+    {
+      "Name": "SPIRE INC (US)",
+      "Ticker": "SR",
+      "Identifier": "84857L705",
+      "Weight": "0.058467458479",
+      "Market Value": "51453.43",
+      "Shares Held": "2143.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NEXTERA ENERGY CAPITAL HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "65339KBK5",
+      "Weight": "0.168805719937",
+      "Market Value": "148555",
+      "Shares Held": "148000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.65000000",
+      "Maturity": "2079-05-01"
+    },
+    {
+      "Name": "ENTERGY NEW ORLEANS LLC",
+      "Ticker": "ENJ",
+      "Identifier": "29364P103",
+      "Weight": "0.0382124652",
+      "Market Value": "33628.32",
+      "Shares Held": "1544.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CARLYLE FINANCE LLC",
+      "Ticker": "-",
+      "Identifier": "14314C105",
+      "Weight": "0.130890197355",
+      "Market Value": "115188",
+      "Shares Held": "6960.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "HUNTINGTON BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "446150773",
+      "Weight": "0.128272075239",
+      "Market Value": "112883.96",
+      "Shares Held": "4492.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SPIRE INC (US)",
+      "Ticker": "-",
+      "Identifier": "84857LAD3",
+      "Weight": "0.10452129055",
+      "Market Value": "91982.43",
+      "Shares Held": "92000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.25000000",
+      "Maturity": "2056-06-01"
+    },
+    {
+      "Name": "FIRST HORIZON CORP",
+      "Ticker": "FHN",
+      "Identifier": "320517840",
+      "Weight": "0.05681567255",
+      "Market Value": "49999.8",
+      "Shares Held": "2004.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NBN4",
+      "Weight": "0.203644388828",
+      "Market Value": "179214.26",
+      "Shares Held": "175000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.37500000",
+      "Maturity": "2083-01-15"
+    },
+    {
+      "Name": "DUKE ENERGY CORP",
+      "Ticker": "-",
+      "Identifier": "26441CCG8",
+      "Weight": "0.345596914593",
+      "Market Value": "304137.5",
+      "Shares Held": "290000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.45000000",
+      "Maturity": "2054-09-01"
+    },
+    {
+      "Name": "BROOKFIELD FINANCE INC",
+      "Ticker": "-",
+      "Identifier": "11271L102",
+      "Weight": "0.078405703116",
+      "Market Value": "68999.79",
+      "Shares Held": "4443.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "TRUIST FINANCIAL CORP",
+      "Ticker": "TFC",
+      "Identifier": "89832Q695",
+      "Weight": "0.221585645492",
+      "Market Value": "195003.2",
+      "Shares Held": "10598.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SPIRE INC (US)",
+      "Ticker": "-",
+      "Identifier": "84857LAE1",
+      "Weight": "0.137283906462",
+      "Market Value": "120814.69",
+      "Shares Held": "121000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.45000000",
+      "Maturity": "2056-06-01"
+    },
+    {
+      "Name": "ASSURANT INC",
+      "Ticker": "-",
+      "Identifier": "04621XAK4",
+      "Weight": "0.116826080421",
+      "Market Value": "102811.08",
+      "Shares Held": "101000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.00000000",
+      "Maturity": "2048-03-27"
+    },
+    {
+      "Name": "ASSOCIATED BANC-CORP",
+      "Ticker": "ASB",
+      "Identifier": "045487204",
+      "Weight": "0.033296389927",
+      "Market Value": "29302",
+      "Shares Held": "1400.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SOUTHERN COMPANY (THE)",
+      "Ticker": "SO",
+      "Identifier": "842587800",
+      "Weight": "0.285675662233",
+      "Market Value": "251404.68",
+      "Shares Held": "12853.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SOUTH BOW CANADIAN INFRASTRUCTURE HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "836720AJ1",
+      "Weight": "0.199949662226",
+      "Market Value": "175962.77",
+      "Shares Held": "165000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.50000000",
+      "Maturity": "2055-03-01"
+    },
+    {
+      "Name": "NEXTERA ENERGY CAPITAL HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "65339K860",
+      "Weight": "0.178059564166",
+      "Market Value": "156698.71",
+      "Shares Held": "6763.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BM0",
+      "Weight": "0.258293557486",
+      "Market Value": "227307.46",
+      "Shares Held": "229000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.12500000",
+      "Maturity": "2052-04-01"
+    },
+    {
+      "Name": "PARAMOUNT GLOBAL",
+      "Ticker": "-",
+      "Identifier": "92556HAE7",
+      "Weight": "0.307993470386",
+      "Market Value": "271045.14",
+      "Shares Held": "317000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.37500000",
+      "Maturity": "2062-03-30"
+    },
+    {
+      "Name": "CENTERPOINT ENERGY INC",
+      "Ticker": "-",
+      "Identifier": "15189TBJ5",
+      "Weight": "0.170485311567",
+      "Market Value": "150033.1",
+      "Shares Held": "143000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.85000000",
+      "Maturity": "2055-02-15"
+    },
+    {
+      "Name": "AMERICAN HOMES 4 RENT",
+      "Ticker": "AMH",
+      "Identifier": "02665T868",
+      "Weight": "0.049693935866",
+      "Market Value": "43732.42",
+      "Shares Held": "1796.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "QWEST CORP",
+      "Ticker": "CTGG",
+      "Identifier": "74913G873",
+      "Weight": "0.166390476036",
+      "Market Value": "146429.5",
+      "Shares Held": "7490.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NATIONAL RURAL UTILITIES COOPERATIVE FINANCE CORP",
+      "Ticker": "-",
+      "Identifier": "637432PB5",
+      "Weight": "0.063250823174",
+      "Market Value": "55662.96",
+      "Shares Held": "53000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "2053-09-15"
+    },
+    {
+      "Name": "EUSHI FINANCE INC",
+      "Ticker": "-",
+      "Identifier": "29882DAC7",
+      "Weight": "0.283370493456",
+      "Market Value": "249376.05",
+      "Shares Held": "252000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.25000000",
+      "Maturity": "2056-04-01"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128B648",
+      "Weight": "0.300897664479",
+      "Market Value": "264800.58",
+      "Shares Held": "10483.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PARAMOUNT GLOBAL",
+      "Ticker": "-",
+      "Identifier": "92553PBC5",
+      "Weight": "0.091254323416",
+      "Market Value": "80307.03",
+      "Shares Held": "98000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.25000000",
+      "Maturity": "2057-02-28"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128B523",
+      "Weight": "0.24006717591",
+      "Market Value": "211267.6",
+      "Shares Held": "12212.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "VORNADO REALTY TRUST",
+      "Ticker": "VNO",
+      "Identifier": "929042844",
+      "Weight": "0.082977758116",
+      "Market Value": "73023.36",
+      "Shares Held": "4168.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF HAWAII CORP",
+      "Ticker": "BOH",
+      "Identifier": "062545207",
+      "Weight": "0.045171822042",
+      "Market Value": "39752.8",
+      "Shares Held": "2516.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "WINTRUST FINANCIAL CORP",
+      "Ticker": "WTFC",
+      "Identifier": "97650W702",
+      "Weight": "0.146289806104",
+      "Market Value": "128740.2",
+      "Shares Held": "4910.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128BAH4",
+      "Weight": "0.282766347267",
+      "Market Value": "248844.38",
+      "Shares Held": "249000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.43675000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "PHILLIPS 66 COMPANY",
+      "Ticker": "-",
+      "Identifier": "718547AZ5",
+      "Weight": "0.305347917553",
+      "Market Value": "268716.96",
+      "Shares Held": "271000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.87500000",
+      "Maturity": "2056-03-15"
+    },
+    {
+      "Name": "STATE STREET CORP",
+      "Ticker": "-",
+      "Identifier": "857477CH4",
+      "Weight": "0.441469086626",
+      "Market Value": "388508.4",
+      "Shares Held": "378000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.70000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "EQUITABLE HOLDINGS INC",
+      "Ticker": "EQH",
+      "Identifier": "29452E200",
+      "Weight": "0.097816662113",
+      "Market Value": "86082.12",
+      "Shares Held": "4419.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AMERICAN NATIONAL GROUP INC",
+      "Ticker": "ANG-PD",
+      "Identifier": "025676859",
+      "Weight": "0.098343947753",
+      "Market Value": "86546.15",
+      "Shares Held": "3511.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIRST HORIZON CORP",
+      "Ticker": "FHN",
+      "Identifier": "320517865",
+      "Weight": "0.04062091392",
+      "Market Value": "35747.84",
+      "Shares Held": "2048.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ALLY FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "02005NCB4",
+      "Weight": "0.224945510543",
+      "Market Value": "197960",
+      "Shares Held": "196000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.10000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "WELLS FARGO & COMPANY",
+      "Ticker": "-",
+      "Identifier": "94988U656",
+      "Weight": "0.253811010255",
+      "Market Value": "223362.66",
+      "Shares Held": "9521.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "QWEST CORP",
+      "Ticker": "CTGG",
+      "Identifier": "74913G881",
+      "Weight": "0.269494857587",
+      "Market Value": "237165",
+      "Shares Held": "12225.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ALLSTATE CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "020002BB6",
+      "Weight": "0.279258601791",
+      "Market Value": "245757.44",
+      "Shares Held": "246000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.85068000",
+      "Maturity": "2053-08-15"
+    },
+    {
+      "Name": "ARCH CAPITAL GROUP LTD",
+      "Ticker": "ACGL",
+      "Identifier": "03939A404",
+      "Weight": "0.094479341611",
+      "Market Value": "83145.16",
+      "Shares Held": "5033.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "060505FL3",
+      "Weight": "0.406781957103",
+      "Market Value": "357982.5",
+      "Shares Held": "354000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.87500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "NATIONWIDE FINANCIAL SERVICES INC",
+      "Ticker": "-",
+      "Identifier": "638612AJ0",
+      "Weight": "0.126235282046",
+      "Market Value": "111091.51",
+      "Shares Held": "112000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.75000000",
+      "Maturity": "2037-05-15"
+    },
+    {
+      "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
+      "Ticker": "-",
+      "Identifier": "00774MBQ7",
+      "Weight": "0.212286234911",
+      "Market Value": "186819.39",
+      "Shares Held": "183000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "2056-01-31"
+    },
+    {
+      "Name": "US BANCORP",
+      "Ticker": "TBBK",
+      "Identifier": "902973668",
+      "Weight": "0.123034717415",
+      "Market Value": "108274.9",
+      "Shares Held": "6145.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NAN5",
+      "Weight": "0.389245729625",
+      "Market Value": "342550",
+      "Shares Held": "340000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.00000000",
+      "Maturity": "2077-01-15"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NBP9",
+      "Weight": "0.229166488735",
+      "Market Value": "201674.61",
+      "Shares Held": "185000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.62500000",
+      "Maturity": "2083-01-15"
+    },
+    {
+      "Name": "DTE ENERGY COMPANY",
+      "Ticker": "DTE",
+      "Identifier": "233331859",
+      "Weight": "0.088531807766",
+      "Market Value": "77911.12",
+      "Shares Held": "3703.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055H400",
+      "Weight": "0.208539999014",
+      "Market Value": "183522.57",
+      "Shares Held": "10493.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SL GREEN REALTY CORP",
+      "Ticker": "SLG",
+      "Identifier": "78440X507",
+      "Weight": "0.075321747437",
+      "Market Value": "66285.8",
+      "Shares Held": "3164.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIFTH THIRD BANCORP",
+      "Ticker": "FITB",
+      "Identifier": "316773860",
+      "Weight": "0.072004835206",
+      "Market Value": "63366.8",
+      "Shares Held": "3416.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "HUNTINGTON BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "446150AV6",
+      "Weight": "0.14178691878",
+      "Market Value": "124777.5",
+      "Shares Held": "127000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.45000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SYNCHRONY FINANCIAL",
+      "Ticker": "SYF",
+      "Identifier": "87165B400",
+      "Weight": "0.153890205381",
+      "Market Value": "135428.82",
+      "Shares Held": "5237.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ATHENE HOLDING LTD",
+      "Ticker": "ATH-PA",
+      "Identifier": "04686J861",
+      "Weight": "0.276989636106",
+      "Market Value": "243760.67",
+      "Shares Held": "9913.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "744320BP6",
+      "Weight": "0.330031778402",
+      "Market Value": "290439.63",
+      "Shares Held": "281000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "2054-03-15"
+    },
+    {
+      "Name": "CMS ENERGY CORP",
+      "Ticker": "CMS",
+      "Identifier": "125896852",
+      "Weight": "0.085168215591",
+      "Market Value": "74951.04",
+      "Shares Held": "3296.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ALLY FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "02005NBN9",
+      "Weight": "0.40398278544",
+      "Market Value": "355519.13",
+      "Shares Held": "365000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.70000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "XCEL ENERGY INC",
+      "Ticker": "XEL",
+      "Identifier": "98389B878",
+      "Weight": "0.279173696111",
+      "Market Value": "245682.72",
+      "Shares Held": "10224.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "EDISON INTERNATIONAL",
+      "Ticker": "-",
+      "Identifier": "281020AZ0",
+      "Weight": "0.018556186511",
+      "Market Value": "16330.1",
+      "Shares Held": "16000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.87500000",
+      "Maturity": "2054-06-15"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055H871",
+      "Weight": "0.145382887985",
+      "Market Value": "127942.08",
+      "Shares Held": "6748.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PINNACLE FINANCIAL PARTNERS INC",
+      "Ticker": "PNFP",
+      "Identifier": "72348N307",
+      "Weight": "0.176621042399",
+      "Market Value": "155432.76",
+      "Shares Held": "5828.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIRST HORIZON CORP",
+      "Ticker": "FHN",
+      "Identifier": "320517402",
+      "Weight": "0.056154835456",
+      "Market Value": "49418.24",
+      "Shares Held": "2048.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "WELLS FARGO & COMPANY",
+      "Ticker": "-",
+      "Identifier": "95002YAC7",
+      "Weight": "0.627338439386",
+      "Market Value": "552080",
+      "Shares Held": "536000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.85000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SIERRA PACIFIC POWER COMPANY",
+      "Ticker": "-",
+      "Identifier": "826418BR5",
+      "Weight": "0.201809769333",
+      "Market Value": "177599.73",
+      "Shares Held": "181000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.20000000",
+      "Maturity": "2055-12-15"
+    },
+    {
+      "Name": "MORGAN STANLEY",
+      "Ticker": "MS",
+      "Identifier": "61762V853",
+      "Weight": "0.282426599549",
+      "Market Value": "248545.39",
+      "Shares Held": "9859.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "-",
+      "Identifier": "29273VBC3",
+      "Weight": "0.384359562241",
+      "Market Value": "338250",
+      "Shares Held": "328000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "2054-10-01"
+    },
+    {
+      "Name": "FIFTH THIRD BANCORP",
+      "Ticker": "-",
+      "Identifier": "316773CM0",
+      "Weight": "0.135728923463",
+      "Market Value": "119446.25",
+      "Shares Held": "119000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.99535000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BROOKFIELD INFRASTRUCTURE FINANCE ULC",
+      "Ticker": "-",
+      "Identifier": "11276B208",
+      "Weight": "0.06082710234",
+      "Market Value": "53530",
+      "Shares Held": "2120.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "US BANCORP",
+      "Ticker": "-",
+      "Identifier": "902973AZ9",
+      "Weight": "0.299225197563",
+      "Market Value": "263328.75",
+      "Shares Held": "263000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.30000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "ENTERGY ARKANSAS LLC",
+      "Ticker": "EAI",
+      "Identifier": "29364D100",
+      "Weight": "0.129920668114",
+      "Market Value": "114334.78",
+      "Shares Held": "5677.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "DOMINION ENERGY INC",
+      "Ticker": "-",
+      "Identifier": "25746UEA3",
+      "Weight": "0.268846292728",
+      "Market Value": "236594.24",
+      "Shares Held": "235000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.20000000",
+      "Maturity": "2056-02-15"
+    },
+    {
+      "Name": "EPR PROPERTIES",
+      "Ticker": "EPR",
+      "Identifier": "26884U505",
+      "Weight": "0.048902581287",
+      "Market Value": "43036",
+      "Shares Held": "2120.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "MORGAN STANLEY",
+      "Ticker": "MS",
+      "Identifier": "61762V200",
+      "Weight": "0.050173598419",
+      "Market Value": "44154.54",
+      "Shares Held": "1737.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CMS ENERGY CORP",
+      "Ticker": "CMS",
+      "Identifier": "125896860",
+      "Weight": "0.067624556594",
+      "Market Value": "59512",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128AAJ2",
+      "Weight": "0.68102946471",
+      "Market Value": "599330",
+      "Shares Held": "584000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "WELLS FARGO & COMPANY",
+      "Ticker": "-",
+      "Identifier": "95002Y400",
+      "Weight": "0.279546772035",
+      "Market Value": "246011.04",
+      "Shares Held": "14696.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "T-MOBILE USA INC",
+      "Ticker": "-",
+      "Identifier": "87264A303",
+      "Weight": "0.112555388316",
+      "Market Value": "99052.72",
+      "Shares Held": "4646.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIFTH THIRD BANCORP",
+      "Ticker": "FITB",
+      "Identifier": "316773837",
+      "Weight": "0.130798178324",
+      "Market Value": "115107.02",
+      "Shares Held": "4417.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CHARLES SCHWAB CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "808513CB9",
+      "Weight": "0.228970917045",
+      "Market Value": "201502.5",
+      "Shares Held": "201000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "AMERICAN FINANCIAL GROUP INC",
+      "Ticker": "AFG",
+      "Identifier": "025932872",
+      "Weight": "0.047148606281",
+      "Market Value": "41492.44",
+      "Shares Held": "2084.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055HAH6",
+      "Weight": "0.597906382885",
+      "Market Value": "526178.75",
+      "Shares Held": "509000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "NORTHERN TRUST CORP",
+      "Ticker": "-",
+      "Identifier": "665859AQ7",
+      "Weight": "0.126131297587",
+      "Market Value": "111000",
+      "Shares Held": "111000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.60000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "APOLLO GLOBAL MANAGEMENT INC",
+      "Ticker": "APO",
+      "Identifier": "03769M205",
+      "Weight": "0.119354331146",
+      "Market Value": "105036.03",
+      "Shares Held": "4029.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BP CAPITAL MARKETS PLC",
+      "Ticker": "-",
+      "Identifier": "05565QDV7",
+      "Weight": "0.948603944884",
+      "Market Value": "834805",
+      "Shares Held": "839000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.87500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "STIFEL FINANCIAL CORP",
+      "Ticker": "SF",
+      "Identifier": "860630706",
+      "Weight": "0.060178901103",
+      "Market Value": "52959.56",
+      "Shares Held": "2228.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "REINSURANCE GROUP OF AMERICA INC",
+      "Ticker": "-",
+      "Identifier": "759351AT6",
+      "Weight": "0.404168368896",
+      "Market Value": "355682.45",
+      "Shares Held": "352000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.65000000",
+      "Maturity": "2055-09-15"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "-",
+      "Identifier": "55261FAN4",
+      "Weight": "0.21369028079",
+      "Market Value": "188055",
+      "Shares Held": "189000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.50000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "KKR GROUP FINANCE CO IX LLC",
+      "Ticker": "-",
+      "Identifier": "48253M104",
+      "Weight": "0.055846166035",
+      "Market Value": "49146.6",
+      "Shares Held": "3030.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "HUNTINGTON BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "446150AT1",
+      "Weight": "0.184083515397",
+      "Market Value": "162000",
+      "Shares Held": "160000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SUMISHO AIR LEASE CORP",
+      "Ticker": "-",
+      "Identifier": "00912XBQ6",
+      "Weight": "0.107191717384",
+      "Market Value": "94332.5",
+      "Shares Held": "97000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BT5",
+      "Weight": "0.371848701102",
+      "Market Value": "327240",
+      "Shares Held": "324000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.40000000",
+      "Maturity": "2054-10-01"
+    },
+    {
+      "Name": "FIRST CITIZENS BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "31959X400",
+      "Weight": "0.135469786144",
+      "Market Value": "119218.2",
+      "Shares Held": "4876.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ASPEN INSURANCE HOLDINGS LTD",
+      "Ticker": "AHL-PD",
+      "Identifier": "000000000",
+      "Weight": "0.078448394583",
+      "Market Value": "69037.36",
+      "Shares Held": "3416.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "WEC ENERGY GROUP INC",
+      "Ticker": "-",
+      "Identifier": "92939UAU0",
+      "Weight": "0.110642010621",
+      "Market Value": "97368.88",
+      "Shares Held": "98000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.62500000",
+      "Maturity": "2056-05-15"
+    },
+    {
+      "Name": "JP MORGAN CHASE & COMPANY",
+      "Ticker": "-",
+      "Identifier": "48128BAD3",
+      "Weight": "0.363833398036",
+      "Market Value": "320186.25",
+      "Shares Held": "318000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50476000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967PM7",
+      "Weight": "0.314351010491",
+      "Market Value": "276640",
+      "Shares Held": "266000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "UMB FINANCIAL CORP",
+      "Ticker": "UMBF",
+      "Identifier": "902788405",
+      "Weight": "0.106592400546",
+      "Market Value": "93805.08",
+      "Shares Held": "3482.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "EDISON INTERNATIONAL",
+      "Ticker": "-",
+      "Identifier": "281020AX5",
+      "Weight": "0.279444571595",
+      "Market Value": "245921.1",
+      "Shares Held": "241000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "8.12500000",
+      "Maturity": "2053-06-15"
+    },
+    {
+      "Name": "LINCOLN NATIONAL CORP",
+      "Ticker": "-",
+      "Identifier": "534187BR9",
+      "Weight": "0.194152713241",
+      "Market Value": "170861.25",
+      "Shares Held": "161000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "9.25000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BANK OF NEW YORK MELLON CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "064058AF7",
+      "Weight": "0.244002983738",
+      "Market Value": "214731.25",
+      "Shares Held": "215000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "ALLSTATE CORP (THE)",
+      "Ticker": "ALL",
+      "Identifier": "020002788",
+      "Weight": "0.205370637675",
+      "Market Value": "180733.42",
+      "Shares Held": "6922.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BP CAPITAL MARKETS PLC",
+      "Ticker": "-",
+      "Identifier": "05565QDX3",
+      "Weight": "0.382727525519",
+      "Market Value": "336813.75",
+      "Shares Held": "329000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.12500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "ROGERS COMMUNICATIONS INC",
+      "Ticker": "-",
+      "Identifier": "775109DG3",
+      "Weight": "0.508401023312",
+      "Market Value": "447410.87",
+      "Shares Held": "437000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.00000000",
+      "Maturity": "2055-04-15"
+    },
+    {
+      "Name": "PACIFIC GAS & ELECTRIC COMPANY",
+      "Ticker": "-",
+      "Identifier": "694308206",
+      "Weight": "0.015453277048",
+      "Market Value": "13599.43",
+      "Shares Held": "619.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BP CAPITAL MARKETS PLC",
+      "Ticker": "-",
+      "Identifier": "05565QDW5",
+      "Weight": "0.193747899955",
+      "Market Value": "170505",
+      "Shares Held": "162000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.45000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BROOKFIELD INFRASTRUCTURE FINANCE ULC",
+      "Ticker": "-",
+      "Identifier": "11276B109",
+      "Weight": "0.064202694033",
+      "Market Value": "56500.64",
+      "Shares Held": "3416.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "WELLS FARGO & COMPANY",
+      "Ticker": "-",
+      "Identifier": "95002YAA1",
+      "Weight": "0.730740536253",
+      "Market Value": "643077.5",
+      "Shares Held": "611000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "PLAINS ALL AMERICAN PIPELINE LP",
+      "Ticker": "-",
+      "Identifier": "726503AE5",
+      "Weight": "0.254334534682",
+      "Market Value": "223823.38",
+      "Shares Held": "224000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "8.02268000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BS7",
+      "Weight": "0.414571303336",
+      "Market Value": "364837.4",
+      "Shares Held": "357000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.87500000",
+      "Maturity": "2054-10-01"
+    },
+    {
+      "Name": "BANK OF NEW YORK MELLON CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "064058AN0",
+      "Weight": "0.380400914422",
+      "Market Value": "334766.25",
+      "Shares Held": "327000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.30000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055H608",
+      "Weight": "0.16845432496",
+      "Market Value": "148245.76",
+      "Shares Held": "8909.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "UNUM GROUP",
+      "Ticker": "UNM",
+      "Identifier": "91529Y601",
+      "Weight": "0.109973946545",
+      "Market Value": "96780.96",
+      "Shares Held": "4168.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "MTB",
+      "Identifier": "55261F864",
+      "Weight": "0.341803032883",
+      "Market Value": "300798.75",
+      "Shares Held": "11459.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967PJ4",
+      "Weight": "0.132778757865",
+      "Market Value": "116850",
+      "Shares Held": "114000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.20000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "060505625",
+      "Weight": "0.06439232278",
+      "Market Value": "56667.52",
+      "Shares Held": "2912.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "TELEPHONE & DATA SYSTEMS INC",
+      "Ticker": "-",
+      "Identifier": "879433761",
+      "Weight": "0.164260811574",
+      "Market Value": "144555.32",
+      "Shares Held": "7364.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ALLSTATE CORP (THE)",
+      "Ticker": "ALL",
+      "Identifier": "020002838",
+      "Weight": "0.288159789731",
+      "Market Value": "253590.8",
+      "Shares Held": "12554.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BROOKFIELD OAKTREE HOLDINGS LLC",
+      "Ticker": "OAK-PA",
+      "Identifier": "674001409",
+      "Weight": "0.076557743248",
+      "Market Value": "67373.52",
+      "Shares Held": "3236.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "-",
+      "Identifier": "55261FAH7",
+      "Weight": "0.031816903895",
+      "Market Value": "28000",
+      "Shares Held": "28000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.12500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "ROGERS COMMUNICATIONS INC",
+      "Ticker": "-",
+      "Identifier": "775109DH1",
+      "Weight": "0.374966200888",
+      "Market Value": "329983.51",
+      "Shares Held": "318000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "2055-04-15"
+    },
+    {
+      "Name": "VODAFONE GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "92857WBW9",
+      "Weight": "0.277739662799",
+      "Market Value": "244420.72",
+      "Shares Held": "262000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.12500000",
+      "Maturity": "2081-06-04"
+    },
+    {
+      "Name": "ATHENE HOLDING LTD",
+      "Ticker": "ATH-PA",
+      "Identifier": "04686J200",
+      "Weight": "0.102983136421",
+      "Market Value": "90628.8",
+      "Shares Held": "4780.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BV0",
+      "Weight": "0.130938445417",
+      "Market Value": "115230.46",
+      "Shares Held": "114000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.55000000",
+      "Maturity": "2055-04-01"
+    },
+    {
+      "Name": "US BANCORP",
+      "Ticker": "TBBK",
+      "Identifier": "902973155",
+      "Weight": "0.233482735828",
+      "Market Value": "205473.06",
+      "Shares Held": "10803.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "METLIFE INC",
+      "Ticker": "-",
+      "Identifier": "59156RAV0",
+      "Weight": "0.164401317294",
+      "Market Value": "144678.97",
+      "Shares Held": "112000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "10.75000000",
+      "Maturity": "2039-08-01"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967PK1",
+      "Weight": "0.399688492011",
+      "Market Value": "351740",
+      "Shares Held": "344000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "CITIZENS FINANCIAL GROUP INC",
+      "Ticker": "-",
+      "Identifier": "174610BD6",
+      "Weight": "0.053006393731",
+      "Market Value": "46647.5",
+      "Shares Held": "47000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "KEMPER CORP",
+      "Ticker": "KMPR",
+      "Identifier": "488401308",
+      "Weight": "0.057454510527",
+      "Market Value": "50562",
+      "Shares Held": "2120.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PNC FINANCIAL SERVICES GROUP INC (THE)",
+      "Ticker": "-",
+      "Identifier": "693475BF1",
+      "Weight": "0.455606700608",
+      "Market Value": "400950",
+      "Shares Held": "396000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.20000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "VALLEY NATIONAL BANCORP",
+      "Ticker": "VLY",
+      "Identifier": "919794305",
+      "Weight": "0.039564319994",
+      "Market Value": "34818",
+      "Shares Held": "1400.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "-",
+      "Identifier": "29273VBG4",
+      "Weight": "0.345643140009",
+      "Market Value": "304178.18",
+      "Shares Held": "302000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "2056-02-15"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "744320BJ0",
+      "Weight": "0.284663180172",
+      "Market Value": "250513.66",
+      "Shares Held": "256000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.12500000",
+      "Maturity": "2052-03-01"
+    },
+    {
+      "Name": "ARCH CAPITAL GROUP LTD",
+      "Ticker": "ACGL",
+      "Identifier": "03939A107",
+      "Weight": "0.102737737186",
+      "Market Value": "90412.84",
+      "Shares Held": "4564.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AT&T INC",
+      "Ticker": "T",
+      "Identifier": "00206R706",
+      "Weight": "0.38317645067",
+      "Market Value": "337208.82",
+      "Shares Held": "18267.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
+      "Ticker": "-",
+      "Identifier": "00774MBK0",
+      "Weight": "0.175717112796",
+      "Market Value": "154637.27",
+      "Shares Held": "149000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.95000000",
+      "Maturity": "2055-03-10"
+    },
+    {
+      "Name": "SOUTHERN COMPANY (THE)",
+      "Ticker": "-",
+      "Identifier": "842587EB9",
+      "Weight": "0.636983313364",
+      "Market Value": "560567.83",
+      "Shares Held": "546000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.37500000",
+      "Maturity": "2055-03-15"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "-",
+      "Identifier": "29273VBH2",
+      "Weight": "0.507831012116",
+      "Market Value": "446909.24",
+      "Shares Held": "439000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.75000000",
+      "Maturity": "2056-02-15"
+    },
+    {
+      "Name": "CITIZENS FINANCIAL GROUP INC",
+      "Ticker": "-",
+      "Identifier": "174610808",
+      "Weight": "0.050274844352",
+      "Market Value": "44243.64",
+      "Shares Held": "1746.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BU2",
+      "Weight": "0.205781018919",
+      "Market Value": "181094.57",
+      "Shares Held": "179000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.62500000",
+      "Maturity": "2055-04-01"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "MTB",
+      "Identifier": "55261F849",
+      "Weight": "0.107027519433",
+      "Market Value": "94188",
+      "Shares Held": "3760.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AMERICAN FINANCIAL GROUP INC",
+      "Ticker": "AFG",
+      "Identifier": "025932807",
+      "Weight": "0.047420538541",
+      "Market Value": "41731.75",
+      "Shares Held": "1975.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FMC CORP",
+      "Ticker": "-",
+      "Identifier": "302491AZ8",
+      "Weight": "0.126189715695",
+      "Market Value": "111051.41",
+      "Shares Held": "149000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "8.45000000",
+      "Maturity": "2055-11-01"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NCG8",
+      "Weight": "0.20299761935",
+      "Market Value": "178645.08",
+      "Shares Held": "169000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.37500000",
+      "Maturity": "2055-03-15"
+    },
+    {
+      "Name": "BANK OF MONTREAL",
+      "Ticker": "-",
+      "Identifier": "06368B5P9",
+      "Weight": "0.163425254225",
+      "Market Value": "143820",
+      "Shares Held": "144000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.69900000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "AMERICAN ELECTRIC POWER COMPANY INC",
+      "Ticker": "-",
+      "Identifier": "025537BA8",
+      "Weight": "0.142314408957",
+      "Market Value": "125241.71",
+      "Shares Held": "117000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.95000000",
+      "Maturity": "2054-12-15"
+    },
+    {
+      "Name": "TELEPHONE & DATA SYSTEMS INC",
+      "Ticker": "-",
+      "Identifier": "879433787",
+      "Weight": "0.14455345539",
+      "Market Value": "127212.15",
+      "Shares Held": "5785.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIRST CITIZENS BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "31959XAG8",
+      "Weight": "0.104802608796",
+      "Market Value": "92230",
+      "Shares Held": "92000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967QJ3",
+      "Weight": "0.520166607567",
+      "Market Value": "457765",
+      "Shares Held": "451000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "AEGON FUNDING COMPANY LLC",
+      "Ticker": "-",
+      "Identifier": "00775V104",
+      "Weight": "0.258241264132",
+      "Market Value": "227261.44",
+      "Shares Held": "11936.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BROOKFIELD OAKTREE HOLDINGS LLC",
+      "Ticker": "OAK-PA",
+      "Identifier": "674001300",
+      "Weight": "0.060095677173",
+      "Market Value": "52886.32",
+      "Shares Held": "2516.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "GOLDMAN SACHS TRUST",
+      "Ticker": "-",
+      "Identifier": "38151N502",
+      "Weight": "0.143461283348",
+      "Market Value": "126251",
+      "Shares Held": "126251.00000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "BANK OF NOVA SCOTIA (THE)",
+      "Ticker": "-",
+      "Identifier": "064159KJ4",
+      "Weight": "0.401375924236",
+      "Market Value": "353225",
+      "Shares Held": "355000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.57831000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "PNC FINANCIAL SERVICES GROUP INC (THE)",
+      "Ticker": "-",
+      "Identifier": "693475BC8",
+      "Weight": "0.344410882685",
+      "Market Value": "303093.75",
+      "Shares Held": "305000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.40000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "AMERICAN HOMES 4 RENT",
+      "Ticker": "AMH",
+      "Identifier": "02665T876",
+      "Weight": "0.042969183238",
+      "Market Value": "37814.4",
+      "Shares Held": "1616.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NAVIENT CORP",
+      "Ticker": "NAVI",
+      "Identifier": "63938C405",
+      "Weight": "0.085923367079",
+      "Market Value": "75615.6",
+      "Shares Held": "4132.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FIFTH THIRD BANCORP",
+      "Ticker": "FITB",
+      "Identifier": "316773886",
+      "Weight": "0.074827358204",
+      "Market Value": "65850.72",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ATHENE HOLDING LTD",
+      "Ticker": "-",
+      "Identifier": "04686JAM3",
+      "Weight": "0.129639588495",
+      "Market Value": "114087.42",
+      "Shares Held": "118000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.87500000",
+      "Maturity": "2055-06-28"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "MTB",
+      "Identifier": "55261F872",
+      "Weight": "0.102045810432",
+      "Market Value": "89803.92",
+      "Shares Held": "3558.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NAW5",
+      "Weight": "0.127865602928",
+      "Market Value": "112526.25",
+      "Shares Held": "111000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.25000000",
+      "Maturity": "2078-03-01"
+    },
+    {
+      "Name": "VALLEY NATIONAL BANCORP",
+      "Ticker": "VLY",
+      "Identifier": "919794206",
+      "Weight": "0.045907247049",
+      "Market Value": "40400",
+      "Shares Held": "1616.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NEXTERA ENERGY CAPITAL HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "65339KCW8",
+      "Weight": "0.201201430131",
+      "Market Value": "177064.37",
+      "Shares Held": "172000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.70000000",
+      "Maturity": "2054-09-01"
+    },
+    {
+      "Name": "BANK OF NEW YORK MELLON CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "064058AJ9",
+      "Weight": "0.504136001434",
+      "Market Value": "443657.5",
+      "Shares Held": "442000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.14200000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "ENTERGY MISSISSIPPI LLC",
+      "Ticker": "EMP",
+      "Identifier": "29364N108",
+      "Weight": "0.006979265133",
+      "Market Value": "6142",
+      "Shares Held": "296.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CMS ENERGY CORP",
+      "Ticker": "CMS",
+      "Identifier": "125896845",
+      "Weight": "0.188956456039",
+      "Market Value": "166288.36",
+      "Shares Held": "7252.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ALLSTATE CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "020002AU5",
+      "Weight": "0.154902232914",
+      "Market Value": "136319.44",
+      "Shares Held": "132000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "2057-05-15"
+    },
+    {
+      "Name": "AMERICAN EXPRESS COMPANY",
+      "Ticker": "-",
+      "Identifier": "025816CH0",
+      "Weight": "0.523010243353",
+      "Market Value": "460267.5",
+      "Shares Held": "462000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.55000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "WESTERN ALLIANCE BANCORP",
+      "Ticker": "-",
+      "Identifier": "957638406",
+      "Weight": "0.113437625608",
+      "Market Value": "99829.12",
+      "Shares Held": "4132.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FLAGSTAR BANK NA",
+      "Ticker": "-",
+      "Identifier": "649445202",
+      "Weight": "0.107045177815",
+      "Market Value": "94203.54",
+      "Shares Held": "4057.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055H806",
+      "Weight": "0.246702591218",
+      "Market Value": "217107",
+      "Shares Held": "12771.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PNC FINANCIAL SERVICES GROUP INC (THE)",
+      "Ticker": "-",
+      "Identifier": "693475BD6",
+      "Weight": "0.390731465406",
+      "Market Value": "343857.5",
+      "Shares Held": "343000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "SEMPRA",
+      "Ticker": "-",
+      "Identifier": "816851BW8",
+      "Weight": "0.219151220543",
+      "Market Value": "192860.82",
+      "Shares Held": "191000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.37500000",
+      "Maturity": "2056-04-01"
+    },
+    {
+      "Name": "RENAISSANCERE HOLDINGS LTD",
+      "Ticker": "RNR",
+      "Identifier": "75968N309",
+      "Weight": "0.199880074112",
+      "Market Value": "175901.53",
+      "Shares Held": "8309.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "PRU",
+      "Identifier": "744320870",
+      "Weight": "0.104771428231",
+      "Market Value": "92202.56",
+      "Shares Held": "3988.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CHARLES SCHWAB CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "808513865",
+      "Weight": "0.164573389928",
+      "Market Value": "144830.4",
+      "Shares Held": "8229.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BRIGHTHOUSE FINANCIAL INC",
+      "Ticker": "BHF",
+      "Identifier": "10922N509",
+      "Weight": "0.084577284781",
+      "Market Value": "74431",
+      "Shares Held": "4802.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "744320BK7",
+      "Weight": "0.574136303516",
+      "Market Value": "505260.24",
+      "Shares Held": "494000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.00000000",
+      "Maturity": "2052-09-01"
+    },
+    {
+      "Name": "PACIFICORP",
+      "Ticker": "-",
+      "Identifier": "695114DG0",
+      "Weight": "0.315909459259",
+      "Market Value": "278011.49",
+      "Shares Held": "276000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "2056-08-15"
+    },
+    {
+      "Name": "ATHENE HOLDING LTD",
+      "Ticker": "ATH-PA",
+      "Identifier": "04686J507",
+      "Weight": "0.159083246803",
+      "Market Value": "139998.88",
+      "Shares Held": "5488.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BROOKFIELD INFRASTRUCTURE PARTNERS LP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.05196082209",
+      "Market Value": "45727.36",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENBRIDGE INC",
+      "Ticker": "-",
+      "Identifier": "29250NCF0",
+      "Weight": "0.124982025565",
+      "Market Value": "109988.6",
+      "Shares Held": "103000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.20000000",
+      "Maturity": "2054-06-27"
+    },
+    {
+      "Name": "MORGAN STANLEY",
+      "Ticker": "MS",
+      "Identifier": "61762V861",
+      "Weight": "0.24164481709",
+      "Market Value": "212655.98",
+      "Shares Held": "12407.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "TRANSCANADA PIPELINES LTD",
+      "Ticker": "-",
+      "Identifier": "89352HBG3",
+      "Weight": "0.367362029036",
+      "Market Value": "323291.57",
+      "Shares Held": "314000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.00000000",
+      "Maturity": "2065-06-01"
+    },
+    {
+      "Name": "NATIONAL RURAL UTILITIES COOPERATIVE FINANCE CORP",
+      "Ticker": "-",
+      "Identifier": "637432105",
+      "Weight": "0.072265733818",
+      "Market Value": "63596.4",
+      "Shares Held": "2680.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967PE5",
+      "Weight": "0.529433280826",
+      "Market Value": "465920",
+      "Shares Held": "448000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.62500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "PACIFICORP",
+      "Ticker": "-",
+      "Identifier": "695114DF2",
+      "Weight": "0.443209164463",
+      "Market Value": "390039.73",
+      "Shares Held": "383000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.37500000",
+      "Maturity": "2055-09-15"
+    },
+    {
+      "Name": "CHARLES SCHWAB CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "808513BJ3",
+      "Weight": "0.489792827526",
+      "Market Value": "431035",
+      "Shares Held": "461000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "KEYCORP",
+      "Ticker": "-",
+      "Identifier": "493267843",
+      "Weight": "0.186444909188",
+      "Market Value": "164078.11",
+      "Shares Held": "6493.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "-",
+      "Identifier": "744320BL5",
+      "Weight": "0.015637417379",
+      "Market Value": "13761.48",
+      "Shares Held": "13000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.75000000",
+      "Maturity": "2053-03-01"
+    },
+    {
+      "Name": "USB CAPITAL IX",
+      "Ticker": "-",
+      "Identifier": "91731KAA8",
+      "Weight": "0.207176337876",
+      "Market Value": "182322.5",
+      "Shares Held": "233000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.95471000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "TRANSCANADA PIPELINES LTD",
+      "Ticker": "-",
+      "Identifier": "89352HBL2",
+      "Weight": "0.100966944674",
+      "Market Value": "88854.48",
+      "Shares Held": "88000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.37500000",
+      "Maturity": "2056-10-17"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "060505229",
+      "Weight": "0.308138328204",
+      "Market Value": "271172.62",
+      "Shares Held": "10873.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AMERICAN ELECTRIC POWER COMPANY INC",
+      "Ticker": "-",
+      "Identifier": "025537AZ4",
+      "Weight": "0.051910790009",
+      "Market Value": "45683.33",
+      "Shares Held": "44000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.05000000",
+      "Maturity": "2054-12-15"
+    },
+    {
+      "Name": "KEYCORP",
+      "Ticker": "-",
+      "Identifier": "493267AK4",
+      "Weight": "0.150941380638",
+      "Market Value": "132833.75",
+      "Shares Held": "133000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.00000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "06055H202",
+      "Weight": "0.12689958491",
+      "Market Value": "111676.12",
+      "Shares Held": "5534.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "LINCOLN NATIONAL CORP",
+      "Ticker": "LNC",
+      "Identifier": "534187885",
+      "Weight": "0.155942600219",
+      "Market Value": "137235",
+      "Shares Held": "5228.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "US BANCORP",
+      "Ticker": "-",
+      "Identifier": "902973BC9",
+      "Weight": "0.497230028812",
+      "Market Value": "437580",
+      "Shares Held": "442000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.70000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "PRUDENTIAL FINANCIAL INC",
+      "Ticker": "PRU",
+      "Identifier": "744320888",
+      "Weight": "0.131080076092",
+      "Market Value": "115355.1",
+      "Shares Held": "7077.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "EXELON CORP",
+      "Ticker": "-",
+      "Identifier": "30161NBQ3",
+      "Weight": "0.327091771487",
+      "Market Value": "287852.32",
+      "Shares Held": "278000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "2055-03-15"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "060505583",
+      "Weight": "0.087929195606",
+      "Market Value": "77380.8",
+      "Shares Held": "3948.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "-",
+      "Identifier": "060505591",
+      "Weight": "0.046962477393",
+      "Market Value": "41328.64",
+      "Shares Held": "2048.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "STIFEL FINANCIAL CORP",
+      "Ticker": "SF",
+      "Identifier": "860630607",
+      "Weight": "0.069637475745",
+      "Market Value": "61283.44",
+      "Shares Held": "3092.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "PUBLIC STORAGE",
+      "Ticker": "PSA",
+      "Identifier": "74460W628",
+      "Weight": "0.080973168176",
+      "Market Value": "71259.25",
+      "Shares Held": "3725.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "DIGITAL REALTY TRUST INC",
+      "Ticker": "DLR",
+      "Identifier": "253868855",
+      "Weight": "0.064825214484",
+      "Market Value": "57048.48",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "REGIONS FINANCIAL CORP",
+      "Ticker": "RF",
+      "Identifier": "7591EP860",
+      "Weight": "0.126668344198",
+      "Market Value": "111472.62",
+      "Shares Held": "4351.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "HUMANA INC",
+      "Ticker": "-",
+      "Identifier": "444859CE0",
+      "Weight": "0.258223821651",
+      "Market Value": "227246.09",
+      "Shares Held": "229000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.62500000",
+      "Maturity": "2056-09-15"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "-",
+      "Identifier": "29273VAM2",
+      "Weight": "0.297238527357",
+      "Market Value": "261580.41",
+      "Shares Held": "253000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.12500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "MORGAN STANLEY",
+      "Ticker": "MS",
+      "Identifier": "61762V838",
+      "Weight": "0.381077966774",
+      "Market Value": "335362.08",
+      "Shares Held": "13136.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "REINSURANCE GROUP OF AMERICA INC",
+      "Ticker": "-",
+      "Identifier": "759351AE9",
+      "Weight": "0.016388262221",
+      "Market Value": "14422.25",
+      "Shares Held": "15000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.60062000",
+      "Maturity": "2065-12-15"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "17327CAV5",
+      "Weight": "0.411964987563",
+      "Market Value": "362543.75",
+      "Shares Held": "355000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.95000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "BROOKFIELD FINANCE INC",
+      "Ticker": "-",
+      "Identifier": "11271LAN2",
+      "Weight": "0.187273716808",
+      "Market Value": "164807.49",
+      "Shares Held": "171000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.30000000",
+      "Maturity": "2055-01-15"
+    },
+    {
+      "Name": "CITIZENS FINANCIAL GROUP INC",
+      "Ticker": "-",
+      "Identifier": "174610402",
+      "Weight": "0.129179470612",
+      "Market Value": "113682.5",
+      "Shares Held": "6145.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AEGON LTD",
+      "Ticker": "-",
+      "Identifier": "007924AJ2",
+      "Weight": "0.228921032685",
+      "Market Value": "201458.6",
+      "Shares Held": "200000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.50000000",
+      "Maturity": "2048-04-11"
+    },
+    {
+      "Name": "TRITON INTERNATIONAL LTD",
+      "Ticker": "TRTN-PA",
+      "Identifier": "000000000",
+      "Weight": "0.061357717392",
+      "Market Value": "53996.96",
+      "Shares Held": "2248.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "FORD MOTOR CO",
+      "Ticker": "F",
+      "Identifier": "345370811",
+      "Weight": "0.179228824021",
+      "Market Value": "157727.7",
+      "Shares Held": "7137.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "AMERICAN FINANCIAL GROUP INC",
+      "Ticker": "AFG",
+      "Identifier": "025932880",
+      "Weight": "0.064947527753",
+      "Market Value": "57156.12",
+      "Shares Held": "3108.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "CITIGROUP INC",
+      "Ticker": "-",
+      "Identifier": "172967PC9",
+      "Weight": "0.547641640399",
+      "Market Value": "481944",
+      "Shares Held": "467000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.37500000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "CHARLES SCHWAB CORP (THE)",
+      "Ticker": "-",
+      "Identifier": "808513600",
+      "Weight": "0.248499791761",
+      "Market Value": "218688.6",
+      "Shares Held": "8970.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NEXTERA ENERGY CAPITAL HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "65339KAV2",
+      "Weight": "0.295863116691",
+      "Market Value": "260370",
+      "Shares Held": "264000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.80000000",
+      "Maturity": "2077-12-01"
+    },
+    {
+      "Name": "CAPITAL ONE FINANCIAL CORP",
+      "Ticker": "COF",
+      "Identifier": "14040H774",
+      "Weight": "0.033146486856",
+      "Market Value": "29170.08",
+      "Shares Held": "1724.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "VOYA FINANCIAL INC",
+      "Ticker": "VOYA",
+      "Identifier": "929089209",
+      "Weight": "0.113005097526",
+      "Market Value": "99448.48",
+      "Shares Held": "4168.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "NISOURCE INC",
+      "Ticker": "-",
+      "Identifier": "65473PAY1",
+      "Weight": "0.302970478952",
+      "Market Value": "266624.73",
+      "Shares Held": "267000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.75000000",
+      "Maturity": "2056-07-15"
+    },
+    {
+      "Name": "BROOKFIELD FINANCE I (UK) PLC",
+      "Ticker": "-",
+      "Identifier": "11272B103",
+      "Weight": "0.047117016641",
+      "Market Value": "41464.64",
+      "Shares Held": "2768.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "W. R. BERKLEY CORP",
+      "Ticker": "-",
+      "Identifier": "084423805",
+      "Weight": "0.092071211061",
+      "Market Value": "81025.92",
+      "Shares Held": "4168.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ENERGY TRANSFER LP",
+      "Ticker": "-",
+      "Identifier": "29273VAN0",
+      "Weight": "0.131656643844",
+      "Market Value": "115862.5",
+      "Shares Held": "115000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.50000000",
+      "Maturity": "N/A"
+    },
+    {
+      "Name": "TELUS CORP",
+      "Ticker": "-",
+      "Identifier": "87971MCL5",
+      "Weight": "0.264202149714",
+      "Market Value": "232507.23",
+      "Shares Held": "230000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.62500000",
+      "Maturity": "2055-10-15"
+    },
+    {
+      "Name": "VODAFONE GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "92857WBX7",
+      "Weight": "0.18463178883",
+      "Market Value": "162482.5",
+      "Shares Held": "206000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.12500000",
+      "Maturity": "2081-06-04"
+    },
+    {
+      "Name": "HA SUSTAINABLE INFRASTRUCTURE CAPITAL INC",
+      "Ticker": "-",
+      "Identifier": "41068XAG5",
+      "Weight": "0.137691833259",
+      "Market Value": "121173.68",
+      "Shares Held": "114000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "8.00000000",
+      "Maturity": "2056-06-01"
+    },
+    {
+      "Name": "PG&E CORP",
+      "Ticker": "-",
+      "Identifier": "69331CAM0",
+      "Weight": "0.557761915737",
+      "Market Value": "490850.2",
+      "Shares Held": "483000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.37500000",
+      "Maturity": "2055-03-15"
+    }
+  ]
+}

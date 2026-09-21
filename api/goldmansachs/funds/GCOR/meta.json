@@ -1,0 +1,483 @@
+{
+  "ticker": "GCOR",
+  "name": "Goldman Sachs Access U.S. Aggregate Bond ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028083/0000940400-26-028083.txt",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCOR",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028083, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W101",
+    "isin": "US38149W1018",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "FTSE Goldman Sachs US Broad Bond Market Index",
+    "exchange": "NYSE Arca",
+    "morningstarCategory": null,
+    "navTicker": "GCOR.NV",
+    "iopvTicker": "GCORIV"
+  },
+  "expenseRatio": {
+    "display": "0.08%",
+    "value": 0.08,
+    "gross": 0.09,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$40.01",
+    "value": 40.01,
+    "asOfDate": "Sep 17 2026"
+  },
+  "marketPrice": {
+    "display": "$40.03",
+    "value": 40.03,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$814.23 M",
+    "value": 814230000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 1817,
+    "bidAskMidpoint": 40.05,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": 4.22,
+    "dividendYieldText": "4.22%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 4.22,
+    "secYield": 4.59,
+    "secYieldText": "4.59%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+  },
+  "returns": {
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.39,
+      "mo1Text": "0.39%",
+      "mo3": -0.72,
+      "mo3Text": "-0.72%",
+      "qtd": -1.87,
+      "qtdText": "-1.87%",
+      "ytd": -0.3,
+      "ytdText": "-0.30%",
+      "yr1": 1.8,
+      "yr1Text": "1.80%",
+      "yr3": 3.85,
+      "yr3Text": "3.85%",
+      "yr5": -0.63,
+      "yr5Text": "-0.63%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -0.61,
+      "sinceInceptionText": "-0.61%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 3.75,
+      "yr3": null,
+      "yr5": -0.25,
+      "yr10": null,
+      "sinceInception": -0.47
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.4,
+      "mo1Text": "0.40%",
+      "mo3": -0.61,
+      "mo3Text": "-0.61%",
+      "ytd": -0.24,
+      "ytdText": "-0.24%",
+      "yr1": 1.89,
+      "yr1Text": "1.89%",
+      "yr3": 3.77,
+      "yr3Text": "3.77%",
+      "yr5": -0.62,
+      "yr5Text": "-0.62%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -0.61,
+      "sinceInceptionText": "-0.61%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 3.75,
+      "yr1Text": "3.75%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": -0.24,
+      "yr5Text": "-0.24%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -0.47,
+      "sinceInceptionText": "-0.47%"
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "10/01/2020",
+        "0.015"
+      ],
+      [
+        "11/02/2020",
+        "0.031"
+      ],
+      [
+        "12/01/2020",
+        "0.035"
+      ],
+      [
+        "12/29/2020",
+        "0.037"
+      ],
+      [
+        "02/01/2021",
+        "0.033"
+      ],
+      [
+        "03/01/2021",
+        "0.029"
+      ],
+      [
+        "04/01/2021",
+        "0.038"
+      ],
+      [
+        "05/03/2021",
+        "0.038"
+      ],
+      [
+        "06/01/2021",
+        "0.036"
+      ],
+      [
+        "07/01/2021",
+        "0.038"
+      ],
+      [
+        "08/02/2021",
+        "0.04"
+      ],
+      [
+        "09/01/2021",
+        "0.037"
+      ],
+      [
+        "10/01/2021",
+        "0.037"
+      ],
+      [
+        "11/01/2021",
+        "0.038"
+      ],
+      [
+        "12/01/2021",
+        "0.042"
+      ],
+      [
+        "12/28/2021",
+        "0.042"
+      ],
+      [
+        "02/01/2022",
+        "0.042"
+      ],
+      [
+        "03/01/2022",
+        "0.041"
+      ],
+      [
+        "04/01/2022",
+        "0.044"
+      ],
+      [
+        "05/03/2022",
+        "0.054"
+      ],
+      [
+        "06/01/2022",
+        "0.061"
+      ],
+      [
+        "07/01/2022",
+        "0.054"
+      ],
+      [
+        "08/01/2022",
+        "0.079"
+      ],
+      [
+        "09/01/2022",
+        "0.086"
+      ],
+      [
+        "10/03/2022",
+        "0.09"
+      ],
+      [
+        "11/01/2022",
+        "0.099"
+      ],
+      [
+        "12/01/2022",
+        "0.102"
+      ],
+      [
+        "12/27/2022",
+        "0.115"
+      ],
+      [
+        "02/01/2023",
+        "0.111"
+      ],
+      [
+        "03/01/2023",
+        "0.111"
+      ],
+      [
+        "04/03/2023",
+        "0.113"
+      ],
+      [
+        "05/01/2023",
+        "0.122"
+      ],
+      [
+        "06/01/2023",
+        "0.121"
+      ],
+      [
+        "07/03/2023",
+        "0.125"
+      ],
+      [
+        "08/01/2023",
+        "0.128"
+      ],
+      [
+        "09/01/2023",
+        "0.131"
+      ],
+      [
+        "10/02/2023",
+        "0.144"
+      ],
+      [
+        "11/01/2023",
+        "0.141"
+      ],
+      [
+        "12/01/2023",
+        "0.133"
+      ],
+      [
+        "12/27/2023",
+        "0.159"
+      ],
+      [
+        "02/01/2024",
+        "0.108"
+      ],
+      [
+        "03/01/2024",
+        "0.142"
+      ],
+      [
+        "04/01/2024",
+        "0.123"
+      ],
+      [
+        "05/01/2024",
+        "0.146"
+      ],
+      [
+        "06/03/2024",
+        "0.141"
+      ],
+      [
+        "07/01/2024",
+        "0.128"
+      ],
+      [
+        "08/01/2024",
+        "0.157"
+      ],
+      [
+        "09/03/2024",
+        "0.135"
+      ],
+      [
+        "10/01/2024",
+        "0.237"
+      ],
+      [
+        "11/01/2024",
+        "0.135"
+      ],
+      [
+        "12/02/2024",
+        "0.128"
+      ],
+      [
+        "12/31/2024",
+        "0.176"
+      ],
+      [
+        "02/03/2025",
+        "0.1"
+      ],
+      [
+        "03/03/2025",
+        "0.127"
+      ],
+      [
+        "04/01/2025",
+        "0.153"
+      ],
+      [
+        "05/01/2025",
+        "0.1"
+      ],
+      [
+        "06/02/2025",
+        "0.136"
+      ],
+      [
+        "07/01/2025",
+        "0.14"
+      ],
+      [
+        "08/01/2025",
+        "0.142"
+      ],
+      [
+        "09/02/2025",
+        "0.129"
+      ],
+      [
+        "10/01/2025",
+        "0.207"
+      ],
+      [
+        "11/03/2025",
+        "0.141"
+      ],
+      [
+        "12/01/2025",
+        "0.127"
+      ],
+      [
+        "12/31/2025",
+        "0.173"
+      ],
+      [
+        "02/02/2026",
+        "0.109"
+      ],
+      [
+        "03/02/2026",
+        "0.13"
+      ],
+      [
+        "04/01/2026",
+        "0.143"
+      ],
+      [
+        "05/01/2026",
+        "0.136"
+      ],
+      [
+        "06/01/2026",
+        "0.131"
+      ],
+      [
+        "07/01/2026",
+        "0.146"
+      ],
+      [
+        "08/03/2026",
+        "0.138"
+      ],
+      [
+        "09/01/2026",
+        "0.139"
+      ]
+    ]
+  },
+  "topHoldings": null,
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json",
+      "holdings/003.json",
+      "holdings/004.json",
+      "holdings/005.json",
+      "holdings/006.json",
+      "holdings/007.json",
+      "holdings/008.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 1768,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028083, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 1817
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1508,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}
