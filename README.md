@@ -48,16 +48,19 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 | Environment variable | Default | Meaning |
 | --- | --: | --- |
 | `MAX_FETCHES` | all | Batch size: with a positive value the updater continues after the committed cursor in `api/goldmansachs/update-state.json`; empty or `0` is a full pass — every fund is refreshed in one run. |
-| `REQUEST_SLEEP` | `1` | Minimum delay in seconds between outgoing request starts, including retries. |
-| `CONCURRENCY` | `2` | Number of parallel fund update workers. Request starts are still globally spaced by `REQUEST_SLEEP`. |
+| `REQUEST_SLEEP` | `1.5` | Minimum delay in seconds between outgoing request starts, including retries. |
+| `CONCURRENCY` | `3` | Number of parallel fund update workers. Request starts are still globally spaced by `REQUEST_SLEEP`. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |
-| `TICKERS` | all | Space-, comma- or semicolon-separated ticker allowlist, e.g. `SCHB SCHX SCHG SCHV SCHD`. |
+| `TICKERS` | all | Space-, comma- or semicolon-separated ticker allowlist, e.g. `GSLC GBIL AAAU GPIX GPIQ`. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. |
+| `HISTORY_RANGE` | `max` | Yahoo Finance chart range for history rows (`max`, `10y`, `5y`, ...). |
+| `STORE_RAW_DOWNLOADS` | off | Store the official fund finder and fund pages under `api/goldmansachs/raw`. |
 | `MAX_RETRIES` | `2` | Retries after the initial request. Only network errors and HTTP 408/425/429/5xx are retried with exponential backoff. |
 | `SEC_UA` | declared UA | Override the SEC User-Agent. SEC policy requires automated tools to declare a contact. |
+| `EDGAR_FALLBACK` | `1` | Use SEC EDGAR Form N-PORT-P for full holdings (the fund pages publish only the top 10); `0`/`off` disables it. |
 | `SKIP_YAHOO` | off | Skip Yahoo Finance history updates. |
 | `SKIP_GOLDMANSACHS` | off | Skip the Goldman Sachs fund finder and detail pages (SEC EDGAR + Yahoo Finance only). |
 | `OFFLINE_SEED` | off | Build the feed from the committed seed + verified snapshot only, with no network access. |
@@ -68,7 +71,7 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 
 ```bash
 MAX_FETCHES=10 ./scripts/update-data.ts
-TICKERS="GSLC GBIL AAAU GSST GBUY" ./scripts/update-data.ts
+TICKERS="GSLC GBIL AAAU GPIX GPIQ" ./scripts/update-data.ts
 AUM="1B:" TER=":0.5" ./scripts/update-data.ts
 PERFORMANCE_1Y="15:" ./scripts/update-data.ts
 ```
@@ -83,7 +86,7 @@ Verification before every publish: `bun install --frozen-lockfile`, `bun test`, 
 
 | Бренд | Фонды | Где брать данные |
 | --- | --- | --- |
-| **VanEck** (70+) | GDX, SMH, MOAT, ESPO, BJK, OIH, REMX | [vaneck.com ETF finder](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) — [daggerok/VanEck](https://github.com/daggerok/VanEck) |
+| **VanEck** (91) | GDX, SMH, MOAT, ESPO, ANGL, OIH, REMX | [vaneck.com ETF finder](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) — [daggerok/VanEck](https://github.com/daggerok/VanEck) |
 | **JPMorgan** (78) | JEPI, JEPQ, JPST, BBJP, JIRE, JGLO | [am.jpmorgan.com ETF explorer](https://am.jpmorgan.com/us/en/asset-management/adv/products/fund-explorer/etf) — [daggerok/JPMorgan](https://github.com/daggerok/JPMorgan) |
 | **Schwab** (30+) | SCHB, SCHX, SCHG, SCHV, SCHD, SCHM | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) — [daggerok/Schwab](https://github.com/daggerok/Schwab) |
 | **Invesco** (245) | QQQM, RSP, SPLV, SPHD, SPMO, QQQ | [invesco.com ETFs](https://www.invesco.com/us/en/financial-products/etfs.html) — [daggerok/Invesco](https://github.com/daggerok/Invesco) |
@@ -93,7 +96,7 @@ Verification before every publish: `bun install --frozen-lockfile`, `bun test`, 
 | **Vanguard** (80+) | VTI, VOO, BND, VUG, VTV, VXUS | [investor.vanguard.com](https://investor.vanguard.com/etf/list) — [daggerok/Vanguard](https://github.com/daggerok/Vanguard) |
 | **SPDR** (179) | SPY, SPYM, SPYG, XLK, XLF, XLV | [ssga.com fund finder](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) — [daggerok/SPDR](https://github.com/daggerok/SPDR) |
 | **WisdomTree** (90+) | DGRW, USFR, WCLD, DGRW, EFS | [wisdomtree.com](https://www.wisdomtree.com/investments) — [daggerok/WisdomTree](https://github.com/daggerok/WisdomTree) |
-| **Goldman Sachs** (48) | GSLC, GBIL, AAAU, GSST, GBUY, GDEF | [am.gs.com fund finder](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100) — [daggerok/Goldman-Sachs](https://github.com/daggerok/Goldman-Sachs) |
+| **Goldman Sachs** (48) | GSLC, GBIL, AAAU, GPIX, GPIQ, GSST | [am.gs.com fund finder](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100) — [daggerok/Goldman-Sachs](https://github.com/daggerok/Goldman-Sachs) |
 
 ## Sibling applications
 
