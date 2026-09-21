@@ -693,7 +693,10 @@ export function normalizeMarkdownLinks(text: string, base = 'https://am.gs.com')
 
 export function parseCatalogText(text: string): CatalogFund[] {
   const source = htmlToText(stripProxyPreamble(normalizeMarkdownLinks(text)));
-  const lines = source.split('\n');
+  // Blank-line layout varies per render (the HTML pipeline strips blanks only
+  // when tags are present, and some renders add a table separator row); drop
+  // blanks so card offsets stay stable across render variants.
+  const lines = source.split('\n').filter((line) => line.trim());
   const funds = new Map<string, CatalogFund>();
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
@@ -706,7 +709,7 @@ export function parseCatalogText(text: string): CatalogFund[] {
       if (!/goldman sachs/i.test(label)) continue;
       const fundPage = match[2];
       const cusip = match[4].toUpperCase();
-      const window = lines.slice(index, index + 10);
+      const window = lines.slice(index, index + 12);
       const joined = window.join('\n');
       const rowLine = window.find((candidate) => /^\s*\|/.test(candidate) && /\|\s*[A-Z]{3,5}\s*\|/.test(candidate) && /USD/i.test(candidate));
       const cells = (rowLine || '').split('|').map((cell) => stripMarkdown(cell));

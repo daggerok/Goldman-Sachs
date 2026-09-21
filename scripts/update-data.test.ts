@@ -504,6 +504,88 @@ describe('Goldman Sachs fund finder parser', () => {
     expect(gbil.inception).toBe('2016-09-06');
   });
 
+const FUND_FINDER_LIVE = [
+  'Title: Fund Finder',
+  '',
+  'URL Source: https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds|ETF&limit=100',
+  '',
+  'Markdown Content:',
+  'United States (en)keyboard_arrow_down',
+  '',
+  '[](https://am.gs.com/)',
+  '',
+  '*   [Funds](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds|ETF&limit=100#)',
+  '*   [Creating Impact](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds|ETF&limit=100#)',
+  '*   [About Us](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds|ETF&limit=100#)',
+  '',
+  '*   search',
+  '*   Login',
+  '',
+  '* * *',
+  '',
+  '# Fund Finder',
+  '',
+  '48 Funds (48 Share Classes)',
+  '',
+  '[Reset Filters restart_alt](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds|ETF&limit=100#)',
+  '',
+  '- [x] Show all fund details',
+  '',
+  'Fund Name metric_arrow_drop_up Asset Class metric_arrow_drop_up',
+  '',
+  '* * *',
+  '',
+  '## [Goldman Sachs Access Emerging Markets USD Bond ETF](https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf)',
+  '',
+  'GEMD',
+  '',
+  'FIXED INCOME',
+  '',
+  'FUND OVERVIEW',
+  '',
+  '|  | Symbol | NAV as of Sep 17, 2026 | Average Annual Returns as of Aug 31, 2026 | Distribution Frequency | Documents |',
+  '| --- | --- | --- | --- | --- |',
+  '| 1Yr | 3Yr | 5Yr | 10Yr | Inception |',
+  '| [381430388](https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf) | GEMD | 41.04 USD | 6.11% | 8.03% | - | - | 2.02% Feb 15, 2022 | Monthly | article |',
+  '',
+  '* * *',
+  '',
+  '## [Goldman Sachs Access High Yield Corporate Bond ETF](https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf)',
+  '',
+  'GHYB',
+  '',
+  'FIXED INCOME',
+  '',
+  'FUND OVERVIEW',
+  '',
+  '|  | Symbol | NAV as of Sep 17, 2026 | Average Annual Returns as of Aug 31, 2026 | Distribution Frequency | Documents |',
+  '| --- | --- | --- | --- | --- |',
+  '| 1Yr | 3Yr | 5Yr | 10Yr | Inception |',
+  '| [381430453](https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf) | GHYB | 44.12 USD | 4.59% | 8.27% | 3.88% | - | 4.56% Sep 5, 2017 | Monthly | article |',
+  '',
+  '* * *',
+].join('\n');
+
+  test('reads the live render shape (separator row, spaced labels, no <br>)', () => {
+    const funds = parseCatalogText(FUND_FINDER_LIVE);
+    expect(funds.map((fund) => fund.ticker)).toEqual(['GEMD', 'GHYB']);
+    const gemd = funds.find((fund) => fund.ticker === 'GEMD')!;
+    expect(gemd.name).toBe('Goldman Sachs Access Emerging Markets USD Bond ETF');
+    expect(gemd.category).toBe('Fixed Income');
+    expect(gemd.cusip).toBe('381430388');
+    expect(gemd.nav).toBe(41.04);
+    expect(gemd.asOfDate).toBe('2026-09-17');
+    expect(gemd.frequency).toBe('Monthly');
+    expect(gemd.inception).toBe('2022-02-15');
+    expect(gemd.returnsAsOf).toBe('2026-08-31');
+    expect(gemd.returns).toEqual({ ytd: null, yr1: 6.11, yr3: 8.03, yr5: null, yr10: null, sinceInception: 2.02 });
+    const ghyb = funds.find((fund) => fund.ticker === 'GHYB')!;
+    expect(ghyb.nav).toBe(44.12);
+    expect(ghyb.returns.yr5).toBe(3.88);
+    expect(ghyb.returns.sinceInception).toBe(4.56);
+    expect(ghyb.inception).toBe('2017-09-05');
+  });
+
   test('throws when no fund rows are present', () => {
     expect(() => parseCatalogText('<html><body>Access denied</body></html>')).toThrow(/no ETF rows/);
   });
