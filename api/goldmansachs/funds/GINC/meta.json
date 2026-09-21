@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 17 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,17 +22,17 @@
     "cusip": "38151N882",
     "isin": "US38151N8829",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "Bloomberg US Aggregate Bond Index",
-    "exchange": "NYSE Arca",
+    "indexTicker": null,
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GINC.NV",
-    "iopvTicker": "N/A"
+    "navTicker": null,
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.4%",
     "value": 0.4,
     "gross": 0.4,
-    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
   },
   "nav": {
     "display": "$49.39",
@@ -55,12 +55,12 @@
     "display": "$147.86 M",
     "value": 147860000,
     "asOfDate": "Sep 17 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "source": "previous run"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 479,
+    "publishedTotalHoldings": null,
     "bidAskMidpoint": 49.35,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -155,8 +155,7 @@
     "totalRows": 0,
     "asOfDate": null,
     "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 479
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
   },
   "history": {
     "pages": [

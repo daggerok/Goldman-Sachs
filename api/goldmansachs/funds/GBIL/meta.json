@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028082/0000940400-26-028082.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,22 +22,22 @@
     "cusip": "381430529",
     "isin": "US3814305294",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "FTSE US Treasury 0-1 Year Composite Select Index (Total Return, Unhedged, USD)",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GBIL.NV",
+    "iopvTicker": "GBILIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
+    "display": "0.12%",
+    "value": 0.12,
     "gross": 0.14,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "Sep 18 2026"
+    "display": "$99.98",
+    "value": 99.98,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$99.99",
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$7.60 B",
-    "value": 7601833042.4,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$7.88 B",
+    "value": 7877700000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 40,
     "bidAskMidpoint": 99.99,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -576,7 +576,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028082, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 40
   },
   "history": {
     "pages": [

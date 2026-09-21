@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028080/0000940400-26-028080.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -23,21 +23,21 @@
     "isin": "US38149W7700",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
     "indexTicker": null,
-    "exchange": null,
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GDOC.NV",
+    "iopvTicker": "GDOCIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
+    "display": "0.75%",
+    "value": 0.75,
     "gross": 0.75,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "Sep 18 2026"
+    "display": "$37.24",
+    "value": 37.24,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$37.25",
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$20.12 M",
-    "value": 20117827.48,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$19.55 M",
+    "value": 19550000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 40,
     "bidAskMidpoint": 37.25,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -184,7 +184,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028080, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 40
   },
   "history": {
     "pages": [

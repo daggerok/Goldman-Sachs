@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028068/0000940400-26-028068.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,22 +22,22 @@
     "cusip": "381430107",
     "isin": "US3814301079",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Goldman Sachs ActiveBeta International Equity Index",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GSIE.NV",
+    "iopvTicker": "GSIEIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
+    "display": "0.25%",
+    "value": 0.25,
     "gross": 0.25,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "Sep 18 2026"
+    "display": "$47.21",
+    "value": 47.21,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$47.28",
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$5.82 B",
-    "value": 5815314989.1,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$6.02 B",
+    "value": 6024170000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 636,
     "bidAskMidpoint": 47.31,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -350,7 +350,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028068, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 636
   },
   "history": {
     "pages": [
