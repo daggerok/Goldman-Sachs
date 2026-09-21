@@ -34,6 +34,7 @@ import {
   priceReturns,
   proxyUrl,
   seedCatalogFunds,
+  selectDistributionFrequency,
   stripProxyPreamble,
   toIsoDate,
   toTextLines,
@@ -603,6 +604,34 @@ describe('Goldman Sachs fund page parser', () => {
     expect(empty.officialReturns.monthEnd.nav).toBeNull();
   });
 
+  test('drops a yields block dated after today instead of publishing a fabricated yield', () => {
+    const page = [
+      '# Goldman Sachs Core Bond ETF',
+      '',
+      '12 Month Trailing Distribution Rateas of Dec 29, 2026',
+      '',
+      '4.17',
+      '',
+      'Standardized 30-Day Subsidized Yieldsas of Dec 29, 2026',
+      '',
+      '100.00',
+      '',
+      'Standardized 30-Day Unsubsidized Yieldsas of Dec 29, 2026',
+      '',
+      '99.00',
+    ].join('\n');
+    const dropped = parseProductPage(page, 'GCOR', new Date('2026-09-20T00:00:00Z'));
+    expect(dropped.distRate12M).toBeNull();
+    expect(dropped.secYieldSubsidized).toBeNull();
+    expect(dropped.secYieldUnsubsidized).toBeNull();
+    expect(dropped.yieldsAsOfDate).toBeNull();
+    const control = parseProductPage(page, 'GCOR', new Date('2027-01-15T00:00:00Z'));
+    expect(control.distRate12M).toBe(4.17);
+    expect(control.secYieldSubsidized).toBe(100);
+    expect(control.secYieldUnsubsidized).toBe(99);
+    expect(control.yieldsAsOfDate).toBe('2026-12-29');
+  });
+
   test('parseGsDistributions and parseGsTopHoldings handle absent sections', () => {
     expect(parseGsDistributions(toTextLines('## Performance\n\nNo distributions'))).toEqual([]);
     expect(parseGsTopHoldings(toTextLines('## Performance\n\nNo allocations'))).toBeNull();
@@ -653,6 +682,16 @@ describe('distribution frequency', () => {
     expect(frequencyCodeLabel('')).toBe('00 - —');
   });
 
+  test('selectDistributionFrequency prefers the finder, then inference, then the previous run', () => {
+    expect(selectDistributionFrequency('Monthly', 'Quarterly', 12, 'Quarterly')).toBe('Monthly');
+    expect(selectDistributionFrequency('', 'Monthly', 12, 'Quarterly')).toBe('Monthly');
+    expect(selectDistributionFrequency('', 'Unknown', 1, 'Monthly')).toBe('Monthly');
+    expect(selectDistributionFrequency('', 'Unknown', 1, '')).toBe('—');
+    expect(selectDistributionFrequency('', 'None', 0, 'Annually')).toBe('Annually');
+    expect(selectDistributionFrequency('—', 'Unknown', 1, null)).toBe('—');
+    expect(selectDistributionFrequency(null, 'Unknown', 0, undefined)).toBe('—');
+  });
+
   test('paymentsPerYearForFrequency maps the official finder frequencies', () => {
     expect(paymentsPerYearForFrequency('Monthly')).toBe(12);
     expect(paymentsPerYearForFrequency('Quarterly')).toBe(4);
@@ -697,6 +736,19 @@ describe('Yahoo chart', () => {
     expect(returns.qtd).toBe(5.22);
     expect(returns.yr1).toBe(21);
     expect(returns.cagr3y).toBeNull();
+  });
+
+  test('priceReturns leaves SI ANN blank until a full year of history exists', () => {
+    const young = [
+      { date: '2026-05-19', close: 40, adjClose: 40, volume: 0 },
+      { date: '2026-09-18', close: 44, adjClose: 44, volume: 0 },
+    ];
+    expect(priceReturns(young).siAnn).toBeNull();
+    const mature = [
+      { date: '2025-09-17', close: 40, adjClose: 40, volume: 0 },
+      { date: '2026-09-18', close: 44, adjClose: 44, volume: 0 },
+    ];
+    expect(priceReturns(mature).siAnn).not.toBeNull();
   });
 });
 

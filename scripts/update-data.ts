@@ -1110,7 +1110,7 @@ export function aumToUsd(value: string): number | null {
   return amount;
 }
 
-export function parseProductPage(text: string, ticker: string): ProductPageSummary {
+export function parseProductPage(text: string, ticker: string, now: Date = new Date()): ProductPageSummary {
   const source = htmlToText(stripProxyPreamble(text));
   const lines = toTextLines(source);
   const upper = ticker.toUpperCase();
@@ -1166,6 +1166,11 @@ export function parseProductPage(text: string, ticker: string): ProductPageSumma
     }
   }
   const headerCategory = lines.find((line) => /^(EQUITY|FIXED INCOME|COMMODITIES)$/i.test(line.text))?.text || '';
+  const yieldsAsOfDate = labelAsOf(distRate) || labelAsOf(secSub);
+  // A yields block dated after today is a misparsed section (seen: a December
+  // estimate block read as the 30-day yield with a 100% value); drop the whole
+  // trio rather than publish a fabricated yield.
+  const yieldsValid = yieldsAsOfDate === null || yieldsAsOfDate <= now.toISOString().slice(0, 10);
   return {
     ...empty,
     name,
@@ -1196,10 +1201,10 @@ export function parseProductPage(text: string, ticker: string): ProductPageSumma
     premiumDays: labelNumber(premiumDays),
     atNavDays: labelNumber(atNavDays),
     discountDays: labelNumber(discountDays),
-    distRate12M: labelNumber(distRate),
-    secYieldSubsidized: labelNumber(secSub),
-    secYieldUnsubsidized: labelNumber(secUnsub),
-    yieldsAsOfDate: labelAsOf(distRate) || labelAsOf(secSub),
+    distRate12M: yieldsValid ? labelNumber(distRate) : null,
+    secYieldSubsidized: yieldsValid ? labelNumber(secSub) : null,
+    secYieldUnsubsidized: yieldsValid ? labelNumber(secUnsub) : null,
+    yieldsAsOfDate: yieldsValid ? yieldsAsOfDate : null,
     navTicker: labelText(navTicker),
     iopvTicker: labelText(iopvTicker),
     distributions: parseGsDistributions(lines),
@@ -1435,9 +1440,19 @@ function fillNportTickers(rows: JsonRecord[], names: Map<string, string>): JsonR
   });
 }
 
+/**
+ * N-PORT series refs for tickers the SEC fund-ticker map does not (yet) list,
+ * e.g. recently listed or converted share classes. Look the Series ID up on
+ * the trust's filing list (CIK 0001479026, type NPORT-P): open the fund's most
+ * recent filing and copy its Series ID; remove the entry once the map catches
+ * up. https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001479026&type=NPORT-P
+ */
+const SEC_SERIES_OVERRIDES: Record<string, SecSeriesRef> = {
+};
+
 async function resolveNportFiling(fund: CatalogFund, config: UpdaterConfig): Promise<{ ref: SecSeriesRef; accession: NportAccession } | null> {
   const table = await loadFundTickerTable(config);
-  const ref = table.get(fund.ticker);
+  const ref = table.get(fund.ticker) || SEC_SERIES_OVERRIDES[fund.ticker] || null;
   if (!ref) return null;
   const params = new URLSearchParams({ action: 'getcompany', CIK: ref.seriesId, type: 'NPORT-P', owner: 'include', count: '10', output: 'atom' });
   const atom = await fetchText(`${SEC_BROWSE_URL}?${params.toString()}`, `[edgar   ] ${fund.ticker} filings`, config, secHeaders());
@@ -1509,6 +1524,7 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
   const monthStart = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() - 1, date.getUTCDate()));
   const start = (d: ChartDay | null) => d?.adjClose ?? null;
   const end = last.adjClose;
+  const spanYears = ordered.length > 1 ? (date.getTime() - new Date(`${ordered[0].date}T00:00:00Z`).getTime()) / (365.25 * 86_400_000) : 0;
   void now;
   return {
     asOfDate: last.date,
@@ -1519,7 +1535,9 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
     cagr3y: annualized(start(anchor(ordered, target(3))), end, 3),
     cagr5y: annualized(start(anchor(ordered, target(5))), end, 5),
     cagr10y: annualized(start(anchor(ordered, target(10))), end, 10),
-    siAnn: ordered.length > 1 ? annualized(ordered[0].adjClose, end, Math.max(1 / 365, (date.getTime() - new Date(`${ordered[0].date}T00:00:00Z`).getTime()) / (365.25 * 86_400_000))) : null,
+    // Annualizing a sub-year span fabricates triple-digit SI figures for newly
+    // listed funds; the issuer prints '--' until a full year of history exists.
+    siAnn: spanYears >= 1 ? annualized(ordered[0].adjClose, end, spanYears) : null,
   };
 }
 
@@ -1565,6 +1583,22 @@ export function paymentsPerYearForFrequency(frequency: unknown): number | null {
   if (raw === 'semi-annual' || raw === 'semi-annually' || raw === 'semiannual') return 2;
   if (raw === 'annual' || raw === 'annually') return 1;
   return null;
+}
+
+/**
+ * Payment frequency for the feed. The finder prints the official Distribution
+ * Frequency for every fund (including 'None' for the physical gold trust), so
+ * it wins; otherwise the inferred cadence wins unless it is 'Unknown' (fewer
+ * than two distributions), in which case the previously published value is
+ * kept so a thin dividend history never clobbers a known cadence with
+ * 'Unknown'.
+ */
+export function selectDistributionFrequency(finderFrequency: unknown, inferredFrequency: string, dividendCount: number, previousFrequency: unknown): string {
+  const finder = typeof finderFrequency === 'string' ? finderFrequency.trim() : '';
+  if (finder && finder !== '—') return finder;
+  if (dividendCount > 0 && inferredFrequency !== 'Unknown') return inferredFrequency;
+  const previous = typeof previousFrequency === 'string' ? previousFrequency.trim() : '';
+  return previous || '—';
 }
 
 function lastCompletedQuarterEnd(now = new Date()): string {
@@ -1820,6 +1854,16 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       console.warn(`[product ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
+  // Slow-moving page facts survive a flaky render: a missed fee or yield must
+  // not clobber the previously published value with '—' (the next successful
+  // page read refreshes them). Yield carries require a previously official
+  // value — indicated yields are recomputed every run instead.
+  if (fund.ter === null) fund.ter = numberOrNull(previous.terValue);
+  if (fund.grossTer === null) fund.grossTer = numberOrNull((previousMeta?.expenseRatio as JsonRecord | undefined)?.gross);
+  const previousMetrics = (previous.metrics as JsonRecord | undefined) || {};
+  const previousYields = (previousMeta?.yields as JsonRecord | undefined) || {};
+  if (fund.secYield === null && String(previousYields.secYieldKind || '').startsWith('Standardized 30-Day')) fund.secYield = numberOrNull(previousMetrics.secYield);
+  if (fund.dividendYield === null && String(previousYields.dividendYieldKind || '').startsWith('12 Month Trailing')) fund.dividendYield = numberOrNull(previousMetrics.dividendYield);
   if (!fund.isin && fund.cusip) fund.isin = isinFromCusip(fund.cusip);
 
   // 2. Holdings: N-PORT-P -> previous run --------------------------------------
@@ -1902,14 +1946,16 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
 
   // 5. Returns + metrics --------------------------------------------------------
   const inferred = inferDistributionFrequency(dividends);
-  // The finder prints the official Distribution Frequency for every fund
-  // (including 'None' for the physical gold trust); it wins over inference.
-  const distributionFrequency = fund.frequency && fund.frequency !== '—' ? fund.frequency : (dividends.length ? inferred.frequency : (previousMeta?.distributions?.frequency || '—'));
+  const distributionFrequency = selectDistributionFrequency(fund.frequency, inferred.frequency, dividends.length, previousMeta?.distributions?.frequency);
   const paymentsPerYear = paymentsPerYearForFrequency(distributionFrequency) ?? inferred.paymentsPerYear;
   const latest = dividends[dividends.length - 1] || null;
   const derived = priceReturns(days);
   let officialMonthly = summary?.officialReturns.monthEnd.nav || null;
-  if (officialMonthly && (officialMonthly.siAnn === null || officialMonthly.siAnn === undefined) && fund.returns.sinceInception !== null) {
+  // The finder prints Since Inception next to the inception date in the same
+  // row, so its SI always annualizes from the displayed inception; converted
+  // funds' detail pages annualize from the (much later) ETF inception instead.
+  // The finder value therefore wins whenever the finder card parsed.
+  if (officialMonthly && fund.returns.sinceInception !== null) {
     officialMonthly = { ...officialMonthly, siAnn: fund.returns.sinceInception };
   }
   if (!officialMonthly && (fund.returns.yr1 !== null || fund.returns.yr3 !== null || fund.returns.yr5 !== null || fund.returns.yr10 !== null || fund.returns.sinceInception !== null)) {
@@ -1965,6 +2011,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     } : { asOfDate: formatDate(lastCompletedQuarterEnd()), ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null },
   };
 
+  const pageSuppliedTer = (summary?.netExpenseRatio ?? null) !== null;
+  const pageSuppliedSecYield = (summary?.secYieldSubsidized ?? null) !== null;
+  const pageSuppliedDistRate = (summary?.distRate12M ?? null) !== null;
   const meta: JsonRecord = {
     ticker: fund.ticker,
     name: fund.name,
@@ -1986,7 +2035,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       provider: PROVIDER_LABEL,
     },
     identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, isinBasis: fund.isin ? (fund.cusip && fund.isin === isinFromCusip(fund.cusip) ? 'derived from the published CUSIP (US prefix + check digit)' : 'previous run') : null, indexTicker: fund.benchmark || null, exchange: fund.exchange || null, morningstarCategory: null, navTicker: summary?.navTicker || null, iopvTicker: summary?.iopvTicker || null },
-    expenseRatio: { display: fund.ter === null ? '—' : `${fund.ter}%`, value: fund.ter, gross: fund.grossTer, kind: 'Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)' },
+    expenseRatio: { display: fund.ter === null ? '—' : `${fund.ter}%`, value: fund.ter, gross: fund.grossTer, kind: pageSuppliedTer || fund.ter === null ? 'Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)' : 'Net Expense Ratio carried from the previous run (official fund page)' },
     nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate: summary?.navAsOfDate ? formatDate(summary.navAsOfDate) : asOfLabel },
     marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel, source: summary?.marketPrice !== null && summary?.marketPrice !== undefined ? 'official fund page Pricing Table' : chart ? 'Yahoo Finance last regular-session price' : 'previous run' },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount, asOfDate: summary?.pricingAsOfDate ? formatDate(summary.pricingAsOfDate) : asOfLabel, source: fund.premiumDiscount !== null ? 'official fund page Pricing Table' : 'computed from market price / fund-page NAV' },
@@ -1995,11 +2044,11 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     yields: {
       dividendYield: metrics.dividendYield,
       dividendYieldText: metrics.dividendYieldText,
-      dividendYieldKind: fund.dividendYield !== null ? `12 Month Trailing Distribution Rate published on the official fund page${summary?.yieldsAsOfDate ? ` as of ${formatDate(summary.yieldsAsOfDate)}` : ''}` : 'indicated (latest distribution x inferred payments per year / NAV)',
+      dividendYieldKind: pageSuppliedDistRate ? `12 Month Trailing Distribution Rate published on the official fund page${summary?.yieldsAsOfDate ? ` as of ${formatDate(summary.yieldsAsOfDate)}` : ''}` : fund.dividendYield !== null ? 'carried from the previous run (official fund page)' : 'indicated (latest distribution x inferred payments per year / NAV)',
       distributionRate: summary?.distRate12M ?? null,
       secYield: metrics.secYield,
       secYieldText: metrics.secYieldText,
-      secYieldKind: fund.secYield !== null ? `Standardized 30-Day Subsidized Yield published on the official fund page${summary?.yieldsAsOfDate ? ` as of ${formatDate(summary.yieldsAsOfDate)}` : ''}` : 'not published on the official fund page for this fund',
+      secYieldKind: pageSuppliedSecYield ? `Standardized 30-Day Subsidized Yield published on the official fund page${summary?.yieldsAsOfDate ? ` as of ${formatDate(summary.yieldsAsOfDate)}` : ''}` : fund.secYield !== null ? 'carried from the previous run (official fund page)' : 'not published on the official fund page for this fund',
     },
     returns,
     officialMarketPriceReturns: summary ? { monthEnd: returnRowJson(summary.officialReturns.monthEnd.marketPrice), quarterEnd: returnRowJson(summary.officialReturns.quarterEnd.marketPrice) } : null,
@@ -2089,7 +2138,7 @@ async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
       .sort((a, b) => a.epoch - b.epoch);
     const latest = dividends[dividends.length - 1] || null;
     const inferred = inferDistributionFrequency(dividends);
-    const distributionFrequency = fund.frequency && fund.frequency !== '—' ? fund.frequency : (dividends.length ? inferred.frequency : '—');
+    const distributionFrequency = selectDistributionFrequency(fund.frequency, inferred.frequency, dividends.length, undefined);
     const paymentsPerYear = paymentsPerYearForFrequency(distributionFrequency) ?? inferred.paymentsPerYear;
     const text = (value: number | null) => (value === null ? '—' : `${value.toFixed(2)}%`);
     const monthEndNav = rich?.monthEndNav || {};
