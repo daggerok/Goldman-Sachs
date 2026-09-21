@@ -1,0 +1,395 @@
+{
+  "ticker": "GDOC",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 42,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "INSMED INC",
+      "Ticker": "INSM",
+      "Identifier": "457669307",
+      "Weight": "1.105883377423",
+      "Market Value": "222479.71",
+      "Shares Held": "2081.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STRUCTURE THERAPEUTICS INC",
+      "Ticker": "GPCR",
+      "Identifier": "86366E106",
+      "Weight": "0.197112337499",
+      "Market Value": "39654.72",
+      "Shares Held": "1008.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QUEST DIAGNOSTICS INC",
+      "Ticker": "DGX",
+      "Identifier": "74834L100",
+      "Weight": "0.717875228543",
+      "Market Value": "144420.9",
+      "Shares Held": "741.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "METTLER-TOLEDO INTERNATIONAL INC",
+      "Ticker": "MTD",
+      "Identifier": "592688105",
+      "Weight": "1.590316749251",
+      "Market Value": "319937.18",
+      "Shares Held": "271.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARGENX SE",
+      "Ticker": "ARGX",
+      "Identifier": "04016X101",
+      "Weight": "4.068203740257",
+      "Market Value": "818434.21",
+      "Shares Held": "979.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEFINIUM THERAPEUTICS INC",
+      "Ticker": "DFTX",
+      "Identifier": "24477V105",
+      "Weight": "0.506698151683",
+      "Market Value": "101936.66",
+      "Shares Held": "4214.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ROIVANT SCIENCES LTD",
+      "Ticker": "ROIV",
+      "Identifier": "000000000",
+      "Weight": "2.390514783358",
+      "Market Value": "480919.64",
+      "Shares Held": "16036.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "APOGEE THERAPEUTICS INC",
+      "Ticker": "-",
+      "Identifier": "03770N101",
+      "Weight": "1.969204778169",
+      "Market Value": "396161.22",
+      "Shares Held": "4823.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THERMO FISHER SCIENTIFIC INC",
+      "Ticker": "TMO",
+      "Identifier": "883556102",
+      "Weight": "4.521690877925",
+      "Market Value": "909665.97",
+      "Shares Held": "1847.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MADRIGAL PHARMACEUTICALS INC",
+      "Ticker": "MDGL",
+      "Identifier": "558868105",
+      "Weight": "1.062868742723",
+      "Market Value": "213826.1",
+      "Shares Held": "430.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BOSTON SCIENTIFIC CORP",
+      "Ticker": "BSX",
+      "Identifier": "101137107",
+      "Weight": "3.779729201654",
+      "Market Value": "760399.4",
+      "Shares Held": "15740.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "XENON PHARMACEUTICALS INC",
+      "Ticker": "XENE",
+      "Identifier": "98420N105",
+      "Weight": "1.353979251839",
+      "Market Value": "272391.21",
+      "Shares Held": "4977.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PRAXIS PRECISION MEDICINES INC",
+      "Ticker": "PRAX",
+      "Identifier": "74006W207",
+      "Weight": "0.549714029061",
+      "Market Value": "110590.52",
+      "Shares Held": "316.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CENCORA INC",
+      "Ticker": "COR",
+      "Identifier": "03073E105",
+      "Weight": "2.343095945467",
+      "Market Value": "471380",
+      "Shares Held": "1750.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GALDERMA GROUP AG",
+      "Ticker": "GALDY",
+      "Identifier": "000000000",
+      "Weight": "1.095565812059",
+      "Market Value": "220404.04",
+      "Shares Held": "1034.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOYA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.52858175519",
+      "Market Value": "709873.99",
+      "Shares Held": "4173.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SARTORIUS STEDIM BIOTECH SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.55063356175",
+      "Market Value": "110775.51",
+      "Shares Held": "533.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REVOLUTION MEDICINES INC",
+      "Ticker": "RVMD",
+      "Identifier": "76155X100",
+      "Weight": "0.836800694147",
+      "Market Value": "168346.12",
+      "Shares Held": "1069.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BRIDGEBIO PHARMA INC",
+      "Ticker": "BBIO",
+      "Identifier": "10806X102",
+      "Weight": "0.729202197135",
+      "Market Value": "146699.64",
+      "Shares Held": "2214.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CYTOKINETICS INC",
+      "Ticker": "CYTK",
+      "Identifier": "23282W605",
+      "Weight": "1.397625465669",
+      "Market Value": "281171.88",
+      "Shares Held": "3663.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IONIS PHARMACEUTICALS INC",
+      "Ticker": "IONS",
+      "Identifier": "462222100",
+      "Weight": "1.374258727861",
+      "Market Value": "276471",
+      "Shares Held": "3614.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOLDMAN SACHS TRUST",
+      "Ticker": "-",
+      "Identifier": "38141W323",
+      "Weight": "1.431509343075",
+      "Market Value": "287988.58",
+      "Shares Held": "287988.58000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "UNITEDHEALTH GROUP INC",
+      "Ticker": "UNH",
+      "Identifier": "91324P102",
+      "Weight": "1.351645202596",
+      "Market Value": "271921.65",
+      "Shares Held": "715.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CG ONCOLOGY INC",
+      "Ticker": "CGON",
+      "Identifier": "156944100",
+      "Weight": "0.753010135665",
+      "Market Value": "151489.28",
+      "Shares Held": "2432.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GUARDANT HEALTH INC",
+      "Ticker": "GH",
+      "Identifier": "40131M109",
+      "Weight": "5.341587410809",
+      "Market Value": "1074611.34",
+      "Shares Held": "8286.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASTRAZENECA PLC",
+      "Ticker": "AZN",
+      "Identifier": "000000000",
+      "Weight": "4.840262354213",
+      "Market Value": "973755.63",
+      "Shares Held": "5234.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JOHNSON & JOHNSON",
+      "Ticker": "JNJ",
+      "Identifier": "478160104",
+      "Weight": "8.068849986976",
+      "Market Value": "1623277.32",
+      "Shares Held": "7204.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEXCOM INC",
+      "Ticker": "DXCM",
+      "Identifier": "252131107",
+      "Weight": "2.793405702274",
+      "Market Value": "561972.54",
+      "Shares Held": "7621.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AGILENT TECHNOLOGIES INC",
+      "Ticker": "A",
+      "Identifier": "00846U101",
+      "Weight": "2.76546088564",
+      "Market Value": "556350.65",
+      "Shares Held": "4105.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SPYRE THERAPEUTICS INC",
+      "Ticker": "SYRE",
+      "Identifier": "00773J202",
+      "Weight": "0.350733696618",
+      "Market Value": "70560",
+      "Shares Held": "960.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ROYALTY PHARMA PLC",
+      "Ticker": "RPRX",
+      "Identifier": "000000000",
+      "Weight": "1.765554458368",
+      "Market Value": "355191.2",
+      "Shares Held": "6370.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALKERMES PLC",
+      "Ticker": "ALKS",
+      "Identifier": "000000000",
+      "Weight": "0.566858275891",
+      "Market Value": "114039.57",
+      "Shares Held": "2703.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INSULET CORP",
+      "Ticker": "PODD",
+      "Identifier": "45784P101",
+      "Weight": "0.286741299761",
+      "Market Value": "57686.12",
+      "Shares Held": "398.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELI LILLY & COMPANY",
+      "Ticker": "LLY",
+      "Identifier": "532457108",
+      "Weight": "13.27571281071",
+      "Market Value": "2670785",
+      "Shares Held": "2417.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EDWARDS LIFESCIENCES CORP",
+      "Ticker": "EW",
+      "Identifier": "28176E108",
+      "Weight": "2.982505594088",
+      "Market Value": "600015.33",
+      "Shares Held": "6939.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LONZA GROUP AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.798204679703",
+      "Market Value": "562937.99",
+      "Shares Held": "879.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MERCK & COMPANY INC",
+      "Ticker": "MRK",
+      "Identifier": "58933Y105",
+      "Weight": "5.944312631117",
+      "Market Value": "1195866.56",
+      "Shares Held": "10073.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RHYTHM PHARMACEUTICALS INC",
+      "Ticker": "RYTM",
+      "Identifier": "76243J105",
+      "Weight": "0.67520292703",
+      "Market Value": "135836.16",
+      "Shares Held": "1538.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VERTEX PHARMACEUTICALS INC",
+      "Ticker": "-",
+      "Identifier": "92532F100",
+      "Weight": "1.483804254195",
+      "Market Value": "298509.18",
+      "Shares Held": "667.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTUITIVE SURGICAL INC",
+      "Ticker": "ISRG",
+      "Identifier": "46120E602",
+      "Weight": "3.902803922444",
+      "Market Value": "785159.36",
+      "Shares Held": "1849.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REPLIGEN CORP",
+      "Ticker": "RGEN",
+      "Identifier": "759916109",
+      "Weight": "1.255652978688",
+      "Market Value": "252610.1",
+      "Shares Held": "2038.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PENUMBRA INC",
+      "Ticker": "PEN",
+      "Identifier": "70975L107",
+      "Weight": "1.60591147489",
+      "Market Value": "323074.5",
+      "Shares Held": "1015.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

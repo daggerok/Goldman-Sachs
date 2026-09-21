@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
-    "productPageRendering": "offline seed snapshot of the official fund page (2026-09-21)",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
     "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
@@ -14,8 +14,8 @@
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/AAAU",
     "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
-    "distributionsSource": "the issuer reports no distributions for this fund (Distribution Frequency: None)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -32,7 +32,7 @@
     "display": "0.18%",
     "value": 0.18,
     "gross": 0.18,
-    "kind": "Net Expense Ratio published on the official fund page"
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$43.05",
@@ -69,24 +69,24 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "offline seed snapshot carries no distribution rate for this fund",
-    "distributionRate": null,
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 0,
     "secYield": null,
     "secYieldText": "—",
-    "secYieldKind": "offline seed snapshot carries no SEC yield for this fund"
+    "secYieldKind": "not published on the official fund page for this fund"
   },
   "returns": {
-    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 13.27,
       "mo1Text": "13.27%",
       "mo3": 0.31,
       "mo3Text": "0.31%",
-      "qtd": null,
-      "qtdText": "—",
+      "qtd": 8.34,
+      "qtdText": "8.34%",
       "ytd": 5.79,
       "ytdText": "5.79%",
       "yr1": 32.81,
@@ -127,8 +127,8 @@
       "yr5Text": "19.42%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 257.26,
-      "sinceInceptionText": "257.26%"
+      "sinceInception": 17.01,
+      "sinceInceptionText": "17.01%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -154,7 +154,7 @@
     "frequency": "None",
     "frequencyCode": "00 - None",
     "paymentsPerYear": null,
-    "source": "the issuer reports no distributions for this fund (Distribution Frequency: None)",
+    "source": "not available",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -171,10 +171,14 @@
     "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
   },
   "history": {
-    "pages": [],
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json"
+    ],
     "pageSize": 1000,
-    "totalRows": 0,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+    "totalRows": 2034,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

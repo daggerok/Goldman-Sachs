@@ -6,33 +6,33 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
-    "productPageRendering": "offline seed snapshot: fund finder card only (detail refresh in CI)",
-    "productPageAsOf": null,
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GEMQ",
     "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
-    "distributionsSource": "offline seed snapshot carries no distribution history for this fund",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "38149W390",
     "isin": "US38149W3907",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "MSCI Emerging Markets (Net Total Return, Unhedged, USD)",
+    "exchange": "NASDAQ",
     "morningstarCategory": null,
-    "navTicker": null,
+    "navTicker": "GEMQ.NV",
     "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
-    "kind": "Net Expense Ratio published on the official fund page"
+    "display": "0.4%",
+    "value": 0.4,
+    "gross": 0.4,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$23.94",
@@ -40,28 +40,28 @@
     "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "—",
-    "value": null,
+    "display": "$24.24",
+    "value": 24.24,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no market price for this fund"
+    "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
+    "display": "1.25%",
+    "value": 1.25,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no premium/discount for this fund"
+    "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "—",
-    "source": "offline seed snapshot carries no AUM for this fund"
+    "display": "$9.58 M",
+    "value": 9580000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": null,
+    "publishedTotalHoldings": 150,
+    "bidAskMidpoint": 24.23,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -71,16 +71,16 @@
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
-    "dividendYieldKind": "offline seed snapshot carries no distribution rate for this fund",
+    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
     "distributionRate": null,
     "secYield": null,
     "secYieldText": "—",
-    "secYieldKind": "offline seed snapshot carries no SEC yield for this fund"
+    "secYieldKind": "not published on the official fund page for this fund"
   },
   "returns": {
-    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns",
     "monthEnd": {
-      "asOfDate": "—",
+      "asOfDate": "Sep 18 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
@@ -97,11 +97,11 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": -67.11,
+      "sinceInceptionText": "-67.11%"
     },
     "quarterEnd": {
-      "asOfDate": "—",
+      "asOfDate": "Jun 30 2026",
       "ytd": null,
       "yr1": null,
       "yr3": null,
@@ -110,12 +110,15 @@
       "sinceInception": null
     }
   },
-  "officialMarketPriceReturns": null,
+  "officialMarketPriceReturns": {
+    "monthEnd": null,
+    "quarterEnd": null
+  },
   "distributions": {
     "frequency": "Annually",
     "frequencyCode": "12 - Annually",
     "paymentsPerYear": 1,
-    "source": "offline seed snapshot carries no distribution history for this fund",
+    "source": "not available",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -129,13 +132,16 @@
     "totalRows": 0,
     "asOfDate": null,
     "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
+    "publishedTotalHoldings": 150
   },
   "history": {
-    "pages": [],
+    "pages": [
+      "history/001.json"
+    ],
     "pageSize": 1000,
-    "totalRows": 0,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+    "totalRows": 4,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

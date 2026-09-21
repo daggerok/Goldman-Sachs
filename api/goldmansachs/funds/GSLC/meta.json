@@ -6,33 +6,33 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
-    "productPageRendering": "offline seed snapshot of the official fund page (2026-09-21)",
-    "productPageAsOf": "Sep 17 2026",
-    "holdingsDownload": null,
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": null,
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028061/0000940400-26-028061.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSLC",
-    "holdingsSource": "offline seed snapshot: official top-10 holdings transcribed from the fund page (full sheet refreshes from SEC EDGAR Form N-PORT-P in CI)",
-    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
-    "distributionsSource": "offline seed snapshot: official fund-page Distributions table (2026-09-21)",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028061, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "381430503",
     "isin": "US3814305039",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "Goldman Sachs ActiveBeta U.S. Large Cap Equity Index",
-    "exchange": "NYSE Arca",
+    "indexTicker": null,
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GSLC.NV",
-    "iopvTicker": "GSLCIV"
+    "navTicker": null,
+    "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "0.09%",
-    "value": 0.09,
-    "gross": 0.09,
-    "kind": "Net Expense Ratio published on the official fund page"
+    "display": "—",
+    "value": null,
+    "gross": null,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$145.45",
@@ -52,21 +52,21 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$15.10 B",
-    "value": 15098520000,
-    "asOfDate": "Sep 17 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "display": "$15.59 B",
+    "value": 15589970974.94,
+    "asOfDate": "May 31 2026",
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 427,
+    "publishedTotalHoldings": null,
     "bidAskMidpoint": 145.46,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": 28,
-    "atNavDays": 4,
-    "discountDays": 30
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
   },
   "yields": {
     "dividendYield": 0.92,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 2.47,
       "mo1Text": "2.47%",
       "mo3": 2.14,
       "mo3Text": "2.14%",
-      "qtd": null,
-      "qtdText": "—",
+      "qtd": 2.52,
+      "qtdText": "2.52%",
       "ytd": 11.11,
       "ytdText": "11.11%",
       "yr1": 16.62,
@@ -97,8 +97,8 @@
       "yr5Text": "11.38%",
       "yr10": 14.48,
       "yr10Text": "14.48%",
-      "sinceInception": 14.03,
-      "sinceInceptionText": "14.03%"
+      "sinceInception": 13.97,
+      "sinceInceptionText": "13.97%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -127,8 +127,8 @@
       "yr5Text": "11.40%",
       "yr10": 14.49,
       "yr10Text": "14.49%",
-      "sinceInception": 321.96,
-      "sinceInceptionText": "321.96%"
+      "sinceInception": null,
+      "sinceInceptionText": "—"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -154,23 +154,155 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "offline seed snapshot: official fund-page Distributions table (2026-09-21)",
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",
       "Amount"
     ],
     "rows": [
       [
+        "12/23/2015",
+        "0.151"
+      ],
+      [
+        "06/23/2016",
+        "0.175"
+      ],
+      [
+        "09/23/2016",
+        "0.175"
+      ],
+      [
+        "12/22/2016",
+        "0.228"
+      ],
+      [
+        "03/24/2017",
+        "0.196"
+      ],
+      [
+        "06/23/2017",
+        "0.209"
+      ],
+      [
+        "09/22/2017",
+        "0.248"
+      ],
+      [
+        "12/21/2017",
+        "0.247"
+      ],
+      [
+        "03/23/2018",
+        "0.206"
+      ],
+      [
+        "06/25/2018",
+        "0.23"
+      ],
+      [
+        "09/24/2018",
+        "0.244"
+      ],
+      [
+        "12/24/2018",
+        "0.27"
+      ],
+      [
+        "03/25/2019",
+        "0.226"
+      ],
+      [
+        "06/24/2019",
+        "0.253"
+      ],
+      [
+        "09/24/2019",
+        "0.237"
+      ],
+      [
+        "12/24/2019",
+        "0.282"
+      ],
+      [
+        "03/25/2020",
+        "0.306"
+      ],
+      [
+        "09/24/2020",
+        "0.214"
+      ],
+      [
+        "12/24/2020",
+        "0.252"
+      ],
+      [
+        "03/25/2021",
+        "0.227"
+      ],
+      [
+        "06/24/2021",
+        "0.223"
+      ],
+      [
+        "09/24/2021",
+        "0.249"
+      ],
+      [
+        "12/27/2021",
+        "0.314"
+      ],
+      [
+        "03/25/2022",
+        "0.289"
+      ],
+      [
+        "06/24/2022",
+        "0.3"
+      ],
+      [
+        "09/26/2022",
+        "0.285"
+      ],
+      [
+        "12/27/2022",
+        "0.351"
+      ],
+      [
+        "03/27/2023",
+        "0.282"
+      ],
+      [
+        "06/26/2023",
+        "0.334"
+      ],
+      [
+        "09/25/2023",
+        "0.274"
+      ],
+      [
+        "12/26/2023",
+        "0.406"
+      ],
+      [
+        "03/22/2024",
+        "0.305"
+      ],
+      [
+        "06/24/2024",
+        "0.309"
+      ],
+      [
         "09/24/2024",
         "0.297"
       ],
       [
         "12/23/2024",
-        "0.3629"
+        "0.363"
       ],
       [
         "03/25/2025",
-        "0.3359"
+        "0.336"
       ],
       [
         "06/24/2025",
@@ -178,86 +310,44 @@
       ],
       [
         "09/24/2025",
-        "0.3183"
+        "0.318"
       ],
       [
         "12/23/2025",
-        "0.3381"
+        "0.338"
       ],
       [
         "03/25/2026",
-        "0.3409"
+        "0.341"
       ],
       [
         "06/24/2026",
-        "0.3447"
+        "0.345"
       ]
     ]
   },
-  "topHoldings": {
-    "asOfDate": "Sep 17 2026",
-    "asOf": "Sep 17 2026",
-    "top10Pct": 35.85,
-    "rows": [
-      {
-        "name": "NVIDIA Corp",
-        "weight": 8.01
-      },
-      {
-        "name": "Apple Inc",
-        "weight": 7.45
-      },
-      {
-        "name": "Microsoft Corp",
-        "weight": 5.25
-      },
-      {
-        "name": "Amazon.com Inc",
-        "weight": 3.42
-      },
-      {
-        "name": "Alphabet Inc",
-        "weight": 2.95
-      },
-      {
-        "name": "Meta Platforms Inc",
-        "weight": 2.23
-      },
-      {
-        "name": "Broadcom Inc",
-        "weight": 2.19
-      },
-      {
-        "name": "Alphabet Inc",
-        "weight": 1.84
-      },
-      {
-        "name": "Micron Technology Inc",
-        "weight": 1.27
-      },
-      {
-        "name": "JPMorgan Chase & Co",
-        "weight": 1.24
-      }
-    ]
-  },
+  "topHoldings": null,
   "holdings": {
     "pages": [
-      "holdings/001.json"
+      "holdings/001.json",
+      "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 10,
-    "asOfDate": "2026-09-17",
-    "asOf": "Sep 17 2026",
-    "source": "offline seed snapshot: official top-10 holdings transcribed from the fund page (full sheet refreshes from SEC EDGAR Form N-PORT-P in CI)",
-    "marketValueBasis": "derived: published top-10 weight x Total Fund Assets (Daily)",
-    "publishedTotalHoldings": 427
+    "totalRows": 437,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028061, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
-    "pages": [],
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json"
+    ],
     "pageSize": 1000,
-    "totalRows": 0,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+    "totalRows": 2765,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

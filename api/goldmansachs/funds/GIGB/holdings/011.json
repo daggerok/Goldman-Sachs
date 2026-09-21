@@ -1,0 +1,85 @@
+{
+  "ticker": "GIGB",
+  "page": 11,
+  "pageSize": 250,
+  "totalRows": 2506,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "CIGNA GROUP (THE)",
+      "Ticker": "-",
+      "Identifier": "125523CF5",
+      "Weight": "0.058331512397",
+      "Market Value": "572919.43",
+      "Shares Held": "650000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.80000000",
+      "Maturity": "2046-07-15"
+    },
+    {
+      "Name": "REGIONS FINANCIAL CORP",
+      "Ticker": "-",
+      "Identifier": "7591EPAV2",
+      "Weight": "0.06771419315",
+      "Market Value": "665074.08",
+      "Shares Held": "660000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.50200000",
+      "Maturity": "2035-09-06"
+    },
+    {
+      "Name": "CANADIAN NATIONAL RAILWAY COMPANY",
+      "Ticker": "-",
+      "Identifier": "136375DJ8",
+      "Weight": "0.01576967209",
+      "Market Value": "154886.29",
+      "Shares Held": "146000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.12500000",
+      "Maturity": "2053-11-01"
+    },
+    {
+      "Name": "PROLOGIS LP",
+      "Ticker": "-",
+      "Identifier": "74340XBS9",
+      "Weight": "0.044494138229",
+      "Market Value": "437011.75",
+      "Shares Held": "500000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2031-03-15"
+    },
+    {
+      "Name": "WALMART INC",
+      "Ticker": "-",
+      "Identifier": "931142DB6",
+      "Weight": "0.005390119337",
+      "Market Value": "52940.58",
+      "Shares Held": "50000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.62500000",
+      "Maturity": "2041-04-15"
+    },
+    {
+      "Name": "BP CAPITAL MARKETS AMERICA INC",
+      "Ticker": "-",
+      "Identifier": "10373QBP4",
+      "Weight": "0.020431066273",
+      "Market Value": "200669.49",
+      "Shares Held": "315000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.93900000",
+      "Maturity": "2051-06-04"
+    }
+  ]
+}

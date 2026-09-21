@@ -6,33 +6,33 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
-    "productPageRendering": "offline seed snapshot: fund finder card only (detail refresh in CI)",
-    "productPageAsOf": null,
-    "holdingsDownload": null,
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028085/0000940400-26-028085.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GINN",
-    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
-    "distributionsSource": "offline seed snapshot carries no distribution history for this fund",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028085, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "38149W820",
     "isin": "US38149W8203",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Solactive Innovative Global Equity Index(Net total Return, Unhedged, USD)",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GINN.NV",
+    "iopvTicker": "GINNIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
-    "kind": "Net Expense Ratio published on the official fund page"
+    "display": "0.5%",
+    "value": 0.5,
+    "gross": 0.5,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$81.53",
@@ -40,28 +40,28 @@
     "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "—",
-    "value": null,
+    "display": "$81.37",
+    "value": 81.37,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no market price for this fund"
+    "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
+    "display": "-0.19%",
+    "value": -0.19,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no premium/discount for this fund"
+    "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "—",
-    "source": "offline seed snapshot carries no AUM for this fund"
+    "display": "$191.59 M",
+    "value": 191590000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": null,
+    "publishedTotalHoldings": 474,
+    "bidAskMidpoint": 81.35,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,26 +69,26 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "offline seed snapshot carries no distribution rate for this fund",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "offline seed snapshot carries no SEC yield for this fund"
+    "dividendYield": 1.12,
+    "dividendYieldText": "1.12%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 1.12,
+    "secYield": 0.59,
+    "secYieldText": "0.59%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
-      "mo1": null,
-      "mo1Text": "—",
-      "mo3": null,
-      "mo3Text": "—",
-      "qtd": null,
-      "qtdText": "—",
-      "ytd": null,
-      "ytdText": "—",
+      "mo1": 4.71,
+      "mo1Text": "4.71%",
+      "mo3": 2.87,
+      "mo3Text": "2.87%",
+      "qtd": 2.74,
+      "qtdText": "2.74%",
+      "ytd": 12.7,
+      "ytdText": "12.70%",
       "yr1": 18.61,
       "yr1Text": "18.61%",
       "yr3": 19.99,
@@ -101,41 +101,137 @@
       "sinceInceptionText": "9.90%"
     },
     "quarterEnd": {
-      "asOfDate": "—",
+      "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
+      "yr1": 18.23,
       "yr3": null,
-      "yr5": null,
+      "yr5": 5.8,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 9.3
     }
   },
-  "officialMarketPriceReturns": null,
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 4.61,
+      "mo1Text": "4.61%",
+      "mo3": 2.88,
+      "mo3Text": "2.88%",
+      "ytd": 12.63,
+      "ytdText": "12.63%",
+      "yr1": 18.37,
+      "yr1Text": "18.37%",
+      "yr3": 19.91,
+      "yr3Text": "19.91%",
+      "yr5": 6.34,
+      "yr5Text": "6.34%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 9.86,
+      "sinceInceptionText": "9.86%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 18.37,
+      "yr1Text": "18.37%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 5.78,
+      "yr5Text": "5.78%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 9.31,
+      "sinceInceptionText": "9.31%"
+    }
+  },
   "distributions": {
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "offline seed snapshot carries no distribution history for this fund",
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",
       "Amount"
     ],
-    "rows": []
+    "rows": [
+      [
+        "12/24/2020",
+        "0.04"
+      ],
+      [
+        "03/25/2021",
+        "0.048"
+      ],
+      [
+        "06/24/2021",
+        "0.105"
+      ],
+      [
+        "09/24/2021",
+        "0.185"
+      ],
+      [
+        "12/27/2021",
+        "0.068"
+      ],
+      [
+        "03/25/2022",
+        "0.084"
+      ],
+      [
+        "06/24/2022",
+        "0.125"
+      ],
+      [
+        "09/26/2022",
+        "0.019"
+      ],
+      [
+        "12/27/2022",
+        "0.055"
+      ],
+      [
+        "12/26/2023",
+        "0.532"
+      ],
+      [
+        "12/23/2024",
+        "0.775"
+      ],
+      [
+        "12/23/2025",
+        "0.922"
+      ]
+    ]
   },
   "topHoldings": null,
   "holdings": {
-    "pages": [],
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
     "pageSize": 250,
-    "totalRows": 0,
-    "asOfDate": null,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+    "totalRows": 473,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028085, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 474
   },
   "history": {
-    "pages": [],
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
     "pageSize": 1000,
-    "totalRows": 0,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+    "totalRows": 1471,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

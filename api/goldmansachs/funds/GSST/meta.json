@@ -6,33 +6,33 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
-    "productPageRendering": "offline seed snapshot: fund finder card only (detail refresh in CI)",
-    "productPageAsOf": null,
-    "holdingsDownload": null,
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Sep 17 2026",
+    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028126/0000940400-26-028126.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSST",
-    "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "historySource": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)",
-    "distributionsSource": "offline seed snapshot carries no distribution history for this fund",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028126, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "381430230",
     "isin": "US3814302309",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "FTSE 3 Month T-Bill Index",
+    "exchange": "Cboe BZX",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GSST.NV",
+    "iopvTicker": "GSSTIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
-    "kind": "Net Expense Ratio published on the official fund page"
+    "display": "0.16%",
+    "value": 0.16,
+    "gross": 0.2,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
     "display": "$50.42",
@@ -40,28 +40,28 @@
     "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "—",
-    "value": null,
+    "display": "$50.43",
+    "value": 50.43,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no market price for this fund"
+    "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "—",
-    "value": null,
+    "display": "0.02%",
+    "value": 0.02,
     "asOfDate": "Sep 17 2026",
-    "source": "offline seed snapshot carries no premium/discount for this fund"
+    "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "—",
-    "value": null,
-    "asOfDate": "—",
-    "source": "offline seed snapshot carries no AUM for this fund"
+    "display": "$1.64 B",
+    "value": 1642450000,
+    "asOfDate": "Sep 17 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": null,
+    "publishedTotalHoldings": 342,
+    "bidAskMidpoint": 50.43,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,26 +69,26 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldKind": "offline seed snapshot carries no distribution rate for this fund",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "offline seed snapshot carries no SEC yield for this fund"
+    "dividendYield": 4.26,
+    "dividendYieldText": "4.26%",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
+    "distributionRate": 4.26,
+    "secYield": 4.22,
+    "secYieldText": "4.22%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI",
+    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
-      "mo1": null,
-      "mo1Text": "—",
-      "mo3": null,
-      "mo3Text": "—",
-      "qtd": null,
-      "qtdText": "—",
-      "ytd": null,
-      "ytdText": "—",
+      "mo1": 0.37,
+      "mo1Text": "0.37%",
+      "mo3": 0.99,
+      "mo3Text": "0.99%",
+      "qtd": 0.79,
+      "qtdText": "0.79%",
+      "ytd": 2.53,
+      "ytdText": "2.53%",
       "yr1": 4.16,
       "yr1Text": "4.16%",
       "yr3": 5.37,
@@ -101,41 +101,441 @@
       "sinceInceptionText": "3.28%"
     },
     "quarterEnd": {
-      "asOfDate": "—",
+      "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
+      "yr1": 4.4,
       "yr3": null,
-      "yr5": null,
+      "yr5": 3.81,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 3.26
     }
   },
-  "officialMarketPriceReturns": null,
+  "officialMarketPriceReturns": {
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.36,
+      "mo1Text": "0.36%",
+      "mo3": 1.06,
+      "mo3Text": "1.06%",
+      "ytd": 2.57,
+      "ytdText": "2.57%",
+      "yr1": 4.2,
+      "yr1Text": "4.20%",
+      "yr3": 5.38,
+      "yr3Text": "5.38%",
+      "yr5": 3.94,
+      "yr5Text": "3.94%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.29,
+      "sinceInceptionText": "3.29%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": 4.42,
+      "yr1Text": "4.42%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": 3.81,
+      "yr5Text": "3.81%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.27,
+      "sinceInceptionText": "3.27%"
+    }
+  },
   "distributions": {
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "offline seed snapshot carries no distribution history for this fund",
+    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
     "headers": [
       "Ex-Date",
       "Amount"
     ],
-    "rows": []
+    "rows": [
+      [
+        "06/07/2019",
+        "0.172"
+      ],
+      [
+        "07/01/2019",
+        "0.084"
+      ],
+      [
+        "08/01/2019",
+        "0.115"
+      ],
+      [
+        "09/03/2019",
+        "0.11"
+      ],
+      [
+        "10/01/2019",
+        "0.094"
+      ],
+      [
+        "11/01/2019",
+        "0.074"
+      ],
+      [
+        "12/02/2019",
+        "0.083"
+      ],
+      [
+        "12/27/2019",
+        "0.106"
+      ],
+      [
+        "02/03/2020",
+        "0.065"
+      ],
+      [
+        "03/02/2020",
+        "0.082"
+      ],
+      [
+        "04/01/2020",
+        "0.079"
+      ],
+      [
+        "05/01/2020",
+        "0.059"
+      ],
+      [
+        "06/01/2020",
+        "0.051"
+      ],
+      [
+        "07/01/2020",
+        "0.032"
+      ],
+      [
+        "08/03/2020",
+        "0.035"
+      ],
+      [
+        "09/01/2020",
+        "0.029"
+      ],
+      [
+        "10/01/2020",
+        "0.026"
+      ],
+      [
+        "11/02/2020",
+        "0.03"
+      ],
+      [
+        "12/01/2020",
+        "0.031"
+      ],
+      [
+        "12/29/2020",
+        "0.048"
+      ],
+      [
+        "02/01/2021",
+        "0.014"
+      ],
+      [
+        "03/01/2021",
+        "0.027"
+      ],
+      [
+        "04/01/2021",
+        "0.04"
+      ],
+      [
+        "05/03/2021",
+        "0.029"
+      ],
+      [
+        "06/01/2021",
+        "0.029"
+      ],
+      [
+        "07/01/2021",
+        "0.027"
+      ],
+      [
+        "08/02/2021",
+        "0.029"
+      ],
+      [
+        "09/01/2021",
+        "0.026"
+      ],
+      [
+        "10/01/2021",
+        "0.029"
+      ],
+      [
+        "11/01/2021",
+        "0.028"
+      ],
+      [
+        "12/01/2021",
+        "0.031"
+      ],
+      [
+        "12/28/2021",
+        "0.049"
+      ],
+      [
+        "02/01/2022",
+        "0.006"
+      ],
+      [
+        "03/01/2022",
+        "0.025"
+      ],
+      [
+        "04/01/2022",
+        "0.031"
+      ],
+      [
+        "05/03/2022",
+        "0.039"
+      ],
+      [
+        "06/01/2022",
+        "0.049"
+      ],
+      [
+        "07/01/2022",
+        "0.068"
+      ],
+      [
+        "08/01/2022",
+        "0.084"
+      ],
+      [
+        "09/01/2022",
+        "0.107"
+      ],
+      [
+        "10/03/2022",
+        "0.118"
+      ],
+      [
+        "11/01/2022",
+        "0.132"
+      ],
+      [
+        "12/01/2022",
+        "0.149"
+      ],
+      [
+        "12/27/2022",
+        "0.169"
+      ],
+      [
+        "02/01/2023",
+        "0.184"
+      ],
+      [
+        "03/01/2023",
+        "0.171"
+      ],
+      [
+        "04/03/2023",
+        "0.198"
+      ],
+      [
+        "05/01/2023",
+        "0.198"
+      ],
+      [
+        "06/01/2023",
+        "0.188"
+      ],
+      [
+        "07/03/2023",
+        "0.216"
+      ],
+      [
+        "08/01/2023",
+        "0.214"
+      ],
+      [
+        "09/01/2023",
+        "0.219"
+      ],
+      [
+        "10/02/2023",
+        "0.202"
+      ],
+      [
+        "11/01/2023",
+        "0.219"
+      ],
+      [
+        "12/01/2023",
+        "0.23"
+      ],
+      [
+        "12/27/2023",
+        "0.251"
+      ],
+      [
+        "02/01/2024",
+        "0.199"
+      ],
+      [
+        "03/01/2024",
+        "0.209"
+      ],
+      [
+        "04/01/2024",
+        "0.211"
+      ],
+      [
+        "05/01/2024",
+        "0.236"
+      ],
+      [
+        "06/03/2024",
+        "0.229"
+      ],
+      [
+        "07/01/2024",
+        "0.212"
+      ],
+      [
+        "08/01/2024",
+        "0.252"
+      ],
+      [
+        "09/03/2024",
+        "0.229"
+      ],
+      [
+        "10/01/2024",
+        "0.284"
+      ],
+      [
+        "11/01/2024",
+        "0.228"
+      ],
+      [
+        "12/02/2024",
+        "0.19"
+      ],
+      [
+        "12/31/2024",
+        "0.256"
+      ],
+      [
+        "02/03/2025",
+        "0.181"
+      ],
+      [
+        "03/03/2025",
+        "0.184"
+      ],
+      [
+        "04/01/2025",
+        "0.194"
+      ],
+      [
+        "05/01/2025",
+        "0.197"
+      ],
+      [
+        "06/02/2025",
+        "0.188"
+      ],
+      [
+        "07/01/2025",
+        "0.194"
+      ],
+      [
+        "08/01/2025",
+        "0.193"
+      ],
+      [
+        "09/02/2025",
+        "0.177"
+      ],
+      [
+        "10/01/2025",
+        "0.231"
+      ],
+      [
+        "11/03/2025",
+        "0.184"
+      ],
+      [
+        "12/01/2025",
+        "0.164"
+      ],
+      [
+        "12/31/2025",
+        "0.215"
+      ],
+      [
+        "02/02/2026",
+        "0.14"
+      ],
+      [
+        "03/02/2026",
+        "0.162"
+      ],
+      [
+        "04/01/2026",
+        "0.181"
+      ],
+      [
+        "05/01/2026",
+        "0.171"
+      ],
+      [
+        "06/01/2026",
+        "0.166"
+      ],
+      [
+        "07/01/2026",
+        "0.185"
+      ],
+      [
+        "08/03/2026",
+        "0.176"
+      ],
+      [
+        "09/01/2026",
+        "0.178"
+      ]
+    ]
   },
   "topHoldings": null,
   "holdings": {
-    "pages": [],
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
     "pageSize": 250,
-    "totalRows": 0,
-    "asOfDate": null,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
+    "totalRows": 391,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028126, report period 2026-05-31)",
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 342
   },
   "history": {
-    "pages": [],
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
     "pageSize": 1000,
-    "totalRows": 0,
-    "asOf": "—",
-    "source": "offline seed snapshot carries no price history (Yahoo Finance refresh in CI)"
+    "totalRows": 1866,
+    "asOf": "Sep 18 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
