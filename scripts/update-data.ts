@@ -1,4 +1,5 @@
 #!/usr/bin/env bun
+import { hasOutputFilters, printConfig, printFilter, createReporter } from './update-output.ts';
 
 // Goldman Sachs U.S.-listed ETF static data updater.
 //
@@ -2155,8 +2156,12 @@ async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
   }
   universe.sort((a, b) => a.ticker.localeCompare(b.ticker));
   const funds: JsonRecord[] = [];
+  const selectedCount = universe.filter(fund => !catalogFilterReasons(fund, config).length).length;
+  printFilter(selectedCount, universe.length);
+  const output = createReporter(API_ROOT, selectedCount);
   for (const fund of universe) {
     if (catalogFilterReasons(fund, config).length) continue;
+    const before = await output.before(fund.ticker);
     const fundDir = new URL(`funds/${fund.ticker}/`, API_ROOT);
     await mkdir(fundDir, { recursive: true });
     const rich = FUND_PAGE_SNAPSHOTS[fund.ticker];
@@ -2290,6 +2295,7 @@ async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
       history: historyManifest,
     };
     await writeIfChanged(new URL('meta.json', fundDir), meta);
+    await output.result(fund.ticker, before);
     funds.push({
       ticker: fund.ticker,
       name: fund.name,
@@ -2402,9 +2408,7 @@ async function main(): Promise<void> {
   requestGateAt = 0;
   proxyGateAt = 0;
   issuerDirectDenials = 0;
-  console.log('Goldman Sachs ETF static data updater');
-  console.log('Sources: Goldman Sachs Asset Management fund finder + fund pages + Distributions tables + SEC EDGAR N-PORT-P holdings + Yahoo Finance public chart API');
-  for (const line of configLines(config)) console.log(`  ${line}`);
+  printConfig('Goldman-Sachs', config);
 
   if (config.offlineSeed) {
     await buildOfflineSeedFeed(config);
@@ -2449,35 +2453,32 @@ async function main(): Promise<void> {
   const totalAttempts = config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length;
   const results: JsonRecord[] = [];
   let processed = 0;
-  let completed = 0;
   let failures = 0;
   let lastTicker: string | null = cursor || null;
-  const logProgress = (fund: CatalogFund, status: 'updated' | 'not updated', detail: string): void => {
-    completed += 1;
-    const ordinal = String(completed).padStart(String(Math.max(1, totalAttempts)).length, ' ');
-    console.log(`[progress] ${ordinal}/${totalAttempts} ${fund.ticker.padEnd(5)} ${status}${detail ? ` — ${detail}` : ''}`);
-  };
+  printFilter(universe.length, universe.length, hasOutputFilters(config));
+  const output = createReporter(API_ROOT, totalAttempts);
   const worker = async (): Promise<void> => {
     for (;;) {
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
       const fund = queue.shift();
       if (!fund) return;
       processed += 1;
+      const before = await output.before(fund.ticker);
       try {
         const row = await processFund(fund, config, previous.get(fund.ticker) || {});
         if (row.__skipped) {
-          logProgress(fund, 'not updated', `filtered: ${(row.__skipReasons || ['not eligible']).join(', ')}`);
+          await output.result(fund.ticker, before, 'skipped', (row.__skipReasons || ['not eligible']).join(', '));
         } else {
           results.push(row);
           lastTicker = fund.ticker;
-          logProgress(fund, 'updated', `${row.holdings ?? 0} holdings, ${row.history ?? 0} history rows`);
+          await output.result(fund.ticker, before);
         }
       } catch (error) {
         failures += 1;
         const message = error instanceof Error ? error.message : String(error);
         const old = previous.get(fund.ticker);
         if (old && !hasConfiguredFilters(config)) results.push(old);
-        logProgress(fund, 'not updated', `error: ${message}`);
+        await output.result(fund.ticker, before, 'failed', message);
       }
     }
   };
