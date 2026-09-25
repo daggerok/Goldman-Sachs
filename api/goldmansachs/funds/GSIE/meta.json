@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 23 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028068/0000940400-26-028068.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,46 +22,46 @@
     "cusip": "381430107",
     "isin": "US3814301079",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Goldman Sachs ActiveBeta International Equity Index",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GSIE.NV",
+    "iopvTicker": "GSIEIV"
   },
   "expenseRatio": {
     "display": "0.25%",
     "value": 0.25,
     "gross": 0.25,
-    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.21",
-    "value": 47.21,
-    "asOfDate": "Sep 17 2026"
+    "display": "$46.61",
+    "value": 46.61,
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$47.28",
-    "value": 47.28,
-    "asOfDate": "Sep 17 2026",
+    "display": "$46.66",
+    "value": 46.66,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.15%",
-    "value": 0.15,
-    "asOfDate": "Sep 17 2026",
+    "display": "0.11%",
+    "value": 0.11,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$5.82 B",
-    "value": 5815314989.1,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$5.97 B",
+    "value": 5966100000,
+    "asOfDate": "Sep 23 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 47.31,
+    "publishedTotalHoldings": 635,
+    "bidAskMidpoint": 46.68,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "2.04%",
       "mo3": 5.37,
       "mo3Text": "5.37%",
-      "qtd": 3.08,
-      "qtdText": "3.08%",
+      "qtd": 1.69,
+      "qtdText": "1.69%",
       "ytd": 13.43,
       "ytdText": "13.43%",
       "yr1": 21,
@@ -350,7 +350,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028068, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 635
   },
   "history": {
     "pages": [
@@ -359,8 +360,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2729,
-    "asOf": "Sep 18 2026",
+    "totalRows": 2732,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 17 2026",
+    "productPageAsOf": "Sep 23 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$23.94",
-    "value": 23.94,
-    "asOfDate": "Sep 17 2026"
+    "display": "$24.87",
+    "value": 24.87,
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$24.24",
-    "value": 24.24,
-    "asOfDate": "Sep 17 2026",
+    "display": "$24.58",
+    "value": 24.58,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "1.25%",
-    "value": 1.25,
-    "asOfDate": "Sep 17 2026",
+    "display": "-1.15%",
+    "value": -1.15,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$9.58 M",
-    "value": 9580000,
-    "asOfDate": "Sep 17 2026",
+    "display": "$9.95 M",
+    "value": 9950000,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 150,
-    "bidAskMidpoint": 24.23,
+    "bidAskMidpoint": 24.59,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -80,7 +80,7 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 18 2026",
+      "asOfDate": "Sep 23 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
@@ -140,8 +140,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4,
-    "asOf": "Sep 18 2026",
+    "totalRows": 8,
+    "asOf": "Sep 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
