@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 17 2026",
+    "productPageAsOf": "Sep 23 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028128/0000940400-26-028128.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$62.37",
-    "value": 62.37,
-    "asOfDate": "Sep 17 2026"
+    "display": "$61.94",
+    "value": 61.94,
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$62.43",
-    "value": 62.43,
-    "asOfDate": "Sep 17 2026",
+    "display": "$61.95",
+    "value": 61.95,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "asOfDate": "Sep 17 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$274.42 M",
-    "value": 274420000,
-    "asOfDate": "Sep 17 2026",
+    "display": "$272.54 M",
+    "value": 272540000,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 97,
-    "bidAskMidpoint": 62.37,
+    "publishedTotalHoldings": 98,
+    "bidAskMidpoint": 61.94,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "-1.53%",
       "mo3": 4.7,
       "mo3Text": "4.70%",
-      "qtd": -9.43,
-      "qtdText": "-9.43%",
+      "qtd": -9.34,
+      "qtdText": "-9.34%",
       "ytd": 19.43,
       "ytdText": "19.43%",
       "yr1": 21.25,
@@ -221,15 +221,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028128, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 97
+    "publishedTotalHoldings": 98
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 740,
-    "asOf": "Sep 18 2026",
+    "totalRows": 743,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

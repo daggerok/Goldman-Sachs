@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 17 2026",
+    "productPageAsOf": "Sep 23 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$65.10",
-    "value": 65.1,
-    "asOfDate": "Sep 17 2026"
+    "display": "$65.30",
+    "value": 65.3,
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$65.13",
-    "value": 65.13,
-    "asOfDate": "Sep 17 2026",
+    "display": "$65.30",
+    "value": 65.3,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.05%",
-    "value": 0.05,
-    "asOfDate": "Sep 17 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.79 B",
-    "value": 1794140000,
-    "asOfDate": "Sep 17 2026",
+    "display": "$1.80 B",
+    "value": 1799650000,
+    "asOfDate": "Sep 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 743,
-    "bidAskMidpoint": 65.11,
+    "publishedTotalHoldings": 740,
+    "bidAskMidpoint": 65.33,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "2.75%",
       "mo3": 2.71,
       "mo3Text": "2.71%",
-      "qtd": 2.71,
-      "qtdText": "2.71%",
+      "qtd": 2.78,
+      "qtdText": "2.78%",
       "ytd": 14.36,
       "ytdText": "14.36%",
       "yr1": 18.23,
@@ -238,7 +238,7 @@
     "asOfDate": null,
     "asOf": "—",
     "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 743
+    "publishedTotalHoldings": 740
   },
   "history": {
     "pages": [
@@ -246,8 +246,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1130,
-    "asOf": "Sep 18 2026",
+    "totalRows": 1133,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
