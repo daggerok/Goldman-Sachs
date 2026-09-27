@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 23 2026",
+    "productPageAsOf": "Sep 24 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028126/0000940400-26-028126.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,31 +37,31 @@
   "nav": {
     "display": "$50.42",
     "value": 50.42,
-    "asOfDate": "Sep 23 2026"
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$50.45",
-    "value": 50.45,
-    "asOfDate": "Sep 23 2026",
+    "display": "$50.47",
+    "value": 50.47,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Sep 23 2026",
+    "display": "0.10%",
+    "value": 0.1,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$1.64 B",
-    "value": 1642560000,
-    "asOfDate": "Sep 23 2026",
+    "value": 1644860000,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 337,
-    "bidAskMidpoint": 50.45,
+    "bidAskMidpoint": 50.47,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -534,8 +534,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1869,
-    "asOf": "Sep 24 2026",
+    "totalRows": 1871,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
