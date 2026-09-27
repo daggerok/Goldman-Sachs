@@ -1071,7 +1071,7 @@ function emptyReturnRow(asOfDate = ''): OfficialReturnRow {
 
 function returnRowFromLabeledCells(headers: string[], values: Array<number | null>, asOfDate: string): OfficialReturnRow {
   const row = emptyReturnRow(asOfDate);
-  const slot = (header: string): keyof OfficialReturnRow | null => {
+  const slot = (header: string): Exclude<keyof OfficialReturnRow, 'asOfDate'> | null => {
     const key = header.toLowerCase().replace(/[\s.]+/g, '');
     if (key === 'sinceinception') return 'siAnn';
     if (key === '1mth' || key === '1month') return 'mo1';

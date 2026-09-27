@@ -1009,3 +1009,46 @@ queueDescribe('per-ticker queue preserves caller results and stores completion-o
   queueExpect(await chains.get('SGOL')).toBeUndefined();
  });
 });
+
+
+async function officialReturnRowHarness() {
+  const source = await Bun.file(new URL('./update-data.ts', import.meta.url)).text();
+  const start = source.indexOf('function emptyReturnRow(');
+  const end = source.indexOf('\n/**', start);
+  expect(start).toBeGreaterThan(-1);
+  expect(end).toBeGreaterThan(start);
+  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(source.slice(start, end));
+  const makeRow = new Function(js + '; return returnRowFromLabeledCells;')() as
+    (headers: string[], values: Array<number | null>, date: string) => import('./update-data').OfficialReturnRow;
+  return { source, makeRow };
+}
+
+describe('numeric official return-row keys', () => {
+  test('the slot annotation excludes the string date field without a cast', async () => {
+    const { source } = await officialReturnRowHarness();
+    expect(source).toContain("const slot = (header: string): Exclude<keyof OfficialReturnRow, 'asOfDate'> | null => {");
+    expect(source).toContain('if (field) row[field] = values[index] ?? null;');
+  });
+  test('all numeric tenors retain their values, including zero and negatives', async () => {
+    const { makeRow } = await officialReturnRowHarness();
+    expect(makeRow(['Since Inception', '1Mth', '3Month', 'YTD', '1Yr', '3Year', '5Yr', '10Year'],
+      [-1.5, 0, 0.25, 2, 3, 4, 5, 6], '2026-08-31')).toEqual({
+      asOfDate: '2026-08-31', siAnn: -1.5, mo1: 0, mo3: 0.25, ytd: 2,
+      yr1: 3, cagr3y: 4, cagr5y: 5, cagr10y: 6,
+    });
+  });
+  test('date/unknown headers cannot overwrite metadata or create fields', async () => {
+    const { makeRow } = await officialReturnRowHarness();
+    expect(makeRow(['asOfDate', 'Unknown', '1Year'], [999, 123, 0], '2026-06-30')).toEqual({
+      asOfDate: '2026-06-30', mo1: null, mo3: null, ytd: null, yr1: 0,
+      cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null,
+    });
+  });
+  test('missing/null cells stay null; reordered headers map by label', async () => {
+    const { makeRow } = await officialReturnRowHarness();
+    expect(makeRow(['10Yr', 'YTD', '1Month', '3Yr'], [6, null], '2026-08-31')).toEqual({
+      asOfDate: '2026-08-31', mo1: null, mo3: null, ytd: null, yr1: null,
+      cagr3y: null, cagr5y: null, cagr10y: 6, siAnn: null,
+    });
+  });
+});
