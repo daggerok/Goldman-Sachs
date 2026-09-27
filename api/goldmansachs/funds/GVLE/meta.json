@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Sep 24 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028129/0000940400-26-028129.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,46 +22,46 @@
     "cusip": "38149W416",
     "isin": "US38149W4160",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Russell 1000 Value Index",
+    "exchange": "NASDAQ",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GVLE.NV",
+    "iopvTicker": "N/A"
   },
   "expenseRatio": {
     "display": "0.45%",
     "value": 0.45,
     "gross": 0.45,
-    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.92",
-    "value": 47.92,
-    "asOfDate": "Sep 23 2026"
+    "display": "$47.83",
+    "value": 47.83,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$47.91",
-    "value": 47.91,
-    "asOfDate": "Sep 23 2026",
+    "display": "$47.83",
+    "value": 47.83,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.01,
-    "asOfDate": "Sep 23 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$39.35 M",
-    "value": 39351930.56,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$45.17 M",
+    "value": 45170000,
+    "asOfDate": "Sep 24 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 47.94,
+    "publishedTotalHoldings": 31,
+    "bidAskMidpoint": 47.83,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.29%",
       "mo3": 6.59,
       "mo3Text": "6.59%",
-      "qtd": 1.95,
-      "qtdText": "1.95%",
+      "qtd": 2.43,
+      "qtdText": "2.43%",
       "ytd": 19.04,
       "ytdText": "19.04%",
       "yr1": 20.79,
@@ -176,15 +176,16 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028129, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 31
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 213,
-    "asOf": "Sep 24 2026",
+    "totalRows": 215,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

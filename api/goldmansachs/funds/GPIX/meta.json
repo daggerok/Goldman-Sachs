@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105258/38149W622/goldman-sachs-s-p-500-premium-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105258/38149W622/goldman-sachs-s-p-500-premium-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 23 2026",
+    "productPageAsOf": "Sep 24 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026034787/0000940400-26-034787.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,26 +35,26 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$56.06",
-    "value": 56.06,
-    "asOfDate": "Sep 23 2026"
+    "display": "$56.05",
+    "value": 56.05,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
     "display": "$56.08",
     "value": 56.08,
-    "asOfDate": "Sep 23 2026",
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.04,
-    "asOfDate": "Sep 23 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$5.90 B",
-    "value": 5898900000,
-    "asOfDate": "Sep 23 2026",
+    "display": "$5.93 B",
+    "value": 5933950000,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -85,8 +85,8 @@
       "mo1Text": "2.25%",
       "mo3": 2.33,
       "mo3Text": "2.33%",
-      "qtd": 3.21,
-      "qtdText": "3.21%",
+      "qtd": 3.67,
+      "qtdText": "3.67%",
       "ytd": 12.67,
       "ytdText": "12.67%",
       "yr1": 19.78,
@@ -317,8 +317,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 728,
-    "asOf": "Sep 24 2026",
+    "totalRows": 730,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

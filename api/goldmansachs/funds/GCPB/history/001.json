@@ -2,7 +2,7 @@
   "ticker": "GCPB",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 32,
+  "totalRows": 34,
   "headers": [
     "Date",
     "Close",
@@ -191,6 +191,12 @@
       "Volume": "600"
     },
     {
+      "Date": "Sep 22 2026",
+      "Close": "49.400001525878906",
+      "Adj Close": "49.400001525878906",
+      "Volume": "2800"
+    },
+    {
       "Date": "Sep 23 2026",
       "Close": "49.11000061035156",
       "Adj Close": "49.11000061035156",
@@ -201,6 +207,12 @@
       "Close": "48.81999969482422",
       "Adj Close": "48.81999969482422",
       "Volume": "4500"
+    },
+    {
+      "Date": "Sep 25 2026",
+      "Close": "48.75",
+      "Adj Close": "48.75",
+      "Volume": "4100"
     }
   ]
 }

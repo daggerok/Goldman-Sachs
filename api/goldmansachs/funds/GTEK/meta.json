@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 23 2026",
+    "productPageAsOf": "Sep 24 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028067/0000940400-26-028067.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,31 +37,31 @@
   "nav": {
     "display": "$59.08",
     "value": 59.08,
-    "asOfDate": "Sep 23 2026"
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$58.77",
-    "value": 58.77,
-    "asOfDate": "Sep 23 2026",
+    "display": "$58.84",
+    "value": 58.84,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.52%",
-    "value": -0.52,
-    "asOfDate": "Sep 23 2026",
+    "display": "-0.41%",
+    "value": -0.41,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$246.64 M",
-    "value": 246640000,
-    "asOfDate": "Sep 23 2026",
+    "display": "$246.65 M",
+    "value": 246650000,
+    "asOfDate": "Sep 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 61,
-    "bidAskMidpoint": 58.8,
+    "bidAskMidpoint": 58.84,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,16 +85,16 @@
       "mo1Text": "5.52%",
       "mo3": -3.96,
       "mo3Text": "-3.96%",
-      "qtd": -4.71,
-      "qtdText": "-4.71%",
+      "qtd": -3.54,
+      "qtdText": "-3.54%",
       "ytd": 42.28,
       "ytdText": "42.28%",
       "yr1": 54.83,
       "yr1Text": "54.83%",
       "yr3": 31.55,
       "yr3Text": "31.55%",
-      "yr5": 7.7,
-      "yr5Text": "7.70%",
+      "yr5": 8.07,
+      "yr5Text": "8.07%",
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 7.34,
@@ -197,8 +197,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1260,
-    "asOf": "Sep 24 2026",
+    "totalRows": 1262,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
