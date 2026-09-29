@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028186/0000940400-26-028186.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$40.64",
-    "value": 40.64,
-    "asOfDate": "Sep 24 2026"
+    "display": "$40.49",
+    "value": 40.49,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$40.41",
-    "value": 40.41,
-    "asOfDate": "Sep 24 2026",
+    "display": "$40.39",
+    "value": 40.39,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.58%",
-    "value": -0.58,
-    "asOfDate": "Sep 24 2026",
+    "display": "-0.25%",
+    "value": -0.25,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$34.55 M",
-    "value": 34550000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$34.42 M",
+    "value": 34420000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 203,
-    "bidAskMidpoint": 40.42,
+    "bidAskMidpoint": 40.4,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.73%",
       "mo3": -0.14,
       "mo3Text": "-0.14%",
-      "qtd": -3.3,
-      "qtdText": "-3.30%",
+      "qtd": -4.06,
+      "qtdText": "-4.06%",
       "ytd": 1.27,
       "ytdText": "1.27%",
       "yr1": 6.11,
@@ -401,8 +401,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1154,
-    "asOf": "Sep 25 2026",
+    "totalRows": 1155,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

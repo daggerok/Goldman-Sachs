@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028076/0000940400-26-028076.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$54.30",
-    "value": 54.3,
-    "asOfDate": "Sep 24 2026"
+    "display": "$55.69",
+    "value": 55.69,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$54.78",
-    "value": 54.78,
-    "asOfDate": "Sep 24 2026",
+    "display": "$56.12",
+    "value": 56.12,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.89%",
-    "value": 0.89,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.77%",
+    "value": 0.77,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$97.74 M",
-    "value": 97740000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$100.24 M",
+    "value": 100240000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 159,
-    "bidAskMidpoint": 54.76,
+    "bidAskMidpoint": 56.06,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "3.27%",
       "mo3": 5.11,
       "mo3Text": "5.11%",
-      "qtd": 7.45,
-      "qtdText": "7.45%",
+      "qtd": 6.43,
+      "qtdText": "6.43%",
       "ytd": 19.37,
       "ytdText": "19.37%",
       "yr1": 26.7,
@@ -282,8 +282,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2656,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2657,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028064/0000940400-26-028064.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$171.72",
-    "value": 171.72,
-    "asOfDate": "Sep 24 2026"
+    "display": "$172.16",
+    "value": 172.16,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$171.78",
-    "value": 171.78,
-    "asOfDate": "Sep 24 2026",
+    "display": "$172.19",
+    "value": 172.19,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.02%",
+    "value": 0.02,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$575.25 M",
-    "value": 575250000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$576.74 M",
+    "value": 576740000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 51,
-    "bidAskMidpoint": 171.71,
+    "bidAskMidpoint": 172.15,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "1.13%",
       "mo3": -4.97,
       "mo3Text": "-4.97%",
-      "qtd": -6.51,
-      "qtdText": "-6.51%",
+      "qtd": -8.11,
+      "qtdText": "-8.11%",
       "ytd": 10.24,
       "ytdText": "10.24%",
       "yr1": 19.25,
@@ -254,8 +254,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2480,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2481,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

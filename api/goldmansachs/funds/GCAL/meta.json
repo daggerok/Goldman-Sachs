@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028071/0000940400-26-028071.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.74",
-    "value": 48.74,
-    "asOfDate": "Sep 24 2026"
+    "display": "$48.52",
+    "value": 48.52,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$48.85",
-    "value": 48.85,
-    "asOfDate": "Sep 24 2026",
+    "display": "$48.58",
+    "value": 48.58,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.22%",
-    "value": 0.22,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.12%",
+    "value": 0.12,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$187.63 M",
-    "value": 187630000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$186.81 M",
+    "value": 186810000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 376,
-    "bidAskMidpoint": 48.85,
+    "publishedTotalHoldings": 374,
+    "bidAskMidpoint": 48.59,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.13%",
       "mo3": -0.45,
       "mo3Text": "-0.45%",
-      "qtd": -4.28,
-      "qtdText": "-4.28%",
+      "qtd": -4.73,
+      "qtdText": "-4.73%",
       "ytd": 1.04,
       "ytdText": "1.04%",
       "yr1": 4.63,
@@ -274,15 +274,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028071, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 376
+    "publishedTotalHoldings": 374
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 541,
-    "asOf": "Sep 25 2026",
+    "totalRows": 542,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

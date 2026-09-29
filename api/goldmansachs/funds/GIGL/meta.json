@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028063/0000940400-26-028063.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,31 +37,31 @@
   "nav": {
     "display": "$48.32",
     "value": 48.32,
-    "asOfDate": "Sep 24 2026"
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
     "display": "$48.33",
     "value": 48.33,
-    "asOfDate": "Sep 24 2026",
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.02,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.03%",
+    "value": 0.03,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$233.13 M",
-    "value": 233130000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$233.16 M",
+    "value": 233160000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 453,
-    "bidAskMidpoint": 48.33,
+    "publishedTotalHoldings": 454,
+    "bidAskMidpoint": 48.34,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.47%",
       "mo3": -0.81,
       "mo3Text": "-0.81%",
-      "qtd": -3.09,
-      "qtdText": "-3.09%",
+      "qtd": -3.66,
+      "qtdText": "-3.66%",
       "ytd": -0.24,
       "ytdText": "-0.24%",
       "yr1": 2.11,
@@ -230,15 +230,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028063, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 453
+    "publishedTotalHoldings": 454
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 315,
-    "asOf": "Sep 25 2026",
+    "totalRows": 316,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

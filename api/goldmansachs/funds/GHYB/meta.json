@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": null,
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028190/0000940400-26-028190.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,46 +22,46 @@
     "cusip": "381430453",
     "isin": "US3814304537",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "FTSE Goldman Sachs High Yield Corporate Bond Index",
-    "exchange": "NYSE Arca",
+    "indexTicker": null,
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GHYB.NV",
-    "iopvTicker": "GHYBIV"
+    "navTicker": null,
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.15%",
     "value": 0.15,
     "gross": 0.15,
-    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
   },
   "nav": {
-    "display": "$43.72",
-    "value": 43.72,
-    "asOfDate": "Sep 24 2026"
+    "display": "$43.67",
+    "value": 43.67,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$43.63",
-    "value": 43.63,
-    "asOfDate": "Sep 24 2026",
+    "display": "$43.61",
+    "value": 43.61,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.22%",
-    "value": -0.22,
-    "asOfDate": "Sep 24 2026",
+    "display": "-0.14%",
+    "value": -0.14,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$135.53 M",
-    "value": 135530000,
-    "asOfDate": "Sep 24 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "display": "$130.42 M",
+    "value": 130420485.94,
+    "asOfDate": "May 31 2026",
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 919,
-    "bidAskMidpoint": 43.63,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": 43.6,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.99%",
       "mo3": 1,
       "mo3Text": "1.00%",
-      "qtd": -1.23,
-      "qtdText": "-1.23%",
+      "qtd": -1.74,
+      "qtdText": "-1.74%",
       "ytd": 2.41,
       "ytdText": "2.41%",
       "yr1": 4.59,
@@ -607,8 +607,7 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028190, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 919
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
     "pages": [
@@ -617,8 +616,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2263,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2264,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

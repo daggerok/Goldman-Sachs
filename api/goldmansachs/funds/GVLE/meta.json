@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028129/0000940400-26-028129.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.83",
-    "value": 47.83,
-    "asOfDate": "Sep 24 2026"
+    "display": "$48.05",
+    "value": 48.05,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$47.83",
-    "value": 47.83,
-    "asOfDate": "Sep 24 2026",
+    "display": "$48.05",
+    "value": 48.05,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
     "display": "0.01%",
     "value": 0.01,
-    "asOfDate": "Sep 24 2026",
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$45.17 M",
-    "value": 45170000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$44.42 M",
+    "value": 44420000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 31,
-    "bidAskMidpoint": 47.83,
+    "bidAskMidpoint": 48.05,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -85,8 +85,8 @@
       "mo1Text": "0.29%",
       "mo3": 6.59,
       "mo3Text": "6.59%",
-      "qtd": 2.43,
-      "qtdText": "2.43%",
+      "qtd": 1.49,
+      "qtdText": "1.49%",
       "ytd": 19.04,
       "ytdText": "19.04%",
       "yr1": 20.79,
@@ -184,8 +184,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 215,
-    "asOf": "Sep 25 2026",
+    "totalRows": 216,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

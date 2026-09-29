@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028126/0000940400-26-028126.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,26 +35,26 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.42",
-    "value": 50.42,
-    "asOfDate": "Sep 24 2026"
+    "display": "$50.44",
+    "value": 50.44,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
     "display": "$50.47",
     "value": 50.47,
-    "asOfDate": "Sep 24 2026",
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.06%",
+    "value": 0.06,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.64 B",
-    "value": 1644860000,
-    "asOfDate": "Sep 24 2026",
+    "display": "$1.65 B",
+    "value": 1645560000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -85,8 +85,8 @@
       "mo1Text": "0.37%",
       "mo3": 0.99,
       "mo3Text": "0.99%",
-      "qtd": 0.85,
-      "qtdText": "0.85%",
+      "qtd": 0.83,
+      "qtdText": "0.83%",
       "ytd": 2.53,
       "ytdText": "2.53%",
       "yr1": 4.16,
@@ -534,8 +534,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1871,
-    "asOf": "Sep 25 2026",
+    "totalRows": 1872,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
