@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T04:55:47Z",
+  "generatedAt": "2026-09-29T04:57:52Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -13,7 +13,7 @@
   "counts": {
     "funds": 48,
     "holdings": 24663,
-    "history": 58795
+    "history": 58796
   },
   "funds": [
     {
@@ -105,17 +105,17 @@
       "isin": "US3814305294",
       "ter": "0.12%",
       "terValue": 0.12,
-      "nav": "$100.03",
-      "navValue": 100.03,
+      "nav": "$100.06",
+      "navValue": 100.06,
       "aum": "$7.91 B",
-      "aumValue": 7905480000,
-      "asOfDate": "Sep 24 2026",
+      "aumValue": 7906830000,
+      "asOfDate": "Sep 25 2026",
       "inceptionDate": "Sep 6 2016",
       "exchange": "NYSE Arca",
-      "closePrice": "$100.02",
-      "closePriceValue": 100.02,
-      "premiumDiscount": "-0.01%",
-      "premiumDiscountValue": -0.01,
+      "closePrice": "$100.07",
+      "closePriceValue": 100.07,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
@@ -140,8 +140,8 @@
           "yr3Text": "4.52%",
           "yr5": 3.5,
           "yr5Text": "3.50%",
-          "yr10": 2.33,
-          "yr10Text": "2.33%",
+          "yr10": 2.32,
+          "yr10Text": "2.32%",
           "sinceInception": 2.31,
           "sinceInceptionText": "2.31%"
         },
@@ -160,10 +160,10 @@
         "tr1y": 3.7,
         "tr3y": 14.18,
         "tr5y": 18.77,
-        "tr10y": 25.9,
+        "tr10y": 25.78,
         "cagr3y": 4.52,
         "cagr5y": 3.5,
-        "cagr10y": 2.33,
+        "cagr10y": 2.32,
         "siAnn": 2.31,
         "dividendYield": 3.67,
         "dividendYieldText": "3.67%",
@@ -172,7 +172,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values"
       },
       "holdings": 43,
-      "history": 2522
+      "history": 2523
     },
     {
       "ticker": "GBND",

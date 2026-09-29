@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 24 2026",
+    "productPageAsOf": "Sep 25 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028082/0000940400-26-028082.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$100.03",
-    "value": 100.03,
-    "asOfDate": "Sep 24 2026"
+    "display": "$100.06",
+    "value": 100.06,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$100.02",
-    "value": 100.02,
-    "asOfDate": "Sep 24 2026",
+    "display": "$100.07",
+    "value": 100.07,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.01,
-    "asOfDate": "Sep 24 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$7.91 B",
-    "value": 7905480000,
-    "asOfDate": "Sep 24 2026",
+    "value": 7906830000,
+    "asOfDate": "Sep 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 40,
-    "bidAskMidpoint": 100.04,
+    "bidAskMidpoint": 100.07,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -95,8 +95,8 @@
       "yr3Text": "4.52%",
       "yr5": 3.5,
       "yr5Text": "3.50%",
-      "yr10": 2.33,
-      "yr10Text": "2.33%",
+      "yr10": 2.32,
+      "yr10Text": "2.32%",
       "sinceInception": 2.31,
       "sinceInceptionText": "2.31%"
     },
@@ -586,8 +586,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2522,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2523,
+    "asOf": "Sep 28 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
