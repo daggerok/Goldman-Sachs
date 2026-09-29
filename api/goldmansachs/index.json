@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T03:24:15Z",
+  "generatedAt": "2026-09-29T04:55:47Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -13,7 +13,7 @@
   "counts": {
     "funds": 48,
     "holdings": 24663,
-    "history": 58794
+    "history": 58795
   },
   "funds": [
     {
@@ -26,17 +26,17 @@
       "isin": "US38150K1034",
       "ter": "0.18%",
       "terValue": 0.18,
-      "nav": "$42.05",
-      "navValue": 42.05,
+      "nav": "$41.99",
+      "navValue": 41.99,
       "aum": "$2.74 B",
-      "aumValue": 2742100000,
-      "asOfDate": "Sep 24 2026",
+      "aumValue": 2738620000,
+      "asOfDate": "Sep 25 2026",
       "inceptionDate": "Jul 26 2018",
       "exchange": "Cboe BZX",
-      "closePrice": "$42.15",
-      "closePriceValue": 42.15,
-      "premiumDiscount": "0.24%",
-      "premiumDiscountValue": 0.24,
+      "closePrice": "$42.28",
+      "closePriceValue": 42.28,
+      "premiumDiscount": "0.69%",
+      "premiumDiscountValue": 0.69,
       "frequencyCode": "00 - None",
       "distributions": {
         "frequency": "None",
@@ -51,8 +51,8 @@
           "mo1Text": "13.27%",
           "mo3": 0.31,
           "mo3Text": "0.31%",
-          "qtd": 6.18,
-          "qtdText": "6.18%",
+          "qtd": 2.08,
+          "qtdText": "2.08%",
           "ytd": 5.79,
           "ytdText": "5.79%",
           "yr1": 32.81,
@@ -93,7 +93,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values"
       },
       "holdings": 0,
-      "history": 2039
+      "history": 2040
     },
     {
       "ticker": "GBIL",
