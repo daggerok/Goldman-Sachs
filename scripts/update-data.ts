@@ -627,10 +627,6 @@ function readTickerSet(value: string | undefined): Set<string> | null {
   return tickers.length ? new Set(tickers) : null;
 }
 
-function hasConfiguredFilters(config: UpdaterConfig): boolean {
-  return Boolean(config.aum || config.ter || config.dividendYield || config.secYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
-}
-
 export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
   return {
     maxFetches: parsePositiveInt(env.MAX_FETCHES, 0),
@@ -1931,14 +1927,81 @@ function parsePreviousFund(ticker: string, row: JsonRecord): CatalogFund {
 }
 
 async function readPreviousIndex(): Promise<Map<string, JsonRecord>> {
+  const map = new Map<string, JsonRecord>();
   try {
     const data = JSON.parse(await readFile(INDEX_FILE, 'utf8')) as JsonRecord;
-    const map = new Map<string, JsonRecord>();
     for (const row of Array.isArray(data.funds) ? data.funds : []) if (row?.ticker) map.set(String(row.ticker), row);
-    return map;
   } catch {
-    return new Map();
+    // No published index yet: the per-fund files below still count.
   }
+  return map;
+}
+
+/** Index row rebuilt from a published funds/<TICKER>/meta.json (for funds missing from a shrunken index). */
+export function indexRowFromMeta(meta: JsonRecord): JsonRecord | null {
+  const ticker = sanitizeTicker(String(meta?.ticker ?? ''));
+  if (!ticker) return null;
+  const monthEnd = meta.returns?.monthEnd || {};
+  const yields = meta.yields || {};
+  const text = (value: unknown) => (typeof value === 'string' && value ? value : '—');
+  return {
+    ticker,
+    name: String(meta.name || ticker),
+    category: String(meta.category || 'ETF'),
+    fundPage: String(meta.source?.fundPage || ''),
+    dataFile: `./funds/${ticker}/meta.json`,
+    cusip: meta.identifiers?.cusip || null,
+    isin: meta.identifiers?.isin || null,
+    ter: text(meta.expenseRatio?.display),
+    terValue: numberOrNull(meta.expenseRatio?.value),
+    nav: text(meta.nav?.display),
+    navValue: numberOrNull(meta.nav?.value),
+    aum: text(meta.aum?.display),
+    aumValue: numberOrNull(meta.aum?.value),
+    asOfDate: text(meta.nav?.asOfDate),
+    inceptionDate: '—',
+    exchange: String(meta.identifiers?.exchange || ''),
+    closePrice: text(meta.marketPrice?.display),
+    closePriceValue: numberOrNull(meta.marketPrice?.value),
+    premiumDiscount: text(meta.premiumDiscount?.display),
+    premiumDiscountValue: numberOrNull(meta.premiumDiscount?.value),
+    frequencyCode: text(meta.distributions?.frequencyCode),
+    distributions: { frequency: meta.distributions?.frequency || '—', exDate: '—', dividend: '—' },
+    returns: meta.returns || {},
+    metrics: {
+      ytd: numberOrNull(monthEnd.ytd), tr1y: null, tr3y: null, tr5y: null, tr10y: null,
+      cagr3y: numberOrNull(monthEnd.yr3), cagr5y: numberOrNull(monthEnd.yr5), cagr10y: numberOrNull(monthEnd.yr10), siAnn: numberOrNull(monthEnd.sinceInception),
+      dividendYield: numberOrNull(yields.dividendYield), dividendYieldText: text(yields.dividendYieldText),
+      secYield: numberOrNull(yields.secYield), secYieldText: text(yields.secYieldText),
+      returnsBasis: String(meta.returns?.derivedFrom || OFFICIAL_RETURNS_BASIS),
+      performanceAsOf: performanceAsOf(monthEnd.asOfDate),
+    },
+    holdings: numberOrNull(meta.holdings?.totalRows) ?? 0,
+    history: numberOrNull(meta.history?.totalRows) ?? 0,
+  };
+}
+
+/** Every fund the feed already knows: the published index rows plus every per-fund meta.json (index rows win). */
+async function readKnownFunds(): Promise<Map<string, JsonRecord>> {
+  const known = await readPreviousIndex();
+  try {
+    for (const entry of await readdir(new URL('funds/', API_ROOT), { withFileTypes: true })) {
+      if (!entry.isDirectory() || known.has(entry.name)) continue;
+      const meta = await readPreviousMeta(entry.name);
+      const row = meta ? indexRowFromMeta(meta) : null;
+      if (row) known.set(String(row.ticker), row);
+    }
+  } catch {
+    // No funds/ directory yet.
+  }
+  return known;
+}
+
+/** Published rows plus refreshed rows (refreshed win), sorted by ticker: a bounded run can only add or refresh, never drop. */
+export function mergePublishedRows(known: Map<string, JsonRecord>, refreshed: JsonRecord[]): JsonRecord[] {
+  const merged = new Map(known);
+  for (const row of refreshed) merged.set(String(row.ticker), row);
+  return [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
 }
 
 async function readPreviousMeta(ticker: string): Promise<JsonRecord | null> {
@@ -2626,7 +2689,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  const previous = await readPreviousIndex();
+  const previous = await readKnownFunds();
   const catalog = new Map<string, CatalogFund>();
   let catalogSource = 'previous api/goldmansachs/index.json';
   if (!config.skipGoldmanSachs) {
@@ -2648,8 +2711,8 @@ async function main(): Promise<void> {
   // did not return (card layout drift, pagination) still refresh by URL, and
   // live-only tickers are kept so new listings are never dropped silently.
   for (const seed of seedCatalogFunds()) if (!catalog.has(seed.ticker)) catalog.set(seed.ticker, seed);
-  if (!catalog.size) for (const [ticker, row] of previous) catalog.set(ticker, parsePreviousFund(ticker, row));
-  if (catalog.size && catalogSource !== 'previous api/goldmansachs/index.json') for (const [ticker, row] of previous) if (!catalog.has(ticker)) catalog.set(ticker, parsePreviousFund(ticker, row));
+  // Funds already published (index rows and funds/*/meta.json) always stay known, even when the live finder or the seed misses them.
+  for (const [ticker, row] of previous) if (!catalog.has(ticker)) catalog.set(ticker, parsePreviousFund(ticker, row));
 
   const universe = [...catalog.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
   if (!universe.length) throw new Error('No catalog rows available. Run this where am.gs.com is reachable or seed api/goldmansachs/index.json first.');
@@ -2687,23 +2750,14 @@ async function main(): Promise<void> {
       } catch (error) {
         failures += 1;
         const message = error instanceof Error ? error.message : String(error);
-        const old = previous.get(fund.ticker);
-        if (old && !hasConfiguredFilters(config)) results.push(old);
         await output.result(fund.ticker, before, 'failed', message);
       }
     }
   };
   await Promise.all(Array.from({ length: config.concurrency }, () => worker()));
 
-  const filterRun = hasConfiguredFilters(config);
-  const funds = [...results].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
-  if (!filterRun) {
-    for (const fund of universe) if (!funds.some((row) => row.ticker === fund.ticker)) {
-      const old = previous.get(fund.ticker);
-      if (old) funds.push(old);
-    }
-    funds.sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
-  }
+  // Filtered, bounded and catalog-degraded runs only refresh what they processed; every other known fund keeps its published row.
+  const funds = mergePublishedRows(previous, results);
   const counts = { funds: funds.length, holdings: funds.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: funds.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
   await writeIfChanged(INDEX_FILE, {
     generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
