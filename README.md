@@ -47,15 +47,15 @@ Caveats:
 - Returns are the official figures printed on the fund pages; daily history is Yahoo Finance adjusted market-price closes, not official NAV
 - Cumulative 3Y/5Y/10Y returns are derived from the published annualized figures, not published values
 - Unavailable values stay unavailable and are never filled with `0`
-- `AUM`, `TER` and `DIVIDEND_YIELD` filters drop funds without a value; `PERFORMANCE_*` and `TOTAL_RETURN_*` filters only drop funds that have a value outside the range
+- `AUM`, `TER`, `DIVIDEND_YIELD` and `SEC_YIELD` filters drop funds without a value; `PERFORMANCE_*` and `TOTAL_RETURN_*` filters only drop funds that have a value outside the range
 - All supplied filters use AND logic, `TICKERS` included; funds not selected for a successful update keep their prior published metadata and data files
 - Holdings come from SEC EDGAR N-PORT-P because the fund pages only print the top 10; the fund-page top 10 is kept as summary data only
 - Distributions come from the fund page table, with Yahoo dividend events as the fallback
-- `OFFLINE_SEED` builds the feed from the committed seed and verified snapshot without network access, so it is not a live refresh
+- `OFFLINE_SEED` builds the feed from the committed seed and verified snapshot in `data/` without network access, so it is not a live refresh
 
 ### Update controls
 
-Defaults below are the values in `scripts/update-data.config.json`. Environment variables of the same name override them
+Defaults below are the values in `scripts/update-data.config.json`. Environment variables of the same name override them, and an explicitly set empty variable clears the control
 
 | Control | Default | Meaning |
 | --- | --: | --- |
@@ -65,22 +65,23 @@ Defaults below are the values in `scripts/update-data.config.json`. Environment 
 | `AUM` | `:` | Net Assets range; each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of the presets `nano`, `micro`, `small`, `mid`, `large` |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`) |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range |
+| `SEC_YIELD` | `:` | Published 30-day SEC yield percentage range |
 | `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `GSLC GBIL AAAU GPIX GPIQ` |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page |
 | `HISTORY_RANGE` | `max` | Yahoo Finance chart range for history rows (`max`, `10y`, `5y`, ...) |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the official fund finder and fund pages under `api/goldmansachs/raw` |
-| `MAX_RETRIES` | `2` | Retries after the initial request; only network errors and HTTP 408/425/429/5xx are retried with exponential backoff |
-| `SEC_UA` | empty (built-in descriptor) | SEC User-Agent override; SEC policy requires automated tools to declare a contact. The workflow takes it from the protected `SEC_UA` Actions variable when set |
+| `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1); only network errors and HTTP 408/425/429/5xx are retried with exponential backoff |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | SEC User-Agent; SEC policy requires automated tools to declare a contact. The workflow takes it from the protected `SEC_UA` Actions variable when that is set |
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings; `false` disables it |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions, skip Yahoo Finance |
 | `SKIP_GOLDMANSACHS` | `false` | Skip the Goldman Sachs fund finder and detail pages (SEC EDGAR + Yahoo Finance only) |
-| `OFFLINE_SEED` | `false` | Build the feed from the committed seed and verified snapshot only, with no network access |
+| `OFFLINE_SEED` | `false` | Build the feed from the committed seed and verified snapshot in `data/` only, with no network access |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized return range `min:max` per tenor (official NAV return where published) |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative return range `min:max` per tenor |
 
-Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `OFFLINE_SEED` and `VERBOSE`, which are reachable through `advanced`
+Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `OFFLINE_SEED` and `VERBOSE`, which are reachable through `advanced`
 
 ### Examples
 
@@ -129,7 +130,7 @@ git diff --check
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
