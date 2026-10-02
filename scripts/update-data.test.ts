@@ -1,14 +1,18 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
 import { describe, expect, test } from 'bun:test';
-import { readdirSync, readFileSync } from 'node:fs';
+import { cpSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import {
   CONTROL_NAMES,
   DERIVED_RETURNS_BASIS,
   OFFICIAL_RETURNS_BASIS,
   deriveMetrics,
   performanceAsOf,
+  indexRowFromMeta,
   installSystemCa,
+  mergePublishedRows,
   isCertError,
   readConfig,
   resolveControls,
@@ -1329,4 +1333,83 @@ test('README documents the controls, keeps the standard sections and avoids stal
 test('scripts/ holds only the three standard files and the SEC contact is the owner descriptor', () => {
   expect(readdirSync(new URL('./', import.meta.url)).sort()).toEqual(['update-data.config.json', 'update-data.test.ts', 'update-data.ts']);
   expect(readRepo('scripts/update-data.ts')).not.toContain('example.com');
+});
+
+describe('the published feed never shrinks', () => {
+  const metaFor = (ticker: string) => ({
+    ticker, name: `${ticker} ETF`, category: 'Fixed Income', source: { fundPage: `https://am.gs.com/${ticker}` },
+    identifiers: { cusip: '123456789', isin: 'US1234567890', exchange: 'NYSE Arca' },
+    expenseRatio: { display: '0.12%', value: 0.12 }, nav: { display: '$100.00', value: 100, asOfDate: 'Sep 30 2026' },
+    marketPrice: { display: '$100.01', value: 100.01 }, premiumDiscount: { display: '0.01%', value: 0.01 }, aum: { display: '$1.00 B', value: 1e9 },
+    yields: { dividendYield: 3.5, dividendYieldText: '3.50%', secYield: null, secYieldText: '—' },
+    returns: { derivedFrom: 'official test basis', monthEnd: { asOfDate: 'Aug 31 2026', ytd: 2.3, yr3: 4.5, yr5: null, yr10: null, sinceInception: 2.1 } },
+    distributions: { frequency: 'Monthly', frequencyCode: '01 - Monthly' }, holdings: { totalRows: 10 }, history: { totalRows: 20 },
+  });
+
+  test('indexRowFromMeta rebuilds a metrics-contract row and mergePublishedRows only adds or refreshes', () => {
+    const row = indexRowFromMeta(metaFor('GBIL'))!;
+    expect(row.ticker).toBe('GBIL');
+    expect(row.dataFile).toBe('./funds/GBIL/meta.json');
+    expect(row.metrics).toMatchObject({ ytd: 2.3, cagr3y: 4.5, cagr5y: null, tr1y: null, returnsBasis: 'official test basis', performanceAsOf: '2026-08-31' });
+    expect(indexRowFromMeta({ name: 'no ticker' })).toBeNull();
+    const known = new Map<string, Record<string, any>>([['AAAU', { ticker: 'AAAU', nav: 'old' }], ['GBIL', { ticker: 'GBIL', nav: 'old' }]]);
+    const merged = mergePublishedRows(known, [{ ticker: 'GBIL', nav: 'new' }, { ticker: 'GBND', nav: 'new' }]);
+    expect(merged.map((r) => `${r.ticker}:${r.nav}`)).toEqual(['AAAU:old', 'GBIL:new', 'GBND:new']);
+    expect(mergePublishedRows(known, []).length).toBe(2);
+  });
+
+  // Runs the real updater against a throwaway copy of the repo (its API_ROOT is relative to the script),
+  // with fetch preloaded to a dead network and sleeps shortened, so no real data is touched and no request leaves the machine.
+  async function runUpdater(env: Record<string, string>): Promise<{ before: string[]; after: string[]; stdout: string }> {
+    const root = mkdtempSync(join(tmpdir(), 'gs-no-shrink-'));
+    try {
+      mkdirSync(join(root, 'scripts'), { recursive: true });
+      for (const file of ['update-data.ts', 'update-data.config.json']) cpSync(new URL(file, import.meta.url), join(root, 'scripts', file));
+      cpSync(new URL('../data', import.meta.url), join(root, 'data'), { recursive: true });
+      const api = join(root, 'api', 'goldmansachs');
+      const indexed = ['AAAU', 'GBIL', 'GSLC', 'ZZIDX'];
+      mkdirSync(api, { recursive: true });
+      for (const ticker of [...indexed, 'ZZMETA']) {
+        mkdirSync(join(api, 'funds', ticker), { recursive: true });
+        writeFileSync(join(api, 'funds', ticker, 'meta.json'), JSON.stringify(metaFor(ticker)));
+      }
+      const rows = indexed.map((ticker) => indexRowFromMeta(metaFor(ticker)));
+      writeFileSync(join(api, 'index.json'), JSON.stringify({ generatedAt: '2026-01-01T00:00:00Z', counts: { funds: rows.length }, funds: rows }));
+      writeFileSync(join(root, 'dead-fetch.ts'), [
+        "globalThis.fetch = (async () => { throw new TypeError('network down'); }) as typeof fetch;",
+        'const realSetTimeout = globalThis.setTimeout; // proxy pacing and backoff sleeps only delay the offline run',
+        'globalThis.setTimeout = ((fn: () => void, _ms?: number, ...args: unknown[]) => realSetTimeout(fn, 0, ...args)) as unknown as typeof setTimeout;',
+        '',
+      ].join('\n'));
+      const read = () => JSON.parse(readFileSync(join(api, 'index.json'), 'utf8')).funds.map((row: { ticker: string }) => row.ticker) as string[];
+      const before = read();
+      const child = Bun.spawn([process.execPath, '--preload', join(root, 'dead-fetch.ts'), join(root, 'scripts', 'update-data.ts')], {
+        cwd: root, stdout: 'pipe', stderr: 'pipe',
+        env: { PATH: process.env.PATH ?? '', REQUEST_SLEEP: '0', MAX_RETRIES: '1', USE_SYSTEM_CA: 'false', ...env },
+      });
+      const stdout = await new Response(child.stdout).text();
+      await child.exited;
+      return { before, after: read(), stdout };
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  }
+
+  test('a one-ticker run keeps every published row, including funds known only from meta.json', async () => {
+    const { before, after } = await runUpdater({ TICKERS: 'GBIL' });
+    expect(before).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX']);
+    expect(after).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']);
+  }, 60_000);
+
+  test('a bounded run (MAX_FETCHES) and a ticker outside the universe do not shrink the index either', async () => {
+    expect((await runUpdater({ MAX_FETCHES: '1' })).after).toEqual(expect.arrayContaining(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']));
+    expect((await runUpdater({ TICKERS: 'NOSUCH' })).after.length).toBe(5);
+  }, 60_000);
+
+  test('an unreadable live catalog (dead network, full run) never drops published funds', async () => {
+    const { after, stdout } = await runUpdater({ SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false' });
+    expect(stdout).toContain('catalog');
+    expect(after).toEqual(expect.arrayContaining(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']));
+    expect(after.length).toBeGreaterThanOrEqual(5);
+  }, 120_000);
 });

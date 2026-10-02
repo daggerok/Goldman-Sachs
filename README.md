@@ -51,6 +51,7 @@ Caveats:
 - Unavailable values stay unavailable and are never filled with `0`
 - `AUM`, `TER`, `DIVIDEND_YIELD` and `SEC_YIELD` filters drop funds without a value; `PERFORMANCE_*` and `TOTAL_RETURN_*` filters only drop funds that have a value outside the range
 - All supplied filters use AND logic, `TICKERS` included; funds not selected for a successful update keep their prior published metadata and data files
+- Filtered or bounded runs (`TICKERS`, `MAX_FETCHES`, filters, `SKIP_GOLDMANSACHS`) and runs where the live catalog cannot be read never shrink the feed: `index.json` always lists every known fund (the published index plus every `funds/*/meta.json`), and only the selected funds are refreshed
 - Holdings come from SEC EDGAR N-PORT-P because the fund pages only print the top 10; the fund-page top 10 is kept as summary data only
 - Distributions come from the fund page table, with Yahoo dividend events as the fallback
 - `OFFLINE_SEED` builds the feed from the committed seed and verified snapshot in `data/` without network access, so it is not a live refresh
