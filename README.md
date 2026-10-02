@@ -78,10 +78,11 @@ Defaults below are the values in `scripts/update-data.config.json`. Environment 
 | `SKIP_GOLDMANSACHS` | `false` | Skip the Goldman Sachs fund finder and detail pages (SEC EDGAR + Yahoo Finance only) |
 | `OFFLINE_SEED` | `false` | Build the feed from the committed seed and verified snapshot in `data/` only, with no network access |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized return range `min:max` per tenor (official NAV return where published) |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative return range `min:max` per tenor |
 
-Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `OFFLINE_SEED` and `VERBOSE`, which are reachable through `advanced`
+Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `OFFLINE_SEED`, `VERBOSE` and `USE_SYSTEM_CA`, which are reachable through `advanced`
 
 ### Examples
 

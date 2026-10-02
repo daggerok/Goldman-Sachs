@@ -4,6 +4,8 @@ import { describe, expect, test } from 'bun:test';
 import { readdirSync, readFileSync } from 'node:fs';
 import {
   CONTROL_NAMES,
+  installSystemCa,
+  isCertError,
   readConfig,
   resolveControls,
   runtimeControls,
@@ -1183,13 +1185,60 @@ test('runtime controls read the checked-in file and let the environment override
 });
 
 test('resolver rejects unknown, non-scalar, invalid and multiline values', () => {
-  const bad: unknown[] = [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { SEC_YIELD: '3:1' }, { HISTORY_RANGE: 'forever' }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'sometimes' }, { AUM: '1:2:3' }, { TER: '5:1' }, { PERFORMANCE_1Y: 'a:b' }, { TICKERS: ['GSLC'] }, { TICKERS: null }, { OUTPUT_DIR: '/tmp' }, null, []];
+  const bad: unknown[] = [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { SEC_YIELD: '3:1' }, { HISTORY_RANGE: 'forever' }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { USE_SYSTEM_CA: 'maybe' }, { EDGAR_FALLBACK: 'sometimes' }, { AUM: '1:2:3' }, { TER: '5:1' }, { PERFORMANCE_1Y: 'a:b' }, { TICKERS: ['GSLC'] }, { TICKERS: null }, { OUTPUT_DIR: '/tmp' }, null, []];
   for (const value of bad) expect(() => resolveControls(value)).toThrow();
   expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
   expect(() => resolveControls({}, [])).toThrow();
   expect(() => resolveControls({}, {}, { TICKERS: 'A\nB' })).toThrow();
   expect(() => resolveControls({}, {}, {}, { SEC_UA: 'x\0bad' })).toThrow();
   expect(() => JSON.parse('{bad')).toThrow();
+});
+
+test('USE_SYSTEM_CA resolves auto/true/false case-insensitively and defaults to auto', () => {
+  expect(configFile().USE_SYSTEM_CA).toBe('auto');
+  expect(resolveControls(configFile()).USE_SYSTEM_CA).toBe('auto');
+  for (const value of ['auto', 'TRUE', 'False']) expect(resolveControls({}, {}, {}, { USE_SYSTEM_CA: value }).USE_SYSTEM_CA).toBe(value);
+  expect(() => resolveControls({}, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow('USE_SYSTEM_CA');
+});
+
+test('isCertError detects untrusted-certificate failures, also through cause', () => {
+  expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+  expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+  expect(isCertError(new Error('fetch failed', { cause: new Error('self-signed certificate in certificate chain') }))).toBe(true);
+  expect(isCertError({ code: 'ECONNRESET', message: 'socket hang up' })).toBe(false);
+  expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+  expect(isCertError(null)).toBe(false);
+});
+
+test('installSystemCa leaves fetch alone for false/active, restarts for true and once on cert errors in auto', async () => {
+  const original = globalThis.fetch;
+  const reexec = () => { calls++; throw new Error('reexec'); };
+  let calls = 0;
+  try {
+    installSystemCa('false', reexec as () => never, false);
+    expect(globalThis.fetch).toBe(original);
+    installSystemCa('auto', reexec as () => never, true);
+    expect(globalThis.fetch).toBe(original);
+    expect(() => installSystemCa('true', reexec as () => never, false)).toThrow('reexec');
+    expect(calls).toBe(1);
+    expect(globalThis.fetch).toBe(original);
+
+    calls = 0;
+    let next: () => Promise<Response> = async () => { throw Object.assign(new Error('fetch failed'), { code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' }); };
+    globalThis.fetch = (async () => next()) as unknown as typeof fetch;
+    installSystemCa('auto', reexec as () => never, false);
+    expect(globalThis.fetch).not.toBe(original);
+    await expect(fetch('https://example.invalid/')).rejects.toThrow('reexec');
+    expect(calls).toBe(1);
+    next = async () => { throw new Error('ECONNRESET'); };
+    await expect(fetch('https://example.invalid/')).rejects.toThrow('ECONNRESET');
+    expect(calls).toBe(1);
+    next = async () => new Response('ok');
+    expect(await (await fetch('https://example.invalid/')).text()).toBe('ok');
+    expect(calls).toBe(1);
+  } finally {
+    globalThis.fetch = original;
+  }
 });
 
 test('config keys, CONTROL_NAMES, README rows and --help are in sync', () => {
