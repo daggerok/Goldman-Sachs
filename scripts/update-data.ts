@@ -175,8 +175,47 @@ import {
 declare const process: {
   env: Record<string, string | undefined>;
   argv: string[];
+  execArgv: string[];
+  execPath: string;
   exitCode?: number;
+  exit(code?: number): never;
 };
+
+// --- TLS trust store (identical in every ETF repo) ---
+const SYSTEM_CA_MARKER = 'ETF_UPDATER_SYSTEM_CA';
+const CERT_ERROR = /UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED|unable to get (?:local )?issuer certificate|self[- ]signed certificate|certificate has expired/i;
+
+export function isCertError(error: unknown): boolean {
+  const e = error as { code?: unknown; message?: unknown; cause?: unknown } | null;
+  return CERT_ERROR.test(`${String(e?.code ?? '')} ${String(e?.message ?? '')}`) || (e?.cause ? isCertError(e.cause) : false);
+}
+
+export function systemCaActive(env: Record<string, string | undefined> = process.env, execArgv: string[] = process.execArgv): boolean {
+  return execArgv.includes('--use-system-ca') || env.NODE_USE_SYSTEM_CA === '1' || env[SYSTEM_CA_MARKER] === '1';
+}
+
+export function reexecWithSystemCa(): never {
+  const child = Bun.spawnSync([process.execPath, '--use-system-ca', ...process.argv.slice(1)], {
+    env: { ...process.env, [SYSTEM_CA_MARKER]: '1' },
+    stdio: ['inherit', 'inherit', 'inherit'],
+  });
+  process.exit(child.exitCode ?? 1);
+}
+
+/** mode: auto (restart once on an untrusted-certificate error), true (restart now), false (never). */
+export function installSystemCa(mode: string, reexec: () => never = reexecWithSystemCa, active: boolean = systemCaActive()): void {
+  if (mode === 'false' || active) return;
+  if (mode === 'true') reexec();
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = (async (...args: Parameters<typeof fetch>) => {
+    try { return await realFetch(...args); }
+    catch (error) {
+      if (!isCertError(error)) throw error;
+      console.error('[ notice   ] TLS certificate not trusted; restarting once with --use-system-ca');
+      return reexec();
+    }
+  }) as typeof fetch;
+}
 
 type JsonRecord = Record<string, any>;
 type Range = { min?: number; max?: number };
@@ -2549,6 +2588,7 @@ workflow inputs < environment variables, resolved by one shared resolveControls:
   STORE_RAW_DOWNLOADS=off
   SEC_UA=             SEC User-Agent override (declare a contact; blank uses the built-in descriptor)
   VERBOSE=off         print per-fund retry and fallback notices
+  USE_SYSTEM_CA=auto  TLS trust store: auto restarts once with --use-system-ca on an untrusted-certificate error, true always, false never
   EDGAR_FALLBACK=true
   SKIP_GOLDMANSACHS=off use the previously published catalog/fund-page data
   SKIP_YAHOO=off      keep previously published history when possible
@@ -2564,6 +2604,7 @@ Examples:
 async function main(): Promise<void> {
   const controls = await runtimeControls();
   if (controls.VERBOSE !== undefined) process.env.VERBOSE = controls.VERBOSE;
+  installSystemCa((controls.USE_SYSTEM_CA ?? 'auto').toLowerCase());
   const config = readConfig(controls);
   requestSleepSeconds = config.requestSleep;
   secUserAgent = config.secUa;
@@ -2684,7 +2725,7 @@ async function main(): Promise<void> {
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'STORE_RAW_DOWNLOADS', 'MAX_RETRIES', 'SEC_UA',
-  'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE',
+  'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE', 'USE_SYSTEM_CA',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
 ] as const;
 export type ControlName = (typeof CONTROL_NAMES)[number];
@@ -2728,6 +2769,7 @@ export function resolveControls(
     if (result[key] && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key])) throw new Error(`${key}: expected boolean`);
   }
   if (result.HISTORY_RANGE && result.HISTORY_RANGE.trim() && !/^(max|ytd|\d+(d|wk|mo|y))$/i.test(result.HISTORY_RANGE.trim())) throw new Error('HISTORY_RANGE: expected max, ytd or a Yahoo range such as 1mo, 5y, 10y');
+  if (result.USE_SYSTEM_CA !== undefined && !/^(auto|true|false)$/i.test(result.USE_SYSTEM_CA)) throw new Error('USE_SYSTEM_CA: expected auto, true or false');
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
