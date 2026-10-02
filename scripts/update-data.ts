@@ -135,7 +135,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 //
 //   catalog       Goldman Sachs Asset Management fund finder filtered to ETFs
 //                 https://am.gs.com/en-us/individual/funds (48 ETFs), pinned
-//                 by the checked-in universe seed in goldmansachs-funds.ts
+//                 by the checked-in universe seed in data/goldmansachs-funds.ts
 //   fund page     https://am.gs.com/en-us/individual/funds/detail/PV<id>/<CUSIP>/<slug>
 //                 (Quick Stats, Key Facts, Fees & Expenses, Pricing Table,
 //                 Cumulative/Annualized/Quarterly returns, Rate, Distributions,
@@ -157,20 +157,20 @@ function outputCreateReporter(root: URL | string, total: number) {
 // the proxy. SEC and Yahoo requests stay direct.
 //
 // A run with no reachable network (or `OFFLINE_SEED=1`) replays the checked-in
-// snapshot in `scripts/goldmansachs-verified.ts` instead of failing, so the
+// snapshot in `data/goldmansachs-verified.ts` instead of failing, so the
 // feed can be built and the UI verified without egress (identical to
 // daggerok/VanEck).
 //
 // Usage: bun ./scripts/update-data.ts [--help]
 
 import { appendFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
-import { GOLDMAN_SACHS_FUNDS } from './goldmansachs-funds';
+import { GOLDMAN_SACHS_FUNDS } from '../data/goldmansachs-funds';
 import {
   DISTRIBUTION_SNAPSHOTS,
   FINDER_SNAPSHOTS,
   FUND_PAGE_SNAPSHOTS,
   TOP_HOLDINGS_SNAPSHOTS,
-} from './goldmansachs-verified';
+} from '../data/goldmansachs-verified';
 
 declare const process: {
   env: Record<string, string | undefined>;
@@ -192,7 +192,7 @@ const SEC_BROWSE_URL = `${SEC_SITE}/cgi-bin/browse-edgar`;
 const SEC_ARCHIVES = `${SEC_SITE}/Archives/edgar/data`;
 const SEC_FUND_TICKERS_URL = `${SEC_SITE}/files/company_tickers_mf.json`;
 const SEC_COMPANY_TICKERS_URL = `${SEC_SITE}/files/company_tickers.json`;
-const SEC_UA_DEFAULT = 'DaggerOk Goldman Sachs ETF feed admin@daggerok.example.com';
+const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
 const BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const PROXY_SLEEP_SECONDS = 3.2; // r.jina.ai anonymous tier is ~20 requests per minute
 
@@ -361,6 +361,7 @@ type UpdaterConfig = {
   aum?: Range;
   ter?: Range;
   dividendYield?: Range;
+  secYield?: Range;
   performance: RangeMap;
   totalReturn: RangeMap;
   concurrency: number;
@@ -588,7 +589,7 @@ function readTickerSet(value: string | undefined): Set<string> | null {
 }
 
 function hasConfiguredFilters(config: UpdaterConfig): boolean {
-  return Boolean(config.aum || config.ter || config.dividendYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
+  return Boolean(config.aum || config.ter || config.dividendYield || config.secYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
 }
 
 export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
@@ -598,13 +599,14 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     aum: parseAumRange(env.AUM ?? ':'),
     ter: parseRange(env.TER ?? ':', 'TER'),
     dividendYield: parseRange(env.DIVIDEND_YIELD ?? ':', 'DIVIDEND_YIELD'),
+    secYield: parseRange(env.SEC_YIELD ?? ':', 'SEC_YIELD'),
     performance: parseRanges(env, 'PERFORMANCE'),
     totalReturn: parseRanges(env, 'TOTAL_RETURN'),
     concurrency: Math.max(1, parsePositiveInt(env.CONCURRENCY, 3)),
     holdingsPageSize: Math.max(1, parsePositiveInt(env.HOLDINGS_PAGE_SIZE, 250)),
     historyPageSize: Math.max(1, parsePositiveInt(env.HISTORY_PAGE_SIZE, 1000)),
     storeRawDownloads: parseBoolean(env.STORE_RAW_DOWNLOADS),
-    maxRetries: Math.max(0, parsePositiveInt(env.MAX_RETRIES, 2)),
+    maxRetries: Math.max(1, parsePositiveInt(env.MAX_RETRIES, 2)),
     tickers: readTickerSet(env.TICKERS),
     historyRange: env.HISTORY_RANGE?.trim() || 'max',
     edgarFallback: !['0', 'false', 'off', 'no'].includes(String(env.EDGAR_FALLBACK ?? '1').toLowerCase()),
@@ -1987,6 +1989,7 @@ function postFetchFilterReasons(fund: CatalogFund, metrics: JsonRecord, config: 
   const reasons: string[] = [];
   if (!rangeMatches(fund.netAssets, config.aum)) reasons.push('AUM');
   if (!rangeMatches(numberOrNull(metrics.dividendYield), config.dividendYield)) reasons.push('DIVIDEND_YIELD');
+  if (!rangeMatches(numberOrNull(metrics.secYield), config.secYield)) reasons.push('SEC_YIELD');
   const annual: Record<ReturnPeriod, number | null> = { YTD: metrics.ytd, '1Y': metrics.tr1y, '3Y': metrics.cagr3y, '5Y': metrics.cagr5y, '10Y': metrics.cagr10y };
   const cumulative: Record<ReturnPeriod, number | null> = { YTD: metrics.ytd, '1Y': metrics.tr1y, '3Y': metrics.tr3y, '5Y': metrics.tr5y, '10Y': metrics.tr10y };
   for (const [period, range] of Object.entries(config.performance) as [ReturnPeriod, Range][]) if (annual[period] !== null && !rangeMatches(annual[period], range)) reasons.push(`PERFORMANCE_${period}`);
@@ -2292,7 +2295,7 @@ function snapshotReturnRow(values: { sinceInception?: number | null; mo1?: numbe
 }
 
 async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
-  console.log(`[ ${'seed'.padEnd(9)}] OFFLINE_SEED=1: replaying scripts/goldmansachs-verified.ts (no network requests)`);
+  console.log(`[ ${'seed'.padEnd(9)}] OFFLINE_SEED=1: replaying data/goldmansachs-verified.ts (no network requests)`);
   const universe = seedCatalogFunds();
   for (const fund of universe) {
     const snap = FINDER_SNAPSHOTS[fund.ticker];
@@ -2516,7 +2519,7 @@ Sources:
   catalog       Goldman Sachs Asset Management fund finder, ETFs only (official
                 page; read-only r.jina.ai rendering fallback when a
                 non-browser request is refused), pinned by
-                scripts/goldmansachs-funds.ts
+                data/goldmansachs-funds.ts
   fund page     official per-fund page: Quick Stats, Key Facts, Fees &
                 Expenses, Pricing Table, Cumulative/Annualized/Quarterly
                 returns, Rate, Distributions table, top-10 holdings
@@ -2534,21 +2537,22 @@ workflow inputs < environment variables, resolved by one shared resolveControls:
   CONCURRENCY=2       parallel fund workers; every request stays paced
   AUM=:
   TER=:
-  DIVIDEND_YIELD=:
+  DIVIDEND_YIELD=:    12 Month Trailing Distribution Rate percent min:max
+  SEC_YIELD=:         published 30-day SEC yield percent min:max
   TICKERS="GSLC GBIL"  optional ticker allowlist
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y=min:max   annualized ranges
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y=min:max cumulative ranges
   HOLDINGS_PAGE_SIZE=250
   HISTORY_PAGE_SIZE=1000
   HISTORY_RANGE=max
-  MAX_RETRIES=2
+  MAX_RETRIES=2       retries after the initial request (integer >= 1)
   STORE_RAW_DOWNLOADS=off
   SEC_UA=             SEC User-Agent override (declare a contact; blank uses the built-in descriptor)
   VERBOSE=off         print per-fund retry and fallback notices
   EDGAR_FALLBACK=true
   SKIP_GOLDMANSACHS=off use the previously published catalog/fund-page data
   SKIP_YAHOO=off      keep previously published history when possible
-  OFFLINE_SEED=off    replay scripts/goldmansachs-verified.ts (no network)
+  OFFLINE_SEED=off    replay data/goldmansachs-verified.ts (no network)
 
 Examples:
   TICKERS="GSLC GBIL AAAU" ./scripts/update-data.ts
@@ -2678,7 +2682,7 @@ async function main(): Promise<void> {
 // interpolating user input into bash. Precedence: config file < advanced JSON <
 // nonblank inputs < environment.
 export const CONTROL_NAMES = [
-  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'TICKERS',
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'STORE_RAW_DOWNLOADS', 'MAX_RETRIES', 'SEC_UA',
   'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
@@ -2715,7 +2719,7 @@ export function resolveControls(
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
     const v = result[key];
     if (v === undefined || v.trim() === '') continue;
-    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    const min = key === 'MAX_FETCHES' ? 0 : 1;
     if (!/^\d+$/.test(v.trim()) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   const sleep = result.REQUEST_SLEEP;
@@ -2723,6 +2727,7 @@ export function resolveControls(
   for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE']) {
     if (result[key] && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key])) throw new Error(`${key}: expected boolean`);
   }
+  if (result.HISTORY_RANGE && result.HISTORY_RANGE.trim() && !/^(max|ytd|\d+(d|wk|mo|y))$/i.test(result.HISTORY_RANGE.trim())) throw new Error('HISTORY_RANGE: expected max, ytd or a Yahoo range such as 1mo, 5y, 10y');
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }

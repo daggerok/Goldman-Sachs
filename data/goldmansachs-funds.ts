@@ -22,7 +22,7 @@
  *
  * `inceptionDate` is the finder's own inception date and never changes; live
  * fields (NAV, returns, AUM, expense ratio, yields) are refreshed from the
- * detail pages on every run — see `scripts/goldmansachs-verified.ts` for the
+ * detail pages on every run — see `data/goldmansachs-verified.ts` for the
  * read-only offline replay snapshot.
  */
 
