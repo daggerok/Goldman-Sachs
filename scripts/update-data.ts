@@ -1819,10 +1819,10 @@ function lastCompletedQuarterEnd(now = new Date()): string {
   return day.toISOString().slice(0, 10);
 }
 
-const DERIVED_RETURNS_BASIS = 'adjusted market-price closes (Yahoo chart API), not official Goldman Sachs NAV returns';
-const OFFICIAL_RETURNS_BASIS = 'official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values';
+export const DERIVED_RETURNS_BASIS = 'estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date';
+export const OFFICIAL_RETURNS_BASIS = 'official Goldman Sachs fund-page NAV total returns (month-end table, performanceAsOf is its date) where published; periods the page omits are estimated from Yahoo Finance adjusted market-price closes';
 
-function deriveMetrics(effective: PriceReturns, fund: CatalogFund, dividends: Distribution[], frequency: { paymentsPerYear: number | null }, price: number | null, official: boolean): JsonRecord {
+export function deriveMetrics(effective: PriceReturns, fund: CatalogFund, dividends: Distribution[], frequency: { paymentsPerYear: number | null }, price: number | null, official: boolean): JsonRecord {
   const latest = dividends[dividends.length - 1];
   const indicated = fund.dividendYield ?? (latest && frequency.paymentsPerYear && price ? round((latest.amount * frequency.paymentsPerYear / price) * 100, 2) : null);
   return {
@@ -1840,7 +1840,14 @@ function deriveMetrics(effective: PriceReturns, fund: CatalogFund, dividends: Di
     secYield: fund.secYield,
     secYieldText: fund.secYield === null ? '—' : `${fund.secYield.toFixed(2)}%`,
     returnsBasis: official ? OFFICIAL_RETURNS_BASIS : DERIVED_RETURNS_BASIS,
+    performanceAsOf: performanceAsOf(effective.asOfDate),
   };
+}
+
+/** ISO date the returns are as of (issuer table date, or last Yahoo close when derived); null when unknown. Never the NAV date. */
+export function performanceAsOf(value: unknown): string | null {
+  const iso = toIsoDate(value);
+  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null;
 }
 
 function historyRows(days: ChartDay[]): JsonRecord[] {
@@ -2418,6 +2425,7 @@ async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
       secYield,
       secYieldText: secYield === null ? '—' : `${secYield.toFixed(2)}%`,
       returnsBasis: OFFLINE_BASIS,
+      performanceAsOf: performanceAsOf(monthEndAsOf),
     };
     const top = TOP_HOLDINGS_SNAPSHOTS[fund.ticker];
     const holdingsRows: JsonRecord[] = (top?.rows || []).map((row) => ({
