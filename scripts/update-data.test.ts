@@ -4,6 +4,10 @@ import { describe, expect, test } from 'bun:test';
 import { readdirSync, readFileSync } from 'node:fs';
 import {
   CONTROL_NAMES,
+  DERIVED_RETURNS_BASIS,
+  OFFICIAL_RETURNS_BASIS,
+  deriveMetrics,
+  performanceAsOf,
   installSystemCa,
   isCertError,
   readConfig,
@@ -751,6 +755,30 @@ describe('Goldman Sachs fund page parser', () => {
     const merged = mergeOfficialReturns(derived, { asOfDate: '2026-08-31', mo1: 0.31, mo3: 0.89, ytd: 2.3, yr1: 3.7, cagr3y: 4.52, cagr5y: null, cagr10y: null, siAnn: 2.31 });
     expect(merged).toEqual({ asOfDate: '2026-08-31', mo1: 0.31, qtd: 2, ytd: 2.3, yr1: 3.7, cagr3y: 4.52, cagr5y: 6, cagr10y: 7, siAnn: 2.31 });
     expect(mergeOfficialReturns(derived, null)).toBe(derived);
+  });
+
+  test('metrics carry a non-empty returnsBasis and performanceAsOf as the last two keys', () => {
+    const fund = { dividendYield: 3.67, secYield: null } as Parameters<typeof deriveMetrics>[1];
+    const days = [
+      { date: '2025-09-10', close: 100, adjClose: 100, volume: 0 },
+      { date: '2026-09-17', close: 121, adjClose: 121, volume: 0 },
+    ];
+    const derived = priceReturns(days);
+    const yahoo = deriveMetrics(derived, fund, [], { paymentsPerYear: null }, 100, false);
+    expect(yahoo.returnsBasis).toBe(DERIVED_RETURNS_BASIS);
+    expect(yahoo.performanceAsOf).toBe('2026-09-17');
+    const official = deriveMetrics(mergeOfficialReturns(derived, { asOfDate: '2026-08-31', mo1: null, mo3: null, ytd: 2.3, yr1: 3.7, cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null }), fund, [], { paymentsPerYear: null }, 100, true);
+    expect(official.returnsBasis).toBe(OFFICIAL_RETURNS_BASIS);
+    expect(official.performanceAsOf).toBe('2026-08-31');
+    expect(Object.keys(official).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    const unknown = deriveMetrics(priceReturns([]), fund, [], { paymentsPerYear: null }, null, false);
+    expect(unknown.performanceAsOf).toBeNull();
+    expect(unknown.returnsBasis).toBeTruthy();
+    expect(unknown.returnsBasis).not.toBe('-');
+    expect(performanceAsOf('')).toBeNull();
+    expect(performanceAsOf('—')).toBeNull();
+    expect(performanceAsOf('Aug 31 2026')).toBe('2026-08-31');
+    expect(performanceAsOf('2026-8-5')).toBe('2026-08-05');
   });
 });
 

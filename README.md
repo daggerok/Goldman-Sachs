@@ -41,6 +41,8 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
 - `secYield` - 30-day SEC yield when published; `-` otherwise
+- `returnsBasis` - always a non-empty label of how the returns were computed: official Goldman Sachs fund-page NAV total returns (periods the page omits are estimated from Yahoo Finance adjusted closes), or an estimate derived entirely from Yahoo Finance adjusted market-price closes
+- `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the date of the fund-page performance table, or the last Yahoo close date when derived; not the NAV date, `null` only when truly unknown
 
 Caveats:
 
