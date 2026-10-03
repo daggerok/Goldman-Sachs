@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 25 2026",
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028061/0000940400-26-028061.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$146.69",
-    "value": 146.69,
-    "asOfDate": "Sep 25 2026"
+    "display": "$145.47",
+    "value": 145.47,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$146.63",
-    "value": 146.63,
-    "asOfDate": "Sep 25 2026",
+    "display": "$145.51",
+    "value": 145.51,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.04,
-    "asOfDate": "Sep 25 2026",
+    "display": "0.03%",
+    "value": 0.03,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$15.24 B",
-    "value": 15241710000,
-    "asOfDate": "Sep 25 2026",
+    "display": "$15.11 B",
+    "value": 15114640000,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 427,
-    "bidAskMidpoint": 146.67,
+    "publishedTotalHoldings": 428,
+    "bidAskMidpoint": 145.5,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 2.47,
       "mo1Text": "2.47%",
       "mo3": 2.14,
       "mo3Text": "2.14%",
-      "qtd": 2.76,
-      "qtdText": "2.76%",
+      "qtd": 0.65,
+      "qtdText": "0.65%",
       "ytd": 11.11,
       "ytdText": "11.11%",
       "yr1": 16.62,
@@ -323,6 +323,10 @@
       [
         "06/24/2026",
         "0.345"
+      ],
+      [
+        "09/24/2026",
+        "0.457"
       ]
     ]
   },
@@ -338,7 +342,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028061, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 427
+    "publishedTotalHoldings": 428
   },
   "history": {
     "pages": [
@@ -347,8 +351,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2771,
-    "asOf": "Sep 28 2026",
+    "totalRows": 2775,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

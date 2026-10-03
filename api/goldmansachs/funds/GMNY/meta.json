@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105932/38149W556/goldman-sachs-dynamic-new-york-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105932/38149W556/goldman-sachs-dynamic-new-york-municipal-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 25 2026",
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028079/0000940400-26-028079.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.74",
-    "value": 47.74,
-    "asOfDate": "Sep 25 2026"
+    "display": "$47.80",
+    "value": 47.8,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$47.87",
-    "value": 47.87,
-    "asOfDate": "Sep 25 2026",
+    "display": "$47.86",
+    "value": 47.86,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.27%",
-    "value": 0.27,
-    "asOfDate": "Sep 25 2026",
+    "display": "0.13%",
+    "value": 0.13,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$47.74 M",
-    "value": 47740000,
-    "asOfDate": "Sep 25 2026",
+    "display": "$50.19 M",
+    "value": 50190000,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 222,
-    "bidAskMidpoint": 47.83,
+    "publishedTotalHoldings": 224,
+    "bidAskMidpoint": 47.89,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 0.01,
       "mo1Text": "0.01%",
       "mo3": -0.6,
       "mo3Text": "-0.60%",
-      "qtd": -4.61,
-      "qtdText": "-4.61%",
+      "qtd": -0.3,
+      "qtdText": "-0.30%",
       "ytd": 1,
       "ytdText": "1.00%",
       "yr1": 4.55,
@@ -255,6 +255,10 @@
       [
         "09/01/2026",
         "0.141"
+      ],
+      [
+        "10/01/2026",
+        "0.129"
       ]
     ]
   },
@@ -269,15 +273,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028079, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 222
+    "publishedTotalHoldings": 224
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 511,
-    "asOf": "Sep 28 2026",
+    "totalRows": 515,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

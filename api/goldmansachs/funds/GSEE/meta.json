@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 25 2026",
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028065/0000940400-26-028065.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$69.84",
-    "value": 69.84,
-    "asOfDate": "Sep 25 2026"
+    "display": "$69.02",
+    "value": 69.02,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$69.96",
-    "value": 69.96,
-    "asOfDate": "Sep 25 2026",
+    "display": "$68.82",
+    "value": 68.82,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.18,
-    "asOfDate": "Sep 25 2026",
+    "display": "-0.29%",
+    "value": -0.29,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$139.67 M",
-    "value": 139670000,
-    "asOfDate": "Sep 25 2026",
+    "display": "$138.03 M",
+    "value": 138030000,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1808,
-    "bidAskMidpoint": 69.97,
+    "publishedTotalHoldings": 1807,
+    "bidAskMidpoint": 68.8,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 3.4,
       "mo1Text": "3.40%",
       "mo3": -1.6,
       "mo3Text": "-1.60%",
-      "qtd": 0.61,
-      "qtdText": "0.61%",
+      "qtd": 1.13,
+      "qtdText": "1.13%",
       "ytd": 22.86,
       "ytdText": "22.86%",
       "yr1": 36.67,
@@ -236,7 +236,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028065, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 1808
+    "publishedTotalHoldings": 1807
   },
   "history": {
     "pages": [
@@ -244,8 +244,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1598,
-    "asOf": "Sep 28 2026",
+    "totalRows": 1602,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

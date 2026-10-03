@@ -2,7 +2,7 @@
   "ticker": "GEMQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 10,
+  "totalRows": 14,
   "headers": [
     "Date",
     "Close",
@@ -66,6 +66,30 @@
     },
     {
       "Date": "Sep 25 2026",
+      "Close": "23.768800735473633",
+      "Adj Close": "23.77",
+      "Volume": "0"
+    },
+    {
+      "Date": "Sep 28 2026",
+      "Close": "23.768800735473633",
+      "Adj Close": "23.77",
+      "Volume": "0"
+    },
+    {
+      "Date": "Sep 29 2026",
+      "Close": "23.768800735473633",
+      "Adj Close": "23.77",
+      "Volume": "0"
+    },
+    {
+      "Date": "Sep 30 2026",
+      "Close": "23.768800735473633",
+      "Adj Close": "23.77",
+      "Volume": "0"
+    },
+    {
+      "Date": "Oct 01 2026",
       "Close": "23.768800735473633",
       "Adj Close": "23.77",
       "Volume": "0"

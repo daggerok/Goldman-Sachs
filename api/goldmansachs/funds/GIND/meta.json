@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028078/0000940400-26-028078.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,46 +22,46 @@
     "cusip": "38149W481",
     "isin": "US38149W4814",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "MSCI India IMI, Net returns, Unhedged, USD",
+    "exchange": "NASDAQ",
     "morningstarCategory": null,
-    "navTicker": null,
+    "navTicker": "GIND",
     "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.75%",
     "value": 0.75,
     "gross": 0.75,
-    "kind": "Net Expense Ratio carried from the previous run (official fund page)"
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$24.12",
-    "value": 24.12,
-    "asOfDate": "Sep 25 2026"
+    "display": "$23.33",
+    "value": 23.33,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$23.98",
-    "value": 23.98,
-    "asOfDate": "Sep 25 2026",
+    "display": "$23.31",
+    "value": 23.31,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.60%",
-    "value": -0.6,
-    "asOfDate": "Sep 25 2026",
+    "display": "-0.08%",
+    "value": -0.08,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$156.63 M",
-    "value": 156631726.31,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$156.34 M",
+    "value": 156340000,
+    "asOfDate": "Oct 01 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 23.98,
+    "publishedTotalHoldings": 128,
+    "bidAskMidpoint": 23.31,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 2.3,
       "mo1Text": "2.30%",
       "mo3": 7.64,
       "mo3Text": "7.64%",
-      "qtd": -2.19,
-      "qtdText": "-2.19%",
+      "qtd": 0.47,
+      "qtdText": "0.47%",
       "ytd": -3.1,
       "ytdText": "-3.10%",
       "yr1": -1.25,
@@ -176,15 +176,16 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028078, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 128
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 373,
-    "asOf": "Sep 28 2026",
+    "totalRows": 377,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

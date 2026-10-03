@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028082/0000940400-26-028082.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$100.11",
-    "value": 100.11,
-    "asOfDate": "Sep 30 2026"
+    "display": "$99.84",
+    "value": 99.84,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$100.11",
-    "value": 100.11,
-    "asOfDate": "Sep 30 2026",
+    "display": "$99.83",
+    "value": 99.83,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Sep 30 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$7.92 B",
-    "value": 7915500000,
-    "asOfDate": "Sep 30 2026",
+    "display": "$7.88 B",
+    "value": 7876330000,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 42,
-    "bidAskMidpoint": 100.11,
+    "bidAskMidpoint": 99.84,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -78,15 +78,15 @@
     "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 0.31,
       "mo1Text": "0.31%",
       "mo3": 0.89,
       "mo3Text": "0.89%",
-      "qtd": 0,
-      "qtdText": "0.00%",
+      "qtd": 0.05,
+      "qtdText": "0.05%",
       "ytd": 2.3,
       "ytdText": "2.30%",
       "yr1": 3.7,
@@ -95,8 +95,8 @@
       "yr3Text": "4.52%",
       "yr5": 3.5,
       "yr5Text": "3.50%",
-      "yr10": 2.3,
-      "yr10Text": "2.30%",
+      "yr10": null,
+      "yr10Text": "—",
       "sinceInception": 2.31,
       "sinceInceptionText": "2.31%"
     },
@@ -586,8 +586,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2526,
-    "asOf": "Oct 1 2026",
+    "totalRows": 2527,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

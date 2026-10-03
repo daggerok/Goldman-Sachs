@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102391/381430206/goldman-sachs-active-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102391/381430206/goldman-sachs-active-beta-emerging-markets-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Sep 25 2026",
+    "productPageAsOf": "Oct 01 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028077/0000940400-26-028077.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$51.85",
-    "value": 51.85,
-    "asOfDate": "Sep 25 2026"
+    "display": "$51.15",
+    "value": 51.15,
+    "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$51.98",
-    "value": 51.98,
-    "asOfDate": "Sep 25 2026",
-    "source": "official fund page Pricing Table"
+    "display": "$51.58",
+    "value": 51.58,
+    "asOfDate": "Oct 02 2026",
+    "source": "Yahoo Finance last regular-session price"
   },
   "premiumDiscount": {
-    "display": "0.25%",
-    "value": 0.25,
-    "asOfDate": "Sep 25 2026",
-    "source": "official fund page Pricing Table"
+    "display": "0.84%",
+    "value": 0.84,
+    "asOfDate": "Oct 01 2026",
+    "source": "computed from market price / fund-page NAV"
   },
   "aum": {
-    "display": "$1.79 B",
-    "value": 1791560000,
-    "asOfDate": "Sep 25 2026",
+    "display": "$1.77 B",
+    "value": 1767060000,
+    "asOfDate": "Oct 01 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 737,
-    "bidAskMidpoint": 52.01,
+    "bidAskMidpoint": null,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -71,24 +71,24 @@
   "yields": {
     "dividendYield": 1.87,
     "dividendYieldText": "1.87%",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
-    "distributionRate": 1.87,
-    "secYield": 1.86,
-    "secYieldText": "1.86%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not published on the official fund page for this fund"
   },
   "returns": {
-    "derivedFrom": "official Goldman Sachs fund-page NAV total returns (month-end) where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
-      "mo1": 3.32,
-      "mo1Text": "3.32%",
-      "mo3": -0.95,
-      "mo3Text": "-0.95%",
-      "qtd": 1.62,
-      "qtdText": "1.62%",
-      "ytd": 23.66,
-      "ytdText": "23.66%",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "qtd": 1.28,
+      "qtdText": "1.28%",
+      "ytd": null,
+      "ytdText": "—",
       "yr1": 37.09,
       "yr1Text": "37.09%",
       "yr3": 22.57,
@@ -101,54 +101,18 @@
       "sinceInceptionText": "9.24%"
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "ytd": null,
-      "yr1": 41.48,
+      "yr1": null,
       "yr3": null,
-      "yr5": 7.41,
-      "yr10": 9.44,
+      "yr5": null,
+      "yr10": null,
       "sinceInception": null
     }
   },
   "officialMarketPriceReturns": {
-    "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 4.47,
-      "mo1Text": "4.47%",
-      "mo3": -1.48,
-      "mo3Text": "-1.48%",
-      "ytd": 23.07,
-      "ytdText": "23.07%",
-      "yr1": 36.2,
-      "yr1Text": "36.20%",
-      "yr3": 22.66,
-      "yr3Text": "22.66%",
-      "yr5": 8.31,
-      "yr5Text": "8.31%",
-      "yr10": 8.77,
-      "yr10Text": "8.77%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
-    },
-    "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
-      "mo1": null,
-      "mo1Text": "—",
-      "mo3": null,
-      "mo3Text": "—",
-      "ytd": null,
-      "ytdText": "—",
-      "yr1": 42.99,
-      "yr1Text": "42.99%",
-      "yr3": null,
-      "yr3Text": "—",
-      "yr5": 7.74,
-      "yr5Text": "7.74%",
-      "yr10": 9.54,
-      "yr10Text": "9.54%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
-    }
+    "monthEnd": null,
+    "quarterEnd": null
   },
   "distributions": {
     "frequency": "Annually",
@@ -309,8 +273,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2765,
-    "asOf": "Sep 28 2026",
+    "totalRows": 2769,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
