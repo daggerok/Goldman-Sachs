@@ -28,7 +28,7 @@ Precedence, lowest to highest: file defaults < `advanced` JSON < nonblank workfl
 | --- | --- |
 | Catalog (all US Goldman Sachs ETFs) | `https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100` (Goldman Sachs fund finder page) |
 | Facts, returns, distributions, top 10 per fund | `https://am.gs.com/en-us/individual/funds/detail/{PV}/{CUSIP}/{slug}` -> fund detail pages (e.g. [GSLC](https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf)) |
-| Daily history, distributions | Yahoo Finance public chart API (`/v8/finance/chart/{TICKER}?range=max&interval=1d&events=div`) |
+| Daily history, distributions | Yahoo Finance public chart API (`/v8/finance/chart/{TICKER}?period1=...&period2=...&interval=1d&events=div`; `period1=0` for `max`, an explicit start for `HISTORY_RANGE=Ny`) |
 | Fallback | SEC EDGAR N-PORT-P for full holdings (the detail pages only print the top 10) |
 
 ### Metrics and caveats
@@ -41,20 +41,26 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
 - `secYield` - 30-day SEC yield when published; `-` otherwise
-- `returnsBasis` - always a non-empty label of how the returns were computed: official Goldman Sachs fund-page NAV total returns (periods the page omits are estimated from Yahoo Finance adjusted closes), or an estimate derived entirely from Yahoo Finance adjusted market-price closes
+- `returnsBasis` - always a non-empty label of how the returns were computed: official Goldman Sachs fund-page NAV returns (one basis per row: a period the page does not publish stays `null` and is never estimated from market prices), or an estimate derived entirely from Yahoo Finance adjusted market-price closes (only when the page publishes no return table)
+- `terValue` / `terGrossValue` (index row) - NET expense ratio (after waivers) and GROSS expense ratio from the fund page; `null` when the page does not publish it
 - `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the date of the fund-page performance table, or the last Yahoo close date when derived; not the NAV date, `null` only when truly unknown
 
 Caveats:
 
-- Returns are the official figures printed on the fund pages; daily history is Yahoo Finance adjusted market-price closes, not official NAV
+- Returns are the official NAV figures printed on the fund pages; daily history is Yahoo Finance adjusted market-price closes, not official NAV. `returns.monthEnd.qtd` is always estimated from Yahoo market prices (the page publishes 3-month, not quarter-to-date) and is not part of `metrics`
 - Cumulative 3Y/5Y/10Y returns are derived from the published annualized figures, not published values
-- Unavailable values stay unavailable and are never filled with `0`
-- `AUM`, `TER`, `DIVIDEND_YIELD` and `SEC_YIELD` filters drop funds without a value; `PERFORMANCE_*` and `TOTAL_RETURN_*` filters only drop funds that have a value outside the range
-- All supplied filters use AND logic, `TICKERS` included; funds not selected for a successful update keep their prior published metadata and data files
+- Unavailable values stay unavailable and are never filled with `0`. A `dividendYield` of `0` (AAAU, a gold trust that pays nothing, and GIND, GSGO, GTEK, GTOP) is the 12 Month Trailing Distribution Rate the issuer itself prints. A negative `secYield` (GTIP -2.33, confirmed against the live fund page; also GIND, GTEK, GTOP, GVIP) is the Standardized 30-Day Subsidized Yield parsed from the fund page
+- `AUM`, `TER`, `DIVIDEND_YIELD`, `SEC_YIELD`, `PERFORMANCE_*` and `TOTAL_RETURN_*` filters drop funds without a value for a bounded range (data-dependent filters are judged after the fund page was read, so such a fund still counts toward `MAX_FETCHES`)
+- All supplied filters use AND logic, `TICKERS` included; funds not selected for a successful update keep their prior published metadata and data files. A fund excluded by a data-dependent filter writes nothing and creates no directory
 - Filtered or bounded runs (`TICKERS`, `MAX_FETCHES`, filters, `SKIP_GOLDMANSACHS`) and runs where the live catalog cannot be read never shrink the feed: `index.json` always lists every known fund (the published index plus every `funds/*/meta.json`), and only the selected funds are refreshed
-- Holdings come from SEC EDGAR N-PORT-P because the fund pages only print the top 10; the fund-page top 10 is kept as summary data only
+- Every fund is published whole or kept whole: it is computed in memory and written once (pages, then `meta.json`, then stale pages are removed, then the index row at the end of the run; every file is written through a temp file and renamed). When a required source fails (the fund page, or Yahoo with anything other than HTTP 404 / no chart) the fund keeps every previously published file and is reported as `failed`; the run exits non-zero only when every selected fund failed. Holdings are the exception by design: they carry their own `asOfDate`, so a missing or older N-PORT filing keeps the published holdings
+- A rerun with identical upstream data changes nothing (`generatedAt` and the cursor stamp move only when content moved), so the workflow commits nothing
+- A catalog fund without published data gets an index row with `dataFile: null` and a full all-`null` `metrics` object (`returnsBasis` says no data was published yet). New catalog tickers are announced as `NEW FUNDS: A, B` in the run output and in `$GITHUB_STEP_SUMMARY`
+- The run stops taking new funds after 25 minutes and still writes the index (the workflow limit is 30 minutes); the next run resumes after the cursor
+- Holdings come from SEC EDGAR N-PORT-P because the fund pages only print the top 10; the fund-page top 10 is kept as summary data only. A filing is used only when it names the fund's own series and is not older than the published holdings
+- Dates are zero padded (`Jun 04 2026`) and month names are parsed as UTC
 - Distributions come from the fund page table, with Yahoo dividend events as the fallback
-- `OFFLINE_SEED` builds the feed from the committed seed and verified snapshot in `data/` without network access, so it is not a live refresh
+- `OFFLINE_SEED` fills only funds that have no published `meta.json` from the committed seed and verified snapshot in `data/` without network access; it never overwrites published data, never shrinks `index.json` and leaves the cursor alone
 
 ### Update controls
 
@@ -62,28 +68,30 @@ Defaults below are the values in `scripts/update-data.config.json`. Environment 
 
 | Control | Default | Meaning |
 | --- | --: | --- |
-| `MAX_FETCHES` | `0` | Batch size: with a positive value the updater continues after the committed cursor in `api/goldmansachs/update-state.json`; `0` is a full pass over every fund |
-| `REQUEST_SLEEP` | `2` | Minimum delay in seconds between outgoing request starts, including retries (rendering-proxy requests are paced at 3.2s or slower) |
-| `CONCURRENCY` | `2` | Number of parallel fund update workers; request starts are still globally spaced by `REQUEST_SLEEP` |
+| `MAX_FETCHES` | `0` | Batch size: with a positive value the updater continues after the committed cursor in `api/goldmansachs/update-state.json` (funds that pass `TICKERS` and the catalog-level filters, in ticker order, wrapping around); `0` is a full pass. A `TICKERS` run never reads or changes the cursor; an interrupted full pass resumes after its cursor |
+| `REQUEST_SLEEP` | `2` | Minimum delay in seconds between request starts of one worker, retries included (each of the `CONCURRENCY` workers has its own lane). Only the rate-limited r.jina.ai rendering proxy keeps one global gate of 3.2s or slower and at most one retry |
+| `CONCURRENCY` | `2` | Number of parallel fund update workers; each worker spaces its own requests by `REQUEST_SLEEP`, so throughput scales with the worker count |
 | `AUM` | `:` | Net Assets range; each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of the presets `nano`, `micro`, `small`, `mid`, `large` |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`) |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range |
 | `SEC_YIELD` | `:` | Published 30-day SEC yield percentage range |
-| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `GSLC GBIL AAAU GPIX GPIQ` |
+| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `GSLC GBIL AAAU GPIX GPIQ`; a token that is not a ticker or a ticker the catalog does not list is an error |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page |
-| `HISTORY_RANGE` | `max` | Yahoo Finance chart range for history rows (`max`, `10y`, `5y`, ...) |
+| `HISTORY_RANGE` | `max` | History window: `max` or `Ny` (the last N years, for example `5y`). It becomes an explicit Yahoo `period1`/`period2`, so the request and the stored history really shrink (`1mo`, `ytd` and other Yahoo ranges are rejected); returns longer than the window become `null` |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the official fund finder and fund pages under `api/goldmansachs/raw` |
-| `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1); only network errors and HTTP 408/425/429/5xx are retried with exponential backoff |
+| `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1); network errors, timeouts and HTTP 403/408/425/429/5xx are retried with exponential backoff. Every attempt has a 45 s timeout that also covers reading the body |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | SEC User-Agent; SEC policy requires automated tools to declare a contact. The workflow takes it from the protected `SEC_UA` Actions variable when that is set |
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings; `false` disables it |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions, skip Yahoo Finance |
 | `SKIP_GOLDMANSACHS` | `false` | Skip the Goldman Sachs fund finder and detail pages (SEC EDGAR + Yahoo Finance only) |
-| `OFFLINE_SEED` | `false` | Build the feed from the committed seed and verified snapshot in `data/` only, with no network access |
+| `OFFLINE_SEED` | `false` | Seed funds that have no published data from the committed snapshot in `data/` only, with no network access; published funds are never overwritten |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized return range `min:max` per tenor (official NAV return where published) |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative return range `min:max` per tenor |
+
+Environment aliases keep working through the same resolver: `GOLDMANSACHS_<CONTROL>` (for example `GOLDMANSACHS_CONCURRENCY`) beats `<CONTROL>`, and `HISTORICAL_PAGE_SIZE` is the legacy name of `HISTORY_PAGE_SIZE`. Invalid values (non-integer counts, bad ranges, unknown tickers, `HISTORY_RANGE` other than `max` or `Ny`) are errors, never silent fallbacks
 
 Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `OFFLINE_SEED`, `VERBOSE` and `USE_SYSTEM_CA`, which are reachable through `advanced`
 

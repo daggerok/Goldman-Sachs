@@ -1,11 +1,30 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
-import { describe, expect, test } from 'bun:test';
-import { cpSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { afterEach, describe, expect, test } from 'bun:test';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
   CONTROL_NAMES,
+  NO_DATA_BASIS,
+  SOFT_DEADLINE_MS,
+  checkNportFiling,
+  fetchText,
+  main,
+  paceRequests,
+  parseHistoryRange,
+  placeholderRow,
+  postFetchFilterReasons,
+  recordIssuerDirectResult,
+  resetIssuerDirectState,
+  resetPacing,
+  rotateAfterCursor,
+  runOnLane,
+  setApiRootForTests,
+  setFetchTuningForTests,
+  withMetricsContract,
+  yahooChartQuery,
   DERIVED_RETURNS_BASIS,
   OFFICIAL_RETURNS_BASIS,
   deriveMetrics,
@@ -754,10 +773,10 @@ describe('Goldman Sachs fund page parser', () => {
     expect(parseGsTopHoldings(toTextLines('## Performance\n\nNo allocations'))).toBeNull();
   });
 
-  test('mergeOfficialReturns prefers official values but keeps the derived QTD', () => {
+  test('mergeOfficialReturns never fills a period the page omits from market prices (one basis per row), but keeps the derived QTD', () => {
     const derived = { asOfDate: '2026-09-18', mo1: 1, qtd: 2, ytd: 3, yr1: 4, cagr3y: 5, cagr5y: 6, cagr10y: 7, siAnn: 8 };
     const merged = mergeOfficialReturns(derived, { asOfDate: '2026-08-31', mo1: 0.31, mo3: 0.89, ytd: 2.3, yr1: 3.7, cagr3y: 4.52, cagr5y: null, cagr10y: null, siAnn: 2.31 });
-    expect(merged).toEqual({ asOfDate: '2026-08-31', mo1: 0.31, qtd: 2, ytd: 2.3, yr1: 3.7, cagr3y: 4.52, cagr5y: 6, cagr10y: 7, siAnn: 2.31 });
+    expect(merged).toEqual({ asOfDate: '2026-08-31', mo1: 0.31, qtd: 2, ytd: 2.3, yr1: 3.7, cagr3y: 4.52, cagr5y: null, cagr10y: null, siAnn: 2.31 });
     expect(mergeOfficialReturns(derived, null)).toBe(derived);
   });
 
@@ -1398,12 +1417,15 @@ describe('the published feed never shrinks', () => {
   test('a one-ticker run keeps every published row, including funds known only from meta.json', async () => {
     const { before, after } = await runUpdater({ TICKERS: 'GBIL' });
     expect(before).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX']);
-    expect(after).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']);
+    // published rows stay (plus funds known only from meta.json); catalog funds without data get placeholder rows
+    expect(after).toEqual(expect.arrayContaining(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']));
   }, 60_000);
 
   test('a bounded run (MAX_FETCHES) and a ticker outside the universe do not shrink the index either', async () => {
     expect((await runUpdater({ MAX_FETCHES: '1' })).after).toEqual(expect.arrayContaining(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']));
-    expect((await runUpdater({ TICKERS: 'NOSUCH' })).after.length).toBe(5);
+    // an unknown ticker is an error before anything is written
+    const unknown = await runUpdater({ TICKERS: 'NOSUCH' });
+    expect(unknown.after).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX']);
   }, 60_000);
 
   test('an unreadable live catalog (dead network, full run) never drops published funds', async () => {
@@ -1412,4 +1434,414 @@ describe('the published feed never shrinks', () => {
     expect(after).toEqual(expect.arrayContaining(['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA']));
     expect(after.length).toBeGreaterThanOrEqual(5);
   }, 120_000);
+});
+
+// ---------------------------------------------------------------------------
+// Whole-run behaviour against a mocked network (main() in-process, throwaway output directory)
+// ---------------------------------------------------------------------------
+
+describe('updater run against a mocked network', () => {
+  type Hit = { t: number; url: string };
+  type Mock = { hits: Hit[]; peak: number; restore: () => void; dir: string; api: string };
+  const realFetch = globalThis.fetch;
+  const realLog = console.log;
+  const mocks: Mock[] = [];
+
+  function chartJson(days = 400): string {
+    const end = Date.UTC(2026, 8, 17) / 1000;
+    const timestamp: number[] = [];
+    const close: number[] = [];
+    for (let i = 0; i < days; i += 1) { timestamp.push(end - (days - 1 - i) * 86_400); close.push(100 + i * 0.05); }
+    return JSON.stringify({ chart: { result: [{ meta: { exchangeName: 'PCX', regularMarketPrice: 120, regularMarketTime: end, firstTradeDate: timestamp[0] }, timestamp, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: {} } }] } });
+  }
+
+  /** Mocks catalog, fund pages and Yahoo; `handler` may override any URL (return undefined to fall through). */
+  function mockWorld(opts: { latency?: number; handler?: (url: string) => Response | Promise<Response> | undefined } = {}): Mock {
+    const dir = mkdtempSync(join(tmpdir(), 'gs-mock-'));
+    const api = join(dir, 'api') + '/';
+    mkdirSync(api, { recursive: true });
+    setApiRootForTests(pathToFileURL(api));
+    const t0 = Date.now();
+    const mock: Mock = { hits: [], peak: 0, restore: () => undefined, dir, api };
+    let inFlight = 0;
+    globalThis.fetch = (async (input: unknown) => {
+      const url = String(input);
+      mock.hits.push({ t: Date.now() - t0, url });
+      inFlight += 1;
+      mock.peak = Math.max(mock.peak, inFlight);
+      try {
+        await new Promise((resolve) => setTimeout(resolve, opts.latency ?? 20));
+        const custom = opts.handler?.(url);
+        if (custom) return await custom;
+        if (url.includes('am.gs.com/en-us/individual/funds?')) return new Response(FUND_FINDER_HTML);
+        if (url.includes('am.gs.com')) return new Response(FUND_PAGE_HTML);
+        if (url.includes('query1.finance.yahoo.com')) return new Response(chartJson());
+        return new Response('unavailable', { status: 503 });
+      } finally {
+        inFlight -= 1;
+      }
+    }) as typeof fetch;
+    mock.restore = () => { globalThis.fetch = realFetch; rmSync(dir, { recursive: true, force: true }); };
+    mocks.push(mock);
+    return mock;
+  }
+
+  afterEach(() => {
+    while (mocks.length) mocks.pop()!.restore();
+    console.log = realLog;
+    // main() sets process.exitCode = 1 when every fund failed: never let it leak into the test runner's exit status
+    process.exitCode = 0;
+    setFetchTuningForTests(45_000, 800);
+    resetIssuerDirectState();
+  });
+
+  async function run(env: Record<string, string>, options: { deadlineMs?: number } = {}): Promise<string> {
+    const lines: string[] = [];
+    console.log = (...args: unknown[]) => { lines.push(args.join(' ')); };
+    try {
+      await main({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', USE_SYSTEM_CA: 'false', EDGAR_FALLBACK: 'false', ...env }, options);
+    } finally {
+      console.log = realLog;
+    }
+    return lines.join('\n');
+  }
+
+  const readJson = (mock: Mock, path: string) => JSON.parse(readFileSync(join(mock.api, path), 'utf8'));
+  const snapshot = (root: string): Record<string, string> => {
+    const out: Record<string, string> = {};
+    const walk = (dir: string) => { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = join(dir, entry.name); if (entry.isDirectory()) walk(path); else out[path.slice(root.length)] = readFileSync(path, 'utf8'); } };
+    walk(root);
+    return out;
+  };
+  const THREE = 'GBIL,AAAU,GSLC';
+  const detailHits = (mock: Mock) => mock.hits.filter((hit) => hit.url.includes('/detail/'));
+
+  test('pacing: CONCURRENCY=3 starts three workers together (per-worker lanes), CONCURRENCY=1 never overlaps', async () => {
+    const wide = mockWorld({ latency: 40 });
+    await run({ TICKERS: THREE, CONCURRENCY: '3', REQUEST_SLEEP: '0.6', SKIP_YAHOO: 'true' });
+    const starts = detailHits(wide).map((hit) => hit.t);
+    expect(starts.length).toBe(3);
+    // old global gate: starts 0.6 s apart (spread 1200 ms); lanes: all three within one sleep interval
+    expect(Math.max(...starts) - Math.min(...starts)).toBeLessThan(300);
+    expect(wide.peak).toBe(3);
+    wide.restore(); mocks.pop();
+
+    const narrow = mockWorld({ latency: 40 });
+    await run({ TICKERS: THREE, CONCURRENCY: '1', REQUEST_SLEEP: '0', SKIP_YAHOO: 'true' });
+    expect(narrow.peak).toBe(1);
+  }, 30_000);
+
+  test('pacing: one worker still spaces its own requests by REQUEST_SLEEP, and the slot is reserved synchronously', async () => {
+    resetPacing(0.25);
+    const first = runOnLane(0, async () => { const t = Date.now(); await paceRequests(); const a = Date.now() - t; await paceRequests(); return [a, Date.now() - t]; });
+    const other = runOnLane(1, async () => { const t = Date.now(); await paceRequests(); return Date.now() - t; });
+    const [[a, b], c] = await Promise.all([first, other]);
+    expect(a).toBeLessThan(100);
+    expect(b).toBeGreaterThanOrEqual(230);
+    expect(c).toBeLessThan(100);
+    // two requests made in the same tick on one lane claim two different slots
+    resetPacing(0.2);
+    const t = Date.now();
+    const times = await runOnLane(2, () => Promise.all([paceRequests().then(() => Date.now() - t), paceRequests().then(() => Date.now() - t)]));
+    expect(Math.abs(times[1] - times[0])).toBeGreaterThanOrEqual(180);
+  });
+
+  test('pacing: the r.jina.ai proxy keeps one global gate of at least 3.2 s, shared by all lanes', async () => {
+    resetPacing(0);
+    const t = Date.now();
+    const times = await Promise.all([runOnLane(0, () => paceRequests(true).then(() => Date.now() - t)), runOnLane(1, () => paceRequests(true).then(() => Date.now() - t))]);
+    expect(Math.abs(times[1] - times[0])).toBeGreaterThanOrEqual(3150);
+  }, 10_000);
+
+  test('a fund page the issuer denies directly costs at most one proxy request plus one retry', async () => {
+    setFetchTuningForTests(45_000, 5);
+    const world = mockWorld({
+      handler: (url) => {
+        if (url.startsWith('https://r.jina.ai/')) return new Response('down', { status: 503 });
+        if (url.includes('/detail/')) return new Response('Access Denied', { status: 403 });
+        return undefined;
+      },
+    });
+    await run({ TICKERS: 'GBIL', MAX_RETRIES: '5', SKIP_YAHOO: 'true' });
+    expect(world.hits.filter((hit) => hit.url.startsWith('https://r.jina.ai/') && hit.url.includes('/detail/')).length).toBeLessThanOrEqual(2);
+    expect(process.exitCode).toBe(1); // the only selected fund failed
+  }, 20_000);
+
+  test('direct-denial latch: two denials disable direct requests and a late success from another worker cannot re-enable them', () => {
+    resetIssuerDirectState();
+    expect(recordIssuerDirectResult(true)).toBe(false);
+    expect(recordIssuerDirectResult(true)).toBe(true);
+    expect(recordIssuerDirectResult(false)).toBe(true);
+    resetIssuerDirectState();
+    recordIssuerDirectResult(true);
+    expect(recordIssuerDirectResult(false)).toBe(false); // a success before the limit resets the count
+    expect(recordIssuerDirectResult(true)).toBe(false);
+  });
+
+  test('every request has a timeout that also covers the body, and is retried per MAX_RETRIES', async () => {
+    setFetchTuningForTests(60, 1);
+    let calls = 0;
+    const config = readConfig({ MAX_RETRIES: '2', REQUEST_SLEEP: '0' });
+    resetPacing(0);
+    // headers never arrive
+    globalThis.fetch = ((_url: unknown, init: { signal: AbortSignal }) => { calls += 1; return new Promise((_resolve, reject) => init.signal.addEventListener('abort', () => reject(init.signal.reason))); }) as unknown as typeof fetch;
+    await expect(fetchText('https://example.test/a', 'hang', config)).rejects.toThrow(/no complete response within/);
+    expect(calls).toBe(3);
+    // headers arrive, the body stalls
+    calls = 0;
+    globalThis.fetch = ((_url: unknown, init: { signal: AbortSignal }) => { calls += 1; return Promise.resolve({ ok: true, status: 200, text: () => new Promise((_resolve, reject) => init.signal.addEventListener('abort', () => reject(init.signal.reason))) }); }) as unknown as typeof fetch;
+    await expect(fetchText('https://example.test/b', 'stall', config)).rejects.toThrow(/no complete response within/);
+    expect(calls).toBe(3);
+    // 404 is final, 403 is retried (the issuer CDN answers it while throttling)
+    calls = 0;
+    globalThis.fetch = (async () => { calls += 1; return new Response('x', { status: 404 }); }) as typeof fetch;
+    await expect(fetchText('https://example.test/c', 'gone', config)).rejects.toThrow(/404/);
+    expect(calls).toBe(1);
+    calls = 0;
+    globalThis.fetch = (async () => { calls += 1; return calls < 3 ? new Response('x', { status: 403 }) : new Response('ok'); }) as typeof fetch;
+    expect(await fetchText('https://example.test/d', 'flaky', config)).toBe('ok');
+    expect(calls).toBe(3);
+  });
+
+  test('HISTORY_RANGE: only max or Ny, and the Yahoo request carries an explicit period1 (no range)', async () => {
+    for (const bad of ['1mo', 'ytd', '5d', '0y', 'forever', '5Y5', '-1y']) expect(() => parseHistoryRange(bad)).toThrow('HISTORY_RANGE');
+    expect(() => resolveControls({}, {}, {}, { HISTORY_RANGE: 'ytd' })).toThrow('HISTORY_RANGE');
+    expect(parseHistoryRange('5Y')).toBe('5y');
+    expect(parseHistoryRange('')).toBe('max');
+    const now = Date.UTC(2026, 8, 17, 12);
+    const five = yahooChartQuery('5y', now);
+    expect(five.get('period1')).toBe(String(Date.UTC(2021, 8, 17) / 1000));
+    expect(five.get('period2')).toBe(String(now / 1000 + 86_400));
+    expect(five.has('range')).toBe(false);
+    expect(yahooChartQuery('max', now).get('period1')).toBe('0');
+
+    const world = mockWorld();
+    await run({ TICKERS: 'GSLC', HISTORY_RANGE: '5y' });
+    const url = new URL(world.hits.find((hit) => hit.url.includes('yahoo'))!.url);
+    expect(url.searchParams.has('range')).toBe(false);
+    const period1 = Number(url.searchParams.get('period1'));
+    const fiveYearsAgo = Date.now() / 1000 - 5 * 365.25 * 86_400;
+    expect(Math.abs(period1 - fiveYearsAgo)).toBeLessThan(3 * 86_400);
+  });
+
+  test('brand environment aliases keep working through the resolver (GOLDMANSACHS_<NAME>, HISTORICAL_PAGE_SIZE)', () => {
+    expect(resolveControls({}, {}, {}, { GOLDMANSACHS_CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
+    expect(resolveControls({}, {}, {}, { HISTORICAL_PAGE_SIZE: '123' }).HISTORY_PAGE_SIZE).toBe('123');
+    // brand beats plain beats legacy alias; an explicitly empty value still wins over the file
+    expect(resolveControls({ CONCURRENCY: 2 }, {}, {}, { GOLDMANSACHS_CONCURRENCY: '7', CONCURRENCY: '5' }).CONCURRENCY).toBe('7');
+    expect(resolveControls({}, {}, {}, { HISTORY_PAGE_SIZE: '5', HISTORICAL_PAGE_SIZE: '9' }).HISTORY_PAGE_SIZE).toBe('5');
+    expect(resolveControls({ TICKERS: 'GSLC' }, {}, {}, { GOLDMANSACHS_TICKERS: '' }).TICKERS).toBe('');
+    expect(() => resolveControls({}, {}, {}, { GOLDMANSACHS_CONCURRENCY: '0' })).toThrow('CONCURRENCY');
+    expect(readConfig(resolveControls({}, {}, {}, { GOLDMANSACHS_SKIP_YAHOO: 'true', HISTORICAL_PAGE_SIZE: '50' })).historyPageSize).toBe(50);
+  });
+
+  test('controls are strict: bad numbers, tickers and bounds are errors, never silent fallbacks', () => {
+    expect(() => readConfig({ CONCURRENCY: 'abc' })).toThrow('CONCURRENCY');
+    expect(() => readConfig({ MAX_RETRIES: '0' })).toThrow('MAX_RETRIES');
+    expect(() => readConfig({ REQUEST_SLEEP: '-2' })).toThrow('REQUEST_SLEEP');
+    expect(() => readConfig({ TICKERS: 'GSLC, not a ticker!' })).toThrow('TICKERS');
+    expect(() => readConfig({ AUM: 'huge:' })).toThrow('AUM');
+    expect(() => readConfig({ TER: 'x:1' })).toThrow('TER');
+  });
+
+  test('a run for an unknown ticker is an error and writes nothing', async () => {
+    const world = mockWorld();
+    await expect(run({ TICKERS: 'GSLC,NOSUCH' })).rejects.toThrow('NOSUCH');
+    expect(existsSync(join(world.api, 'index.json'))).toBe(false);
+  });
+
+  test('a fund filtered out after its page was read leaves no files or empty directories', async () => {
+    const world = mockWorld();
+    const out = await run({ TICKERS: 'GBIL,GSLC', AUM: '1T:' });
+    expect(out).toContain('skipped');
+    expect(existsSync(join(world.api, 'funds'))).toBe(false);
+  });
+
+  test('return filters exclude a fund with no figure for a bounded range', () => {
+    const config = readConfig({ TOTAL_RETURN_10Y: '1:', PERFORMANCE_5Y: ':50' });
+    const fund = { ter: 0.1, netAssets: 1e9 } as Parameters<typeof postFetchFilterReasons>[0];
+    expect(postFetchFilterReasons(fund, { tr10y: null, cagr5y: null }, config)).toEqual(['PERFORMANCE_5Y', 'TOTAL_RETURN_10Y']);
+    expect(postFetchFilterReasons(fund, { tr10y: 20, cagr5y: 10 }, config)).toEqual([]);
+    expect(postFetchFilterReasons(fund, { tr10y: null, cagr5y: null }, readConfig({}))).toEqual([]);
+    expect(postFetchFilterReasons({ ...fund, ter: null } as typeof fund, {}, readConfig({ TER: ':0.5' }))).toEqual(['TER']);
+  });
+
+  test('identical upstream data: the second run writes nothing, not even generatedAt', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: THREE });
+    const first = snapshot(world.api);
+    expect(Object.keys(first).length).toBeGreaterThanOrEqual(7); // index + meta and history page for each of the three funds
+    await new Promise((resolve) => setTimeout(resolve, 1100)); // a stamp that moved would differ
+    await run({ TICKERS: THREE });
+    expect(snapshot(world.api)).toEqual(first);
+    expect(readdirSync(join(world.api, 'funds', 'GSLC')).some((name) => name.includes('.tmp-'))).toBe(false);
+  }, 30_000);
+
+  test('whole fund or nothing: when Yahoo fails the fund keeps every published byte; other funds still update; all failed -> exit 1', async () => {
+    const good = mockWorld();
+    await run({ TICKERS: THREE });
+    const before = snapshot(join(good.api, 'funds', 'GSLC'));
+    const beforeIndex = readJson(good, 'index.json').funds.find((row: { ticker: string }) => row.ticker === 'GSLC');
+    good.restore(); mocks.pop();
+
+    // reuse the same output tree with a Yahoo outage on GSLC only
+    const dir = mkdtempSync(join(tmpdir(), 'gs-keep-'));
+    mocks.push({ hits: [], peak: 0, restore: () => { globalThis.fetch = realFetch; rmSync(dir, { recursive: true, force: true }); }, dir, api: join(dir, 'api') + '/' });
+    mkdirSync(join(dir, 'api', 'funds', 'GSLC'), { recursive: true });
+    for (const [path, text] of Object.entries(before)) { mkdirSync(join(dir, 'api', 'funds', 'GSLC', path.split('/').slice(1, -1).join('/')), { recursive: true }); writeFileSync(join(dir, 'api', 'funds', 'GSLC', path.split('/').slice(1).join('/')), text); }
+    writeFileSync(join(dir, 'api', 'index.json'), JSON.stringify({ generatedAt: '2026-01-01T00:00:00Z', funds: [beforeIndex] }));
+    setApiRootForTests(pathToFileURL(join(dir, 'api') + '/'));
+    globalThis.fetch = (async (input: unknown) => {
+      const url = String(input);
+      if (url.includes('am.gs.com/en-us/individual/funds?')) return new Response(FUND_FINDER_HTML);
+      if (url.includes('am.gs.com')) return new Response(FUND_PAGE_HTML.replace('145.45USD', '150.00USD'));
+      if (url.includes('yahoo') && url.includes('GSLC')) return new Response('down', { status: 503 });
+      if (url.includes('yahoo')) return new Response(chartJson());
+      return new Response('unavailable', { status: 503 });
+    }) as typeof fetch;
+    const out = await run({ TICKERS: 'GSLC,GBIL', MAX_RETRIES: '1' });
+    expect(out).toMatch(/GSLC\s+failed/);
+    expect(out).toMatch(/GBIL\s+(updated|unchanged)/);
+    expect(snapshot(join(dir, 'api', 'funds', 'GSLC'))).toEqual(before);
+    expect(process.exitCode ?? 0).toBe(0); // one fund still updated
+
+    const onlyBad = await run({ TICKERS: 'GSLC' });
+    expect(onlyBad).toMatch(/GSLC\s+failed/);
+    expect(process.exitCode).toBe(1);
+    expect(snapshot(join(dir, 'api', 'funds', 'GSLC'))).toEqual(before);
+  }, 60_000);
+
+  test('a Yahoo 404 is an honest empty history, not a failed fund', async () => {
+    const world = mockWorld({ handler: (url) => (url.includes('yahoo') ? new Response('{"chart":{"result":null}}', { status: 404 }) : undefined) });
+    const out = await run({ TICKERS: 'GBIL' });
+    expect(out).toMatch(/GBIL\s+updated/);
+    expect(readJson(world, 'funds/GBIL/meta.json').history.totalRows).toBe(0);
+  });
+
+  test('returns keep one basis: official NAV figures are not mixed with market-price estimates and travel with their date', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GSLC' });
+    const row = readJson(world, 'index.json').funds.find((item: { ticker: string }) => item.ticker === 'GSLC');
+    expect(row.metrics).toMatchObject({ ytd: 11.11, tr1y: 16.62, cagr3y: 19.58, cagr5y: 11.38, cagr10y: 14.48, returnsBasis: OFFICIAL_RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+    expect(OFFICIAL_RETURNS_BASIS).toContain('never estimated from market prices');
+    expect(row.terValue).toBe(0.09);
+    expect(row.terGrossValue).toBe(0.09);
+    expect(row.dataFile).toBe('./funds/GSLC/meta.json');
+  });
+
+  test('dates are zero padded ("Jan 05 2026") and month-name parsing is the same east of UTC', () => {
+    const world = mockWorld();
+    return run({ TICKERS: 'GBIL' }).then(() => {
+      const history = readJson(world, 'funds/GBIL/history/001.json');
+      expect(history.rows[0].Date).toMatch(/^[A-Z][a-z]{2} \d{2} \d{4}$/);
+      const script = `import { toIsoDate } from ${JSON.stringify(new URL('./update-data.ts', import.meta.url).pathname)}; console.log(toIsoDate('Sep 17 2026'), toIsoDate('September 5 2026'));`;
+      for (const tz of ['Pacific/Kiritimati', 'America/Los_Angeles', 'UTC']) {
+        const child = Bun.spawnSync([process.execPath, '-e', script], { env: { PATH: process.env.PATH ?? '', TZ: tz } });
+        expect(new TextDecoder().decode(child.stdout).trim()).toBe('2026-09-17 2026-09-05');
+      }
+    });
+  });
+
+  test('rows without published data are placeholders: dataFile null, full null metrics and a basis; the metrics contract holds for every row', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GBIL' });
+    const funds = readJson(world, 'index.json').funds;
+    expect(funds.length).toBeGreaterThan(40);
+    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'];
+    for (const row of funds) {
+      expect(Object.keys(row.metrics).slice(0, keys.length)).toEqual(keys);
+      expect(row.metrics.returnsBasis.length).toBeGreaterThan(5);
+      expect(row.dataFile).toBe(row.ticker === 'GBIL' ? './funds/GBIL/meta.json' : null);
+    }
+    const aaau = funds.find((row: { ticker: string }) => row.ticker === 'AAAU');
+    expect(aaau.metrics).toMatchObject({ ytd: null, tr10y: null, dividendYield: null, secYield: null, returnsBasis: NO_DATA_BASIS, performanceAsOf: null });
+    expect(withMetricsContract({ metrics: { 'null': null, ytd: 0 } }).metrics).not.toHaveProperty('null');
+    expect(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).dataFile).toBeNull();
+  });
+
+  test('NEW FUNDS: catalog tickers missing from the published index are announced on stdout and in the step summary', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GBIL' });
+    const index = readJson(world, 'index.json');
+    index.funds = index.funds.filter((row: { ticker: string }) => !['AAAU', 'JUST'].includes(row.ticker));
+    writeFileSync(join(world.api, 'index.json'), JSON.stringify(index));
+    rmSync(join(world.api, 'funds', 'AAAU'), { recursive: true, force: true });
+    const summary = join(world.dir, 'summary.md');
+    const out = await run({ TICKERS: 'GBIL', GITHUB_STEP_SUMMARY: summary });
+    expect(out).toContain('NEW FUNDS: AAAU, JUST');
+    expect(readFileSync(summary, 'utf8')).toContain('NEW FUNDS: AAAU, JUST');
+  });
+
+  test('MAX_FETCHES cursor: walks the filtered set, wraps around, and a TICKERS run never touches it', async () => {
+    const world = mockWorld();
+    const state = () => readJson(world, 'update-state.json').cursor;
+    const touched = async (env: Record<string, string>) => (await run({ SKIP_YAHOO: 'true', ...env }), new Set(readdirSync(join(world.api, 'funds'))));
+    await touched({ MAX_FETCHES: '2' });
+    expect(readdirSync(join(world.api, 'funds')).sort()).toEqual(['AAAU', 'GBIL']);
+    expect(state()).toBe('GBIL');
+    await run({ SKIP_YAHOO: 'true', MAX_FETCHES: '2' });
+    expect(readdirSync(join(world.api, 'funds')).sort()).toEqual(['AAAU', 'GBIL', 'GBND', 'GCAL']);
+    expect(state()).toBe('GCAL');
+    // a TICKERS run leaves the state file byte for byte alone
+    const bytes = readFileSync(join(world.api, 'update-state.json'), 'utf8');
+    await run({ SKIP_YAHOO: 'true', TICKERS: 'GSLC' });
+    expect(readFileSync(join(world.api, 'update-state.json'), 'utf8')).toBe(bytes);
+    // cursor on the last fund wraps to the top
+    writeFileSync(join(world.api, 'update-state.json'), JSON.stringify({ cursor: 'JUST' }));
+    await run({ SKIP_YAHOO: 'true', MAX_FETCHES: '1' });
+    expect(state()).toBe('AAAU');
+    // the cursor is scoped to the filter set: a cursor outside it still continues in ticker order
+    expect(rotateAfterCursor([{ ticker: 'A' }, { ticker: 'C' }, { ticker: 'E' }], 'B').map((fund) => fund.ticker)).toEqual(['C', 'E', 'A']);
+    expect(rotateAfterCursor([{ ticker: 'A' }, { ticker: 'C' }], 'C').map((fund) => fund.ticker)).toEqual(['A', 'C']);
+    expect(rotateAfterCursor([{ ticker: 'A' }], '').map((fund) => fund.ticker)).toEqual(['A']);
+  }, 60_000);
+
+  test('soft deadline: no new fund is taken, the index is still written, and the next run resumes at the cursor', async () => {
+    expect(SOFT_DEADLINE_MS).toBe(25 * 60 * 1000);
+    const world = mockWorld();
+    const out = await run({ SKIP_YAHOO: 'true' }, { deadlineMs: -1 });
+    expect(out).toContain('soft deadline reached');
+    expect(readJson(world, 'index.json').funds.length).toBeGreaterThan(40);
+    expect(existsSync(join(world.api, 'funds'))).toBe(false);
+    expect(process.exitCode ?? 0).toBe(0);
+  });
+
+  test('N-PORT fallback: series identity and freshness are verified, an older filing never replaces newer holdings', () => {
+    expect(checkNportFiling('S000001', 'S000001', '2026-06-30', '2026-03-31', 'SEC EDGAR Form N-PORT-P').ok).toBe(true);
+    expect(checkNportFiling('s000001', 'S000001', '2026-06-30', undefined, undefined).ok).toBe(true);
+    expect(checkNportFiling('S000002', 'S000001', '2026-06-30', '', '').ok).toBe(false);
+    expect(checkNportFiling('', 'S000001', '2026-06-30', '', '').ok).toBe(false);
+    expect(checkNportFiling('S000001', 'S000001', '2026-03-31', '2026-06-30', 'SEC EDGAR Form N-PORT-P').reason).toContain('older than the published holdings');
+    // a published top-10 snapshot from OFFLINE_SEED is not "fresher" than a real filing
+    expect(checkNportFiling('S000001', 'S000001', '2026-06-30', '2026-09-17', 'offline seed snapshot: official top-10 holdings').ok).toBe(true);
+  });
+
+  test('OFFLINE_SEED fills only funds without published data: live meta is never overwritten and the index never shrinks', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GBIL' });
+    const gbil = snapshot(join(world.api, 'funds', 'GBIL'));
+    const rows = readJson(world, 'index.json').funds.length;
+    const stateBefore = existsSync(join(world.api, 'update-state.json')) ? readFileSync(join(world.api, 'update-state.json'), 'utf8') : null;
+    const hitsBefore = world.hits.length;
+    const out = await run({ OFFLINE_SEED: 'true', TICKERS: 'GBIL,GSLC' });
+    expect(out).toMatch(/GBIL\s+skipped/);
+    expect(snapshot(join(world.api, 'funds', 'GBIL'))).toEqual(gbil);
+    expect(world.hits.length).toBe(hitsBefore); // no network request
+    expect(existsSync(join(world.api, 'funds', 'GSLC', 'meta.json'))).toBe(true); // had no data: seeded
+    expect(readJson(world, 'index.json').funds.length).toBeGreaterThanOrEqual(rows);
+    const seeded = readJson(world, 'index.json').funds.find((row: { ticker: string }) => row.ticker === 'GSLC');
+    expect(seeded.dataFile).toBe('./funds/GSLC/meta.json');
+    expect(existsSync(join(world.api, 'update-state.json')) ? readFileSync(join(world.api, 'update-state.json'), 'utf8') : null).toBe(stateBefore);
+  });
+
+  test('stale pages are removed only after the new meta.json is written, and no temp files are left', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '100' });
+    const pages = readdirSync(join(world.api, 'funds', 'GBIL', 'history'));
+    expect(pages.length).toBe(4);
+    await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '1000' });
+    expect(readdirSync(join(world.api, 'funds', 'GBIL', 'history'))).toEqual(['001.json']);
+    expect(readJson(world, 'funds/GBIL/meta.json').history.pages).toEqual(['history/001.json']);
+    expect(statSync(join(world.api, 'index.json')).size).toBeGreaterThan(0);
+  });
 });
