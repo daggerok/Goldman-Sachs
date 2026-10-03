@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,16 +22,16 @@
     "cusip": "38149W390",
     "isin": "US38149W3907",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "MSCI Emerging Markets (Net Total Return, Unhedged, USD)",
-    "exchange": "NASDAQ",
+    "indexTicker": null,
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GEMQ.NV",
+    "navTicker": null,
     "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "0.4%",
-    "value": 0.4,
-    "gross": 0.4,
+    "display": "—",
+    "value": null,
+    "gross": null,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -40,28 +40,28 @@
     "asOfDate": "Oct 01 2026"
   },
   "marketPrice": {
-    "display": "$24.31",
-    "value": 24.31,
-    "asOfDate": "Oct 01 2026",
-    "source": "official fund page Pricing Table"
+    "display": "$24.60",
+    "value": 24.6,
+    "asOfDate": "Oct 02 2026",
+    "source": "Yahoo Finance last regular-session price"
   },
   "premiumDiscount": {
-    "display": "-0.27%",
-    "value": -0.27,
+    "display": "0.90%",
+    "value": 0.9,
     "asOfDate": "Oct 01 2026",
-    "source": "official fund page Pricing Table"
+    "source": "computed from market price / fund-page NAV"
   },
   "aum": {
-    "display": "$9.75 M",
-    "value": 9750000,
+    "display": "—",
+    "value": null,
     "asOfDate": "Oct 01 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "source": "previous run"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 150,
-    "bidAskMidpoint": 24.31,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": null,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -132,8 +132,7 @@
     "totalRows": 0,
     "asOfDate": null,
     "asOf": "—",
-    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 150
+    "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)"
   },
   "history": {
     "pages": [
