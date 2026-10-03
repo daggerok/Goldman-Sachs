@@ -395,7 +395,14 @@ export type ProductPageSummary = {
   distributions: Distribution[];
   topHoldings: GsTopHoldings | null;
   officialReturns: OfficialReturns;
+  /** Which sections of the page are present at all (a heading or labelled value), whether or not their values parsed. */
+  sections: PageSections;
+  /** True only when the pricing table AND the performance (returns) tables are present: such a page has loaded fully. */
+  loadedFully: boolean;
 };
+
+export type PageSections = { pricing: boolean; yields: boolean; returns: boolean; distributions: boolean; topHoldings: boolean };
+const NO_SECTIONS: PageSections = { pricing: false, yields: false, returns: false, distributions: false, topHoldings: false };
 
 export type Distribution = { epoch: number; amount: number };
 
@@ -1423,6 +1430,7 @@ export function parseProductPage(text: string, ticker: string, now: Date = new D
     distRate12M: null, secYieldSubsidized: null, secYieldUnsubsidized: null, yieldsAsOfDate: null,
     navTicker: '', iopvTicker: '', distributions: [], topHoldings: null,
     officialReturns: { monthEnd: { nav: null, marketPrice: null }, quarterEnd: { nav: null, marketPrice: null } },
+    sections: { ...NO_SECTIONS }, loadedFully: false,
   };
   if (!lines.length) return empty;
   const name = parseFundName(source, upper);
@@ -1468,8 +1476,24 @@ export function parseProductPage(text: string, ticker: string, now: Date = new D
   // estimate block read as the 30-day yield with a 100% value); drop the whole
   // trio rather than publish a fabricated yield.
   const yieldsValid = yieldsAsOfDate === null || yieldsAsOfDate <= now.toISOString().slice(0, 10);
+  const officialReturns = parseOfficialReturns(lines, upper);
+  const distributions = parseGsDistributions(lines);
+  const topHoldings = parseGsTopHoldings(lines);
+  // Page-loaded check: the pricing table (Market Price / Premium Discount / Bid/Ask labels) and the performance
+  // tables (a Cumulative / Annualized Returns heading or a parsed returns table) must both be present. A page
+  // missing either came back partial (rendering proxy), so what it lacks is unknown, not an honest absence.
+  const sections: PageSections = {
+    // a label line of its own or one carrying its as-of date: the returns tables also have 'Market Price' rows with percentages
+    pricing: lines.some((line) => line.cells.some((cell) => /^(market price(?! returns)|premium.?discount|bid\/ask|30-day median)/i.test(normalizeLabel(cell)) && (line.cells.length === 1 || /as ?of/i.test(cell)))),
+    yields: Boolean(distRate || secSub || secUnsub),
+    returns: Boolean(officialReturns.monthEnd.nav || officialReturns.monthEnd.marketPrice || officialReturns.quarterEnd.nav) || lines.some((line) => /(Cumulative|Average Annualized|Quarterly Annualized|Annualized) Returns/i.test(line.text)),
+    distributions: distributions.length > 0 || lines.some((line) => /^ex-date$/i.test(line.cells[0] || '')),
+    topHoldings: topHoldings !== null || lines.some((line) => /top 10 holdings/i.test(line.text)),
+  };
   return {
     ...empty,
+    sections,
+    loadedFully: sections.pricing && sections.returns,
     name,
     cusip: /^[A-Z0-9]{9}$/.test(cusipText) ? cusipText : '',
     exchange: labelText(exchange),
@@ -1489,12 +1513,12 @@ export function parseProductPage(text: string, ticker: string, now: Date = new D
     lbmaGoldPriceAsOfDate: labelAsOf(lbma),
     netExpenseRatio: labelNumber(netTer),
     grossExpenseRatio: labelNumber(grossTer),
-    marketPrice: labelNumber(marketPrice),
-    marketPrice52wkRange: cleanText(labelText(range52).replace(/USD$/i, '')),
-    premiumDiscount: labelNumber(premium),
-    pricingAsOfDate: labelAsOf(marketPrice) || labelAsOf(premium),
-    bidAsk: labelNumber(bidAsk),
-    bidAskSpread30d: labelNumber(spread),
+    marketPrice: sections.pricing ? labelNumber(marketPrice) : null,
+    marketPrice52wkRange: sections.pricing ? cleanText(labelText(range52).replace(/USD$/i, '')) : '',
+    premiumDiscount: sections.pricing ? labelNumber(premium) : null,
+    pricingAsOfDate: sections.pricing ? labelAsOf(marketPrice) || labelAsOf(premium) : null,
+    bidAsk: sections.pricing ? labelNumber(bidAsk) : null,
+    bidAskSpread30d: sections.pricing ? labelNumber(spread) : null,
     premiumDays: labelNumber(premiumDays),
     atNavDays: labelNumber(atNavDays),
     discountDays: labelNumber(discountDays),
@@ -1504,9 +1528,9 @@ export function parseProductPage(text: string, ticker: string, now: Date = new D
     yieldsAsOfDate: yieldsValid ? yieldsAsOfDate : null,
     navTicker: labelText(navTicker),
     iopvTicker: labelText(iopvTicker),
-    distributions: parseGsDistributions(lines),
-    topHoldings: parseGsTopHoldings(lines),
-    officialReturns: parseOfficialReturns(lines, upper),
+    distributions,
+    topHoldings,
+    officialReturns,
   };
 }
 
@@ -2283,6 +2307,7 @@ async function finalizeRow(row: JsonRecord): Promise<JsonRecord> {
 // Per-fund pipeline
 // ---------------------------------------------------------------------------
 
+const OFFICIAL_PRICING_SOURCE = 'official fund page Pricing Table';
 const PROVIDER_LABEL = 'Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API';
 
 /**
@@ -2298,6 +2323,76 @@ export function checkNportFiling(filingSeriesId: unknown, expectedSeriesId: stri
   const filing = toIsoDate(filingReportDate ?? '');
   if (/^\d{4}-\d{2}-\d{2}$/.test(published) && /^\d{4}-\d{2}-\d{2}$/.test(filing) && filing < published) return { ok: false, reason: `filing ${filing} is older than the published holdings ${published}; keeping the published holdings` };
   return { ok: true };
+}
+
+/** A published returns block (returnRowJson shape) back as an official row; null when it carries no figure. */
+function officialRowFromPublished(block: any): OfficialReturnRow | null {
+  if (!block || typeof block !== 'object') return null;
+  const asOf = toIsoDate(block.asOfDate);
+  const row: OfficialReturnRow = {
+    asOfDate: /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : '',
+    mo1: numberOrNull(block.mo1), mo3: numberOrNull(block.mo3), ytd: numberOrNull(block.ytd), yr1: numberOrNull(block.yr1),
+    cagr3y: numberOrNull(block.yr3), cagr5y: numberOrNull(block.yr5), cagr10y: numberOrNull(block.yr10), siAnn: numberOrNull(block.sinceInception),
+  };
+  return [row.mo1, row.mo3, row.ytd, row.yr1, row.cagr3y, row.cagr5y, row.cagr10y, row.siAnn].some((value) => value !== null) ? row : null;
+}
+
+/**
+ * A fund page that came back partial (the rendering proxy dropped sections: see `loadedFully`) says nothing
+ * about the sections it lacks. Every section that was published as official before and is absent from such a page
+ * counts as a FAILED read: its previous official block is restored into `summary`/`fund` as one unit (values with
+ * their dates, basis and sources), so the normal build below republishes it unchanged instead of flipping to
+ * Yahoo-derived values or null. A page that loaded fully and lacks a field is an honest null and never gets here.
+ * Returns the names of the kept sections.
+ */
+function retainPublishedSections(summary: ProductPageSummary, fund: CatalogFund, previousMeta: JsonRecord | null): string[] {
+  if (summary.loadedFully || !previousMeta) return [];
+  const kept: string[] = [];
+  const pricing = previousMeta.marketPrice;
+  if (!summary.sections.pricing && pricing?.source === OFFICIAL_PRICING_SOURCE && numberOrNull(pricing.value) !== null) {
+    const asOf = toIsoDate(pricing.asOfDate);
+    summary.marketPrice = numberOrNull(pricing.value);
+    summary.pricingAsOfDate = /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : null;
+    fund.close = summary.marketPrice;
+    if (previousMeta.premiumDiscount?.source === OFFICIAL_PRICING_SOURCE) {
+      summary.premiumDiscount = numberOrNull(previousMeta.premiumDiscount.value);
+      fund.premiumDiscount = summary.premiumDiscount;
+    }
+    const facts = previousMeta.fundFacts || {};
+    summary.bidAsk = numberOrNull(facts.bidAskMidpoint);
+    summary.premiumDays = numberOrNull(facts.premiumDays);
+    summary.atNavDays = numberOrNull(facts.atNavDays);
+    summary.discountDays = numberOrNull(facts.discountDays);
+    kept.push('pricing table');
+  }
+  const yields = previousMeta.yields || {};
+  const officialYield = (kind: unknown, prefix: string) => typeof kind === 'string' && kind.startsWith(prefix);
+  const keepDist = officialYield(yields.dividendYieldKind, '12 Month Trailing') && numberOrNull(yields.distributionRate) !== null;
+  const keepSec = officialYield(yields.secYieldKind, 'Standardized 30-Day') && numberOrNull(yields.secYield) !== null;
+  if (!summary.sections.yields && (keepDist || keepSec)) {
+    if (keepDist) { summary.distRate12M = numberOrNull(yields.distributionRate); fund.dividendYield = summary.distRate12M; }
+    if (keepSec) { summary.secYieldSubsidized = numberOrNull(yields.secYield); fund.secYield = summary.secYieldSubsidized; }
+    summary.yieldsAsOfDate = monthDateToIso(String(keepDist ? yields.dividendYieldKind : yields.secYieldKind).replace(/^.*?\bas of /, '')) || null;
+    kept.push('yields');
+  }
+  const monthEnd = officialRowFromPublished(previousMeta.returns?.monthEnd);
+  if (!summary.sections.returns && previousMeta.returns?.derivedFrom === OFFICIAL_RETURNS_BASIS && monthEnd) {
+    summary.officialReturns = {
+      monthEnd: { nav: monthEnd, marketPrice: officialRowFromPublished(previousMeta.officialMarketPriceReturns?.monthEnd) },
+      quarterEnd: { nav: officialRowFromPublished(previousMeta.returns?.quarterEnd), marketPrice: officialRowFromPublished(previousMeta.officialMarketPriceReturns?.quarterEnd) },
+    };
+    kept.push('month-end returns');
+  }
+  if (!summary.sections.distributions && String(previousMeta.distributions?.source || '').startsWith('official fund-page Distributions table') && Array.isArray(previousMeta.distributions?.rows) && previousMeta.distributions.rows.length) {
+    kept.push('distributions');
+  }
+  const top = previousMeta.topHoldings;
+  if (!summary.sections.topHoldings && !summary.topHoldings && top && Array.isArray(top.rows) && top.rows.length) {
+    const asOf = toIsoDate(top.asOfDate);
+    summary.topHoldings = { asOfDate: /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : null, top10Pct: numberOrNull(top.top10Pct), rows: top.rows };
+    kept.push('top holdings');
+  }
+  return kept;
 }
 
 async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: JsonRecord = {}): Promise<JsonRecord> {
@@ -2350,6 +2445,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       throw new Error(`official fund page unavailable (${error instanceof Error ? error.message : String(error)}); kept the published data`);
     }
   }
+  // A partial page keeps what was published as official (one `[ kept ]` notice per fund naming the sections).
+  const keptSections = summary ? retainPublishedSections(summary, fund, previousMeta) : [];
+  if (keptSections.length) console.log(`[ ${'kept'.padEnd(9)}] ${fund.ticker}: fund page came back partial, kept the published ${keptSections.join(', ')}`);
   // Only with SKIP_GOLDMANSACHS (no page read at all) the published fee and yield stand in; a page
   // that was read and omits a value is an honest null and is never refilled from the previous run.
   const carry = !summary;
@@ -2438,7 +2536,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     days = previousRows.map((row) => ({ date: toIsoDate(row.Date), close: numberOrNull(row.Close) || 0, adjClose: numberOrNull(row['Adj Close']) || numberOrNull(row.Close) || 0, volume: numberOrNull(row.Volume) || 0 })).filter((row) => row.date && row.close > 0);
     if (previousRows.length) historySource = previousMeta?.history?.source || 'previous run';
   }
-  if (!dividends.length && chart?.dividends.length) {
+  if (!dividends.length && !keptSections.includes('distributions') && chart?.dividends.length) {
     dividends = chart.dividends.map((item) => ({ epoch: item.epoch, amount: round(item.amount, 6) }));
     distributionsSource = 'Yahoo Finance chart dividend events (fund-page Distributions table unavailable)';
   }
@@ -2544,8 +2642,8 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, isinBasis: fund.isin ? (fund.cusip && fund.isin === isinFromCusip(fund.cusip) ? 'derived from the published CUSIP (US prefix + check digit)' : 'previous run') : null, indexTicker: fund.benchmark || null, exchange: fund.exchange || null, morningstarCategory: null, navTicker: summary?.navTicker || null, iopvTicker: summary?.iopvTicker || null },
     expenseRatio: { display: fund.ter === null ? '—' : `${fund.ter}%`, value: fund.ter, gross: fund.grossTer, kind: pageSuppliedTer || fund.ter === null ? 'Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)' : 'Net Expense Ratio carried from the previous run (official fund page)' },
     nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate: summary?.navAsOfDate ? formatDate(summary.navAsOfDate) : asOfLabel },
-    marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel, source: summary?.marketPrice !== null && summary?.marketPrice !== undefined ? 'official fund page Pricing Table' : chart ? 'Yahoo Finance last regular-session price' : 'previous run' },
-    premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount, asOfDate: summary?.pricingAsOfDate ? formatDate(summary.pricingAsOfDate) : asOfLabel, source: fund.premiumDiscount !== null ? 'official fund page Pricing Table' : 'computed from market price / fund-page NAV' },
+    marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel, source: summary?.marketPrice !== null && summary?.marketPrice !== undefined ? OFFICIAL_PRICING_SOURCE : chart ? 'Yahoo Finance last regular-session price' : 'previous run' },
+    premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount, asOfDate: summary?.pricingAsOfDate ? formatDate(summary.pricingAsOfDate) : asOfLabel, source: fund.premiumDiscount !== null ? OFFICIAL_PRICING_SOURCE : 'computed from market price / fund-page NAV' },
     aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: summary?.aumDailyAsOfDate ? formatDate(summary.aumDailyAsOfDate) : summary?.aumMonthlyAsOfDate ? formatDate(summary.aumMonthlyAsOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : asOfLabel), source: summary?.aumDaily !== null && summary?.aumDaily !== undefined ? 'official fund page Total Fund Assets (Daily)' : summary?.aumMonthly !== null && summary?.aumMonthly !== undefined ? 'official fund page Total Fund Assets (Monthly)' : nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run' },
     fundFacts: { sharesOutstanding: null, portfolioTurnover: null, publishedTotalHoldings: summary?.totalHoldings ?? null, bidAskMidpoint: summary?.bidAsk ?? null, lbmaGoldPrice: summary?.lbmaGoldPrice ?? null, lbmaGoldPriceAsOf: summary?.lbmaGoldPriceAsOfDate ? formatDate(summary.lbmaGoldPriceAsOfDate) : null, premiumDays: summary?.premiumDays ?? null, atNavDays: summary?.atNavDays ?? null, discountDays: summary?.discountDays ?? null },
     yields: {
