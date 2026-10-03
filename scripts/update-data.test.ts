@@ -451,8 +451,8 @@ function mockWorld(opts: { latency?: number; handler?: (url: string) => Response
 }
 
 /** Runs main() in-process with a clean explicit env (never process.env) and silenced output. */
-async function run(env: Record<string, string>, options: { deadlineMs?: number } = {}): Promise<void> {
-  console.log = () => undefined;
+async function run(env: Record<string, string>, options: { deadlineMs?: number; log?: string[] } = {}): Promise<void> {
+  console.log = (...args: unknown[]) => { options.log?.push(args.join(' ')); };
   try {
     await main({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', USE_SYSTEM_CA: 'false', EDGAR_FALLBACK: 'false', ...env }, options);
   } finally {
@@ -711,6 +711,18 @@ describe('parsing', () => {
     expect(html.distributions.map((d) => d.amount)).toEqual([0.3409, 0.3447]);
     expect(html.topHoldings).toMatchObject({ top10Pct: 35.85, rows: [{ name: 'NVIDIA Corp', weight: 8.01 }, { name: 'Apple Inc', weight: 7.45 }] });
     expect(html.officialReturns.monthEnd.nav).toEqual({ asOfDate: '2026-08-31', mo1: 2.47, mo3: 2.14, ytd: 11.11, yr1: 16.62, cagr3y: 19.58, cagr5y: 11.38, cagr10y: 14.48, siAnn: null });
+  });
+
+  test('page-loaded check: the pricing table and the performance tables must both be present', () => {
+    const cut = (html: string, from: string, to: string) => html.slice(0, html.indexOf(from)) + html.slice(html.indexOf(to));
+    const partial = cut(FUND_PAGE_HTML, '<h2>Performance</h2>', '<div>Top 10 Holdings');
+    expect(parseProductPage(FUND_PAGE_HTML, 'GSLC')).toMatchObject({ loadedFully: true, sections: { pricing: true, yields: true, returns: true, distributions: true, topHoldings: true } });
+    expect(parseProductPage(FUND_PAGE_MARKDOWN, 'GBIL')).toMatchObject({ loadedFully: true });
+    expect(parseProductPage(partial, 'GSLC')).toMatchObject({ nav: 145.45, loadedFully: false, sections: { pricing: false, yields: false, returns: false, distributions: false, topHoldings: true } });
+    // pricing without the performance tables (and the reverse) is still partial; a missing yields block alone is not
+    expect(parseProductPage(cut(FUND_PAGE_HTML, '<div><a href="#">Cumulative', '<div>Top 10 Holdings'), 'GSLC').loadedFully).toBe(false);
+    expect(parseProductPage(cut(FUND_PAGE_HTML, '<div>Market Price as of', '<div><a href="#">Cumulative'), 'GSLC').loadedFully).toBe(false);
+    expect(parseProductPage(cut(FUND_PAGE_HTML, '<div>12 Month Trailing', '<table><tr><th>Ex-Date'), 'GSLC')).toMatchObject({ loadedFully: true, sections: { yields: false } });
   });
 
   test('missing values become null, never 0: young funds, absent sections, future-dated yields', () => {
@@ -992,6 +1004,36 @@ describe('pipeline', () => {
     await run({ TICKERS: 'GSLC' });
     expect(snapshot(join(world.api, 'funds', 'GSLC'))).toEqual(gslc);
     expect(process.exitCode).toBe(1);
+  }, 30_000);
+
+  test('a partial fund page keeps the published official sections byte for byte; a full page lacking a field is an honest null', async () => {
+    const cut = (html: string, from: string, to: string) => html.slice(0, html.indexOf(from)) + html.slice(html.indexOf(to));
+    let page = FUND_PAGE_HTML;
+    const world = mockWorld({ handler: (url) => (url.includes('/detail/') ? new Response(page) : undefined) });
+    await run({ TICKERS: THREE });
+    const published = snapshot(world.api);
+    const meta = readJson(world, 'funds/GSLC/meta.json');
+    expect(meta).toMatchObject({ marketPrice: { value: 145.41, source: 'official fund page Pricing Table' }, yields: { distributionRate: 0.92, secYield: 0.97 }, returns: { derivedFrom: OFFICIAL_RETURNS_BASIS } });
+
+    // run 2: the pricing, yields, returns and distributions sections are missing (proxy rendering came back partial)
+    page = cut(FUND_PAGE_HTML, '<h2>Performance</h2>', '<div>Top 10 Holdings');
+    const log: string[] = [];
+    await run({ TICKERS: THREE }, { log });
+    expect(snapshot(world.api)).toEqual(published); // meta.json, history, index.json: zero diff
+    expect(log.filter((line) => line.startsWith('[ kept'))).toHaveLength(3); // one notice per fund
+    expect(log.find((line) => line.includes('GSLC') && line.startsWith('[ kept'))).toContain('pricing table, yields, month-end returns, distributions');
+    expect(rowFor(readJson(world, 'index.json'), 'GSLC').metrics).toMatchObject({ dividendYield: 0.92, secYield: 0.97, returnsBasis: OFFICIAL_RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+
+    // run 3: a page that loaded fully but really has no SEC yield and no bid/ask: honest nulls, everything else fresh
+    log.length = 0;
+    page = cut(cut(FUND_PAGE_HTML.replace('145.41USD', '146.00USD'), '<div>Standardized 30-Day Subsidized', '<table><tr><th>Ex-Date'), '<div>Bid/Ask', '<div><a href="#">Cumulative');
+    await run({ TICKERS: THREE }, { log });
+    const fresh = readJson(world, 'funds/GSLC/meta.json');
+    expect(fresh.marketPrice.value).toBe(146);
+    expect(fresh.fundFacts.bidAskMidpoint).toBeNull();
+    expect(fresh.yields).toMatchObject({ distributionRate: 0.92, secYield: null, secYieldText: '—' });
+    expect(fresh.yields.secYieldKind).toContain('not published');
+    expect(log.filter((line) => line.startsWith('[ kept'))).toHaveLength(0);
   }, 30_000);
 
   test('a Yahoo 404 is an honest empty history, not a failed fund', async () => {
