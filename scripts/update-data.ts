@@ -173,16 +173,6 @@ import {
   TOP_HOLDINGS_SNAPSHOTS,
 } from '../data/goldmansachs-verified';
 
-declare const process: {
-  env: Record<string, string | undefined>;
-  argv: string[];
-  execArgv: string[];
-  execPath: string;
-  pid: number;
-  exitCode?: number;
-  exit(code?: number): never;
-};
-
 // --- TLS trust store (identical in every ETF repo) ---
 const SYSTEM_CA_MARKER = 'ETF_UPDATER_SYSTEM_CA';
 const CERT_ERROR = /UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED|unable to get (?:local )?issuer certificate|self[- ]signed certificate|certificate has expired/i;
