@@ -57,6 +57,14 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
+- `dividendYieldBasis` - short code for the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it is kept together with the yield it describes (also when a partial page keeps the published yields):
+
+  | Code | Meaning for Goldman Sachs |
+  | --- | --- |
+  | `official-trailing-12m` | the fund page's 12 Month Trailing Distribution Rate (fresh, kept after a partial page, or carried with `SKIP_GOLDMANSACHS`) |
+  | `indicated` | the updater's estimate: latest distribution x inferred payments per year / NAV or price (used only when the page publishes no rate) |
+  | `official-distribution-rate`, `official-other`, `computed-trailing-12m` | part of the shared vocabulary, not produced for this brand |
+
 - `secYield` - 30-day SEC yield when published; `-` otherwise
 - `returnsBasis` - always a non-empty label of how the returns were computed: official Goldman Sachs fund-page NAV returns (one basis per row: a period the page does not publish stays `null` and is never estimated from market prices), or an estimate derived entirely from Yahoo Finance adjusted market-price closes (only when the page publishes no return table)
 - `terValue` / `terGrossValue` (index row) - NET expense ratio (after waivers) and GROSS expense ratio from the fund page; `null` when the page does not publish it
