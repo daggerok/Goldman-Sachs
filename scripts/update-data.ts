@@ -2322,7 +2322,7 @@ async function finalizeRow(row: JsonRecord): Promise<JsonRecord> {
   const rowMetrics: JsonRecord = row.metrics && typeof row.metrics === 'object' ? row.metrics : {};
   // A published row from before the key existed takes its code from the fund's meta.json (the yield is the same one).
   const fromMeta = !isYieldBasis(rowMetrics.dividendYieldBasis) && numberOrNull(rowMetrics.dividendYield) !== null && numberOrNull(meta?.yields?.dividendYield) === numberOrNull(rowMetrics.dividendYield) ? yieldBasisFromYields(meta?.yields) : null;
-  const next = withMetricsContract({ ...row, ...(fromMeta ? { metrics: { ...rowMetrics, dividendYieldBasis: fromMeta } } : {}), dataFile: exists ? `./funds/${row.ticker}/meta.json` : null });
+  const next: JsonRecord = withMetricsContract({ ...row, ...(fromMeta ? { metrics: { ...rowMetrics, dividendYieldBasis: fromMeta } } : {}), dataFile: exists ? `./funds/${row.ticker}/meta.json` : null });
   if (next.terGrossValue === undefined) { next.terGross = '—'; next.terGrossValue = null; }
   return next;
 }

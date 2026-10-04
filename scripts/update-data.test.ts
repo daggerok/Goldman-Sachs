@@ -997,7 +997,7 @@ describe('pipeline', () => {
 
   test('filtered, bounded and dead-network runs never shrink the feed (rows known only from meta.json stay)', async () => {
     const all = ['AAAU', 'GBIL', 'GSLC', 'ZZIDX', 'ZZMETA'];
-    for (const env of [{ TICKERS: 'GBIL' }, { MAX_FETCHES: '1' }, { SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false' }]) {
+    for (const env of <Record<string, string>[]>[{ TICKERS: 'GBIL' }, { MAX_FETCHES: '1' }, { SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false' }]) {
       const { before, after } = await runUpdater(env);
       expect(before).toEqual(['AAAU', 'GBIL', 'GSLC', 'ZZIDX']);
       expect(after).toEqual(expect.arrayContaining(all));
@@ -1245,11 +1245,11 @@ describe('network', () => {
     expect(calls).toBe(3);
     // 404 is final, 403 is retried (the issuer CDN answers it while throttling)
     calls = 0;
-    globalThis.fetch = (async () => { calls += 1; return new Response('x', { status: 404 }); }) as typeof fetch;
+    globalThis.fetch = (async () => { calls += 1; return new Response('x', { status: 404 }); }) as unknown as typeof fetch;
     await expect(fetchText('https://example.test/c', 'gone', config)).rejects.toThrow(/404/);
     expect(calls).toBe(1);
     calls = 0;
-    globalThis.fetch = (async () => { calls += 1; return calls < 3 ? new Response('x', { status: 403 }) : new Response('ok'); }) as typeof fetch;
+    globalThis.fetch = (async () => { calls += 1; return calls < 3 ? new Response('x', { status: 403 }) : new Response('ok'); }) as unknown as typeof fetch;
     expect(await fetchText('https://example.test/d', 'flaky', config)).toBe('ok');
     expect(calls).toBe(3);
   });
