@@ -156,11 +156,6 @@ function outputCreateReporter(root: URL | string, total: number) {
 // (identical to daggerok/Schwab). No user data or credentials are sent to
 // the proxy. SEC and Yahoo requests stay direct.
 //
-// `OFFLINE_SEED=1` replays the checked-in snapshot in
-// the verified snapshot in this file without any network request, but only for
-// funds that have no published data yet: it never overwrites a published
-// funds/<TICKER>/meta.json and never shrinks index.json.
-//
 // Usage: bun ./scripts/update-data.ts [--help]
 
 import { appendFile, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
@@ -194,8 +189,7 @@ import { AsyncLocalStorage } from 'node:async_hooks';
  *
  * `inceptionDate` is the finder's own inception date and never changes; live
  * fields (NAV, returns, AUM, expense ratio, yields) are refreshed from the
- * detail pages on every run — see the verified snapshot in this file for the
- * read-only offline replay snapshot.
+ * detail pages on every run.
  */
 
 /** Provider asset-class headings, in the finder's own order and vocabulary. */
@@ -661,396 +655,6 @@ export const GOLDMAN_SACHS_FUNDS: GoldmanSachsSeedFund[] = [
   },
 ];
 
-// ---------------------------------------------------------------------------
-// Verified snapshot (inlined from the former the verified snapshot in this file)
-// ---------------------------------------------------------------------------
-
-/**
- * Live Goldman Sachs responses captured during the S0 reconnaissance on 2026-09-21.
- *
- * Why this file exists: the sandbox the feed was first built in has no direct
- * network egress, so the updater could not be run against am.gs.com from
- * there. These are the real, verbatim values the official pages print for a
- * bounded set of funds, kept as a replayable snapshot so
- * `OFFLINE_SEED=1 bun ./scripts/update-data.ts` can produce a working feed
- * offline and so the parsers have real input to be tested against. A run with
- * network access (`OFFLINE_SEED=0`) overwrites every field here from the live
- * endpoints and keeps this file only as the fallback, exactly like the
- * catalog fallback in the sibling updaters.
- *
- * Everything here was read from:
- *   https://am.gs.com/en-us/individual/funds?...filters=funds%7CETF  (finder cards)
- *   https://am.gs.com/en-us/individual/funds/detail/PV<id>/<CUSIP>/<slug>  (fund pages)
- *
- * Nothing in this file is estimated, interpolated or copied from another
- * provider. Cells Goldman Sachs printed as "-" or "N/A" are stored as null.
- */
-
-export const SNAPSHOT_READ_AT = '2026-09-21T00:00:00.000Z';
-
-/** Finder card row, exactly as the server-rendered finder prints it. */
-export type FinderSnapshot = {
-  /** NAV column value ('41.04 USD'). */
-  nav: number | null;
-  navAsOf: string | null;
-  /** Average-annual-returns column values (percent units, null when '-'). */
-  yr1: number | null;
-  yr3: number | null;
-  yr5: number | null;
-  yr10: number | null;
-  sinceInception: number | null;
-  returnsAsOf: string | null;
-  /** Distribution Frequency column ('Monthly' | 'Quarterly' | 'Annually' | 'None'). */
-  frequency: string;
-};
-
-/**
- * All 48 finder cards, in finder order (alphabetical by fund name).
- * NAV as of Sep 17, 2026; returns as of Aug 31, 2026 ('--' for funds too young
- * to have annualized returns: GEMQ, GIEQ, GTPE).
- */
-export const FINDER_SNAPSHOTS: Record<string, FinderSnapshot> = {
-  GEMD: { nav: 41.04, navAsOf: 'Sep 17, 2026', yr1: 6.11, yr3: 8.03, yr5: null, yr10: null, sinceInception: 2.02, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GHYB: { nav: 44.12, navAsOf: 'Sep 17, 2026', yr1: 4.59, yr3: 8.27, yr5: 3.88, yr10: null, sinceInception: 4.56, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GTIP: { nav: 47.06, navAsOf: 'Sep 17, 2026', yr1: 0.97, yr3: 3.9, yr5: 0.3, yr10: null, sinceInception: 3.01, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GIGB: { nav: 44.5, navAsOf: 'Sep 17, 2026', yr1: 1.92, yr3: 4.86, yr5: -0.22, yr10: null, sinceInception: 2.32, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GBIL: { nav: 99.98, navAsOf: 'Sep 17, 2026', yr1: 3.7, yr3: 4.52, yr5: 3.5, yr10: null, sinceInception: 2.31, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GCOR: { nav: 40.01, navAsOf: 'Sep 17, 2026', yr1: 1.8, yr3: 3.85, yr5: -0.63, yr10: null, sinceInception: -0.61, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GPRF: { nav: 48.98, navAsOf: 'Sep 17, 2026', yr1: 2.66, yr3: null, yr5: null, yr10: null, sinceInception: 4.82, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GEM: { nav: 50.62, navAsOf: 'Sep 17, 2026', yr1: 37.09, yr3: 22.57, yr5: 8.27, yr10: 8.79, sinceInception: 9.24, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-  GSEU: { nav: 48.96, navAsOf: 'Sep 17, 2026', yr1: 20.1, yr3: 17.74, yr5: 8.84, yr10: 9.88, sinceInception: 10.02, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSIE: { nav: 47.21, navAsOf: 'Sep 17, 2026', yr1: 21, yr3: 18.65, yr5: 9.19, yr10: 9.74, sinceInception: 9.06, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSJY: { nav: 55.61, navAsOf: 'Sep 17, 2026', yr1: 26.7, yr3: 19.44, yr5: 9.89, yr10: 9.5, sinceInception: 9.75, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSLC: { nav: 145.45, navAsOf: 'Sep 17, 2026', yr1: 16.62, yr3: 19.58, yr5: 11.38, yr10: 14.48, sinceInception: 14.03, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSSC: { nav: 87.87, navAsOf: 'Sep 17, 2026', yr1: 22.17, yr3: 16.55, yr5: 8.07, yr10: null, sinceInception: 10.44, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSWO: { nav: 65.1, navAsOf: 'Sep 17, 2026', yr1: 18.23, yr3: 18.73, yr5: null, yr10: null, sinceInception: 13.44, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GBND: { nav: 49.06, navAsOf: 'Sep 17, 2026', yr1: 1.94, yr3: null, yr5: null, yr10: null, sinceInception: 2.95, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GCPB: { nav: 49.42, navAsOf: 'Sep 17, 2026', yr1: 2.32, yr3: 4.92, yr5: -0.22, yr10: 1.81, sinceInception: 3.47, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GIGL: { nav: 49.04, navAsOf: 'Sep 17, 2026', yr1: 2.11, yr3: null, yr5: null, yr10: null, sinceInception: 3.18, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GEMQ: { nav: 23.94, navAsOf: 'Sep 17, 2026', yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, returnsAsOf: null, frequency: 'Annually' },
-  GIEQ: { nav: 42.17, navAsOf: 'Sep 17, 2026', yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, returnsAsOf: null, frequency: 'Annually' },
-  GCAL: { nav: 49.38, navAsOf: 'Sep 17, 2026', yr1: 4.63, yr3: null, yr5: null, yr10: null, sinceInception: 3.45, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GMNY: { nav: 48.5, navAsOf: 'Sep 17, 2026', yr1: 4.55, yr3: null, yr5: null, yr10: null, sinceInception: 2.67, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GUSE: { nav: 45.5, navAsOf: 'Sep 17, 2026', yr1: 19.29, yr3: 19.12, yr5: 12.2, yr10: 15.53, sinceInception: 12.67, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-  GSEW: { nav: 94.89, navAsOf: 'Sep 17, 2026', yr1: 17.16, yr3: 17.44, yr5: 8.51, yr10: null, sinceInception: 12, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GDOC: { nav: 37.24, navAsOf: 'Sep 17, 2026', yr1: 15.26, yr3: 5.12, yr5: null, yr10: null, sinceInception: -1.08, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GTEK: { nav: 55.85, navAsOf: 'Sep 17, 2026', yr1: 54.83, yr3: 31.55, yr5: null, yr10: null, sinceInception: 7.34, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSGO: { nav: 44.42, navAsOf: 'Sep 17, 2026', yr1: 16.57, yr3: 22.26, yr5: 10.89, yr10: 17.27, sinceInception: 8.75, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-  GVIP: { nav: 168.8, navAsOf: 'Sep 17, 2026', yr1: 19.25, yr3: 24.82, yr5: 10.87, yr10: null, sinceInception: 16.29, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GINC: { nav: 49.39, navAsOf: 'Sep 17, 2026', yr1: 2.87, yr3: 7.21, yr5: 2.9, yr10: null, sinceInception: 3.95, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GIND: { nav: 24.37, navAsOf: 'Sep 17, 2026', yr1: -1.25, yr3: null, yr5: null, yr10: null, sinceInception: 1.13, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GINN: { nav: 81.53, navAsOf: 'Sep 17, 2026', yr1: 18.61, yr3: 19.99, yr5: 6.42, yr10: null, sinceInception: 9.9, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  JUST: { nav: 109.15, navAsOf: 'Sep 17, 2026', yr1: 21.59, yr3: 21.1, yr5: 12.31, yr10: null, sinceInception: 14.67, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSEE: { nav: 68.13, navAsOf: 'Sep 17, 2026', yr1: 36.67, yr3: 21.9, yr5: 8.05, yr10: null, sinceInception: 12.8, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-  GSID: { nav: 76.74, navAsOf: 'Sep 17, 2026', yr1: 21.8, yr3: 18.3, yr5: 9.26, yr10: null, sinceInception: 14.05, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GGUS: { nav: 66.62, navAsOf: 'Sep 17, 2026', yr1: 11.19, yr3: null, yr5: null, yr10: null, sinceInception: 20.9, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GVUS: { nav: 65.14, navAsOf: 'Sep 17, 2026', yr1: 29.53, yr3: null, yr5: null, yr10: null, sinceInception: 22.1, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GXUS: { nav: 63.53, navAsOf: 'Sep 17, 2026', yr1: 26.67, yr3: 19.77, yr5: null, yr10: null, sinceInception: 18.77, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GSUS: { nav: 105.5, navAsOf: 'Sep 17, 2026', yr1: 20.09, yr3: 21.25, yr5: 12.38, yr10: null, sinceInception: 18.57, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GUSA: { nav: 65.91, navAsOf: 'Sep 17, 2026', yr1: 19.82, yr3: 20.72, yr5: null, yr10: null, sinceInception: 13.99, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GTPE: { nav: 60.18, navAsOf: 'Sep 17, 2026', yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, returnsAsOf: null, frequency: 'Annually' },
-  GMUB: { nav: 49.71, navAsOf: 'Sep 17, 2026', yr1: 4.59, yr3: null, yr5: null, yr10: null, sinceInception: 3.76, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GPIQ: { nav: 56.57, navAsOf: 'Sep 17, 2026', yr1: 24.93, yr3: null, yr5: null, yr10: null, sinceInception: 24.84, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  AAAU: { nav: 43.05, navAsOf: 'Sep 17, 2026', yr1: 32.81, yr3: 32.65, yr5: 20.02, yr10: null, sinceInception: 17.36, returnsAsOf: 'Aug 31, 2026', frequency: 'None' },
-  GPIX: { nav: 55.61, navAsOf: 'Sep 17, 2026', yr1: 19.78, yr3: null, yr5: null, yr10: null, sinceInception: 21.94, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GSC: { nav: 62.37, navAsOf: 'Sep 17, 2026', yr1: 21.25, yr3: null, yr5: null, yr10: null, sinceInception: 19.16, returnsAsOf: 'Aug 31, 2026', frequency: 'Quarterly' },
-  GTOP: { nav: 49.62, navAsOf: 'Sep 17, 2026', yr1: 30.5, yr3: 28.42, yr5: 12.86, yr10: 20.42, sinceInception: 10.74, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-  GSST: { nav: 50.42, navAsOf: 'Sep 17, 2026', yr1: 4.16, yr3: 5.37, yr5: 3.93, yr10: null, sinceInception: 3.28, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GUMI: { nav: 50.23, navAsOf: 'Sep 17, 2026', yr1: 2.75, yr3: null, yr5: null, yr10: null, sinceInception: 3.18, returnsAsOf: 'Aug 31, 2026', frequency: 'Monthly' },
-  GVLE: { nav: 47.94, navAsOf: 'Sep 17, 2026', yr1: 20.79, yr3: 17.22, yr5: 11.37, yr10: 12.13, sinceInception: 10.93, returnsAsOf: 'Aug 31, 2026', frequency: 'Annually' },
-};
-
-/** Returns row of a performance table (percent units, null when 'N/A'/'-'). */
-export type ReturnsRowSnapshot = {
-  sinceInception?: number | null;
-  mo1?: number | null;
-  mo3?: number | null;
-  mo6?: number | null;
-  ytd?: number | null;
-  yr1?: number | null;
-  yr3?: number | null;
-  yr5?: number | null;
-  yr10?: number | null;
-};
-
-/** Fund-page header/quick-stats/key-facts/pricing/yields blocks. */
-export type FundPageSnapshot = {
-  /** Canonical fund page URL (seed fundPage). */
-  fundPage: string;
-  nav: number | null;
-  navChange: number | null;
-  navChangePct: number | null;
-  navAsOf: string | null;
-  /** Total Fund Assets (Daily) in USD millions. */
-  aumDailyMm: number | null;
-  aumDailyAsOf: string | null;
-  /** Total Fund Assets (Monthly) in USD millions. */
-  aumMonthlyMm: number | null;
-  aumMonthlyAsOf: string | null;
-  /** 'Number of Holdings' (null when the page prints no such line, e.g. AAAU). */
-  holdingsCount: number | null;
-  /** LBMA Gold Price line (AAAU only). */
-  lbmaGoldPrice: number | null;
-  assetClass: string | null;
-  inceptionDate: string | null;
-  benchmark: string | null;
-  exchange: string | null;
-  navTicker: string | null;
-  iopvTicker: string | null;
-  etfType: string | null;
-  distributor: string | null;
-  peRatio: number | null;
-  pbRatio: number | null;
-  /** Weighted Average Market Cap in USD billions. */
-  wtdAvgMktCapBn: number | null;
-  netExpenseRatio: number | null;
-  grossExpenseRatio: number | null;
-  marketPrice: number | null;
-  marketPrice52wkRange: string | null;
-  premiumDiscount: number | null;
-  bidAsk: number | null;
-  bidAskSpread30d: number | null;
-  pricingAsOf: string | null;
-  /** Cumulative + Annualized tables (month-end). */
-  monthEndAsOf: string | null;
-  monthEndNav: ReturnsRowSnapshot;
-  monthEndMarketPrice: ReturnsRowSnapshot;
-  /** Quarterly Annualized table (quarter-end). */
-  quarterEndAsOf: string | null;
-  quarterEndNav: ReturnsRowSnapshot;
-  quarterEndMarketPrice: ReturnsRowSnapshot;
-  /** Q2 2026 premium/discount day counts (null when the tab is absent). */
-  premiumDays: number | null;
-  atNavDays: number | null;
-  discountDays: number | null;
-  distRate12M: number | null;
-  secYieldSubsidized: number | null;
-  secYieldUnsubsidized: number | null;
-  yieldsAsOf: string | null;
-};
-
-export const FUND_PAGE_SNAPSHOTS: Record<string, FundPageSnapshot> = {
-  GSLC: {
-    fundPage:
-      'https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf',
-    nav: 145.45,
-    navChange: 1.61,
-    navChangePct: 1.12,
-    navAsOf: 'Sep 17, 2026',
-    aumDailyMm: 15098.52,
-    aumDailyAsOf: 'Sep 17, 2026',
-    aumMonthlyMm: 15182.53,
-    aumMonthlyAsOf: 'Aug 31, 2026',
-    holdingsCount: 427,
-    lbmaGoldPrice: null,
-    assetClass: 'Equity',
-    inceptionDate: 'Sep 17, 2015',
-    benchmark: 'Goldman Sachs ActiveBeta U.S. Large Cap Equity Index',
-    exchange: 'NYSE Arca',
-    navTicker: 'GSLC.NV',
-    iopvTicker: 'GSLCIV',
-    etfType: 'Passive',
-    distributor: 'ALPS Distributors, Inc.',
-    peRatio: 23.12,
-    pbRatio: 5.15,
-    wtdAvgMktCapBn: 1526.44,
-    netExpenseRatio: 0.09,
-    grossExpenseRatio: 0.09,
-    marketPrice: 145.41,
-    marketPrice52wkRange: '148.94-121.12',
-    premiumDiscount: -0.03,
-    bidAsk: 145.46,
-    bidAskSpread30d: 0.01,
-    pricingAsOf: 'Sep 17, 2026',
-    monthEndAsOf: 'Aug 31, 2026',
-    monthEndNav: { sinceInception: 321.75, mo1: 2.47, mo3: 2.14, mo6: 11.13, ytd: 11.11, yr1: 16.62, yr3: 19.58, yr5: 11.38, yr10: 14.48 },
-    monthEndMarketPrice: { sinceInception: 321.96, mo1: 2.48, mo3: 2.2, mo6: 11.22, ytd: 11.13, yr1: 16.61, yr3: 19.59, yr5: 11.4, yr10: 14.49 },
-    quarterEndAsOf: 'Jun 30, 2026',
-    quarterEndNav: { yr1: 18.03, yr5: 11.95, yr10: 14.5 },
-    quarterEndMarketPrice: { yr1: 18.09, yr5: 11.95, yr10: 14.5 },
-    premiumDays: 28,
-    atNavDays: 4,
-    discountDays: 30,
-    distRate12M: 0.92,
-    secYieldSubsidized: 0.97,
-    secYieldUnsubsidized: 0.97,
-    yieldsAsOf: 'Aug 31, 2026',
-  },
-  GBIL: {
-    fundPage:
-      'https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf',
-    nav: 99.98,
-    navChange: 0.01,
-    navChangePct: 0.01,
-    navAsOf: 'Sep 17, 2026',
-    aumDailyMm: 7877.7,
-    aumDailyAsOf: 'Sep 17, 2026',
-    aumMonthlyMm: 7639.03,
-    aumMonthlyAsOf: 'Aug 31, 2026',
-    holdingsCount: 40,
-    lbmaGoldPrice: null,
-    assetClass: 'Fixed Income',
-    inceptionDate: 'Sep 6, 2016',
-    benchmark: 'FTSE US Treasury 0-1 Year Composite Select Index (Total Return, Unhedged, USD)',
-    exchange: 'NYSE Arca',
-    navTicker: 'GBIL.NV',
-    iopvTicker: 'GBILIV',
-    etfType: 'Passive',
-    distributor: 'ALPS Distributors, Inc.',
-    peRatio: null,
-    pbRatio: null,
-    wtdAvgMktCapBn: null,
-    netExpenseRatio: 0.12,
-    grossExpenseRatio: 0.14,
-    marketPrice: 99.99,
-    marketPrice52wkRange: '100.26-99.85',
-    premiumDiscount: 0.01,
-    bidAsk: 99.99,
-    bidAskSpread30d: 0.01,
-    pricingAsOf: 'Sep 17, 2026',
-    monthEndAsOf: 'Aug 31, 2026',
-    monthEndNav: { sinceInception: 25.65, mo1: 0.31, mo3: 0.89, mo6: 1.74, ytd: 2.3, yr1: 3.7, yr3: 4.52, yr5: 3.5, yr10: null },
-    monthEndMarketPrice: { sinceInception: 25.64, mo1: 0.29, mo3: 0.89, mo6: 1.74, ytd: 2.28, yr1: 3.69, yr3: 4.5, yr5: 3.5, yr10: null },
-    quarterEndAsOf: 'Jun 30, 2026',
-    quarterEndNav: { sinceInception: 2.29, yr1: 3.81, yr5: 3.37 },
-    quarterEndMarketPrice: { sinceInception: 2.29, yr1: 3.82, yr5: 3.36 },
-    premiumDays: 14,
-    atNavDays: 32,
-    discountDays: 16,
-    distRate12M: 3.67,
-    secYieldSubsidized: 3.69,
-    secYieldUnsubsidized: 3.67,
-    yieldsAsOf: 'Aug 31, 2026',
-  },
-  AAAU: {
-    fundPage:
-      'https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf',
-    nav: 43.05,
-    navChange: 0.39,
-    navChangePct: 0.91,
-    navAsOf: 'Sep 17, 2026',
-    aumDailyMm: 2807.57,
-    aumDailyAsOf: 'Sep 17, 2026',
-    aumMonthlyMm: 2874.48,
-    aumMonthlyAsOf: 'Aug 31, 2026',
-    holdingsCount: null,
-    lbmaGoldPrice: 4328.2,
-    assetClass: 'Commodities',
-    inceptionDate: 'Jul 26, 2018',
-    benchmark: 'London Gold Fixed Price (Price Return, USD, Unhedged)',
-    exchange: 'Cboe BZX',
-    navTicker: 'AAAU.NV',
-    iopvTicker: 'AAAUIV',
-    etfType: 'Passive',
-    distributor: 'ALPS Distributors, Inc.',
-    peRatio: null,
-    pbRatio: null,
-    wtdAvgMktCapBn: null,
-    netExpenseRatio: 0.18,
-    grossExpenseRatio: 0.18,
-    marketPrice: 42.82,
-    marketPrice52wkRange: '54.71-35.81',
-    premiumDiscount: -0.53,
-    bidAsk: 42.83,
-    bidAskSpread30d: 0.02,
-    pricingAsOf: 'Sep 17, 2026',
-    monthEndAsOf: 'Aug 31, 2026',
-    monthEndNav: { sinceInception: 266.13, mo1: 13.27, mo3: 0.31, mo6: -12.71, ytd: 5.79, yr1: 32.81, yr3: 32.65, yr5: 20.02, yr10: null },
-    monthEndMarketPrice: { sinceInception: 257.26, mo1: 9.89, mo3: -2.08, mo6: -15.49, ytd: 3.13, yr1: 28.68, yr3: 31.63, yr5: 19.42, yr10: null },
-    quarterEndAsOf: 'Jun 30, 2026',
-    quarterEndNav: { sinceInception: 15.93, yr1: 22.27, yr5: 17.74 },
-    quarterEndMarketPrice: { sinceInception: 15.88, yr1: 21.08, yr5: 17.58 },
-    premiumDays: null,
-    atNavDays: null,
-    discountDays: null,
-    distRate12M: null,
-    secYieldSubsidized: null,
-    secYieldUnsubsidized: null,
-    yieldsAsOf: null,
-  },
-};
-
-/** Top-10 holdings table row (weight in percent units). */
-export type TopHoldingSnapshot = { name: string; weight: number };
-
-export type TopHoldingsSnapshot = {
-  asOf: string;
-  /** '35.85% of Total Portfolio' headline. */
-  top10Pct: number;
-  rows: TopHoldingSnapshot[];
-};
-
-export const TOP_HOLDINGS_SNAPSHOTS: Record<string, TopHoldingsSnapshot> = {
-  GSLC: {
-    asOf: 'Sep 17, 2026',
-    top10Pct: 35.85,
-    rows: [
-      { name: 'NVIDIA Corp', weight: 8.01 },
-      { name: 'Apple Inc', weight: 7.45 },
-      { name: 'Microsoft Corp', weight: 5.25 },
-      { name: 'Amazon.com Inc', weight: 3.42 },
-      { name: 'Alphabet Inc', weight: 2.95 },
-      { name: 'Meta Platforms Inc', weight: 2.23 },
-      { name: 'Broadcom Inc', weight: 2.19 },
-      { name: 'Alphabet Inc', weight: 1.84 },
-      { name: 'Micron Technology Inc', weight: 1.27 },
-      { name: 'JPMorgan Chase & Co', weight: 1.24 },
-    ],
-  },
-  GBIL: {
-    asOf: 'Sep 17, 2026',
-    top10Pct: 53.52,
-    rows: [
-      { name: 'US GOVT T-BILL 08 OCT 2026', weight: 7.2 },
-      { name: 'US GOVT T-BILL 27 NOV 2026', weight: 7.15 },
-      { name: 'US GOVT T-BILL 22 OCT 2026', weight: 6.8 },
-      { name: 'US GOVT T-BILL 29 OCT 2026', weight: 6.56 },
-      { name: 'US GOVT T-BILL 27 OCT 2026', weight: 6.52 },
-      { name: 'US GOVT T-BILL 25 FEB 2027', weight: 4.18 },
-      { name: 'US GOVT 3.875% 31 JUL 2027', weight: 3.93 },
-      { name: 'US GOVT T-BILL 24 NOV 2026', weight: 3.84 },
-      { name: 'US GOVT 3.875% 31 MAR 2027', weight: 3.68 },
-      { name: 'US GOVT 3.75% 30 APR 2027', weight: 3.66 },
-    ],
-  },
-};
-
-/** Distributions table row, exactly as the fund page prints it. */
-export type DistributionSnapshot = {
-  exDate: string;
-  recordDate: string;
-  payDate: string;
-  amount: number | null;
-};
-
-export const DISTRIBUTION_SNAPSHOTS: Record<string, DistributionSnapshot[]> = {
-  // Page order is newest-first; the page renders one all-'--' row
-  // (12/31/2025) and one duplicated row (12/23/2025) — both cleaned here.
-  GSLC: [
-    { exDate: '06/24/2026', recordDate: '06/24/2026', payDate: '06/30/2026', amount: 0.3447 },
-    { exDate: '03/25/2026', recordDate: '03/25/2026', payDate: '03/31/2026', amount: 0.3409 },
-    { exDate: '12/23/2025', recordDate: '12/23/2025', payDate: '12/30/2025', amount: 0.3381 },
-    { exDate: '09/24/2025', recordDate: '09/24/2025', payDate: '09/30/2025', amount: 0.3183 },
-    { exDate: '06/24/2025', recordDate: '06/24/2025', payDate: '06/30/2025', amount: 0.331 },
-    { exDate: '03/25/2025', recordDate: '03/25/2025', payDate: '03/31/2025', amount: 0.3359 },
-    { exDate: '12/23/2024', recordDate: '12/23/2024', payDate: '12/30/2024', amount: 0.3629 },
-    { exDate: '09/24/2024', recordDate: '09/24/2024', payDate: '09/30/2024', amount: 0.297 },
-  ],
-  // The page renders the 12/31/2025 row twice — deduplicated here.
-  GBIL: [
-    { exDate: '09/01/2026', recordDate: '09/01/2026', payDate: '09/08/2026', amount: 0.3047 },
-    { exDate: '08/03/2026', recordDate: '08/03/2026', payDate: '08/07/2026', amount: 0.3053 },
-    { exDate: '07/01/2026', recordDate: '07/01/2026', payDate: '07/08/2026', amount: 0.3109 },
-    { exDate: '06/01/2026', recordDate: '06/01/2026', payDate: '06/05/2026', amount: 0.2777 },
-    { exDate: '05/01/2026', recordDate: '05/01/2026', payDate: '05/07/2026', amount: 0.2935 },
-    { exDate: '04/01/2026', recordDate: '04/01/2026', payDate: '04/08/2026', amount: 0.3022 },
-    { exDate: '03/02/2026', recordDate: '03/02/2026', payDate: '03/06/2026', amount: 0.2747 },
-    { exDate: '02/02/2026', recordDate: '02/02/2026', payDate: '02/06/2026', amount: 0.2731 },
-    { exDate: '12/31/2025', recordDate: '12/31/2025', payDate: '01/07/2026', amount: 0.3382 },
-  ],
-};
-
-
 // --- TLS trust store (identical in every ETF repo) ---
 const SYSTEM_CA_MARKER = 'ETF_UPDATER_SYSTEM_CA';
 const CERT_ERROR = /UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED|unable to get (?:local )?issuer certificate|self[- ]signed certificate|certificate has expired/i;
@@ -1296,7 +900,6 @@ type UpdaterConfig = {
   edgarFallback: boolean;
   skipGoldmanSachs: boolean;
   skipYahoo: boolean;
-  offlineSeed: boolean;
   secUa: string;
 };
 
@@ -1566,7 +1169,6 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     edgarFallback: !['0', 'false', 'off', 'no', 'n'].includes(String(env.EDGAR_FALLBACK ?? '1').toLowerCase()),
     skipGoldmanSachs: parseBoolean(env.SKIP_GOLDMANSACHS),
     skipYahoo: parseBoolean(env.SKIP_YAHOO),
-    offlineSeed: parseBoolean(env.OFFLINE_SEED),
     secUa: env.SEC_UA?.trim() || SEC_UA_DEFAULT,
   };
 }
@@ -1862,7 +1464,7 @@ export function parseCatalogText(text: string): CatalogFund[] {
   return [...funds.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
 }
 
-/** Universe seed rows as catalog entries (finder backfill + offline runs). */
+/** Universe seed rows as catalog entries (finder backfill). */
 export function seedCatalogFunds(): CatalogFund[] {
   return GOLDMAN_SACHS_FUNDS.map((seed) => ({
     ticker: seed.ticker,
@@ -3215,7 +2817,7 @@ const PROVIDER_LABEL = 'Goldman Sachs Asset Management fund finder + official fu
 /**
  * May this N-PORT filing replace the published holdings? Identity: the filing must name the fund's series.
  * Freshness: its report date must not be older than the published holdings' date (a published top-10
- * snapshot from OFFLINE_SEED does not count as newer than a real filing).
+ * snapshot from a legacy offline run does not count as newer than a real filing).
  */
 export function checkNportFiling(filingSeriesId: unknown, expectedSeriesId: string, filingReportDate: unknown, publishedAsOf: unknown, publishedSource: unknown): { ok: boolean; reason?: string } {
   const series = String(filingSeriesId ?? '').toUpperCase();
@@ -3381,7 +2983,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
         const parsed = parseNport(await fetchText(filing.accession.url, `[nport   ] ${fund.ticker}`, config, secHeaders()));
         // The series must be named in the filing and be this fund's series (identity), and the report
         // must not be older than the holdings already published (freshness): an older filing never
-        // replaces newer data. A published top-10 snapshot from OFFLINE_SEED does not count as newer.
+        // replaces newer data. A legacy published top-10 snapshot does not count as newer.
         const verdict = checkNportFiling(parsed.seriesId, filing.ref.seriesId, parsed.repPdDate, previousMeta?.holdings?.asOfDate, previousMeta?.holdings?.source);
         if (!verdict.ok) outputNote(`[ ${'nport'.padEnd(9)}] ${fund.ticker}: ${verdict.reason}`);
         if (verdict.ok && parsed.holdings.length) {
@@ -3607,234 +3209,6 @@ function historyHeaders(): string[] {
   return ['Date', 'Close', 'Adj Close', 'Volume'];
 }
 
-// ---------------------------------------------------------------------------
-// Offline seed replay (no network; identical feed shape)
-// ---------------------------------------------------------------------------
-
-const OFFLINE_BASIS = 'offline seed snapshot (official fund finder + transcribed fund pages, 2026-09-21); refreshed from live sources in CI';
-
-function snapshotReturnRow(values: { sinceInception?: number | null; mo1?: number | null; mo3?: number | null; ytd?: number | null; yr1?: number | null; yr3?: number | null; yr5?: number | null; yr10?: number | null }, asOfDate: string): OfficialReturnRow {
-  return { asOfDate, mo1: values.mo1 ?? null, mo3: values.mo3 ?? null, ytd: values.ytd ?? null, yr1: values.yr1 ?? null, cagr3y: values.yr3 ?? null, cagr5y: values.yr5 ?? null, cagr10y: values.yr10 ?? null, siAnn: values.sinceInception ?? null };
-}
-
-async function buildOfflineSeedFeed(config: UpdaterConfig): Promise<void> {
-  console.log(`[ ${'seed'.padEnd(9)}] OFFLINE_SEED=1: replaying the verified snapshot in this file (no network requests) for funds without published data`);
-  // Published data is never overwritten: a fund that already has funds/<T>/meta.json keeps its live files
-  // and index row, and the index keeps every known fund (TICKERS and filters only choose which new funds are seeded).
-  const known = await readKnownFunds();
-  const universe = seedCatalogFunds();
-  for (const fund of universe) {
-    const snap = FINDER_SNAPSHOTS[fund.ticker];
-    if (snap) {
-      if (snap.nav !== null) fund.nav = snap.nav;
-      if (snap.navAsOf) fund.asOfDate = monthDateToIso(snap.navAsOf);
-      if (snap.frequency) fund.frequency = snap.frequency;
-      if (snap.returnsAsOf) fund.returnsAsOf = monthDateToIso(snap.returnsAsOf);
-      fund.returns = { ytd: null, yr1: snap.yr1, yr3: snap.yr3, yr5: snap.yr5, yr10: snap.yr10, sinceInception: snap.sinceInception };
-    }
-    if (fund.cusip) fund.isin = isinFromCusip(fund.cusip);
-  }
-  universe.sort((a, b) => a.ticker.localeCompare(b.ticker));
-  const funds: JsonRecord[] = [];
-  const selectedCount = universe.filter(fund => !catalogFilterReasons(fund, config).length).length;
-  outputPrintFilter(selectedCount, universe.length);
-  const output = outputCreateReporter(API_ROOT, selectedCount);
-  for (const fund of universe) {
-    if (catalogFilterReasons(fund, config).length) continue;
-    const before = await output.before(fund.ticker);
-    const fundDir = new URL(`funds/${fund.ticker}/`, API_ROOT);
-    if (await readPreviousMeta(fund.ticker)) {
-      await output.result(fund.ticker, before, 'skipped', 'published data kept (OFFLINE_SEED only fills funds without data)');
-      continue;
-    }
-    const rich = FUND_PAGE_SNAPSHOTS[fund.ticker];
-    const ter = rich?.netExpenseRatio ?? null;
-    const grossTer = rich?.grossExpenseRatio ?? null;
-    const nav = rich?.nav ?? fund.nav;
-    const netAssets = rich?.aumDailyMm != null ? rich.aumDailyMm * 1e6 : null;
-    const marketPrice = rich?.marketPrice ?? null;
-    const premiumDiscount = rich?.premiumDiscount ?? null;
-    const secYield = rich?.secYieldSubsidized ?? null;
-    const dividendYield = rich?.distRate12M ?? null;
-    const dividends: Distribution[] = (DISTRIBUTION_SNAPSHOTS[fund.ticker] || [])
-      .map((row) => ({ epoch: isoToEpoch(toIsoDate(row.exDate)) ?? 0, amount: row.amount ?? 0 }))
-      .filter((item) => item.epoch > 0 && item.amount > 0)
-      .sort((a, b) => a.epoch - b.epoch);
-    const latest = dividends[dividends.length - 1] || null;
-    const inferred = inferDistributionFrequency(dividends);
-    const distributionFrequency = selectDistributionFrequency(fund.frequency, inferred.frequency, dividends.length, undefined);
-    const paymentsPerYear = paymentsPerYearForFrequency(distributionFrequency) ?? inferred.paymentsPerYear;
-    const text = (value: number | null) => (value === null ? '—' : `${value.toFixed(2)}%`);
-    const monthEndNav = rich?.monthEndNav || {};
-    const monthEndMp = rich?.monthEndMarketPrice || {};
-    const quarterEndNav = rich?.quarterEndNav || {};
-    const quarterEndMp = rich?.quarterEndMarketPrice || {};
-    const monthEndAsOf = rich?.monthEndAsOf ? monthDateToIso(rich.monthEndAsOf) : fund.returnsAsOf;
-    const quarterEndAsOf = rich?.quarterEndAsOf ? monthDateToIso(rich.quarterEndAsOf) : null;
-    const monthEnd = {
-      asOfDate: monthEndAsOf ? formatDate(monthEndAsOf) : '—',
-      mo1: monthEndNav.mo1 ?? null, mo1Text: text(monthEndNav.mo1 ?? null),
-      mo3: monthEndNav.mo3 ?? null, mo3Text: text(monthEndNav.mo3 ?? null),
-      qtd: null, qtdText: '—',
-      ytd: monthEndNav.ytd ?? null, ytdText: text(monthEndNav.ytd ?? null),
-      yr1: fund.returns.yr1, yr1Text: text(fund.returns.yr1),
-      yr3: fund.returns.yr3, yr3Text: text(fund.returns.yr3),
-      yr5: fund.returns.yr5, yr5Text: text(fund.returns.yr5),
-      yr10: fund.returns.yr10, yr10Text: text(fund.returns.yr10),
-      sinceInception: fund.returns.sinceInception, sinceInceptionText: text(fund.returns.sinceInception),
-    };
-    const quarterEnd = {
-      asOfDate: quarterEndAsOf ? formatDate(quarterEndAsOf) : '—',
-      ytd: null,
-      yr1: quarterEndNav.yr1 ?? null,
-      yr3: quarterEndNav.yr3 ?? null,
-      yr5: quarterEndNav.yr5 ?? null,
-      yr10: quarterEndNav.yr10 ?? null,
-      sinceInception: quarterEndNav.sinceInception ?? null,
-    };
-    const returns: JsonRecord = { derivedFrom: OFFLINE_BASIS, monthEnd, quarterEnd };
-    const metrics: JsonRecord = {
-      ytd: monthEnd.ytd,
-      tr1y: fund.returns.yr1,
-      tr3y: annualizedToTotal(fund.returns.yr3, 3),
-      tr5y: annualizedToTotal(fund.returns.yr5, 5),
-      tr10y: annualizedToTotal(fund.returns.yr10, 10),
-      cagr3y: fund.returns.yr3,
-      cagr5y: fund.returns.yr5,
-      cagr10y: fund.returns.yr10,
-      siAnn: fund.returns.sinceInception,
-      dividendYield,
-      dividendYieldText: dividendYield === null ? '—' : `${dividendYield.toFixed(2)}%`,
-      dividendYieldBasis: dividendYield === null ? null : 'official-trailing-12m',
-      secYield,
-      secYieldText: secYield === null ? '—' : `${secYield.toFixed(2)}%`,
-      returnsBasis: OFFLINE_BASIS,
-      performanceAsOf: performanceAsOf(monthEndAsOf),
-    };
-    const top = TOP_HOLDINGS_SNAPSHOTS[fund.ticker];
-    const holdingsRows: JsonRecord[] = (top?.rows || []).map((row) => ({
-      Name: row.name,
-      Ticker: '-',
-      Identifier: '-',
-      Weight: row.weight === null ? '0' : String(row.weight),
-      'Market Value': row.weight !== null && netAssets !== null ? String(round(row.weight / 100 * netAssets, 2)) : '-',
-      'Shares Held': '-',
-      'Asset Category': rich?.assetClass || fund.category,
-    }));
-    const holdingsAsOf = top?.asOf ? monthDateToIso(top.asOf) : null;
-    const holdingsSource = top
-      ? 'offline seed snapshot: official top-10 holdings transcribed from the fund page (full sheet refreshes from SEC EDGAR Form N-PORT-P in CI)'
-      : 'offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)';
-    const holdingManifest = await writePages(fundDir, fund.ticker, 'holdings', HOLDINGS_HEADERS, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
-    if (top) holdingManifest.marketValueBasis = 'derived: published top-10 weight x Total Fund Assets (Daily)';
-    if (rich?.holdingsCount !== null && rich?.holdingsCount !== undefined) holdingManifest.publishedTotalHoldings = rich.holdingsCount;
-    const historySource = 'offline seed snapshot carries no price history (Yahoo Finance refresh in CI)';
-    const historyManifest = await writePages(fundDir, fund.ticker, 'history', historyHeaders(), [], config.historyPageSize, null, historySource);
-    const distributionsSource = dividends.length
-      ? 'offline seed snapshot: official fund-page Distributions table (2026-09-21)'
-      : distributionFrequency === 'None'
-        ? 'the issuer reports no distributions for this fund (Distribution Frequency: None)'
-        : 'offline seed snapshot carries no distribution history for this fund';
-    const asOfLabel = rich?.navAsOf ? formatDate(monthDateToIso(rich.navAsOf)) : fund.asOfDate ? formatDate(fund.asOfDate) : '—';
-    const meta: JsonRecord = {
-      ticker: fund.ticker,
-      name: fund.name,
-      category: fund.category,
-      categoryPath: fund.categoryPath || fund.category,
-      source: {
-        fundPage: fund.fundPage,
-        officialProductPage: fund.fundPage,
-        productPageRendering: rich ? 'offline seed snapshot of the official fund page (2026-09-21)' : 'offline seed snapshot: fund finder card only (detail refresh in CI)',
-        productPageAsOf: rich?.navAsOf ? formatDate(monthDateToIso(rich.navAsOf)) : null,
-        holdingsDownload: null,
-        distributionsDownload: null,
-        navHistoryDownload: null,
-        pricesDownload: null,
-        yahooChart: `${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}`,
-        holdingsSource,
-        historySource,
-        distributionsSource,
-        provider: PROVIDER_LABEL,
-      },
-      identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, isinBasis: fund.isin ? 'derived from the published CUSIP (US prefix + check digit)' : null, indexTicker: rich?.benchmark || null, exchange: rich?.exchange || null, morningstarCategory: null, navTicker: rich?.navTicker || null, iopvTicker: rich?.iopvTicker || null },
-      expenseRatio: { display: ter === null ? '—' : `${ter}%`, value: ter, gross: grossTer, kind: 'Net Expense Ratio published on the official fund page' },
-      nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate: asOfLabel },
-      marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: asOfLabel, source: rich ? 'official fund page Pricing Table' : 'offline seed snapshot carries no market price for this fund' },
-      premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount, asOfDate: asOfLabel, source: rich ? 'official fund page Pricing Table' : 'offline seed snapshot carries no premium/discount for this fund' },
-      aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: rich?.aumDailyAsOf ? formatDate(monthDateToIso(rich.aumDailyAsOf)) : '—', source: rich ? 'official fund page Total Fund Assets (Daily)' : 'offline seed snapshot carries no AUM for this fund' },
-      fundFacts: { sharesOutstanding: null, portfolioTurnover: null, publishedTotalHoldings: rich?.holdingsCount ?? null, bidAskMidpoint: rich?.bidAsk ?? null, lbmaGoldPrice: rich?.lbmaGoldPrice ?? null, lbmaGoldPriceAsOf: rich?.lbmaGoldPrice ? formatDate(monthDateToIso('Sep 16, 2026')) : null, premiumDays: rich?.premiumDays ?? null, atNavDays: rich?.atNavDays ?? null, discountDays: rich?.discountDays ?? null },
-      yields: {
-        dividendYield,
-        dividendYieldText: metrics.dividendYieldText,
-        dividendYieldBasis: metrics.dividendYieldBasis,
-        dividendYieldKind: rich?.distRate12M != null ? `12 Month Trailing Distribution Rate published on the official fund page${rich.yieldsAsOf ? ` as of ${formatDate(monthDateToIso(rich.yieldsAsOf))}` : ''}` : 'offline seed snapshot carries no distribution rate for this fund',
-        distributionRate: rich?.distRate12M ?? null,
-        secYield,
-        secYieldText: metrics.secYieldText,
-        secYieldKind: rich?.secYieldSubsidized != null ? `Standardized 30-Day Subsidized Yield published on the official fund page${rich.yieldsAsOf ? ` as of ${formatDate(monthDateToIso(rich.yieldsAsOf))}` : ''}` : 'offline seed snapshot carries no SEC yield for this fund',
-      },
-      returns,
-      officialMarketPriceReturns: rich ? { monthEnd: returnRowJson(snapshotReturnRow(monthEndMp, monthEndAsOf || '')), quarterEnd: returnRowJson(snapshotReturnRow(quarterEndMp, quarterEndAsOf || '')) } : null,
-      distributions: { frequency: distributionFrequency, frequencyCode: frequencyCodeLabel(distributionFrequency), paymentsPerYear, source: distributionsSource, headers: ['Ex-Date', 'Amount'], rows: distributionRows(dividends) },
-      topHoldings: top ? { asOfDate: holdingsAsOf ? formatDate(holdingsAsOf) : '—', asOf: holdingsAsOf ? formatDate(holdingsAsOf) : '—', top10Pct: top.top10Pct, rows: top.rows } : null,
-      holdings: holdingManifest,
-      history: historyManifest,
-    };
-    await writeIfChanged(new URL('meta.json', fundDir), meta);
-    await output.result(fund.ticker, before);
-    funds.push({
-      ticker: fund.ticker,
-      name: fund.name,
-      category: fund.category,
-      fundPage: fund.fundPage,
-      dataFile: `./funds/${fund.ticker}/meta.json`,
-      cusip: fund.cusip || null,
-      isin: fund.isin || null,
-      ter: ter === null ? '—' : `${ter}%`,
-      terValue: ter,
-      nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
-      navValue: nav,
-      aum: formatAumDisplay(netAssets),
-      aumValue: netAssets,
-      asOfDate: asOfLabel,
-      inceptionDate: fund.inception ? formatDate(fund.inception) : '—',
-      exchange: rich?.exchange || '',
-      closePrice: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`,
-      closePriceValue: marketPrice,
-      premiumDiscount: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`,
-      premiumDiscountValue: premiumDiscount,
-      frequencyCode: frequencyCodeLabel(distributionFrequency),
-      distributions: { frequency: distributionFrequency, exDate: latest ? formatUsDate(latest.epoch) : '—', dividend: latest ? String(round(latest.amount, 6)) : '—' },
-      returns,
-      metrics,
-      holdings: holdingsRows.length,
-      history: 0,
-    });
-  }
-  const merged = new Map(known);
-  for (const row of funds) merged.set(String(row.ticker), row);
-  for (const fund of universe) if (!merged.has(fund.ticker)) merged.set(fund.ticker, placeholderRow(fund));
-  funds.length = 0;
-  for (const row of [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)))) funds.push(await finalizeRow(row));
-  const counts = { funds: funds.length, holdings: funds.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: funds.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
-  await writeIfChanged(INDEX_FILE, {
-    generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
-    source: {
-      provider: 'Goldman Sachs Asset Management, U.S.-listed ETFs',
-      market: 'us',
-      site: GS_SITE,
-      catalog: GS_CATALOG_URL,
-      catalogFallback: proxyUrl(GS_CATALOG_URL),
-      holdings: 'offline seed snapshot: official top-10 holdings (SEC EDGAR Form N-PORT-P refresh in CI)',
-      distributions: 'offline seed snapshot: official fund-page Distributions table (full refresh in CI)',
-      history: 'offline seed snapshot carries no price history (Yahoo Finance refresh in CI)',
-    },
-    counts,
-    funds,
-  });
-  console.log(`[ ${'done'.padEnd(9)}] offline seed feed: ${counts.funds} funds / ${counts.holdings} holdings rows`);
-}
-
 function configLines(config: UpdaterConfig): string[] {
   return [
     `MAX_FETCHES=${config.maxFetches || 'all'}`,
@@ -3889,13 +3263,11 @@ workflow inputs < environment variables, resolved by one shared resolveControls:
   EDGAR_FALLBACK=true
   SKIP_GOLDMANSACHS=off use the previously published catalog/fund-page data
   SKIP_YAHOO=off      keep previously published history when possible
-  OFFLINE_SEED=off    replay the verified snapshot in this file (no network) for funds WITHOUT published data only
 
 Examples:
   TICKERS="GSLC GBIL AAAU" ./scripts/update-data.ts
   AUM="large:" TER=":0.10" ./scripts/update-data.ts
   PERFORMANCE_3Y="10:" TOTAL_RETURN_1Y="15:" ./scripts/update-data.ts
-  OFFLINE_SEED=1 ./scripts/update-data.ts
 `;
 
 /** The run stops taking new funds after this long and still writes the index (the workflow allows 30 minutes). */
@@ -3923,11 +3295,6 @@ export async function main(env: Record<string, string | undefined> = process.env
   resetPacing(config.requestSleep);
   resetIssuerDirectState();
   outputPrintConfig('Goldman-Sachs', config);
-
-  if (config.offlineSeed) {
-    await buildOfflineSeedFeed(config);
-    return;
-  }
 
   const previous = await readKnownFunds();
   const catalog = new Map<string, CatalogFund>();
@@ -4062,7 +3429,7 @@ export async function main(env: Record<string, string | undefined> = process.env
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'STORE_RAW_DOWNLOADS', 'MAX_RETRIES', 'SEC_UA',
-  'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE', 'USE_SYSTEM_CA',
+  'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'VERBOSE', 'USE_SYSTEM_CA',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
 ] as const;
 export type ControlName = (typeof CONTROL_NAMES)[number];
@@ -4106,7 +3473,7 @@ export function resolveControls(
   }
   const sleep = result.REQUEST_SLEEP;
   if (sleep && sleep.trim() && (!Number.isFinite(Number(sleep)) || Number(sleep) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
-  for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'OFFLINE_SEED', 'VERBOSE']) {
+  for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_GOLDMANSACHS', 'VERBOSE']) {
     if (result[key] && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key])) throw new Error(`${key}: expected boolean`);
   }
   if (result.HISTORY_RANGE !== undefined && result.HISTORY_RANGE.trim()) parseHistoryRange(result.HISTORY_RANGE);
