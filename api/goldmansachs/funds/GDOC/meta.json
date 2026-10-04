@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": null,
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028080/0000940400-26-028080.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -23,15 +23,15 @@
     "isin": "US38149W7700",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
     "indexTicker": null,
-    "exchange": "NYSE Arca",
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GDOC.NV",
-    "iopvTicker": "GDOCIV"
+    "navTicker": null,
+    "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "0.75%",
-    "value": 0.75,
-    "gross": 0.75,
+    "display": "—",
+    "value": null,
+    "gross": null,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$19.17 M",
-    "value": 19170000,
-    "asOfDate": "Oct 01 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "display": "$20.12 M",
+    "value": 20117827.48,
+    "asOfDate": "May 31 2026",
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 40,
+    "publishedTotalHoldings": null,
     "bidAskMidpoint": 36.5,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -71,6 +71,7 @@
   "yields": {
     "dividendYield": 0.3,
     "dividendYieldText": "0.30%",
+    "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
     "distributionRate": 0.3,
     "secYield": 0.06,
@@ -184,8 +185,7 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028080, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 40
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
     "pages": [

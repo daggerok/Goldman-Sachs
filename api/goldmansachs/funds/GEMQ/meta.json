@@ -71,6 +71,7 @@
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": null,
     "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
     "distributionRate": null,
     "secYield": null,
@@ -80,7 +81,7 @@
   "returns": {
     "derivedFrom": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
     "monthEnd": {
-      "asOfDate": "Oct 01 2026",
+      "asOfDate": "Oct 02 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
@@ -140,8 +141,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 14,
-    "asOf": "Oct 01 2026",
+    "totalRows": 15,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

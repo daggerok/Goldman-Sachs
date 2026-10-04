@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": null,
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028139/0000940400-26-028139.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,16 +22,16 @@
     "cusip": "38149W457",
     "isin": "US38149W4574",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "MSCI World Private Equity Return Tracker Index (Net Total Return, Unhedged, USD)",
-    "exchange": "NASDAQ",
+    "indexTicker": null,
+    "exchange": null,
     "morningstarCategory": null,
-    "navTicker": "GTPE.NV",
-    "iopvTicker": "N/A"
+    "navTicker": null,
+    "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "0.5%",
-    "value": 0.5,
-    "gross": 0.5,
+    "display": "—",
+    "value": null,
+    "gross": null,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$30.23 M",
-    "value": 30230000,
-    "asOfDate": "Oct 01 2026",
-    "source": "official fund page Total Fund Assets (Daily)"
+    "display": "$30.20 M",
+    "value": 30198808.45,
+    "asOfDate": "May 31 2026",
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1597,
+    "publishedTotalHoldings": null,
     "bidAskMidpoint": 60.7,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -71,6 +71,7 @@
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": null,
     "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
     "distributionRate": null,
     "secYield": 1.16,
@@ -176,8 +177,7 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028139, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 1597
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
     "pages": [

@@ -71,6 +71,7 @@
   "yields": {
     "dividendYield": 0.19,
     "dividendYieldText": "0.19%",
+    "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
     "distributionRate": 0.19,
     "secYield": null,
