@@ -68,8 +68,8 @@ import {
   yieldBasisFromYields,
   yahooChartQuery,
 } from './update-data';
-import { GOLDMAN_SACHS_FUNDS } from '../data/goldmansachs-funds';
-import { DISTRIBUTION_SNAPSHOTS, FINDER_SNAPSHOTS, FUND_PAGE_SNAPSHOTS, TOP_HOLDINGS_SNAPSHOTS } from '../data/goldmansachs-verified';
+import { GOLDMAN_SACHS_FUNDS } from './update-data';
+import { DISTRIBUTION_SNAPSHOTS, FINDER_SNAPSHOTS, FUND_PAGE_SNAPSHOTS, TOP_HOLDINGS_SNAPSHOTS } from './update-data';
 
 // ---------------------------------------------------------------------------
 // Fixtures: verbatim shapes observed on am.gs.com (2026-09-21)
@@ -967,7 +967,6 @@ describe('pipeline', () => {
     try {
       mkdirSync(join(root, 'scripts'), { recursive: true });
       for (const file of ['update-data.ts', 'update-data.config.json']) cpSync(new URL(file, import.meta.url), join(root, 'scripts', file));
-      cpSync(new URL('../data', import.meta.url), join(root, 'data'), { recursive: true });
       const api = join(root, 'api', 'goldmansachs');
       const indexed = ['AAAU', 'GBIL', 'GSLC', 'ZZIDX'];
       for (const ticker of [...indexed, 'ZZMETA']) {
