@@ -88,7 +88,6 @@ Caveats:
 - Holdings come from SEC EDGAR N-PORT-P because the fund pages only print the top 10; the fund-page top 10 is kept as summary data only. A filing is used only when it names the fund's own series and is not older than the published holdings
 - Dates are zero padded (`Jun 04 2026`) and month names are parsed as UTC
 - Distributions come from the fund page table, with Yahoo dividend events as the fallback
-- `OFFLINE_SEED` fills only funds that have no published `meta.json` from the committed seed and verified snapshot inside `scripts/update-data.ts` without network access; it never overwrites published data, never shrinks `index.json` and leaves the cursor alone
 
 ### Update controls
 
@@ -113,7 +112,6 @@ Defaults below are the values in `scripts/update-data.config.json`. Environment 
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings; `false` disables it |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions, skip Yahoo Finance |
 | `SKIP_GOLDMANSACHS` | `false` | Skip the Goldman Sachs fund finder and detail pages (SEC EDGAR + Yahoo Finance only) |
-| `OFFLINE_SEED` | `false` | Seed funds that have no published data from the committed snapshot inside `scripts/update-data.ts` only, with no network access; published funds are never overwritten |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized return range `min:max` per tenor (official NAV return where published) |
@@ -121,7 +119,7 @@ Defaults below are the values in `scripts/update-data.config.json`. Environment 
 
 Environment aliases keep working through the same resolver: `GOLDMANSACHS_<CONTROL>` (for example `GOLDMANSACHS_CONCURRENCY`) beats `<CONTROL>`, and `HISTORICAL_PAGE_SIZE` is the legacy name of `HISTORY_PAGE_SIZE`. Invalid values (non-integer counts, bad ranges, unknown tickers, `HISTORY_RANGE` other than `max` or `Ny`) are errors, never silent fallbacks
 
-Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `OFFLINE_SEED`, `VERBOSE` and `USE_SYSTEM_CA`, which are reachable through `advanced`
+Workflow inputs mirror the lowercase control names, except `STORE_RAW_DOWNLOADS`, `SEC_UA`, `EDGAR_FALLBACK`, `VERBOSE` and `USE_SYSTEM_CA`, which are reachable through `advanced`
 
 ### Examples
 

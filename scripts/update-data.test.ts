@@ -69,7 +69,6 @@ import {
   yahooChartQuery,
 } from './update-data';
 import { GOLDMAN_SACHS_FUNDS } from './update-data';
-import { DISTRIBUTION_SNAPSHOTS, FINDER_SNAPSHOTS, FUND_PAGE_SNAPSHOTS, TOP_HOLDINGS_SNAPSHOTS } from './update-data';
 
 // ---------------------------------------------------------------------------
 // Fixtures: verbatim shapes observed on am.gs.com (2026-09-21)
@@ -559,7 +558,7 @@ describe('controls', () => {
     expect(config).toMatchObject({
       maxFetches: 0, requestSleep: 2, concurrency: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', maxRetries: 2,
       tickers: null, performance: {}, totalReturn: {}, edgarFallback: true, skipYahoo: false, skipGoldmanSachs: false,
-      storeRawDownloads: false, offlineSeed: false, secUa: 'daggerok ETF feed daggerok@gmail.com',
+      storeRawDownloads: false, secUa: 'daggerok ETF feed daggerok@gmail.com',
     });
     for (const key of ['aum', 'ter', 'dividendYield', 'secYield'] as const) expect(config[key]).toBeUndefined();
     const controls = await runtimeControls({ TICKERS: 'GSLC GBIL', SKIP_YAHOO: 'true', PERFORMANCE_1Y: '15:' });
@@ -812,11 +811,11 @@ describe('parsing', () => {
     expect(checkNportFiling('S000002', 'S000001', '2026-06-30', '', '').ok).toBe(false);
     expect(checkNportFiling('', 'S000001', '2026-06-30', '', '').ok).toBe(false);
     expect(checkNportFiling('S000001', 'S000001', '2026-03-31', '2026-06-30', 'SEC EDGAR Form N-PORT-P').reason).toContain('older than the published holdings');
-    // a published top-10 snapshot from OFFLINE_SEED is not "fresher" than a real filing
+    // a legacy published top-10 snapshot is not "fresher" than a real filing
     expect(checkNportFiling('S000001', 'S000001', '2026-06-30', '2026-09-17', 'offline seed snapshot: official top-10 holdings').ok).toBe(true);
   });
 
-  test('the 48-ETF universe seed and the verified snapshots agree', () => {
+  test('the 48-ETF universe seed is complete and consistent', () => {
     const tickers = GOLDMAN_SACHS_FUNDS.map((fund) => fund.ticker);
     expect(tickers.length).toBe(48);
     expect(new Set(tickers).size).toBe(48);
@@ -829,12 +828,6 @@ describe('parsing', () => {
     const seeds = seedCatalogFunds();
     expect(seeds.length).toBe(48);
     expect(seeds.every((fund) => fund.source === 'seed')).toBe(true);
-    expect(Object.keys(FINDER_SNAPSHOTS).sort()).toEqual([...tickers].sort());
-    expect(FINDER_SNAPSHOTS.GEMQ).toMatchObject({ yr1: null, returnsAsOf: null });
-    expect(FUND_PAGE_SNAPSHOTS.GSLC).toMatchObject({ netExpenseRatio: 0.09, aumDailyMm: 15098.52, holdingsCount: 427 });
-    expect(FUND_PAGE_SNAPSHOTS.AAAU.holdingsCount).toBeNull();
-    expect(TOP_HOLDINGS_SNAPSHOTS.GSLC.rows.length).toBe(10);
-    expect(DISTRIBUTION_SNAPSHOTS.GSLC.length).toBe(8);
   });
 });
 
@@ -1140,21 +1133,6 @@ describe('pipeline', () => {
     const summary = join(world.dir, 'summary.md');
     await run({ TICKERS: 'GBIL', GITHUB_STEP_SUMMARY: summary });
     expect(readFileSync(summary, 'utf8')).toContain('NEW FUNDS: AAAU, JUST');
-  });
-
-  test('OFFLINE_SEED fills only funds without published data and makes no request', async () => {
-    const world = mockWorld();
-    await run({ TICKERS: 'GBIL' });
-    const gbil = snapshot(join(world.api, 'funds', 'GBIL'));
-    const rows = readJson(world, 'index.json').funds.length;
-    const hits = world.hits.length;
-    await run({ OFFLINE_SEED: 'true', TICKERS: 'GBIL,GSLC' });
-    expect(snapshot(join(world.api, 'funds', 'GBIL'))).toEqual(gbil);
-    expect(world.hits.length).toBe(hits);
-    expect(existsSync(join(world.api, 'funds', 'GSLC', 'meta.json'))).toBe(true);
-    const index = readJson(world, 'index.json');
-    expect(index.funds.length).toBeGreaterThanOrEqual(rows);
-    expect(rowFor(index, 'GSLC').dataFile).toBe('./funds/GSLC/meta.json');
   });
 
   test('stale history pages are removed after the new meta.json is written, no temp files are left', async () => {
