@@ -64,6 +64,8 @@ import {
   toIsoDate,
   toTextLines,
   withMetricsContract,
+  yieldBasisFromKind,
+  yieldBasisFromYields,
   yahooChartQuery,
 } from './update-data';
 import { GOLDMAN_SACHS_FUNDS } from '../data/goldmansachs-funds';
@@ -877,7 +879,7 @@ describe('metrics', () => {
     await run({ TICKERS: 'GSLC' });
     const index = readJson(world, 'index.json');
     expect(index.funds.length).toBeGreaterThan(40);
-    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'];
+    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'];
     for (const row of index.funds) {
       expect(Object.keys(row.metrics).slice(0, keys.length)).toEqual(keys);
       expect(row.metrics.returnsBasis.length).toBeGreaterThan(5);
@@ -887,6 +889,49 @@ describe('metrics', () => {
     expect(gslc).toMatchObject({ terValue: 0.09, terGrossValue: 0.09 });
     expect(rowFor(index, 'AAAU').metrics).toMatchObject({ ytd: null, tr10y: null, dividendYield: null, secYield: null, returnsBasis: NO_DATA_BASIS, performanceAsOf: null });
     expect(withMetricsContract({ metrics: { 'null': null, ytd: 0 } }).metrics).not.toHaveProperty('null');
+  });
+
+  test('dividendYieldBasis names the source of each yield and is null exactly when the yield is null', async () => {
+    const effective = priceReturns([day('2025-09-10', 100), day('2026-09-17', 121)]);
+    const monthly = [{ epoch: Date.UTC(2026, 7, 1) / 1000, amount: 0.3 }];
+    const derive = (dividendYield: number | null, dividends = monthly) => deriveMetrics(effective, { dividendYield, secYield: null } as Parameters<typeof deriveMetrics>[1], dividends, { paymentsPerYear: 12 }, 100, true);
+    // fund-page 12 Month Trailing Distribution Rate (fresh, retained or carried)
+    expect(derive(0.92)).toMatchObject({ dividendYield: 0.92, dividendYieldBasis: 'official-trailing-12m' });
+    expect(derive(0)).toMatchObject({ dividendYield: 0, dividendYieldBasis: 'official-trailing-12m' });
+    // updater estimate: latest distribution x payments per year / price
+    expect(derive(null)).toMatchObject({ dividendYield: 3.6, dividendYieldBasis: 'indicated' });
+    expect(derive(null, [])).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
+    // published meta.json texts map exhaustively; an unknown text is never claimed as official
+    expect(yieldBasisFromKind('12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026', 1)).toBe('official-trailing-12m');
+    expect(yieldBasisFromKind('carried from the previous run (official fund page)', 1)).toBe('official-trailing-12m');
+    expect(yieldBasisFromKind('indicated (latest distribution x inferred payments per year / NAV)', 1)).toBe('indicated');
+    expect(yieldBasisFromKind('something new', 1)).toBe('indicated');
+    expect(yieldBasisFromKind('12 Month Trailing Distribution Rate', null)).toBeNull();
+    expect(yieldBasisFromYields({ dividendYield: 2, dividendYieldBasis: 'official-other', dividendYieldKind: 'x' })).toBe('official-other');
+    expect(yieldBasisFromYields({ dividendYield: null, dividendYieldBasis: 'indicated' })).toBeNull();
+    // the contract never lets a code outlive its yield or a yield go without one
+    expect(withMetricsContract({ metrics: { dividendYield: null, dividendYieldBasis: 'indicated' } }).metrics.dividendYieldBasis).toBeNull();
+    expect(withMetricsContract({ metrics: { dividendYield: 1, dividendYieldBasis: 'bogus' } }).metrics.dividendYieldBasis).toBe('indicated');
+  });
+
+  test('fresh, rebuilt and placeholder rows carry the same metrics keys, and the code follows the yield', async () => {
+    const world = mockWorld();
+    await run({ TICKERS: 'GSLC' });
+    const index = readJson(world, 'index.json');
+    const fresh = rowFor(index, 'GSLC').metrics;
+    expect(fresh).toMatchObject({ dividendYield: 0.92, dividendYieldBasis: 'official-trailing-12m' });
+    expect(readJson(world, 'funds/GSLC/meta.json').yields).toMatchObject({ dividendYield: 0.92, dividendYieldBasis: 'official-trailing-12m' });
+    const meta = readJson(world, 'funds/GSLC/meta.json');
+    const rebuilt = indexRowFromMeta(meta)!.metrics;
+    const placeholder = placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics;
+    expect(Object.keys(rebuilt).sort()).toEqual(Object.keys(fresh).sort());
+    expect(Object.keys(placeholder).sort()).toEqual(Object.keys(fresh).sort());
+    expect(rebuilt.dividendYieldBasis).toBe('official-trailing-12m');
+    expect(placeholder).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
+    // a row published before the key existed: the code is taken from its meta.json
+    delete meta.yields.dividendYieldBasis;
+    expect(indexRowFromMeta(meta)!.metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    for (const row of index.funds) expect(row.metrics.dividendYieldBasis === null).toBe(row.metrics.dividendYield === null);
   });
 });
 
@@ -1022,7 +1067,7 @@ describe('pipeline', () => {
     expect(snapshot(world.api)).toEqual(published); // meta.json, history, index.json: zero diff
     expect(log.filter((line) => line.startsWith('[ kept'))).toHaveLength(3); // one notice per fund
     expect(log.find((line) => line.includes('GSLC') && line.startsWith('[ kept'))).toContain('pricing table, yields, month-end returns, distributions');
-    expect(rowFor(readJson(world, 'index.json'), 'GSLC').metrics).toMatchObject({ dividendYield: 0.92, secYield: 0.97, returnsBasis: OFFICIAL_RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+    expect(rowFor(readJson(world, 'index.json'), 'GSLC').metrics).toMatchObject({ dividendYield: 0.92, dividendYieldBasis: 'official-trailing-12m', secYield: 0.97, returnsBasis: OFFICIAL_RETURNS_BASIS, performanceAsOf: '2026-08-31' });
 
     // run 3: a page that loaded fully but really has no SEC yield and no bid/ask: honest nulls, everything else fresh
     log.length = 0;
