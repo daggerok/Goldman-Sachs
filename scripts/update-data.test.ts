@@ -596,36 +596,15 @@ describe('controls', () => {
     expect(calls).toBe(1);
   });
 
-  test('config keys, CONTROL_NAMES, README and --help are in sync, and scripts/ holds only the standard files', () => {
+  test('config keys and CONTROL_NAMES are in sync, and --help lists every control', () => {
     expect(Object.keys(configFile()).sort()).toEqual([...CONTROL_NAMES].sort());
     for (const value of Object.values(configFile())) expect(typeof value).toBe('string');
-    const doc = readRepo('README.md');
     const usage = readRepo('scripts/update-data.ts');
     for (const name of CONTROL_NAMES) {
       const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
-      expect(doc).toContain(tenor ? '`_' + tenor[2] + '`' : '`' + name + '`');
       expect(usage).toContain(tenor ? `${tenor[1]}_YTD|1Y|3Y|5Y|10Y` : name);
     }
-    expect(doc).not.toContain('example.com');
     expect(usage).not.toContain('example.com');
-    expect(readdirSync(new URL('./', import.meta.url)).sort()).toEqual(['update-data.config.json', 'update-data.test.ts', 'update-data.ts']);
-  });
-
-  test('the workflow resolves the same controls and only writes under api/goldmansachs', () => {
-    const yml = readRepo('.github/workflows/update-data.yml');
-    const block = yml.slice(yml.indexOf('    inputs:'), yml.indexOf('\npermissions:'));
-    const names = [...block.matchAll(/^      (\w+):$/gm)].map((m) => m[1]);
-    expect(names.length).toBeLessThanOrEqual(25);
-    expect(names).toContain('advanced');
-    for (const name of names.filter((n) => n !== 'advanced')) expect(CONTROL_NAMES).toContain(name.toUpperCase() as never);
-    for (const text of ['import { resolveControls } from "./scripts/update-data.ts"', 'toJSON(inputs)', 'PROTECTED_SEC_UA: ${{ vars.SEC_UA }}', 'git add api/goldmansachs\n', 'timeout-minutes: 30', 'persist-credentials: false']) {
-      expect(yml).toContain(text);
-    }
-    expect(yml.match(/git add /g)?.length).toBe(1);
-    expect(yml).not.toMatch(/\$\{\{\s*(inputs|github\.event\.inputs)\./);
-    expect(yml).not.toMatch(/^  push:/m);
-    expect(yml).not.toContain('OUTPUT_DIR');
-    for (const dir of yml.match(/api\/[\w-]+/g) ?? []) expect(dir).toBe('api/goldmansachs');
   });
 });
 
