@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": "Oct 08 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028141/0000940400-26-028141.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,9 +35,9 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$68.47",
-    "value": 68.47,
-    "asOfDate": "Oct 01 2026"
+    "display": "$69.16",
+    "value": 69.16,
+    "asOfDate": "Oct 08 2026"
   },
   "marketPrice": {
     "display": "$68.43",
@@ -52,9 +52,9 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$499.86 M",
-    "value": 499860000,
-    "asOfDate": "Oct 01 2026",
+    "display": "$504.84 M",
+    "value": 504840000,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "3.92%",
       "mo3": -2.83,
       "mo3Text": "-2.83%",
-      "qtd": 1.12,
-      "qtdText": "1.12%",
+      "qtd": 1.83,
+      "qtdText": "1.83%",
       "ytd": 5.24,
       "ytdText": "5.24%",
       "yr1": 11.19,
@@ -98,8 +98,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 20.9,
-      "sinceInceptionText": "20.90%"
+      "sinceInception": 21.12,
+      "sinceInceptionText": "21.12%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -230,8 +230,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 712,
-    "asOf": "Oct 02 2026",
+    "totalRows": 717,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

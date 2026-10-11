@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105932/38149W556/goldman-sachs-dynamic-new-york-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105932/38149W556/goldman-sachs-dynamic-new-york-municipal-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": "Oct 08 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028079/0000940400-26-028079.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.80",
-    "value": 47.8,
-    "asOfDate": "Oct 01 2026"
+    "display": "$47.44",
+    "value": 47.44,
+    "asOfDate": "Oct 08 2026"
   },
   "marketPrice": {
-    "display": "$47.86",
-    "value": 47.86,
-    "asOfDate": "Oct 01 2026",
+    "display": "$47.55",
+    "value": 47.55,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.13%",
-    "value": 0.13,
-    "asOfDate": "Oct 01 2026",
+    "display": "0.23%",
+    "value": 0.23,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$50.19 M",
-    "value": 50190000,
-    "asOfDate": "Oct 01 2026",
+    "display": "$51.00 M",
+    "value": 51000000,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 224,
-    "bidAskMidpoint": 47.89,
+    "publishedTotalHoldings": 228,
+    "bidAskMidpoint": 47.55,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,86 +69,86 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": 3.48,
-    "dividendYieldText": "3.48%",
+    "dividendYield": 3.61,
+    "dividendYieldText": "3.61%",
     "dividendYieldBasis": "official-trailing-12m",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
-    "distributionRate": 3.48,
-    "secYield": 3.52,
-    "secYieldText": "3.52%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Sep 30 2026",
+    "distributionRate": 3.61,
+    "secYield": 3.73,
+    "secYieldText": "3.73%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.01,
-      "mo1Text": "0.01%",
-      "mo3": -0.6,
-      "mo3Text": "-0.60%",
-      "qtd": -0.3,
-      "qtdText": "-0.30%",
-      "ytd": 1,
-      "ytdText": "1.00%",
-      "yr1": 4.55,
-      "yr1Text": "4.55%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -3.25,
+      "mo1Text": "-3.25%",
+      "mo3": -4.52,
+      "mo3Text": "-4.52%",
+      "qtd": -0.37,
+      "qtdText": "-0.37%",
+      "ytd": -2.28,
+      "ytdText": "-2.28%",
+      "yr1": -0.68,
+      "yr1Text": "-0.68%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 2.67,
-      "sinceInceptionText": "2.67%"
+      "sinceInception": 1.04,
+      "sinceInceptionText": "1.04%"
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "ytd": null,
-      "yr1": 6.33,
+      "yr1": -0.68,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 3.62
+      "sinceInception": 1.04
     }
   },
   "officialMarketPriceReturns": {
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": -0.05,
-      "mo1Text": "-0.05%",
-      "mo3": -0.54,
-      "mo3Text": "-0.54%",
-      "ytd": 0.97,
-      "ytdText": "0.97%",
-      "yr1": 4.38,
-      "yr1Text": "4.38%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -3.13,
+      "mo1Text": "-3.13%",
+      "mo3": -4.3,
+      "mo3Text": "-4.30%",
+      "ytd": -2.19,
+      "ytdText": "-2.19%",
+      "yr1": -0.69,
+      "yr1Text": "-0.69%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 2.73,
-      "sinceInceptionText": "2.73%"
+      "sinceInception": 1.15,
+      "sinceInceptionText": "1.15%"
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
       "mo3Text": "—",
       "ytd": null,
       "ytdText": "—",
-      "yr1": 6.03,
-      "yr1Text": "6.03%",
+      "yr1": -0.69,
+      "yr1Text": "-0.69%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 3.62,
-      "sinceInceptionText": "3.62%"
+      "sinceInception": 1.15,
+      "sinceInceptionText": "1.15%"
     }
   },
   "distributions": {
@@ -274,15 +274,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028079, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 224
+    "publishedTotalHoldings": 228
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 515,
-    "asOf": "Oct 02 2026",
+    "totalRows": 520,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

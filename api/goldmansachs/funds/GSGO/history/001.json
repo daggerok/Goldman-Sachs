@@ -2,7 +2,7 @@
   "ticker": "GSGO",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 220,
+  "totalRows": 225,
   "headers": [
     "Date",
     "Close",
@@ -1329,6 +1329,36 @@
       "Close": "46.1510009765625",
       "Adj Close": "46.15",
       "Volume": "18700"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "46.527000427246094",
+      "Adj Close": "46.53",
+      "Volume": "3700"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "46.757999420166016",
+      "Adj Close": "46.76",
+      "Volume": "5700"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "46.53099822998047",
+      "Adj Close": "46.53",
+      "Volume": "7300"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "45.79800033569336",
+      "Adj Close": "45.8",
+      "Volume": "8700"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "46.13199996948242",
+      "Adj Close": "46.13",
+      "Volume": "4400"
     }
   ]
 }

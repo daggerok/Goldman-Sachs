@@ -1,0 +1,38 @@
+{
+  "ticker": "GTIP",
+  "page": 3,
+  "pageSize": 1000,
+  "totalRows": 2004,
+  "headers": [
+    "Date",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ],
+  "rows": [
+    {
+      "Date": "Oct 06 2026",
+      "Close": "46.310001373291016",
+      "Adj Close": "46.31",
+      "Volume": "163800"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "46.34000015258789",
+      "Adj Close": "46.34",
+      "Volume": "25200"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "46.47999954223633",
+      "Adj Close": "46.48",
+      "Volume": "33400"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "46.43000030517578",
+      "Adj Close": "46.43",
+      "Volume": "13600"
+    }
+  ]
+}

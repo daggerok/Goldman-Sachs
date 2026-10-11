@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105931/38149W572/goldman-sachs-ultra-short-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105931/38149W572/goldman-sachs-ultra-short-municipal-income-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 01 2026",
+    "productPageAsOf": "Oct 08 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028121/0000940400-26-028121.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.06",
-    "value": 50.06,
-    "asOfDate": "Oct 01 2026"
-  },
-  "marketPrice": {
     "display": "$50.07",
     "value": 50.07,
-    "asOfDate": "Oct 01 2026",
+    "asOfDate": "Oct 08 2026"
+  },
+  "marketPrice": {
+    "display": "$50.13",
+    "value": 50.13,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.02,
-    "asOfDate": "Oct 01 2026",
+    "display": "0.12%",
+    "value": 0.12,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$62.57 M",
-    "value": 62570000,
-    "asOfDate": "Oct 01 2026",
+    "display": "$62.59 M",
+    "value": 62590000,
+    "asOfDate": "Oct 08 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 178,
-    "bidAskMidpoint": 50.06,
+    "publishedTotalHoldings": 185,
+    "bidAskMidpoint": 50.11,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,86 +69,86 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": 2.67,
-    "dividendYieldText": "2.67%",
+    "dividendYield": 2.66,
+    "dividendYieldText": "2.66%",
     "dividendYieldBasis": "official-trailing-12m",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Aug 31 2026",
-    "distributionRate": 2.67,
-    "secYield": 2.58,
-    "secYieldText": "2.58%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Aug 31 2026"
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Sep 30 2026",
+    "distributionRate": 2.66,
+    "secYield": 2.95,
+    "secYieldText": "2.95%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.25,
-      "mo1Text": "0.25%",
-      "mo3": 0.66,
-      "mo3Text": "0.66%",
-      "qtd": 0.05,
-      "qtdText": "0.05%",
-      "ytd": 1.81,
-      "ytdText": "1.81%",
-      "yr1": 2.75,
-      "yr1Text": "2.75%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -0.29,
+      "mo1Text": "-0.29%",
+      "mo3": 0.1,
+      "mo3Text": "0.10%",
+      "qtd": 0.1,
+      "qtdText": "0.10%",
+      "ytd": 1.51,
+      "ytdText": "1.51%",
+      "yr1": 2.24,
+      "yr1Text": "2.24%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 3.18,
-      "sinceInceptionText": "3.18%"
+      "sinceInception": 2.92,
+      "sinceInceptionText": "2.92%"
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "ytd": null,
-      "yr1": 3.01,
+      "yr1": 2.24,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 3.25
+      "sinceInception": 2.92
     }
   },
   "officialMarketPriceReturns": {
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.17,
-      "mo1Text": "0.17%",
-      "mo3": 0.67,
-      "mo3Text": "0.67%",
-      "ytd": 1.67,
-      "ytdText": "1.67%",
-      "yr1": 2.77,
-      "yr1Text": "2.77%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -0.11,
+      "mo1Text": "-0.11%",
+      "mo3": 0.19,
+      "mo3Text": "0.19%",
+      "ytd": 1.56,
+      "ytdText": "1.56%",
+      "yr1": 2.25,
+      "yr1Text": "2.25%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 3.14,
-      "sinceInceptionText": "3.14%"
+      "sinceInception": 2.97,
+      "sinceInceptionText": "2.97%"
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
       "mo3Text": "—",
       "ytd": null,
       "ytdText": "—",
-      "yr1": 3.11,
-      "yr1Text": "3.11%",
+      "yr1": 2.25,
+      "yr1Text": "2.25%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 3.27,
-      "sinceInceptionText": "3.27%"
+      "sinceInception": 2.97,
+      "sinceInceptionText": "2.97%"
     }
   },
   "distributions": {
@@ -278,15 +278,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028121, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 178
+    "publishedTotalHoldings": 185
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 550,
-    "asOf": "Oct 02 2026",
+    "totalRows": 555,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

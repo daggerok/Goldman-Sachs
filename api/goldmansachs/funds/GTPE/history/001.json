@@ -2,7 +2,7 @@
   "ticker": "GTPE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 237,
+  "totalRows": 242,
   "headers": [
     "Date",
     "Close",
@@ -1431,6 +1431,36 @@
       "Close": "61.48099899291992",
       "Adj Close": "61.48",
       "Volume": "21900"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "61.255001068115234",
+      "Adj Close": "61.26",
+      "Volume": "12600"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "61.689998626708984",
+      "Adj Close": "61.69",
+      "Volume": "14900"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "60.79800033569336",
+      "Adj Close": "60.8",
+      "Volume": "13300"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "60.50299835205078",
+      "Adj Close": "60.5",
+      "Volume": "12300"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "60.882999420166016",
+      "Adj Close": "60.88",
+      "Volume": "12000"
     }
   ]
 }

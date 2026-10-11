@@ -2,7 +2,7 @@
   "ticker": "GMNY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 515,
+  "totalRows": 520,
   "headers": [
     "Date",
     "Close",
@@ -3099,6 +3099,36 @@
       "Close": "47.71500015258789",
       "Adj Close": "47.72",
       "Volume": "27100"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "47.81999969482422",
+      "Adj Close": "47.82",
+      "Volume": "7300"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "47.74800109863281",
+      "Adj Close": "47.75",
+      "Volume": "34900"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "47.54800033569336",
+      "Adj Close": "47.55",
+      "Volume": "57500"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "47.54999923706055",
+      "Adj Close": "47.55",
+      "Volume": "12700"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "47.685001373291016",
+      "Adj Close": "47.69",
+      "Volume": "22200"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GIGL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 320,
+  "totalRows": 325,
   "headers": [
     "Date",
     "Close",
@@ -1929,6 +1929,36 @@
       "Close": "47.72800064086914",
       "Adj Close": "47.73",
       "Volume": "120800"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "47.72600173950195",
+      "Adj Close": "47.73",
+      "Volume": "5600"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "47.84000015258789",
+      "Adj Close": "47.84",
+      "Volume": "26700"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "47.82099914550781",
+      "Adj Close": "47.82",
+      "Volume": "11800"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "47.96699905395508",
+      "Adj Close": "47.97",
+      "Volume": "10600"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "47.970001220703125",
+      "Adj Close": "47.97",
+      "Volume": "10600"
     }
   ]
 }

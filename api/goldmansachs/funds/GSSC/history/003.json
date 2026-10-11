@@ -2,7 +2,7 @@
   "ticker": "GSSC",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2322,
+  "totalRows": 2327,
   "headers": [
     "Date",
     "Close",
@@ -1941,6 +1941,36 @@
       "Close": "86.87000274658203",
       "Adj Close": "86.87",
       "Volume": "19800"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "87.44000244140625",
+      "Adj Close": "87.44",
+      "Volume": "23200"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "86.75",
+      "Adj Close": "86.75",
+      "Volume": "31700"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "85.74099731445312",
+      "Adj Close": "85.74",
+      "Volume": "18600"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "85.91999816894531",
+      "Adj Close": "85.92",
+      "Volume": "31400"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "86.29000091552734",
+      "Adj Close": "86.29",
+      "Volume": "23900"
     }
   ]
 }
