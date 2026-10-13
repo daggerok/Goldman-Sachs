@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028141/0000940400-26-028141.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -22,16 +22,16 @@
     "cusip": "38149W598",
     "isin": "US38149W5985",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Russell 1000 Growth 40 Act Daily Capped Index(Total Return, Unhedged, USD)",
+    "exchange": "NYSE Arca",
     "morningstarCategory": null,
-    "navTicker": null,
-    "iopvTicker": null
+    "navTicker": "GGUS.NV",
+    "iopvTicker": "GGUSIV"
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
+    "display": "0.12%",
+    "value": 0.12,
+    "gross": 0.12,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
@@ -52,15 +52,15 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$461.17 M",
-    "value": 461170844.3,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$508.57 M",
+    "value": 508570000,
+    "asOfDate": "Oct 09 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
+    "publishedTotalHoldings": 368,
     "bidAskMidpoint": 69.67,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
@@ -222,7 +222,8 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028141, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 368
   },
   "history": {
     "pages": [

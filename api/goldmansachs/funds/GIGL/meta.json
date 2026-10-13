@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028063/0000940400-26-028063.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,24 +37,24 @@
   "nav": {
     "display": "$47.95",
     "value": 47.95,
-    "asOfDate": "Oct 08 2026"
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
     "display": "$47.97",
     "value": 47.97,
-    "asOfDate": "Oct 08 2026",
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.04%",
+    "value": 0.04,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$239.76 M",
-    "value": 239760000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$239.77 M",
+    "value": 239770000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "-2.95%",
       "mo3": -4.05,
       "mo3Text": "-4.05%",
-      "qtd": 0.33,
-      "qtdText": "0.33%",
+      "qtd": 0.43,
+      "qtdText": "0.43%",
       "ytd": -3.18,
       "ytdText": "-3.18%",
       "yr1": -2.36,
@@ -242,8 +242,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 325,
-    "asOf": "Oct 09 2026",
+    "totalRows": 326,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
