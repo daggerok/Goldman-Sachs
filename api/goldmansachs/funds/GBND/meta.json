@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109040/38149W473/goldman-sachs-core-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109040/38149W473/goldman-sachs-core-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028069/0000940400-26-028069.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,31 +37,31 @@
   "nav": {
     "display": "$48.06",
     "value": 48.06,
-    "asOfDate": "Oct 08 2026"
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$48.07",
-    "value": 48.07,
-    "asOfDate": "Oct 08 2026",
+    "display": "$48.10",
+    "value": 48.1,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.08%",
+    "value": 0.08,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$599.53 M",
-    "value": 599530000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$599.55 M",
+    "value": 599550000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 717,
-    "bidAskMidpoint": 48.08,
+    "bidAskMidpoint": 48.1,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.83%",
       "mo3": -3.79,
       "mo3Text": "-3.79%",
-      "qtd": 0.2,
-      "qtdText": "0.20%",
+      "qtd": 0.26,
+      "qtdText": "0.26%",
       "ytd": -3.09,
       "ytdText": "-3.09%",
       "yr1": -2.05,
@@ -243,8 +243,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 325,
-    "asOf": "Oct 09 2026",
+    "totalRows": 326,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

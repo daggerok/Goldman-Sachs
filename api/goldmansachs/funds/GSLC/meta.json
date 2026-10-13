@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028061/0000940400-26-028061.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$147.45",
-    "value": 147.45,
-    "asOfDate": "Oct 08 2026"
+    "display": "$148.25",
+    "value": 148.25,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$147.50",
-    "value": 147.5,
-    "asOfDate": "Oct 08 2026",
+    "display": "$148.24",
+    "value": 148.24,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Oct 08 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$15.27 B",
-    "value": 15268880000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$15.35 B",
+    "value": 15351160000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 427,
-    "bidAskMidpoint": 147.47,
+    "bidAskMidpoint": 148.24,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -352,8 +352,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2780,
-    "asOf": "Oct 09 2026",
+    "totalRows": 2781,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

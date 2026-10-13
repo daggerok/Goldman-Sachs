@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$65.04",
-    "value": 65.04,
-    "asOfDate": "Oct 08 2026"
+    "display": "$65.45",
+    "value": 65.45,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$65.16",
-    "value": 65.16,
-    "asOfDate": "Oct 08 2026",
+    "display": "$65.56",
+    "value": 65.56,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.18,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.17%",
+    "value": 0.17,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.79 B",
-    "value": 1792570000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$1.80 B",
+    "value": 1803850000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 742,
-    "bidAskMidpoint": 65.17,
+    "bidAskMidpoint": 65.6,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.91%",
       "mo3": 2.48,
       "mo3Text": "2.48%",
-      "qtd": 1.57,
-      "qtdText": "1.57%",
+      "qtd": 1.39,
+      "qtdText": "1.39%",
       "ytd": 13.32,
       "ytdText": "13.32%",
       "yr1": 15.32,
@@ -251,8 +251,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1145,
-    "asOf": "Oct 09 2026",
+    "totalRows": 1146,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

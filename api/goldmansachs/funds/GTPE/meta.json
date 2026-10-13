@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028139/0000940400-26-028139.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$60.76",
-    "value": 60.76,
-    "asOfDate": "Oct 08 2026"
+    "display": "$61.11",
+    "value": 61.11,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$60.89",
-    "value": 60.89,
-    "asOfDate": "Oct 08 2026",
+    "display": "$60.88",
+    "value": 60.88,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.42%",
-    "value": -0.42,
-    "asOfDate": "Oct 08 2026",
+    "display": "-0.37%",
+    "value": -0.37,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$30.38 M",
-    "value": 30380000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$30.55 M",
+    "value": 30550000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 1597,
-    "bidAskMidpoint": 60.53,
+    "bidAskMidpoint": 60.89,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.87%",
       "mo3": -2.57,
       "mo3Text": "-2.57%",
-      "qtd": 0.3,
-      "qtdText": "0.30%",
+      "qtd": -0.12,
+      "qtdText": "-0.12%",
       "ytd": 16.96,
       "ytdText": "16.96%",
       "yr1": null,
@@ -185,8 +185,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 242,
-    "asOf": "Oct 09 2026",
+    "totalRows": 243,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

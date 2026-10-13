@@ -2,7 +2,7 @@
   "ticker": "GINN",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1486,
+  "totalRows": 1487,
   "headers": [
     "Date",
     "Close",
@@ -2925,6 +2925,12 @@
       "Close": "82.12100219726562",
       "Adj Close": "82.12",
       "Volume": "2400"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "81.61499786376953",
+      "Adj Close": "81.61",
+      "Volume": "400"
     }
   ]
 }

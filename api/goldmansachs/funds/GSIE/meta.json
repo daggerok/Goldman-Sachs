@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102390/381430107/goldman-sachs-active-beta-international-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028068/0000940400-26-028068.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,9 +35,9 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$45.18",
-    "value": 45.18,
-    "asOfDate": "Oct 08 2026"
+    "display": "$45.52",
+    "value": 45.52,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
     "display": "$45.44",
@@ -52,9 +52,9 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$5.80 B",
-    "value": 5801230000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$5.84 B",
+    "value": 5844400000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "-3.32%",
       "mo3": 1.71,
       "mo3Text": "1.71%",
-      "qtd": 0.7,
-      "qtdText": "0.70%",
+      "qtd": 0.44,
+      "qtdText": "0.44%",
       "ytd": 9.67,
       "ytdText": "9.67%",
       "yr1": 15.13,
@@ -365,8 +365,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2744,
-    "asOf": "Oct 09 2026",
+    "totalRows": 2745,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

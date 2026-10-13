@@ -2,7 +2,7 @@
   "ticker": "GUSA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1127,
+  "totalRows": 1128,
   "headers": [
     "Date",
     "Close",
@@ -771,6 +771,12 @@
       "Close": "67.177001953125",
       "Adj Close": "67.18",
       "Volume": "100"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "67.10099792480469",
+      "Adj Close": "67.1",
+      "Volume": "600"
     }
   ]
 }

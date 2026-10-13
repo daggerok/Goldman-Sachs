@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.36",
-    "value": 48.36,
-    "asOfDate": "Oct 08 2026"
+    "display": "$48.37",
+    "value": 48.37,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$48.30",
-    "value": 48.3,
-    "asOfDate": "Oct 08 2026",
+    "display": "$48.42",
+    "value": 48.42,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.12,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.10%",
+    "value": 0.1,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$147.35 M",
-    "value": 147350000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$147.39 M",
+    "value": 147390000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 337,
-    "bidAskMidpoint": 48.3,
+    "publishedTotalHoldings": 338,
+    "bidAskMidpoint": 48.44,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -179,15 +179,15 @@
     "asOfDate": null,
     "asOf": "—",
     "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 337
+    "publishedTotalHoldings": 338
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 44,
-    "asOf": "Oct 09 2026",
+    "totalRows": 45,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

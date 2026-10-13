@@ -2,7 +2,7 @@
   "ticker": "GIGB",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2348,
+  "totalRows": 2349,
   "headers": [
     "Date",
     "Close",
@@ -2097,6 +2097,12 @@
       "Close": "43.59000015258789",
       "Adj Close": "43.59",
       "Volume": "695800"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "43.64099884033203",
+      "Adj Close": "43.64",
+      "Volume": "585600"
     }
   ]
 }

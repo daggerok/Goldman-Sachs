@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102748/381430479/goldman-sachs-access-investment-grade-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102748/381430479/goldman-sachs-access-investment-grade-corporate-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028185/0000940400-26-028185.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -37,24 +37,24 @@
   "nav": {
     "display": "$43.59",
     "value": 43.59,
-    "asOfDate": "Oct 08 2026"
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$43.60",
-    "value": 43.6,
-    "asOfDate": "Oct 08 2026",
+    "display": "$43.59",
+    "value": 43.59,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$963.34 M",
-    "value": 963340000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$963.30 M",
+    "value": 963300000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "-2.76%",
       "mo3": -3.9,
       "mo3Text": "-3.90%",
-      "qtd": 0.35,
-      "qtdText": "0.35%",
+      "qtd": 0.46,
+      "qtdText": "0.46%",
       "ytd": -2.99,
       "ytdText": "-2.99%",
       "yr1": -2.29,
@@ -641,8 +641,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2348,
-    "asOf": "Oct 09 2026",
+    "totalRows": 2349,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

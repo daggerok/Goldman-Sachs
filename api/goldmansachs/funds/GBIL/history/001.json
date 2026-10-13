@@ -2,7 +2,7 @@
   "ticker": "GBIL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 2532,
+  "totalRows": 2533,
   "headers": [
     "Date",
     "Close",
@@ -385,19 +385,19 @@
     {
       "Date": "Dec 12 2016",
       "Close": "100.0199966430664",
-      "Adj Close": "79.32",
+      "Adj Close": "79.31",
       "Volume": "2500"
     },
     {
       "Date": "Dec 13 2016",
       "Close": "100.0199966430664",
-      "Adj Close": "79.32",
+      "Adj Close": "79.31",
       "Volume": "0"
     },
     {
       "Date": "Dec 14 2016",
       "Close": "100.0199966430664",
-      "Adj Close": "79.32",
+      "Adj Close": "79.31",
       "Volume": "0"
     },
     {
@@ -409,7 +409,7 @@
     {
       "Date": "Dec 16 2016",
       "Close": "100.0199966430664",
-      "Adj Close": "79.32",
+      "Adj Close": "79.31",
       "Volume": "200"
     },
     {
@@ -3613,7 +3613,7 @@
     {
       "Date": "Feb 04 2019",
       "Close": "100.0999984741211",
-      "Adj Close": "81.52",
+      "Adj Close": "81.53",
       "Volume": "238700"
     },
     {

@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109510/38149W440/goldman-sachs-growth-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109510/38149W440/goldman-sachs-growth-opportunities-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028075/0000940400-26-028075.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$45.80",
-    "value": 45.8,
-    "asOfDate": "Oct 08 2026"
+    "display": "$46.15",
+    "value": 46.15,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$46.06",
-    "value": 46.06,
-    "asOfDate": "Oct 08 2026",
-    "source": "official fund page Pricing Table"
+    "display": "$45.78",
+    "value": 45.779,
+    "asOfDate": "Oct 12 2026",
+    "source": "Yahoo Finance last regular-session price"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Oct 08 2026",
+    "display": "20.00%",
+    "value": 20,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$196.25 M",
-    "value": 196250000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$194.04 M",
+    "value": 194040000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 53,
-    "bidAskMidpoint": 45.8,
+    "bidAskMidpoint": null,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -69,14 +69,14 @@
     "discountDays": null
   },
   "yields": {
-    "dividendYield": 0,
-    "dividendYieldText": "0.00%",
-    "dividendYieldBasis": "official-trailing-12m",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Sep 30 2026",
-    "distributionRate": 0,
-    "secYield": 0.07,
-    "secYieldText": "0.07%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldBasis": null,
+    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not published on the official fund page for this fund"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -86,8 +86,8 @@
       "mo1Text": "3.02%",
       "mo3": 0.89,
       "mo3Text": "0.89%",
-      "qtd": 1.04,
-      "qtdText": "1.04%",
+      "qtd": 0.27,
+      "qtdText": "0.27%",
       "ytd": 13.08,
       "ytdText": "13.08%",
       "yr1": 14.6,
@@ -131,25 +131,7 @@
       "sinceInception": null,
       "sinceInceptionText": "—"
     },
-    "quarterEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": null,
-      "mo1Text": "—",
-      "mo3": null,
-      "mo3Text": "—",
-      "ytd": null,
-      "ytdText": "—",
-      "yr1": null,
-      "yr1Text": "—",
-      "yr3": null,
-      "yr3Text": "—",
-      "yr5": null,
-      "yr5Text": "—",
-      "yr10": null,
-      "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
-    }
+    "quarterEnd": null
   },
   "distributions": {
     "frequency": "Annually",
@@ -180,8 +162,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 225,
-    "asOf": "Oct 09 2026",
+    "totalRows": 226,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

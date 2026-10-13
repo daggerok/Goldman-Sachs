@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028076/0000940400-26-028076.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,9 +35,9 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$55.47",
-    "value": 55.47,
-    "asOfDate": "Oct 08 2026"
+    "display": "$55.55",
+    "value": 55.55,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
     "display": "$55.64",
@@ -52,9 +52,9 @@
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$99.84 M",
-    "value": 99840000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$99.99 M",
+    "value": 99990000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "1.62%",
       "mo3": 7.48,
       "mo3Text": "7.48%",
-      "qtd": 0.79,
-      "qtdText": "0.79%",
+      "qtd": 0.28,
+      "qtdText": "0.28%",
       "ytd": 21.3,
       "ytdText": "21.30%",
       "yr1": 25.77,
@@ -283,8 +283,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2666,
-    "asOf": "Oct 09 2026",
+    "totalRows": 2667,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

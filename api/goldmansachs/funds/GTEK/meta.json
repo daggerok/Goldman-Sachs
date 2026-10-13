@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028067/0000940400-26-028067.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$60.19",
-    "value": 60.19,
-    "asOfDate": "Oct 08 2026"
+    "display": "$60.89",
+    "value": 60.89,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$59.56",
-    "value": 59.56,
-    "asOfDate": "Oct 08 2026",
+    "display": "$60.62",
+    "value": 60.62,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-1.05%",
-    "value": -1.05,
-    "asOfDate": "Oct 08 2026",
+    "display": "-0.44%",
+    "value": -0.44,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$251.30 M",
-    "value": 251300000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$254.20 M",
+    "value": 254200000,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 60,
-    "bidAskMidpoint": 59.68,
+    "publishedTotalHoldings": 59,
+    "bidAskMidpoint": 60.69,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -86,16 +86,16 @@
       "mo1Text": "2.82%",
       "mo3": -5.66,
       "mo3Text": "-5.66%",
-      "qtd": 2.07,
-      "qtdText": "2.07%",
+      "qtd": 0.25,
+      "qtdText": "0.25%",
       "ytd": 46.29,
       "ytdText": "46.29%",
       "yr1": 50.12,
       "yr1Text": "50.12%",
       "yr3": 35.41,
       "yr3Text": "35.41%",
-      "yr5": null,
-      "yr5Text": "—",
+      "yr5": 8.86,
+      "yr5Text": "8.86%",
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 7.81,
@@ -106,7 +106,7 @@
       "ytd": null,
       "yr1": 50.12,
       "yr3": null,
-      "yr5": null,
+      "yr5": 8.86,
       "yr10": null,
       "sinceInception": 7.81
     }
@@ -124,8 +124,8 @@
       "yr1Text": "50.45%",
       "yr3": 35.64,
       "yr3Text": "35.64%",
-      "yr5": null,
-      "yr5Text": "—",
+      "yr5": 8.87,
+      "yr5Text": "8.87%",
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 7.84,
@@ -143,8 +143,8 @@
       "yr1Text": "50.45%",
       "yr3": null,
       "yr3Text": "—",
-      "yr5": null,
-      "yr5Text": "—",
+      "yr5": 8.87,
+      "yr5Text": "8.87%",
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 7.84,
@@ -190,7 +190,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028067, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 60
+    "publishedTotalHoldings": 59
   },
   "history": {
     "pages": [
@@ -198,8 +198,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1272,
-    "asOf": "Oct 09 2026",
+    "totalRows": 1273,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

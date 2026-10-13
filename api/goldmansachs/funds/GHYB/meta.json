@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 08 2026",
+    "productPageAsOf": "Oct 09 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028190/0000940400-26-028190.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$43.17",
-    "value": 43.17,
-    "asOfDate": "Oct 08 2026"
+    "display": "$43.19",
+    "value": 43.19,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$43.13",
-    "value": 43.13,
-    "asOfDate": "Oct 08 2026",
+    "display": "$43.22",
+    "value": 43.22,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.10%",
-    "value": -0.1,
-    "asOfDate": "Oct 08 2026",
+    "display": "0.07%",
+    "value": 0.07,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$133.82 M",
-    "value": 133820000,
-    "asOfDate": "Oct 08 2026",
+    "display": "$133.89 M",
+    "value": 133889999.99999999,
+    "asOfDate": "Oct 09 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 899,
-    "bidAskMidpoint": 43.13,
+    "publishedTotalHoldings": 905,
+    "bidAskMidpoint": 43.23,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.47%",
       "mo3": -1.77,
       "mo3Text": "-1.77%",
-      "qtd": 0.26,
-      "qtdText": "0.26%",
+      "qtd": 0.34,
+      "qtdText": "0.34%",
       "ytd": -0.12,
       "ytdText": "-0.12%",
       "yr1": 1.13,
@@ -613,7 +613,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028190, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 899
+    "publishedTotalHoldings": 905
   },
   "history": {
     "pages": [
@@ -622,8 +622,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2273,
-    "asOf": "Oct 09 2026",
+    "totalRows": 2274,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
