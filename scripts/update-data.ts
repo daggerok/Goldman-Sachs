@@ -3085,6 +3085,10 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     days = previousHistory.map((row) => ({ date: toIsoDate(row.Date), close: numberOrNull(row.Close) || 0, adjClose: numberOrNull(row['Adj Close']) || numberOrNull(row.Close) || 0, volume: numberOrNull(row.Volume) || 0 })).filter((row) => row.date && row.close > 0);
     if (previousHistory.length) historySource = previousMeta?.history?.source || 'previous run';
   }
+  // Returns are derived from the same kept cents the history pages publish, so Yahoo's float noise
+  // can flip neither a stored Adj Close nor a stored return.
+  const history = historyRows(days, previousHistory);
+  days = days.map((day, i) => ({ ...day, adjClose: numberOrNull(history[i]['Adj Close']) ?? day.adjClose }));
   if (!dividends.length && !keptSections.includes('distributions') && chart?.dividends.length) {
     dividends = chart.dividends.map((item) => ({ epoch: item.epoch, amount: round(item.amount, 6) }));
     distributionsSource = 'Yahoo Finance chart dividend events (fund-page Distributions table unavailable)';
@@ -3128,7 +3132,6 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   }
 
   // 6. Write sheets, meta.json and the index row --------------------------------
-  const history = historyRows(days, previousHistory);
   const historyAsOf = derived.asOfDate || previousMeta?.history?.asOf || null;
   const holdingManifest = await writePages(fundDir, fund.ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
   if (marketValueBasis) holdingManifest.marketValueBasis = marketValueBasis;
