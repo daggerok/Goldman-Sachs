@@ -999,6 +999,29 @@ describe('pipeline', () => {
     expect(snapshot(world.api)).toEqual(first);
   }, 30_000);
 
+  test('two runs on the same source data write zero changes even when Yahoo adjusted closes jitter across a cent boundary', async () => {
+    // Yahoo float32 noise seen live: BAB came back as 16.41 and 16.42, SPDV 2024-11-12 as 31.544998 and 31.545001
+    let tail = [23.915001, 24.984999, 25.995001];
+    const jittered = () => {
+      const payload = JSON.parse(chartJson());
+      const adjclose: number[] = payload.chart.result[0].indicators.adjclose[0].adjclose;
+      adjclose.splice(adjclose.length - tail.length, tail.length, ...tail);
+      return new Response(JSON.stringify(payload));
+    };
+    const world = mockWorld({ handler: (url) => (url.includes('query1.finance.yahoo.com') ? jittered() : undefined) });
+    const lastAdj = () => readJson(world, 'funds/GBIL/history/001.json').rows.slice(-3).map((row: Record<string, string>) => row['Adj Close']);
+    await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
+    const first = snapshot(world.api);
+    expect(lastAdj()).toEqual(['23.92', '24.98', '26']);
+    tail = [23.914998, 24.985002, 25.994999];
+    await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
+    expect(snapshot(world.api)).toEqual(first);
+    // a real change beyond the noise is still written
+    tail = [23.9, 24.97, 25.98];
+    await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
+    expect(lastAdj()).toEqual(['23.9', '24.97', '25.98']);
+  }, 30_000);
+
   test('a failed source keeps the fund exactly as published; other funds still update; all failed -> exit 1', async () => {
     let outage = false;
     const world = mockWorld({
