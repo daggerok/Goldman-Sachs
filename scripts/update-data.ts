@@ -181,6 +181,12 @@ function outputCounts(funds: number, holdings: number, history: number): string 
 //   history       Yahoo Finance's public chart endpoint (daily close, adjusted
 //                 close, volume, dividends, splits)
 //
+// Since the October 2026 redesign the finder and the fund pages are client-rendered:
+// their HTML carries no figures and the browser reads them from the public fund
+// data API https://am.gs.com/services/funds (GraphQL, POST). The direct path asks
+// that API the questions the pages ask (finder: ETF filter; fund: PV id + CUSIP
+// from the page URL); the proxy fallback reads the rendered public page.
+//
 // Issuer requests are made directly with a browser-like User-Agent first; when
 // the issuer answers a non-browser client with an error or a bot-wall page,
 // the same public URL is read through the read-only r.jina.ai rendering proxy
@@ -729,6 +735,16 @@ type RangeMap = Partial<Record<ReturnPeriod, Range>>;
 
 const GS_SITE = 'https://am.gs.com';
 const GS_CATALOG_URL = `${GS_SITE}/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100`;
+/**
+ * Fund data API behind the fund finder and the fund pages. Since the October 2026 redesign both pages are
+ * client-rendered shells (a Next.js document whose HTML carries no fund figures); the browser reads every
+ * value from this public GraphQL endpoint (POST, JSON). The direct path asks it the same questions the
+ * pages ask; the r.jina.ai fallback still reads the rendered public page.
+ */
+const GS_FUNDS_API = `${GS_SITE}/services/funds`;
+const GS_REQUEST_LOCALE = { country: 'us', language: 'en', audience: 'individual' } as const;
+const GS_FINDER_QUERY = 'query getFundShareClasses($fundRequest: FundRequest) { fundShareClasses(fundRequest: $fundRequest) { funds { fundName fundType pvNumber shareClassId ticker marketingAssetClass distributionFrequency shareClassInceptionDate dailyPerformance { nav { asAtDate value } } monthlyPerformance { asAtDate annualisedReturns1yr annualisedReturns3yr annualisedReturns5yr annualisedReturns10yr annualisedReturnsSinceIncept } } } }';
+const GS_DETAIL_QUERY = 'query getFundsDetail($fundDetailRequest: FundDetailRequest) { fundsDetail(fundDetailRequest: $fundDetailRequest) { fundName ticker cusip marketingAssetClass fundInceptionDate benchmark exchange navTicker intradayNavTicker quickStats { label asAtDate value currency suffix upDownValue upDownPctValue } feesAndExpenses { label asAtDate value suffix } pricingTable { label asAtDate value currency suffix } cumulativeReturnsAsAtDate cumulativeReturns annualizedReturnsAsAtDate annualizedReturns averageAnnualizedReturnsAsAtDate averageAnnualizedReturns quarterlyAnnualizedReturnsAsAtDate quarterlyAnnualizedReturns yield { label value asAtDate } distributions premiumsAndDiscount { asAtDate quarterInsights { id insights { label value } } } topHoldings { asAtDate data { series { name dataset { name y } } } } } }';
 const PROXY_PREFIX = 'https://r.jina.ai/';
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const SEC_SITE = 'https://www.sec.gov';
@@ -1412,8 +1428,72 @@ export function normalizeMarkdownLinks(text: string, base = 'https://am.gs.com')
   return out.replace(/(\[[^\]]*\]\()\/(?!\/)([^)\s]*)\)/g, `$1${base}/$2)`);
 }
 
+/**
+ * Fund data API finder answer (`fundShareClasses.funds`) -> catalog rows with the same fields the
+ * finder cards print: NAV + date (dailyPerformance), the Average Annual Returns column + date
+ * (monthlyPerformance), distribution frequency and inception date. The CUSIP is the share-class id.
+ * The API carries no page URL: the seed URL is used for a known ticker, otherwise the URL is built
+ * from the ids the fund page route needs (/detail/PV<id>/<CUSIP>/<slug>).
+ */
+export function parseCatalogFunds(rows: unknown): CatalogFund[] {
+  const funds = new Map<string, CatalogFund>();
+  for (const row of Array.isArray(rows) ? rows : []) {
+    if (!row || typeof row !== 'object' || row.fundType !== 'ETF') continue;
+    const ticker = sanitizeTicker(row.ticker);
+    const pv = cleanText(row.pvNumber).toUpperCase();
+    const cusip = cleanText(row.shareClassId).toUpperCase();
+    const name = cleanText(row.fundName);
+    if (!ticker || !/^PV\d+$/.test(pv) || !/^[A-Z0-9]{9}$/.test(cusip) || !name) continue;
+    const seed = GOLDMAN_SACHS_FUNDS.find((item) => item.ticker === ticker && item.fundPage.includes(`/detail/${pv}/${cusip}/`));
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const nav = row.dailyPerformance?.nav;
+    const monthly = row.monthlyPerformance || {};
+    const returns: CatalogReturns = {
+      ...EMPTY_RETURNS,
+      yr1: numberOrNull(monthly.annualisedReturns1yr),
+      yr3: numberOrNull(monthly.annualisedReturns3yr),
+      yr5: numberOrNull(monthly.annualisedReturns5yr),
+      yr10: numberOrNull(monthly.annualisedReturns10yr),
+      sinceInception: numberOrNull(monthly.annualisedReturnsSinceIncept),
+    };
+    const hasReturns = Object.values(returns).some((value) => value !== null);
+    const category = row.marketingAssetClass ? normalizeCategory(cleanText(row.marketingAssetClass)) : 'ETF';
+    funds.set(ticker, {
+      ticker,
+      name,
+      category,
+      categoryPath: category === 'ETF' ? '' : category,
+      inception: apiDate(row.shareClassInceptionDate),
+      exchange: '',
+      cusip,
+      isin: '',
+      benchmark: '',
+      ter: null,
+      grossTer: null,
+      nav: numberOrNull(nav?.value),
+      close: null,
+      premiumDiscount: null,
+      netAssets: null,
+      dividendYield: null,
+      secYield: null,
+      asOfDate: apiDate(nav?.asAtDate),
+      frequency: cleanText(row.distributionFrequency),
+      // The finder prints '--' as the returns date of a fund too young to have returns.
+      returnsAsOf: hasReturns ? apiDate(monthly.asAtDate) : null,
+      returns,
+      fundPage: seed?.fundPage || `${GS_SITE}/en-us/individual/funds/detail/${pv}/${cusip}/${slug}`,
+      source: 'goldman',
+    });
+  }
+  if (!funds.size) throw new Error('Goldman Sachs fund finder: no ETF rows found');
+  return [...funds.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
+}
+
 export function parseCatalogText(text: string): CatalogFund[] {
-  const source = htmlToText(stripProxyPreamble(normalizeMarkdownLinks(text)));
+  // Direct path: the fund data API answer (JSON); fallback path: the rendered finder (HTML or proxy markdown).
+  const api = gsApiData(text)?.fundShareClasses;
+  if (api) return parseCatalogFunds(api.funds);
+  const source =htmlToText(stripProxyPreamble(normalizeMarkdownLinks(text)));
   // Blank-line layout varies per render (the HTML pipeline strips blanks only
   // when tags are present, and some renders add a table separator row); drop
   // blanks so card offsets stay stable across render variants.
@@ -1593,7 +1673,7 @@ export function proxyUrl(url: string): string {
   return `${PROXY_PREFIX}${url}`;
 }
 
-export async function fetchText(url: string, label: string, config: UpdaterConfig, headers: Record<string, string> = {}): Promise<string> {
+export async function fetchText(url: string, label: string, config: UpdaterConfig, headers: Record<string, string> = {}, init: { method?: 'GET' | 'POST'; body?: string } = {}): Promise<string> {
   let lastError: unknown = new Error('no request attempted');
   const proxy = isProxyUrl(url);
   // The proxy is rate limited: at most one retry there, whatever MAX_RETRIES says.
@@ -1602,7 +1682,7 @@ export async function fetchText(url: string, label: string, config: UpdaterConfi
     try {
       await paceRequests(proxy);
       // The signal covers connecting, the headers AND reading the body (both reads below are inside the attempt).
-      const response = await fetch(url, { headers: { 'User-Agent': secUserAgent, Accept: '*/*', ...headers }, redirect: 'follow', signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+      const response = await fetch(url, { method: init.method ?? 'GET', body: init.body, headers: { 'User-Agent': secUserAgent, Accept: '*/*', ...headers }, redirect: 'follow', signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
       if (!response.ok) {
         const snippet = cleanText((await response.text().catch(() => '')).replace(/<[^>]+>/g, ' ')).slice(0, 160);
         throw new HttpError(response.status, `${response.status} ${response.statusText}${snippet ? ` - ${snippet}` : ''}`);
@@ -1663,11 +1743,12 @@ function responseSnippet(text: string): string {
   return snippet ? `"${snippet}"` : '(empty body)';
 }
 
-async function fetchIssuerText(url: string, label: string, config: UpdaterConfig, validate: (text: string) => boolean, accept = 'text/html,application/xhtml+xml,text/csv,text/plain;q=0.9,*/*;q=0.8', options: { cache?: boolean } = {}): Promise<{ text: string; via: 'direct' | 'proxy' }> {
+async function fetchIssuerText(url: string, label: string, config: UpdaterConfig, validate: (text: string) => boolean, accept = 'text/html,application/xhtml+xml,text/csv,text/plain;q=0.9,*/*;q=0.8', options: { cache?: boolean; direct?: () => Promise<string> } = {}): Promise<{ text: string; via: 'direct' | 'proxy' }> {
   let lastError: unknown = new Error('direct request skipped (issuer CDN denies this network)');
   if (!issuerDirectDisabled) {
     try {
-      const text = await fetchText(url, label, { ...config, maxRetries: 0 }, { 'User-Agent': BROWSER_UA, Accept: accept, 'Accept-Language': 'en-US,en;q=0.9' });
+      // `direct` replaces the GET of the public page (the fund data API the page itself reads).
+      const text = options.direct ? await options.direct() : await fetchText(url, label, { ...config, maxRetries: 0 }, { 'User-Agent': BROWSER_UA, Accept: accept, 'Accept-Language': 'en-US,en;q=0.9' });
       if (validate(text)) {
         recordIssuerDirectResult(false);
         return { text, via: 'direct' };
@@ -1704,6 +1785,52 @@ async function fetchIssuerText(url: string, label: string, config: UpdaterConfig
   const first = lastError instanceof Error ? lastError.message : String(lastError);
   const second = proxyError instanceof Error ? proxyError.message : String(proxyError);
   throw new Error(`${label}: ${first}; ${second}`);
+}
+
+// ---------------------------------------------------------------------------
+// Fund data API (direct path of the finder and the fund pages)
+// ---------------------------------------------------------------------------
+
+/** One direct POST to the fund data API (no retry here: the caller falls back to the rendering proxy). */
+function fetchGsApi(query: string, variables: JsonRecord, label: string, config: UpdaterConfig): Promise<string> {
+  const headers = { 'User-Agent': BROWSER_UA, Accept: 'application/json', 'Content-Type': 'application/json', 'Accept-Language': 'en-US,en;q=0.9', Origin: GS_SITE };
+  return fetchText(GS_FUNDS_API, label, { ...config, maxRetries: 0 }, headers, { method: 'POST', body: JSON.stringify({ query, variables }) });
+}
+
+/** The fund-finder request with the ETF filter (the variables the finder page sends). */
+export function gsFinderVariables(): JsonRecord {
+  return { fundRequest: { ...GS_REQUEST_LOCALE, offset: 0, limit: 200, sortBy: 'FN', sortOrder: 'ASC', filterParam: { funds: ['ETF'], searchText: '' } } };
+}
+
+/** The fund-detail request for a fund page URL (/funds/detail/PV<id>/<CUSIP>/<slug>), or null when the URL carries no ids. */
+export function gsDetailVariables(fundPage: string): JsonRecord | null {
+  const match = /\/funds\/detail\/(PV\d+)\/([A-Za-z0-9]{9})(?:\/|$)/i.exec(String(fundPage ?? ''));
+  return match ? { fundDetailRequest: { ...GS_REQUEST_LOCALE, pvNumber: match[1].toUpperCase(), shareClassId: match[2].toUpperCase() } } : null;
+}
+
+/** The `data` object of a fund data API answer, or null for anything else (HTML, markdown, a GraphQL error answer). */
+export function gsApiData(text: string): JsonRecord | null {
+  const raw = String(text ?? '').trimStart();
+  if (!raw.startsWith('{')) return null;
+  try {
+    const payload = JSON.parse(raw) as JsonRecord;
+    if (Array.isArray(payload.errors) && payload.errors.length) return null;
+    return payload.data && typeof payload.data === 'object' ? (payload.data as JsonRecord) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** True for a fund-detail answer of exactly this ticker (identity check). */
+export function isGsFundDetail(text: string, ticker: string): boolean {
+  const detail = gsApiData(text)?.fundsDetail;
+  return Boolean(detail) && cleanText(detail.ticker).toUpperCase() === ticker.toUpperCase();
+}
+
+/** True for a fund-finder answer that lists at least one ETF. */
+export function isGsFinder(text: string): boolean {
+  const funds = gsApiData(text)?.fundShareClasses?.funds;
+  return Array.isArray(funds) && funds.some((fund: JsonRecord) => fund?.fundType === 'ETF' && fund?.ticker && fund?.pvNumber);
 }
 
 // ---------------------------------------------------------------------------
@@ -1917,11 +2044,8 @@ export function aumToUsd(value: string): number | null {
   return amount;
 }
 
-export function parseProductPage(text: string, ticker: string, now: Date = new Date()): ProductPageSummary {
-  const source = htmlToText(stripProxyPreamble(text));
-  const lines = toTextLines(source);
-  const upper = ticker.toUpperCase();
-  const empty: ProductPageSummary = {
+function emptyProductSummary(): ProductPageSummary {
+  return {
     name: null, cusip: '', exchange: '', assetClass: '', benchmark: '', inception: null,
     nav: null, navChange: null, navChangePct: null, navAsOfDate: null,
     aumDaily: null, aumDailyAsOfDate: null, aumMonthly: null, aumMonthlyAsOfDate: null,
@@ -1935,6 +2059,170 @@ export function parseProductPage(text: string, ticker: string, now: Date = new D
     officialReturns: { monthEnd: { nav: null, marketPrice: null }, quarterEnd: { nav: null, marketPrice: null } },
     sections: { ...NO_SECTIONS }, loadedFully: false,
   };
+}
+
+/** A fund data API text value; the API's placeholders ('N/A', '--') are no value. */
+function apiText(value: unknown): string {
+  const text = cleanText(value);
+  return /^(?:n\/a|na|-+|—)$/i.test(text) ? '' : text;
+}
+
+/** A fund data API date ('2026-10-15') -> ISO, anything else -> null. */
+function apiDate(value: unknown): string | null {
+  const iso = toIsoDate(value);
+  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null;
+}
+
+/**
+ * Fund data API answer (`fundsDetail`) -> the same summary the page parser builds. Mapping of the
+ * page labels: quickStats netAssetValue / totalFundAssetsDaily / totalFundAssetsMonthly /
+ * noOfHoldings / lbmaGoldPrice (Quick Stats), feesAndExpenses net/grossExpensesRatio (Fees &
+ * Expenses), pricingTable marketPrice / premiumDiscount / bidAsk / dayMedianBidAskSpread (Pricing
+ * Table), the four returns tables keyed by row id (nav, marketPrice[Returns]), yield
+ * twelveMthTrailingYield / thirtyDayYield[Un]Subsidized, distributions (expirationDate is the
+ * Ex-Date column, total the $ Amount column), premiumsAndDiscount (first quarter = the tab the
+ * page opens on) and topHoldings. The API answer is complete by definition, so every section is
+ * present: a null there is an honest absence, never a partial render.
+ */
+export function parseFundDetail(detail: JsonRecord, ticker: string, now: Date = new Date()): ProductPageSummary {
+  void ticker;
+  const summary = emptyProductSummary();
+  const list = (value: unknown): JsonRecord[] => (Array.isArray(value) ? value.filter((item) => item && typeof item === 'object') : []);
+  const stat = (items: unknown, label: string): JsonRecord | null => list(items).find((item) => item.label === label) || null;
+  const value = (item: JsonRecord | null): number | null => (item ? numberOrNull(item.value) : null);
+  const quick = detail.quickStats;
+  const nav = stat(quick, 'netAssetValue');
+  const aumDaily = stat(quick, 'totalFundAssetsDaily');
+  const aumMonthly = stat(quick, 'totalFundAssetsMonthly');
+  const lbma = stat(quick, 'lbmaGoldPrice');
+  const money = (item: JsonRecord | null): number | null => (item && numberOrNull(item.value) !== null ? aumToUsd(`${cleanText(item.value)}${cleanText(item.suffix)}${cleanText(item.currency)}`) : null);
+  const pricing = detail.pricingTable;
+  const marketPrice = stat(pricing, 'marketPrice');
+  const premium = stat(pricing, 'premiumDiscount');
+  const yields = detail.yield;
+  const distRate = stat(yields, 'twelveMthTrailingYield');
+  const secSub = stat(yields, 'thirtyDayYieldSubsidized');
+  const secUnsub = stat(yields, 'thirtyDayYieldUnSubsidized');
+  const yieldsAsOfDate = apiDate(distRate?.asAtDate) || apiDate(secSub?.asAtDate) || apiDate(secUnsub?.asAtDate);
+  // Same guard as the page parser: a yields block dated after today is never published.
+  const yieldsValid = yieldsAsOfDate === null || yieldsAsOfDate <= now.toISOString().slice(0, 10);
+
+  // Returns tables: rows keyed by id ('nav', 'marketPriceReturns' / 'marketPrice', benchmark rows ignored).
+  const tenorCells = (row: JsonRecord): { headers: string[]; values: Array<number | null> } => {
+    const map: Array<[string, string]> = [['oneMth', '1Mth'], ['threeMth', '3Mth'], ['ytd', 'YTD'], ['oneYr', '1Yr'], ['threeYr', '3Yr'], ['fiveYr', '5Yr'], ['tenYr', '10Yr'], ['sinceInception', 'Since Inception']];
+    const present = map.filter(([key]) => key in row);
+    return { headers: present.map(([, header]) => header), values: present.map(([key]) => numberOrNull(row[key])) };
+  };
+  const tableRow = (table: unknown, kind: 'nav' | 'marketPrice', asOf: string): OfficialReturnRow | null => {
+    const row = list(table).find((item) => (kind === 'nav' ? item.id === 'nav' : item.id === 'marketPrice' || item.id === 'marketPriceReturns'));
+    if (!row) return null;
+    const { headers, values } = tenorCells(row);
+    return returnRowFromLabeledCells(headers, values, asOf);
+  };
+  const cumulativeAsOf = apiDate(detail.cumulativeReturnsAsAtDate) || apiDate(detail.annualizedReturnsAsAtDate) || '';
+  const annualizedAsOf = apiDate(detail.averageAnnualizedReturnsAsAtDate) || apiDate(detail.annualizedReturnsAsAtDate) || '';
+  const quarterlyAsOf = apiDate(detail.quarterlyAnnualizedReturnsAsAtDate) || '';
+  const officialReturns: OfficialReturns = { monthEnd: { nav: null, marketPrice: null }, quarterEnd: { nav: null, marketPrice: null } };
+  for (const kind of ['nav', 'marketPrice'] as const) {
+    const cumulative = tableRow(detail.cumulativeReturns, kind, cumulativeAsOf);
+    const annualized = tableRow(detail.annualizedReturns, kind, annualizedAsOf);
+    const average = tableRow(detail.averageAnnualizedReturns, kind, annualizedAsOf);
+    // The page parser's rules: month tenors from the Cumulative table, year tenors from the Annualized
+    // table, the annualized since-inception value only from the Average Annualized table.
+    if (cumulative || annualized || average) {
+      const row = emptyReturnRow(kind === 'nav' ? annualizedAsOf || cumulativeAsOf : cumulativeAsOf || annualizedAsOf);
+      if (cumulative) { row.mo1 = cumulative.mo1; row.mo3 = cumulative.mo3; row.ytd = cumulative.ytd; }
+      if (annualized) { row.yr1 = annualized.yr1; row.cagr3y = annualized.cagr3y; row.cagr5y = annualized.cagr5y; row.cagr10y = annualized.cagr10y; }
+      if (average) row.siAnn = average.siAnn;
+      officialReturns.monthEnd[kind] = row;
+    }
+    officialReturns.quarterEnd[kind] = tableRow(detail.quarterlyAnnualizedReturns, kind, quarterlyAsOf);
+  }
+
+  const seen = new Set<string>();
+  const distributions: Distribution[] = [];
+  for (const row of list(detail.distributions)) {
+    const epoch = isoToEpoch(toIsoDate(row.expirationDate));
+    const amount = numberOrNull(row.total);
+    if (epoch === null || amount === null || amount <= 0) continue;
+    const key = `${epoch}:${amount}`;
+    if (seen.has(key)) continue; // the API repeats some rows verbatim, like the page table
+    seen.add(key);
+    distributions.push({ epoch, amount: round(amount, 6) });
+  }
+  distributions.sort((a, b) => a.epoch - b.epoch);
+
+  const topSeries = list(detail.topHoldings?.data?.series)[0];
+  const topRows = list(topSeries?.dataset).map((item) => ({ name: cleanText(item.name), weight: numberOrNull(item.y) })).filter((row) => row.name).slice(0, 10);
+  const topWeights = topRows.map((row) => row.weight);
+  // The page headline ('x% of Total Portfolio') is the sum of the ten published weights.
+  const top10Pct = topWeights.length && topWeights.every((weight) => weight !== null) ? round(topWeights.reduce((sum: number, weight) => sum + (weight ?? 0), 0), 2) : null;
+  const topHoldings: GsTopHoldings | null = topRows.length ? { asOfDate: apiDate(detail.topHoldings?.asAtDate), top10Pct, rows: topRows } : null;
+
+  const firstQuarter = list(detail.premiumsAndDiscount?.quarterInsights)[0];
+  const insight = (label: string): number | null => numberOrNull(list(firstQuarter?.insights).find((item) => normalizeLabel(cleanText(item.label)) === label)?.value);
+  const cusip = cleanText(detail.cusip).toUpperCase();
+  const range = stat(pricing, 'marketPriceWeekRange');
+  // Partial answers happen (seen once on 2026-10-18: the month-end tables came back empty while the
+  // quarterly one did not). The Cumulative table exists for every fund with any returns (a fund under
+  // one year has no Annualized table, a brand-new fund has no table at all), so returns count as
+  // present when it has rows or when no returns table has any; a missing Cumulative table next to
+  // other returns tables is partial and, like a partial page render, keeps the published returns.
+  const returnTables = [detail.cumulativeReturns, detail.annualizedReturns, detail.averageAnnualizedReturns, detail.quarterlyAnnualizedReturns].map((table) => list(table).length > 0);
+  const returnsPresent = returnTables[0] || returnTables.every((present) => !present);
+  const sections: PageSections = { pricing: list(pricing).length > 0, yields: true, returns: returnsPresent, distributions: true, topHoldings: true };
+  return {
+    ...summary,
+    sections,
+    loadedFully: sections.pricing && sections.returns,
+    name: cleanText(detail.fundName) || null,
+    cusip: /^[A-Z0-9]{9}$/.test(cusip) ? cusip : '',
+    exchange: apiText(detail.exchange),
+    assetClass: detail.marketingAssetClass ? normalizeCategory(cleanText(detail.marketingAssetClass)) : '',
+    benchmark: apiText(detail.benchmark),
+    inception: apiDate(detail.fundInceptionDate),
+    nav: value(nav),
+    navChange: nav ? numberOrNull(nav.upDownValue) : null,
+    navChangePct: nav ? numberOrNull(nav.upDownPctValue) : null,
+    navAsOfDate: apiDate(nav?.asAtDate),
+    aumDaily: money(aumDaily),
+    aumDailyAsOfDate: apiDate(aumDaily?.asAtDate),
+    aumMonthly: money(aumMonthly),
+    aumMonthlyAsOfDate: apiDate(aumMonthly?.asAtDate),
+    totalHoldings: value(stat(quick, 'noOfHoldings')),
+    lbmaGoldPrice: value(lbma),
+    lbmaGoldPriceAsOfDate: apiDate(lbma?.asAtDate),
+    netExpenseRatio: value(stat(detail.feesAndExpenses, 'netExpensesRatio')),
+    grossExpenseRatio: value(stat(detail.feesAndExpenses, 'grossExpensesRatio')),
+    marketPrice: value(marketPrice),
+    marketPrice52wkRange: range ? cleanText(range.value) : '',
+    premiumDiscount: value(premium),
+    pricingAsOfDate: apiDate(marketPrice?.asAtDate) || apiDate(premium?.asAtDate),
+    bidAsk: value(stat(pricing, 'bidAsk')),
+    bidAskSpread30d: value(stat(pricing, 'dayMedianBidAskSpread')),
+    premiumDays: insight('number of days at premium'),
+    atNavDays: insight('number of days at nav'),
+    discountDays: insight('number of days at discount'),
+    distRate12M: yieldsValid ? value(distRate) : null,
+    secYieldSubsidized: yieldsValid ? value(secSub) : null,
+    secYieldUnsubsidized: yieldsValid ? value(secUnsub) : null,
+    yieldsAsOfDate: yieldsValid ? yieldsAsOfDate : null,
+    navTicker: apiText(detail.navTicker),
+    iopvTicker: apiText(detail.intradayNavTicker),
+    distributions,
+    topHoldings,
+    officialReturns,
+  };
+}
+
+export function parseProductPage(text: string, ticker: string, now: Date = new Date()): ProductPageSummary {
+  // Direct path: the fund data API answer (JSON); fallback path: the rendered page (HTML or proxy markdown).
+  const detail = gsApiData(text)?.fundsDetail;
+  if (detail) return parseFundDetail(detail, ticker, now);
+  const source = htmlToText(stripProxyPreamble(text));
+  const lines = toTextLines(source);
+  const upper = ticker.toUpperCase();
+  const empty = emptyProductSummary();
   if (!lines.length) return empty;
   const name = parseFundName(source, upper);
   const nav = lookupLabel(lines, 'Net Asset Value');
@@ -2959,6 +3247,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   // or the Yahoo chart) fails, this function throws and nothing of the fund is written.
   let summary: ProductPageSummary | null = null;
   let productVia: 'direct' | 'proxy' | null = null;
+  let productFromApi = false;
   if (!config.skipGoldmanSachs) {
     if (!fund.fundPage) throw new Error('no official fund page URL; kept the published data');
     if (fund.source === 'previous index') {
@@ -2966,13 +3255,18 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       Object.assign(fund, { ter: null, grossTer: null, nav: null, close: null, premiumDiscount: null, netAssets: null, dividendYield: null, secYield: null, asOfDate: null, returnsAsOf: null, returns: { ...EMPTY_RETURNS } });
     }
     try {
-      const page = await fetchIssuerText(fund.fundPage, `[product ] ${fund.ticker}`, config, (text) => /Net Asset Value|Total Fund Assets|Fund Inception Date/i.test(text), undefined, { cache: false });
+      // Direct: the fund data API the page reads (identity-checked by ticker); a server-rendered page still
+      // validates too. Fallback: the rendered public page through the read-only proxy.
+      const label = `[product ] ${fund.ticker}`;
+      const variables = gsDetailVariables(fund.fundPage);
+      const page = await fetchIssuerText(fund.fundPage, label, config, (text) => isGsFundDetail(text, fund.ticker) || (!gsApiData(text) && /Net Asset Value|Total Fund Assets|Fund Inception Date/i.test(text)), undefined, { cache: false, direct: variables ? () => fetchGsApi(GS_DETAIL_QUERY, variables, label, config) : undefined });
       productVia = page.via;
+      productFromApi = page.via === 'direct' && gsApiData(page.text) !== null;
       summary = parseProductPage(page.text, fund.ticker);
       if (config.storeRawDownloads) {
         const raw = new URL('raw/', API_ROOT);
         await mkdir(raw, { recursive: true });
-        await writeFile(new URL(`${fund.ticker}-fund-page.${page.via === 'proxy' ? 'md' : 'html'}`, raw), page.text, 'utf8');
+        await writeFile(new URL(`${fund.ticker}-fund-page.${page.via === 'proxy' ? 'md' : gsApiData(page.text) ? 'json' : 'html'}`, raw), page.text, 'utf8');
       }
       if (summary.name) fund.name = summary.name;
       if (summary.cusip) fund.cusip = summary.cusip;
@@ -3179,7 +3473,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     source: {
       fundPage: fund.fundPage,
       officialProductPage: fund.fundPage,
-      productPageRendering: productVia ? (productVia === 'proxy' ? 'read-only rendering proxy (r.jina.ai) of the official fund page' : 'official fund page (direct)') : 'not fetched in this run',
+      productPageRendering: productVia ? (productVia === 'proxy' ? 'read-only rendering proxy (r.jina.ai) of the official fund page' : productFromApi ? 'official fund data API behind the fund page (am.gs.com/services/funds, direct)' : 'official fund page (direct)') : 'not fetched in this run',
       productPageAsOf: summary?.navAsOfDate ? formatDate(summary.navAsOfDate) : null,
       holdingsDownload,
       distributionsDownload,
@@ -3349,14 +3643,16 @@ export async function main(env: Record<string, string | undefined> = process.env
   let catalogSource = 'previous api/goldmansachs/index.json';
   if (!config.skipGoldmanSachs) {
     try {
-      const fetched = await fetchIssuerText(GS_CATALOG_URL, '[catalog ] fund finder', config, (text) => /\/funds\/detail\/PV\d+\//i.test(text) && /Average Annual Returns|Distribution Frequency/i.test(text), undefined, { cache: false });
+      // Direct: the finder's fund data API query (ETF filter); fallback: the rendered finder through the proxy.
+      const finderLabel = '[catalog ] fund finder';
+      const fetched = await fetchIssuerText(GS_CATALOG_URL, finderLabel, config, (text) => isGsFinder(text) || (/\/funds\/detail\/PV\d+\//i.test(text) && /Average Annual Returns|Distribution Frequency/i.test(text)), undefined, { cache: false, direct: () => fetchGsApi(GS_FINDER_QUERY, gsFinderVariables(), finderLabel, config) });
       const parsed = parseCatalogText(fetched.text);
       for (const fund of parsed) catalog.set(fund.ticker, fund);
       catalogSource = fetched.via === 'proxy' ? 'Goldman Sachs Asset Management fund finder via read-only rendering proxy' : 'Goldman Sachs Asset Management fund finder';
       if (config.storeRawDownloads) {
         const raw = new URL('raw/', API_ROOT);
         await mkdir(raw, { recursive: true });
-        await writeFile(new URL(`fund-finder-${new Date().toISOString().slice(0, 10)}.${fetched.via === 'proxy' ? 'md' : 'html'}`, raw), fetched.text, 'utf8');
+        await writeFile(new URL(`fund-finder-${new Date().toISOString().slice(0, 10)}.${fetched.via === 'proxy' ? 'md' : gsApiData(fetched.text) ? 'json' : 'html'}`, raw), fetched.text, 'utf8');
       }
     } catch (error) {
       console.warn(`[ ${'catalog'.padEnd(9)}] ${(error instanceof Error ? error.message : String(error)).replace(/^\[[^\]]*\] ?/, '')} - keeping the published feed`);
