@@ -1,0 +1,107 @@
+{
+  "ticker": "GSWO",
+  "page": 4,
+  "pageSize": 250,
+  "totalRows": 758,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "US DOLLAR",
+      "Ticker": "USD",
+      "Identifier": "CSH_USD",
+      "Weight": "-0.1",
+      "Market Value": "-1839220.85",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_USD",
+      "SEDOL": "CSH_USD"
+    },
+    {
+      "Name": "SWISS FRANC",
+      "Ticker": "CHF",
+      "Identifier": "CSH_CHF",
+      "Weight": "0",
+      "Market Value": "-1167.02",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_CHF",
+      "SEDOL": "CSH_CHF"
+    },
+    {
+      "Name": "SWEDISH KRONE",
+      "Ticker": "SEK",
+      "Identifier": "CSH_SEK",
+      "Weight": "0",
+      "Market Value": "-409.17",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_SEK",
+      "SEDOL": "CSH_SEK"
+    },
+    {
+      "Name": "JAPANESE YEN",
+      "Ticker": "JPY",
+      "Identifier": "CSH_JPY",
+      "Weight": "0.06",
+      "Market Value": "1072899.91",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_JPY",
+      "SEDOL": "CSH_JPY"
+    },
+    {
+      "Name": "SINGAPORE DOLLAR",
+      "Ticker": "SGD",
+      "Identifier": "CSH_SGD",
+      "Weight": "0",
+      "Market Value": "369.83",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_SGD",
+      "SEDOL": "CSH_SGD"
+    },
+    {
+      "Name": "POLISH ZLOTY",
+      "Ticker": "PLN",
+      "Identifier": "CSH_PLN",
+      "Weight": "0",
+      "Market Value": "30118.33",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_PLN",
+      "SEDOL": "CSH_PLN"
+    },
+    {
+      "Name": "ISRAELI SHEKEL",
+      "Ticker": "ILS",
+      "Identifier": "CSH_ILS",
+      "Weight": "0",
+      "Market Value": "751.56",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_ILS",
+      "SEDOL": "CSH_ILS"
+    },
+    {
+      "Name": "AUSTRALIAN DOLLAR",
+      "Ticker": "AUD",
+      "Identifier": "CSH_AUD",
+      "Weight": "0",
+      "Market Value": "19389.68",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_AUD",
+      "SEDOL": "CSH_AUD"
+    }
+  ]
+}

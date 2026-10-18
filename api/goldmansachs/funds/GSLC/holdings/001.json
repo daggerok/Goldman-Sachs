@@ -2,7 +2,7 @@
   "ticker": "GSLC",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 437,
+  "totalRows": 429,
   "headers": [
     "Name",
     "Ticker",
@@ -10,2258 +10,2760 @@
     "Weight",
     "Market Value",
     "Shares Held",
-    "Asset Category"
+    "Asset Category",
+    "ISIN",
+    "SEDOL"
   ],
   "rows": [
     {
-      "Name": "ON SEMICONDUCTOR CORP",
-      "Ticker": "ON",
-      "Identifier": "682189105",
-      "Weight": "0.367327655786",
-      "Market Value": "57266274.92",
-      "Shares Held": "474766.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INCYTE CORP",
-      "Ticker": "INCY",
-      "Identifier": "45337C102",
-      "Weight": "0.193647282015",
-      "Market Value": "30189555.06",
-      "Shares Held": "312069.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALLSTATE CORP (THE)",
-      "Ticker": "ALL",
-      "Identifier": "020002101",
-      "Weight": "0.126665608625",
-      "Market Value": "19747131.62",
-      "Shares Held": "95818.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "APOLLO GLOBAL MANAGEMENT INC",
-      "Ticker": "APO",
-      "Identifier": "03769M106",
-      "Weight": "0.028478894907",
-      "Market Value": "4439851.45",
-      "Shares Held": "34495.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KINDER MORGAN INC",
-      "Ticker": "KMI",
-      "Identifier": "49456B101",
-      "Weight": "0.154829325332",
-      "Market Value": "24137846.88",
-      "Shares Held": "776636.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SOUTHERN COMPANY (THE)",
-      "Ticker": "SO",
-      "Identifier": "842587107",
-      "Weight": "0.084530280532",
-      "Market Value": "13178246.2",
-      "Shares Held": "143164.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PTC INC",
-      "Ticker": "PTC",
-      "Identifier": "69370C100",
-      "Weight": "0.074787978365",
-      "Market Value": "11659424.12",
-      "Shares Held": "84044.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CATERPILLAR INC",
-      "Ticker": "CAT",
-      "Identifier": "149123101",
-      "Weight": "0.388355525788",
-      "Market Value": "60544513.75",
-      "Shares Held": "69125.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GARMIN LTD",
-      "Ticker": "GRMN",
-      "Identifier": "000000000",
-      "Weight": "0.033935718344",
-      "Market Value": "5290568.64",
-      "Shares Held": "22617.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ANALOG DEVICES INC",
-      "Ticker": "ADI",
-      "Identifier": "032654105",
-      "Weight": "0.148572161149",
-      "Market Value": "23162356.8",
-      "Shares Held": "55968.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AUTOZONE INC",
-      "Ticker": "AZO",
-      "Identifier": "053332102",
-      "Weight": "0.110987666864",
-      "Market Value": "17302945.05",
-      "Shares Held": "5895.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DOW INC",
-      "Ticker": "DOW",
-      "Identifier": "260557103",
-      "Weight": "0.015878549446",
-      "Market Value": "2475461.25",
-      "Shares Held": "73347.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "IQVIA HOLDINGS INC",
-      "Ticker": "IQV",
-      "Identifier": "46266C105",
-      "Weight": "0.142960899772",
-      "Market Value": "22287562.78",
-      "Shares Held": "122318.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AT&T INC",
-      "Ticker": "T",
-      "Identifier": "00206R102",
-      "Weight": "0.268256802191",
-      "Market Value": "41821157.6",
-      "Shares Held": "1686337.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CROWDSTRIKE HOLDINGS INC",
-      "Ticker": "CRWD",
-      "Identifier": "22788C105",
-      "Weight": "0.086646402496",
-      "Market Value": "13508149",
-      "Shares Held": "18479.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HARTFORD INSURANCE GROUP INC (THE)",
-      "Ticker": "HIG",
-      "Identifier": "416515104",
-      "Weight": "0.17091066098",
-      "Market Value": "26644922.44",
-      "Shares Held": "209588.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DIAMONDBACK ENERGY INC",
-      "Ticker": "FANG",
-      "Identifier": "25278X109",
-      "Weight": "0.028674152679",
-      "Market Value": "4470292.08",
-      "Shares Held": "23346.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TKO GROUP HOLDINGS INC",
-      "Ticker": "TKO",
-      "Identifier": "87256C101",
-      "Weight": "0.042053423643",
-      "Market Value": "6556116.54",
-      "Shares Held": "31953.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PRINCIPAL FINANCIAL GROUP INC",
-      "Ticker": "PFG",
-      "Identifier": "74251V102",
-      "Weight": "0.126176693796",
-      "Market Value": "19670909.94",
-      "Shares Held": "189837.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NETFLIX INC",
-      "Ticker": "NFLX",
-      "Identifier": "64110L106",
-      "Weight": "0.365231999286",
-      "Market Value": "56939562.68",
-      "Shares Held": "661934.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "UNITED AIRLINES HOLDINGS INC",
-      "Ticker": "UAL",
-      "Identifier": "910047109",
-      "Weight": "0.229804402186",
-      "Market Value": "35826439.6",
-      "Shares Held": "312077.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "REVOLUTION MEDICINES INC",
-      "Ticker": "RVMD",
-      "Identifier": "76155X100",
-      "Weight": "0.070999469965",
-      "Market Value": "11068796.76",
-      "Shares Held": "70287.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COMFORT SYSTEMS USA INC",
-      "Ticker": "FIX",
-      "Identifier": "199908104",
-      "Weight": "0.119027364001",
-      "Market Value": "18556331.5",
-      "Shares Held": "10150.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DEVON ENERGY CORP",
-      "Ticker": "-",
-      "Identifier": "25179M103",
-      "Weight": "0.193641159233",
-      "Market Value": "30188600.52",
-      "Shares Held": "678548.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EXPEDIA GROUP INC",
-      "Ticker": "EXPE",
-      "Identifier": "30212P303",
-      "Weight": "0.144190139007",
-      "Market Value": "22479200.82",
-      "Shares Held": "99558.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "QUANTA SERVICES INC",
-      "Ticker": "PWR",
-      "Identifier": "74762E102",
-      "Weight": "0.118912545378",
-      "Market Value": "18538431.31",
-      "Shares Held": "26047.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NORFOLK SOUTHERN CORP",
-      "Ticker": "NSC",
-      "Identifier": "655844108",
-      "Weight": "0.081067869211",
-      "Market Value": "12638457.28",
-      "Shares Held": "41443.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP",
-      "Ticker": "WAB",
-      "Identifier": "929740108",
-      "Weight": "0.188050626695",
-      "Market Value": "29317038.12",
-      "Shares Held": "112257.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PPL CORP",
-      "Ticker": "PPL",
-      "Identifier": "69351T106",
-      "Weight": "0.067483112424",
-      "Market Value": "10520597.64",
-      "Shares Held": "297276.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PNC FINANCIAL SERVICES GROUP INC (THE)",
-      "Ticker": "PNC",
-      "Identifier": "693475105",
-      "Weight": "0.092889011424",
-      "Market Value": "14481369.92",
-      "Shares Held": "65491.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CINCINNATI FINANCIAL CORP",
-      "Ticker": "CINF",
-      "Identifier": "172062101",
-      "Weight": "0.118162155975",
-      "Market Value": "18421445.82",
-      "Shares Held": "117021.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EMCOR GROUP INC",
-      "Ticker": "EME",
-      "Identifier": "29084Q100",
-      "Weight": "0.194570890406",
-      "Market Value": "30333545.34",
-      "Shares Held": "36687.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CADENCE DESIGN SYSTEMS INC",
-      "Ticker": "CDNS",
-      "Identifier": "127387108",
-      "Weight": "0.117758060483",
-      "Market Value": "18358447.45",
-      "Shares Held": "48965.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VISA INC",
-      "Ticker": "V",
-      "Identifier": "92826C839",
-      "Weight": "0.699613310219",
-      "Market Value": "109069512",
-      "Shares Held": "334200.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "THERMO FISHER SCIENTIFIC INC",
-      "Ticker": "TMO",
-      "Identifier": "883556102",
-      "Weight": "0.112601453576",
-      "Market Value": "17554533.93",
-      "Shares Held": "35643.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LYONDELLBASELL INDUSTRIES NV",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.017022074026",
-      "Market Value": "2653736.4",
-      "Shares Held": "39816.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PEPSICO INC",
-      "Ticker": "PEP",
-      "Identifier": "713448108",
-      "Weight": "0.208089032187",
-      "Market Value": "32441019.72",
-      "Shares Held": "224988.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KIMBERLY CLARK CORP",
-      "Ticker": "KMB",
-      "Identifier": "494368103",
-      "Weight": "0.033005639383",
-      "Market Value": "5145569.6",
-      "Shares Held": "52721.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DEERE & COMPANY",
-      "Ticker": "DE",
-      "Identifier": "244199105",
-      "Weight": "0.028948779489",
-      "Market Value": "4513106.32",
-      "Shares Held": "8324.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "STATE STREET CORP",
-      "Ticker": "STT",
-      "Identifier": "857477103",
-      "Weight": "0.320987382211",
-      "Market Value": "50041839.72",
-      "Shares Held": "321523.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PROGRESSIVE CORP (THE)",
-      "Ticker": "-",
-      "Identifier": "743315103",
-      "Weight": "0.111040411991",
-      "Market Value": "17311168",
-      "Shares Held": "90920.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JOHNSON CONTROLS INTERNATIONAL PLC",
-      "Ticker": "JCI",
-      "Identifier": "000000000",
-      "Weight": "0.125368261117",
-      "Market Value": "19544875.52",
-      "Shares Held": "145792.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EQT CORP",
-      "Ticker": "EQT",
-      "Identifier": "26884L109",
-      "Weight": "0.100909310897",
-      "Market Value": "15731732.28",
-      "Shares Held": "286396.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GE HEALTHCARE TECHNOLOGIES INC",
-      "Ticker": "GEHC",
-      "Identifier": "36266G107",
-      "Weight": "0.036972207384",
-      "Market Value": "5763956.4",
-      "Shares Held": "92460.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "W.W. GRAINGER INC",
-      "Ticker": "GWW",
-      "Identifier": "384802104",
-      "Weight": "0.387895674322",
-      "Market Value": "60472823.04",
-      "Shares Held": "48996.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ROPER TECHNOLOGIES INC",
-      "Ticker": "ROP",
-      "Identifier": "776696106",
-      "Weight": "0.168582674863",
-      "Market Value": "26281990.08",
-      "Shares Held": "80736.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WELLS FARGO & COMPANY",
-      "Ticker": "-",
-      "Identifier": "949746101",
-      "Weight": "0.220023516882",
-      "Market Value": "34301602.42",
-      "Shares Held": "442373.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MARRIOTT INTERNATIONAL INC",
-      "Ticker": "-",
-      "Identifier": "571903202",
-      "Weight": "0.071682152699",
-      "Market Value": "11175226.8",
-      "Shares Held": "29753.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CONSTELLATION BRANDS INC",
-      "Ticker": "STZ",
-      "Identifier": "21036P108",
-      "Weight": "0.030462988209",
-      "Market Value": "4749171.02",
-      "Shares Held": "34211.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMGEN INC",
-      "Ticker": "AMGN",
-      "Identifier": "031162100",
-      "Weight": "0.091782466837",
-      "Market Value": "14308859.94",
-      "Shares Held": "42486.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZOETIS INC",
-      "Ticker": "ZTS",
-      "Identifier": "98978V103",
-      "Weight": "0.059240354872",
-      "Market Value": "9235554.13",
-      "Shares Held": "118877.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MOTOROLA SOLUTIONS INC",
-      "Ticker": "MSI",
-      "Identifier": "620076307",
-      "Weight": "0.1144292963",
-      "Market Value": "17839494.08",
-      "Shares Held": "44236.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "REDDIT INC",
-      "Ticker": "RDDT",
-      "Identifier": "75734B100",
-      "Weight": "0.211515364929",
-      "Market Value": "32975184",
-      "Shares Held": "187359.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CITIZENS FINANCIAL GROUP INC",
-      "Ticker": "-",
-      "Identifier": "174610105",
-      "Weight": "0.097451258661",
-      "Market Value": "15192622.94",
-      "Shares Held": "244019.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FASTENAL COMPANY",
-      "Ticker": "FAST",
-      "Identifier": "311900104",
-      "Weight": "0.289902924595",
-      "Market Value": "45195781.8",
-      "Shares Held": "1022529.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "META PLATFORMS INC",
-      "Ticker": "META",
-      "Identifier": "30303M102",
-      "Weight": "2.144188549082",
-      "Market Value": "334278372.45",
-      "Shares Held": "528495.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DTE ENERGY COMPANY",
-      "Ticker": "DTE",
-      "Identifier": "233331107",
-      "Weight": "0.076239019681",
-      "Market Value": "11885641.04",
-      "Shares Held": "83192.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BECTON DICKINSON & COMPANY",
-      "Ticker": "BDX",
-      "Identifier": "075887109",
-      "Weight": "0.023033429412",
-      "Market Value": "3590904.96",
-      "Shares Held": "24408.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BIOGEN INC",
-      "Ticker": "BIIB",
-      "Identifier": "09062X103",
-      "Weight": "0.230775028752",
-      "Market Value": "35977760",
-      "Shares Held": "183560.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "UNITED THERAPEUTICS CORP",
-      "Ticker": "UTHR",
-      "Identifier": "91307C102",
-      "Weight": "0.053160515137",
-      "Market Value": "8287708.88",
-      "Shares Held": "14884.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CDW CORP",
-      "Ticker": "CDW",
-      "Identifier": "12514G108",
-      "Weight": "0.13240753131",
-      "Market Value": "20642295.7",
-      "Shares Held": "164546.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FABRINET",
-      "Ticker": "FN",
-      "Identifier": "000000000",
-      "Weight": "0.029384804419",
-      "Market Value": "4581082.48",
-      "Shares Held": "7003.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHARLES SCHWAB CORP (THE)",
-      "Ticker": "-",
-      "Identifier": "808513105",
-      "Weight": "0.080883785289",
-      "Market Value": "12609758.65",
-      "Shares Held": "144359.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GE AEROSPACE",
-      "Ticker": "-",
-      "Identifier": "369604301",
-      "Weight": "0.296279370848",
-      "Market Value": "46189867.92",
-      "Shares Held": "142667.00000000",
-      "Asset Category": "EC"
+      "Name": "3M COMPANY",
+      "Ticker": "MMM",
+      "Identifier": "US88579Y1010",
+      "Weight": "0.03",
+      "Market Value": "3913857.09",
+      "Shares Held": "23673",
+      "Asset Category": "",
+      "ISIN": "US88579Y1010",
+      "SEDOL": "2595708"
     },
     {
       "Name": "ABBOTT LABORATORIES",
       "Ticker": "ABT",
-      "Identifier": "002824100",
-      "Weight": "0.081377254777",
-      "Market Value": "12686690.4",
-      "Shares Held": "148209.00000000",
-      "Asset Category": "EC"
+      "Identifier": "US0028241000",
+      "Weight": "0.06",
+      "Market Value": "9662906.12",
+      "Shares Held": "92309",
+      "Asset Category": "",
+      "ISIN": "US0028241000",
+      "SEDOL": "2002305"
     },
     {
-      "Name": "VERISIGN INC",
-      "Ticker": "-",
-      "Identifier": "92343E102",
-      "Weight": "0.422484001707",
-      "Market Value": "65865133.24",
-      "Shares Held": "230798.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SANDISK CORP",
-      "Ticker": "SNDK",
-      "Identifier": "80004C200",
-      "Weight": "0.273676177002",
-      "Market Value": "42666036.56",
-      "Shares Held": "25172.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HILTON WORLDWIDE HOLDINGS INC",
-      "Ticker": "HLT",
-      "Identifier": "43300A203",
-      "Weight": "0.097480607785",
-      "Market Value": "15197198.46",
-      "Shares Held": "46381.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "J.B. HUNT TRANSPORT SERVICES INC",
-      "Ticker": "-",
-      "Identifier": "445658107",
-      "Weight": "0.050120983692",
-      "Market Value": "7813846.81",
-      "Shares Held": "28267.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FISERV INC",
-      "Ticker": "FISV",
-      "Identifier": "337738108",
-      "Weight": "0.132553812917",
-      "Market Value": "20665100.96",
-      "Shares Held": "365366.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DELL TECHNOLOGIES INC",
-      "Ticker": "DELL",
-      "Identifier": "24703L202",
-      "Weight": "0.130798228507",
-      "Market Value": "20391405.86",
-      "Shares Held": "48446.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NEXTERA ENERGY INC",
-      "Ticker": "NEE",
-      "Identifier": "65339F101",
-      "Weight": "0.102752359743",
-      "Market Value": "16019063.06",
-      "Shares Held": "184106.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BROADRIDGE FINANCIAL SOLUTIONS INC",
-      "Ticker": "BR",
-      "Identifier": "11133T103",
-      "Weight": "0.089712894414",
-      "Market Value": "13986214.2",
-      "Shares Held": "90985.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BURLINGTON STORES INC",
-      "Ticker": "BURL",
-      "Identifier": "122017106",
-      "Weight": "0.073531772563",
-      "Market Value": "11463582",
-      "Shares Held": "35400.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TAPESTRY INC",
-      "Ticker": "TPR",
-      "Identifier": "876030107",
-      "Weight": "0.295659430117",
-      "Market Value": "46093219.34",
-      "Shares Held": "316879.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WELLTOWER INC",
-      "Ticker": "WELL",
-      "Identifier": "95040Q104",
-      "Weight": "0.114011703283",
-      "Market Value": "17774391.45",
-      "Shares Held": "86565.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COLGATE-PALMOLIVE COMPANY",
-      "Ticker": "CL",
-      "Identifier": "194162103",
-      "Weight": "0.319837798159",
-      "Market Value": "49862619.9",
-      "Shares Held": "553230.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VERTIV HOLDINGS COMPANY",
-      "Ticker": "VRT",
-      "Identifier": "92537N108",
-      "Weight": "0.090563779321",
-      "Market Value": "14118866.91",
-      "Shares Held": "44721.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HUBBELL INC",
-      "Ticker": "HUBB",
-      "Identifier": "443510607",
-      "Weight": "0.069902414299",
-      "Market Value": "10897766.1",
-      "Shares Held": "23010.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INGERSOLL RAND INC",
-      "Ticker": "IR",
-      "Identifier": "45687V106",
-      "Weight": "0.089350272828",
-      "Market Value": "13929681.6",
-      "Shares Held": "194440.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SALESFORCE INC",
-      "Ticker": "CRM",
-      "Identifier": "79466L302",
-      "Weight": "0.199470036538",
-      "Market Value": "31097320.8",
-      "Shares Held": "162728.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AON PLC",
-      "Ticker": "AON",
-      "Identifier": "000000000",
-      "Weight": "0.091012880029",
-      "Market Value": "14188881.58",
-      "Shares Held": "44893.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MORGAN STANLEY",
-      "Ticker": "MS",
-      "Identifier": "617446448",
-      "Weight": "0.338400219505",
-      "Market Value": "52756496",
-      "Shares Held": "253637.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TESLA INC",
-      "Ticker": "TSLA",
-      "Identifier": "88160R101",
-      "Weight": "1.279234715578",
-      "Market Value": "199432320.86",
-      "Shares Held": "457634.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SOUTHERN COPPER CORP",
-      "Ticker": "SCCO",
-      "Identifier": "84265V105",
-      "Weight": "0.046584520341",
-      "Market Value": "7262513.2",
-      "Shares Held": "37964.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NVR INC",
-      "Ticker": "NVR",
-      "Identifier": "62944T105",
-      "Weight": "0.088419910608",
-      "Market Value": "13784638.4",
-      "Shares Held": "2258.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CF INDUSTRIES HOLDINGS INC",
-      "Ticker": "CF",
-      "Identifier": "125269100",
-      "Weight": "0.041916933395",
-      "Market Value": "6534837.75",
-      "Shares Held": "58165.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NISOURCE INC",
-      "Ticker": "NI",
-      "Identifier": "65473P105",
-      "Weight": "0.10930205404",
-      "Market Value": "17040158.5",
-      "Shares Held": "368675.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMEREN CORP",
-      "Ticker": "AEE",
-      "Identifier": "023608102",
-      "Weight": "0.08280116288",
-      "Market Value": "12908677.26",
-      "Shares Held": "119558.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CIGNA GROUP (THE)",
-      "Ticker": "CI",
-      "Identifier": "125523100",
-      "Weight": "0.144536523103",
-      "Market Value": "22533202",
-      "Shares Held": "81230.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BLACKROCK INC",
-      "Ticker": "BLK",
-      "Identifier": "09290D101",
-      "Weight": "0.064444682906",
-      "Market Value": "10046907.36",
-      "Shares Held": "9597.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMERICAN INTERNATIONAL GROUP INC",
-      "Ticker": "AIG",
-      "Identifier": "026874784",
-      "Weight": "0.072980748317",
-      "Market Value": "11377677.48",
-      "Shares Held": "153276.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LEIDOS HOLDINGS INC",
-      "Ticker": "LDOS",
-      "Identifier": "525327102",
-      "Weight": "0.092245703491",
-      "Market Value": "14381078.4",
-      "Shares Held": "112528.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MICROSOFT CORP",
-      "Ticker": "MSFT",
-      "Identifier": "594918104",
-      "Weight": "4.868769843511",
-      "Market Value": "759039805.44",
-      "Shares Held": "1685856.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "T-MOBILE US INC",
-      "Ticker": "TMUS",
-      "Identifier": "872590104",
-      "Weight": "0.04185090383",
-      "Market Value": "6524543.76",
-      "Shares Held": "34792.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BWX TECHNOLOGIES INC",
-      "Ticker": "BWXT",
-      "Identifier": "05605H100",
-      "Weight": "0.034891582599",
-      "Market Value": "5439587.6",
-      "Shares Held": "27770.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GE VERNOVA INC",
-      "Ticker": "GEV",
-      "Identifier": "36828A101",
-      "Weight": "0.250335099037",
-      "Market Value": "39027169.28",
-      "Shares Held": "40304.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MARVELL TECHNOLOGY INC",
-      "Ticker": "MRVL",
-      "Identifier": "573874104",
-      "Weight": "0.101116865614",
-      "Market Value": "15764090",
-      "Shares Held": "76898.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MARSH & MCLENNAN COMPANIES INC",
-      "Ticker": "MRSH",
-      "Identifier": "571748102",
-      "Weight": "0.057276344159",
-      "Market Value": "8929365.43",
-      "Shares Held": "55819.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ATI INC",
-      "Ticker": "ATI",
-      "Identifier": "01741R102",
-      "Weight": "0.051529044492",
-      "Market Value": "8033363.08",
-      "Shares Held": "45863.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PHILIP MORRIS INTERNATIONAL INC",
-      "Ticker": "PM",
-      "Identifier": "718172109",
-      "Weight": "0.238670411252",
-      "Market Value": "37208647.84",
-      "Shares Held": "209768.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AST SPACEMOBILE INC",
-      "Ticker": "ASTS",
-      "Identifier": "00217D100",
-      "Weight": "0.081344728802",
-      "Market Value": "12681619.61",
-      "Shares Held": "111821.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMERIPRISE FINANCIAL INC",
-      "Ticker": "AMP",
-      "Identifier": "03076C106",
-      "Weight": "0.228241683048",
-      "Market Value": "35582812.14",
-      "Shares Held": "79834.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CENTERPOINT ENERGY INC",
-      "Ticker": "CNP",
-      "Identifier": "15189T107",
-      "Weight": "0.095036926263",
-      "Market Value": "14816229.22",
-      "Shares Held": "350597.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BLOCK INC",
-      "Ticker": "XYZ",
-      "Identifier": "852234103",
-      "Weight": "0.055647261011",
-      "Market Value": "8675391.84",
-      "Shares Held": "114572.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WILLIS TOWERS WATSON PLC",
-      "Ticker": "WTW",
-      "Identifier": "000000000",
-      "Weight": "0.026565321812",
-      "Market Value": "4141525.96",
-      "Shares Held": "16588.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CBOE GLOBAL MARKETS INC",
-      "Ticker": "CBOE",
-      "Identifier": "12503M108",
-      "Weight": "0.100363448432",
-      "Market Value": "15646632.48",
-      "Shares Held": "46908.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "T. ROWE PRICE GROUP INC",
-      "Ticker": "-",
-      "Identifier": "74144T108",
-      "Weight": "0.154261490727",
-      "Market Value": "24049321.63",
-      "Shares Held": "230071.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ULTA BEAUTY INC",
-      "Ticker": "ULTA",
-      "Identifier": "90384S303",
-      "Weight": "0.260773870684",
-      "Market Value": "40654570.75",
-      "Shares Held": "79895.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INTUIT INC",
-      "Ticker": "INTU",
-      "Identifier": "461202103",
-      "Weight": "0.08765252714",
-      "Market Value": "13665003.54",
-      "Shares Held": "41218.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GOLDMAN SACHS TRUST",
-      "Ticker": "-",
-      "Identifier": "38141W323",
-      "Weight": "0.069942937594",
-      "Market Value": "10904083.67",
-      "Shares Held": "10904083.67000000",
-      "Asset Category": "STIV"
-    },
-    {
-      "Name": "ASTERA LABS INC",
-      "Ticker": "ALAB",
-      "Identifier": "04626A103",
-      "Weight": "0.044790500003",
-      "Market Value": "6982825.95",
-      "Shares Held": "20367.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TEXAS PACIFIC LAND CORP",
-      "Ticker": "TPL",
-      "Identifier": "88262P102",
-      "Weight": "0.016882141757",
-      "Market Value": "2631921",
-      "Shares Held": "6697.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TEXAS INSTRUMENTS INC",
-      "Ticker": "TXN",
-      "Identifier": "882508104",
-      "Weight": "0.141448340317",
-      "Market Value": "22051755.2",
-      "Shares Held": "72140.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JOHNSON & JOHNSON",
-      "Ticker": "JNJ",
-      "Identifier": "478160104",
-      "Weight": "0.725562505483",
-      "Market Value": "113114984.01",
-      "Shares Held": "501997.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ILLINOIS TOOL WORKS INC",
-      "Ticker": "ITW",
-      "Identifier": "452308109",
-      "Weight": "0.147963808509",
-      "Market Value": "23067514.8",
-      "Shares Held": "93285.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FEDEX CORP",
-      "Ticker": "FDX",
-      "Identifier": "31428X106",
-      "Weight": "0.165365869131",
-      "Market Value": "25780491",
-      "Shares Held": "62612.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EXPEDITORS INTERNATIONAL OF WASHINGTON INC",
-      "Ticker": "EXPD",
-      "Identifier": "302130109",
-      "Weight": "0.062069208054",
-      "Market Value": "9676571.52",
-      "Shares Held": "61248.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ABBVIE INC",
+      "Name": "ABBVIE INC.",
       "Ticker": "ABBV",
-      "Identifier": "00287Y109",
-      "Weight": "0.378660334486",
-      "Market Value": "59033036.24",
-      "Shares Held": "271142.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ADVANCED MICRO DEVICES INC",
-      "Ticker": "AMD",
-      "Identifier": "007903107",
-      "Weight": "0.678694281535",
-      "Market Value": "105808241.5",
-      "Shares Held": "205015.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MASTERCARD INC",
-      "Ticker": "MA",
-      "Identifier": "57636Q104",
-      "Weight": "0.606664970012",
-      "Market Value": "94578892.74",
-      "Shares Held": "191463.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMERICAN ELECTRIC POWER COMPANY INC",
-      "Ticker": "AEP",
-      "Identifier": "025537101",
-      "Weight": "0.074916628765",
-      "Market Value": "11679480.68",
-      "Shares Held": "92204.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ESSEX PROPERTY TRUST INC",
-      "Ticker": "ESS",
-      "Identifier": "297178105",
-      "Weight": "0.082344778323",
-      "Market Value": "12837527.04",
-      "Shares Held": "47086.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DUKE ENERGY CORP",
-      "Ticker": "DUK",
-      "Identifier": "26441C204",
-      "Weight": "0.107686131853",
-      "Market Value": "16788236.7",
-      "Shares Held": "136790.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MEDTRONIC PLC",
-      "Ticker": "MDT",
-      "Identifier": "000000000",
-      "Weight": "0.117465590599",
-      "Market Value": "18312851.48",
-      "Shares Held": "248108.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ELI LILLY & COMPANY",
-      "Ticker": "LLY",
-      "Identifier": "532457108",
-      "Weight": "1.165334177286",
-      "Market Value": "181675260",
-      "Shares Held": "164412.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INTERACTIVE BROKERS GROUP INC",
-      "Ticker": "IBKR",
-      "Identifier": "45841N107",
-      "Weight": "0.028351491783",
-      "Market Value": "4419989.34",
-      "Shares Held": "50822.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VENTURE GLOBAL INC",
-      "Ticker": "VG",
-      "Identifier": "92333F101",
-      "Weight": "0.017284498632",
-      "Market Value": "2694648.32",
-      "Shares Held": "223808.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RTX CORP",
-      "Ticker": "RTX",
-      "Identifier": "75513E101",
-      "Weight": "0.236565066088",
-      "Market Value": "36880425.14",
-      "Shares Held": "205279.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FIFTH THIRD BANCORP",
-      "Ticker": "FITB",
-      "Identifier": "316773100",
-      "Weight": "0.055813773123",
-      "Market Value": "8701351.03",
-      "Shares Held": "174271.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DOMINION ENERGY INC",
-      "Ticker": "D",
-      "Identifier": "25746U109",
-      "Weight": "0.042159397157",
-      "Market Value": "6572637.78",
-      "Shares Held": "98187.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LABCORP HOLDINGS INC",
-      "Ticker": "LH",
-      "Identifier": "504922105",
-      "Weight": "0.144823163021",
-      "Market Value": "22577889.08",
-      "Shares Held": "86818.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BOSTON SCIENTIFIC CORP",
-      "Ticker": "BSX",
-      "Identifier": "101137107",
-      "Weight": "0.035083227343",
-      "Market Value": "5469464.96",
-      "Shares Held": "113216.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VERALTO CORP",
-      "Ticker": "VLTO",
-      "Identifier": "92338C103",
-      "Weight": "0.147435658006",
-      "Market Value": "22985176.29",
-      "Shares Held": "279523.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHERWIN-WILLIAMS COMPANY (THE)",
-      "Ticker": "SHW",
-      "Identifier": "824348106",
-      "Weight": "0.080555754338",
-      "Market Value": "12558618.72",
-      "Shares Held": "41333.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "L3HARRIS TECHNOLOGIES INC",
-      "Ticker": "-",
-      "Identifier": "502431109",
-      "Weight": "0.177400778131",
-      "Market Value": "27656729.82",
-      "Shares Held": "87749.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LINDE PLC",
-      "Ticker": "LIN",
-      "Identifier": "000000000",
-      "Weight": "0.190913473269",
-      "Market Value": "29763355.07",
-      "Shares Held": "59803.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TAKE-TWO INTERACTIVE SOFTWARE INC",
-      "Ticker": "TTWO",
-      "Identifier": "874054109",
-      "Weight": "0.112712861545",
-      "Market Value": "17571902.4",
-      "Shares Held": "78390.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FIRSTENERGY CORP",
-      "Ticker": "FE",
-      "Identifier": "337932107",
-      "Weight": "0.08858750874",
-      "Market Value": "13810766.9",
-      "Shares Held": "297710.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HONEYWELL INTERNATIONAL INC",
-      "Ticker": "HON",
-      "Identifier": "438516106",
-      "Weight": "0.093208032801",
-      "Market Value": "14531105.26",
-      "Shares Held": "61091.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AVALONBAY COMMUNITIES INC",
-      "Ticker": "-",
-      "Identifier": "053484101",
-      "Weight": "0.112168349563",
-      "Market Value": "17487013.14",
-      "Shares Held": "95814.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YUM! BRANDS INC",
-      "Ticker": "YUM",
-      "Identifier": "988498101",
-      "Weight": "0.175034001627",
-      "Market Value": "27287750.05",
-      "Shares Held": "184439.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DOLLAR TREE INC",
-      "Ticker": "DLTR",
-      "Identifier": "256746108",
-      "Weight": "0.259476454606",
-      "Market Value": "40452303.96",
-      "Shares Held": "347409.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DEXCOM INC",
-      "Ticker": "DXCM",
-      "Identifier": "252131107",
-      "Weight": "0.041188998685",
-      "Market Value": "6421352.94",
-      "Shares Held": "87081.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MONSTER BEVERAGE CORP",
-      "Ticker": "MNST",
-      "Identifier": "61174X109",
-      "Weight": "0.167209936964",
-      "Market Value": "26067980.64",
-      "Shares Held": "295958.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "IDEXX LABORATORIES INC",
-      "Ticker": "-",
-      "Identifier": "45168D104",
-      "Weight": "0.282304114233",
-      "Market Value": "44011129.47",
-      "Shares Held": "78099.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BOOKING HOLDINGS INC",
-      "Ticker": "BKNG",
-      "Identifier": "09857L108",
-      "Weight": "0.323390734216",
-      "Market Value": "50416521.6",
-      "Shares Held": "301120.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "API GROUP CORP",
-      "Ticker": "APG",
-      "Identifier": "00187Y100",
-      "Weight": "0.045158730643",
-      "Market Value": "7040233",
-      "Shares Held": "171713.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "METLIFE INC",
-      "Ticker": "MET",
-      "Identifier": "59156R108",
-      "Weight": "0.087291948534",
-      "Market Value": "13608789.44",
-      "Shares Held": "164576.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KRAFT HEINZ COMPANY (THE)",
-      "Ticker": "KHC",
-      "Identifier": "500754106",
-      "Weight": "0.188657809673",
-      "Market Value": "29411697.77",
-      "Shares Held": "1224977.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CMS ENERGY CORP",
-      "Ticker": "CMS",
-      "Identifier": "125896100",
-      "Weight": "0.056030288792",
-      "Market Value": "8735105.76",
-      "Shares Held": "120368.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EVERGY INC",
-      "Ticker": "EVRG",
-      "Identifier": "30034W106",
-      "Weight": "0.115591365172",
-      "Market Value": "18020660.28",
-      "Shares Held": "219657.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FTAI AVIATION LTD",
-      "Ticker": "FTAI",
-      "Identifier": "000000000",
-      "Weight": "0.042444349579",
-      "Market Value": "6617061.78",
-      "Shares Held": "25417.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "UDR INC",
-      "Ticker": "UDR",
-      "Identifier": "902653104",
-      "Weight": "0.077047769487",
-      "Market Value": "12011724.9",
-      "Shares Held": "325521.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WARNER BROS. DISCOVERY INC",
-      "Ticker": "WBD",
-      "Identifier": "934423104",
-      "Weight": "0.361723479156",
-      "Market Value": "56392585.41",
-      "Shares Held": "2087841.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CONSTELLATION ENERGY CORP",
-      "Ticker": "CEG",
-      "Identifier": "21037T109",
-      "Weight": "0.019031403296",
-      "Market Value": "2966990.25",
-      "Shares Held": "10311.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JP MORGAN CHASE & COMPANY",
-      "Ticker": "-",
-      "Identifier": "46625H100",
-      "Weight": "1.100606580575",
-      "Market Value": "171584246.46",
-      "Shares Held": "573266.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PFIZER INC",
-      "Ticker": "PFE",
-      "Identifier": "717081103",
-      "Weight": "0.072237286894",
-      "Market Value": "11261772.06",
-      "Shares Held": "430167.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BLOOM ENERGY CORP",
-      "Ticker": "BE",
-      "Identifier": "093712107",
-      "Weight": "0.1267914163",
-      "Market Value": "19766745",
-      "Shares Held": "69357.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ARCH CAPITAL GROUP LTD",
-      "Ticker": "ACGL",
-      "Identifier": "000000000",
-      "Weight": "0.074551761377",
-      "Market Value": "11622597.96",
-      "Shares Held": "130094.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ECOLAB INC",
-      "Ticker": "ECL",
-      "Identifier": "278865100",
-      "Weight": "0.127504329751",
-      "Market Value": "19877888",
-      "Shares Held": "77648.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FORTIVE CORP",
-      "Ticker": "FTV",
-      "Identifier": "34959J108",
-      "Weight": "0.208151537755",
-      "Market Value": "32450764.32",
-      "Shares Held": "556426.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WOODWARD INC",
-      "Ticker": "WWD",
-      "Identifier": "980745103",
-      "Weight": "0.056215955463",
-      "Market Value": "8764051.14",
-      "Shares Held": "25038.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ENTERGY CORP",
-      "Ticker": "-",
-      "Identifier": "29364G103",
-      "Weight": "0.092328239245",
-      "Market Value": "14393945.7",
-      "Shares Held": "131994.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CISCO SYSTEMS INC",
-      "Ticker": "CSCO",
-      "Identifier": "17275R102",
-      "Weight": "0.58776732944",
-      "Market Value": "91632756.06",
-      "Shares Held": "760943.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INVITATION HOMES INC",
-      "Ticker": "INVH",
-      "Identifier": "46187W107",
-      "Weight": "0.106410534866",
-      "Market Value": "16589371.5",
-      "Shares Held": "567158.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NETAPP INC",
-      "Ticker": "NTAP",
-      "Identifier": "64110D104",
-      "Weight": "0.275141704682",
-      "Market Value": "42894511.9",
-      "Shares Held": "246110.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WATERS CORP",
-      "Ticker": "-",
-      "Identifier": "941848103",
-      "Weight": "0.023639175248",
-      "Market Value": "3685340.56",
-      "Shares Held": "9608.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HOME DEPOT INC (THE)",
-      "Ticker": "HD",
-      "Identifier": "437076102",
-      "Weight": "0.388618261556",
-      "Market Value": "60585474.18",
-      "Shares Held": "191037.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DOLLAR GENERAL CORP",
-      "Ticker": "DG",
-      "Identifier": "256677105",
-      "Weight": "0.162763733946",
-      "Market Value": "25374818.88",
-      "Shares Held": "229408.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COMCAST CORP",
-      "Ticker": "CMCSA",
-      "Identifier": "20030N101",
-      "Weight": "0.156950890026",
-      "Market Value": "24468598.2",
-      "Shares Held": "983860.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ROCKWELL AUTOMATION INC",
-      "Ticker": "ROK",
-      "Identifier": "773903109",
-      "Weight": "0.0407980045",
-      "Market Value": "6360397.06",
-      "Shares Held": "14101.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COEUR MINING INC",
-      "Ticker": "CDE",
-      "Identifier": "192108504",
-      "Weight": "0.039033412504",
-      "Market Value": "6085297.68",
-      "Shares Held": "314974.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHENIERE ENERGY INC",
-      "Ticker": "LNG",
-      "Identifier": "16411R208",
-      "Weight": "0.036378636811",
-      "Market Value": "5671418.92",
-      "Shares Held": "25222.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INTERCONTINENTAL EXCHANGE INC",
-      "Ticker": "ICE",
-      "Identifier": "45866F104",
-      "Weight": "0.07411765595",
-      "Market Value": "11554921.05",
-      "Shares Held": "78153.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AUTOMATIC DATA PROCESSING INC",
-      "Ticker": "ADP",
-      "Identifier": "053015103",
-      "Weight": "0.053590325815",
-      "Market Value": "8354716.24",
-      "Shares Held": "37661.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TARGET CORP",
-      "Ticker": "TGT",
-      "Identifier": "87612E106",
-      "Weight": "0.170283897915",
-      "Market Value": "26547210.26",
-      "Shares Held": "208918.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RALPH LAUREN CORP",
-      "Ticker": "RL",
-      "Identifier": "751212101",
-      "Weight": "0.203924430976",
-      "Market Value": "31791759.6",
-      "Shares Held": "87364.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALTRIA GROUP INC",
-      "Ticker": "MO",
-      "Identifier": "02209S103",
-      "Weight": "0.181850948956",
-      "Market Value": "28350510.16",
-      "Shares Held": "407452.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZIMMER BIOMET HOLDINGS INC",
-      "Ticker": "ZBH",
-      "Identifier": "98956P102",
-      "Weight": "0.082332793759",
-      "Market Value": "12835658.65",
-      "Shares Held": "155905.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AGILENT TECHNOLOGIES INC",
-      "Ticker": "A",
-      "Identifier": "00846U101",
-      "Weight": "0.080657452282",
-      "Market Value": "12574473.4",
-      "Shares Held": "92780.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PPG INDUSTRIES INC",
-      "Ticker": "PPG",
-      "Identifier": "693506107",
-      "Weight": "0.051991188264",
-      "Market Value": "8105411.16",
-      "Shares Held": "71742.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DUPONT DE NEMOURS INC",
-      "Ticker": "DD",
-      "Identifier": "26614N102",
-      "Weight": "0.095864635053",
-      "Market Value": "14945268.78",
-      "Shares Held": "308659.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DIGITAL REALTY TRUST INC",
-      "Ticker": "DLR",
-      "Identifier": "253868103",
-      "Weight": "0.020485669954",
-      "Market Value": "3193710",
-      "Shares Held": "16809.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TENET HEALTHCARE CORP",
-      "Ticker": "THC",
-      "Identifier": "88033G407",
-      "Weight": "0.082840259938",
-      "Market Value": "12914772.48",
-      "Shares Held": "73664.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "O'REILLY AUTOMOTIVE INC",
-      "Ticker": "-",
-      "Identifier": "67103H107",
-      "Weight": "0.208777096842",
-      "Market Value": "32548288.8",
-      "Shares Held": "374635.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ORACLE CORP",
-      "Ticker": "ORCL",
-      "Identifier": "68389X105",
-      "Weight": "0.15461396842",
-      "Market Value": "24104272.8",
-      "Shares Held": "106760.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MERCK & COMPANY INC",
-      "Ticker": "MRK",
-      "Identifier": "58933Y105",
-      "Weight": "0.320685477095",
-      "Market Value": "49994772.8",
-      "Shares Held": "421115.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SYSCO CORP",
-      "Ticker": "SYY",
-      "Identifier": "871829107",
-      "Weight": "0.215003201057",
-      "Market Value": "33518936.64",
-      "Shares Held": "442144.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EDISON INTERNATIONAL",
-      "Ticker": "EIX",
-      "Identifier": "281020107",
-      "Weight": "0.057941292992",
-      "Market Value": "9033030.76",
-      "Shares Held": "129154.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INSMED INC",
-      "Ticker": "INSM",
-      "Identifier": "457669307",
-      "Weight": "0.051791442414",
-      "Market Value": "8074270.84",
-      "Shares Held": "75524.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "M&T BANK CORP",
-      "Ticker": "MTB",
-      "Identifier": "55261F104",
-      "Weight": "0.095600089146",
-      "Market Value": "14904026.15",
-      "Shares Held": "68965.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TRIMBLE INC",
-      "Ticker": "TRMB",
-      "Identifier": "896239100",
-      "Weight": "0.123359021584",
-      "Market Value": "19231635.66",
-      "Shares Held": "340926.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DARDEN RESTAURANTS INC",
-      "Ticker": "DRI",
-      "Identifier": "237194105",
-      "Weight": "0.061065861477",
-      "Market Value": "9520150.08",
-      "Shares Held": "46688.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FIRST SOLAR INC",
-      "Ticker": "FSLR",
-      "Identifier": "336433107",
-      "Weight": "0.24216776446",
-      "Market Value": "37753884.19",
-      "Shares Held": "123061.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EQUINIX INC",
-      "Ticker": "EQIX",
-      "Identifier": "29444U700",
-      "Weight": "0.020600399353",
-      "Market Value": "3211596.28",
-      "Shares Held": "3007.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PALANTIR TECHNOLOGIES INC",
-      "Ticker": "PLTR",
-      "Identifier": "69608A108",
-      "Weight": "0.351263762248",
-      "Market Value": "54761918.58",
-      "Shares Held": "349827.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ATLASSIAN CORP",
-      "Ticker": "TEAM",
-      "Identifier": "049468101",
-      "Weight": "0.303041092096",
-      "Market Value": "47244018.3",
-      "Shares Held": "439030.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MACOM TECHNOLOGY SOLUTIONS HOLDINGS INC",
-      "Ticker": "MTSI",
-      "Identifier": "55405Y100",
-      "Weight": "0.033194230369",
-      "Market Value": "5174970.88",
-      "Shares Held": "14192.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHEVRON CORP",
-      "Ticker": "CVX",
-      "Identifier": "166764100",
-      "Weight": "0.26161465461",
-      "Market Value": "40785648.72",
-      "Shares Held": "223532.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CENTENE CORP",
-      "Ticker": "CNC",
-      "Identifier": "15135B101",
-      "Weight": "0.162674278488",
-      "Market Value": "25360872.8",
-      "Shares Held": "425518.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TRUIST FINANCIAL CORP",
-      "Ticker": "TFC",
-      "Identifier": "89832Q109",
-      "Weight": "0.074749141154",
-      "Market Value": "11653369.41",
-      "Shares Held": "241721.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "APPLOVIN CORP",
-      "Ticker": "APP",
-      "Identifier": "03831W108",
-      "Weight": "0.468863318395",
-      "Market Value": "73095655.25",
-      "Shares Held": "119225.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BOEING COMPANY (THE)",
-      "Ticker": "BA",
-      "Identifier": "097023105",
-      "Weight": "0.037368084003",
-      "Market Value": "5825673.45",
-      "Shares Held": "25203.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MICROCHIP TECHNOLOGY INC",
-      "Ticker": "MCHP",
-      "Identifier": "595017104",
-      "Weight": "0.019404196806",
-      "Market Value": "3025108.65",
-      "Shares Held": "31961.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AFLAC INC",
-      "Ticker": "AFL",
-      "Identifier": "001055102",
-      "Weight": "0.089682338616",
-      "Market Value": "13981450.56",
-      "Shares Held": "124368.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALBEMARLE CORP",
-      "Ticker": "ALB",
-      "Identifier": "012653101",
-      "Weight": "0.048619134007",
-      "Market Value": "7579708.88",
-      "Shares Held": "42964.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TRANSDIGM GROUP INC",
-      "Ticker": "TDG",
-      "Identifier": "893641100",
-      "Weight": "0.020694922942",
-      "Market Value": "3226332.48",
-      "Shares Held": "2564.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ARCHER DANIELS MIDLAND COMPANY",
-      "Ticker": "ADM",
-      "Identifier": "039483102",
-      "Weight": "0.248162830207",
-      "Market Value": "38688513.2",
-      "Shares Held": "484940.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BERKSHIRE HATHAWAY INC",
-      "Ticker": "BRK-B",
-      "Identifier": "084670702",
-      "Weight": "0.845239454337",
-      "Market Value": "131772585.6",
-      "Shares Held": "277720.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TARGA RESOURCES CORP",
-      "Ticker": "TRGP",
-      "Identifier": "87612G101",
-      "Weight": "0.069824519926",
-      "Market Value": "10885622.39",
-      "Shares Held": "42677.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GOLDMAN SACHS FINANCIAL SQUARE FUNDS PRIME OBLIGATIONS FUND",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036923902162",
-      "Market Value": "5756425.63",
-      "Shares Held": "5756425.63000000",
-      "Asset Category": "STIV"
-    },
-    {
-      "Name": "MICRON TECHNOLOGY INC",
-      "Ticker": "MU",
-      "Identifier": "595112103",
-      "Weight": "1.095930314909",
-      "Market Value": "170855218",
-      "Shares Held": "175958.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CSX CORP",
-      "Ticker": "CSX",
-      "Identifier": "126408103",
-      "Weight": "0.05980514829",
-      "Market Value": "9323605.26",
-      "Shares Held": "206001.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ROBLOX CORP",
-      "Ticker": "RBLX",
-      "Identifier": "771049103",
-      "Weight": "0.020215259894",
-      "Market Value": "3151553.15",
-      "Shares Held": "66841.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ROYALTY PHARMA PLC",
-      "Ticker": "RPRX",
-      "Identifier": "000000000",
-      "Weight": "0.212995727916",
-      "Market Value": "33205972.16",
-      "Shares Held": "595516.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HUMANA INC",
-      "Ticker": "HUM",
-      "Identifier": "444859102",
-      "Weight": "0.10941461679",
-      "Market Value": "17057707",
-      "Shares Held": "55850.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RESMED INC",
-      "Ticker": "RMD",
-      "Identifier": "761152107",
-      "Weight": "0.095182496772",
-      "Market Value": "14838923.62",
-      "Shares Held": "77866.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HALLIBURTON COMPANY",
-      "Ticker": "HAL",
-      "Identifier": "406216101",
-      "Weight": "0.125363127881",
-      "Market Value": "19544075.25",
-      "Shares Held": "503065.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMPHENOL CORP",
-      "Ticker": "-",
-      "Identifier": "032095101",
-      "Weight": "0.227038335458",
-      "Market Value": "35395210.6",
-      "Shares Held": "237935.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PUBLIC STORAGE",
-      "Ticker": "PSA",
-      "Identifier": "74460D109",
-      "Weight": "0.024641986224",
-      "Market Value": "3841678.5",
-      "Shares Held": "12650.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BUNGE GLOBAL SA",
-      "Ticker": "BG",
-      "Identifier": "000000000",
-      "Weight": "0.040536433391",
-      "Market Value": "6319618.2",
-      "Shares Held": "51254.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NEWMONT CORP",
-      "Ticker": "-",
-      "Identifier": "651639106",
-      "Weight": "0.186485760792",
-      "Market Value": "29073075.98",
-      "Shares Held": "264758.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CAPITAL ONE FINANCIAL CORP",
-      "Ticker": "COF",
-      "Identifier": "14040H105",
-      "Weight": "0.112212139061",
-      "Market Value": "17493839.91",
-      "Shares Held": "93087.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CBRE GROUP INC",
-      "Ticker": "CBRE",
-      "Identifier": "12504L109",
-      "Weight": "0.032666861074",
-      "Market Value": "5092754.16",
-      "Shares Held": "40729.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DANAHER CORP",
-      "Ticker": "-",
-      "Identifier": "235851102",
-      "Weight": "0.07647899787",
-      "Market Value": "11923053.57",
-      "Shares Held": "65271.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NUCOR CORP",
-      "Ticker": "NUE",
-      "Identifier": "670346105",
-      "Weight": "0.021141796898",
-      "Market Value": "3296000",
-      "Shares Held": "13184.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HCA HEALTHCARE INC",
-      "Ticker": "HCA",
-      "Identifier": "40412C101",
-      "Weight": "0.050322361168",
-      "Market Value": "7845241.5",
-      "Shares Held": "20725.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WORKDAY INC",
-      "Ticker": "WDAY",
-      "Identifier": "98138H101",
-      "Weight": "0.066553613708",
-      "Market Value": "10375689.06",
-      "Shares Held": "70974.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ITT INC",
-      "Ticker": "ITT",
-      "Identifier": "45073V108",
-      "Weight": "0.025092381546",
-      "Market Value": "3911895",
-      "Shares Held": "20061.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GILEAD SCIENCES INC",
-      "Ticker": "GILD",
-      "Identifier": "375558103",
-      "Weight": "0.224264838697",
-      "Market Value": "34962823.26",
-      "Shares Held": "260082.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EATON CORP PLC",
-      "Ticker": "ETN",
-      "Identifier": "000000000",
-      "Weight": "0.039307181583",
-      "Market Value": "6127978.2",
-      "Shares Held": "15297.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SYNCHRONY FINANCIAL",
-      "Ticker": "SYF",
-      "Identifier": "87165B103",
-      "Weight": "0.211953572287",
-      "Market Value": "33043500.4",
-      "Shares Held": "462535.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COSTCO WHOLESALE CORP",
-      "Ticker": "-",
-      "Identifier": "22160K105",
-      "Weight": "0.555427273464",
-      "Market Value": "86590950.72",
-      "Shares Held": "90546.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VALERO ENERGY CORP",
-      "Ticker": "-",
-      "Identifier": "91913Y100",
-      "Weight": "0.243933197573",
-      "Market Value": "38029114.7",
-      "Shares Held": "155335.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
-      "Ticker": "CTSH",
-      "Identifier": "192446102",
-      "Weight": "0.191188506815",
-      "Market Value": "29806232.72",
-      "Shares Held": "534593.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "W. R. BERKLEY CORP",
-      "Ticker": "-",
-      "Identifier": "084423102",
-      "Weight": "0.061120784479",
-      "Market Value": "9528712.56",
-      "Shares Held": "149964.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VIKING HOLDINGS LTD",
-      "Ticker": "VIK",
-      "Identifier": "000000000",
-      "Weight": "0.031263692907",
-      "Market Value": "4874000.65",
-      "Shares Held": "52915.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RAYMOND JAMES FINANCIAL INC",
-      "Ticker": "RJF",
-      "Identifier": "754730109",
-      "Weight": "0.113289511496",
-      "Market Value": "17661801.96",
-      "Shares Held": "123156.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "STERIS PLC",
-      "Ticker": "STE",
-      "Identifier": "000000000",
-      "Weight": "0.129182886821",
-      "Market Value": "20139574.56",
-      "Shares Held": "94672.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MCKESSON CORP",
-      "Ticker": "MCK",
-      "Identifier": "58155Q103",
-      "Weight": "0.080887536097",
-      "Market Value": "12610343.4",
-      "Shares Held": "16985.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "US BANCORP",
-      "Ticker": "TBBK",
-      "Identifier": "902973304",
-      "Weight": "0.12988497145",
-      "Market Value": "20249029.35",
-      "Shares Held": "369171.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHARTER COMMUNICATIONS INC",
-      "Ticker": "-",
-      "Identifier": "16119P108",
-      "Weight": "0.152505714014",
-      "Market Value": "23775596.55",
-      "Shares Held": "165051.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TECHNIPFMC PLC",
-      "Ticker": "FTI",
-      "Identifier": "000000000",
-      "Weight": "0.071791102356",
-      "Market Value": "11192212.02",
-      "Shares Held": "163581.00000000",
-      "Asset Category": "EC"
+      "Identifier": "US00287Y1091",
+      "Weight": "0.48",
+      "Market Value": "73183232.2",
+      "Shares Held": "258233",
+      "Asset Category": "",
+      "ISIN": "US00287Y1091",
+      "SEDOL": "B92SR70"
+    },
+    {
+      "Name": "ACCENTURE PLC",
+      "Ticker": "ACN",
+      "Identifier": "IE00B4BNMY34",
+      "Weight": "0.21",
+      "Market Value": "32766570.52",
+      "Shares Held": "145681",
+      "Asset Category": "",
+      "ISIN": "IE00B4BNMY34",
+      "SEDOL": "B4BNMY3"
     },
     {
       "Name": "ADOBE INC",
       "Ticker": "ADBE",
-      "Identifier": "00724F101",
-      "Weight": "0.303249661888",
-      "Market Value": "47276534.27",
-      "Shares Held": "182387.00000000",
-      "Asset Category": "EC"
+      "Identifier": "US00724F1012",
+      "Weight": "0.31",
+      "Market Value": "46919341.44",
+      "Shares Held": "186432",
+      "Asset Category": "",
+      "ISIN": "US00724F1012",
+      "SEDOL": "2008154"
     },
     {
-      "Name": "GLOBAL PAYMENTS INC",
-      "Ticker": "GPN",
-      "Identifier": "37940X102",
-      "Weight": "0.093724116443",
-      "Market Value": "14611562.55",
-      "Shares Held": "193505.00000000",
-      "Asset Category": "EC"
+      "Name": "ADVANCED MICRO DEVICES INC.",
+      "Ticker": "AMD",
+      "Identifier": "US0079031078",
+      "Weight": "0.81",
+      "Market Value": "124242147.63",
+      "Shares Held": "220981",
+      "Asset Category": "",
+      "ISIN": "US0079031078",
+      "SEDOL": "2007849"
     },
     {
-      "Name": "PROLOGIS INC",
-      "Ticker": "PLD",
-      "Identifier": "74340W103",
-      "Weight": "0.039812769055",
-      "Market Value": "6206799.14",
-      "Shares Held": "43262.00000000",
-      "Asset Category": "EC"
+      "Name": "AERCAP HOLDINGS NV",
+      "Ticker": "AER",
+      "Identifier": "NL0000687663",
+      "Weight": "0.08",
+      "Market Value": "12725245.44",
+      "Shares Held": "87207",
+      "Asset Category": "",
+      "ISIN": "NL0000687663",
+      "SEDOL": "B1HHKD3"
     },
     {
-      "Name": "PUBLIC SERVICE ENTERPRISE GROUP INC",
-      "Ticker": "PEG",
-      "Identifier": "744573106",
-      "Weight": "0.041564004258",
-      "Market Value": "6479816.2",
-      "Shares Held": "82388.00000000",
-      "Asset Category": "EC"
+      "Name": "AFLAC INCORPORATED",
+      "Ticker": "AFL",
+      "Identifier": "US0010551028",
+      "Weight": "0.12",
+      "Market Value": "18276501",
+      "Shares Held": "154820",
+      "Asset Category": "",
+      "ISIN": "US0010551028",
+      "SEDOL": "2026361"
     },
     {
-      "Name": "LAM RESEARCH CORP",
-      "Ticker": "LRCX",
-      "Identifier": "512807306",
-      "Weight": "0.707807932659",
-      "Market Value": "110347051.26",
-      "Shares Held": "346807.00000000",
-      "Asset Category": "EC"
+      "Name": "AGILENT TECHNOLOGIES, INC.",
+      "Ticker": "A",
+      "Identifier": "US00846U1016",
+      "Weight": "0.07",
+      "Market Value": "10492272.4",
+      "Shares Held": "59768",
+      "Asset Category": "",
+      "ISIN": "US00846U1016",
+      "SEDOL": "2520153"
     },
     {
-      "Name": "EDWARDS LIFESCIENCES CORP",
+      "Name": "AIRBNB INC.",
+      "Ticker": "ABNB",
+      "Identifier": "US0090661010",
+      "Weight": "0.02",
+      "Market Value": "3408393.96",
+      "Shares Held": "19557",
+      "Asset Category": "",
+      "ISIN": "US0090661010",
+      "SEDOL": "BMGYYH4"
+    },
+    {
+      "Name": "ALLIANT ENERGY CORPORATION",
+      "Ticker": "LNT",
+      "Identifier": "US0188021085",
+      "Weight": "0.09",
+      "Market Value": "14490513.4",
+      "Shares Held": "215954",
+      "Asset Category": "",
+      "ISIN": "US0188021085",
+      "SEDOL": "2973821"
+    },
+    {
+      "Name": "ALLSTATE CORPORATION",
+      "Ticker": "ALL",
+      "Identifier": "US0200021014",
+      "Weight": "0.16",
+      "Market Value": "24972070.4",
+      "Shares Held": "104224",
+      "Asset Category": "",
+      "ISIN": "US0200021014",
+      "SEDOL": "2019952"
+    },
+    {
+      "Name": "ALNYLAM PHARMACEUTICALS INC.",
+      "Ticker": "ALNY",
+      "Identifier": "US02043Q1076",
+      "Weight": "0.16",
+      "Market Value": "24854454.06",
+      "Shares Held": "106202",
+      "Asset Category": "",
+      "ISIN": "US02043Q1076",
+      "SEDOL": "B00FWN1"
+    },
+    {
+      "Name": "ALPHABET INC.",
+      "Ticker": "GOOG",
+      "Identifier": "US02079K1079",
+      "Weight": "1.82",
+      "Market Value": "277854667.26",
+      "Shares Held": "805586",
+      "Asset Category": "",
+      "ISIN": "US02079K1079",
+      "SEDOL": "BYY88Y7"
+    },
+    {
+      "Name": "ALPHABET INC.",
+      "Ticker": "GOOGL",
+      "Identifier": "US02079K3059",
+      "Weight": "2.92",
+      "Market Value": "446145661.78",
+      "Shares Held": "1277549",
+      "Asset Category": "",
+      "ISIN": "US02079K3059",
+      "SEDOL": "BYVY8G0"
+    },
+    {
+      "Name": "ALTRIA GROUP, INC.",
+      "Ticker": "MO",
+      "Identifier": "US02209S1033",
+      "Weight": "0.17",
+      "Market Value": "26593992.88",
+      "Shares Held": "360157",
+      "Asset Category": "",
+      "ISIN": "US02209S1033",
+      "SEDOL": "2692632"
+    },
+    {
+      "Name": "AMAZON.COM INC",
+      "Ticker": "AMZN",
+      "Identifier": "US0231351067",
+      "Weight": "3.43",
+      "Market Value": "523207490.52",
+      "Shares Held": "2053727",
+      "Asset Category": "",
+      "ISIN": "US0231351067",
+      "SEDOL": "2000019"
+    },
+    {
+      "Name": "AMEREN CORPORATION",
+      "Ticker": "AEE",
+      "Identifier": "US0236081024",
+      "Weight": "0.07",
+      "Market Value": "10461602",
+      "Shares Held": "100825",
+      "Asset Category": "",
+      "ISIN": "US0236081024",
+      "SEDOL": "2050832"
+    },
+    {
+      "Name": "AMERICAN ELECTRIC POWER INC",
+      "Ticker": "AEP",
+      "Identifier": "US0255371017",
+      "Weight": "0.07",
+      "Market Value": "10693787.31",
+      "Shares Held": "86039",
+      "Asset Category": "",
+      "ISIN": "US0255371017",
+      "SEDOL": "2026242"
+    },
+    {
+      "Name": "AMERICAN EXPRESS CO.",
+      "Ticker": "AXP",
+      "Identifier": "US0258161092",
+      "Weight": "0.18",
+      "Market Value": "27294762.94",
+      "Shares Held": "86962",
+      "Asset Category": "",
+      "ISIN": "US0258161092",
+      "SEDOL": "2026082"
+    },
+    {
+      "Name": "AMERICAN INTL GROUP, INC.",
+      "Ticker": "AIG",
+      "Identifier": "US0268747849",
+      "Weight": "0.08",
+      "Market Value": "11550174.96",
+      "Shares Held": "145983",
+      "Asset Category": "",
+      "ISIN": "US0268747849",
+      "SEDOL": "2027342"
+    },
+    {
+      "Name": "AMERIPRISE FINANCIAL, INC.",
+      "Ticker": "AMP",
+      "Identifier": "US03076C1062",
+      "Weight": "0.24",
+      "Market Value": "36866253.32",
+      "Shares Held": "73354",
+      "Asset Category": "",
+      "ISIN": "US03076C1062",
+      "SEDOL": "B0J7D57"
+    },
+    {
+      "Name": "AMETEK INC (NEW)",
+      "Ticker": "AME",
+      "Identifier": "US0311001004",
+      "Weight": "0.15",
+      "Market Value": "22221664.32",
+      "Shares Held": "89416",
+      "Asset Category": "",
+      "ISIN": "US0311001004",
+      "SEDOL": "2089212"
+    },
+    {
+      "Name": "AMGEN INC.",
+      "Ticker": "AMGN",
+      "Identifier": "US0311621009",
+      "Weight": "0.13",
+      "Market Value": "19184126",
+      "Shares Held": "44200",
+      "Asset Category": "",
+      "ISIN": "US0311621009",
+      "SEDOL": "2023607"
+    },
+    {
+      "Name": "AMPHENOL CORP CL-A (NEW)",
+      "Ticker": "APH",
+      "Identifier": "US0320951017",
+      "Weight": "0.22",
+      "Market Value": "33774182.42",
+      "Shares Held": "414458",
+      "Asset Category": "",
+      "ISIN": "US0320951017",
+      "SEDOL": "2145084"
+    },
+    {
+      "Name": "ANALOG DEVICES INC.",
+      "Ticker": "ADI",
+      "Identifier": "US0326541051",
+      "Weight": "0.18",
+      "Market Value": "27157962.45",
+      "Shares Held": "67231",
+      "Asset Category": "",
+      "ISIN": "US0326541051",
+      "SEDOL": "2032067"
+    },
+    {
+      "Name": "AON PUBLIC LIMITED COMPANY",
+      "Ticker": "AON",
+      "Identifier": "IE00BLP1HW54",
+      "Weight": "0.08",
+      "Market Value": "12262994.4",
+      "Shares Held": "42758",
+      "Asset Category": "",
+      "ISIN": "IE00BLP1HW54",
+      "SEDOL": "BLP1HW5"
+    },
+    {
+      "Name": "API GROUP CORPORATION",
+      "Ticker": "APG",
+      "Identifier": "US00187Y1001",
+      "Weight": "0.09",
+      "Market Value": "14043470.62",
+      "Shares Held": "348214",
+      "Asset Category": "",
+      "ISIN": "US00187Y1001",
+      "SEDOL": "BMBPH06"
+    },
+    {
+      "Name": "APPLE INC.",
+      "Ticker": "AAPL",
+      "Identifier": "US0378331005",
+      "Weight": "7.46",
+      "Market Value": "1138800150",
+      "Shares Held": "3329825",
+      "Asset Category": "",
+      "ISIN": "US0378331005",
+      "SEDOL": "2046251"
+    },
+    {
+      "Name": "APPLIED MATERIALS INC",
+      "Ticker": "AMAT",
+      "Identifier": "US0382221051",
+      "Weight": "0.51",
+      "Market Value": "77907921.77",
+      "Shares Held": "181177",
+      "Asset Category": "",
+      "ISIN": "US0382221051",
+      "SEDOL": "2046552"
+    },
+    {
+      "Name": "APPLOVIN CORPORATION",
+      "Ticker": "APP",
+      "Identifier": "US03831W1080",
+      "Weight": "0.21",
+      "Market Value": "32692570.24",
+      "Shares Held": "117056",
+      "Asset Category": "",
+      "ISIN": "US03831W1080",
+      "SEDOL": "BMV3LG4"
+    },
+    {
+      "Name": "ARCH CAPITAL GROUP LTD.",
+      "Ticker": "ACGL",
+      "Identifier": "BMG0450A1053",
+      "Weight": "0.1",
+      "Market Value": "15560883.9",
+      "Shares Held": "156690",
+      "Asset Category": "",
+      "ISIN": "BMG0450A1053",
+      "SEDOL": "2740542"
+    },
+    {
+      "Name": "ARCHER-DANIELS-MIDLAND COMPANY",
+      "Ticker": "ADM",
+      "Identifier": "US0394831020",
+      "Weight": "0.25",
+      "Market Value": "38302215.66",
+      "Shares Held": "461862",
+      "Asset Category": "",
+      "ISIN": "US0394831020",
+      "SEDOL": "2047317"
+    },
+    {
+      "Name": "ARISTA NETWORKS, INC.",
+      "Ticker": "ANET",
+      "Identifier": "US0404132054",
+      "Weight": "0.11",
+      "Market Value": "16381703.34",
+      "Shares Held": "88273",
+      "Asset Category": "",
+      "ISIN": "US0404132054",
+      "SEDOL": "BL9XPM3"
+    },
+    {
+      "Name": "ASTERA LABS, INC.",
+      "Ticker": "ALAB",
+      "Identifier": "US04626A1034",
+      "Weight": "0.06",
+      "Market Value": "8983603.02",
+      "Shares Held": "29749",
+      "Asset Category": "",
+      "ISIN": "US04626A1034",
+      "SEDOL": "BMTQ7V2"
+    },
+    {
+      "Name": "AT&T INC.",
+      "Ticker": "T",
+      "Identifier": "US00206R1023",
+      "Weight": "0.22",
+      "Market Value": "33284460",
+      "Shares Held": "1416360",
+      "Asset Category": "",
+      "ISIN": "US00206R1023",
+      "SEDOL": "2831811"
+    },
+    {
+      "Name": "ATI INC",
+      "Ticker": "ATI",
+      "Identifier": "US01741R1023",
+      "Weight": "0.08",
+      "Market Value": "11727375.88",
+      "Shares Held": "61948",
+      "Asset Category": "",
+      "ISIN": "US01741R1023",
+      "SEDOL": "2526117"
+    },
+    {
+      "Name": "ATLASSIAN CORP",
+      "Ticker": "TEAM",
+      "Identifier": "US0494681010",
+      "Weight": "0.62",
+      "Market Value": "93971272.96",
+      "Shares Held": "432808",
+      "Asset Category": "",
+      "ISIN": "US0494681010",
+      "SEDOL": "BQ1PC76"
+    },
+    {
+      "Name": "ATMOS ENERGY CORPORATION",
+      "Ticker": "ATO",
+      "Identifier": "US0495601058",
+      "Weight": "0.09",
+      "Market Value": "13301427.45",
+      "Shares Held": "81131",
+      "Asset Category": "",
+      "ISIN": "US0495601058",
+      "SEDOL": "2315359"
+    },
+    {
+      "Name": "AUTODESK, INC.",
+      "Ticker": "ADSK",
+      "Identifier": "US0527691069",
+      "Weight": "0.2",
+      "Market Value": "30934533.96",
+      "Shares Held": "126181",
+      "Asset Category": "",
+      "ISIN": "US0527691069",
+      "SEDOL": "2065159"
+    },
+    {
+      "Name": "AUTOMATIC DATA PROCESSING INC",
+      "Ticker": "ADP",
+      "Identifier": "US0530151036",
+      "Weight": "0.02",
+      "Market Value": "3171571.95",
+      "Shares Held": "11103",
+      "Asset Category": "",
+      "ISIN": "US0530151036",
+      "SEDOL": "2065308"
+    },
+    {
+      "Name": "AUTOZONE, INC.",
+      "Ticker": "AZO",
+      "Identifier": "US0533321024",
+      "Weight": "0.1",
+      "Market Value": "15282801.9",
+      "Shares Held": "4995",
+      "Asset Category": "",
+      "ISIN": "US0533321024",
+      "SEDOL": "2065955"
+    },
+    {
+      "Name": "American Tower Corp",
+      "Ticker": "AMT",
+      "Identifier": "US03027X1000",
+      "Weight": "0.02",
+      "Market Value": "3101800.08",
+      "Shares Held": "17103",
+      "Asset Category": "",
+      "ISIN": "US03027X1000",
+      "SEDOL": "B7FBFL2"
+    },
+    {
+      "Name": "BAKER HUGHES CO",
+      "Ticker": "BKR",
+      "Identifier": "US05722G1004",
+      "Weight": "0.06",
+      "Market Value": "8866601.6",
+      "Shares Held": "162989",
+      "Asset Category": "",
+      "ISIN": "US05722G1004",
+      "SEDOL": "BDHLTQ5"
+    },
+    {
+      "Name": "BANK OF AMERICA CORP",
+      "Ticker": "BAC",
+      "Identifier": "US0605051046",
+      "Weight": "0.35",
+      "Market Value": "54003183.3",
+      "Shares Held": "1044549",
+      "Asset Category": "",
+      "ISIN": "US0605051046",
+      "SEDOL": "2295677"
+    },
+    {
+      "Name": "BECTON, DICKINSON AND COMPANY",
+      "Ticker": "BDX",
+      "Identifier": "US0758871091",
+      "Weight": "0.07",
+      "Market Value": "11344648",
+      "Shares Held": "58550",
+      "Asset Category": "",
+      "ISIN": "US0758871091",
+      "SEDOL": "2087807"
+    },
+    {
+      "Name": "BERKSHIRE HATHAWAY INC.",
+      "Ticker": "BRK/B",
+      "Identifier": "US0846707026",
+      "Weight": "0.92",
+      "Market Value": "140894856.32",
+      "Shares Held": "268024",
+      "Asset Category": "",
+      "ISIN": "US0846707026",
+      "SEDOL": "2073390"
+    },
+    {
+      "Name": "BIOGEN INC.",
+      "Ticker": "BIIB",
+      "Identifier": "US09062X1037",
+      "Weight": "0.27",
+      "Market Value": "41144828.4",
+      "Shares Held": "174824",
+      "Asset Category": "",
+      "ISIN": "US09062X1037",
+      "SEDOL": "2455965"
+    },
+    {
+      "Name": "BLACKROCK FUNDING, INC.",
+      "Ticker": "BLK",
+      "Identifier": "US09290D1019",
+      "Weight": "0.04",
+      "Market Value": "6308870.62",
+      "Shares Held": "5629",
+      "Asset Category": "",
+      "ISIN": "US09290D1019",
+      "SEDOL": "BMZBBT7"
+    },
+    {
+      "Name": "BLACKSTONE GROUP INC/THE",
+      "Ticker": "BX",
+      "Identifier": "US09260D1072",
+      "Weight": "0.06",
+      "Market Value": "9057812.4",
+      "Shares Held": "82947",
+      "Asset Category": "",
+      "ISIN": "US09260D1072",
+      "SEDOL": "BKF2SL7"
+    },
+    {
+      "Name": "BLOOM ENERGY CORP",
+      "Ticker": "BE",
+      "Identifier": "US0937121079",
+      "Weight": "0.12",
+      "Market Value": "18827202.5",
+      "Shares Held": "79675",
+      "Asset Category": "",
+      "ISIN": "US0937121079",
+      "SEDOL": "BDD1BB8"
+    },
+    {
+      "Name": "BOOKING HOLDINGS INC.",
+      "Ticker": "BKNG",
+      "Identifier": "US09857L1089",
+      "Weight": "0.29",
+      "Market Value": "44658893.2",
+      "Shares Held": "269354",
+      "Asset Category": "",
+      "ISIN": "US09857L1089",
+      "SEDOL": "BDRXDB4"
+    },
+    {
+      "Name": "BOSTON SCIENTIFIC CORP.",
+      "Ticker": "BSX",
+      "Identifier": "US1011371077",
+      "Weight": "0.03",
+      "Market Value": "4767826.24",
+      "Shares Held": "108016",
+      "Asset Category": "",
+      "ISIN": "US1011371077",
+      "SEDOL": "2113434"
+    },
+    {
+      "Name": "BRISTOL-MYERS SQUIBB COMPANY",
+      "Ticker": "BMY",
+      "Identifier": "US1101221083",
+      "Weight": "0.19",
+      "Market Value": "29746956.69",
+      "Shares Held": "491117",
+      "Asset Category": "",
+      "ISIN": "US1101221083",
+      "SEDOL": "2126335"
+    },
+    {
+      "Name": "BROADCOM INC.",
+      "Ticker": "AVGO",
+      "Identifier": "US11135F1012",
+      "Weight": "2.14",
+      "Market Value": "327137603.1",
+      "Shares Held": "950070",
+      "Asset Category": "",
+      "ISIN": "US11135F1012",
+      "SEDOL": "BDZ78H9"
+    },
+    {
+      "Name": "BROADRIDGE FINANCIAL",
+      "Ticker": "BR",
+      "Identifier": "US11133T1034",
+      "Weight": "0.08",
+      "Market Value": "12567782.13",
+      "Shares Held": "72183",
+      "Asset Category": "",
+      "ISIN": "US11133T1034",
+      "SEDOL": "B1VP7R6"
+    },
+    {
+      "Name": "BUNGE GLOBAL SA",
+      "Ticker": "BG",
+      "Identifier": "CH1300646267",
+      "Weight": "0.03",
+      "Market Value": "5228187.57",
+      "Shares Held": "48857",
+      "Asset Category": "",
+      "ISIN": "CH1300646267",
+      "SEDOL": "BQ6BPG9"
+    },
+    {
+      "Name": "BURLINGTON STORES INC",
+      "Ticker": "BURL",
+      "Identifier": "US1220171060",
+      "Weight": "0.06",
+      "Market Value": "9026933.11",
+      "Shares Held": "33709",
+      "Asset Category": "",
+      "ISIN": "US1220171060",
+      "SEDOL": "BF311Y5"
+    },
+    {
+      "Name": "C.H. ROBINSON WORLDWIDE, INC.",
+      "Ticker": "CHRW",
+      "Identifier": "US12541W2098",
+      "Weight": "0.12",
+      "Market Value": "18502874.46",
+      "Shares Held": "128653",
+      "Asset Category": "",
+      "ISIN": "US12541W2098",
+      "SEDOL": "2116228"
+    },
+    {
+      "Name": "CADENCE DESIGN SYSTEMS INC",
+      "Ticker": "CDNS",
+      "Identifier": "US1273871087",
+      "Weight": "0.1",
+      "Market Value": "15127785.68",
+      "Shares Held": "46636",
+      "Asset Category": "",
+      "ISIN": "US1273871087",
+      "SEDOL": "2302232"
+    },
+    {
+      "Name": "CAPITAL ONE FINANCIAL CORP",
+      "Ticker": "COF",
+      "Identifier": "US14040H1059",
+      "Weight": "0.16",
+      "Market Value": "24340662.86",
+      "Shares Held": "122401",
+      "Asset Category": "",
+      "ISIN": "US14040H1059",
+      "SEDOL": "2654461"
+    },
+    {
+      "Name": "CARDINAL HEALTH, INC.",
+      "Ticker": "CAH",
+      "Identifier": "US14149Y1082",
+      "Weight": "0.12",
+      "Market Value": "18521083.71",
+      "Shares Held": "73001",
+      "Asset Category": "",
+      "ISIN": "US14149Y1082",
+      "SEDOL": "2175672"
+    },
+    {
+      "Name": "CARNIVAL CORPORATION",
+      "Ticker": "CCL",
+      "Identifier": "BMG2004J1036",
+      "Weight": "0.16",
+      "Market Value": "24162134.22",
+      "Shares Held": "913157",
+      "Asset Category": "",
+      "ISIN": "BMG2004J1036",
+      "SEDOL": "BVV7RC7"
+    },
+    {
+      "Name": "CARPENTER TECHNOLOGY INC",
+      "Ticker": "CRS",
+      "Identifier": "US1442851036",
+      "Weight": "0.04",
+      "Market Value": "5432113.44",
+      "Shares Held": "14274",
+      "Asset Category": "",
+      "ISIN": "US1442851036",
+      "SEDOL": "2177504"
+    },
+    {
+      "Name": "CARRIER GLOBAL CORPORATION",
+      "Ticker": "CARR",
+      "Identifier": "US14448C1045",
+      "Weight": "0.06",
+      "Market Value": "8533254.48",
+      "Shares Held": "155263",
+      "Asset Category": "",
+      "ISIN": "US14448C1045",
+      "SEDOL": "BK4N0D7"
+    },
+    {
+      "Name": "CASEY'S GENERAL STORES,INC",
+      "Ticker": "CASY",
+      "Identifier": "US1475281036",
+      "Weight": "0.08",
+      "Market Value": "11705668.51",
+      "Shares Held": "17377",
+      "Asset Category": "",
+      "ISIN": "US1475281036",
+      "SEDOL": "2179414"
+    },
+    {
+      "Name": "CATERPILLAR INC (DELAWARE)",
+      "Ticker": "CAT",
+      "Identifier": "US1491231015",
+      "Weight": "0.31",
+      "Market Value": "47148638.88",
+      "Shares Held": "64092",
+      "Asset Category": "",
+      "ISIN": "US1491231015",
+      "SEDOL": "2180201"
+    },
+    {
+      "Name": "CBOE GLOBAL MARKETS, INC",
+      "Ticker": "CBOE",
+      "Identifier": "US12503M1080",
+      "Weight": "0.05",
+      "Market Value": "6965914.9",
+      "Shares Held": "22610",
+      "Asset Category": "",
+      "ISIN": "US12503M1080",
+      "SEDOL": "B5834C5"
+    },
+    {
+      "Name": "CBRE GROUP, INC.",
+      "Ticker": "CBRE",
+      "Identifier": "US12504L1098",
+      "Weight": "0.02",
+      "Market Value": "2712374.31",
+      "Shares Held": "20019",
+      "Asset Category": "",
+      "ISIN": "US12504L1098",
+      "SEDOL": "B6WVMH3"
+    },
+    {
+      "Name": "CDW CORPORATION",
+      "Ticker": "CDW",
+      "Identifier": "US12514G1085",
+      "Weight": "0.15",
+      "Market Value": "22613666.24",
+      "Shares Held": "146528",
+      "Asset Category": "",
+      "ISIN": "US12514G1085",
+      "SEDOL": "BBM5MD6"
+    },
+    {
+      "Name": "CENCORA INC",
+      "Ticker": "COR",
+      "Identifier": "US03073E1055",
+      "Weight": "0.08",
+      "Market Value": "11565263.75",
+      "Shares Held": "33875",
+      "Asset Category": "",
+      "ISIN": "US03073E1055",
+      "SEDOL": "2795393"
+    },
+    {
+      "Name": "CENTENE CORPORATION",
+      "Ticker": "CNC",
+      "Identifier": "US15135B1017",
+      "Weight": "0.22",
+      "Market Value": "33503249.56",
+      "Shares Held": "475156",
+      "Asset Category": "",
+      "ISIN": "US15135B1017",
+      "SEDOL": "2807061"
+    },
+    {
+      "Name": "CENTERPOINT ENERGY, INC",
+      "Ticker": "CNP",
+      "Identifier": "US15189T1079",
+      "Weight": "0.08",
+      "Market Value": "11965949.6",
+      "Shares Held": "300652",
+      "Asset Category": "",
+      "ISIN": "US15189T1079",
+      "SEDOL": "2440637"
+    },
+    {
+      "Name": "CEREBRAS SYSTEMS INC.",
+      "Ticker": "CBRS",
+      "Identifier": "US15675D1037",
+      "Weight": "0.02",
+      "Market Value": "2831173.38",
+      "Shares Held": "19914",
+      "Asset Category": "",
+      "ISIN": "US15675D1037",
+      "SEDOL": "BQ732F2"
+    },
+    {
+      "Name": "CF INDUSTRIES HOLDINGS, INC.",
+      "Ticker": "CF",
+      "Identifier": "US1252691001",
+      "Weight": "0.06",
+      "Market Value": "8661287.32",
+      "Shares Held": "72316",
+      "Asset Category": "",
+      "ISIN": "US1252691001",
+      "SEDOL": "B0G4K50"
+    },
+    {
+      "Name": "CHARLES SCHWAB CORPORATION",
+      "Ticker": "SCHW",
+      "Identifier": "US8085131055",
+      "Weight": "0.07",
+      "Market Value": "11138092.24",
+      "Shares Held": "118289",
+      "Asset Category": "",
+      "ISIN": "US8085131055",
+      "SEDOL": "2779397"
+    },
+    {
+      "Name": "CHARTER COMMUNICATIONS, INC.",
+      "Ticker": "CHTR",
+      "Identifier": "US16119P1084",
+      "Weight": "0.13",
+      "Market Value": "20346280.17",
+      "Shares Held": "184983",
+      "Asset Category": "",
+      "ISIN": "US16119P1084",
+      "SEDOL": "BZ6VT82"
+    },
+    {
+      "Name": "CHENIERE ENERGY, INC.",
+      "Ticker": "LNG",
+      "Identifier": "US16411R2085",
+      "Weight": "0.03",
+      "Market Value": "4880937.75",
+      "Shares Held": "17485",
+      "Asset Category": "",
+      "ISIN": "US16411R2085",
+      "SEDOL": "2654364"
+    },
+    {
+      "Name": "CHEVRON CORPORATION",
+      "Ticker": "CVX",
+      "Identifier": "US1667641005",
+      "Weight": "0.31",
+      "Market Value": "46691034.8",
+      "Shares Held": "212890",
+      "Asset Category": "",
+      "ISIN": "US1667641005",
+      "SEDOL": "2838555"
+    },
+    {
+      "Name": "CHUBB LIMITED",
+      "Ticker": "CB",
+      "Identifier": "CH0044328745",
+      "Weight": "0.19",
+      "Market Value": "29101294.31",
+      "Shares Held": "82489",
+      "Asset Category": "",
+      "ISIN": "CH0044328745",
+      "SEDOL": "B3BQMF6"
+    },
+    {
+      "Name": "CHURCH & DWIGHT CO., INC.",
+      "Ticker": "CHD",
+      "Identifier": "US1713401024",
+      "Weight": "0.12",
+      "Market Value": "17580706.32",
+      "Shares Held": "170554",
+      "Asset Category": "",
+      "ISIN": "US1713401024",
+      "SEDOL": "2195841"
+    },
+    {
+      "Name": "CIENA CORPORATION",
+      "Ticker": "CIEN",
+      "Identifier": "US1717793095",
+      "Weight": "0.11",
+      "Market Value": "16822039.68",
+      "Shares Held": "47184",
+      "Asset Category": "",
+      "ISIN": "US1717793095",
+      "SEDOL": "B1FLZ21"
+    },
+    {
+      "Name": "CIGNA GROUP/THE",
+      "Ticker": "CI",
+      "Identifier": "US1255231003",
+      "Weight": "0.17",
+      "Market Value": "25938799.67",
+      "Shares Held": "86807",
+      "Asset Category": "",
+      "ISIN": "US1255231003",
+      "SEDOL": "BHJ0775"
+    },
+    {
+      "Name": "CINCINNATI FINANCIAL CRP",
+      "Ticker": "CINF",
+      "Identifier": "US1720621010",
+      "Weight": "0.14",
+      "Market Value": "21679069.68",
+      "Shares Held": "129644",
+      "Asset Category": "",
+      "ISIN": "US1720621010",
+      "SEDOL": "2196888"
+    },
+    {
+      "Name": "CINTAS CORPORATION",
+      "Ticker": "CTAS",
+      "Identifier": "US1729081059",
+      "Weight": "0.28",
+      "Market Value": "43482563.16",
+      "Shares Held": "204086",
+      "Asset Category": "",
+      "ISIN": "US1729081059",
+      "SEDOL": "2197137"
+    },
+    {
+      "Name": "CISCO SYSTEMS, INC.",
+      "Ticker": "CSCO",
+      "Identifier": "US17275R1023",
+      "Weight": "0.52",
+      "Market Value": "79611041.25",
+      "Shares Held": "724725",
+      "Asset Category": "",
+      "ISIN": "US17275R1023",
+      "SEDOL": "2198163"
+    },
+    {
+      "Name": "CITIGROUP INC.",
+      "Ticker": "C",
+      "Identifier": "US1729674242",
+      "Weight": "0.32",
+      "Market Value": "49316897.07",
+      "Shares Held": "400267",
+      "Asset Category": "",
+      "ISIN": "US1729674242",
+      "SEDOL": "2297907"
+    },
+    {
+      "Name": "CITIZENS FINANCIAL GROUP, INC.",
+      "Ticker": "CFG",
+      "Identifier": "US1746101054",
+      "Weight": "0.11",
+      "Market Value": "16174205.99",
+      "Shares Held": "254993",
+      "Asset Category": "",
+      "ISIN": "US1746101054",
+      "SEDOL": "BQRX1X3"
+    },
+    {
+      "Name": "CLOUDFLARE, INC.",
+      "Ticker": "NET",
+      "Identifier": "US18915M1071",
+      "Weight": "0.05",
+      "Market Value": "7412010.24",
+      "Shares Held": "23432",
+      "Asset Category": "",
+      "ISIN": "US18915M1071",
+      "SEDOL": "BJXC5M2"
+    },
+    {
+      "Name": "CME GROUP INC.",
+      "Ticker": "CME",
+      "Identifier": "US12572Q1058",
+      "Weight": "0.05",
+      "Market Value": "8071881.56",
+      "Shares Held": "27886",
+      "Asset Category": "",
+      "ISIN": "US12572Q1058",
+      "SEDOL": "2965839"
+    },
+    {
+      "Name": "CMRC/EMINI S&P 500 12/2026",
+      "Ticker": "ESZ6",
+      "Identifier": "ESZ6",
+      "Weight": "0.65",
+      "Market Value": "98556150",
+      "Shares Held": "253",
+      "Asset Category": "",
+      "ISIN": "",
+      "SEDOL": "ESZ6"
+    },
+    {
+      "Name": "CMRC/EMINI S&P 500 12/2026",
+      "Ticker": "ESZ6",
+      "Identifier": "ESZ6",
+      "Weight": "0.65",
+      "Market Value": "98556150",
+      "Shares Held": "253",
+      "Asset Category": "",
+      "ISIN": "",
+      "SEDOL": "ESZ6"
+    },
+    {
+      "Name": "CMS ENERGY CORPORATION",
+      "Ticker": "CMS",
+      "Identifier": "US1258961002",
+      "Weight": "0.04",
+      "Market Value": "6079089.16",
+      "Shares Held": "90814",
+      "Asset Category": "",
+      "ISIN": "US1258961002",
+      "SEDOL": "2219224"
+    },
+    {
+      "Name": "COCA-COLA COMPANY (THE)",
+      "Ticker": "KO",
+      "Identifier": "US1912161007",
+      "Weight": "0.35",
+      "Market Value": "53995168",
+      "Shares Held": "586904",
+      "Asset Category": "",
+      "ISIN": "US1912161007",
+      "SEDOL": "2206657"
+    },
+    {
+      "Name": "COEUR MINING INC",
+      "Ticker": "CDE",
+      "Identifier": "US1921085049",
+      "Weight": "0.07",
+      "Market Value": "11043114.2",
+      "Shares Held": "716620",
+      "Asset Category": "",
+      "ISIN": "US1921085049",
+      "SEDOL": "2208136"
+    },
+    {
+      "Name": "COGNIZANT TECHNOLOGY",
+      "Ticker": "CTSH",
+      "Identifier": "US1924461023",
+      "Weight": "0.24",
+      "Market Value": "36589561.02",
+      "Shares Held": "556326",
+      "Asset Category": "",
+      "ISIN": "US1924461023",
+      "SEDOL": "2257019"
+    },
+    {
+      "Name": "COHERENT CORP",
+      "Ticker": "COHR",
+      "Identifier": "US19247G1076",
+      "Weight": "0.07",
+      "Market Value": "10960993.4",
+      "Shares Held": "43739",
+      "Asset Category": "",
+      "ISIN": "US19247G1076",
+      "SEDOL": "BNG8Z81"
+    },
+    {
+      "Name": "COLGATE-PALMOLIVE CO",
+      "Ticker": "CL",
+      "Identifier": "US1941621039",
+      "Weight": "0.33",
+      "Market Value": "51094901.88",
+      "Shares Held": "551364",
+      "Asset Category": "",
+      "ISIN": "US1941621039",
+      "SEDOL": "2209106"
+    },
+    {
+      "Name": "COMCAST CORPORATION",
+      "Ticker": "CMCSA",
+      "Identifier": "US20030N1019",
+      "Weight": "0.13",
+      "Market Value": "20399099.56",
+      "Shares Held": "937028",
+      "Asset Category": "",
+      "ISIN": "US20030N1019",
+      "SEDOL": "2044545"
+    },
+    {
+      "Name": "COMFORT SYSTEMS USA INC",
+      "Ticker": "FIX",
+      "Identifier": "US1999081045",
+      "Weight": "0.09",
+      "Market Value": "14006889.12",
+      "Shares Held": "9456",
+      "Asset Category": "",
+      "ISIN": "US1999081045",
+      "SEDOL": "2036047"
+    },
+    {
+      "Name": "CONOCOPHILLIPS",
+      "Ticker": "COP",
+      "Identifier": "US20825C1045",
+      "Weight": "0.1",
+      "Market Value": "15304288.86",
+      "Shares Held": "107982",
+      "Asset Category": "",
+      "ISIN": "US20825C1045",
+      "SEDOL": "2685717"
+    },
+    {
+      "Name": "CONSOLIDATED EDISON INC",
+      "Ticker": "ED",
+      "Identifier": "US2091151041",
+      "Weight": "0.06",
+      "Market Value": "8665207.5",
+      "Shares Held": "78875",
+      "Asset Category": "",
+      "ISIN": "US2091151041",
+      "SEDOL": "2216850"
+    },
+    {
+      "Name": "CONSTELLATION BRANDS INC",
+      "Ticker": "STZ",
+      "Identifier": "US21036P1084",
+      "Weight": "0.05",
+      "Market Value": "6947561.28",
+      "Shares Held": "53616",
+      "Asset Category": "",
+      "ISIN": "US21036P1084",
+      "SEDOL": "2170473"
+    },
+    {
+      "Name": "CONSTELLATION ENERGY CORP",
+      "Ticker": "CEG",
+      "Identifier": "US21037T1097",
+      "Weight": "0.04",
+      "Market Value": "6833200",
+      "Shares Held": "24848",
+      "Asset Category": "",
+      "ISIN": "US21037T1097",
+      "SEDOL": "BMH4FS1"
+    },
+    {
+      "Name": "CORNING INCORPORATED",
+      "Ticker": "GLW",
+      "Identifier": "US2193501051",
+      "Weight": "0.17",
+      "Market Value": "25533828.79",
+      "Shares Held": "184453",
+      "Asset Category": "",
+      "ISIN": "US2193501051",
+      "SEDOL": "2224701"
+    },
+    {
+      "Name": "CORTEVA, INC.",
+      "Ticker": "CTVA",
+      "Identifier": "US22052L1044",
+      "Weight": "0.02",
+      "Market Value": "2955444.8",
+      "Shares Held": "229460",
+      "Asset Category": "",
+      "ISIN": "US22052L1044",
+      "SEDOL": "BK73B42"
+    },
+    {
+      "Name": "COSTCO WHOLESALE CORPORATION",
+      "Ticker": "COST",
+      "Identifier": "US22160K1051",
+      "Weight": "0.53",
+      "Market Value": "80643770.57",
+      "Shares Held": "82457",
+      "Asset Category": "",
+      "ISIN": "US22160K1051",
+      "SEDOL": "2701271"
+    },
+    {
+      "Name": "CREDO TECHNOLOGY GROUP HOLDING LTD",
+      "Ticker": "CRDO",
+      "Identifier": "KYG254571055",
+      "Weight": "0.02",
+      "Market Value": "2723017.5",
+      "Shares Held": "15255",
+      "Asset Category": "",
+      "ISIN": "KYG254571055",
+      "SEDOL": "BLD13F2"
+    },
+    {
+      "Name": "CRH PUBLIC LIMITED COMPANY",
+      "Ticker": "CRH",
+      "Identifier": "IE0001827041",
+      "Weight": "0.05",
+      "Market Value": "6905907.12",
+      "Shares Held": "83891",
+      "Asset Category": "",
+      "ISIN": "IE0001827041",
+      "SEDOL": "B01ZKD6"
+    },
+    {
+      "Name": "CROWDSTRIKE HOLDINGS, INC.",
+      "Ticker": "CRWD",
+      "Identifier": "US22788C1053",
+      "Weight": "0.15",
+      "Market Value": "23017705.55",
+      "Shares Held": "94115",
+      "Asset Category": "",
+      "ISIN": "US22788C1053",
+      "SEDOL": "BJJP138"
+    },
+    {
+      "Name": "CSX CORPORATION",
+      "Ticker": "CSX",
+      "Identifier": "US1264081035",
+      "Weight": "0.09",
+      "Market Value": "13119228.36",
+      "Shares Held": "269444",
+      "Asset Category": "",
+      "ISIN": "US1264081035",
+      "SEDOL": "2160753"
+    },
+    {
+      "Name": "CUMMINS INC",
+      "Ticker": "CMI",
+      "Identifier": "US2310211063",
+      "Weight": "0.08",
+      "Market Value": "12578820.76",
+      "Shares Held": "23612",
+      "Asset Category": "",
+      "ISIN": "US2310211063",
+      "SEDOL": "2240202"
+    },
+    {
+      "Name": "CURTISS-WRIGHT CORP",
+      "Ticker": "CW",
+      "Identifier": "US2315611010",
+      "Weight": "0.05",
+      "Market Value": "7415031.14",
+      "Shares Held": "14786",
+      "Asset Category": "",
+      "ISIN": "US2315611010",
+      "SEDOL": "2241205"
+    },
+    {
+      "Name": "CVS HEALTH CORP",
+      "Ticker": "CVS",
+      "Identifier": "US1266501006",
+      "Weight": "0.19",
+      "Market Value": "29348045.16",
+      "Shares Held": "317002",
+      "Asset Category": "",
+      "ISIN": "US1266501006",
+      "SEDOL": "2577609"
+    },
+    {
+      "Name": "D.R. HORTON, INC.",
+      "Ticker": "DHI",
+      "Identifier": "US23331A1097",
+      "Weight": "0.16",
+      "Market Value": "24772357.8",
+      "Shares Held": "177516",
+      "Asset Category": "",
+      "ISIN": "US23331A1097",
+      "SEDOL": "2250687"
+    },
+    {
+      "Name": "DANAHER CORPORATION",
+      "Ticker": "DHR",
+      "Identifier": "US2358511028",
+      "Weight": "0.09",
+      "Market Value": "14390271.5",
+      "Shares Held": "62161",
+      "Asset Category": "",
+      "ISIN": "US2358511028",
+      "SEDOL": "2250870"
+    },
+    {
+      "Name": "DARDEN RESTAURANTS, INC.",
+      "Ticker": "DRI",
+      "Identifier": "US2371941053",
+      "Weight": "0.08",
+      "Market Value": "12156306.13",
+      "Shares Held": "56723",
+      "Asset Category": "",
+      "ISIN": "US2371941053",
+      "SEDOL": "2289874"
+    },
+    {
+      "Name": "DATADOG, INC.",
+      "Ticker": "DDOG",
+      "Identifier": "US23804L1035",
+      "Weight": "0.02",
+      "Market Value": "3112462.5",
+      "Shares Held": "11690",
+      "Asset Category": "",
+      "ISIN": "US23804L1035",
+      "SEDOL": "BKT9Y49"
+    },
+    {
+      "Name": "DEERE & COMPANY",
+      "Ticker": "DE",
+      "Identifier": "US2441991054",
+      "Weight": "0.03",
+      "Market Value": "4956804.06",
+      "Shares Held": "7618",
+      "Asset Category": "",
+      "ISIN": "US2441991054",
+      "SEDOL": "2261203"
+    },
+    {
+      "Name": "DELL TECHNOLOGIES INC.",
+      "Ticker": "DELL",
+      "Identifier": "US24703L2025",
+      "Weight": "0.16",
+      "Market Value": "23965368.75",
+      "Shares Held": "50625",
+      "Asset Category": "",
+      "ISIN": "US24703L2025",
+      "SEDOL": "BHKD3S6"
+    },
+    {
+      "Name": "DELTA AIR LINES, INC.",
+      "Ticker": "DAL",
+      "Identifier": "US2473617023",
+      "Weight": "0.19",
+      "Market Value": "28687450.88",
+      "Shares Held": "367411",
+      "Asset Category": "",
+      "ISIN": "US2473617023",
+      "SEDOL": "B1W9D46"
+    },
+    {
+      "Name": "DEVON ENERGY CORPORATION (NEW)",
+      "Ticker": "DVN",
+      "Identifier": "US25179M1036",
+      "Weight": "0.16",
+      "Market Value": "23824330.84",
+      "Shares Held": "483841",
+      "Asset Category": "",
+      "ISIN": "US25179M1036",
+      "SEDOL": "2480677"
+    },
+    {
+      "Name": "DEXCOM, INC.",
+      "Ticker": "DXCM",
+      "Identifier": "US2521311074",
+      "Weight": "0.06",
+      "Market Value": "9028253.43",
+      "Shares Held": "102933",
+      "Asset Category": "",
+      "ISIN": "US2521311074",
+      "SEDOL": "B0796X4"
+    },
+    {
+      "Name": "DIAMONDBACK ENERGY INC",
+      "Ticker": "FANG",
+      "Identifier": "US25278X1090",
+      "Weight": "0.03",
+      "Market Value": "4351317.6",
+      "Shares Held": "22246",
+      "Asset Category": "",
+      "ISIN": "US25278X1090",
+      "SEDOL": "B7Y8YR3"
+    },
+    {
+      "Name": "DOLLAR GENERAL CORPORATION",
+      "Ticker": "DG",
+      "Identifier": "US2566771059",
+      "Weight": "0.18",
+      "Market Value": "27254782.29",
+      "Shares Held": "203561",
+      "Asset Category": "",
+      "ISIN": "US2566771059",
+      "SEDOL": "B5B1S13"
+    },
+    {
+      "Name": "DOLLAR TREE STORES, INC.",
+      "Ticker": "DLTR",
+      "Identifier": "US2567461080",
+      "Weight": "0.26",
+      "Market Value": "39724361.82",
+      "Shares Held": "319302",
+      "Asset Category": "",
+      "ISIN": "US2567461080",
+      "SEDOL": "2272476"
+    },
+    {
+      "Name": "DOMINION ENERGY INC",
+      "Ticker": "D",
+      "Identifier": "US25746U1097",
+      "Weight": "0.03",
+      "Market Value": "4562127.36",
+      "Shares Held": "72576",
+      "Asset Category": "",
+      "ISIN": "US25746U1097",
+      "SEDOL": "2542049"
+    },
+    {
+      "Name": "DOVER CORPORATION",
+      "Ticker": "DOV",
+      "Identifier": "US2600031080",
+      "Weight": "0.12",
+      "Market Value": "19053038.94",
+      "Shares Held": "98166",
+      "Asset Category": "",
+      "ISIN": "US2600031080",
+      "SEDOL": "2278407"
+    },
+    {
+      "Name": "DOW INC",
+      "Ticker": "DOW",
+      "Identifier": "US2605571031",
+      "Weight": "0.05",
+      "Market Value": "8383754.92",
+      "Shares Held": "282662",
+      "Asset Category": "",
+      "ISIN": "US2605571031",
+      "SEDOL": "BHXCF84"
+    },
+    {
+      "Name": "DTE ENERGY COMPANY",
+      "Ticker": "DTE",
+      "Identifier": "US2333311072",
+      "Weight": "0.07",
+      "Market Value": "10167329.24",
+      "Shares Held": "79228",
+      "Asset Category": "",
+      "ISIN": "US2333311072",
+      "SEDOL": "2280220"
+    },
+    {
+      "Name": "DUKE ENERGY CORPORATION",
+      "Ticker": "DUK",
+      "Identifier": "US26441C2044",
+      "Weight": "0.09",
+      "Market Value": "13824436.32",
+      "Shares Held": "116289",
+      "Asset Category": "",
+      "ISIN": "US26441C2044",
+      "SEDOL": "B7VD3F2"
+    },
+    {
+      "Name": "DUPONT DE NEMOURS, INC.",
+      "Ticker": "DD",
+      "Identifier": "US26614N2018",
+      "Weight": "0.09",
+      "Market Value": "14266492.8",
+      "Shares Held": "108408",
+      "Asset Category": "",
+      "ISIN": "US26614N2018",
+      "SEDOL": "BW60F13"
+    },
+    {
+      "Name": "EBAY INC.",
+      "Ticker": "EBAY",
+      "Identifier": "US2786421030",
+      "Weight": "0.09",
+      "Market Value": "14340524.25",
+      "Shares Held": "116675",
+      "Asset Category": "",
+      "ISIN": "US2786421030",
+      "SEDOL": "2293819"
+    },
+    {
+      "Name": "ECHOSTAR CORPORATION",
+      "Ticker": "ECHO",
+      "Identifier": "US2787681061",
+      "Weight": "0.05",
+      "Market Value": "7729736.85",
+      "Shares Held": "89001",
+      "Asset Category": "",
+      "ISIN": "US2787681061",
+      "SEDOL": "B2NC471"
+    },
+    {
+      "Name": "ECOLAB INC.",
+      "Ticker": "ECL",
+      "Identifier": "US2788651006",
+      "Weight": "0.13",
+      "Market Value": "19755886.54",
+      "Shares Held": "67934",
+      "Asset Category": "",
+      "ISIN": "US2788651006",
+      "SEDOL": "2304227"
+    },
+    {
+      "Name": "EDISON INTERNATIONAL",
+      "Ticker": "EIX",
+      "Identifier": "US2810201077",
+      "Weight": "0.05",
+      "Market Value": "7868520.45",
+      "Shares Held": "141393",
+      "Asset Category": "",
+      "ISIN": "US2810201077",
+      "SEDOL": "2829515"
+    },
+    {
+      "Name": "EDWARDS LIFESCIENCES CORPORATION",
       "Ticker": "EW",
-      "Identifier": "28176E108",
-      "Weight": "0.098637549837",
-      "Market Value": "15377565.39",
-      "Shares Held": "177837.00000000",
-      "Asset Category": "EC"
+      "Identifier": "US28176E1082",
+      "Weight": "0.12",
+      "Market Value": "18386381.9",
+      "Shares Held": "208699",
+      "Asset Category": "",
+      "ISIN": "US28176E1082",
+      "SEDOL": "2567116"
+    },
+    {
+      "Name": "ELEVANCE HEALTH INC",
+      "Ticker": "ELV",
+      "Identifier": "US0367521038",
+      "Weight": "0.18",
+      "Market Value": "26946533.28",
+      "Shares Held": "62896",
+      "Asset Category": "",
+      "ISIN": "US0367521038",
+      "SEDOL": "BSPHGL4"
+    },
+    {
+      "Name": "ELI LILLY & CO",
+      "Ticker": "LLY",
+      "Identifier": "US5324571083",
+      "Weight": "1.31",
+      "Market Value": "200201277.55",
+      "Shares Held": "159955",
+      "Asset Category": "",
+      "ISIN": "US5324571083",
+      "SEDOL": "2516152"
+    },
+    {
+      "Name": "EMCOR GROUP, INC.",
+      "Ticker": "EME",
+      "Identifier": "US29084Q1004",
+      "Weight": "0.14",
+      "Market Value": "20780411.04",
+      "Shares Held": "28368",
+      "Asset Category": "",
+      "ISIN": "US29084Q1004",
+      "SEDOL": "2474164"
+    },
+    {
+      "Name": "EMERSON ELECTRIC CO.",
+      "Ticker": "EMR",
+      "Identifier": "US2910111044",
+      "Weight": "0.05",
+      "Market Value": "7745419.05",
+      "Shares Held": "47767",
+      "Asset Category": "",
+      "ISIN": "US2910111044",
+      "SEDOL": "2313405"
+    },
+    {
+      "Name": "ENTEGRIS, INC.",
+      "Ticker": "ENTG",
+      "Identifier": "US29362U1043",
+      "Weight": "0.07",
+      "Market Value": "10902600.71",
+      "Shares Held": "74233",
+      "Asset Category": "",
+      "ISIN": "US29362U1043",
+      "SEDOL": "2599700"
+    },
+    {
+      "Name": "ENTERGY CORPORATION",
+      "Ticker": "ETR",
+      "Identifier": "US29364G1031",
+      "Weight": "0.07",
+      "Market Value": "11446515.8",
+      "Shares Held": "110105",
+      "Asset Category": "",
+      "ISIN": "US29364G1031",
+      "SEDOL": "2317087"
+    },
+    {
+      "Name": "EOG RESOURCES INC",
+      "Ticker": "EOG",
+      "Identifier": "US26875P1012",
+      "Weight": "0.07",
+      "Market Value": "10074904.06",
+      "Shares Held": "66013",
+      "Asset Category": "",
+      "ISIN": "US26875P1012",
+      "SEDOL": "2318024"
+    },
+    {
+      "Name": "EQT CORPORATION",
+      "Ticker": "EQT",
+      "Identifier": "US26884L1098",
+      "Weight": "0.12",
+      "Market Value": "18164221.75",
+      "Shares Held": "346315",
+      "Asset Category": "",
+      "ISIN": "US26884L1098",
+      "SEDOL": "2319414"
+    },
+    {
+      "Name": "EQUINIX, INC.",
+      "Ticker": "EQIX",
+      "Identifier": "US29444U7000",
+      "Weight": "0.03",
+      "Market Value": "4258015.24",
+      "Shares Held": "4274",
+      "Asset Category": "",
+      "ISIN": "US29444U7000",
+      "SEDOL": "BVLZX12"
+    },
+    {
+      "Name": "ESSEX PROPERTY TRUST INC",
+      "Ticker": "ESS",
+      "Identifier": "US2971781057",
+      "Weight": "0.09",
+      "Market Value": "13436888.14",
+      "Shares Held": "49829",
+      "Asset Category": "",
+      "ISIN": "US2971781057",
+      "SEDOL": "2316619"
+    },
+    {
+      "Name": "ESTEE LAUDER COS INC CL-A",
+      "Ticker": "EL",
+      "Identifier": "US5184391044",
+      "Weight": "0.23",
+      "Market Value": "35546240.61",
+      "Shares Held": "331619",
+      "Asset Category": "",
+      "ISIN": "US5184391044",
+      "SEDOL": "2320524"
+    },
+    {
+      "Name": "EVERGY, INC.",
+      "Ticker": "EVRG",
+      "Identifier": "US30034W1062",
+      "Weight": "0.1",
+      "Market Value": "15667313.04",
+      "Shares Held": "192072",
+      "Asset Category": "",
+      "ISIN": "US30034W1062",
+      "SEDOL": "BFMXGR0"
+    },
+    {
+      "Name": "EVERPURE INC",
+      "Ticker": "P",
+      "Identifier": "US74624M1027",
+      "Weight": "0.38",
+      "Market Value": "57780342.4",
+      "Shares Held": "433136",
+      "Asset Category": "",
+      "ISIN": "US74624M1027",
+      "SEDOL": "BYZ62T3"
+    },
+    {
+      "Name": "EVERSOURCE ENERGY",
+      "Ticker": "ES",
+      "Identifier": "US30040W1080",
+      "Weight": "0.05",
+      "Market Value": "7130747.42",
+      "Shares Held": "108058",
+      "Asset Category": "",
+      "ISIN": "US30040W1080",
+      "SEDOL": "BVVN4Q8"
+    },
+    {
+      "Name": "EXELON CORPORATION",
+      "Ticker": "EXC",
+      "Identifier": "US30161N1019",
+      "Weight": "0.05",
+      "Market Value": "7444280.16",
+      "Shares Held": "175242",
+      "Asset Category": "",
+      "ISIN": "US30161N1019",
+      "SEDOL": "2670519"
+    },
+    {
+      "Name": "EXPAND ENERGY CORP",
+      "Ticker": "EXE",
+      "Identifier": "US1651677353",
+      "Weight": "0.14",
+      "Market Value": "21452498.8",
+      "Shares Held": "236261",
+      "Asset Category": "",
+      "ISIN": "US1651677353",
+      "SEDOL": "BMZ5LZ5"
+    },
+    {
+      "Name": "EXPEDIA GROUP INC",
+      "Ticker": "EXPE",
+      "Identifier": "US30212P3038",
+      "Weight": "0.16",
+      "Market Value": "24840763.83",
+      "Shares Held": "85109",
+      "Asset Category": "",
+      "ISIN": "US30212P3038",
+      "SEDOL": "B748CK2"
+    },
+    {
+      "Name": "EXPEDITORS INTERNATIONAL OF WASHINGTON, INC.",
+      "Ticker": "EXPD",
+      "Identifier": "US3021301094",
+      "Weight": "0.08",
+      "Market Value": "11586671.2",
+      "Shares Held": "58330",
+      "Asset Category": "",
+      "ISIN": "US3021301094",
+      "SEDOL": "2325507"
+    },
+    {
+      "Name": "EXXONMOBIL HOLDINGS CORPORATION",
+      "Ticker": "XOM",
+      "Identifier": "US30233Q1085",
+      "Weight": "0.7",
+      "Market Value": "107333523.44",
+      "Shares Held": "614458",
+      "Asset Category": "",
+      "ISIN": "US30233Q1085",
+      "SEDOL": "BVSRPD7"
+    },
+    {
+      "Name": "F5 INC",
+      "Ticker": "FFIV",
+      "Identifier": "US3156161024",
+      "Weight": "0.06",
+      "Market Value": "9243918.68",
+      "Shares Held": "20246",
+      "Asset Category": "",
+      "ISIN": "US3156161024",
+      "SEDOL": "2427599"
+    },
+    {
+      "Name": "FABRINET",
+      "Ticker": "FN",
+      "Identifier": "KYG3323L1005",
+      "Weight": "0.02",
+      "Market Value": "2581995.6",
+      "Shares Held": "6703",
+      "Asset Category": "",
+      "ISIN": "KYG3323L1005",
+      "SEDOL": "B4JSZL8"
+    },
+    {
+      "Name": "FAIR ISAAC CORPORATION",
+      "Ticker": "FICO",
+      "Identifier": "US3032501047",
+      "Weight": "0.18",
+      "Market Value": "27096916.42",
+      "Shares Held": "35194",
+      "Asset Category": "",
+      "ISIN": "US3032501047",
+      "SEDOL": "2330299"
+    },
+    {
+      "Name": "FASTENAL COMPANY",
+      "Ticker": "FAST",
+      "Identifier": "US3119001044",
+      "Weight": "0.32",
+      "Market Value": "49062966.04",
+      "Shares Held": "973858",
+      "Asset Category": "",
+      "ISIN": "US3119001044",
+      "SEDOL": "2332262"
+    },
+    {
+      "Name": "FEDEX CORPORATION",
+      "Ticker": "FDX",
+      "Identifier": "US31428X1063",
+      "Weight": "0.15",
+      "Market Value": "23492770.14",
+      "Shares Held": "79491",
+      "Asset Category": "",
+      "ISIN": "US31428X1063",
+      "SEDOL": "2142784"
+    },
+    {
+      "Name": "FEDEX FREIGHT HOLDING COMPANY, INC.",
+      "Ticker": "FDXF",
+      "Identifier": "US3143521058",
+      "Weight": "0.02",
+      "Market Value": "3302071.5",
+      "Shares Held": "29883",
+      "Asset Category": "",
+      "ISIN": "US3143521058",
+      "SEDOL": "BVSVT37"
+    },
+    {
+      "Name": "FERGUSON ENTERPRISES INC",
+      "Ticker": "FERG",
+      "Identifier": "US31488V1070",
+      "Weight": "0.18",
+      "Market Value": "26930313.48",
+      "Shares Held": "117723",
+      "Asset Category": "",
+      "ISIN": "US31488V1070",
+      "SEDOL": "BS6VHW3"
+    },
+    {
+      "Name": "FIDELITY NATL INFO SVCS INC",
+      "Ticker": "FIS",
+      "Identifier": "US31620M1062",
+      "Weight": "0.06",
+      "Market Value": "9619251.2",
+      "Shares Held": "266240",
+      "Asset Category": "",
+      "ISIN": "US31620M1062",
+      "SEDOL": "2769796"
+    },
+    {
+      "Name": "FIFTH THIRD BANCORP",
+      "Ticker": "FITB",
+      "Identifier": "US3167731005",
+      "Weight": "0.05",
+      "Market Value": "8356790.9",
+      "Shares Held": "165974",
+      "Asset Category": "",
+      "ISIN": "US3167731005",
+      "SEDOL": "2336747"
+    },
+    {
+      "Name": "FIRST CITIZENS BANKSHARES CL A",
+      "Ticker": "FCNCA",
+      "Identifier": "US31946M1036",
+      "Weight": "0.07",
+      "Market Value": "10005741.2",
+      "Shares Held": "4771",
+      "Asset Category": "",
+      "ISIN": "US31946M1036",
+      "SEDOL": "2355582"
+    },
+    {
+      "Name": "FIRST SOLAR, INC.",
+      "Ticker": "FSLR",
+      "Identifier": "US3364331070",
+      "Weight": "0.17",
+      "Market Value": "26674875.8",
+      "Shares Held": "149180",
+      "Asset Category": "",
+      "ISIN": "US3364331070",
+      "SEDOL": "B1HMF22"
+    },
+    {
+      "Name": "FIRSTENERGY CORP.",
+      "Ticker": "FE",
+      "Identifier": "US3379321074",
+      "Weight": "0.08",
+      "Market Value": "11569290.05",
+      "Shares Held": "253991",
+      "Asset Category": "",
+      "ISIN": "US3379321074",
+      "SEDOL": "2100920"
+    },
+    {
+      "Name": "FISERV, INC.",
+      "Ticker": "FISV",
+      "Identifier": "US3377381088",
+      "Weight": "0.13",
+      "Market Value": "20277025.47",
+      "Shares Held": "429507",
+      "Asset Category": "",
+      "ISIN": "US3377381088",
+      "SEDOL": "2342034"
+    },
+    {
+      "Name": "FLUTTER ENTERTAINMENT PUBLIC LIMITED COMPANY",
+      "Ticker": "FLUT",
+      "Identifier": "IE00BWT6H894",
+      "Weight": "0.09",
+      "Market Value": "14046754.02",
+      "Shares Held": "184389",
+      "Asset Category": "",
+      "ISIN": "IE00BWT6H894",
+      "SEDOL": "BWZMZF4"
+    },
+    {
+      "Name": "FORD MOTOR COMPANY",
+      "Ticker": "F",
+      "Identifier": "US3453708600",
+      "Weight": "0.21",
+      "Market Value": "32241502.61",
+      "Shares Held": "2619131",
+      "Asset Category": "",
+      "ISIN": "US3453708600",
+      "SEDOL": "2615468"
+    },
+    {
+      "Name": "FORTINET, INC.",
+      "Ticker": "FTNT",
+      "Identifier": "US34959E1091",
+      "Weight": "0.36",
+      "Market Value": "54509331.5",
+      "Shares Held": "299650",
+      "Asset Category": "",
+      "ISIN": "US34959E1091",
+      "SEDOL": "B5B2106"
+    },
+    {
+      "Name": "FORTIVE CORPORATION",
+      "Ticker": "FTV",
+      "Identifier": "US34959J1088",
+      "Weight": "0.19",
+      "Market Value": "28483748.82",
+      "Shares Held": "492969",
+      "Asset Category": "",
+      "ISIN": "US34959J1088",
+      "SEDOL": "BYT3MK1"
+    },
+    {
+      "Name": "FOX CORPORATION",
+      "Ticker": "FOXA",
+      "Identifier": "US35137L1052",
+      "Weight": "0.19",
+      "Market Value": "28368028.22",
+      "Shares Held": "443389",
+      "Asset Category": "",
+      "ISIN": "US35137L1052",
+      "SEDOL": "BJJMGL2"
+    },
+    {
+      "Name": "FOX CORPORATION",
+      "Ticker": "FOX",
+      "Identifier": "US35137L2043",
+      "Weight": "0.19",
+      "Market Value": "28418007.6",
+      "Shares Held": "497340",
+      "Asset Category": "",
+      "ISIN": "US35137L2043",
+      "SEDOL": "BJJMGY5"
+    },
+    {
+      "Name": "FREEPORT-MCMORAN INC",
+      "Ticker": "FCX",
+      "Identifier": "US35671D8570",
+      "Weight": "0.05",
+      "Market Value": "7840975.08",
+      "Shares Held": "111918",
+      "Asset Category": "",
+      "ISIN": "US35671D8570",
+      "SEDOL": "2352118"
+    },
+    {
+      "Name": "GARMIN LTD",
+      "Ticker": "GRMN",
+      "Identifier": "CH0114405324",
+      "Weight": "0.04",
+      "Market Value": "6142497.92",
+      "Shares Held": "21536",
+      "Asset Category": "",
+      "ISIN": "CH0114405324",
+      "SEDOL": "B3Z5T14"
+    },
+    {
+      "Name": "GE HEALTHCARE TECHNOLOGIES INC.",
+      "Ticker": "GEHC",
+      "Identifier": "US36266G1076",
+      "Weight": "0.05",
+      "Market Value": "7980363.3",
+      "Shares Held": "113438",
+      "Asset Category": "",
+      "ISIN": "US36266G1076",
+      "SEDOL": "BL6JPG8"
+    },
+    {
+      "Name": "GE VERNOVA LLC",
+      "Ticker": "GEV",
+      "Identifier": "US36828A1016",
+      "Weight": "0.21",
+      "Market Value": "31490622.04",
+      "Shares Held": "33991",
+      "Asset Category": "",
+      "ISIN": "US36828A1016",
+      "SEDOL": "BP6H4Y1"
+    },
+    {
+      "Name": "GENERAL DYNAMICS CORP.",
+      "Ticker": "GD",
+      "Identifier": "US3695501086",
+      "Weight": "0.18",
+      "Market Value": "26731534.45",
+      "Shares Held": "79315",
+      "Asset Category": "",
+      "ISIN": "US3695501086",
+      "SEDOL": "2365161"
+    },
+    {
+      "Name": "GENERAL ELECTRIC COMPANY",
+      "Ticker": "GE",
+      "Identifier": "US3696043013",
+      "Weight": "0.25",
+      "Market Value": "38120472",
+      "Shares Held": "122181",
+      "Asset Category": "",
+      "ISIN": "US3696043013",
+      "SEDOL": "BL59CR9"
+    },
+    {
+      "Name": "GENERAL MILLS INC",
+      "Ticker": "GIS",
+      "Identifier": "US3703341046",
+      "Weight": "0.05",
+      "Market Value": "7640161.2",
+      "Shares Held": "232365",
+      "Asset Category": "",
+      "ISIN": "US3703341046",
+      "SEDOL": "2367026"
+    },
+    {
+      "Name": "GENERAL MOTORS COMPANY",
+      "Ticker": "GM",
+      "Identifier": "US37045V1008",
+      "Weight": "0.04",
+      "Market Value": "6548319.18",
+      "Shares Held": "78273",
+      "Asset Category": "",
+      "ISIN": "US37045V1008",
+      "SEDOL": "B665KZ5"
+    },
+    {
+      "Name": "GILEAD SCIENCES",
+      "Ticker": "GILD",
+      "Identifier": "US3755581036",
+      "Weight": "0.26",
+      "Market Value": "38980863.74",
+      "Shares Held": "247702",
+      "Asset Category": "",
+      "ISIN": "US3755581036",
+      "SEDOL": "2369174"
+    },
+    {
+      "Name": "GLOBAL PAYMENTS INC.",
+      "Ticker": "GPN",
+      "Identifier": "US37940X1028",
+      "Weight": "0.03",
+      "Market Value": "5194130.7",
+      "Shares Held": "61710",
+      "Asset Category": "",
+      "ISIN": "US37940X1028",
+      "SEDOL": "2712013"
+    },
+    {
+      "Name": "GLOBALFOUNDRIES INC",
+      "Ticker": "GFS",
+      "Identifier": "KYG393871085",
+      "Weight": "0.02",
+      "Market Value": "2917457.08",
+      "Shares Held": "59833",
+      "Asset Category": "",
+      "ISIN": "KYG393871085",
+      "SEDOL": "BMW7F63"
+    },
+    {
+      "Name": "GUARDANT HEALTH, INC.",
+      "Ticker": "GH",
+      "Identifier": "US40131M1099",
+      "Weight": "0.05",
+      "Market Value": "7932049.84",
+      "Shares Held": "47818",
+      "Asset Category": "",
+      "ISIN": "US40131M1099",
+      "SEDOL": "BFXC911"
+    },
+    {
+      "Name": "HALLIBURTON COMPANY",
+      "Ticker": "HAL",
+      "Identifier": "US4062161017",
+      "Weight": "0.12",
+      "Market Value": "18733387.53",
+      "Shares Held": "569577",
+      "Asset Category": "",
+      "ISIN": "US4062161017",
+      "SEDOL": "2405302"
+    },
+    {
+      "Name": "HARTFORD INSURANCE GROUP INC/THE",
+      "Ticker": "HIG",
+      "Identifier": "US4165151048",
+      "Weight": "0.17",
+      "Market Value": "26511266.58",
+      "Shares Held": "199618",
+      "Asset Category": "",
+      "ISIN": "US4165151048",
+      "SEDOL": "2476193"
+    },
+    {
+      "Name": "HCA HEALTHCARE, INC",
+      "Ticker": "HCA",
+      "Identifier": "US40412C1018",
+      "Weight": "0.04",
+      "Market Value": "6149062.5",
+      "Shares Held": "13125",
+      "Asset Category": "",
+      "ISIN": "US40412C1018",
+      "SEDOL": "B4MGBG6"
+    },
+    {
+      "Name": "HEWLETT PACKARD ENTERPRISE CO",
+      "Ticker": "HPE",
+      "Identifier": "US42824C1099",
+      "Weight": "0.32",
+      "Market Value": "49418113.03",
+      "Shares Held": "842881",
+      "Asset Category": "",
+      "ISIN": "US42824C1099",
+      "SEDOL": "BYVYWS0"
+    },
+    {
+      "Name": "HILTON WORLDWIDE HOLDINGS INC.",
+      "Ticker": "HLT",
+      "Identifier": "US43300A2033",
+      "Weight": "0.12",
+      "Market Value": "17983813.32",
+      "Shares Held": "52434",
+      "Asset Category": "",
+      "ISIN": "US43300A2033",
+      "SEDOL": "BYVMW06"
+    },
+    {
+      "Name": "HONEYWELL AEROSPACE INC.",
+      "Ticker": "HONA",
+      "Identifier": "US43849R1059",
+      "Weight": "0.03",
+      "Market Value": "4648308.78",
+      "Shares Held": "28498",
+      "Asset Category": "",
+      "ISIN": "US43849R1059",
+      "SEDOL": "BN7RHB4"
+    },
+    {
+      "Name": "HONEYWELL INTERNATIONAL INC",
+      "Ticker": "HON",
+      "Identifier": "US4385162056",
+      "Weight": "0.03",
+      "Market Value": "4748669.5",
+      "Shares Held": "22559",
+      "Asset Category": "",
+      "ISIN": "US4385162056",
+      "SEDOL": "BN7RHC5"
+    },
+    {
+      "Name": "HOWMET AEROSPACE INC.",
+      "Ticker": "HWM",
+      "Identifier": "US4432011082",
+      "Weight": "0.08",
+      "Market Value": "11652009.2",
+      "Shares Held": "53036",
+      "Asset Category": "",
+      "ISIN": "US4432011082",
+      "SEDOL": "BKLJ8V2"
+    },
+    {
+      "Name": "HP INC.",
+      "Ticker": "HPQ",
+      "Identifier": "US40434L1052",
+      "Weight": "0.16",
+      "Market Value": "24035728.6",
+      "Shares Held": "779116",
+      "Asset Category": "",
+      "ISIN": "US40434L1052",
+      "SEDOL": "BYX4D52"
+    },
+    {
+      "Name": "HUBBELL INCORPORATED",
+      "Ticker": "HUBB",
+      "Identifier": "US4435106079",
+      "Weight": "0.07",
+      "Market Value": "10185513.78",
+      "Shares Held": "21918",
+      "Asset Category": "",
+      "ISIN": "US4435106079",
+      "SEDOL": "BDFG6S3"
+    },
+    {
+      "Name": "HUMANA INC.",
+      "Ticker": "HUM",
+      "Identifier": "US4448591028",
+      "Weight": "0.12",
+      "Market Value": "18600159.2",
+      "Shares Held": "43036",
+      "Asset Category": "",
+      "ISIN": "US4448591028",
+      "SEDOL": "2445063"
+    },
+    {
+      "Name": "HUNTINGTON BANCSHARES INCORPORATED",
+      "Ticker": "HBAN",
+      "Identifier": "US4461501045",
+      "Weight": "0.05",
+      "Market Value": "7430766.15",
+      "Shares Held": "484089",
+      "Asset Category": "",
+      "ISIN": "US4461501045",
+      "SEDOL": "2445966"
+    },
+    {
+      "Name": "IDEXX LABORATORIES",
+      "Ticker": "IDXX",
+      "Identifier": "US45168D1046",
+      "Weight": "0.28",
+      "Market Value": "42930101.26",
+      "Shares Held": "78457",
+      "Asset Category": "",
+      "ISIN": "US45168D1046",
+      "SEDOL": "2459202"
+    },
+    {
+      "Name": "ILLINOIS TOOL WORKS",
+      "Ticker": "ITW",
+      "Identifier": "US4523081093",
+      "Weight": "0.16",
+      "Market Value": "24093333.17",
+      "Shares Held": "88843",
+      "Asset Category": "",
+      "ISIN": "US4523081093",
+      "SEDOL": "2457552"
+    },
+    {
+      "Name": "ILLUMINA, INC",
+      "Ticker": "ILMN",
+      "Identifier": "US4523271090",
+      "Weight": "0.18",
+      "Market Value": "26760312.54",
+      "Shares Held": "99878",
+      "Asset Category": "",
+      "ISIN": "US4523271090",
+      "SEDOL": "2613990"
+    },
+    {
+      "Name": "INCYTE CORPORATION",
+      "Ticker": "INCY",
+      "Identifier": "US45337C1027",
+      "Weight": "0.24",
+      "Market Value": "37038723.65",
+      "Shares Held": "326995",
+      "Asset Category": "",
+      "ISIN": "US45337C1027",
+      "SEDOL": "2471950"
+    },
+    {
+      "Name": "INGERSOLL RAND INC",
+      "Ticker": "IR",
+      "Identifier": "US45687V1061",
+      "Weight": "0.08",
+      "Market Value": "12077403.39",
+      "Shares Held": "155097",
+      "Asset Category": "",
+      "ISIN": "US45687V1061",
+      "SEDOL": "BL5GZ82"
+    },
+    {
+      "Name": "INTEL CORPORATION",
+      "Ticker": "INTC",
+      "Identifier": "US4581401001",
+      "Weight": "0.36",
+      "Market Value": "55481878.98",
+      "Shares Held": "581754",
+      "Asset Category": "",
+      "ISIN": "US4581401001",
+      "SEDOL": "2463247"
+    },
+    {
+      "Name": "INTERACTIVE BROKERS GROUP, INC.",
+      "Ticker": "IBKR",
+      "Identifier": "US45841N1072",
+      "Weight": "0.02",
+      "Market Value": "2798727.96",
+      "Shares Held": "32532",
+      "Asset Category": "",
+      "ISIN": "US45841N1072",
+      "SEDOL": "B1WT4X2"
+    },
+    {
+      "Name": "INTERCONTINENTAL EXCHANGE INC",
+      "Ticker": "ICE",
+      "Identifier": "US45866F1049",
+      "Weight": "0.03",
+      "Market Value": "5021913.82",
+      "Shares Held": "31702",
+      "Asset Category": "",
+      "ISIN": "US45866F1049",
+      "SEDOL": "BFSSDS9"
+    },
+    {
+      "Name": "INTERNATIONAL PAPER CO.",
+      "Ticker": "IP",
+      "Identifier": "US4601461035",
+      "Weight": "0.03",
+      "Market Value": "3973434.3",
+      "Shares Held": "116523",
+      "Asset Category": "",
+      "ISIN": "US4601461035",
+      "SEDOL": "2465254"
+    },
+    {
+      "Name": "INTL BUSINESS MACHINES CORP",
+      "Ticker": "IBM",
+      "Identifier": "US4592001014",
+      "Weight": "0.21",
+      "Market Value": "31660984.08",
+      "Shares Held": "135234",
+      "Asset Category": "",
+      "ISIN": "US4592001014",
+      "SEDOL": "2005973"
+    },
+    {
+      "Name": "INTUIT INC",
+      "Ticker": "INTU",
+      "Identifier": "US4612021034",
+      "Weight": "0.1",
+      "Market Value": "14508990.48",
+      "Shares Held": "43944",
+      "Asset Category": "",
+      "ISIN": "US4612021034",
+      "SEDOL": "2459020"
+    },
+    {
+      "Name": "INTUITIVE SURGICAL, INC.",
+      "Ticker": "ISRG",
+      "Identifier": "US46120E6023",
+      "Weight": "0.05",
+      "Market Value": "7306993.08",
+      "Shares Held": "17078",
+      "Asset Category": "",
+      "ISIN": "US46120E6023",
+      "SEDOL": "2871301"
+    },
+    {
+      "Name": "INVITATION HOMES INC.",
+      "Ticker": "INVH",
+      "Identifier": "US46187W1071",
+      "Weight": "0.08",
+      "Market Value": "12874318",
+      "Shares Held": "480385",
+      "Asset Category": "",
+      "ISIN": "US46187W1071",
+      "SEDOL": "BD81GW9"
+    },
+    {
+      "Name": "IQVIA HOLDINGS INC",
+      "Ticker": "IQV",
+      "Identifier": "US46266C1053",
+      "Weight": "0.17",
+      "Market Value": "25605690.88",
+      "Shares Held": "94472",
+      "Asset Category": "",
+      "ISIN": "US46266C1053",
+      "SEDOL": "BDR73G1"
+    },
+    {
+      "Name": "ITT INC.",
+      "Ticker": "ITT",
+      "Identifier": "US45073V1089",
+      "Weight": "0.03",
+      "Market Value": "5322131.92",
+      "Shares Held": "26473",
+      "Asset Category": "",
+      "ISIN": "US45073V1089",
+      "SEDOL": "BZBY209"
+    },
+    {
+      "Name": "J B HUNT TRANS SVCS INC",
+      "Ticker": "JBHT",
+      "Identifier": "US4456581077",
+      "Weight": "0.05",
+      "Market Value": "7576746.69",
+      "Shares Held": "32199",
+      "Asset Category": "",
+      "ISIN": "US4456581077",
+      "SEDOL": "2445416"
+    },
+    {
+      "Name": "JABIL INC",
+      "Ticker": "JBL",
+      "Identifier": "US4663131039",
+      "Weight": "0.16",
+      "Market Value": "23722358.24",
+      "Shares Held": "82616",
+      "Asset Category": "",
+      "ISIN": "US4663131039",
+      "SEDOL": "2471789"
+    },
+    {
+      "Name": "JOHNSON & JOHNSON",
+      "Ticker": "JNJ",
+      "Identifier": "US4781601046",
+      "Weight": "0.81",
+      "Market Value": "123143216.32",
+      "Shares Held": "486194",
+      "Asset Category": "",
+      "ISIN": "US4781601046",
+      "SEDOL": "2475833"
+    },
+    {
+      "Name": "JOHNSON CONTROLS INTERNATIONAL PUBLIC LIMITED COMP",
+      "Ticker": "JCI",
+      "Identifier": "IE00BY7QL619",
+      "Weight": "0.1",
+      "Market Value": "14685789.51",
+      "Shares Held": "99477",
+      "Asset Category": "",
+      "ISIN": "IE00BY7QL619",
+      "SEDOL": "BY7QL61"
+    },
+    {
+      "Name": "JPMORGAN CHASE & CO",
+      "Ticker": "JPM",
+      "Identifier": "US46625H1005",
+      "Weight": "1.18",
+      "Market Value": "179730670.86",
+      "Shares Held": "535662",
+      "Asset Category": "",
+      "ISIN": "US46625H1005",
+      "SEDOL": "2190385"
+    },
+    {
+      "Name": "KEYCORP",
+      "Ticker": "KEY",
+      "Identifier": "US4932671088",
+      "Weight": "0.09",
+      "Market Value": "14085257.08",
+      "Shares Held": "706382",
+      "Asset Category": "",
+      "ISIN": "US4932671088",
+      "SEDOL": "2490911"
+    },
+    {
+      "Name": "KEYSIGHT TECHNOLOGIES, INC.",
+      "Ticker": "KEYS",
+      "Identifier": "US49338L1035",
+      "Weight": "0.13",
+      "Market Value": "19461273.28",
+      "Shares Held": "56891",
+      "Asset Category": "",
+      "ISIN": "US49338L1035",
+      "SEDOL": "BQZJ0Q9"
+    },
+    {
+      "Name": "KIMBERLY-CLARK CORPORATION",
+      "Ticker": "KMB",
+      "Identifier": "US4943681035",
+      "Weight": "0.02",
+      "Market Value": "2699159.52",
+      "Shares Held": "25936",
+      "Asset Category": "",
+      "ISIN": "US4943681035",
+      "SEDOL": "2491839"
+    },
+    {
+      "Name": "KINDER MORGAN INC",
+      "Ticker": "KMI",
+      "Identifier": "US49456B1017",
+      "Weight": "0.18",
+      "Market Value": "27249723.96",
+      "Shares Held": "830278",
+      "Asset Category": "",
+      "ISIN": "US49456B1017",
+      "SEDOL": "B3NQ4P8"
+    },
+    {
+      "Name": "KLA CORP",
+      "Ticker": "KLAC",
+      "Identifier": "US4824801009",
+      "Weight": "0.37",
+      "Market Value": "57210493.34",
+      "Shares Held": "327929",
+      "Asset Category": "",
+      "ISIN": "US4824801009",
+      "SEDOL": "2480138"
+    },
+    {
+      "Name": "KROGER COMPANY",
+      "Ticker": "KR",
+      "Identifier": "US5010441013",
+      "Weight": "0.29",
+      "Market Value": "44160256.58",
+      "Shares Held": "704198",
+      "Asset Category": "",
+      "ISIN": "US5010441013",
+      "SEDOL": "2497406"
+    },
+    {
+      "Name": "L3HARRIS TECHNOLOGIES INC",
+      "Ticker": "LHX",
+      "Identifier": "US5024311095",
+      "Weight": "0.1",
+      "Market Value": "15644044",
+      "Shares Held": "65048",
+      "Asset Category": "",
+      "ISIN": "US5024311095",
+      "SEDOL": "BK9DTN5"
+    },
+    {
+      "Name": "LABCORP HOLDINGS INC",
+      "Ticker": "LH",
+      "Identifier": "US5049221055",
+      "Weight": "0.18",
+      "Market Value": "27852647.74",
+      "Shares Held": "85682",
+      "Asset Category": "",
+      "ISIN": "US5049221055",
+      "SEDOL": "BSBK800"
+    },
+    {
+      "Name": "LAM RESEARCH CORPORATION",
+      "Ticker": "LRCX",
+      "Identifier": "US5128073062",
+      "Weight": "0.61",
+      "Market Value": "93901620.18",
+      "Shares Held": "338433",
+      "Asset Category": "",
+      "ISIN": "US5128073062",
+      "SEDOL": "BSML4N7"
+    },
+    {
+      "Name": "LENNOX INTERNATIONAL INC",
+      "Ticker": "LII",
+      "Identifier": "US5261071071",
+      "Weight": "0.04",
+      "Market Value": "6498529.5",
+      "Shares Held": "18127",
+      "Asset Category": "",
+      "ISIN": "US5261071071",
+      "SEDOL": "2442053"
+    },
+    {
+      "Name": "LINDE PLC",
+      "Ticker": "LIN",
+      "Identifier": "IE000S9YS762",
+      "Weight": "0.21",
+      "Market Value": "32152025.36",
+      "Shares Held": "65188",
+      "Asset Category": "",
+      "ISIN": "IE000S9YS762",
+      "SEDOL": "BNZHB81"
+    },
+    {
+      "Name": "LIVE NATION ENTERTAINMENT INC",
+      "Ticker": "LYV",
+      "Identifier": "US5380341090",
+      "Weight": "0.07",
+      "Market Value": "10455486.08",
+      "Shares Held": "60608",
+      "Asset Category": "",
+      "ISIN": "US5380341090",
+      "SEDOL": "B0T7YX2"
+    },
+    {
+      "Name": "LOCKHEED MARTIN CORPORATION",
+      "Ticker": "LMT",
+      "Identifier": "US5398301094",
+      "Weight": "0.11",
+      "Market Value": "17027968.16",
+      "Shares Held": "31969",
+      "Asset Category": "",
+      "ISIN": "US5398301094",
+      "SEDOL": "2522096"
+    },
+    {
+      "Name": "LOEWS CORPORATION",
+      "Ticker": "L",
+      "Identifier": "US5404241086",
+      "Weight": "0.22",
+      "Market Value": "33698681.61",
+      "Shares Held": "309759",
+      "Asset Category": "",
+      "ISIN": "US5404241086",
+      "SEDOL": "2523022"
+    },
+    {
+      "Name": "LOWES COMPANIES INC",
+      "Ticker": "LOW",
+      "Identifier": "US5486611073",
+      "Weight": "0.2",
+      "Market Value": "30892444.8",
+      "Shares Held": "157840",
+      "Asset Category": "",
+      "ISIN": "US5486611073",
+      "SEDOL": "2536763"
+    },
+    {
+      "Name": "LUMENTUM HOLDINGS INC.",
+      "Ticker": "LITE",
+      "Identifier": "US55024U1097",
+      "Weight": "0.13",
+      "Market Value": "19613344.24",
+      "Shares Held": "22556",
+      "Asset Category": "",
+      "ISIN": "US55024U1097",
+      "SEDOL": "BYM9ZP2"
+    },
+    {
+      "Name": "M&T BANK CORPORATION",
+      "Ticker": "MTB",
+      "Identifier": "US55261F1049",
+      "Weight": "0.11",
+      "Market Value": "17123137.45",
+      "Shares Held": "78313",
+      "Asset Category": "",
+      "ISIN": "US55261F1049",
+      "SEDOL": "2340168"
+    },
+    {
+      "Name": "MACOM TECHNOLOGY SOLUTIONS",
+      "Ticker": "MTSI",
+      "Identifier": "US55405Y1001",
+      "Weight": "0.05",
+      "Market Value": "7721316.89",
+      "Shares Held": "28451",
+      "Asset Category": "",
+      "ISIN": "US55405Y1001",
+      "SEDOL": "B5B15Y5"
+    },
+    {
+      "Name": "MARATHON PETROLEUM CORPORATION",
+      "Ticker": "MPC",
+      "Identifier": "US56585A1025",
+      "Weight": "0.33",
+      "Market Value": "50505351.08",
+      "Shares Held": "105899",
+      "Asset Category": "",
+      "ISIN": "US56585A1025",
+      "SEDOL": "B3K3L40"
+    },
+    {
+      "Name": "MARKEL GROUP INC",
+      "Ticker": "MKL",
+      "Identifier": "US5705351048",
+      "Weight": "0.15",
+      "Market Value": "22474683.72",
+      "Shares Held": "12318",
+      "Asset Category": "",
+      "ISIN": "US5705351048",
+      "SEDOL": "2566436"
+    },
+    {
+      "Name": "MARRIOTT INTERNATIONAL, INC",
+      "Ticker": "MAR",
+      "Identifier": "US5719032022",
+      "Weight": "0.08",
+      "Market Value": "12580703.07",
+      "Shares Held": "32617",
+      "Asset Category": "",
+      "ISIN": "US5719032022",
+      "SEDOL": "2210614"
+    },
+    {
+      "Name": "MARSH ORD",
+      "Ticker": "MRSH",
+      "Identifier": "US5717481023",
+      "Weight": "0.04",
+      "Market Value": "6155633.46",
+      "Shares Held": "32999",
+      "Asset Category": "",
+      "ISIN": "US5717481023",
+      "SEDOL": "2567741"
+    },
+    {
+      "Name": "MARTIN MARIETTA MATERIALS,INC",
+      "Ticker": "MLM",
+      "Identifier": "US5732841060",
+      "Weight": "0.07",
+      "Market Value": "10048109.65",
+      "Shares Held": "20455",
+      "Asset Category": "",
+      "ISIN": "US5732841060",
+      "SEDOL": "2572079"
+    },
+    {
+      "Name": "MARVELL TECHNOLOGY, INC.",
+      "Ticker": "MRVL",
+      "Identifier": "US5738741041",
+      "Weight": "0.15",
+      "Market Value": "22881614",
+      "Shares Held": "94850",
+      "Asset Category": "",
+      "ISIN": "US5738741041",
+      "SEDOL": "BNKJSM5"
+    },
+    {
+      "Name": "MASTEC, INC.",
+      "Ticker": "MTZ",
+      "Identifier": "US5763231090",
+      "Weight": "0.04",
+      "Market Value": "6161287.76",
+      "Shares Held": "32152",
+      "Asset Category": "",
+      "ISIN": "US5763231090",
+      "SEDOL": "2155306"
+    },
+    {
+      "Name": "MASTERCARD INCORPORATED",
+      "Ticker": "MA",
+      "Identifier": "US57636Q1040",
+      "Weight": "0.71",
+      "Market Value": "108302832",
+      "Shares Held": "175725",
+      "Asset Category": "",
+      "ISIN": "US57636Q1040",
+      "SEDOL": "B121557"
+    },
+    {
+      "Name": "MC DONALDS CORP",
+      "Ticker": "MCD",
+      "Identifier": "US5801351017",
+      "Weight": "0.15",
+      "Market Value": "22910187.5",
+      "Shares Held": "94475",
+      "Asset Category": "",
+      "ISIN": "US5801351017",
+      "SEDOL": "2550707"
+    },
+    {
+      "Name": "MCKESSON CORPORATION",
+      "Ticker": "MCK",
+      "Identifier": "US58155Q1031",
+      "Weight": "0.06",
+      "Market Value": "9712772.64",
+      "Shares Held": "9726",
+      "Asset Category": "",
+      "ISIN": "US58155Q1031",
+      "SEDOL": "2378534"
+    },
+    {
+      "Name": "MEDTRONIC PUBLIC LIMITED COMPANY",
+      "Ticker": "MDT",
+      "Identifier": "IE00BTN1Y115",
+      "Weight": "0.12",
+      "Market Value": "18236581.55",
+      "Shares Held": "191059",
+      "Asset Category": "",
+      "ISIN": "IE00BTN1Y115",
+      "SEDOL": "BTN1Y11"
+    },
+    {
+      "Name": "MERCK & CO., INC.",
+      "Ticker": "MRK",
+      "Identifier": "US58933Y1055",
+      "Weight": "0.39",
+      "Market Value": "59846592.05",
+      "Shares Held": "412195",
+      "Asset Category": "",
+      "ISIN": "US58933Y1055",
+      "SEDOL": "2778844"
+    },
+    {
+      "Name": "META PLATFORMS INC-CLASS A",
+      "Ticker": "META",
+      "Identifier": "US30303M1027",
+      "Weight": "2.38",
+      "Market Value": "362922269.68",
+      "Shares Held": "492619",
+      "Asset Category": "",
+      "ISIN": "US30303M1027",
+      "SEDOL": "B7TL820"
     }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "ticker": "GINC",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 501,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "THE MICHAELS COMPANIES, I",
+      "Ticker": "-",
+      "Identifier": "59408QAB2",
+      "Weight": "0.42",
+      "Market Value": "900102.21",
+      "Shares Held": "910000",
+      "Asset Category": "",
+      "Coupon": "8.5",
+      "Maturity": "2033-03-15",
+      "ISIN": "US59408QAB23",
+      "SEDOL": "BW5TCD2"
+    }
+  ]
+}

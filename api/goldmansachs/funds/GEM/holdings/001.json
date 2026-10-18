@@ -10,2258 +10,2760 @@
     "Weight",
     "Market Value",
     "Shares Held",
-    "Asset Category"
+    "Asset Category",
+    "ISIN",
+    "SEDOL"
   ],
   "rows": [
     {
-      "Name": "ICE FUTURES U.S.",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.141148430215",
-      "Market Value": "2362029.2",
-      "Shares Held": "276.00000000",
-      "Asset Category": "DE"
-    },
-    {
-      "Name": "AMBUJA CEMENTS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.053083718238",
-      "Market Value": "888322.26",
-      "Shares Held": "188435.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EVERPROX TECHNOLOGIES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038984294387",
-      "Market Value": "652377.37",
-      "Shares Held": "17700.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAMSUNG SDI COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.059609766102",
-      "Market Value": "997531.52",
-      "Shares Held": "2185.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KOREAN AIR LINES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.113641319589",
-      "Market Value": "1901715.2",
-      "Shares Held": "106936.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INDIAN OIL CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.058438458362",
-      "Market Value": "977930.43",
-      "Shares Held": "662460.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MEITUAN LLC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.265512026475",
-      "Market Value": "4443174.88",
-      "Shares Held": "474104.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COMPANIA DE MINAS BUENAVENTURA SA",
-      "Ticker": "-",
-      "Identifier": "204448104",
-      "Weight": "0.0445959406",
-      "Market Value": "746284.7",
-      "Shares Held": "20230.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHANGHAI INTERNATIONAL AIRPORT COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.028310072128",
-      "Market Value": "473751.05",
-      "Shares Held": "127772.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NETEASE INC",
-      "Ticker": "NTES",
-      "Identifier": "000000000",
-      "Weight": "0.243703314687",
-      "Market Value": "4078219.96",
-      "Shares Held": "164671.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EMPRESAS COPEC SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.031478021636",
-      "Market Value": "526764.67",
-      "Shares Held": "74136.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ADVANCED FIBER RESOURCES (ZHUHAI) LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.039421445749",
-      "Market Value": "659692.82",
-      "Shares Held": "16000.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CENCOSUD SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.074354875684",
-      "Market Value": "1244281.55",
-      "Shares Held": "527557.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BANCO DE CHILE SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.128905319524",
-      "Market Value": "2157148.53",
-      "Shares Held": "11450218.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "APL APOLLO TUBES LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.041406265138",
-      "Market Value": "692907.51",
-      "Shares Held": "35949.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YANBU NATIONAL PETROCHEMICAL COMPANY",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.024775434646",
-      "Market Value": "414601.14",
-      "Shares Held": "45706.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CEMEX-CEMENTOS MEXICANOS SAB DE CV",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.126851398016",
-      "Market Value": "2122777.46",
-      "Shares Held": "1612395.00000000",
-      "Asset Category": "EP"
-    },
-    {
-      "Name": "HITHINK ROYALFLUSH INFORMATION NETWORK CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.126317317962",
-      "Market Value": "2113839.97",
-      "Shares Held": "62753.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FOXCONN INDUSTRIAL INTERNET CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.037557404181",
-      "Market Value": "628499.27",
-      "Shares Held": "57896.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HYUNDAI MOBIS COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.203460557171",
-      "Market Value": "3404783.01",
-      "Shares Held": "6681.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHAILEASE HOLDING COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.070430942258",
-      "Market Value": "1178617.02",
-      "Shares Held": "343449.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA POWER INTERNATIONAL DEVELOPMENT LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.087388438887",
-      "Market Value": "1462389.94",
-      "Shares Held": "3081004.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AUROBINDO PHARMA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.111944119737",
-      "Market Value": "1873313.64",
-      "Shares Held": "124765.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ENGIE BRASIL ENERGIA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.052049179963",
-      "Market Value": "871009.92",
-      "Shares Held": "133104.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YUNNAN BAIYAO GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.019086458335",
-      "Market Value": "319399.74",
-      "Shares Held": "43244.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LI NING COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.111304917073",
-      "Market Value": "1862616.99",
-      "Shares Held": "802092.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "STATE BANK OF INDIA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.126953853658",
-      "Market Value": "2124491.99",
-      "Shares Held": "209277.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VODACOM GROUP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.084400497415",
-      "Market Value": "1412388.64",
-      "Shares Held": "150258.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "POLYUS PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0",
-      "Market Value": "0",
-      "Shares Held": "112870.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MONETA MONEY BANK AS",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.101353667617",
-      "Market Value": "1696089.16",
-      "Shares Held": "190227.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZOOMLION HEAVY INDUSTRY SCIENCE AND TECHNOLOGY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03737905142",
-      "Market Value": "625514.65",
-      "Shares Held": "586600.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VEDANTA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.087701501279",
-      "Market Value": "1467628.84",
-      "Shares Held": "395419.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "METROPOLITAN BANK & TRUST COMPANY",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.021553081516",
-      "Market Value": "360677.11",
-      "Shares Held": "349871.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DINO POLSKA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.062279924357",
-      "Market Value": "1042214.92",
-      "Shares Held": "122555.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INDIAN HOTELS COMPANY LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.055465569748",
-      "Market Value": "928181.03",
-      "Shares Held": "134776.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HUNAN YUNENG NEW ENERGY BATTERY MATERIAL CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036645882233",
-      "Market Value": "613245.53",
-      "Shares Held": "46900.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHENZHEN TECHWINSEMI TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.034503309612",
-      "Market Value": "577390.94",
-      "Shares Held": "6100.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NATIONAL ALUMINIUM COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.067109876085",
-      "Market Value": "1123041.09",
-      "Shares Held": "251358.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FALABELLA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.10592640431",
-      "Market Value": "1772611",
-      "Shares Held": "276759.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHENGTUN MINING GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.026622322888",
-      "Market Value": "445507.64",
-      "Shares Held": "246908.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ASPEED TECHNOLOGY INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.280917569286",
-      "Market Value": "4700976.84",
-      "Shares Held": "7771.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EVERGREEN MARINE CORP (TAIWAN) LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.053700987591",
-      "Market Value": "898651.87",
-      "Shares Held": "132163.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JARIR MARKETING JSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.106414282429",
-      "Market Value": "1780775.33",
-      "Shares Held": "423750.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SCB X PCL",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.048999086144",
-      "Market Value": "819968.54",
-      "Shares Held": "198408.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAUDI TELECOM JSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.13483536027",
-      "Market Value": "2256383.99",
-      "Shares Held": "192264.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SOLAR INDUSTRIES INDIA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.085153798828",
-      "Market Value": "1424994.66",
-      "Shares Held": "7419.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PEGATRON CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.158513585601",
-      "Market Value": "2652624.03",
-      "Shares Held": "938924.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KOREA ELECTRIC POWER CORP",
-      "Ticker": "KEP",
-      "Identifier": "000000000",
-      "Weight": "0.085220425801",
-      "Market Value": "1426109.62",
-      "Shares Held": "55248.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KOMERCNI BANKA AS",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.076016225951",
-      "Market Value": "1272083.19",
-      "Shares Held": "26788.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PORTO SEGURO SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.042003554049",
-      "Market Value": "702902.76",
-      "Shares Held": "73596.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HD HYUNDAI ELECTRIC CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.116454003727",
-      "Market Value": "1948783.68",
-      "Shares Held": "2789.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YUANTA FINANCIAL HOLDING COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.132010102006",
-      "Market Value": "2209105.09",
-      "Shares Held": "1161096.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ECOVACS ROBOTICS CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038495171524",
-      "Market Value": "644192.21",
-      "Shares Held": "74177.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PLAZA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.022847523305",
-      "Market Value": "382338.77",
-      "Shares Held": "87696.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KUAISHOU TECHNOLOGY",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.168408261649",
-      "Market Value": "2818205.14",
-      "Shares Held": "485011.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NINGXIA BAOFENG ENERGY GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.034722490934",
-      "Market Value": "581058.8",
-      "Shares Held": "163700.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YAGEO CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.192631494249",
-      "Market Value": "3223565.53",
-      "Shares Held": "136829.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PHOENIX MILLS LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038342688883",
-      "Market Value": "641640.51",
-      "Shares Held": "34415.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HANA FINANCIAL GROUP INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.1672779474",
-      "Market Value": "2799290.05",
-      "Shares Held": "36651.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PEOPLE'S INSURANCE COMPANY (GROUP) OF CHINA LTD (THE)",
-      "Ticker": "PINXF",
-      "Identifier": "000000000",
-      "Weight": "0.071565563214",
-      "Market Value": "1197604.18",
-      "Shares Held": "1811989.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "XP INC",
-      "Ticker": "XP",
-      "Identifier": "000000000",
-      "Weight": "0.022089710218",
-      "Market Value": "369657.25",
-      "Shares Held": "22175.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ADITYA BIRLA CAPITAL LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03750908146",
-      "Market Value": "627690.62",
-      "Shares Held": "164136.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHANG HWA COMMERCIAL BANK LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.083686238418",
-      "Market Value": "1400435.97",
-      "Shares Held": "2166388.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA MINSHENG BANKING CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.028760000791",
-      "Market Value": "481280.32",
-      "Shares Held": "1122615.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA TOWER CORP LTD",
-      "Ticker": "CHWRF",
-      "Identifier": "000000000",
-      "Weight": "0.039677230793",
-      "Market Value": "663973.22",
-      "Shares Held": "524579.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "COLGATE-PALMOLIVE INDIA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.054765173841",
-      "Market Value": "916460.35",
-      "Shares Held": "42266.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PI INDUSTRIES LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.050779547004",
-      "Market Value": "849763.42",
-      "Shares Held": "29091.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA PETROLEUM & CHEMICAL CORP (SINOPEC CORP)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.051573829957",
-      "Market Value": "863055.24",
-      "Shares Held": "1565766.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CAITONG SECURITIES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.041101914162",
-      "Market Value": "687814.39",
-      "Shares Held": "592436.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SDIC CAPITAL CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.043756356851",
-      "Market Value": "732234.8",
-      "Shares Held": "768784.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA GAS HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.049841834638",
-      "Market Value": "834071.4",
-      "Shares Held": "943283.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ULTRAPAR PARTICIPACOES SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038386707287",
-      "Market Value": "642377.13",
-      "Shares Held": "125600.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INDUSTRIAL BANK OF KOREA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.104946147752",
-      "Market Value": "1756207.03",
-      "Shares Held": "131020.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "UNITED TRACTORS TBK PT",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.021987427274",
-      "Market Value": "367945.61",
-      "Shares Held": "286813.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DUKHAN BANK",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.039328891888",
-      "Market Value": "658143.99",
-      "Shares Held": "691374.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VEDANTA ALUMINIUM METAL LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.021103871732",
-      "Market Value": "353159.87",
-      "Shares Held": "277217.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DELTA ELECTRONICS (THAILAND) PCL",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.296540939318",
-      "Market Value": "4962424",
-      "Shares Held": "457513.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MARICO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.071234366282",
-      "Market Value": "1192061.81",
-      "Shares Held": "137819.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ANKER INNOVATIONS TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.092115095383",
-      "Market Value": "1541487.53",
-      "Shares Held": "82904.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "VOLTAS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036459751466",
-      "Market Value": "610130.75",
-      "Shares Held": "46530.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "APT MEDICAL INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.031215916663",
-      "Market Value": "522378.51",
-      "Shares Held": "17180.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HINDUSTAN PETROLEUM CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.07434041024",
-      "Market Value": "1244039.48",
-      "Shares Held": "300073.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHREE CEMENT LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.089699791153",
-      "Market Value": "1501068.95",
-      "Shares Held": "5642.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DB INSURANCE CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.08374793422",
-      "Market Value": "1401468.41",
-      "Shares Held": "14759.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALCHIP TECHNOLOGIES LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.04635556828",
-      "Market Value": "775730.95",
-      "Shares Held": "5504.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KAKAO CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03345695075",
-      "Market Value": "559880.79",
-      "Shares Held": "20113.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BEONE MEDICINES LTD",
-      "Ticker": "ONC",
-      "Identifier": "000000000",
-      "Weight": "0.161877386593",
-      "Market Value": "2708915.1",
-      "Shares Held": "120084.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CAPITEC BANK HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.264646270235",
-      "Market Value": "4428687",
-      "Shares Held": "16081.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "REMEGEN CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.074689681358",
-      "Market Value": "1249884.31",
-      "Shares Held": "118522.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZIJIN MINING GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.031592358817",
-      "Market Value": "528678.03",
-      "Shares Held": "117432.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "METALLURGICAL CORP OF CHINA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.046134862551",
-      "Market Value": "772037.58",
-      "Shares Held": "1844556.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "STANDARD BANK GROUP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.241223369219",
-      "Market Value": "4036719.65",
-      "Shares Held": "207936.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HAIER SMART HOME CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.024388970599",
-      "Market Value": "408133.91",
-      "Shares Held": "162371.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "REMEGEN CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.045286627144",
-      "Market Value": "757842.9",
-      "Shares Held": "44162.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TATA COMMUNICATIONS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.081217195665",
-      "Market Value": "1359118.11",
-      "Shares Held": "65708.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RAIA DROGASIL SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.077154153875",
-      "Market Value": "1291125.69",
-      "Shares Held": "349426.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NEDBANK GROUP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.06848520353",
-      "Market Value": "1146056.32",
-      "Shares Held": "71582.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MARUTI SUZUKI INDIA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.055182850906",
-      "Market Value": "923449.91",
-      "Shares Held": "6683.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NORTHAM PLATINUM HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03555143968",
-      "Market Value": "594930.73",
-      "Shares Held": "30530.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PEPKOR HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.088856254461",
-      "Market Value": "1486952.9",
-      "Shares Held": "1111276.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JD.COM INC",
-      "Ticker": "JD",
-      "Identifier": "000000000",
-      "Weight": "0.20234591367",
-      "Market Value": "3386130.16",
-      "Shares Held": "233819.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GIGA DEVICE SEMICONDUCTOR INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.041257544816",
-      "Market Value": "690418.77",
-      "Shares Held": "9996.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DR. REDDY'S LABORATORIES LTD",
-      "Ticker": "RDY",
-      "Identifier": "000000000",
-      "Weight": "0.100495054762",
-      "Market Value": "1681720.82",
-      "Shares Held": "122565.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YUNNAN TIN CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.010703626424",
-      "Market Value": "179118.38",
-      "Shares Held": "32296.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAM YANG FOODS COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.077072412495",
-      "Market Value": "1289757.8",
-      "Shares Held": "1613.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHENWAN HONGYUAN GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.040433450751",
-      "Market Value": "676628.08",
-      "Shares Held": "1037412.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ENERGISA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.023500480301",
-      "Market Value": "393265.59",
-      "Shares Held": "41442.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HAISCO PHARMACEUTICAL GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.062539273921",
-      "Market Value": "1046554.97",
-      "Shares Held": "137216.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SINOPHARM GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.070867597636",
-      "Market Value": "1185924.17",
-      "Shares Held": "549324.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NINGBO DEYE TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036588285781",
-      "Market Value": "612281.69",
-      "Shares Held": "35800.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YUHAN CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.035299419943",
-      "Market Value": "590713.34",
-      "Shares Held": "10473.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TURKIYE IS BANKASI AS",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.035224361219",
-      "Market Value": "589457.28",
-      "Shares Held": "2058693.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AXIS BANK LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.141772753915",
-      "Market Value": "2372476.86",
-      "Shares Held": "175179.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GUANGDONG INVESTMENT LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.067247363832",
-      "Market Value": "1125341.86",
-      "Shares Held": "1056258.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KUNLUN ENERGY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.070505803185",
-      "Market Value": "1179869.77",
-      "Shares Held": "1291496.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHONGQING CHANGAN AUTOMOBILE COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.046794879271",
-      "Market Value": "783082.54",
-      "Shares Held": "668532.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "RIYAD BANK JSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.043375933668",
-      "Market Value": "725868.66",
-      "Shares Held": "135248.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAMSUNG ELECTRONICS CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "7.544967831161",
-      "Market Value": "126260237.56",
-      "Shares Held": "600234.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EMEMORY TECHNOLOGY INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.205675021978",
-      "Market Value": "3441840.67",
-      "Shares Held": "31618.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GLOBAL UNICHIP CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.06399941188",
-      "Market Value": "1070989.45",
-      "Shares Held": "7184.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INNOLUX CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.176382108789",
-      "Market Value": "2951642.4",
-      "Shares Held": "1812974.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TITAN COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.044722882981",
-      "Market Value": "748409",
-      "Shares Held": "17448.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SUPREME INDUSTRIES LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.043036322911",
-      "Market Value": "720185.49",
-      "Shares Held": "19278.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WARBA BANK KSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.029461454999",
-      "Market Value": "493018.71",
-      "Shares Held": "548705.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HON PRECISION INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.131255595887",
-      "Market Value": "2196478.91",
-      "Shares Held": "8330.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GD POWER DEVELOPMENT COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.028166783741",
-      "Market Value": "471353.21",
-      "Shares Held": "618841.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PGE POLSKA GRUPA ENERGETYCZNA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.042874398621",
-      "Market Value": "717475.79",
-      "Shares Held": "245610.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ICICI BANK LTD",
-      "Ticker": "IBN",
-      "Identifier": "000000000",
-      "Weight": "0.436165762774",
-      "Market Value": "7298956.61",
-      "Shares Held": "551895.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BANCO DE CREDITO E INVERSIONES SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.102653118859",
-      "Market Value": "1717834.65",
-      "Shares Held": "25458.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HAIDILAO INTERNATIONAL HOLDING LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.129649610735",
-      "Market Value": "2169603.77",
-      "Shares Held": "1332606.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "T-TECHNOLOGIES PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0",
-      "Market Value": "0",
-      "Shares Held": "1366.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HON HAI PRECISION INDUSTRY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.514768465283",
-      "Market Value": "8614322.84",
-      "Shares Held": "933730.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KRAFTON INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.104363385835",
-      "Market Value": "1746454.88",
-      "Shares Held": "10221.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA MERCHANTS BANK COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.103716392018",
-      "Market Value": "1735627.85",
-      "Shares Held": "288807.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YANKUANG ENERGY GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.046991493257",
-      "Market Value": "786372.75",
-      "Shares Held": "243900.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NHPC LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.037886721747",
-      "Market Value": "634010.19",
-      "Shares Held": "763674.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHUNGHWA TELECOM CO LTD",
-      "Ticker": "CHT",
-      "Identifier": "000000000",
-      "Weight": "0.106983457334",
-      "Market Value": "1790300.11",
-      "Shares Held": "409358.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GEK TERNA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.026842324677",
-      "Market Value": "449189.23",
-      "Shares Held": "9002.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA NORTHERN RARE EARTH GROUP HI TECH CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.029852156434",
-      "Market Value": "499556.85",
-      "Shares Held": "69472.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GENSCRIPT BIOTECH CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.041185744059",
-      "Market Value": "689217.23",
-      "Shares Held": "394859.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA TAIPING INSURANCE HOLDINGS COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.117973836815",
-      "Market Value": "1974217.12",
-      "Shares Held": "778698.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HAITIAN INTERNATIONAL HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.085226117084",
-      "Market Value": "1426204.86",
-      "Shares Held": "565675.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BANQUE SAUDI FRANSI",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.088113174529",
-      "Market Value": "1474517.93",
-      "Shares Held": "289246.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SUZHOU CENTEC COMMUNICATIONS CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.033641009135",
-      "Market Value": "562960.89",
-      "Shares Held": "13521.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MOL MAGYAR OLAJ ES GAZIPARI NYRT",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.119295448445",
-      "Market Value": "1996333.45",
-      "Shares Held": "157157.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LIG DEFENSE & AEROSPACE CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038178118541",
-      "Market Value": "638886.53",
-      "Shares Held": "1202.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SUNNY OPTICAL TECHNOLOGY (GROUP) CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.063127667364",
-      "Market Value": "1056401.36",
-      "Shares Held": "98800.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAUDI ENERGY COMPANY",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036593398016",
-      "Market Value": "612367.24",
-      "Shares Held": "136378.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JIANGSU HENGRUI PHARMACEUTICALS CO LTD",
-      "Ticker": "JHPCY",
-      "Identifier": "000000000",
-      "Weight": "0.074059466786",
-      "Market Value": "1239338.07",
-      "Shares Held": "166960.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MOBILE TELECOMMUNICATIONS COMPANY",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.093396278228",
-      "Market Value": "1562927.31",
-      "Shares Held": "808645.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GRUMA SAB DE CV",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.100213536443",
-      "Market Value": "1677009.79",
-      "Shares Held": "100017.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ISHARES INC",
-      "Ticker": "-",
-      "Identifier": "46434G814",
-      "Weight": "0.565376291987",
-      "Market Value": "9461212.63",
-      "Shares Held": "331159.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LEGEND BIOTECH CORP",
-      "Ticker": "LEGN",
-      "Identifier": "52490G102",
-      "Weight": "0.034996913076",
-      "Market Value": "585651.08",
-      "Shares Held": "21563.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALIBABA GROUP HOLDING LTD",
-      "Ticker": "BABA",
-      "Identifier": "000000000",
-      "Weight": "1.816299967489",
-      "Market Value": "30394624.67",
-      "Shares Held": "1970346.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "YEALINK NETWORK TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.064571779616",
-      "Market Value": "1080567.66",
-      "Shares Held": "202108.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GAZPROM PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0",
-      "Market Value": "0",
-      "Shares Held": "1256908.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "OUTSURANCE GROUP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.110071139675",
-      "Market Value": "1841970.51",
-      "Shares Held": "421043.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAUDI INVESTMENT BANK JSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.054192036432",
-      "Market Value": "906869.26",
-      "Shares Held": "253964.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GANFENG LITHIUM GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.033598999771",
-      "Market Value": "562257.89",
-      "Shares Held": "68800.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FEDERAL BANK LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.036746432813",
-      "Market Value": "614928.18",
-      "Shares Held": "202174.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHANGHAI PHARMACEUTICALS HOLDING COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.016227070898",
-      "Market Value": "271549.71",
-      "Shares Held": "111412.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA LIFE INSURANCE COMPANY LTD",
-      "Ticker": "CILJF",
-      "Identifier": "000000000",
-      "Weight": "0.047120420775",
-      "Market Value": "788530.27",
-      "Shares Held": "157600.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SINOMA SCIENCE & TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.068023155493",
-      "Market Value": "1138324.24",
-      "Shares Held": "108176.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GUOYUAN SECURITIES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03370343039",
-      "Market Value": "564005.47",
-      "Shares Held": "534852.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TSINGTAO BREWERY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.044957246833",
-      "Market Value": "752330.93",
-      "Shares Held": "83200.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PUNJAB NATIONAL BANK LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.050766048433",
-      "Market Value": "849537.53",
-      "Shares Held": "761019.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "POWSZECHNA KASA OSZCZEDNOSCI BANK POLSKI SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.185873572619",
-      "Market Value": "3110476.01",
-      "Shares Held": "109374.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NMDC LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.150323510941",
-      "Market Value": "2515568.34",
-      "Shares Held": "2715979.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SHANGHAI COMMERCIAL & SAVINGS BANK LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.015932535652",
-      "Market Value": "266620.85",
-      "Shares Held": "210114.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AMBEV SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.062715898501",
-      "Market Value": "1049510.67",
-      "Shares Held": "325284.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HDFC ASSET MANAGEMENT COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.097506969275",
-      "Market Value": "1631717.11",
-      "Shares Held": "57964.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CLICKS GROUP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.102770324987",
-      "Market Value": "1719796.02",
-      "Shares Held": "118773.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ULTRATECH CEMENT LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.065962663673",
-      "Market Value": "1103843.22",
-      "Shares Held": "9133.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TELEFONICA BRASIL SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.07525037312",
-      "Market Value": "1259267.13",
-      "Shares Held": "188339.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BAIDU INC",
-      "Ticker": "BIDU",
-      "Identifier": "000000000",
-      "Weight": "0.081706755952",
-      "Market Value": "1367310.59",
-      "Shares Held": "82432.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SASOL LTD",
-      "Ticker": "SSL",
-      "Identifier": "803866102",
-      "Weight": "0.114431920896",
-      "Market Value": "1914945.41",
-      "Shares Held": "154024.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA JUSHI CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.040705244171",
-      "Market Value": "681176.37",
-      "Shares Held": "109400.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GRUPO AEROPORTUARIO DEL CENTRO SAB DE CV",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.046764008663",
-      "Market Value": "782565.94",
-      "Shares Held": "62244.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BEIJING ENTERPRISES HOLDINGS LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.075791444178",
-      "Market Value": "1268321.61",
-      "Shares Held": "322529.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALUMINUM CORP OF CHINA LTD",
-      "Ticker": "ALMMF",
-      "Identifier": "000000000",
-      "Weight": "0.070448139207",
-      "Market Value": "1178904.8",
-      "Shares Held": "847665.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "FSN E-COMMERCE VENTURES PRIVATE LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.077363725031",
-      "Market Value": "1294632.73",
-      "Shares Held": "468891.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KIA CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.191322700555",
-      "Market Value": "3201663.7",
-      "Shares Held": "28516.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BANCO SANTANDER CHILE SA",
-      "Ticker": "BSAC",
-      "Identifier": "000000000",
-      "Weight": "0.110288434459",
-      "Market Value": "1845606.8",
-      "Shares Held": "23464122.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PICC PROPERTY & CASUALTY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.080299852762",
-      "Market Value": "1343766.96",
-      "Shares Held": "723824.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SINOPAC FINANCIAL HOLDINGS CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.109402656544",
-      "Market Value": "1830783.87",
-      "Shares Held": "1911674.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAMVARDHANA MOTHERSON INTERNATIONAL LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.129556744941",
-      "Market Value": "2168049.72",
-      "Shares Held": "1413234.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA CONSTRUCTION BANK CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.714252699825",
-      "Market Value": "11952564.62",
-      "Shares Held": "11033808.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZHEJIANG LONGSHENG GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.042686518161",
-      "Market Value": "714331.73",
-      "Shares Held": "430474.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALLEGRO.EU SA",
-      "Ticker": "ALEUY",
-      "Identifier": "000000000",
-      "Weight": "0.045942430379",
-      "Market Value": "768817.35",
-      "Shares Held": "80095.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TMBTHANACHART BANK PCL",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.04240003461",
-      "Market Value": "709537.61",
-      "Shares Held": "10128027.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "JSW STEEL LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.072856787672",
-      "Market Value": "1219212",
-      "Shares Held": "90630.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZIJIN GOLD INTERNATIONAL CO LTD",
-      "Ticker": "ZJGIY",
-      "Identifier": "000000000",
-      "Weight": "0.011133199966",
-      "Market Value": "186307.02",
-      "Shares Held": "11258.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LG UPLUS CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.170786069384",
-      "Market Value": "2857996.24",
-      "Shares Held": "267018.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NEW ORIENTAL EDUCATION & TECHNOLOGY GROUP INC",
-      "Ticker": "EDU",
-      "Identifier": "000000000",
-      "Weight": "0.052444809581",
-      "Market Value": "877630.53",
-      "Shares Held": "188758.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SRF LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.01958740537",
-      "Market Value": "327782.77",
-      "Shares Held": "11466.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AGRICULTURAL BANK OF CHINA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.042523666438",
-      "Market Value": "711606.51",
-      "Shares Held": "761312.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BYD COMPANY LTD",
-      "Ticker": "BYDDF",
-      "Identifier": "000000000",
-      "Weight": "0.067232808752",
-      "Market Value": "1125098.29",
-      "Shares Held": "96581.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "APOLLO HOSPITALS ENTERPRISES LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.066630341874",
-      "Market Value": "1115016.39",
-      "Shares Held": "12955.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PETROLEO BRASILEIRO SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.18967683758",
-      "Market Value": "3174121.23",
-      "Shares Held": "382270.00000000",
-      "Asset Category": "EP"
-    },
-    {
-      "Name": "CONTEMPORARY AMPEREX TECHNOLOGY CO LTD",
-      "Ticker": "CYATY",
-      "Identifier": "000000000",
-      "Weight": "0.050213628273",
-      "Market Value": "840293.13",
-      "Shares Held": "13400.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TORRENT PHARMACEUTICAL LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.119672459488",
-      "Market Value": "2002642.49",
-      "Shares Held": "43133.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KLABIN SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "7.8879e-8",
-      "Market Value": "1.32",
-      "Shares Held": "2.00000000",
-      "Asset Category": "EP"
-    },
-    {
-      "Name": "OTP BANK NYRT",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.339639463578",
-      "Market Value": "5683650.39",
-      "Shares Held": "41482.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HANGZHOU SILAN MICROELECTRONICS CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.033820667592",
-      "Market Value": "565967.36",
-      "Shares Held": "110600.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SOLIDCORE RES PLC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0",
-      "Market Value": "0",
-      "Shares Held": "70023.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ASUSTEK COMPUTER INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.097179826276",
-      "Market Value": "1626242.58",
-      "Shares Held": "66942.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INDUSTRIES QATAR QSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.052958995243",
-      "Market Value": "886235.1",
-      "Shares Held": "262340.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "WIPRO LTD",
-      "Ticker": "WIT",
-      "Identifier": "000000000",
-      "Weight": "0.048603281438",
-      "Market Value": "813345",
-      "Shares Held": "378300.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AYALA CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.037243330098",
-      "Market Value": "623243.44",
-      "Shares Held": "87930.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA RESOURCES LAND LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.09003302282",
-      "Market Value": "1506645.37",
-      "Shares Held": "334320.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HD HYUNDAI CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.127214297976",
-      "Market Value": "2128850.36",
-      "Shares Held": "11561.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DAQIN RAILWAY COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.02779604781",
-      "Market Value": "465149.18",
-      "Shares Held": "605989.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BANGKOK DUSIT MEDICAL SERVICES PCL",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038254997471",
-      "Market Value": "640173.05",
-      "Shares Held": "1144749.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "DOOSAN CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.089534401538",
-      "Market Value": "1498301.26",
-      "Shares Held": "1145.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TATA POWER COMPANY LTD (THE)",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.067088332989",
-      "Market Value": "1122680.58",
-      "Shares Held": "253487.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SPRING AIRLINES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.046553838141",
-      "Market Value": "779048.87",
-      "Shares Held": "107500.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GUANGZHOU AUTOMOBILE GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.011861622633",
-      "Market Value": "198496.71",
-      "Shares Held": "221108.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "HUA XIA BANK COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.030311793862",
-      "Market Value": "507248.59",
-      "Shares Held": "511138.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ZHESHANG SECURITIES CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.05047781758",
-      "Market Value": "844714.17",
-      "Shares Held": "605031.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CRRC CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.040097291575",
-      "Market Value": "671002.67",
-      "Shares Held": "786300.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CP ALL PCL",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.069859950732",
-      "Market Value": "1169061.84",
-      "Shares Held": "805230.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "PETROLEO BRASILEIRO SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.163336294149",
-      "Market Value": "2733328.99",
-      "Shares Held": "295864.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "EUROBANK SA",
-      "Ticker": "EURBF",
-      "Identifier": "000000000",
-      "Weight": "0.103722756168",
-      "Market Value": "1735734.35",
-      "Shares Held": "372691.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "NAVER CORP",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.090932571202",
-      "Market Value": "1521698.74",
-      "Shares Held": "9800.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "SAILUN GROUP CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03904578044",
-      "Market Value": "653406.3",
-      "Shares Held": "349800.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ICICI PRUDENTIAL LIFE INSURANCE CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03631988777",
-      "Market Value": "607790.22",
-      "Shares Held": "114575.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AYALA LAND INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.013990290931",
-      "Market Value": "234118.62",
-      "Shares Held": "989103.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "BOC AVIATION LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.093901756658",
-      "Market Value": "1571386.17",
-      "Shares Held": "160988.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GRASIM INDUSTRIES LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.057075711616",
-      "Market Value": "955125.73",
-      "Shares Held": "29060.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ABU DHABI COMMERCIAL BANK PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.088702666311",
-      "Market Value": "1484382.7",
-      "Shares Held": "397950.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "POLYCAB INDIA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.070078308598",
-      "Market Value": "1172715.92",
-      "Shares Held": "11755.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "LONGI GREEN ENERGY TECHNOLOGY CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.029535805599",
-      "Market Value": "494262.92",
-      "Shares Held": "240600.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AXIA ENERGIA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.030322152188",
-      "Market Value": "507421.93",
-      "Shares Held": "50976.00000000",
-      "Asset Category": "EP"
-    },
-    {
-      "Name": "MERITZ FINANCIAL GROUP INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.112237023609",
-      "Market Value": "1878215.2",
-      "Shares Held": "27507.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "AXIA ENERGIA SA",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.045258422308",
-      "Market Value": "757370.91",
-      "Shares Held": "67292.00000000",
-      "Asset Category": "EP"
-    },
-    {
-      "Name": "DAZHONG MINING CO LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.037225394549",
-      "Market Value": "622943.3",
-      "Shares Held": "108000.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "MULTI COMMODITY EXCHANGE OF INDIA LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.052921258523",
-      "Market Value": "885603.6",
-      "Shares Held": "28476.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "GRUPO BIMBO SAB DE CV",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.095858279782",
-      "Market Value": "1604127.34",
-      "Shares Held": "466026.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "KOTAK MAHINDRA BANK LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.028549562557",
-      "Market Value": "477758.77",
-      "Shares Held": "118134.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "E.SUN FINANCIAL HOLDING COMPANY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.089534793546",
-      "Market Value": "1498307.82",
-      "Shares Held": "1516486.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA OVERSEAS LAND & INVESTMENT LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.086627263257",
-      "Market Value": "1449652.15",
-      "Shares Held": "727369.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ALTEOGEN INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.03347803252",
-      "Market Value": "560233.58",
-      "Shares Held": "2288.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "INTERNATIONAL CONTAINER TERMINAL SERVICES INC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.050917370587",
-      "Market Value": "852069.81",
-      "Shares Held": "69748.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "ABU DHABI NATIONAL OIL COMPANY FOR DISTRIBUTION PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.084725099535",
-      "Market Value": "1417820.65",
-      "Shares Held": "1325049.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "CHINA STATE CONSTRUCTION ENGINEERING CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.064830819638",
-      "Market Value": "1084902.53",
-      "Shares Held": "1518740.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "TALWANDI SABO POWER LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.021103871732",
-      "Market Value": "353159.87",
-      "Shares Held": "277217.00000000",
-      "Asset Category": "EC"
+      "Name": "37 INTERACTIVE ENTERTAINMENT NETWORK TECHNOLOGY GR",
+      "Ticker": "002555",
+      "Identifier": "CNE1000010N2",
+      "Weight": "0.06",
+      "Market Value": "976381.56",
+      "Shares Held": "378321",
+      "Asset Category": "",
+      "ISIN": "CNE1000010N2",
+      "SEDOL": "BD5CMH2"
+    },
+    {
+      "Name": "3SBIO INC.",
+      "Ticker": "1530",
+      "Identifier": "KYG8875G1029",
+      "Weight": "0.12",
+      "Market Value": "1925491.18",
+      "Shares Held": "1052175",
+      "Asset Category": "",
+      "ISIN": "KYG8875G1029",
+      "SEDOL": "BY9D3L9"
+    },
+    {
+      "Name": "AAC TECHNOLOGIES HOLDINGS INC.",
+      "Ticker": "2018",
+      "Identifier": "KYG2953R1149",
+      "Weight": "0.12",
+      "Market Value": "1971759.19",
+      "Shares Held": "436085",
+      "Asset Category": "",
+      "ISIN": "KYG2953R1149",
+      "SEDOL": "B85LKS1"
+    },
+    {
+      "Name": "ABB INDIA LIMITED",
+      "Ticker": "ABB",
+      "Identifier": "INE117A01022",
+      "Weight": "0.04",
+      "Market Value": "647234.07",
+      "Shares Held": "9026",
+      "Asset Category": "",
+      "ISIN": "INE117A01022",
+      "SEDOL": "B1Y9QS9"
+    },
+    {
+      "Name": "ABSA GROUP LTD",
+      "Ticker": "ABG",
+      "Identifier": "ZAE000255915",
+      "Weight": "0.13",
+      "Market Value": "2178563.64",
+      "Shares Held": "165888",
+      "Asset Category": "",
+      "ISIN": "ZAE000255915",
+      "SEDOL": "BFX05H3"
+    },
+    {
+      "Name": "ABU DHABI COMMERCIAL BANK",
+      "Ticker": "ADCB",
+      "Identifier": "AEA000201011",
+      "Weight": "0.1",
+      "Market Value": "1595873.4",
+      "Shares Held": "364535",
+      "Asset Category": "",
+      "ISIN": "AEA000201011",
+      "SEDOL": "6545464"
     },
     {
       "Name": "ABU DHABI ISLAMIC BANK PJSC",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.144578280924",
-      "Market Value": "2419425.57",
-      "Shares Held": "434320.00000000",
-      "Asset Category": "EC"
+      "Ticker": "ADIB",
+      "Identifier": "AEA000801018",
+      "Weight": "0.16",
+      "Market Value": "2609265.75",
+      "Shares Held": "419246",
+      "Asset Category": "",
+      "ISIN": "AEA000801018",
+      "SEDOL": "6001728"
     },
     {
-      "Name": "CHINA CITIC BANK CORP LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.109351080637",
-      "Market Value": "1829920.78",
-      "Shares Held": "1967328.00000000",
-      "Asset Category": "EC"
+      "Name": "ABU DHABI NATIONAL OIL COMPANY FOR DISTRIBUTION",
+      "Ticker": "ADNOCDIS",
+      "Identifier": "AEA006101017",
+      "Weight": "0.09",
+      "Market Value": "1457115.99",
+      "Shares Held": "1412153",
+      "Asset Category": "",
+      "ISIN": "AEA006101017",
+      "SEDOL": "BYVGM64"
     },
     {
-      "Name": "PETROCHINA COMPANY LTD",
-      "Ticker": "PCCYF",
-      "Identifier": "000000000",
-      "Weight": "0.03456540519",
-      "Market Value": "578430.07",
-      "Shares Held": "359800.00000000",
-      "Asset Category": "EC"
+      "Name": "ACCELINK TECHNOLOGIES CO., LTD.",
+      "Ticker": "002281",
+      "Identifier": "CNE100000F87",
+      "Weight": "0.02",
+      "Market Value": "385469.05",
+      "Shares Held": "19400",
+      "Asset Category": "",
+      "ISIN": "CNE100000F87",
+      "SEDOL": "BD5C8C9"
     },
     {
-      "Name": "SWIGGY LTD",
-      "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "0.038384447267",
-      "Market Value": "642339.31",
-      "Shares Held": "236612.00000000",
-      "Asset Category": "EC"
+      "Name": "ACCTON TECHNOLOGY CORP",
+      "Ticker": "2345",
+      "Identifier": "TW0002345006",
+      "Weight": "0.19",
+      "Market Value": "3233279.9",
+      "Shares Held": "53791",
+      "Asset Category": "",
+      "ISIN": "TW0002345006",
+      "SEDOL": "6005214"
+    },
+    {
+      "Name": "ADANI ENERGY SOLUTIONS LIMITED",
+      "Ticker": "ADANIENS",
+      "Identifier": "INE931S01010",
+      "Weight": "0.04",
+      "Market Value": "628145.76",
+      "Shares Held": "44139",
+      "Asset Category": "",
+      "ISIN": "INE931S01010",
+      "SEDOL": "BYPCLL6"
+    },
+    {
+      "Name": "ADANI POWER LIMITED",
+      "Ticker": "ADANI",
+      "Identifier": "INE814H01029",
+      "Weight": "0.05",
+      "Market Value": "772717.73",
+      "Shares Held": "373785",
+      "Asset Category": "",
+      "ISIN": "INE814H01029",
+      "SEDOL": "BV2DVP5"
+    },
+    {
+      "Name": "ADITYA BIRLA CAPITAL LIMITED",
+      "Ticker": "ABCAP",
+      "Identifier": "INE674K01013",
+      "Weight": "0.04",
+      "Market Value": "694598.95",
+      "Shares Held": "172723",
+      "Asset Category": "",
+      "ISIN": "INE674K01013",
+      "SEDOL": "BYVKT10"
+    },
+    {
+      "Name": "ADNOC GAS LTD",
+      "Ticker": "ADNOCGAS",
+      "Identifier": "AEE01195A234",
+      "Weight": "0.04",
+      "Market Value": "636104.94",
+      "Shares Held": "716701",
+      "Asset Category": "",
+      "ISIN": "AEE01195A234",
+      "SEDOL": "BPJLW35"
+    },
+    {
+      "Name": "ADVANCED FIBER RESOURCES (ZHUHAI).,LTD.",
+      "Ticker": "300620",
+      "Identifier": "CNE100002PK8",
+      "Weight": "0.02",
+      "Market Value": "359822.76",
+      "Shares Held": "10400",
+      "Asset Category": "",
+      "ISIN": "CNE100002PK8",
+      "SEDOL": "BNHPR96"
+    },
+    {
+      "Name": "ADVANCED INFO SERVICE PUBLIC COMPANY LIMITED",
+      "Ticker": "ADVANC-R",
+      "Identifier": "TH0268010R11",
+      "Weight": "0.1",
+      "Market Value": "1677507.52",
+      "Shares Held": "168253",
+      "Asset Category": "",
+      "ISIN": "TH0268010R11",
+      "SEDOL": "6412609"
+    },
+    {
+      "Name": "ADVANCED MICRO-FABRICATION EQUIPMENT INC. STOCK CO",
+      "Ticker": "688012",
+      "Identifier": "CNE100003MM9",
+      "Weight": "0.03",
+      "Market Value": "573129.24",
+      "Shares Held": "12884",
+      "Asset Category": "",
+      "ISIN": "CNE100003MM9",
+      "SEDOL": "BK71F66"
+    },
+    {
+      "Name": "ADVANTECH CO., LTD.",
+      "Ticker": "2395",
+      "Identifier": "TW0002395001",
+      "Weight": "0.25",
+      "Market Value": "4092427.48",
+      "Shares Held": "190207",
+      "Asset Category": "",
+      "ISIN": "TW0002395001",
+      "SEDOL": "6202673"
+    },
+    {
+      "Name": "AGRICULTURAL BANK OF CHINA LIMITED",
+      "Ticker": "1288",
+      "Identifier": "CNE100000Q43",
+      "Weight": "0.13",
+      "Market Value": "2249643.59",
+      "Shares Held": "2596006",
+      "Asset Category": "",
+      "ISIN": "CNE100000Q43",
+      "SEDOL": "B60LZR6"
+    },
+    {
+      "Name": "AGRICULTURAL BANK OF CHINA LIMITED",
+      "Ticker": "601288",
+      "Identifier": "CNE100000RJ0",
+      "Weight": "0.05",
+      "Market Value": "766844.52",
+      "Shares Held": "706812",
+      "Asset Category": "",
+      "ISIN": "CNE100000RJ0",
+      "SEDOL": "BP3R228"
+    },
+    {
+      "Name": "AIR ARABIA P J S C",
+      "Ticker": "AIRARABI",
+      "Identifier": "AEA003001012",
+      "Weight": "0.02",
+      "Market Value": "404653.97",
+      "Shares Held": "327382",
+      "Asset Category": "",
+      "ISIN": "AEA003001012",
+      "SEDOL": "B23DL40"
+    },
+    {
+      "Name": "AIRPORTS OF THAILAND PUBLIC COMPANY LIMITED",
+      "Ticker": "AOT-R",
+      "Identifier": "TH0765010R16",
+      "Weight": "0.03",
+      "Market Value": "558587.94",
+      "Shares Held": "321248",
+      "Asset Category": "",
+      "ISIN": "TH0765010R16",
+      "SEDOL": "6741206"
+    },
+    {
+      "Name": "AIRTAC INTERNATIONAL GROUP",
+      "Ticker": "1590",
+      "Identifier": "KYG014081064",
+      "Weight": "0.03",
+      "Market Value": "541194.3",
+      "Shares Held": "15201",
+      "Asset Category": "",
+      "ISIN": "KYG014081064",
+      "SEDOL": "B52J816"
+    },
+    {
+      "Name": "AKBANK TUERK ANONIM SIRKETI",
+      "Ticker": "AKBNK",
+      "Identifier": "TRAAKBNK91N6",
+      "Weight": "0.11",
+      "Market Value": "1837904.78",
+      "Shares Held": "1335650",
+      "Asset Category": "",
+      "ISIN": "TRAAKBNK91N6",
+      "SEDOL": "B03MN70"
+    },
+    {
+      "Name": "AL-RAJHI BANKING & INVESTMENT CORPORATION",
+      "Ticker": "RJHI",
+      "Identifier": "SA0007879113",
+      "Weight": "0.27",
+      "Market Value": "4560245.15",
+      "Shares Held": "280556",
+      "Asset Category": "",
+      "ISIN": "SA0007879113",
+      "SEDOL": "B12LZH9"
+    },
+    {
+      "Name": "ALCHIP TECHNOLOGIES LTD",
+      "Ticker": "3661",
+      "Identifier": "KYG022421088",
+      "Weight": "0.03",
+      "Market Value": "430098.18",
+      "Shares Held": "3766",
+      "Asset Category": "",
+      "ISIN": "KYG022421088",
+      "SEDOL": "B4TPSL0"
+    },
+    {
+      "Name": "ALDAR PROPERTIES - P J S C",
+      "Ticker": "ALDAR",
+      "Identifier": "AEA002001013",
+      "Weight": "0.05",
+      "Market Value": "856362.81",
+      "Shares Held": "391714",
+      "Asset Category": "",
+      "ISIN": "AEA002001013",
+      "SEDOL": "B0LX3Y2"
+    },
+    {
+      "Name": "ALFA SA (ORD A)",
+      "Ticker": "SIGMAFA",
+      "Identifier": "MXP000511016",
+      "Weight": "0.1",
+      "Market Value": "1672298.16",
+      "Shares Held": "1615857",
+      "Asset Category": "",
+      "ISIN": "MXP000511016",
+      "SEDOL": "2043423"
+    },
+    {
+      "Name": "ALIBABA GROUP HOLDING LIMITED",
+      "Ticker": "9988",
+      "Identifier": "KYG017191142",
+      "Weight": "1.7",
+      "Market Value": "28334689.02",
+      "Shares Held": "2089670",
+      "Asset Category": "",
+      "ISIN": "KYG017191142",
+      "SEDOL": "BK6YZP5"
+    },
+    {
+      "Name": "ALINMA BANK",
+      "Ticker": "ALINMA",
+      "Identifier": "SA122050HV19",
+      "Weight": "0.04",
+      "Market Value": "692588.79",
+      "Shares Held": "109995",
+      "Asset Category": "",
+      "ISIN": "SA122050HV19",
+      "SEDOL": "B39NWT3"
+    },
+    {
+      "Name": "ALKEM LABORATORIES LTD",
+      "Ticker": "ALKEM",
+      "Identifier": "INE540L01014",
+      "Weight": "0.08",
+      "Market Value": "1315133.92",
+      "Shares Held": "24413",
+      "Asset Category": "",
+      "ISIN": "INE540L01014",
+      "SEDOL": "BYY2WB4"
+    },
+    {
+      "Name": "ALLEGRO.EU",
+      "Ticker": "ALE",
+      "Identifier": "LU2237380790",
+      "Weight": "0.07",
+      "Market Value": "1190373.68",
+      "Shares Held": "85910",
+      "Asset Category": "",
+      "ISIN": "LU2237380790",
+      "SEDOL": "BMBQDF6"
+    },
+    {
+      "Name": "ALLWYN AG",
+      "Ticker": "ALWN",
+      "Identifier": "GRS419003009",
+      "Weight": "0.09",
+      "Market Value": "1541575.95",
+      "Shares Held": "113321",
+      "Asset Category": "",
+      "ISIN": "GRS419003009",
+      "SEDOL": "7107250"
+    },
+    {
+      "Name": "ALPHA BANK S.A.",
+      "Ticker": "ALPHA",
+      "Identifier": "GRS830003000",
+      "Weight": "0.09",
+      "Market Value": "1445728.04",
+      "Shares Held": "308046",
+      "Asset Category": "",
+      "ISIN": "GRS830003000",
+      "SEDOL": "BTJZ707"
+    },
+    {
+      "Name": "ALTEOGEN INC",
+      "Ticker": "196170",
+      "Identifier": "KR7196170005",
+      "Weight": "0.03",
+      "Market Value": "518157.66",
+      "Shares Held": "3265",
+      "Asset Category": "",
+      "ISIN": "KR7196170005",
+      "SEDOL": "BSTJWN0"
+    },
+    {
+      "Name": "ALUMINUM CORP OF CHINA LIMITED",
+      "Ticker": "2600",
+      "Identifier": "CNE1000001T8",
+      "Weight": "0.05",
+      "Market Value": "775397.36",
+      "Shares Held": "847424",
+      "Asset Category": "",
+      "ISIN": "CNE1000001T8",
+      "SEDOL": "6425395"
+    },
+    {
+      "Name": "ALUMINUM CORPORATION OF CHINA LIMITED",
+      "Ticker": "601600",
+      "Identifier": "CNE1000000T0",
+      "Weight": "0.02",
+      "Market Value": "354007.39",
+      "Shares Held": "272914",
+      "Asset Category": "",
+      "ISIN": "CNE1000000T0",
+      "SEDOL": "BP3R4D3"
+    },
+    {
+      "Name": "AMBEV SA",
+      "Ticker": "ABEV3",
+      "Identifier": "BRABEVACNOR1",
+      "Weight": "0.05",
+      "Market Value": "849950.18",
+      "Shares Held": "256770",
+      "Asset Category": "",
+      "ISIN": "BRABEVACNOR1",
+      "SEDOL": "BG7ZWY7"
+    },
+    {
+      "Name": "AMBUJA CEMENTS LIMITED",
+      "Ticker": "ACEM",
+      "Identifier": "INE079A01024",
+      "Weight": "0.03",
+      "Market Value": "580728.84",
+      "Shares Held": "157309",
+      "Asset Category": "",
+      "ISIN": "INE079A01024",
+      "SEDOL": "B09QQ11"
+    },
+    {
+      "Name": "AMERICA MOVIL, S.A.B. DE C.V.",
+      "Ticker": "AMXB",
+      "Identifier": "MX01AM050019",
+      "Weight": "0.15",
+      "Market Value": "2525390.76",
+      "Shares Held": "2248195",
+      "Asset Category": "",
+      "ISIN": "MX01AM050019",
+      "SEDOL": "BMVRB77"
+    },
+    {
+      "Name": "AMOREPACIFIC CORP",
+      "Ticker": "090430",
+      "Identifier": "KR7090430000",
+      "Weight": "0.12",
+      "Market Value": "2009823.16",
+      "Shares Held": "20437",
+      "Asset Category": "",
+      "ISIN": "KR7090430000",
+      "SEDOL": "B15SK50"
+    },
+    {
+      "Name": "ANGEL YEAST CO LTD",
+      "Ticker": "600298",
+      "Identifier": "CNE0000014G0",
+      "Weight": "0.05",
+      "Market Value": "810899.55",
+      "Shares Held": "141900",
+      "Asset Category": "",
+      "ISIN": "CNE0000014G0",
+      "SEDOL": "BP3RH12"
+    },
+    {
+      "Name": "ANGLOGOLD ASHANTI PLC",
+      "Ticker": "ANG",
+      "Identifier": "GB00BRXH2664",
+      "Weight": "0.31",
+      "Market Value": "5158038.83",
+      "Shares Held": "56637",
+      "Asset Category": "",
+      "ISIN": "GB00BRXH2664",
+      "SEDOL": "BRF6FX9"
+    },
+    {
+      "Name": "ANHUI USTC IFLYTEK CO., LTD. - STOCK CONNECT",
+      "Ticker": "002230",
+      "Identifier": "CNE100000B81",
+      "Weight": "0.04",
+      "Market Value": "648248.19",
+      "Shares Held": "119500",
+      "Asset Category": "",
+      "ISIN": "CNE100000B81",
+      "SEDOL": "BD5CNN5"
+    },
+    {
+      "Name": "ANKER INNOVATIONS TECHNOLOGY CO., LTD. - STOCK CON",
+      "Ticker": "300866",
+      "Identifier": "CNE1000047B9",
+      "Weight": "0.08",
+      "Market Value": "1378960.83",
+      "Shares Held": "84804",
+      "Asset Category": "",
+      "ISIN": "CNE1000047B9",
+      "SEDOL": "BNR4MR6"
+    },
+    {
+      "Name": "ANTA SPORTS PRODUCTS LIMITED",
+      "Ticker": "2020",
+      "Identifier": "KYG040111059",
+      "Weight": "0.12",
+      "Market Value": "1996346.45",
+      "Shares Held": "207624",
+      "Asset Category": "",
+      "ISIN": "KYG040111059",
+      "SEDOL": "B1YVKN8"
+    },
+    {
+      "Name": "APL APOLLO TUBES LIMITED",
+      "Ticker": "APAT",
+      "Identifier": "INE702C01027",
+      "Weight": "0.06",
+      "Market Value": "1012965.95",
+      "Shares Held": "45014",
+      "Asset Category": "",
+      "ISIN": "INE702C01027",
+      "SEDOL": "BNDTGN9"
+    },
+    {
+      "Name": "APOLLO HOSPITALS ENTERPRISE",
+      "Ticker": "APHS",
+      "Identifier": "INE437A01024",
+      "Weight": "0.11",
+      "Market Value": "1753406.67",
+      "Shares Held": "21125",
+      "Asset Category": "",
+      "ISIN": "INE437A01024",
+      "SEDOL": "6273583"
+    },
+    {
+      "Name": "APR CORPORATION",
+      "Ticker": "278470",
+      "Identifier": "KR7278470000",
+      "Weight": "0.15",
+      "Market Value": "2517261.58",
+      "Shares Held": "11364",
+      "Asset Category": "",
+      "ISIN": "KR7278470000",
+      "SEDOL": "BNNJP32"
+    },
+    {
+      "Name": "APT MEDICAL INC.",
+      "Ticker": "688617",
+      "Identifier": "CNE100004C45",
+      "Weight": "0.05",
+      "Market Value": "874187.71",
+      "Shares Held": "22620",
+      "Asset Category": "",
+      "ISIN": "CNE100004C45",
+      "SEDOL": "BNHPNT8"
+    },
+    {
+      "Name": "ARAB NATIONAL BANK",
+      "Ticker": "ARNB",
+      "Identifier": "SA0007879105",
+      "Weight": "0.05",
+      "Market Value": "752965.48",
+      "Shares Held": "131431",
+      "Asset Category": "",
+      "ISIN": "SA0007879105",
+      "SEDOL": "B12LZK2"
+    },
+    {
+      "Name": "ARCA CONTINENTAL S.A.B. DE C.V.",
+      "Ticker": "AC*",
+      "Identifier": "MX01AC100006",
+      "Weight": "0.04",
+      "Market Value": "616464.83",
+      "Shares Held": "55098",
+      "Asset Category": "",
+      "ISIN": "MX01AC100006",
+      "SEDOL": "2823885"
+    },
+    {
+      "Name": "ASE TECHNOLOGY HOLDING CO LTD",
+      "Ticker": "3711",
+      "Identifier": "TW0003711008",
+      "Weight": "0.33",
+      "Market Value": "5521041.69",
+      "Shares Held": "266138",
+      "Asset Category": "",
+      "ISIN": "TW0003711008",
+      "SEDOL": "BFXZDY1"
+    },
+    {
+      "Name": "ASELSAN ELEKTRONIK SANAYI VE TICARET AS",
+      "Ticker": "ASELS",
+      "Identifier": "TRAASELS91H2",
+      "Weight": "0.06",
+      "Market Value": "999666.98",
+      "Shares Held": "140743",
+      "Asset Category": "",
+      "ISIN": "TRAASELS91H2",
+      "SEDOL": "B03MP41"
+    },
+    {
+      "Name": "ASIA VITAL COMPONENTS CO., LTD",
+      "Ticker": "3017",
+      "Identifier": "TW0003017000",
+      "Weight": "0.18",
+      "Market Value": "2936225.05",
+      "Shares Held": "30877",
+      "Asset Category": "",
+      "ISIN": "TW0003017000",
+      "SEDOL": "6544892"
+    },
+    {
+      "Name": "ASIAN PAINTS (INDIA) LIMITED",
+      "Ticker": "APNT",
+      "Identifier": "INE021A01026",
+      "Weight": "0.04",
+      "Market Value": "654348.39",
+      "Shares Held": "26467",
+      "Asset Category": "",
+      "ISIN": "INE021A01026",
+      "SEDOL": "BCRWL65"
+    },
+    {
+      "Name": "ASPEED TECHNOLOGY INC",
+      "Ticker": "5274",
+      "Identifier": "TW0005274005",
+      "Weight": "0.29",
+      "Market Value": "4912051.85",
+      "Shares Held": "9994",
+      "Asset Category": "",
+      "ISIN": "TW0005274005",
+      "SEDOL": "B80VKP3"
+    },
+    {
+      "Name": "ASSECO POLAND SA",
+      "Ticker": "ACP",
+      "Identifier": "PLSOFTB00016",
+      "Weight": "0.04",
+      "Market Value": "736628.93",
+      "Shares Held": "12797",
+      "Asset Category": "",
+      "ISIN": "PLSOFTB00016",
+      "SEDOL": "5978953"
+    },
+    {
+      "Name": "ASTOR TRANSFORMATOR ENERJI TURIZM INSAAT VE PETROL",
+      "Ticker": "ASTOR",
+      "Identifier": "TREASTR00013",
+      "Weight": "0.02",
+      "Market Value": "362253.49",
+      "Shares Held": "97716",
+      "Asset Category": "",
+      "ISIN": "TREASTR00013",
+      "SEDOL": "BMHB9P7"
+    },
+    {
+      "Name": "ASTRA INTERNATIONAL TBK PT",
+      "Ticker": "ASII",
+      "Identifier": "ID1000122807",
+      "Weight": "0.06",
+      "Market Value": "960881.6",
+      "Shares Held": "3603306",
+      "Asset Category": "",
+      "ISIN": "ID1000122807",
+      "SEDOL": "B800MQ5"
+    },
+    {
+      "Name": "ASUSTEK COMPUTER INC",
+      "Ticker": "2357",
+      "Identifier": "TW0002357001",
+      "Weight": "0.11",
+      "Market Value": "1782027.65",
+      "Shares Held": "59294",
+      "Asset Category": "",
+      "ISIN": "TW0002357001",
+      "SEDOL": "6051046"
+    },
+    {
+      "Name": "AU SMALL FINANCE BANK LTD",
+      "Ticker": "AUBANK",
+      "Identifier": "INE949L01017",
+      "Weight": "0.05",
+      "Market Value": "828068.12",
+      "Shares Held": "78498",
+      "Asset Category": "",
+      "ISIN": "INE949L01017",
+      "SEDOL": "BF1YBK2"
+    },
+    {
+      "Name": "AURA MINERALS INC.",
+      "Ticker": "AUGO",
+      "Identifier": "VGG069731120",
+      "Weight": "0.05",
+      "Market Value": "802563.3",
+      "Shares Held": "9390",
+      "Asset Category": "",
+      "ISIN": "VGG069731120",
+      "SEDOL": "BJ1JSK4"
+    },
+    {
+      "Name": "AUROBINDO PHARMA LTD",
+      "Ticker": "ARBP",
+      "Identifier": "INE406A01037",
+      "Weight": "0.14",
+      "Market Value": "2264249.28",
+      "Shares Held": "128269",
+      "Asset Category": "",
+      "ISIN": "INE406A01037",
+      "SEDOL": "6702634"
+    },
+    {
+      "Name": "AXIA ENERGIA S.A.",
+      "Ticker": "AXIA19G",
+      "Identifier": "BRAXIAA09PC3",
+      "Weight": "0",
+      "Market Value": "70320.66",
+      "Shares Held": "5961",
+      "Asset Category": "",
+      "ISIN": "BRAXIAA09PC3",
+      "SEDOL": "C0BD9L0"
+    },
+    {
+      "Name": "AXIA ENERGIA S.A.",
+      "Ticker": "AXIA7",
+      "Identifier": "BRAXIAACNPC9",
+      "Weight": "0.02",
+      "Market Value": "334971.85",
+      "Shares Held": "28338",
+      "Asset Category": "",
+      "ISIN": "BRAXIAACNPC9",
+      "SEDOL": "BVPBRT2"
+    },
+    {
+      "Name": "AXIA ENERGIA S.A.",
+      "Ticker": "AXIA3",
+      "Identifier": "BRAXIAACNOR0",
+      "Weight": "0.13",
+      "Market Value": "2197846.75",
+      "Shares Held": "187380",
+      "Asset Category": "",
+      "ISIN": "BRAXIAACNOR0",
+      "SEDOL": "BV9B624"
+    },
+    {
+      "Name": "AXIS BANK LTD",
+      "Ticker": "AXSB",
+      "Identifier": "INE238A01034",
+      "Weight": "0.16",
+      "Market Value": "2603683.48",
+      "Shares Held": "192148",
+      "Asset Category": "",
+      "ISIN": "INE238A01034",
+      "SEDOL": "BPFJHC7"
+    },
+    {
+      "Name": "AYALA CORP PHP",
+      "Ticker": "AC",
+      "Identifier": "PHY0486V1154",
+      "Weight": "0.03",
+      "Market Value": "444625.12",
+      "Shares Held": "52902",
+      "Asset Category": "",
+      "ISIN": "PHY0486V1154",
+      "SEDOL": "B09JBT3"
+    },
+    {
+      "Name": "B3 S.A. - BRASIL, BOLSA, BALCAO",
+      "Ticker": "B3SA3",
+      "Identifier": "BRB3SAACNOR6",
+      "Weight": "0.12",
+      "Market Value": "1974925.04",
+      "Shares Held": "448140",
+      "Asset Category": "",
+      "ISIN": "BRB3SAACNOR6",
+      "SEDOL": "BG36ZK1"
+    },
+    {
+      "Name": "BAIDU, INC.",
+      "Ticker": "9888",
+      "Identifier": "KYG070341048",
+      "Weight": "0.03",
+      "Market Value": "502443.67",
+      "Shares Held": "50321",
+      "Asset Category": "",
+      "ISIN": "KYG070341048",
+      "SEDOL": "B0J2D41"
+    },
+    {
+      "Name": "BAJAJ AUTO LIMITED",
+      "Ticker": "BJAUT",
+      "Identifier": "INE917I01010",
+      "Weight": "0.03",
+      "Market Value": "494052.97",
+      "Shares Held": "4522",
+      "Asset Category": "",
+      "ISIN": "INE917I01010",
+      "SEDOL": "B2QKXW0"
+    },
+    {
+      "Name": "BAJAJ FINANCE LTD",
+      "Ticker": "BAF",
+      "Identifier": "INE296A01032",
+      "Weight": "0.05",
+      "Market Value": "900121.46",
+      "Shares Held": "88639",
+      "Asset Category": "",
+      "ISIN": "INE296A01032",
+      "SEDOL": "BTFGH15"
+    },
+    {
+      "Name": "BAJAJ FINSERV LIMITED",
+      "Ticker": "BJFIN",
+      "Identifier": "INE918I01026",
+      "Weight": "0.03",
+      "Market Value": "516106.03",
+      "Shares Held": "28324",
+      "Asset Category": "",
+      "ISIN": "INE918I01026",
+      "SEDOL": "BMTWGK2"
+    },
+    {
+      "Name": "BANCO BRADESCO S.A.",
+      "Ticker": "BBDC4",
+      "Identifier": "BRBBDCACNPR8",
+      "Weight": "0.12",
+      "Market Value": "1933265.07",
+      "Shares Held": "470218",
+      "Asset Category": "",
+      "ISIN": "BRBBDCACNPR8",
+      "SEDOL": "B00FM53"
+    },
+    {
+      "Name": "BANCO BRADESCO SA ON (ORD)",
+      "Ticker": "BBDC3",
+      "Identifier": "BRBBDCACNOR1",
+      "Weight": "0.14",
+      "Market Value": "2380761.78",
+      "Shares Held": "661373",
+      "Asset Category": "",
+      "ISIN": "BRBBDCACNOR1",
+      "SEDOL": "B00FM86"
+    },
+    {
+      "Name": "BANCO BTG PACTUAL S.A.",
+      "Ticker": "BPAC11",
+      "Identifier": "BRBPACUNT006",
+      "Weight": "0.09",
+      "Market Value": "1578288.72",
+      "Shares Held": "103174",
+      "Asset Category": "",
+      "ISIN": "BRBPACUNT006",
+      "SEDOL": "BZBZVC7"
+    },
+    {
+      "Name": "BANCO DE CHILE",
+      "Ticker": "CHILE",
+      "Identifier": "CLP0939W1081",
+      "Weight": "0.13",
+      "Market Value": "2145300.14",
+      "Shares Held": "11016161",
+      "Asset Category": "",
+      "ISIN": "CLP0939W1081",
+      "SEDOL": "2100845"
+    },
+    {
+      "Name": "BANCO DO BRASIL S.A.",
+      "Ticker": "BBAS3",
+      "Identifier": "BRBBASACNOR3",
+      "Weight": "0.07",
+      "Market Value": "1174953.81",
+      "Shares Held": "249334",
+      "Asset Category": "",
+      "ISIN": "BRBBASACNOR3",
+      "SEDOL": "2328595"
+    },
+    {
+      "Name": "BANCO SANTANDER CHILE",
+      "Ticker": "BSAN",
+      "Identifier": "CLP1506A1070",
+      "Weight": "0.12",
+      "Market Value": "1952813.4",
+      "Shares Held": "23778645",
+      "Asset Category": "",
+      "ISIN": "CLP1506A1070",
+      "SEDOL": "2000257"
+    },
+    {
+      "Name": "BANGKOK DUSIT MED SVCS PCL",
+      "Ticker": "BDMS-R",
+      "Identifier": "TH0264010R10",
+      "Weight": "0.04",
+      "Market Value": "671089.05",
+      "Shares Held": "1177041",
+      "Asset Category": "",
+      "ISIN": "TH0264010R10",
+      "SEDOL": "B013SV4"
+    },
+    {
+      "Name": "BANK ALBILAD",
+      "Ticker": "ALBI",
+      "Identifier": "SA000A0D9HK3",
+      "Weight": "0.04",
+      "Market Value": "596060.19",
+      "Shares Held": "101910",
+      "Asset Category": "",
+      "ISIN": "SA000A0D9HK3",
+      "SEDOL": "B12LZP7"
+    },
+    {
+      "Name": "BANK MANDIRI PERSERO TBK PT",
+      "Ticker": "BMRI",
+      "Identifier": "ID1000095003",
+      "Weight": "0.08",
+      "Market Value": "1296280.12",
+      "Shares Held": "5838146",
+      "Asset Category": "",
+      "ISIN": "ID1000095003",
+      "SEDOL": "6651048"
+    },
+    {
+      "Name": "BANK OF BARODA",
+      "Ticker": "BOB",
+      "Identifier": "INE028A01039",
+      "Weight": "0.09",
+      "Market Value": "1545115.72",
+      "Shares Held": "644154",
+      "Asset Category": "",
+      "ISIN": "INE028A01039",
+      "SEDOL": "BVF87C6"
+    },
+    {
+      "Name": "BANK OF BEIJING CO., LTD.",
+      "Ticker": "601169",
+      "Identifier": "CNE100000734",
+      "Weight": "0.05",
+      "Market Value": "758043.53",
+      "Shares Held": "904200",
+      "Asset Category": "",
+      "ISIN": "CNE100000734",
+      "SEDOL": "BP3R2W8"
+    },
+    {
+      "Name": "BANK OF CHANGSHA CO.,LTD.",
+      "Ticker": "601577",
+      "Identifier": "CNE100003F50",
+      "Weight": "0.04",
+      "Market Value": "622336.42",
+      "Shares Held": "437903",
+      "Asset Category": "",
+      "ISIN": "CNE100003F50",
+      "SEDOL": "BK94875"
+    },
+    {
+      "Name": "BANK OF CHINA LIMITED",
+      "Ticker": "3988",
+      "Identifier": "CNE1000001Z5",
+      "Weight": "0.38",
+      "Market Value": "6276364.84",
+      "Shares Held": "7995182",
+      "Asset Category": "",
+      "ISIN": "CNE1000001Z5",
+      "SEDOL": "B154564"
+    },
+    {
+      "Name": "BANK OF COMMUNICATIONS - HK BR",
+      "Ticker": "3328",
+      "Identifier": "CNE100000205",
+      "Weight": "0.11",
+      "Market Value": "1899582.4",
+      "Shares Held": "1729226",
+      "Asset Category": "",
+      "ISIN": "CNE100000205",
+      "SEDOL": "B0B8Z29"
+    },
+    {
+      "Name": "BANK OF JIANGSU CO., LTD.- STOCK CONNECT",
+      "Ticker": "600919",
+      "Identifier": "CNE100002G76",
+      "Weight": "0.04",
+      "Market Value": "705201.35",
+      "Shares Held": "385536",
+      "Asset Category": "",
+      "ISIN": "CNE100002G76",
+      "SEDOL": "BYW5MY8"
+    },
+    {
+      "Name": "BANK PEKAO",
+      "Ticker": "PEO",
+      "Identifier": "PLPEKAO00016",
+      "Weight": "0.18",
+      "Market Value": "3023545.81",
+      "Shares Held": "44837",
+      "Asset Category": "",
+      "ISIN": "PLPEKAO00016",
+      "SEDOL": "5473113"
+    },
+    {
+      "Name": "BANQUE SAUDI FRANSI",
+      "Ticker": "BSF",
+      "Identifier": "SA0007879782",
+      "Weight": "0.09",
+      "Market Value": "1576544.33",
+      "Shares Held": "301864",
+      "Asset Category": "",
+      "ISIN": "SA0007879782",
+      "SEDOL": "B12LZT1"
+    },
+    {
+      "Name": "BAOSHAN IRON & STEEL CO., LTD. - STOCK CONNECT",
+      "Ticker": "600019",
+      "Identifier": "CNE0000015R4",
+      "Weight": "0.02",
+      "Market Value": "416437.31",
+      "Shares Held": "466776",
+      "Asset Category": "",
+      "ISIN": "CNE0000015R4",
+      "SEDOL": "BP3R2Y0"
+    },
+    {
+      "Name": "BB SEGURIDADE PARTICIPACOES SA",
+      "Ticker": "BBSE3",
+      "Identifier": "BRBBSEACNOR5",
+      "Weight": "0.25",
+      "Market Value": "4095676.2",
+      "Shares Held": "496767",
+      "Asset Category": "",
+      "ISIN": "BRBBSEACNOR5",
+      "SEDOL": "B9N3SQ0"
+    },
+    {
+      "Name": "BEIJING ENTERPRISE",
+      "Ticker": "392",
+      "Identifier": "HK0392044647",
+      "Weight": "0.1",
+      "Market Value": "1599291.81",
+      "Shares Held": "416929",
+      "Asset Category": "",
+      "ISIN": "HK0392044647",
+      "SEDOL": "6081690"
+    },
+    {
+      "Name": "BEIJING HUAFENG TEST & CONTROL TECHNOLOGY CO LTD",
+      "Ticker": "688200",
+      "Identifier": "CNE100003RC9",
+      "Weight": "0.03",
+      "Market Value": "570540.09",
+      "Shares Held": "11564",
+      "Asset Category": "",
+      "ISIN": "CNE100003RC9",
+      "SEDOL": "BP91NP4"
+    },
+    {
+      "Name": "BEIJING TONGRENTANG CO., LTD.",
+      "Ticker": "600085",
+      "Identifier": "CNE000000R69",
+      "Weight": "0.03",
+      "Market Value": "533559.29",
+      "Shares Held": "144200",
+      "Asset Category": "",
+      "ISIN": "CNE000000R69",
+      "SEDOL": "BP3R5C9"
+    },
+    {
+      "Name": "BEONE MEDICINES LTD.",
+      "Ticker": "6160",
+      "Identifier": "CH1391448177",
+      "Weight": "0.21",
+      "Market Value": "3471959.68",
+      "Shares Held": "126365",
+      "Asset Category": "",
+      "ISIN": "CH1391448177",
+      "SEDOL": "BVDKGC7"
+    },
+    {
+      "Name": "BHARAT ELECTRONICS LIMITED",
+      "Ticker": "BHE",
+      "Identifier": "INE263A01024",
+      "Weight": "0.05",
+      "Market Value": "844657.88",
+      "Shares Held": "211059",
+      "Asset Category": "",
+      "ISIN": "INE263A01024",
+      "SEDOL": "BF1THH6"
+    },
+    {
+      "Name": "BHARAT FORGE LTD",
+      "Ticker": "BHFC",
+      "Identifier": "INE465A01025",
+      "Weight": "0.07",
+      "Market Value": "1216724.88",
+      "Shares Held": "62434",
+      "Asset Category": "",
+      "ISIN": "INE465A01025",
+      "SEDOL": "B0C1DM3"
+    },
+    {
+      "Name": "BHARAT HEAVY ELECTRICALS LTD",
+      "Ticker": "BHEL",
+      "Identifier": "INE257A01026",
+      "Weight": "0.04",
+      "Market Value": "742879.19",
+      "Shares Held": "162608",
+      "Asset Category": "",
+      "ISIN": "INE257A01026",
+      "SEDOL": "B6SNRV2"
+    },
+    {
+      "Name": "BHARAT PETROLEUM CORP LTD",
+      "Ticker": "BPCL",
+      "Identifier": "INE029A01011",
+      "Weight": "0.08",
+      "Market Value": "1260726.23",
+      "Shares Held": "408019",
+      "Asset Category": "",
+      "ISIN": "INE029A01011",
+      "SEDOL": "6099723"
+    },
+    {
+      "Name": "BHARTI AIRTEL LIMITED",
+      "Ticker": "BHARTI",
+      "Identifier": "INE397D01024",
+      "Weight": "0.26",
+      "Market Value": "4338167.88",
+      "Shares Held": "222413",
+      "Asset Category": "",
+      "ISIN": "INE397D01024",
+      "SEDOL": "6442327"
+    },
+    {
+      "Name": "BID CORPORATION LTD",
+      "Ticker": "BID",
+      "Identifier": "ZAE000216537",
+      "Weight": "0.13",
+      "Market Value": "2163477.83",
+      "Shares Held": "78539",
+      "Asset Category": "",
+      "ISIN": "ZAE000216537",
+      "SEDOL": "BZBFKT7"
+    },
+    {
+      "Name": "BILIBILI, INC.",
+      "Ticker": "9626",
+      "Identifier": "KYG1098A1013",
+      "Weight": "0.02",
+      "Market Value": "340284.4",
+      "Shares Held": "24121",
+      "Asset Category": "",
+      "ISIN": "KYG1098A1013",
+      "SEDOL": "BLF8533"
+    },
+    {
+      "Name": "BIM BIRLESIK MAGAZALAR A.S.",
+      "Ticker": "BIMAS",
+      "Identifier": "TREBIMM00018",
+      "Weight": "0.04",
+      "Market Value": "721505.26",
+      "Shares Held": "88804",
+      "Asset Category": "",
+      "ISIN": "TREBIMM00018",
+      "SEDOL": "B0D0006"
+    },
+    {
+      "Name": "BIWIN STORAGE TECHNOLOGY CO.,LTD.",
+      "Ticker": "688525",
+      "Identifier": "CNE100005VN3",
+      "Weight": "0.02",
+      "Market Value": "314298.87",
+      "Shares Held": "13657",
+      "Asset Category": "",
+      "ISIN": "CNE100005VN3",
+      "SEDOL": "BPH27X5"
+    },
+    {
+      "Name": "BIZLINK HOLDING INC.",
+      "Ticker": "3665",
+      "Identifier": "KYG114741062",
+      "Weight": "0.09",
+      "Market Value": "1451366.46",
+      "Shares Held": "23367",
+      "Asset Category": "",
+      "ISIN": "KYG114741062",
+      "SEDOL": "B5SG8Y4"
+    },
+    {
+      "Name": "BJ-SH HIGH SPEED RAILWAY CO LTD - STOCK CONNECT",
+      "Ticker": "601816",
+      "Identifier": "CNE100003RV9",
+      "Weight": "0.02",
+      "Market Value": "393067.13",
+      "Shares Held": "516752",
+      "Asset Category": "",
+      "ISIN": "CNE100003RV9",
+      "SEDOL": "BL58M76"
+    },
+    {
+      "Name": "BLUEFOCUS INTELLIGENT COMMUNICATIONS GROUP CO.,LTD",
+      "Ticker": "300058",
+      "Identifier": "CNE100000LV8",
+      "Weight": "0.03",
+      "Market Value": "436369.8",
+      "Shares Held": "236440",
+      "Asset Category": "",
+      "ISIN": "CNE100000LV8",
+      "SEDOL": "BD5CL86"
+    },
+    {
+      "Name": "BOC AVIATION LIMITED",
+      "Ticker": "2588",
+      "Identifier": "SG9999015267",
+      "Weight": "0.1",
+      "Market Value": "1726322.87",
+      "Shares Held": "201433",
+      "Asset Category": "",
+      "ISIN": "SG9999015267",
+      "SEDOL": "BYZJV17"
+    },
+    {
+      "Name": "BOE TECHNOLOGY GROUP CO., LTD",
+      "Ticker": "000725",
+      "Identifier": "CNE0000016L5",
+      "Weight": "0.07",
+      "Market Value": "1209096.02",
+      "Shares Held": "1602148",
+      "Asset Category": "",
+      "ISIN": "CNE0000016L5",
+      "SEDOL": "BD5CPL7"
+    },
+    {
+      "Name": "BOSIDENG INTERNATIONAL HOLDINGS LIMITED",
+      "Ticker": "3998",
+      "Identifier": "KYG126521064",
+      "Weight": "0.1",
+      "Market Value": "1700248.27",
+      "Shares Held": "3039126",
+      "Asset Category": "",
+      "ISIN": "KYG126521064",
+      "SEDOL": "B24FZ32"
+    },
+    {
+      "Name": "BRITANNIA INDUSTRIES LTD",
+      "Ticker": "BRIT",
+      "Identifier": "INE216A01030",
+      "Weight": "0.1",
+      "Market Value": "1697225.74",
+      "Shares Held": "33263",
+      "Asset Category": "",
+      "ISIN": "INE216A01030",
+      "SEDOL": "BGSQG47"
+    },
+    {
+      "Name": "BSE LIMITED",
+      "Ticker": "BSE",
+      "Identifier": "INE118H01025",
+      "Weight": "0.18",
+      "Market Value": "2934442.29",
+      "Shares Held": "81367",
+      "Asset Category": "",
+      "ISIN": "INE118H01025",
+      "SEDOL": "BD3DWQ6"
+    },
+    {
+      "Name": "BUMRUNGRAD HOSPITAL PUBLIC COMPANY LIMITED",
+      "Ticker": "BH-R",
+      "Identifier": "TH0168010R13",
+      "Weight": "0.06",
+      "Market Value": "963833.13",
+      "Shares Held": "169939",
+      "Asset Category": "",
+      "ISIN": "TH0168010R13",
+      "SEDOL": "B0166J7"
+    },
+    {
+      "Name": "BYD ELECTRONIC INTERNATIONAL CO LTD",
+      "Ticker": "285",
+      "Identifier": "HK0285041858",
+      "Weight": "0.14",
+      "Market Value": "2323213.95",
+      "Shares Held": "814573",
+      "Asset Category": "",
+      "ISIN": "HK0285041858",
+      "SEDOL": "B29SHS5"
+    },
+    {
+      "Name": "C&D INTERNATIONAL INVESTMENT GROUP LTD",
+      "Ticker": "1908",
+      "Identifier": "KYG3165D1097",
+      "Weight": "0.03",
+      "Market Value": "448641.22",
+      "Shares Held": "273116",
+      "Asset Category": "",
+      "ISIN": "KYG3165D1097",
+      "SEDOL": "BZBY9R5"
+    },
+    {
+      "Name": "CAITONG SECURITIES CO., LTD.",
+      "Ticker": "601108",
+      "Identifier": "CNE100002V44",
+      "Weight": "0.06",
+      "Market Value": "919529.93",
+      "Shares Held": "775936",
+      "Asset Category": "",
+      "ISIN": "CNE100002V44",
+      "SEDOL": "BFY9KS5"
+    },
+    {
+      "Name": "CAIXA SEGURIDADE PARTICIPACOES S A",
+      "Ticker": "CXSE3",
+      "Identifier": "BRCXSEACNOR7",
+      "Weight": "0.17",
+      "Market Value": "2899729.92",
+      "Shares Held": "689325",
+      "Asset Category": "",
+      "ISIN": "BRCXSEACNOR7",
+      "SEDOL": "BMDWWN3"
+    },
+    {
+      "Name": "CANARA BANK",
+      "Ticker": "CBK",
+      "Identifier": "INE476A01022",
+      "Weight": "0.07",
+      "Market Value": "1084850.14",
+      "Shares Held": "880445",
+      "Asset Category": "",
+      "ISIN": "INE476A01022",
+      "SEDOL": "BS5WYP9"
+    },
+    {
+      "Name": "CANMAX TECHNOLOGIES CO., LTD.",
+      "Ticker": "300390",
+      "Identifier": "CNE100001XM0",
+      "Weight": "0.02",
+      "Market Value": "309120.32",
+      "Shares Held": "48500",
+      "Asset Category": "",
+      "ISIN": "CNE100001XM0",
+      "SEDOL": "BMQBTG9"
+    },
+    {
+      "Name": "CAPITEC LIMITED",
+      "Ticker": "CPI",
+      "Identifier": "ZAE000035861",
+      "Weight": "0.27",
+      "Market Value": "4558167.99",
+      "Shares Held": "17073",
+      "Asset Category": "",
+      "ISIN": "ZAE000035861",
+      "SEDOL": "6440859"
+    },
+    {
+      "Name": "CATHAY FINANCIAL HOLDING CO",
+      "Ticker": "2882",
+      "Identifier": "TW0002882008",
+      "Weight": "0.24",
+      "Market Value": "3925088.65",
+      "Shares Held": "1121901",
+      "Asset Category": "",
+      "ISIN": "TW0002882008",
+      "SEDOL": "6425663"
+    },
+    {
+      "Name": "CELLTRION INC",
+      "Ticker": "068270",
+      "Identifier": "KR7068270008",
+      "Weight": "0.06",
+      "Market Value": "1028737.08",
+      "Shares Held": "7600",
+      "Asset Category": "",
+      "ISIN": "KR7068270008",
+      "SEDOL": "B0C5YV1"
+    },
+    {
+      "Name": "CEMEX S.A. (CPO)",
+      "Ticker": "CEMEXCPO",
+      "Identifier": "MXP225611567",
+      "Weight": "0.09",
+      "Market Value": "1441318.22",
+      "Shares Held": "1432442",
+      "Asset Category": "",
+      "ISIN": "MXP225611567",
+      "SEDOL": "2406457"
+    },
+    {
+      "Name": "CENCOSUD S A",
+      "Ticker": "CENCOSUD",
+      "Identifier": "CL0000000100",
+      "Weight": "0.06",
+      "Market Value": "1013427.81",
+      "Shares Held": "534628",
+      "Asset Category": "",
+      "ISIN": "CL0000000100",
+      "SEDOL": "B00R3L2"
+    },
+    {
+      "Name": "CENTRAL PATTANA PUBLIC CO LTD",
+      "Ticker": "CPN-R",
+      "Identifier": "TH0481010R10",
+      "Weight": "0.08",
+      "Market Value": "1310643.09",
+      "Shares Held": "705326",
+      "Asset Category": "",
+      "ISIN": "TH0481010R10",
+      "SEDOL": "B013L15"
+    },
+    {
+      "Name": "CEZ AS",
+      "Ticker": "CEZ",
+      "Identifier": "CZ0005112300",
+      "Weight": "0.05",
+      "Market Value": "812211.79",
+      "Shares Held": "12933",
+      "Asset Category": "",
+      "ISIN": "CZ0005112300",
+      "SEDOL": "5624030"
+    },
+    {
+      "Name": "CHAILEASE HOLDING CO LTD",
+      "Ticker": "5871",
+      "Identifier": "KYG202881093",
+      "Weight": "0.1",
+      "Market Value": "1699672.24",
+      "Shares Held": "508202",
+      "Asset Category": "",
+      "ISIN": "KYG202881093",
+      "SEDOL": "B58J1S8"
+    },
+    {
+      "Name": "CHANG HWA COMMERCIAL BANK",
+      "Ticker": "2801",
+      "Identifier": "TW0002801008",
+      "Weight": "0.17",
+      "Market Value": "2795388.09",
+      "Shares Held": "3111032",
+      "Asset Category": "",
+      "ISIN": "TW0002801008",
+      "SEDOL": "6187855"
+    },
+    {
+      "Name": "CHANGJIANG SECURITIES COMPANY LIMITED",
+      "Ticker": "000783",
+      "Identifier": "CNE000000SH3",
+      "Weight": "0.03",
+      "Market Value": "526135.82",
+      "Shares Held": "450796",
+      "Asset Category": "",
+      "ISIN": "CNE000000SH3",
+      "SEDOL": "BD5CP40"
+    },
+    {
+      "Name": "CHAROEN POKPHAND FOODS PCL",
+      "Ticker": "CPF-R",
+      "Identifier": "TH0101010R14",
+      "Weight": "0.07",
+      "Market Value": "1177315.57",
+      "Shares Held": "1842994",
+      "Asset Category": "",
+      "ISIN": "TH0101010R14",
+      "SEDOL": "6410874"
+    },
+    {
+      "Name": "CHINA CITIC BANK",
+      "Ticker": "998",
+      "Identifier": "CNE1000001Q4",
+      "Weight": "0.13",
+      "Market Value": "2156834.08",
+      "Shares Held": "1984123",
+      "Asset Category": "",
+      "ISIN": "CNE1000001Q4",
+      "SEDOL": "B1W0JF2"
+    },
+    {
+      "Name": "CHINA CONSTRUCTION BANK CORP",
+      "Ticker": "939",
+      "Identifier": "CNE1000002H1",
+      "Weight": "0.86",
+      "Market Value": "14346090.14",
+      "Shares Held": "11285519",
+      "Asset Category": "",
+      "ISIN": "CNE1000002H1",
+      "SEDOL": "B0LMTQ3"
+    },
+    {
+      "Name": "CHINA FEIHE LIMITED",
+      "Ticker": "6186",
+      "Identifier": "KYG2121Q1055",
+      "Weight": "0.03",
+      "Market Value": "575388.92",
+      "Shares Held": "1784604",
+      "Asset Category": "",
+      "ISIN": "KYG2121Q1055",
+      "SEDOL": "BK0SBL1"
+    },
+    {
+      "Name": "CHINA GALAXY SECURITIES CO., LTD.",
+      "Ticker": "601881",
+      "Identifier": "CNE100002FG7",
+      "Weight": "0.04",
+      "Market Value": "658038.45",
+      "Shares Held": "369100",
+      "Asset Category": "",
+      "ISIN": "CNE100002FG7",
+      "SEDOL": "BYWPH65"
+    },
+    {
+      "Name": "CHINA GAS HOLDINGS LIMITED",
+      "Ticker": "384",
+      "Identifier": "BMG2109G1033",
+      "Weight": "0.03",
+      "Market Value": "465513.38",
+      "Shares Held": "716950",
+      "Asset Category": "",
+      "ISIN": "BMG2109G1033",
+      "SEDOL": "6460794"
+    },
+    {
+      "Name": "CHINA GOLD INTERNATIONAL RESOURCES CORP. LTD.",
+      "Ticker": "2099",
+      "Identifier": "CA16890P1036",
+      "Weight": "0.06",
+      "Market Value": "946545.91",
+      "Shares Held": "35847",
+      "Asset Category": "",
+      "ISIN": "CA16890P1036",
+      "SEDOL": "B60FNV8"
+    },
+    {
+      "Name": "CHINA GREAT WALL SECURITIES CO., LTD.",
+      "Ticker": "002939",
+      "Identifier": "CNE100003GD0",
+      "Weight": "0.05",
+      "Market Value": "802858.49",
+      "Shares Held": "703200",
+      "Asset Category": "",
+      "ISIN": "CNE100003GD0",
+      "SEDOL": "BKDQ811"
+    },
+    {
+      "Name": "CHINA HONGQIAO GROUP LIMITED",
+      "Ticker": "1378",
+      "Identifier": "KYG211501005",
+      "Weight": "0.07",
+      "Market Value": "1170846.15",
+      "Shares Held": "470916",
+      "Asset Category": "",
+      "ISIN": "KYG211501005",
+      "SEDOL": "B44ZV94"
+    },
+    {
+      "Name": "CHINA INTERNATIONAL CAPITAL CORPORATION LIMITED",
+      "Ticker": "601995",
+      "Identifier": "CNE1000048J0",
+      "Weight": "0.07",
+      "Market Value": "1208749.41",
+      "Shares Held": "253400",
+      "Asset Category": "",
+      "ISIN": "CNE1000048J0",
+      "SEDOL": "BMYPCF3"
+    },
+    {
+      "Name": "CHINA JUSHI CO LTD",
+      "Ticker": "600176",
+      "Identifier": "CNE000000YM1",
+      "Weight": "0.04",
+      "Market Value": "626224.03",
+      "Shares Held": "122100",
+      "Asset Category": "",
+      "ISIN": "CNE000000YM1",
+      "SEDOL": "BP3RDW5"
+    },
+    {
+      "Name": "CHINA LIFE INSURANCE CO LTD",
+      "Ticker": "2628",
+      "Identifier": "CNE1000002L3",
+      "Weight": "0.18",
+      "Market Value": "2960671.26",
+      "Shares Held": "955273",
+      "Asset Category": "",
+      "ISIN": "CNE1000002L3",
+      "SEDOL": "6718976"
+    },
+    {
+      "Name": "CHINA LIFE INSURANCE COMPANY - STOCK CONNECT",
+      "Ticker": "601628",
+      "Identifier": "CNE000001Q93",
+      "Weight": "0.05",
+      "Market Value": "815261.56",
+      "Shares Held": "157900",
+      "Asset Category": "",
+      "ISIN": "CNE000001Q93",
+      "SEDOL": "BP3R251"
+    },
+    {
+      "Name": "CHINA MENGNIU DAIRY CO",
+      "Ticker": "2319",
+      "Identifier": "KYG210961051",
+      "Weight": "0.1",
+      "Market Value": "1737023.91",
+      "Shares Held": "721182",
+      "Asset Category": "",
+      "ISIN": "KYG210961051",
+      "SEDOL": "B01B1L9"
+    },
+    {
+      "Name": "CHINA MERCHANTS BANK CO LTD",
+      "Ticker": "3968",
+      "Identifier": "CNE1000002M1",
+      "Weight": "0.12",
+      "Market Value": "2012890.28",
+      "Shares Held": "292772",
+      "Asset Category": "",
+      "ISIN": "CNE1000002M1",
+      "SEDOL": "B1DYPZ5"
+    },
+    {
+      "Name": "CHINA MERCHANTS ENERGY SHIPPING CO., LTD.",
+      "Ticker": "601872",
+      "Identifier": "CNE000001PQ8",
+      "Weight": "0.05",
+      "Market Value": "766076.53",
+      "Shares Held": "265200",
+      "Asset Category": "",
+      "ISIN": "CNE000001PQ8",
+      "SEDOL": "BP3R8G4"
+    },
+    {
+      "Name": "CHINA MERCHANTS PORT HOLDINGS",
+      "Ticker": "144",
+      "Identifier": "HK0144000764",
+      "Weight": "0.09",
+      "Market Value": "1508724.63",
+      "Shares Held": "689510",
+      "Asset Category": "",
+      "ISIN": "HK0144000764",
+      "SEDOL": "6416139"
+    },
+    {
+      "Name": "CHINA MERCHANTS SECURITIES CO., LTD.",
+      "Ticker": "600999",
+      "Identifier": "CNE100000HK9",
+      "Weight": "0.07",
+      "Market Value": "1138734.03",
+      "Shares Held": "456288",
+      "Asset Category": "",
+      "ISIN": "CNE100000HK9",
+      "SEDOL": "BP3R303"
+    },
+    {
+      "Name": "CHINA MERCHANTS SHEKOU INDUSTRIAL - STOCK CONNECT",
+      "Ticker": "001979",
+      "Identifier": "CNE100002FC6",
+      "Weight": "0.03",
+      "Market Value": "469108.34",
+      "Shares Held": "428840",
+      "Asset Category": "",
+      "ISIN": "CNE100002FC6",
+      "SEDOL": "BD5CPM8"
+    },
+    {
+      "Name": "CHINA MINSHENG BANKING CORPORATION LIMITED",
+      "Ticker": "1988",
+      "Identifier": "CNE100000HF9",
+      "Weight": "0.02",
+      "Market Value": "296020.86",
+      "Shares Held": "696510",
+      "Asset Category": "",
+      "ISIN": "CNE100000HF9",
+      "SEDOL": "B57JY24"
+    },
+    {
+      "Name": "CHINA NATIONAL BUILDINGS M-H",
+      "Ticker": "3323",
+      "Identifier": "CNE1000002N9",
+      "Weight": "0.05",
+      "Market Value": "848917.37",
+      "Shares Held": "2254285",
+      "Asset Category": "",
+      "ISIN": "CNE1000002N9",
+      "SEDOL": "B0Y91C1"
+    },
+    {
+      "Name": "CHINA NATIONAL CHEMICAL ENGINEERING CO., LTD.",
+      "Ticker": "601117",
+      "Identifier": "CNE100000KC0",
+      "Weight": "0.05",
+      "Market Value": "827970.57",
+      "Shares Held": "785885",
+      "Asset Category": "",
+      "ISIN": "CNE100000KC0",
+      "SEDOL": "BP3R4J9"
+    },
+    {
+      "Name": "CHINA NONFERROUS MINING CORP LTD",
+      "Ticker": "1258",
+      "Identifier": "HK0000112026",
+      "Weight": "0.04",
+      "Market Value": "628993.62",
+      "Shares Held": "355085",
+      "Asset Category": "",
+      "ISIN": "HK0000112026",
+      "SEDOL": "B890GY2"
+    },
+    {
+      "Name": "CHINA OVERSEAS LAND LTD (ORD)",
+      "Ticker": "688",
+      "Identifier": "HK0688002218",
+      "Weight": "0.06",
+      "Market Value": "986442.93",
+      "Shares Held": "593147",
+      "Asset Category": "",
+      "ISIN": "HK0688002218",
+      "SEDOL": "6192150"
+    },
+    {
+      "Name": "CHINA PACIFIC INSURANCE (GRP)",
+      "Ticker": "2601",
+      "Identifier": "CNE1000009Q7",
+      "Weight": "0.04",
+      "Market Value": "743684.97",
+      "Shares Held": "218564",
+      "Asset Category": "",
+      "ISIN": "CNE1000009Q7",
+      "SEDOL": "B2Q5H56"
+    },
+    {
+      "Name": "CHINA PETE & CHEMICAL CORP",
+      "Ticker": "386",
+      "Identifier": "CNE1000002Q2",
+      "Weight": "0.05",
+      "Market Value": "836807.49",
+      "Shares Held": "1459197",
+      "Asset Category": "",
+      "ISIN": "CNE1000002Q2",
+      "SEDOL": "6291819"
+    },
+    {
+      "Name": "CHINA RAILWAY GROUP LIMITED",
+      "Ticker": "601390",
+      "Identifier": "CNE100000866",
+      "Weight": "0.03",
+      "Market Value": "533499.25",
+      "Shares Held": "828304",
+      "Asset Category": "",
+      "ISIN": "CNE100000866",
+      "SEDOL": "BP3R3D6"
+    },
+    {
+      "Name": "CHINA RES PWR HLDGS CO LTD",
+      "Ticker": "836",
+      "Identifier": "HK0836012952",
+      "Weight": "0.09",
+      "Market Value": "1440186.29",
+      "Shares Held": "564489",
+      "Asset Category": "",
+      "ISIN": "HK0836012952",
+      "SEDOL": "6711566"
+    },
+    {
+      "Name": "CHINA RESOURCES GAS GROUP LTD",
+      "Ticker": "1193",
+      "Identifier": "BMG2113B1081",
+      "Weight": "0.05",
+      "Market Value": "887636.44",
+      "Shares Held": "421880",
+      "Asset Category": "",
+      "ISIN": "BMG2113B1081",
+      "SEDOL": "6535517"
+    },
+    {
+      "Name": "CHINA RESOURCES LAND LIMITED",
+      "Ticker": "1109",
+      "Identifier": "KYG2108Y1052",
+      "Weight": "0.07",
+      "Market Value": "1206012.43",
+      "Shares Held": "314821",
+      "Asset Category": "",
+      "ISIN": "KYG2108Y1052",
+      "SEDOL": "6193766"
+    },
+    {
+      "Name": "CHINA RESOURCES SANJIU MED & PHARMA STOCK CONNECT",
+      "Ticker": "000999",
+      "Identifier": "CNE0000011K8",
+      "Weight": "0.04",
+      "Market Value": "715819.87",
+      "Shares Held": "184800",
+      "Asset Category": "",
+      "ISIN": "CNE0000011K8",
+      "SEDOL": "BD5CL42"
+    },
+    {
+      "Name": "CHINA SHENHUA ENERGY CO LTD",
+      "Ticker": "1088",
+      "Identifier": "CNE1000002R0",
+      "Weight": "0.06",
+      "Market Value": "926843.53",
+      "Shares Held": "168823",
+      "Asset Category": "",
+      "ISIN": "CNE1000002R0",
+      "SEDOL": "B09N7M0"
+    },
+    {
+      "Name": "CHINA STATE CONSTRUCTION ENGINEERING CO.,LTD.",
+      "Ticker": "601668",
+      "Identifier": "CNE100000F46",
+      "Weight": "0.04",
+      "Market Value": "732446.02",
+      "Shares Held": "1098940",
+      "Asset Category": "",
+      "ISIN": "CNE100000F46",
+      "SEDOL": "BP3R2Q2"
+    },
+    {
+      "Name": "CHINA STEEL CORPORATION",
+      "Ticker": "2002",
+      "Identifier": "TW0002002003",
+      "Weight": "0.11",
+      "Market Value": "1763914.5",
+      "Shares Held": "2972677",
+      "Asset Category": "",
+      "ISIN": "TW0002002003",
+      "SEDOL": "6190950"
+    },
+    {
+      "Name": "CHINA TAIPING INSURANCE HOLDINGS COMPANY LIMITED",
+      "Ticker": "966",
+      "Identifier": "HK0000055878",
+      "Weight": "0.14",
+      "Market Value": "2372152.29",
+      "Shares Held": "1061846",
+      "Asset Category": "",
+      "ISIN": "HK0000055878",
+      "SEDOL": "6264048"
+    },
+    {
+      "Name": "CHINA THREE GORGES RENEWABLES GROUP CO LTD",
+      "Ticker": "600905",
+      "Identifier": "CNE1000051F2",
+      "Weight": "0.04",
+      "Market Value": "618805.69",
+      "Shares Held": "1189894",
+      "Asset Category": "",
+      "ISIN": "CNE1000051F2",
+      "SEDOL": "BP91P36"
+    },
+    {
+      "Name": "CHINA TOWER CORPORATION LIMITED",
+      "Ticker": "788",
+      "Identifier": "CNE100006V65",
+      "Weight": "0.08",
+      "Market Value": "1253819.39",
+      "Shares Held": "1072918",
+      "Asset Category": "",
+      "ISIN": "CNE100006V65",
+      "SEDOL": "BTVMCY5"
+    },
+    {
+      "Name": "CHINA TUNGSTEN AND HIGHTECH MATERIALS CO LTD",
+      "Ticker": "000657",
+      "Identifier": "CNE0000006M4",
+      "Weight": "0.03",
+      "Market Value": "547028.44",
+      "Shares Held": "82836",
+      "Asset Category": "",
+      "ISIN": "CNE0000006M4",
+      "SEDOL": "BD5M023"
+    },
+    {
+      "Name": "CHINA UNITED TELECOMMU COR LTD",
+      "Ticker": "600050",
+      "Identifier": "CNE000001CS2",
+      "Weight": "0.04",
+      "Market Value": "736926.15",
+      "Shares Held": "1123292",
+      "Asset Category": "",
+      "ISIN": "CNE000001CS2",
+      "SEDOL": "BP3R2X9"
+    },
+    {
+      "Name": "CHINA ZHESHANG BANK CO.,LTD.",
+      "Ticker": "601916",
+      "Identifier": "CNE100003PS9",
+      "Weight": "0.06",
+      "Market Value": "1009415.45",
+      "Shares Held": "2281978",
+      "Asset Category": "",
+      "ISIN": "CNE100003PS9",
+      "SEDOL": "BK96BF0"
+    },
+    {
+      "Name": "CHINAMINSHENG BANKING CORP LTD",
+      "Ticker": "600016",
+      "Identifier": "CNE0000015Y0",
+      "Weight": "0.06",
+      "Market Value": "1032493.33",
+      "Shares Held": "1968400",
+      "Asset Category": "",
+      "ISIN": "CNE0000015Y0",
+      "SEDOL": "BP3R2C8"
+    },
+    {
+      "Name": "CHONGQING CHANGAN AUTOMOBILE COMPANY LIMITED",
+      "Ticker": "000625",
+      "Identifier": "CNE000000R36",
+      "Weight": "0.07",
+      "Market Value": "1131420.21",
+      "Shares Held": "1090932",
+      "Asset Category": "",
+      "ISIN": "CNE000000R36",
+      "SEDOL": "BD5CP62"
+    },
+    {
+      "Name": "CHONGQING POLYCOMP INTERNATIONAL CORPORATION",
+      "Ticker": "301526",
+      "Identifier": "CNE100006CP6",
+      "Weight": "0.03",
+      "Market Value": "486671.9",
+      "Shares Held": "146300",
+      "Asset Category": "",
+      "ISIN": "CNE100006CP6",
+      "SEDOL": "BPH27Z7"
+    },
+    {
+      "Name": "CHOW TAI FOOK JEWELLERY GROUP LIMITED",
+      "Ticker": "1929",
+      "Identifier": "KYG211461085",
+      "Weight": "0.04",
+      "Market Value": "691690.59",
+      "Shares Held": "491636",
+      "Asset Category": "",
+      "ISIN": "KYG211461085",
+      "SEDOL": "B4R39F7"
+    },
+    {
+      "Name": "CHROMA ATE INC.",
+      "Ticker": "2360",
+      "Identifier": "TW0002360005",
+      "Weight": "0.23",
+      "Market Value": "3880279.89",
+      "Shares Held": "62164",
+      "Asset Category": "",
+      "ISIN": "TW0002360005",
+      "SEDOL": "6212100"
+    },
+    {
+      "Name": "CHUNGHWA TELECOM CO.LTD",
+      "Ticker": "2412",
+      "Identifier": "TW0002412004",
+      "Weight": "0.12",
+      "Market Value": "2036739.82",
+      "Shares Held": "433278",
+      "Asset Category": "",
+      "ISIN": "TW0002412004",
+      "SEDOL": "6287841"
+    },
+    {
+      "Name": "CIA PARANAENSE DE ENERGIA",
+      "Ticker": "CPLE3",
+      "Identifier": "BRCPLEACNOR8",
+      "Weight": "0.13",
+      "Market Value": "2085195.8",
+      "Shares Held": "605277",
+      "Asset Category": "",
+      "ISIN": "BRCPLEACNOR8",
+      "SEDOL": "2192831"
+    },
+    {
+      "Name": "CIA SANEAMENTO BASICO DE SAO",
+      "Ticker": "SBSP3",
+      "Identifier": "BRSBSPACNOR5",
+      "Weight": "0.12",
+      "Market Value": "1958392.71",
+      "Shares Held": "309831",
+      "Asset Category": "",
+      "ISIN": "BRSBSPACNOR5",
+      "SEDOL": "B1YCHL8"
+    },
+    {
+      "Name": "CIPLA LIMITED",
+      "Ticker": "CIPLA",
+      "Identifier": "INE059A01026",
+      "Weight": "0.08",
+      "Market Value": "1285227.09",
+      "Shares Held": "91991",
+      "Asset Category": "",
+      "ISIN": "INE059A01026",
+      "SEDOL": "B011108"
+    },
+    {
+      "Name": "CITIC LTD",
+      "Ticker": "267",
+      "Identifier": "HK0267001375",
+      "Weight": "0.08",
+      "Market Value": "1325825.65",
+      "Shares Held": "819188",
+      "Asset Category": "",
+      "ISIN": "HK0267001375",
+      "SEDOL": "6196152"
+    },
+    {
+      "Name": "CITIC PACIFIC SPECIAL STEEL GROUP CO LTD",
+      "Ticker": "000708",
+      "Identifier": "CNE0000008J6",
+      "Weight": "0.03",
+      "Market Value": "554996.15",
+      "Shares Held": "285680",
+      "Asset Category": "",
+      "ISIN": "CNE0000008J6",
+      "SEDOL": "BL4P3T7"
+    },
+    {
+      "Name": "CMOC GROUP LTD",
+      "Ticker": "3993",
+      "Identifier": "CNE100000114",
+      "Weight": "0.03",
+      "Market Value": "519696.92",
+      "Shares Held": "287388",
+      "Asset Category": "",
+      "ISIN": "CNE100000114",
+      "SEDOL": "B1VRCG6"
+    },
+    {
+      "Name": "COAL INDIA LTD",
+      "Ticker": "COAL",
+      "Identifier": "INE522F01014",
+      "Weight": "0.08",
+      "Market Value": "1304050.94",
+      "Shares Held": "296539",
+      "Asset Category": "",
+      "ISIN": "INE522F01014",
+      "SEDOL": "B4Z9XF5"
+    },
+    {
+      "Name": "COCA-COLA FEMSA, S.A.B. DE C.V.",
+      "Ticker": "KOFUBL",
+      "Identifier": "MX01KO000002",
+      "Weight": "0.08",
+      "Market Value": "1360098.47",
+      "Shares Held": "118468",
+      "Asset Category": "",
+      "ISIN": "MX01KO000002",
+      "SEDOL": "BHHP0S4"
+    },
+    {
+      "Name": "COLGATE-PALMOLIVE (INDIA) LIMITED",
+      "Ticker": "CLGT",
+      "Identifier": "INE259A01022",
+      "Weight": "0.1",
+      "Market Value": "1706812.94",
+      "Shares Held": "91088",
+      "Asset Category": "",
+      "ISIN": "INE259A01022",
+      "SEDOL": "6139696"
+    },
+    {
+      "Name": "COMMERCIAL BANK OF QATAR",
+      "Ticker": "CBQK",
+      "Identifier": "QA0007227752",
+      "Weight": "0.05",
+      "Market Value": "789555.2",
+      "Shares Held": "727790",
+      "Asset Category": "",
+      "ISIN": "QA0007227752",
+      "SEDOL": "6150448"
+    },
+    {
+      "Name": "COMMERCIAL INTERNATIONAL BANK - EGYPT (CIB)",
+      "Ticker": "COMI",
+      "Identifier": "EGS60121C018",
+      "Weight": "0.27",
+      "Market Value": "4435525.45",
+      "Shares Held": "1895921",
+      "Asset Category": "",
+      "ISIN": "EGS60121C018",
+      "SEDOL": "6243898"
+    },
+    {
+      "Name": "COMPANHIA ENERGETICA DE MINAS",
+      "Ticker": "CMIG4",
+      "Identifier": "BRCMIGACNPR3",
+      "Weight": "0.09",
+      "Market Value": "1531257.17",
+      "Shares Held": "656520",
+      "Asset Category": "",
+      "ISIN": "BRCMIGACNPR3",
+      "SEDOL": "B1YBRG0"
+    },
+    {
+      "Name": "COMPANHIA VALE DO RIO DOCE ON",
+      "Ticker": "VALE3",
+      "Identifier": "BRVALEACNOR0",
+      "Weight": "0.28",
+      "Market Value": "4670957.96",
+      "Shares Held": "354580",
+      "Asset Category": "",
+      "ISIN": "BRVALEACNOR0",
+      "SEDOL": "2196286"
+    },
+    {
+      "Name": "COMPANIA DE MINAS BUENAVENTURA-ADR",
+      "Ticker": "BVN",
+      "Identifier": "US2044481040",
+      "Weight": "0.04",
+      "Market Value": "712618.55",
+      "Shares Held": "22877",
+      "Asset Category": "",
+      "ISIN": "US2044481040",
+      "SEDOL": "2210476"
+    },
+    {
+      "Name": "CONCH CEMENT CO LTD",
+      "Ticker": "914",
+      "Identifier": "CNE1000001W2",
+      "Weight": "0.06",
+      "Market Value": "940529.53",
+      "Shares Held": "456701",
+      "Asset Category": "",
+      "ISIN": "CNE1000001W2",
+      "SEDOL": "6080396"
+    },
+    {
+      "Name": "CONCH CEMENT CO LTD - STOCK CONNECT",
+      "Ticker": "600585",
+      "Identifier": "CNE0000019V8",
+      "Weight": "0.07",
+      "Market Value": "1121399.89",
+      "Shares Held": "428556",
+      "Asset Category": "",
+      "ISIN": "CNE0000019V8",
+      "SEDOL": "BP3R2Z1"
+    },
+    {
+      "Name": "CONTEMPORARY AMPEREX TECHNOLOGY CO., LIMITED",
+      "Ticker": "3750",
+      "Identifier": "CNE100006WS8",
+      "Weight": "0.02",
+      "Market Value": "390690.96",
+      "Shares Held": "6834",
+      "Asset Category": "",
+      "ISIN": "CNE100006WS8",
+      "SEDOL": "BT9QPW8"
+    },
+    {
+      "Name": "COPEC DE CHILE",
+      "Ticker": "COPEC",
+      "Identifier": "CLP7847L1080",
+      "Weight": "0.02",
+      "Market Value": "273698.46",
+      "Shares Held": "39959",
+      "Asset Category": "",
+      "ISIN": "CLP7847L1080",
+      "SEDOL": "2196026"
+    },
+    {
+      "Name": "COSCO SHIPPING ENERGY",
+      "Ticker": "1138",
+      "Identifier": "CNE1000002S8",
+      "Weight": "0.04",
+      "Market Value": "647597.54",
+      "Shares Held": "277081",
+      "Asset Category": "",
+      "ISIN": "CNE1000002S8",
+      "SEDOL": "6782045"
+    },
+    {
+      "Name": "CP ALL PCL",
+      "Ticker": "CPALL-R",
+      "Identifier": "TH0737010R15",
+      "Weight": "0.06",
+      "Market Value": "1009076.64",
+      "Shares Held": "777105",
+      "Asset Category": "",
+      "ISIN": "TH0737010R15",
+      "SEDOL": "B08YDH1"
+    },
+    {
+      "Name": "CPFL ENERGIA, S.A.",
+      "Ticker": "CPFE3",
+      "Identifier": "BRCPFEACNOR0",
+      "Weight": "0.1",
+      "Market Value": "1729783.45",
+      "Shares Held": "175592",
+      "Asset Category": "",
+      "ISIN": "BRCPFEACNOR0",
+      "SEDOL": "B031NN3"
+    },
+    {
+      "Name": "CREDICORP LTD.",
+      "Ticker": "BAP",
+      "Identifier": "BMG2519Y1084",
+      "Weight": "0.19",
+      "Market Value": "3163680.9",
+      "Shares Held": "8145",
+      "Asset Category": "",
+      "ISIN": "BMG2519Y1084",
+      "SEDOL": "2232878"
+    },
+    {
+      "Name": "CREDITO Y INVERSIONES (BANCO)",
+      "Ticker": "BCI",
+      "Identifier": "CLP321331116",
+      "Weight": "0.1",
+      "Market Value": "1663948.22",
+      "Shares Held": "25131",
+      "Asset Category": "",
+      "ISIN": "CLP321331116",
+      "SEDOL": "2069355"
+    },
+    {
+      "Name": "CRRC CORPORATION LIMITED",
+      "Ticker": "601766",
+      "Identifier": "CNE100000CP9",
+      "Weight": "0.03",
+      "Market Value": "578783.41",
+      "Shares Held": "601400",
+      "Asset Category": "",
+      "ISIN": "CNE100000CP9",
+      "SEDOL": "BP3R358"
+    },
+    {
+      "Name": "CSPC PHARMACEUTICAL GROUP LTD",
+      "Ticker": "1093",
+      "Identifier": "HK1093012172",
+      "Weight": "0.11",
+      "Market Value": "1830982.69",
+      "Shares Held": "1620714",
+      "Asset Category": "",
+      "ISIN": "HK1093012172",
+      "SEDOL": "6191997"
+    },
+    {
+      "Name": "CTBC FINANCIAL HOLDING CO LTD",
+      "Ticker": "2891",
+      "Identifier": "TW0002891009",
+      "Weight": "0.29",
+      "Market Value": "4851908.86",
+      "Shares Held": "2159166",
+      "Asset Category": "",
+      "ISIN": "TW0002891009",
+      "SEDOL": "6527666"
+    },
+    {
+      "Name": "CUMMINS INDIA LIMITED",
+      "Ticker": "KKC",
+      "Identifier": "INE298A01020",
+      "Weight": "0.06",
+      "Market Value": "1014159.75",
+      "Shares Held": "20780",
+      "Asset Category": "",
+      "ISIN": "INE298A01020",
+      "SEDOL": "6294863"
+    },
+    {
+      "Name": "Clicks Group Ltd",
+      "Ticker": "CLS",
+      "Identifier": "ZAE000134854",
+      "Weight": "0.15",
+      "Market Value": "2576552.05",
+      "Shares Held": "175115",
+      "Asset Category": "",
+      "ISIN": "ZAE000134854",
+      "SEDOL": "6105578"
+    },
+    {
+      "Name": "DABUR INDIA LIMITED",
+      "Ticker": "DABUR",
+      "Identifier": "INE016A01026",
+      "Weight": "0.05",
+      "Market Value": "815857.09",
+      "Shares Held": "202320",
+      "Asset Category": "",
+      "ISIN": "INE016A01026",
+      "SEDOL": "6297356"
+    },
+    {
+      "Name": "DAQIN RAILWAY CO., LTD. - STOCK CONNECT",
+      "Ticker": "601006",
+      "Identifier": "CNE000001NG4",
+      "Weight": "0.05",
+      "Market Value": "855837.96",
+      "Shares Held": "1147689",
+      "Asset Category": "",
+      "ISIN": "CNE000001NG4",
+      "SEDOL": "BP3R2N9"
+    },
+    {
+      "Name": "DB INSURANCE CO., LTD.",
+      "Ticker": "005830",
+      "Identifier": "KR7005830005",
+      "Weight": "0.12",
+      "Market Value": "2057257.71",
+      "Shares Held": "14944",
+      "Asset Category": "",
+      "ISIN": "KR7005830005",
+      "SEDOL": "6155937"
+    },
+    {
+      "Name": "DELTA ELECTRONICS (TH) PCL",
+      "Ticker": "DELTA-R",
+      "Identifier": "TH0528010R18",
+      "Weight": "0.22",
+      "Market Value": "3624110.33",
+      "Shares Held": "483696",
+      "Asset Category": "",
+      "ISIN": "TH0528010R18",
+      "SEDOL": "6418931"
+    },
+    {
+      "Name": "DELTA ELECTRONICS, INC.",
+      "Ticker": "2308",
+      "Identifier": "TW0002308004",
+      "Weight": "0.74",
+      "Market Value": "12343011.27",
+      "Shares Held": "245660",
+      "Asset Category": "",
+      "ISIN": "TW0002308004",
+      "SEDOL": "6260734"
+    },
+    {
+      "Name": "DINO POLSKA SPOLKA AKCYJNA",
+      "Ticker": "DNP",
+      "Identifier": "PLDINPL00011",
+      "Weight": "0.08",
+      "Market Value": "1398799.33",
+      "Shares Held": "145712",
+      "Asset Category": "",
+      "ISIN": "PLDINPL00011",
+      "SEDOL": "BD0YVN2"
+    },
+    {
+      "Name": "DISCOVERY LIMITED",
+      "Ticker": "DSY",
+      "Identifier": "ZAE000022331",
+      "Weight": "0.09",
+      "Market Value": "1507225.62",
+      "Shares Held": "92590",
+      "Asset Category": "",
+      "ISIN": "ZAE000022331",
+      "SEDOL": "6177878"
+    },
+    {
+      "Name": "DIVI'S LABORATORIES LIMITED",
+      "Ticker": "DIVI",
+      "Identifier": "INE361B01024",
+      "Weight": "0.05",
+      "Market Value": "790591.09",
+      "Shares Held": "8322",
+      "Asset Category": "",
+      "ISIN": "INE361B01024",
+      "SEDOL": "6602518"
+    },
+    {
+      "Name": "DONGXING SECURITIES CO., LTD.",
+      "Ticker": "601198",
+      "Identifier": "CNE100002177",
+      "Weight": "0.04",
+      "Market Value": "660840.9",
+      "Shares Held": "338600",
+      "Asset Category": "",
+      "ISIN": "CNE100002177",
+      "SEDOL": "BYQDMD7"
+    },
+    {
+      "Name": "DOOSAN CO LTD",
+      "Ticker": "000150",
+      "Identifier": "KR7000150003",
+      "Weight": "0.02",
+      "Market Value": "413890.58",
+      "Shares Held": "563",
+      "Asset Category": "",
+      "ISIN": "KR7000150003",
+      "SEDOL": "6661111"
+    },
+    {
+      "Name": "DOOSAN ENERBILITY CO LTD",
+      "Ticker": "034020",
+      "Identifier": "KR7034020008",
+      "Weight": "0.07",
+      "Market Value": "1162389.95",
+      "Shares Held": "24704",
+      "Asset Category": "",
+      "ISIN": "KR7034020008",
+      "SEDOL": "6294670"
+    },
+    {
+      "Name": "DR.REDDY'S LABORATORIES LTD",
+      "Ticker": "DRRD",
+      "Identifier": "INE089A01031",
+      "Weight": "0.08",
+      "Market Value": "1392588.23",
+      "Shares Held": "108606",
+      "Asset Category": "",
+      "ISIN": "INE089A01031",
+      "SEDOL": "BQ2KJW4"
+    },
+    {
+      "Name": "DUBAI ISLAMIC BANK PJSC",
+      "Ticker": "DIB",
+      "Identifier": "AED000201015",
+      "Weight": "0.09",
+      "Market Value": "1471001.47",
+      "Shares Held": "755673",
+      "Asset Category": "",
+      "ISIN": "AED000201015",
+      "SEDOL": "6283452"
+    },
+    {
+      "Name": "DUKHAN BANK Q.P.S.C.",
+      "Ticker": "DUBK",
+      "Identifier": "QA000B982PM1",
+      "Weight": "0.02",
+      "Market Value": "334486.64",
+      "Shares Held": "406633",
+      "Asset Category": "",
+      "ISIN": "QA000B982PM1",
+      "SEDOL": "BNGB5K2"
+    },
+    {
+      "Name": "E INK HOLDINGS INC",
+      "Ticker": "8069",
+      "Identifier": "TW0008069006",
+      "Weight": "0.04",
+      "Market Value": "631176.27",
+      "Shares Held": "139770",
+      "Asset Category": "",
+      "ISIN": "TW0008069006",
+      "SEDOL": "6744283"
+    },
+    {
+      "Name": "E SUN FINANCIAL HLDGS CO LTD",
+      "Ticker": "2884",
+      "Identifier": "TW0002884004",
+      "Weight": "0.16",
+      "Market Value": "2729171.76",
+      "Shares Held": "1814312",
+      "Asset Category": "",
+      "ISIN": "TW0002884004",
+      "SEDOL": "6433912"
+    },
+    {
+      "Name": "ECOVACS ROBOTICS CO., LTD. - STOCK CONNECT",
+      "Ticker": "603486",
+      "Identifier": "CNE1000031N8",
+      "Weight": "0.04",
+      "Market Value": "693475.8",
+      "Shares Held": "101877",
+      "Asset Category": "",
+      "ISIN": "CNE1000031N8",
+      "SEDOL": "BDFWW61"
+    },
+    {
+      "Name": "EICHER MOTORS LIMITED",
+      "Ticker": "EIM",
+      "Identifier": "INE066A01021",
+      "Weight": "0.04",
+      "Market Value": "726509.56",
+      "Shares Held": "9558",
+      "Asset Category": "",
+      "ISIN": "INE066A01021",
+      "SEDOL": "BMW4CV8"
+    },
+    {
+      "Name": "ELITE MATERIAL CO., LTD.",
+      "Ticker": "2383",
+      "Identifier": "TW0002383007",
+      "Weight": "0.32",
+      "Market Value": "5403370.37",
+      "Shares Held": "34237",
+      "Asset Category": "",
+      "ISIN": "TW0002383007",
+      "SEDOL": "6316121"
+    },
+    {
+      "Name": "EMAAR DEVELOPMENT PJSC",
+      "Ticker": "EMAARDEV",
+      "Identifier": "AEE001901017",
+      "Weight": "0.05",
+      "Market Value": "796434.61",
+      "Shares Held": "225721",
+      "Asset Category": "",
+      "ISIN": "AEE001901017",
+      "SEDOL": "BDG1977"
+    },
+    {
+      "Name": "EMAAR PROPERTIES PJSC",
+      "Ticker": "EMAAR",
+      "Identifier": "AEE000301011",
+      "Weight": "0.12",
+      "Market Value": "1947902.32",
+      "Shares Held": "627609",
+      "Asset Category": "",
+      "ISIN": "AEE000301011",
+      "SEDOL": "B01RM25"
+    },
+    {
+      "Name": "EMBRAER S.A.",
+      "Ticker": "EMBJ3",
+      "Identifier": "BREMBJACNOR1",
+      "Weight": "0.05",
+      "Market Value": "889985.05",
+      "Shares Held": "48617",
+      "Asset Category": "",
+      "ISIN": "BREMBJACNOR1",
+      "SEDOL": "BTRD974"
+    },
+    {
+      "Name": "EMIRATES INTEGRATED TELECOMMUNICATIONS COMPANY PJS",
+      "Ticker": "DU",
+      "Identifier": "AEE000701012",
+      "Weight": "0.07",
+      "Market Value": "1110710.13",
+      "Shares Held": "337723",
+      "Asset Category": "",
+      "ISIN": "AEE000701012",
+      "SEDOL": "B13TMN7"
+    },
+    {
+      "Name": "EMIRATES NBD (P.J.S.C.)",
+      "Ticker": "EMIRATES",
+      "Identifier": "AEE000801010",
+      "Weight": "0.14",
+      "Market Value": "2302050.75",
+      "Shares Held": "273112",
+      "Asset Category": "",
+      "ISIN": "AEE000801010",
+      "SEDOL": "B28PFX8"
+    },
+    {
+      "Name": "EMIRATES TELECOMMUNICATIONS GROUP CO (ETISALAT GRO",
+      "Ticker": "ETISALAT",
+      "Identifier": "AEE000401019",
+      "Weight": "0.14",
+      "Market Value": "2338709.62",
+      "Shares Held": "413786",
+      "Asset Category": "",
+      "ISIN": "AEE000401019",
+      "SEDOL": "6322173"
+    },
+    {
+      "Name": "ENEL CHILE SA",
+      "Ticker": "ENELCHIL",
+      "Identifier": "CL0002266774",
+      "Weight": "0.07",
+      "Market Value": "1243350.55",
+      "Shares Held": "14224364",
+      "Asset Category": "",
+      "ISIN": "CL0002266774",
+      "SEDOL": "BYMLZD6"
+    },
+    {
+      "Name": "ENERGISA SA",
+      "Ticker": "ENGI11",
+      "Identifier": "BRENGICDAM16",
+      "Weight": "0.04",
+      "Market Value": "598192.51",
+      "Shares Held": "46359",
+      "Asset Category": "",
+      "ISIN": "BRENGICDAM16",
+      "SEDOL": "B56XQT8"
+    },
+    {
+      "Name": "ENEVA S.A.",
+      "Ticker": "ENEV3",
+      "Identifier": "BRENEVACNOR8",
+      "Weight": "0.05",
+      "Market Value": "826913.6",
+      "Shares Held": "132697",
+      "Asset Category": "",
+      "ISIN": "BRENEVACNOR8",
+      "SEDOL": "BFWHKM5"
+    },
+    {
+      "Name": "ENGIE BRASIL SA",
+      "Ticker": "EGIE3",
+      "Identifier": "BREGIEACNOR9",
+      "Weight": "0.04",
+      "Market Value": "691555.16",
+      "Shares Held": "111188",
+      "Asset Category": "",
+      "ISIN": "BREGIEACNOR9",
+      "SEDOL": "BD1WX84"
+    },
+    {
+      "Name": "ENN ENERGY HOLDINGS LTD",
+      "Ticker": "2688",
+      "Identifier": "KYG3066L1014",
+      "Weight": "0.04",
+      "Market Value": "721330.23",
+      "Shares Held": "114256",
+      "Asset Category": "",
+      "ISIN": "KYG3066L1014",
+      "SEDOL": "6333937"
+    },
+    {
+      "Name": "EOPTOLINK TECHNOLOGY INC., LTD.",
+      "Ticker": "300502",
+      "Identifier": "CNE100002615",
+      "Weight": "0.16",
+      "Market Value": "2614711.43",
+      "Shares Held": "57177",
+      "Asset Category": "",
+      "ISIN": "CNE100002615",
+      "SEDOL": "BD761B9"
+    },
+    {
+      "Name": "EQUATORIAL SA",
+      "Ticker": "EQTL3",
+      "Identifier": "BREQTLACNOR0",
+      "Weight": "0.08",
+      "Market Value": "1405246.01",
+      "Shares Held": "147151",
+      "Asset Category": "",
+      "ISIN": "BREQTLACNOR0",
+      "SEDOL": "B128R96"
+    },
+    {
+      "Name": "EREGLI DEMIR VE CELIK FABRIKALARI T.A.S.",
+      "Ticker": "EREGL",
+      "Identifier": "TRAEREGL91G3",
+      "Weight": "0.07",
+      "Market Value": "1131931.38",
+      "Shares Held": "1495640",
+      "Asset Category": "",
+      "ISIN": "TRAEREGL91G3",
+      "SEDOL": "B03MS97"
+    },
+    {
+      "Name": "ERSTE BANK POLSKA SA",
+      "Ticker": "EBP",
+      "Identifier": "PLBZ00000044",
+      "Weight": "0.03",
+      "Market Value": "498547.22",
+      "Shares Held": "2496",
+      "Asset Category": "",
+      "ISIN": "PLBZ00000044",
+      "SEDOL": "7153639"
+    },
+    {
+      "Name": "ETERNAL LIMITED",
+      "Ticker": "ETERNAL",
+      "Identifier": "INE758T01015",
+      "Weight": "0.11",
+      "Market Value": "1896967.68",
+      "Shares Held": "558240",
+      "Asset Category": "",
+      "ISIN": "INE758T01015",
+      "SEDOL": "BL6P210"
+    },
+    {
+      "Name": "ETIHAD ETISALAT CO",
+      "Ticker": "EEC",
+      "Identifier": "SA000A0DM9P2",
+      "Weight": "0.05",
+      "Market Value": "847611.55",
+      "Shares Held": "52796",
+      "Asset Category": "",
+      "ISIN": "SA000A0DM9P2",
+      "SEDOL": "B12LR51"
+    },
+    {
+      "Name": "EUROBANK S.A.",
+      "Ticker": "EUROB",
+      "Identifier": "GRS829003003",
+      "Weight": "0.11",
+      "Market Value": "1847363.72",
+      "Shares Held": "375520",
+      "Asset Category": "",
+      "ISIN": "GRS829003003",
+      "SEDOL": "BW9DW63"
+    },
+    {
+      "Name": "EVA AIRWAYS CORPORATION",
+      "Ticker": "2618",
+      "Identifier": "TW0002618006",
+      "Weight": "0.13",
+      "Market Value": "2235361.64",
+      "Shares Held": "1669010",
+      "Asset Category": "",
+      "ISIN": "TW0002618006",
+      "SEDOL": "6186023"
+    },
+    {
+      "Name": "EVERBRIGHT SECURITIES COMPANY LIMITED",
+      "Ticker": "601788",
+      "Identifier": "CNE100000FD8",
+      "Weight": "0.05",
+      "Market Value": "806209.23",
+      "Shares Held": "391500",
+      "Asset Category": "",
+      "ISIN": "CNE100000FD8",
+      "SEDOL": "BZ0D1Y4"
+    },
+    {
+      "Name": "FALABELLA S.A.",
+      "Ticker": "FALAB",
+      "Identifier": "CLP3880F1085",
+      "Weight": "0.11",
+      "Market Value": "1885725.81",
+      "Shares Held": "280470",
+      "Asset Category": "",
+      "ISIN": "CLP3880F1085",
+      "SEDOL": "2771672"
+    },
+    {
+      "Name": "FAR EAST HORIZON LIMITED",
+      "Ticker": "3360",
+      "Identifier": "HK0000077468",
+      "Weight": "0.06",
+      "Market Value": "1075893.6",
+      "Shares Held": "1370533",
+      "Asset Category": "",
+      "ISIN": "HK0000077468",
+      "SEDOL": "B63DLB5"
+    },
+    {
+      "Name": "FAR EASTONE TELECOM CO LTD",
+      "Ticker": "4904",
+      "Identifier": "TW0004904008",
+      "Weight": "0.05",
+      "Market Value": "785999.88",
+      "Shares Held": "225655",
+      "Asset Category": "",
+      "ISIN": "TW0004904008",
+      "SEDOL": "6421854"
+    },
+    {
+      "Name": "FEDERAL BANK LTD (THE) (INDIA)",
+      "Ticker": "FB",
+      "Identifier": "INE171A01029",
+      "Weight": "0.06",
+      "Market Value": "1069599.91",
+      "Shares Held": "303487",
+      "Asset Category": "",
+      "ISIN": "INE171A01029",
+      "SEDOL": "BFT7KB7"
+    },
+    {
+      "Name": "FEMSA UBD UNIT",
+      "Ticker": "FEMSAUBD",
+      "Identifier": "MXP320321310",
+      "Weight": "0.15",
+      "Market Value": "2441564.71",
+      "Shares Held": "203022",
+      "Asset Category": "",
+      "ISIN": "MXP320321310",
+      "SEDOL": "2242059"
+    },
+    {
+      "Name": "FIBERHOME TELECOMMUNICATION TECHNOLOGIES CO., LTD.",
+      "Ticker": "600498",
+      "Identifier": "CNE0000018P2",
+      "Weight": "0.03",
+      "Market Value": "504272.04",
+      "Shares Held": "115800",
+      "Asset Category": "",
+      "ISIN": "CNE0000018P2",
+      "SEDOL": "BP3R886"
     }
   ]
 }

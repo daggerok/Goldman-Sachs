@@ -8,15 +8,15 @@
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103365/381430123/goldman-sachs-market-beta-u-s-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
     "productPageAsOf": "Oct 15 2026",
-    "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028137/0000940400-26-028137.txt",
+    "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103365/381430123/goldman-sachs-market-beta-u-s-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSUS",
-    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028137, report period 2026-05-31)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
-    "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
+    "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "381430123",
@@ -316,11 +316,11 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 414,
-    "asOfDate": "2026-05-31",
-    "asOf": "May 31 2026",
-    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028137, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "totalRows": 408,
+    "asOfDate": "2026-10-15",
+    "asOf": "Oct 15 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 406
   },
   "history": {
