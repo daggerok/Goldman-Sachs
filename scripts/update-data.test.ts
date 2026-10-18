@@ -19,10 +19,13 @@ import {
   firstDate,
   firstNumber,
   frequencyCodeLabel,
+  gsDetailVariables,
   indexRowFromMeta,
   inferDistributionFrequency,
   installSystemCa,
   isCertError,
+  isGsFinder,
+  isGsFundDetail,
   isinFromCusip,
   main,
   mergeOfficialReturns,
@@ -380,6 +383,53 @@ const FUND_FINDER_LIVE = [
   '* * *',
 ].join('\n');
 
+// Fund data API (am.gs.com/services/funds, GraphQL POST) answers, the direct path since the October 2026
+// redesign made the finder and the fund pages client-rendered (2026-10-18 shapes, trimmed).
+const finderRow = (ticker: string, pv: string, cusip: string, name: string, assetClass: string, frequency: string, inception: string, nav: string, returns: string[], returnsAsOf: string, fundType = 'ETF') => ({
+  fundName: name, fundType, pvNumber: pv, shareClassId: cusip, ticker, marketingAssetClass: assetClass, distributionFrequency: frequency, shareClassInceptionDate: inception,
+  dailyPerformance: { nav: { asAtDate: '2026-09-17', value: nav } },
+  monthlyPerformance: { asAtDate: returnsAsOf, annualisedReturns1yr: returns[0], annualisedReturns3yr: returns[1], annualisedReturns5yr: returns[2], annualisedReturns10yr: returns[3], annualisedReturnsSinceIncept: returns[4] },
+});
+const FUND_FINDER_JSON = JSON.stringify({ data: { fundShareClasses: { funds: [
+  finderRow('GBIL', 'PV102645', '381430529', 'Goldman Sachs Access Treasury 0-1 Year ETF', 'Fixed Income', 'Monthly', '2016-09-06', '99.98', ['3.70', '4.52', '3.50', '--', '2.31'], '2026-08-31'),
+  finderRow('AAAU', 'PV103623', '38150K103', 'Goldman Sachs Physical Gold ETF', 'Commodities', 'None', '2018-07-26', '43.05', ['32.81', '32.65', '20.02', '--', '17.36'], '2026-08-31'),
+] } } });
+
+const FUND_DETAIL_JSON = JSON.stringify({ data: { fundsDetail: {
+  fundName: 'Goldman Sachs Access Treasury 0-1 Year ETF', ticker: 'GBIL', cusip: '381430529', marketingAssetClass: 'Fixed Income', fundInceptionDate: '2016-09-06',
+  benchmark: 'FTSE US Treasury 0-1 Year Composite Select Index', exchange: 'NYSE Arca', navTicker: 'GBIL.NV', intradayNavTicker: 'GBILIV',
+  quickStats: [
+    { label: 'netAssetValue', asAtDate: '2026-09-17', value: '99.98', currency: 'USD', suffix: null, upDownValue: '0.01', upDownPctValue: '0.01' },
+    { label: 'totalFundAssetsDaily', asAtDate: '2026-09-17', value: '7877.70', currency: 'USD', suffix: 'MM' },
+    { label: 'totalFundAssetsMonthly', asAtDate: '2026-08-31', value: '7639.03', currency: 'USD', suffix: 'MM' },
+    { label: 'noOfHoldings', asAtDate: null, value: '40', currency: null, suffix: null },
+  ],
+  feesAndExpenses: [{ label: 'netExpensesRatio', value: '0.12', suffix: '%' }, { label: 'grossExpensesRatio', value: '0.14', suffix: '%' }],
+  pricingTable: [
+    { label: 'marketPrice', asAtDate: '2026-09-17', value: '99.99', currency: 'USD' },
+    { label: 'premiumDiscount', asAtDate: '2026-09-17', value: '0.01', suffix: '%' },
+    { label: 'bidAsk', asAtDate: null, value: '99.99', currency: 'USD' },
+    { label: 'dayMedianBidAskSpread', asAtDate: '2026-09-17', value: '0.01', suffix: '%' },
+  ],
+  cumulativeReturnsAsAtDate: '2026-08-31',
+  cumulativeReturns: [{ id: 'nav', oneMth: '0.31', threeMth: '0.89', sixMth: '1.74', ytd: '2.30', sinceInception: '25.65' }, { id: 'marketPriceReturns', oneMth: '0.29', threeMth: '0.89', ytd: '2.28' }, { id: 'benchmark', oneMth: '9.99' }],
+  annualizedReturnsAsAtDate: '2026-08-31',
+  annualizedReturns: [{ id: 'nav', oneYr: '3.70', threeYr: '4.52', fiveYr: '3.50', tenYr: 'N/A' }, { id: 'marketPriceReturns', oneYr: '3.69', threeYr: '4.50', fiveYr: '3.50', tenYr: 'N/A' }],
+  averageAnnualizedReturnsAsAtDate: '2026-08-31',
+  averageAnnualizedReturns: [{ id: 'nav', oneYr: '3.70', threeYr: 'N/A', sinceInception: '2.31' }, { id: 'marketPrice', sinceInception: '2.31' }],
+  quarterlyAnnualizedReturnsAsAtDate: '2026-06-30',
+  quarterlyAnnualizedReturns: [{ id: 'nav', oneYr: '3.81', threeYr: 'N/A', fiveYr: '3.37', tenYr: 'N/A', sinceInception: '2.29' }, { id: 'marketPrice', oneYr: '3.82', threeYr: 'N/A', fiveYr: '3.36', tenYr: 'N/A', sinceInception: '2.29' }],
+  yield: [{ label: 'twelveMthTrailingYield', value: '3.67', asAtDate: '2026-08-31' }, { label: 'thirtyDayYieldSubsidized', value: '3.69', asAtDate: '2026-08-31' }, { label: 'thirtyDayYieldUnSubsidized', value: '3.67', asAtDate: '2026-08-31' }],
+  distributions: [
+    { total: '0.3047', income: '0.3047', expirationDate: '09/01/2026', recordDate: '09/01/2026', payableDate: '09/08/2026' },
+    { total: '--', income: '--', expirationDate: '12/31/2025', recordDate: '12/31/2025', payableDate: '01/07/2026' },
+    { total: '0.3382', income: '0.3382', expirationDate: '12/31/2025', recordDate: '12/31/2025', payableDate: '01/07/2026' },
+    { total: '0.3382', income: '0.3382', expirationDate: '12/31/2025', recordDate: '12/31/2025', payableDate: '01/07/2026' },
+  ],
+  premiumsAndDiscount: { asAtDate: '2026-09-17', quarterInsights: [{ id: 'Q3', insights: [{ label: 'Number of days at Premium', value: 14 }, { label: 'Number of days at NAV', value: 32 }, { label: 'Number of days at Discount', value: 16 }] }, { id: 'Q2', insights: [{ label: 'Number of days at Premium', value: 1 }] }] },
+  topHoldings: { asAtDate: '2026-09-17', data: { series: [{ name: 'Top Ten Holdings', dataset: [{ name: 'US GOVT T-BILL 08 OCT 2026', y: 7.2 }, { name: 'US GOVT T-BILL 27 NOV 2026', y: 7.15 }] }] } },
+} } });
+
 // ---------------------------------------------------------------------------
 // Shared harness: clean env, pinned TZ, restored globals, mocked network
 // ---------------------------------------------------------------------------
@@ -429,8 +479,14 @@ function mockWorld(opts: { latency?: number; handler?: (url: string) => Response
   setApiRootForTests(pathToFileURL(api));
   const mock: Mock = { hits: [], peak: 0, restore: () => undefined, dir, api };
   let inFlight = 0;
-  globalThis.fetch = (async (input: unknown) => {
-    const url = String(input);
+  globalThis.fetch = (async (input: unknown, init?: { body?: unknown }) => {
+    let url = String(input);
+    // The direct path POSTs GraphQL to /services/funds. Key each request by what it asks for, so a
+    // handler matching '/detail/' covers a fund both directly (fund data API) and through the proxy.
+    if (url.endsWith('am.gs.com/services/funds')) {
+      const ask = JSON.parse(String(init?.body ?? '{}')).variables?.fundDetailRequest;
+      url = ask ? `${url}/detail/${ask.pvNumber}/${ask.shareClassId}` : `${url}/finder`;
+    }
     mock.hits.push({ url });
     inFlight += 1;
     mock.peak = Math.max(mock.peak, inFlight);
@@ -438,6 +494,7 @@ function mockWorld(opts: { latency?: number; handler?: (url: string) => Response
       await new Promise((resolve) => setTimeout(resolve, opts.latency ?? 5));
       const custom = opts.handler?.(url);
       if (custom) return await custom;
+      if (url.endsWith('/services/funds/finder')) return new Response(FUND_FINDER_JSON);
       if (url.includes('am.gs.com/en-us/individual/funds?')) return new Response(FUND_FINDER_HTML);
       if (url.includes('am.gs.com')) return new Response(FUND_PAGE_HTML);
       if (url.includes('query1.finance.yahoo.com')) return new Response(chartJson());
@@ -691,6 +748,61 @@ describe('parsing', () => {
     expect(html.distributions.map((d) => d.amount)).toEqual([0.3409, 0.3447]);
     expect(html.topHoldings).toMatchObject({ top10Pct: 35.85, rows: [{ name: 'NVIDIA Corp', weight: 8.01 }, { name: 'Apple Inc', weight: 7.45 }] });
     expect(html.officialReturns.monthEnd.nav).toEqual({ asOfDate: '2026-08-31', mo1: 2.47, mo3: 2.14, ytd: 11.11, yr1: 16.62, cagr3y: 19.58, cagr5y: 11.38, cagr10y: 14.48, siAnn: null });
+  });
+
+  test('fund data API (direct path): finder and fund detail answers, identity checks, missing values are null', () => {
+    const funds = parseCatalogText(FUND_FINDER_JSON.replace('"funds":[', `"funds":[${JSON.stringify({ ...JSON.parse(FUND_FINDER_JSON).data.fundShareClasses.funds[0], ticker: 'GXXX', fundType: 'MF' })},`));
+    expect(funds.map((fund) => fund.ticker)).toEqual(['AAAU', 'GBIL']); // mutual funds are skipped
+    expect(funds[1]).toMatchObject({
+      name: 'Goldman Sachs Access Treasury 0-1 Year ETF', category: 'Fixed Income', cusip: '381430529', inception: '2016-09-06', nav: 99.98, asOfDate: '2026-09-17',
+      frequency: 'Monthly', returnsAsOf: '2026-08-31', returns: { yr1: 3.7, yr3: 4.52, yr5: 3.5, yr10: null, sinceInception: 2.31 }, source: 'goldman',
+      fundPage: 'https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf',
+    });
+    const young = parseCatalogText(JSON.stringify({ data: { fundShareClasses: { funds: [finderRow('GNEW', 'PV999999', '38149W999', 'Goldman Sachs New ETF', 'Equity', 'Annually', '2026-09-09', '23.94', ['--', '--', '--', '--', '--'], '--')] } } }));
+    expect(young[0]).toMatchObject({ returns: NULL_RETURNS, returnsAsOf: null, fundPage: 'https://am.gs.com/en-us/individual/funds/detail/PV999999/38149W999/goldman-sachs-new-etf' });
+    expect(isGsFinder(FUND_FINDER_JSON)).toBe(true);
+    expect(isGsFinder('{"errors":[{"message":"Validation Error"}],"data":{"fundShareClasses":null}}')).toBe(false);
+
+    const detail = parseProductPage(FUND_DETAIL_JSON, 'GBIL');
+    expect(detail).toMatchObject({
+      name: 'Goldman Sachs Access Treasury 0-1 Year ETF', cusip: '381430529', exchange: 'NYSE Arca', assetClass: 'Fixed Income', inception: '2016-09-06',
+      nav: 99.98, navChange: 0.01, navChangePct: 0.01, navAsOfDate: '2026-09-17', aumDaily: 7_877_700_000, aumMonthly: 7_639_030_000, aumMonthlyAsOfDate: '2026-08-31',
+      totalHoldings: 40, netExpenseRatio: 0.12, grossExpenseRatio: 0.14, marketPrice: 99.99, premiumDiscount: 0.01, pricingAsOfDate: '2026-09-17', bidAsk: 99.99,
+      premiumDays: 14, atNavDays: 32, discountDays: 16, distRate12M: 3.67, secYieldSubsidized: 3.69, secYieldUnsubsidized: 3.67, yieldsAsOfDate: '2026-08-31',
+      navTicker: 'GBIL.NV', iopvTicker: 'GBILIV', loadedFully: true,
+    });
+    expect(detail.distributions).toEqual([{ epoch: Date.UTC(2025, 11, 31) / 1000, amount: 0.3382 }, { epoch: Date.UTC(2026, 8, 1) / 1000, amount: 0.3047 }]);
+    expect(detail.topHoldings).toEqual({ asOfDate: '2026-09-17', top10Pct: 14.35, rows: [{ name: 'US GOVT T-BILL 08 OCT 2026', weight: 7.2 }, { name: 'US GOVT T-BILL 27 NOV 2026', weight: 7.15 }] });
+    // the same official returns the rendered page gives (see the proxied markdown sample above)
+    expect(detail.officialReturns).toEqual(parseProductPage(FUND_PAGE_MARKDOWN, 'GBIL').officialReturns);
+
+    // a fund without distributions, holdings, fees or yields (AAAU-like): honest nulls, never 0
+    const bare = parseProductPage(JSON.stringify({ data: { fundsDetail: { ticker: 'AAAU', fundName: 'Goldman Sachs Physical Gold ETF', intradayNavTicker: 'N/A', quickStats: [{ label: 'lbmaGoldPrice', asAtDate: '2026-10-14', value: '4089.25' }], distributions: null, topHoldings: null, yield: [], annualizedReturns: [{ id: 'nav', oneYr: '8.98', tenYr: 'N/A' }] } } }), 'AAAU');
+    expect(bare).toMatchObject({ nav: null, aumDaily: null, totalHoldings: null, netExpenseRatio: null, grossExpenseRatio: null, marketPrice: null, premiumDays: null, distRate12M: null, secYieldSubsidized: null, yieldsAsOfDate: null, distributions: [], topHoldings: null, iopvTicker: '', lbmaGoldPrice: 4089.25, lbmaGoldPriceAsOfDate: '2026-10-14' });
+    expect(bare.officialReturns.monthEnd.nav).toMatchObject({ yr1: 8.98, cagr10y: null, mo1: null });
+    expect(bare.officialReturns.quarterEnd.nav).toBeNull();
+    // a partial answer (month-end tables missing, quarterly present, no pricing table) is not a loaded page: published sections are kept
+    const partial = JSON.parse(FUND_DETAIL_JSON);
+    partial.data.fundsDetail.cumulativeReturns = null;
+    partial.data.fundsDetail.annualizedReturns = [];
+    expect(parseProductPage(JSON.stringify(partial), 'GBIL')).toMatchObject({ loadedFully: false, sections: { pricing: true, returns: false } });
+    expect(bare).toMatchObject({ loadedFully: false, sections: { pricing: false, returns: false } });
+    // a fund under one year has no Annualized table: still complete
+    const underOneYear = JSON.parse(FUND_DETAIL_JSON);
+    underOneYear.data.fundsDetail.annualizedReturns = null;
+    expect(parseProductPage(JSON.stringify(underOneYear), 'GBIL')).toMatchObject({ loadedFully: true, officialReturns: { monthEnd: { nav: { mo1: 0.31, yr1: null, siAnn: 2.31 } } } });
+    // a fund too young for returns has no returns table at all: that is a complete answer with honest nulls
+    const young2 = JSON.parse(FUND_DETAIL_JSON);
+    for (const key of ['cumulativeReturns', 'annualizedReturns', 'averageAnnualizedReturns', 'quarterlyAnnualizedReturns']) young2.data.fundsDetail[key] = null;
+    expect(parseProductPage(JSON.stringify(young2), 'GBIL')).toMatchObject({ loadedFully: true, officialReturns: { monthEnd: { nav: null }, quarterEnd: { nav: null } } });
+
+    // the direct answer must be this fund's (identity) and error-free
+    expect(isGsFundDetail(FUND_DETAIL_JSON, 'GBIL')).toBe(true);
+    expect(isGsFundDetail(FUND_DETAIL_JSON, 'GSLC')).toBe(false);
+    expect(isGsFundDetail('{"data":{"fundsDetail":null}}', 'GBIL')).toBe(false);
+    expect(isGsFundDetail(FUND_PAGE_HTML, 'GSLC')).toBe(false);
+    expect(gsDetailVariables('https://am.gs.com/en-us/individual/funds/detail/PV102645/381430529/goldman-sachs-access-treasury-0-1-year-etf')).toEqual({ fundDetailRequest: { country: 'us', language: 'en', audience: 'individual', pvNumber: 'PV102645', shareClassId: '381430529' } });
+    expect(gsDetailVariables('https://am.gs.com/en-us/individual/funds')).toBeNull();
   });
 
   test('page-loaded check: the pricing table and the performance tables must both be present', () => {
