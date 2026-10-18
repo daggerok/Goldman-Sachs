@@ -171,11 +171,11 @@ function outputCounts(funds: number, holdings: number, history: number): string 
 //                 (Quick Stats, Key Facts, Fees & Expenses, Pricing Table,
 //                 Cumulative/Annualized/Quarterly returns, Rate, Distributions,
 //                 Allocations top-10)
-//   holdings      SEC EDGAR Form N-PORT-P for the exact series (the issuer
-//                 publishes only the top-10 holdings on the fund page; the
-//                 "All Holdings download" is a JavaScript export with no stable
-//                 public file URL, so there is no issuer CSV to fetch; the
-//                 previous run is the last resort)
+//   holdings      the All Holdings list of the fund page, read from the fund
+//                 data API (daily, every position); SEC EDGAR Form N-PORT-P
+//                 for the exact series only when that list is missing
+//                 (EDGAR_FALLBACK, never older than the published holdings);
+//                 the previous run is the last resort
 //   distributions the Distributions table on the official fund page (Yahoo
 //                 dividend events as the fallback)
 //   history       Yahoo Finance's public chart endpoint (daily close, adjusted
@@ -744,7 +744,7 @@ const GS_CATALOG_URL = `${GS_SITE}/en-us/individual/funds?locale=en-us&audience=
 const GS_FUNDS_API = `${GS_SITE}/services/funds`;
 const GS_REQUEST_LOCALE = { country: 'us', language: 'en', audience: 'individual' } as const;
 const GS_FINDER_QUERY = 'query getFundShareClasses($fundRequest: FundRequest) { fundShareClasses(fundRequest: $fundRequest) { funds { fundName fundType pvNumber shareClassId ticker marketingAssetClass distributionFrequency shareClassInceptionDate dailyPerformance { nav { asAtDate value } } monthlyPerformance { asAtDate annualisedReturns1yr annualisedReturns3yr annualisedReturns5yr annualisedReturns10yr annualisedReturnsSinceIncept } } } }';
-const GS_DETAIL_QUERY = 'query getFundsDetail($fundDetailRequest: FundDetailRequest) { fundsDetail(fundDetailRequest: $fundDetailRequest) { fundName ticker cusip marketingAssetClass fundInceptionDate benchmark exchange navTicker intradayNavTicker quickStats { label asAtDate value currency suffix upDownValue upDownPctValue } feesAndExpenses { label asAtDate value suffix } pricingTable { label asAtDate value currency suffix } cumulativeReturnsAsAtDate cumulativeReturns annualizedReturnsAsAtDate annualizedReturns averageAnnualizedReturnsAsAtDate averageAnnualizedReturns quarterlyAnnualizedReturnsAsAtDate quarterlyAnnualizedReturns yield { label value asAtDate } distributions premiumsAndDiscount { asAtDate quarterInsights { id insights { label value } } } topHoldings { asAtDate data { series { name dataset { name y } } } } } }';
+const GS_DETAIL_QUERY = 'query getFundsDetail($fundDetailRequest: FundDetailRequest) { fundsDetail(fundDetailRequest: $fundDetailRequest) { fundName ticker cusip marketingAssetClass fundInceptionDate benchmark exchange navTicker intradayNavTicker quickStats { label asAtDate value currency suffix upDownValue upDownPctValue } feesAndExpenses { label asAtDate value suffix } pricingTable { label asAtDate value currency suffix } cumulativeReturnsAsAtDate cumulativeReturns annualizedReturnsAsAtDate annualizedReturns averageAnnualizedReturnsAsAtDate averageAnnualizedReturns quarterlyAnnualizedReturnsAsAtDate quarterlyAnnualizedReturns yield { label value asAtDate } distributions premiumsAndDiscount { asAtDate quarterInsights { id insights { label value } } } topHoldings { asAtDate data { series { name dataset { name y } } } } allHoldings { asAtDate holdings { coupon cusip holding isin marketValue maturityDate numberOfShares order portfolio sedol ticker } } } }';
 const PROXY_PREFIX = 'https://r.jina.ai/';
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const SEC_SITE = 'https://www.sec.gov';
@@ -768,6 +768,8 @@ export function setApiRootForTests(root: URL): void {
 
 const HOLDINGS_HEADERS = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'];
 const BOND_HOLDINGS_HEADERS = [...HOLDINGS_HEADERS, 'Coupon', 'Maturity'];
+/** Columns the fund data API adds to the sheet (a superset: the shared columns keep their positions). */
+const GS_HOLDINGS_EXTRA_HEADERS = ['ISIN', 'SEDOL'];
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const TRUTHY = new Set(['1', 'true', 'yes', 'y', 'on']);
 const AUM_BOUNDS = { nano: [0, 10_000_000], micro: [10_000_000, 300_000_000], small: [300_000_000, 2_000_000_000], mid: [2_000_000_000, 10_000_000_000], large: [10_000_000_000, undefined] } as const;
@@ -861,6 +863,9 @@ export type OfficialReturns = {
   quarterEnd: { nav: OfficialReturnRow | null; marketPrice: OfficialReturnRow | null };
 };
 
+/** Full holdings list of the fund data API, already in sheet shape. */
+export type GsHoldings = { asOfDate: string | null; headers: string[]; rows: JsonRecord[] };
+
 /** Official top-10 holdings block of the Allocations tab. */
 export type GsTopHoldings = {
   asOfDate: string | null;
@@ -913,6 +918,8 @@ export type ProductPageSummary = {
   /** Distributions table, ascending by ex-date, deduplicated. */
   distributions: Distribution[];
   topHoldings: GsTopHoldings | null;
+  /** Full daily holdings list of the fund data API (direct path only; null when the answer carries none). */
+  allHoldings: GsHoldings | null;
   officialReturns: OfficialReturns;
   /** Which sections of the page are present at all (a heading or labelled value), whether or not their values parsed. */
   sections: PageSections;
@@ -2055,7 +2062,7 @@ function emptyProductSummary(): ProductPageSummary {
     bidAsk: null, bidAskSpread30d: null,
     premiumDays: null, atNavDays: null, discountDays: null,
     distRate12M: null, secYieldSubsidized: null, secYieldUnsubsidized: null, yieldsAsOfDate: null,
-    navTicker: '', iopvTicker: '', distributions: [], topHoldings: null,
+    navTicker: '', iopvTicker: '', distributions: [], topHoldings: null, allHoldings: null,
     officialReturns: { monthEnd: { nav: null, marketPrice: null }, quarterEnd: { nav: null, marketPrice: null } },
     sections: { ...NO_SECTIONS }, loadedFully: false,
   };
@@ -2071,6 +2078,47 @@ function apiText(value: unknown): string {
 function apiDate(value: unknown): string | null {
   const iso = toIsoDate(value);
   return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null;
+}
+
+/** A decimal string as published, without float noise ('-8.729369935E7' -> '-87293699.35'); '' when absent. */
+function apiNumberText(value: unknown): string {
+  const number = numberOrNull(value);
+  return number === null ? '' : String(Number(number.toPrecision(15)));
+}
+
+/**
+ * The fund data API `allHoldings` list (the All Holdings table of the fund page, daily) -> holdings
+ * sheet rows with the shared columns plus ISIN and SEDOL. Weight is the issuer's own portfolio
+ * percentage, Market Value its USD market value, Shares Held its share or par amount. The API's
+ * ticker of a bond is the issuer's equity ticker (a JNJ bond says JNJ), so positions with a coupon
+ * or a maturity date get '-' and are keyed by their identifier, as the N-PORT sheets were. The API
+ * publishes no asset category: that column stays empty rather than guessed. Rows stay in the
+ * issuer's order, duplicates included (the issuer lists them). Null when the answer has no list.
+ */
+export function parseGsAllHoldings(value: unknown): GsHoldings | null {
+  const block = value && typeof value === 'object' ? (value as JsonRecord) : null;
+  const list = Array.isArray(block?.holdings) ? (block?.holdings as unknown[]).filter((row): row is JsonRecord => Boolean(row) && typeof row === 'object') : [];
+  if (!block || !list.length) return null;
+  const ordered = list.map((row, index) => ({ row, index })).sort((a, b) => (numberOrNull(a.row.order) ?? a.index) - (numberOrNull(b.row.order) ?? b.index) || a.index - b.index);
+  const bond = list.some((row) => numberOrNull(row.coupon) !== null || apiDate(row.maturityDate) !== null);
+  const rows = ordered.map(({ row }) => {
+    const debt = numberOrNull(row.coupon) !== null || apiDate(row.maturityDate) !== null;
+    const out: JsonRecord = {
+      Name: apiText(row.holding),
+      Ticker: debt ? '-' : apiText(row.ticker) || '-',
+      Identifier: apiText(row.cusip) || apiText(row.isin) || apiText(row.sedol),
+      Weight: apiNumberText(row.portfolio),
+      'Market Value': apiNumberText(row.marketValue),
+      'Shares Held': apiNumberText(row.numberOfShares),
+      'Asset Category': '',
+    };
+    if (bond) { out.Coupon = apiNumberText(row.coupon); out.Maturity = apiDate(row.maturityDate) || ''; }
+    out.ISIN = apiText(row.isin);
+    out.SEDOL = apiText(row.sedol);
+    return out;
+  }).filter((row) => row.Name || row.Identifier);
+  if (!rows.length) return null;
+  return { asOfDate: apiDate(block.asAtDate), headers: [...(bond ? BOND_HOLDINGS_HEADERS : HOLDINGS_HEADERS), ...GS_HOLDINGS_EXTRA_HEADERS], rows };
 }
 
 /**
@@ -2211,6 +2259,7 @@ export function parseFundDetail(detail: JsonRecord, ticker: string, now: Date = 
     iopvTicker: apiText(detail.intradayNavTicker),
     distributions,
     topHoldings,
+    allHoldings: parseGsAllHoldings(detail.allHoldings),
     officialReturns,
   };
 }
@@ -3145,7 +3194,8 @@ async function finalizeRow(row: JsonRecord): Promise<JsonRecord> {
 // ---------------------------------------------------------------------------
 
 const OFFICIAL_PRICING_SOURCE = 'official fund page Pricing Table';
-const PROVIDER_LABEL = 'Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API';
+const PROVIDER_LABEL = 'Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API';
+const GS_HOLDINGS_SOURCE = 'Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily';
 
 /**
  * May this N-PORT filing replace the published holdings? Identity: the filing must name the fund's series.
@@ -3304,17 +3354,33 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   }
   if (!fund.isin && fund.cusip) fund.isin = isinFromCusip(fund.cusip);
 
-  // 2. Holdings: N-PORT-P -> previous run --------------------------------------
-  // The issuer publishes only the top-10 holdings on the fund page; the 'All
-  // Holdings download' is a JavaScript export with no stable public file URL,
-  // so the public SEC filing is the primary full-holdings source.
+  // 2. Holdings: fund data API allHoldings -> N-PORT-P (EDGAR_FALLBACK) -> previous run ----------
+  // The fund data API answer carries the fund page's All Holdings table (daily, every position). It
+  // arrives with the identity-checked fund answer; an older list than the published one never
+  // replaces it. Only when it is missing (proxy rendering, an empty or failed list) the public SEC
+  // N-PORT-P filing is tried, which is months older and so never replaces published daily holdings
+  // (checkNportFiling); otherwise the published sheet is kept as it is.
   let holdingsRows: JsonRecord[] = [];
   let holdingsHeaders: string[] = HOLDINGS_HEADERS;
   let holdingsAsOf: string | null = null;
-  let holdingsSource = 'not available from a public SEC filing (the issuer publishes only top-10 holdings)';
+  let holdingsSource = 'not available (no fund data API holdings list and no public SEC filing)';
   let holdingsDownload: string | null = null;
   let marketValueBasis: string | null = null;
   let nport: ParsedNport | null = null;
+  const apiHoldings = summary?.allHoldings ?? null;
+  if (apiHoldings) {
+    const published = toIsoDate(previousMeta?.holdings?.asOfDate ?? '');
+    const stale = apiHoldings.asOfDate !== null && /^\d{4}-\d{2}-\d{2}$/.test(published) && apiHoldings.asOfDate < published;
+    if (stale) outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: fund data API list ${apiHoldings.asOfDate} is older than the published holdings ${published}; keeping the published holdings`);
+    else {
+      holdingsRows = apiHoldings.rows;
+      holdingsHeaders = apiHoldings.headers;
+      holdingsAsOf = apiHoldings.asOfDate;
+      holdingsDownload = fund.fundPage;
+      holdingsSource = `${GS_HOLDINGS_SOURCE}${apiHoldings.asOfDate ? `, as of ${apiHoldings.asOfDate}` : ''})`;
+      marketValueBasis = 'Goldman Sachs fund data API market value (USD)';
+    }
+  }
   if (!holdingsRows.length && config.edgarFallback) {
     try {
       const filing = await resolveNportFiling(fund, config);
@@ -3575,8 +3641,9 @@ Sources:
   fund page     official per-fund page: Quick Stats, Key Facts, Fees &
                 Expenses, Pricing Table, Cumulative/Annualized/Quarterly
                 returns, Rate, Distributions table, top-10 holdings
-  holdings      SEC EDGAR Form N-PORT-P for the exact series (the issuer
-                publishes only top-10 holdings; no issuer CSV exists)
+  holdings      the fund page's All Holdings list from the fund data API
+                (daily, every position); SEC EDGAR Form N-PORT-P for the
+                exact series only when that list is missing (EDGAR_FALLBACK)
   distributions Distributions table on the official fund page (Yahoo
                 dividend events as the fallback)
   history       Yahoo Finance public chart API (adjusted market-price closes)
@@ -3602,7 +3669,7 @@ workflow inputs < environment variables, resolved by one shared resolveControls:
   SEC_UA=             SEC User-Agent override (declare a contact; blank uses the built-in descriptor)
   VERBOSE=off         print per-fund retry and fallback notices
   USE_SYSTEM_CA=auto  TLS trust store: auto restarts once with --use-system-ca on an untrusted-certificate error, true always, false never
-  EDGAR_FALLBACK=true
+  EDGAR_FALLBACK=true SEC N-PORT-P holdings when the fund data API list is missing
   SKIP_GOLDMANSACHS=off use the previously published catalog/fund-page data
   SKIP_YAHOO=off      keep previously published history when possible
 
@@ -3743,7 +3810,7 @@ export async function main(env: Record<string, string | undefined> = process.env
       site: GS_SITE,
       catalog: GS_CATALOG_URL,
       catalogFallback: proxyUrl(GS_CATALOG_URL),
-      holdings: 'SEC EDGAR Form N-PORT-P per fund (the issuer publishes only top-10 holdings)',
+      holdings: 'Goldman Sachs fund data API All Holdings per fund (daily; SEC EDGAR Form N-PORT-P fallback)',
       distributions: 'official fund-page Distributions table per fund (Yahoo dividend events fallback)',
       history: 'Yahoo Finance public chart API (adjusted close)',
     },
