@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028065/0000940400-26-028065.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028065, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$69.07",
-    "value": 69.07,
-    "asOfDate": "Oct 09 2026"
+    "display": "$65.08",
+    "value": 65.08,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$68.84",
-    "value": 68.84,
-    "asOfDate": "Oct 09 2026",
+    "display": "$65.81",
+    "value": 65.81,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.33%",
-    "value": -0.33,
-    "asOfDate": "Oct 09 2026",
+    "display": "1.13%",
+    "value": 1.13,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$138.13 M",
-    "value": 138130000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$130.16 M",
+    "value": 130160000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1808,
-    "bidAskMidpoint": 68.85,
+    "publishedTotalHoldings": 1806,
+    "bidAskMidpoint": 65.83,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 34,
+    "atNavDays": 0,
+    "discountDays": 30
   },
   "yields": {
     "dividendYield": 2.07,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.69%",
       "mo3": -0.81,
       "mo3Text": "-0.81%",
-      "qtd": -0.95,
-      "qtdText": "-0.95%",
+      "qtd": -5.88,
+      "qtdText": "-5.88%",
       "ytd": 22.01,
       "ytdText": "22.01%",
       "yr1": 27.24,
@@ -155,7 +155,7 @@
     "frequency": "Annually",
     "frequencyCode": "12 - Annually",
     "paymentsPerYear": 1,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,35 +163,35 @@
     "rows": [
       [
         "09/24/2020",
-        "1.057"
+        "1.0572"
       ],
       [
         "12/24/2020",
-        "0.265"
+        "0.2646"
       ],
       [
         "06/24/2021",
-        "0.176"
+        "0.1762"
       ],
       [
         "09/24/2021",
-        "1.64"
+        "1.6399"
       ],
       [
         "12/27/2021",
-        "1.257"
+        "1.2566"
       ],
       [
         "03/25/2022",
-        "0.716"
+        "0.7163"
       ],
       [
         "06/24/2022",
-        "0.261"
+        "0.2607"
       ],
       [
         "09/26/2022",
-        "0.225"
+        "0.2249"
       ],
       [
         "03/27/2023",
@@ -199,7 +199,7 @@
       ],
       [
         "06/26/2023",
-        "0.219"
+        "0.2187"
       ],
       [
         "09/25/2023",
@@ -207,19 +207,65 @@
       ],
       [
         "12/26/2023",
-        "0.154"
+        "0.1538"
       ],
       [
         "12/23/2024",
-        "1.207"
+        "1.2071"
       ],
       [
         "12/23/2025",
-        "1.423"
+        "1.4233"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 33.94,
+    "rows": [
+      {
+        "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+        "weight": 14.52
+      },
+      {
+        "name": "Samsung Electronics Co Ltd",
+        "weight": 5.85
+      },
+      {
+        "name": "SK hynix Inc",
+        "weight": 4.24
+      },
+      {
+        "name": "Tencent Holdings Ltd",
+        "weight": 2.66
+      },
+      {
+        "name": "Alibaba Group Holding Ltd",
+        "weight": 1.99
+      },
+      {
+        "name": "MediaTek Inc",
+        "weight": 1.48
+      },
+      {
+        "name": "China Construction Bank Corp",
+        "weight": 0.96
+      },
+      {
+        "name": "Delta Electronics Inc",
+        "weight": 0.76
+      },
+      {
+        "name": "Samsung Electronics Co Ltd",
+        "weight": 0.76
+      },
+      {
+        "name": "Hon Hai Precision Industry Co Ltd",
+        "weight": 0.72
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -237,7 +283,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028065, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 1808
+    "publishedTotalHoldings": 1806
   },
   "history": {
     "pages": [
@@ -245,8 +291,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1608,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1612,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

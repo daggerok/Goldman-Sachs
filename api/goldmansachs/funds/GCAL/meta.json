@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105933/38149W564/goldman-sachs-dynamic-california-municipal-income-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028071/0000940400-26-028071.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCAL",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028071, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.43",
-    "value": 48.43,
-    "asOfDate": "Oct 09 2026"
+    "display": "$48.96",
+    "value": 48.96,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$48.47",
-    "value": 48.47,
-    "asOfDate": "Oct 09 2026",
+    "display": "$49.02",
+    "value": 49.02,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.08%",
-    "value": 0.08,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.11%",
+    "value": 0.11,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$227.63 M",
-    "value": 227630000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$232.57 M",
+    "value": 232570000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 399,
-    "bidAskMidpoint": 48.47,
+    "publishedTotalHoldings": 404,
+    "bidAskMidpoint": 49.02,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 60,
+    "atNavDays": 1,
+    "discountDays": 3
   },
   "yields": {
     "dividendYield": 3.78,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.45%",
       "mo3": -4.53,
       "mo3Text": "-4.53%",
-      "qtd": -0.19,
-      "qtdText": "-0.19%",
+      "qtd": 1.03,
+      "qtdText": "1.03%",
       "ytd": -2.44,
       "ytdText": "-2.44%",
       "yr1": -0.86,
@@ -155,7 +155,7 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,19 +163,19 @@
     "rows": [
       [
         "09/03/2024",
-        "0.156"
+        "0.1564"
       ],
       [
         "10/01/2024",
-        "0.147"
+        "0.1467"
       ],
       [
         "11/01/2024",
-        "0.131"
+        "0.1313"
       ],
       [
         "12/02/2024",
-        "0.132"
+        "0.1316"
       ],
       [
         "12/31/2024",
@@ -183,47 +183,47 @@
       ],
       [
         "02/03/2025",
-        "0.132"
+        "0.1316"
       ],
       [
         "03/03/2025",
-        "0.101"
+        "0.1005"
       ],
       [
         "04/01/2025",
-        "0.145"
+        "0.1446"
       ],
       [
         "05/01/2025",
-        "0.109"
+        "0.1091"
       ],
       [
         "06/02/2025",
-        "0.133"
+        "0.1334"
       ],
       [
         "07/01/2025",
-        "0.133"
+        "0.1325"
       ],
       [
         "08/01/2025",
-        "0.058"
+        "0.0576"
       ],
       [
         "09/02/2025",
-        "0.139"
+        "0.1394"
       ],
       [
         "10/01/2025",
-        "0.158"
+        "0.1578"
       ],
       [
         "11/03/2025",
-        "0.153"
+        "0.1533"
       ],
       [
         "12/01/2025",
-        "0.14"
+        "0.1404"
       ],
       [
         "12/31/2025",
@@ -231,39 +231,39 @@
       ],
       [
         "02/02/2026",
-        "0.155"
+        "0.1546"
       ],
       [
         "03/02/2026",
-        "0.144"
+        "0.1439"
       ],
       [
         "04/01/2026",
-        "0.16"
+        "0.1602"
       ],
       [
         "05/01/2026",
-        "0.151"
+        "0.1509"
       ],
       [
         "06/01/2026",
-        "0.145"
+        "0.1454"
       ],
       [
         "07/01/2026",
-        "0.163"
+        "0.1633"
       ],
       [
         "08/03/2026",
-        "0.155"
+        "0.1546"
       ],
       [
         "09/01/2026",
-        "0.15"
+        "0.1496"
       ],
       [
         "10/01/2026",
-        "0.136"
+        "0.1362"
       ]
     ]
   },
@@ -279,15 +279,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028071, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 399
+    "publishedTotalHoldings": 404
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 552,
-    "asOf": "Oct 12 2026",
+    "totalRows": 556,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

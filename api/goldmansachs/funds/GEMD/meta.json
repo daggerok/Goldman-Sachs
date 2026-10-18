@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028186/0000940400-26-028186.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GEMD",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028186, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$39.95",
-    "value": 39.95,
-    "asOfDate": "Oct 09 2026"
+    "display": "$40.20",
+    "value": 40.2,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$39.88",
-    "value": 39.88,
-    "asOfDate": "Oct 09 2026",
+    "display": "$40.20",
+    "value": 40.2,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.17%",
-    "value": -0.17,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$33.95 M",
-    "value": 33950000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$34.17 M",
+    "value": 34170000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 202,
-    "bidAskMidpoint": 39.89,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": 40.21,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 1,
+    "atNavDays": 0,
+    "discountDays": 63
   },
   "yields": {
     "dividendYield": 6.02,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.41%",
       "mo3": -4.46,
       "mo3Text": "-4.46%",
-      "qtd": 1.01,
-      "qtdText": "1.01%",
+      "qtd": 1.65,
+      "qtdText": "1.65%",
       "ytd": -2.19,
       "ytdText": "-2.19%",
       "yr1": 0.9,
@@ -155,7 +155,7 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,71 +163,67 @@
     "rows": [
       [
         "03/01/2022",
-        "0.077"
+        "0.0773"
       ],
       [
         "04/01/2022",
-        "0.175"
-      ],
-      [
-        "05/03/2022",
-        "0.211"
+        "0.1752"
       ],
       [
         "06/01/2022",
-        "0.201"
+        "0.2011"
       ],
       [
         "07/01/2022",
-        "0.226"
+        "0.2262"
       ],
       [
         "08/01/2022",
-        "0.249"
+        "0.2491"
       ],
       [
         "09/01/2022",
-        "0.24"
+        "0.2405"
       ],
       [
         "10/03/2022",
-        "0.197"
+        "0.1971"
       ],
       [
         "11/01/2022",
-        "0.178"
+        "0.1777"
       ],
       [
         "12/01/2022",
-        "0.195"
+        "0.1951"
       ],
       [
         "12/27/2022",
-        "0.212"
+        "0.2122"
       ],
       [
         "02/01/2023",
-        "0.213"
+        "0.2131"
       ],
       [
         "03/01/2023",
-        "0.188"
+        "0.1881"
       ],
       [
         "04/03/2023",
-        "0.197"
+        "0.1971"
       ],
       [
         "05/01/2023",
-        "0.194"
+        "0.1936"
       ],
       [
         "06/01/2023",
-        "0.156"
+        "0.1564"
       ],
       [
         "07/03/2023",
-        "0.197"
+        "0.1973"
       ],
       [
         "08/01/2023",
@@ -235,19 +231,19 @@
       ],
       [
         "09/01/2023",
-        "0.194"
+        "0.1942"
       ],
       [
         "10/02/2023",
-        "0.186"
+        "0.1861"
       ],
       [
         "11/01/2023",
-        "0.204"
+        "0.2035"
       ],
       [
         "12/01/2023",
-        "0.194"
+        "0.1937"
       ],
       [
         "12/27/2023",
@@ -255,83 +251,83 @@
       ],
       [
         "02/01/2024",
-        "0.192"
+        "0.1924"
       ],
       [
         "03/01/2024",
-        "0.181"
+        "0.1807"
       ],
       [
         "04/01/2024",
-        "0.179"
+        "0.1794"
       ],
       [
         "05/01/2024",
-        "0.205"
+        "0.2054"
       ],
       [
         "06/03/2024",
-        "0.198"
+        "0.1982"
       ],
       [
         "07/01/2024",
-        "0.18"
+        "0.1804"
       ],
       [
         "08/01/2024",
-        "0.206"
+        "0.2063"
       ],
       [
         "09/03/2024",
-        "0.176"
+        "0.1761"
       ],
       [
         "10/01/2024",
-        "0.196"
+        "0.1959"
       ],
       [
         "11/01/2024",
-        "0.195"
+        "0.1952"
       ],
       [
         "12/02/2024",
-        "0.188"
+        "0.1876"
       ],
       [
         "12/31/2024",
-        "0.212"
+        "0.2124"
       ],
       [
         "02/03/2025",
-        "0.189"
+        "0.1888"
       ],
       [
         "03/03/2025",
-        "0.188"
+        "0.1883"
       ],
       [
         "04/01/2025",
-        "0.196"
+        "0.1962"
       ],
       [
         "05/01/2025",
-        "0.49"
+        "0.4897"
       ],
       [
         "06/02/2025",
-        "0.207"
+        "0.2065"
       ],
       [
         "07/01/2025",
-        "0.2"
+        "0.1996"
       ],
       [
         "08/01/2025",
-        "0.196"
+        "0.1959"
       ],
       [
         "09/02/2025",
-        "0.19"
+        "0.1897"
       ],
       [
         "10/01/2025",
@@ -339,55 +335,101 @@
       ],
       [
         "11/03/2025",
-        "0.206"
+        "0.2056"
       ],
       [
         "12/01/2025",
-        "0.184"
+        "0.1844"
       ],
       [
         "12/31/2025",
-        "0.211"
+        "0.2109"
       ],
       [
         "02/02/2026",
-        "0.195"
+        "0.1953"
       ],
       [
         "03/02/2026",
-        "0.176"
+        "0.1757"
       ],
       [
         "04/01/2026",
-        "0.224"
+        "0.2241"
       ],
       [
         "05/01/2026",
-        "0.198"
+        "0.1979"
       ],
       [
         "06/01/2026",
-        "0.191"
+        "0.1907"
       ],
       [
         "07/01/2026",
-        "0.198"
+        "0.1983"
       ],
       [
         "08/03/2026",
-        "0.201"
+        "0.2013"
       ],
       [
         "09/01/2026",
-        "0.202"
+        "0.2018"
       ],
       [
         "10/01/2026",
-        "0.237"
+        "0.2367"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 10.73,
+    "rows": [
+      {
+        "name": "ARGENTINIAN GOVT 4.125% 09 JUL 2035",
+        "weight": 1.34
+      },
+      {
+        "name": "BRAZILIAN GOVT 4.625% 13 JAN 2028",
+        "weight": 1.13
+      },
+      {
+        "name": "KUWAITI GOVT 4.136% 09 OCT 2030 REGS",
+        "weight": 1.12
+      },
+      {
+        "name": "INDONESIAN GOVT 4.65% 20 SEP 2032",
+        "weight": 1.12
+      },
+      {
+        "name": "URUGUAYAN GOVT 4.375% 23 JAN 2031",
+        "weight": 1.05
+      },
+      {
+        "name": "CHINESE GOVT 4.25% 20 NOV 2029 REGS",
+        "weight": 1.05
+      },
+      {
+        "name": "KENYAN GOVT 8.25% 28 FEB 2048 REGS",
+        "weight": 1.04
+      },
+      {
+        "name": "PERUVIAN GOVT 8.75% 21 NOV 2033",
+        "weight": 1.01
+      },
+      {
+        "name": "MEXICAN GOVT 4.5% 22 APR 2029",
+        "weight": 0.96
+      },
+      {
+        "name": "ROMANIAN GOVT 7.125% 17 JAN 2033 REGS",
+        "weight": 0.91
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -397,8 +439,7 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028186, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 202
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
     "pages": [
@@ -406,8 +447,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1165,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1169,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

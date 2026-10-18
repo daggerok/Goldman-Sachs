@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103362/381430180/goldman-sachs-market-beta-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103362/381430180/goldman-sachs-market-beta-international-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028084/0000940400-26-028084.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSID",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028084, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$74.14",
-    "value": 74.14,
-    "asOfDate": "Oct 09 2026"
+    "display": "$74.16",
+    "value": 74.16,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$74.43",
-    "value": 74.43,
-    "asOfDate": "Oct 09 2026",
+    "display": "$74.76",
+    "value": 74.76,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.38%",
-    "value": 0.38,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.81%",
+    "value": 0.81,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$971.20 M",
-    "value": 971200000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$971.48 M",
+    "value": 971480000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 895,
-    "bidAskMidpoint": 74.5,
+    "bidAskMidpoint": 74.69,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 42,
+    "atNavDays": 1,
+    "discountDays": 21
   },
   "yields": {
     "dividendYield": 2.5,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.93%",
       "mo3": 1.15,
       "mo3Text": "1.15%",
-      "qtd": 0.01,
-      "qtdText": "0.01%",
+      "qtd": 0.46,
+      "qtdText": "0.46%",
       "ytd": 10.73,
       "ytdText": "10.73%",
       "yr1": 16.01,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,59 +163,59 @@
     "rows": [
       [
         "09/24/2020",
-        "0.219"
+        "0.2193"
       ],
       [
         "12/24/2020",
-        "0.318"
+        "0.3178"
       ],
       [
         "03/25/2021",
-        "0.216"
+        "0.2158"
       ],
       [
         "06/24/2021",
-        "0.55"
+        "0.5503"
       ],
       [
         "09/24/2021",
-        "0.593"
+        "0.5934"
       ],
       [
         "12/27/2021",
-        "0.296"
+        "0.2958"
       ],
       [
         "03/25/2022",
-        "0.224"
+        "0.2245"
       ],
       [
         "06/24/2022",
-        "0.668"
+        "0.6685"
       ],
       [
         "09/26/2022",
-        "0.085"
+        "0.0848"
       ],
       [
         "12/27/2022",
-        "0.229"
+        "0.2285"
       ],
       [
         "03/27/2023",
-        "0.242"
+        "0.2424"
       ],
       [
         "06/26/2023",
-        "0.821"
+        "0.8206"
       ],
       [
         "09/25/2023",
-        "0.132"
+        "0.1315"
       ],
       [
         "12/26/2023",
-        "0.2"
+        "0.1995"
       ],
       [
         "03/22/2024",
@@ -223,27 +223,27 @@
       ],
       [
         "06/24/2024",
-        "0.703"
+        "0.7028"
       ],
       [
         "09/24/2024",
-        "0.342"
+        "0.3419"
       ],
       [
         "12/23/2024",
-        "0.291"
+        "0.2906"
       ],
       [
         "03/25/2025",
-        "0.239"
+        "0.2394"
       ],
       [
         "06/24/2025",
-        "0.868"
+        "0.8676"
       ],
       [
         "09/24/2025",
-        "0.368"
+        "0.3675"
       ],
       [
         "12/23/2025",
@@ -251,19 +251,65 @@
       ],
       [
         "03/25/2026",
-        "0.239"
+        "0.2386"
       ],
       [
         "06/24/2026",
-        "0.899"
+        "0.8985"
       ],
       [
         "09/24/2026",
-        "0.388"
+        "0.3876"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 13.78,
+    "rows": [
+      {
+        "name": "ASML Holding NV",
+        "weight": 2.82
+      },
+      {
+        "name": "HSBC Holdings PLC",
+        "weight": 1.48
+      },
+      {
+        "name": "Roche Holding AG",
+        "weight": 1.47
+      },
+      {
+        "name": "Shell PLC",
+        "weight": 1.32
+      },
+      {
+        "name": "Novartis AG",
+        "weight": 1.26
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "weight": 1.14
+      },
+      {
+        "name": "Nestle SA",
+        "weight": 1.13
+      },
+      {
+        "name": "Mitsubishi UFJ Financial Group Inc",
+        "weight": 1.12
+      },
+      {
+        "name": "SAP SE",
+        "weight": 1.04
+      },
+      {
+        "name": "Siemens AG",
+        "weight": 1
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -285,8 +331,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1608,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1612,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

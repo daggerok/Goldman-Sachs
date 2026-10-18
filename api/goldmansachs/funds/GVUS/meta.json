@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028123/0000940400-26-028123.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVUS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028123, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$65.08",
-    "value": 65.08,
-    "asOfDate": "Oct 09 2026"
+    "display": "$65.73",
+    "value": 65.73,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$65.07",
-    "value": 65.07,
-    "asOfDate": "Oct 09 2026",
+    "display": "$65.73",
+    "value": 65.73,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.02,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$436.03 M",
-    "value": 436030000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$440.40 M",
+    "value": 440400000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 859,
-    "bidAskMidpoint": 65.09,
+    "bidAskMidpoint": 65.73,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 40,
+    "atNavDays": 0,
+    "discountDays": 24
   },
   "yields": {
     "dividendYield": 1.52,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.13%",
       "mo3": 2.57,
       "mo3Text": "2.57%",
-      "qtd": 2.62,
-      "qtdText": "2.62%",
+      "qtd": 3.08,
+      "qtdText": "3.08%",
       "ytd": 19.17,
       "ytdText": "19.17%",
       "yr1": 23.64,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,23 +163,23 @@
     "rows": [
       [
         "12/26/2023",
-        "0.002"
+        "0.0018"
       ],
       [
         "03/22/2024",
-        "0.251"
+        "0.2513"
       ],
       [
         "06/24/2024",
-        "0.219"
+        "0.2191"
       ],
       [
         "09/24/2024",
-        "0.227"
+        "0.2274"
       ],
       [
         "12/23/2024",
-        "0.272"
+        "0.2719"
       ],
       [
         "03/25/2025",
@@ -187,23 +187,23 @@
       ],
       [
         "06/24/2025",
-        "0.249"
+        "0.2487"
       ],
       [
         "09/24/2025",
-        "0.226"
+        "0.2261"
       ],
       [
         "12/23/2025",
-        "0.246"
+        "0.2459"
       ],
       [
         "03/25/2026",
-        "0.252"
+        "0.2517"
       ],
       [
         "06/24/2026",
-        "0.238"
+        "0.2382"
       ],
       [
         "09/24/2026",
@@ -211,7 +211,53 @@
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 29.52,
+    "rows": [
+      {
+        "name": "Apple Inc",
+        "weight": 6.02
+      },
+      {
+        "name": "Amazon.com Inc",
+        "weight": 6.02
+      },
+      {
+        "name": "Microsoft Corp",
+        "weight": 5.32
+      },
+      {
+        "name": "Berkshire Hathaway Inc",
+        "weight": 2.6
+      },
+      {
+        "name": "JPMorgan Chase & Co",
+        "weight": 2.38
+      },
+      {
+        "name": "ExxonMobil Holdings Corp",
+        "weight": 1.91
+      },
+      {
+        "name": "Johnson & Johnson",
+        "weight": 1.62
+      },
+      {
+        "name": "Walmart Inc",
+        "weight": 1.26
+      },
+      {
+        "name": "AbbVie Inc",
+        "weight": 1.23
+      },
+      {
+        "name": "Intel Corp",
+        "weight": 1.16
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -232,8 +278,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 718,
-    "asOf": "Oct 12 2026",
+    "totalRows": 722,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

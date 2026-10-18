@@ -2,7 +2,7 @@
   "ticker": "GUSA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1128,
+  "totalRows": 1132,
   "headers": [
     "Date",
     "Close",
@@ -777,6 +777,30 @@
       "Close": "67.10099792480469",
       "Adj Close": "67.1",
       "Volume": "600"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "67.07599639892578",
+      "Adj Close": "67.08",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "66.26100158691406",
+      "Adj Close": "66.26",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "66.58100128173828",
+      "Adj Close": "66.58",
+      "Volume": "300"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "65.8030014038086",
+      "Adj Close": "65.8",
+      "Volume": "400"
     }
   ]
 }

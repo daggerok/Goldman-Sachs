@@ -2,7 +2,7 @@
   "ticker": "GEM",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2775,
+  "totalRows": 2779,
   "headers": [
     "Date",
     "Close",
@@ -4659,6 +4659,30 @@
       "Close": "50.5",
       "Adj Close": "50.5",
       "Volume": "126300"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "50.2599983215332",
+      "Adj Close": "50.26",
+      "Volume": "108200"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "49.310001373291016",
+      "Adj Close": "49.31",
+      "Volume": "414900"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "48.90999984741211",
+      "Adj Close": "48.91",
+      "Volume": "174700"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "48.02000045776367",
+      "Adj Close": "48.02",
+      "Volume": "80500"
     }
   ]
 }

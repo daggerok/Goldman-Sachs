@@ -2,7 +2,7 @@
   "ticker": "AAAU",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2050,
+  "totalRows": 2054,
   "headers": [
     "Date",
     "Close",
@@ -309,6 +309,30 @@
       "Close": "41.09000015258789",
       "Adj Close": "41.09",
       "Volume": "561500"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "41.02000045776367",
+      "Adj Close": "41.02",
+      "Volume": "988000"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "40.41999816894531",
+      "Adj Close": "40.42",
+      "Volume": "1654300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "41.150001525878906",
+      "Adj Close": "41.15",
+      "Volume": "918600"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "41.06999969482422",
+      "Adj Close": "41.07",
+      "Volume": "662500"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T08:51:19Z",
+  "generatedAt": "2026-10-18T08:56:09Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -13,7 +13,7 @@
   "counts": {
     "funds": 48,
     "holdings": 24663,
-    "history": 59326
+    "history": 59514
   },
   "funds": [
     {
@@ -28,17 +28,17 @@
       "terValue": 0.18,
       "terGross": "0.18%",
       "terGrossValue": 0.18,
-      "nav": "$41.25",
-      "navValue": 41.25,
-      "aum": "$2.67 B",
-      "aumValue": 2669750000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$40.92",
+      "navValue": 40.92,
+      "aum": "$2.65 B",
+      "aumValue": 2647990000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 26 2018",
       "exchange": "Cboe BZX",
-      "closePrice": "$41.35",
-      "closePriceValue": 41.35,
-      "premiumDiscount": "0.24%",
-      "premiumDiscountValue": 0.24,
+      "closePrice": "$41.15",
+      "closePriceValue": 41.15,
+      "premiumDiscount": "0.56%",
+      "premiumDiscountValue": 0.56,
       "frequencyCode": "00 - None",
       "distributions": {
         "frequency": "None",
@@ -53,8 +53,8 @@
           "mo1Text": "-8.47%",
           "mo3": 3.68,
           "mo3Text": "3.68%",
-          "qtd": -0.15,
-          "qtdText": "-0.15%",
+          "qtd": -0.19,
+          "qtdText": "-0.19%",
           "ytd": -3.18,
           "ytdText": "-3.18%",
           "yr1": 8.98,
@@ -97,7 +97,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 0,
-      "history": 2050
+      "history": 2054
     },
     {
       "ticker": "GBIL",
@@ -111,17 +111,17 @@
       "terValue": 0.12,
       "terGross": "0.14%",
       "terGrossValue": 0.14,
-      "nav": "$99.95",
-      "navValue": 99.95,
-      "aum": "$7.90 B",
-      "aumValue": 7896100000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$99.98",
+      "navValue": 99.98,
+      "aum": "$7.91 B",
+      "aumValue": 7912370000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 06 2016",
       "exchange": "NYSE Arca",
-      "closePrice": "$99.95",
-      "closePriceValue": 99.95,
-      "premiumDiscount": "0.00%",
-      "premiumDiscountValue": 0,
+      "closePrice": "$99.99",
+      "closePriceValue": 99.99,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
@@ -136,8 +136,8 @@
           "mo1Text": "0.24%",
           "mo3": 0.87,
           "mo3Text": "0.87%",
-          "qtd": 0.11,
-          "qtdText": "0.11%",
+          "qtd": 0.19,
+          "qtdText": "0.19%",
           "ytd": 2.55,
           "ytdText": "2.55%",
           "yr1": 3.58,
@@ -158,7 +158,7 @@
           "yr3": null,
           "yr5": 3.55,
           "yr10": 2.33,
-          "sinceInception": null
+          "sinceInception": 2.32
         }
       },
       "metrics": {
@@ -180,7 +180,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 43,
-      "history": 2533
+      "history": 2537
     },
     {
       "ticker": "GBND",
@@ -194,22 +194,22 @@
       "terValue": 0.25,
       "terGross": "0.26%",
       "terGrossValue": 0.26,
-      "nav": "$48.06",
-      "navValue": 48.06,
-      "aum": "$599.55 M",
-      "aumValue": 599550000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.44",
+      "navValue": 48.44,
+      "aum": "$609.07 M",
+      "aumValue": 609070000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jun 24 2025",
       "exchange": "NYSE Arca",
-      "closePrice": "$48.10",
-      "closePriceValue": 48.1,
-      "premiumDiscount": "0.08%",
-      "premiumDiscountValue": 0.08,
+      "closePrice": "$48.47",
+      "closePriceValue": 48.47,
+      "premiumDiscount": "0.06%",
+      "premiumDiscountValue": 0.06,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.193"
+        "dividend": "0.1933"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -219,8 +219,8 @@
           "mo1Text": "-2.83%",
           "mo3": -3.79,
           "mo3Text": "-3.79%",
-          "qtd": 0.26,
-          "qtdText": "0.26%",
+          "qtd": 1,
+          "qtdText": "1.00%",
           "ytd": -3.09,
           "ytdText": "-3.09%",
           "yr1": -2.05,
@@ -263,7 +263,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 731,
-      "history": 326
+      "history": 330
     },
     {
       "ticker": "GCAL",
@@ -277,22 +277,22 @@
       "terValue": 0.3,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$48.43",
-      "navValue": 48.43,
-      "aum": "$227.63 M",
-      "aumValue": 227630000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.96",
+      "navValue": 48.96,
+      "aum": "$232.57 M",
+      "aumValue": 232570000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 23 2024",
       "exchange": "NYSE Arca",
-      "closePrice": "$48.47",
-      "closePriceValue": 48.47,
-      "premiumDiscount": "0.08%",
-      "premiumDiscountValue": 0.08,
+      "closePrice": "$49.02",
+      "closePriceValue": 49.02,
+      "premiumDiscount": "0.11%",
+      "premiumDiscountValue": 0.11,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.136"
+        "dividend": "0.1362"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -302,8 +302,8 @@
           "mo1Text": "-3.45%",
           "mo3": -4.53,
           "mo3Text": "-4.53%",
-          "qtd": -0.19,
-          "qtdText": "-0.19%",
+          "qtd": 1.03,
+          "qtdText": "1.03%",
           "ytd": -2.44,
           "ytdText": "-2.44%",
           "yr1": -0.86,
@@ -346,7 +346,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 342,
-      "history": 552
+      "history": 556
     },
     {
       "ticker": "GCOR",
@@ -360,22 +360,22 @@
       "terValue": 0.08,
       "terGross": "0.09%",
       "terGrossValue": 0.09,
-      "nav": "$39.24",
-      "navValue": 39.24,
-      "aum": "$808.36 M",
-      "aumValue": 808360000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$39.55",
+      "navValue": 39.55,
+      "aum": "$806.87 M",
+      "aumValue": 806870000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 08 2020",
       "exchange": "NYSE Arca",
-      "closePrice": "$39.25",
-      "closePriceValue": 39.25,
-      "premiumDiscount": "0.03%",
-      "premiumDiscountValue": 0.03,
+      "closePrice": "$39.56",
+      "closePriceValue": 39.56,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.185"
+        "dividend": "0.1853"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -385,8 +385,8 @@
           "mo1Text": "-2.70%",
           "mo3": -3.62,
           "mo3Text": "-3.62%",
-          "qtd": 0.23,
-          "qtdText": "0.23%",
+          "qtd": 0.97,
+          "qtdText": "0.97%",
           "ytd": -2.99,
           "ytdText": "-2.99%",
           "yr1": -2.04,
@@ -429,7 +429,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1768,
-      "history": 1524
+      "history": 1528
     },
     {
       "ticker": "GCPB",
@@ -443,22 +443,22 @@
       "terValue": 0.4,
       "terGross": "0.4%",
       "terGrossValue": 0.4,
-      "nav": "$48.37",
-      "navValue": 48.37,
-      "aum": "$147.39 M",
-      "aumValue": 147390000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.74",
+      "navValue": 48.74,
+      "aum": "$150.96 M",
+      "aumValue": 150960000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 30 2006",
       "exchange": "NYSE",
-      "closePrice": "$48.42",
-      "closePriceValue": 48.42,
-      "premiumDiscount": "0.10%",
-      "premiumDiscountValue": 0.1,
+      "closePrice": "$48.71",
+      "closePriceValue": 48.71,
+      "premiumDiscount": "-0.06%",
+      "premiumDiscountValue": -0.06,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.188"
+        "dividend": "0.1879"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -468,8 +468,8 @@
           "mo1Text": "-2.95%",
           "mo3": -4.04,
           "mo3Text": "-4.04%",
-          "qtd": 0.25,
-          "qtdText": "0.25%",
+          "qtd": 1.06,
+          "qtdText": "1.06%",
           "ytd": -3.34,
           "ytdText": "-3.34%",
           "yr1": -1.82,
@@ -490,7 +490,7 @@
           "yr3": null,
           "yr5": -0.65,
           "yr10": 1.5,
-          "sinceInception": null
+          "sinceInception": 3.3
         }
       },
       "metrics": {
@@ -512,7 +512,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 0,
-      "history": 45
+      "history": 49
     },
     {
       "ticker": "GDOC",
@@ -526,22 +526,22 @@
       "terValue": 0.75,
       "terGross": "0.75%",
       "terGrossValue": 0.75,
-      "nav": "$36.51",
-      "navValue": 36.51,
-      "aum": "$19.17 M",
-      "aumValue": 19170000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$37.29",
+      "navValue": 37.29,
+      "aum": "$19.58 M",
+      "aumValue": 19580000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 09 2021",
       "exchange": "NYSE Arca",
-      "closePrice": "$36.50",
-      "closePriceValue": 36.5,
-      "premiumDiscount": "-0.04%",
-      "premiumDiscountValue": -0.04,
+      "closePrice": "$37.33",
+      "closePriceValue": 37.33,
+      "premiumDiscount": "0.10%",
+      "premiumDiscountValue": 0.1,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "12/23/2025",
-        "dividend": "0.113"
+        "dividend": "0.1133"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -551,8 +551,8 @@
           "mo1Text": "-0.62%",
           "mo3": 3,
           "mo3Text": "3.00%",
-          "qtd": -0.22,
-          "qtdText": "-0.22%",
+          "qtd": 0.96,
+          "qtdText": "0.96%",
           "ytd": 4.13,
           "ytdText": "4.13%",
           "yr1": 15.87,
@@ -595,7 +595,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 42,
-      "history": 1233
+      "history": 1237
     },
     {
       "ticker": "GEM",
@@ -609,22 +609,22 @@
       "terValue": 0.35,
       "terGross": "0.59%",
       "terGrossValue": 0.59,
-      "nav": "$51.06",
-      "navValue": 51.06,
-      "aum": "$1.76 B",
-      "aumValue": 1763960000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.24",
+      "navValue": 48.24,
+      "aum": "$1.67 B",
+      "aumValue": 1666610000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 25 2015",
       "exchange": "NYSE Arca",
-      "closePrice": "$50.92",
-      "closePriceValue": 50.92,
-      "premiumDiscount": "-0.27%",
-      "premiumDiscountValue": -0.27,
+      "closePrice": "$48.91",
+      "closePriceValue": 48.91,
+      "premiumDiscount": "1.39%",
+      "premiumDiscountValue": 1.39,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
         "exDate": "12/23/2025",
-        "dividend": "0.958"
+        "dividend": "0.9582"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -634,8 +634,8 @@
           "mo1Text": "-0.49%",
           "mo3": -0.21,
           "mo3Text": "-0.21%",
-          "qtd": -0.84,
-          "qtdText": "-0.84%",
+          "qtd": -5.71,
+          "qtdText": "-5.71%",
           "ytd": 23.06,
           "ytdText": "23.06%",
           "yr1": 29.08,
@@ -656,7 +656,7 @@
           "yr3": null,
           "yr5": 9,
           "yr10": 8.59,
-          "sinceInception": null
+          "sinceInception": 9.12
         }
       },
       "metrics": {
@@ -678,7 +678,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 764,
-      "history": 2775
+      "history": 2779
     },
     {
       "ticker": "GEMD",
@@ -692,22 +692,22 @@
       "terValue": 0.3,
       "terGross": "0.3%",
       "terGrossValue": 0.3,
-      "nav": "$39.95",
-      "navValue": 39.95,
-      "aum": "$33.95 M",
-      "aumValue": 33950000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$40.20",
+      "navValue": 40.2,
+      "aum": "$34.17 M",
+      "aumValue": 34170000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Feb 15 2022",
       "exchange": "Cboe BZX",
-      "closePrice": "$39.88",
-      "closePriceValue": 39.88,
-      "premiumDiscount": "-0.17%",
-      "premiumDiscountValue": -0.17,
+      "closePrice": "$40.20",
+      "closePriceValue": 40.2,
+      "premiumDiscount": "0.00%",
+      "premiumDiscountValue": 0,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.237"
+        "dividend": "0.2367"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -717,8 +717,8 @@
           "mo1Text": "-3.41%",
           "mo3": -4.46,
           "mo3Text": "-4.46%",
-          "qtd": 1.01,
-          "qtdText": "1.01%",
+          "qtd": 1.65,
+          "qtdText": "1.65%",
           "ytd": -2.19,
           "ytdText": "-2.19%",
           "yr1": 0.9,
@@ -761,7 +761,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 192,
-      "history": 1165
+      "history": 1169
     },
     {
       "ticker": "GEMQ",
@@ -775,17 +775,17 @@
       "terValue": 0.4,
       "terGross": "0.4%",
       "terGrossValue": 0.4,
-      "nav": "$24.32",
-      "navValue": 24.32,
-      "aum": "$9.73 M",
-      "aumValue": 9730000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$22.79",
+      "navValue": 22.79,
+      "aum": "$9.12 M",
+      "aumValue": 9120000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 09 2026",
       "exchange": "NASDAQ",
-      "closePrice": "$24.24",
-      "closePriceValue": 24.24,
-      "premiumDiscount": "-0.32%",
-      "premiumDiscountValue": -0.32,
+      "closePrice": "$23.11",
+      "closePriceValue": 23.11,
+      "premiumDiscount": "1.40%",
+      "premiumDiscountValue": 1.4,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
@@ -795,13 +795,13 @@
       "returns": {
         "derivedFrom": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
         "monthEnd": {
-          "asOfDate": "Oct 12 2026",
-          "mo1": null,
-          "mo1Text": "—",
+          "asOfDate": "Oct 16 2026",
+          "mo1": 0,
+          "mo1Text": "0.00%",
           "mo3": null,
           "mo3Text": "—",
-          "qtd": 1.05,
-          "qtdText": "1.05%",
+          "qtd": 0,
+          "qtdText": "0.00%",
           "ytd": null,
           "ytdText": "—",
           "yr1": null,
@@ -841,10 +841,10 @@
         "secYield": null,
         "secYieldText": "—",
         "returnsBasis": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
-        "performanceAsOf": "2026-10-12"
+        "performanceAsOf": "2026-10-16"
       },
       "holdings": 0,
-      "history": 21
+      "history": 25
     },
     {
       "ticker": "GGUS",
@@ -858,22 +858,22 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$69.67",
-      "navValue": 69.67,
-      "aum": "$508.57 M",
-      "aumValue": 508570000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$67.51",
+      "navValue": 67.51,
+      "aum": "$492.80 M",
+      "aumValue": 492800000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 28 2023",
       "exchange": "NYSE Arca",
-      "closePrice": "$69.68",
-      "closePriceValue": 69.68,
-      "premiumDiscount": "0.02%",
-      "premiumDiscountValue": 0.02,
+      "closePrice": "$67.53",
+      "closePriceValue": 67.53,
+      "premiumDiscount": "0.03%",
+      "premiumDiscountValue": 0.03,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.057"
+        "dividend": "0.0573"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -883,8 +883,8 @@
           "mo1Text": "2.09%",
           "mo3": -0.05,
           "mo3Text": "-0.05%",
-          "qtd": 1.05,
-          "qtdText": "1.05%",
+          "qtd": -3.65,
+          "qtdText": "-3.65%",
           "ytd": 7.44,
           "ytdText": "7.44%",
           "yr1": 8.11,
@@ -927,7 +927,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 388,
-      "history": 718
+      "history": 722
     },
     {
       "ticker": "GHYB",
@@ -941,17 +941,17 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$43.19",
-      "navValue": 43.19,
-      "aum": "$133.89 M",
-      "aumValue": 133889999.99999999,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$43.14",
+      "navValue": 43.14,
+      "aum": "$133.74 M",
+      "aumValue": 133740000.00000001,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 05 2017",
       "exchange": "NYSE Arca",
-      "closePrice": "$43.22",
-      "closePriceValue": 43.22,
-      "premiumDiscount": "0.07%",
-      "premiumDiscountValue": 0.07,
+      "closePrice": "$43.16",
+      "closePriceValue": 43.16,
+      "premiumDiscount": "0.05%",
+      "premiumDiscountValue": 0.05,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
@@ -966,8 +966,8 @@
           "mo1Text": "-2.47%",
           "mo3": -1.77,
           "mo3Text": "-1.77%",
-          "qtd": 0.34,
-          "qtdText": "0.34%",
+          "qtd": 0.21,
+          "qtdText": "0.21%",
           "ytd": -0.12,
           "ytdText": "-0.12%",
           "yr1": 1.13,
@@ -1010,7 +1010,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 904,
-      "history": 2274
+      "history": 2278
     },
     {
       "ticker": "GIEQ",
@@ -1024,17 +1024,17 @@
       "terValue": 0.3,
       "terGross": "0.3%",
       "terGrossValue": 0.3,
-      "nav": "$41.02",
-      "navValue": 41.02,
-      "aum": "$43.07 M",
-      "aumValue": 43070000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$40.99",
+      "navValue": 40.99,
+      "aum": "$43.04 M",
+      "aumValue": 43040000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 19 2026",
       "exchange": "NASDAQ",
-      "closePrice": "$41.26",
-      "closePriceValue": 41.26,
-      "premiumDiscount": "0.58%",
-      "premiumDiscountValue": 0.58,
+      "closePrice": "$41.31",
+      "closePriceValue": 41.31,
+      "premiumDiscount": "0.77%",
+      "premiumDiscountValue": 0.77,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
@@ -1049,8 +1049,8 @@
           "mo1Text": "-2.98%",
           "mo3": 1.07,
           "mo3Text": "1.07%",
-          "qtd": 0.22,
-          "qtdText": "0.22%",
+          "qtd": 0.46,
+          "qtdText": "0.46%",
           "ytd": null,
           "ytdText": "—",
           "yr1": null,
@@ -1061,8 +1061,8 @@
           "yr5Text": "—",
           "yr10": null,
           "yr10Text": "—",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 4.07,
+          "sinceInceptionText": "4.07%"
         },
         "quarterEnd": {
           "asOfDate": "Sep 30 2026",
@@ -1083,7 +1083,7 @@
         "cagr3y": null,
         "cagr5y": null,
         "cagr10y": null,
-        "siAnn": null,
+        "siAnn": 4.07,
         "dividendYield": null,
         "dividendYieldText": "—",
         "dividendYieldBasis": null,
@@ -1093,7 +1093,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 249,
-      "history": 99
+      "history": 103
     },
     {
       "ticker": "GIGB",
@@ -1107,22 +1107,22 @@
       "terValue": 0.08,
       "terGross": "0.08%",
       "terGrossValue": 0.08,
-      "nav": "$43.59",
-      "navValue": 43.59,
-      "aum": "$963.30 M",
-      "aumValue": 963300000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$43.92",
+      "navValue": 43.92,
+      "aum": "$1.02 B",
+      "aumValue": 1021090000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jun 06 2017",
       "exchange": "NYSE Arca",
-      "closePrice": "$43.59",
-      "closePriceValue": 43.59,
-      "premiumDiscount": "0.00%",
-      "premiumDiscountValue": 0,
+      "closePrice": "$43.97",
+      "closePriceValue": 43.97,
+      "premiumDiscount": "0.11%",
+      "premiumDiscountValue": 0.11,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.18"
+        "dividend": "0.1804"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1132,8 +1132,8 @@
           "mo1Text": "-2.76%",
           "mo3": -3.9,
           "mo3Text": "-3.90%",
-          "qtd": 0.46,
-          "qtdText": "0.46%",
+          "qtd": 1.08,
+          "qtdText": "1.08%",
           "ytd": -2.99,
           "ytdText": "-2.99%",
           "yr1": -2.29,
@@ -1176,7 +1176,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 2506,
-      "history": 2349
+      "history": 2353
     },
     {
       "ticker": "GIGL",
@@ -1190,22 +1190,22 @@
       "terValue": 0.29,
       "terGross": "0.3%",
       "terGrossValue": 0.3,
-      "nav": "$47.95",
-      "navValue": 47.95,
-      "aum": "$239.77 M",
-      "aumValue": 239770000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.32",
+      "navValue": 48.32,
+      "aum": "$241.61 M",
+      "aumValue": 241610000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jun 24 2025",
       "exchange": "NYSE Arca",
-      "closePrice": "$47.97",
-      "closePriceValue": 47.97,
-      "premiumDiscount": "0.04%",
-      "premiumDiscountValue": 0.04,
+      "closePrice": "$48.30",
+      "closePriceValue": 48.3,
+      "premiumDiscount": "-0.04%",
+      "premiumDiscountValue": -0.04,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.195"
+        "dividend": "0.1953"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1215,8 +1215,8 @@
           "mo1Text": "-2.95%",
           "mo3": -4.05,
           "mo3Text": "-4.05%",
-          "qtd": 0.43,
-          "qtdText": "0.43%",
+          "qtd": 1.11,
+          "qtdText": "1.11%",
           "ytd": -3.18,
           "ytdText": "-3.18%",
           "yr1": -2.36,
@@ -1259,7 +1259,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 441,
-      "history": 326
+      "history": 330
     },
     {
       "ticker": "GINC",
@@ -1273,22 +1273,22 @@
       "terValue": 0.4,
       "terGross": "0.4%",
       "terGrossValue": 0.4,
-      "nav": "$48.63",
-      "navValue": 48.63,
-      "aum": "$211.26 M",
-      "aumValue": 211260000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.67",
+      "navValue": 48.67,
+      "aum": "$211.43 M",
+      "aumValue": 211430000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Dec 03 2019",
       "exchange": "NYSE Arca",
-      "closePrice": "$48.68",
-      "closePriceValue": 48.68,
-      "premiumDiscount": "0.09%",
-      "premiumDiscountValue": 0.09,
+      "closePrice": "$48.74",
+      "closePriceValue": 48.74,
+      "premiumDiscount": "0.15%",
+      "premiumDiscountValue": 0.15,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.178"
+        "dividend": "0.1782"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1298,8 +1298,8 @@
           "mo1Text": "-2.26%",
           "mo3": -1.97,
           "mo3Text": "-1.97%",
-          "qtd": 0.57,
-          "qtdText": "0.57%",
+          "qtd": 0.41,
+          "qtdText": "0.41%",
           "ytd": -1.2,
           "ytdText": "-1.20%",
           "yr1": 0.16,
@@ -1342,7 +1342,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 0,
-      "history": 45
+      "history": 49
     },
     {
       "ticker": "GIND",
@@ -1352,26 +1352,26 @@
       "dataFile": "./funds/GIND/meta.json",
       "cusip": "38149W481",
       "isin": "US38149W4814",
-      "ter": "—",
-      "terValue": null,
-      "terGross": "—",
-      "terGrossValue": null,
-      "nav": "$23.26",
-      "navValue": 23.26,
-      "aum": "$156.63 M",
-      "aumValue": 156631726.31,
-      "asOfDate": "Oct 09 2026",
+      "ter": "0.75%",
+      "terValue": 0.75,
+      "terGross": "0.75%",
+      "terGrossValue": 0.75,
+      "nav": "$23.93",
+      "navValue": 23.93,
+      "aum": "$160.34 M",
+      "aumValue": 160340000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Apr 01 2025",
-      "exchange": "NGM",
-      "closePrice": "$23.41",
-      "closePriceValue": 23.41,
-      "premiumDiscount": "0.64%",
-      "premiumDiscountValue": 0.64,
+      "exchange": "NASDAQ",
+      "closePrice": "$24.13",
+      "closePriceValue": 24.13,
+      "premiumDiscount": "0.82%",
+      "premiumDiscountValue": 0.82,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.173"
+        "dividend": "0.1731"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1381,8 +1381,8 @@
           "mo1Text": "-6.23%",
           "mo3": -1.81,
           "mo3Text": "-1.81%",
-          "qtd": 1.18,
-          "qtdText": "1.18%",
+          "qtd": 2.75,
+          "qtdText": "2.75%",
           "ytd": -9.13,
           "ytdText": "-9.13%",
           "yr1": -7.51,
@@ -1416,16 +1416,16 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": -3.18,
-        "dividendYield": 2.98,
-        "dividendYieldText": "2.98%",
-        "dividendYieldBasis": "indicated",
-        "secYield": null,
-        "secYieldText": "—",
+        "dividendYield": 0.73,
+        "dividendYieldText": "0.73%",
+        "dividendYieldBasis": "official-trailing-12m",
+        "secYield": -0.26,
+        "secYieldText": "-0.26%",
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 122,
-      "history": 383
+      "history": 387
     },
     {
       "ticker": "GINN",
@@ -1439,17 +1439,17 @@
       "terValue": 0.5,
       "terGross": "0.5%",
       "terGrossValue": 0.5,
-      "nav": "$82.21",
-      "navValue": 82.21,
-      "aum": "$180.87 M",
-      "aumValue": 180870000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$81.32",
+      "navValue": 81.32,
+      "aum": "$178.90 M",
+      "aumValue": 178900000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 06 2020",
       "exchange": "NYSE Arca",
-      "closePrice": "$82.12",
-      "closePriceValue": 82.12,
-      "premiumDiscount": "-0.11%",
-      "premiumDiscountValue": -0.11,
+      "closePrice": "$81.24",
+      "closePriceValue": 81.24,
+      "premiumDiscount": "-0.10%",
+      "premiumDiscountValue": -0.1,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
@@ -1464,8 +1464,8 @@
           "mo1Text": "-1.62%",
           "mo3": 3.1,
           "mo3Text": "3.10%",
-          "qtd": 1.1,
-          "qtdText": "1.10%",
+          "qtd": -1.23,
+          "qtdText": "-1.23%",
           "ytd": 10.87,
           "ytdText": "10.87%",
           "yr1": 11.04,
@@ -1508,7 +1508,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 473,
-      "history": 1487
+      "history": 1491
     },
     {
       "ticker": "GMNY",
@@ -1522,22 +1522,22 @@
       "terValue": 0.3,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$47.68",
-      "navValue": 47.68,
-      "aum": "$53.64 M",
-      "aumValue": 53640000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$48.22",
+      "navValue": 48.22,
+      "aum": "$54.25 M",
+      "aumValue": 54250000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 23 2024",
       "exchange": "NYSE Arca",
-      "closePrice": "$47.69",
-      "closePriceValue": 47.69,
-      "premiumDiscount": "0.01%",
-      "premiumDiscountValue": 0.01,
+      "closePrice": "$48.31",
+      "closePriceValue": 48.31,
+      "premiumDiscount": "0.19%",
+      "premiumDiscountValue": 0.19,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.129"
+        "dividend": "0.1287"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1547,8 +1547,8 @@
           "mo1Text": "-3.25%",
           "mo3": -4.52,
           "mo3Text": "-4.52%",
-          "qtd": -0.32,
-          "qtdText": "-0.32%",
+          "qtd": 0.94,
+          "qtdText": "0.94%",
           "ytd": -2.28,
           "ytdText": "-2.28%",
           "yr1": -0.68,
@@ -1591,7 +1591,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 194,
-      "history": 521
+      "history": 525
     },
     {
       "ticker": "GMUB",
@@ -1605,22 +1605,22 @@
       "terValue": 0.18,
       "terGross": "0.18%",
       "terGrossValue": 0.18,
-      "nav": "$48.90",
-      "navValue": 48.9,
-      "aum": "$613.65 M",
-      "aumValue": 613650000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$49.44",
+      "navValue": 49.44,
+      "aum": "$640.22 M",
+      "aumValue": 640220000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 23 2024",
       "exchange": "NYSE Arca",
-      "closePrice": "$48.97",
-      "closePriceValue": 48.97,
-      "premiumDiscount": "0.14%",
-      "premiumDiscountValue": 0.14,
+      "closePrice": "$49.34",
+      "closePriceValue": 49.34,
+      "premiumDiscount": "-0.20%",
+      "premiumDiscountValue": -0.2,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.137"
+        "dividend": "0.1374"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1630,8 +1630,8 @@
           "mo1Text": "-3.36%",
           "mo3": -4.43,
           "mo3Text": "-4.43%",
-          "qtd": -0.01,
-          "qtdText": "-0.01%",
+          "qtd": 0.98,
+          "qtdText": "0.98%",
           "ytd": -2.31,
           "ytdText": "-2.31%",
           "yr1": -0.66,
@@ -1674,7 +1674,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 531,
-      "history": 554
+      "history": 558
     },
     {
       "ticker": "GPIQ",
@@ -1688,22 +1688,22 @@
       "terValue": 0.29,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$58.18",
-      "navValue": 58.18,
-      "aum": "$6.48 B",
-      "aumValue": 6482650000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$56.82",
+      "navValue": 56.82,
+      "aum": "$6.38 B",
+      "aumValue": 6382350000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 24 2023",
       "exchange": "NASDAQ",
-      "closePrice": "$58.19",
-      "closePriceValue": 58.19,
-      "premiumDiscount": "0.02%",
-      "premiumDiscountValue": 0.02,
+      "closePrice": "$56.84",
+      "closePriceValue": 56.84,
+      "premiumDiscount": "0.04%",
+      "premiumDiscountValue": 0.04,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.509"
+        "dividend": "0.5088"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1713,8 +1713,8 @@
           "mo1Text": "2.64%",
           "mo3": 0.31,
           "mo3Text": "0.31%",
-          "qtd": 0.52,
-          "qtdText": "0.52%",
+          "qtd": -3.58,
+          "qtdText": "-3.58%",
           "ytd": 18.69,
           "ytdText": "18.69%",
           "yr1": 22.76,
@@ -1748,16 +1748,16 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": 25.17,
-        "dividendYield": 10.5,
-        "dividendYieldText": "10.50%",
-        "dividendYieldBasis": "indicated",
-        "secYield": null,
-        "secYieldText": "—",
+        "dividendYield": 9.86,
+        "dividendYieldText": "9.86%",
+        "dividendYieldBasis": "official-trailing-12m",
+        "secYield": 0.3,
+        "secYieldText": "0.30%",
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 107,
-      "history": 741
+      "history": 745
     },
     {
       "ticker": "GPIX",
@@ -1771,17 +1771,17 @@
       "terValue": 0.29,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$56.41",
-      "navValue": 56.41,
+      "nav": "$56.08",
+      "navValue": 56.08,
       "aum": "$6.23 B",
-      "aumValue": 6231070000,
-      "asOfDate": "Oct 09 2026",
+      "aumValue": 6234180000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 24 2023",
       "exchange": "NASDAQ",
-      "closePrice": "$56.44",
-      "closePriceValue": 56.44,
-      "premiumDiscount": "0.05%",
-      "premiumDiscountValue": 0.05,
+      "closePrice": "$56.10",
+      "closePriceValue": 56.1,
+      "premiumDiscount": "0.04%",
+      "premiumDiscountValue": 0.04,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
@@ -1796,8 +1796,8 @@
           "mo1Text": "0.02%",
           "mo3": 2.52,
           "mo3Text": "2.52%",
-          "qtd": 1.64,
-          "qtdText": "1.64%",
+          "qtd": 0.14,
+          "qtdText": "0.14%",
           "ytd": 12.69,
           "ytdText": "12.69%",
           "yr1": 16.33,
@@ -1840,7 +1840,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 496,
-      "history": 741
+      "history": 745
     },
     {
       "ticker": "GPRF",
@@ -1854,22 +1854,22 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$47.86",
-      "navValue": 47.86,
-      "aum": "$167.50 M",
-      "aumValue": 167500000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$47.96",
+      "navValue": 47.96,
+      "aum": "$167.84 M",
+      "aumValue": 167840000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 30 2024",
       "exchange": "NASDAQ",
-      "closePrice": "$47.88",
-      "closePriceValue": 47.88,
-      "premiumDiscount": "0.03%",
-      "premiumDiscountValue": 0.03,
+      "closePrice": "$48.04",
+      "closePriceValue": 48.04,
+      "premiumDiscount": "0.16%",
+      "premiumDiscountValue": 0.16,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.273"
+        "dividend": "0.2731"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1879,8 +1879,8 @@
           "mo1Text": "-2.26%",
           "mo3": -2.47,
           "mo3Text": "-2.47%",
-          "qtd": -0.11,
-          "qtdText": "-0.11%",
+          "qtd": -0.04,
+          "qtdText": "-0.04%",
           "ytd": -1.11,
           "ytdText": "-1.11%",
           "yr1": -0.95,
@@ -1923,7 +1923,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 486,
-      "history": 551
+      "history": 555
     },
     {
       "ticker": "GSC",
@@ -1937,22 +1937,22 @@
       "terValue": 0.75,
       "terGross": "0.8%",
       "terGrossValue": 0.8,
-      "nav": "$62.26",
-      "navValue": 62.26,
-      "aum": "$278.62 M",
-      "aumValue": 278620000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$61.23",
+      "navValue": 61.23,
+      "aum": "$281.68 M",
+      "aumValue": 281680000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 03 2023",
       "exchange": "NYSE Arca",
-      "closePrice": "$62.30",
-      "closePriceValue": 62.3,
-      "premiumDiscount": "0.06%",
-      "premiumDiscountValue": 0.06,
+      "closePrice": "$61.24",
+      "closePriceValue": 61.24,
+      "premiumDiscount": "0.02%",
+      "premiumDiscountValue": 0.02,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.063"
+        "dividend": "0.0633"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -1962,8 +1962,8 @@
           "mo1Text": "-4.65%",
           "mo3": -10.68,
           "mo3Text": "-10.68%",
-          "qtd": -0.71,
-          "qtdText": "-0.71%",
+          "qtd": -3.11,
+          "qtdText": "-3.11%",
           "ytd": 13.88,
           "ytdText": "13.88%",
           "yr1": 16.3,
@@ -2006,7 +2006,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 99,
-      "history": 756
+      "history": 760
     },
     {
       "ticker": "GSEE",
@@ -2020,22 +2020,22 @@
       "terValue": 0.36,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$69.07",
-      "navValue": 69.07,
-      "aum": "$138.13 M",
-      "aumValue": 138130000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$65.08",
+      "navValue": 65.08,
+      "aum": "$130.16 M",
+      "aumValue": 130160000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 12 2020",
       "exchange": "Cboe BZX",
-      "closePrice": "$68.84",
-      "closePriceValue": 68.84,
-      "premiumDiscount": "-0.33%",
-      "premiumDiscountValue": -0.33,
+      "closePrice": "$65.81",
+      "closePriceValue": 65.81,
+      "premiumDiscount": "1.13%",
+      "premiumDiscountValue": 1.13,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
         "exDate": "12/23/2025",
-        "dividend": "1.423"
+        "dividend": "1.4233"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2045,8 +2045,8 @@
           "mo1Text": "-0.69%",
           "mo3": -0.81,
           "mo3Text": "-0.81%",
-          "qtd": -0.95,
-          "qtdText": "-0.95%",
+          "qtd": -5.88,
+          "qtdText": "-5.88%",
           "ytd": 22.01,
           "ytdText": "22.01%",
           "yr1": 27.24,
@@ -2089,7 +2089,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1853,
-      "history": 1608
+      "history": 1612
     },
     {
       "ticker": "GSEU",
@@ -2103,22 +2103,22 @@
       "terValue": 0.25,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$46.90",
-      "navValue": 46.9,
-      "aum": "$166.50 M",
-      "aumValue": 166500000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$47.61",
+      "navValue": 47.61,
+      "aum": "$169.02 M",
+      "aumValue": 169020000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Mar 02 2016",
       "exchange": "NYSE Arca",
-      "closePrice": "$47.19",
-      "closePriceValue": 47.19,
-      "premiumDiscount": "0.62%",
-      "premiumDiscountValue": 0.62,
+      "closePrice": "$47.89",
+      "closePriceValue": 47.89,
+      "premiumDiscount": "0.60%",
+      "premiumDiscountValue": 0.6,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "06/24/2026",
-        "dividend": "0.412"
+        "dividend": "0.9317"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2128,8 +2128,8 @@
           "mo1Text": "-4.38%",
           "mo3": -1.12,
           "mo3Text": "-1.12%",
-          "qtd": 0.56,
-          "qtdText": "0.56%",
+          "qtd": 2.26,
+          "qtdText": "2.26%",
           "ytd": 6.35,
           "ytdText": "6.35%",
           "yr1": 12.88,
@@ -2150,7 +2150,7 @@
           "yr3": null,
           "yr5": 9.09,
           "yr10": 9.28,
-          "sinceInception": null
+          "sinceInception": 9.48
         }
       },
       "metrics": {
@@ -2172,7 +2172,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 348,
-      "history": 2667
+      "history": 2671
     },
     {
       "ticker": "GSEW",
@@ -2186,22 +2186,22 @@
       "terValue": 0.09,
       "terGross": "0.09%",
       "terGrossValue": 0.09,
-      "nav": "$95.59",
-      "navValue": 95.59,
-      "aum": "$2.15 B",
-      "aumValue": 2150670000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$95.79",
+      "navValue": 95.79,
+      "aum": "$2.16 B",
+      "aumValue": 2164880000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 12 2017",
       "exchange": "Cboe BZX",
-      "closePrice": "$95.63",
-      "closePriceValue": 95.63,
-      "premiumDiscount": "0.04%",
-      "premiumDiscountValue": 0.04,
+      "closePrice": "$95.79",
+      "closePriceValue": 95.79,
+      "premiumDiscount": "0.00%",
+      "premiumDiscountValue": 0,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.383"
+        "dividend": "0.3828"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2211,8 +2211,8 @@
           "mo1Text": "-3.95%",
           "mo3": -1.09,
           "mo3Text": "-1.09%",
-          "qtd": 1.89,
-          "qtdText": "1.89%",
+          "qtd": 1.57,
+          "qtdText": "1.57%",
           "ytd": 10.52,
           "ytdText": "10.52%",
           "yr1": 11.2,
@@ -2255,7 +2255,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 500,
-      "history": 2280
+      "history": 2284
     },
     {
       "ticker": "GSGO",
@@ -2269,17 +2269,17 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$46.15",
-      "navValue": 46.15,
-      "aum": "$194.04 M",
-      "aumValue": 194040000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$44.65",
+      "navValue": 44.65,
+      "aum": "$187.72 M",
+      "aumValue": 187720000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 24 1999",
       "exchange": "NASDAQ",
-      "closePrice": "$46.13",
-      "closePriceValue": 46.13,
-      "premiumDiscount": "-0.04%",
-      "premiumDiscountValue": -0.04,
+      "closePrice": "$44.65",
+      "closePriceValue": 44.65,
+      "premiumDiscount": "0.00%",
+      "premiumDiscountValue": 0,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
@@ -2294,8 +2294,8 @@
           "mo1Text": "3.02%",
           "mo3": 0.89,
           "mo3Text": "0.89%",
-          "qtd": 0.27,
-          "qtdText": "0.27%",
+          "qtd": -4.75,
+          "qtdText": "-4.75%",
           "ytd": 13.08,
           "ytdText": "13.08%",
           "yr1": 14.6,
@@ -2316,7 +2316,7 @@
           "yr3": null,
           "yr5": 12.87,
           "yr10": 17.6,
-          "sinceInception": null
+          "sinceInception": 8.84
         }
       },
       "metrics": {
@@ -2338,7 +2338,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 54,
-      "history": 226
+      "history": 230
     },
     {
       "ticker": "GSID",
@@ -2352,22 +2352,22 @@
       "terValue": 0.2,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$74.14",
-      "navValue": 74.14,
-      "aum": "$971.20 M",
-      "aumValue": 971200000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$74.16",
+      "navValue": 74.16,
+      "aum": "$971.48 M",
+      "aumValue": 971480000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 12 2020",
       "exchange": "Cboe BZX",
-      "closePrice": "$74.43",
-      "closePriceValue": 74.43,
-      "premiumDiscount": "0.38%",
-      "premiumDiscountValue": 0.38,
+      "closePrice": "$74.76",
+      "closePriceValue": 74.76,
+      "premiumDiscount": "0.81%",
+      "premiumDiscountValue": 0.81,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.388"
+        "dividend": "0.3876"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2377,8 +2377,8 @@
           "mo1Text": "-2.93%",
           "mo3": 1.15,
           "mo3Text": "1.15%",
-          "qtd": 0.01,
-          "qtdText": "0.01%",
+          "qtd": 0.46,
+          "qtdText": "0.46%",
           "ytd": 10.73,
           "ytdText": "10.73%",
           "yr1": 16.01,
@@ -2421,7 +2421,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 896,
-      "history": 1608
+      "history": 1612
     },
     {
       "ticker": "GSIE",
@@ -2435,17 +2435,17 @@
       "terValue": 0.25,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$45.52",
-      "navValue": 45.52,
-      "aum": "$5.84 B",
-      "aumValue": 5844400000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$45.81",
+      "navValue": 45.81,
+      "aum": "$5.90 B",
+      "aumValue": 5900830000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 06 2015",
       "exchange": "NYSE Arca",
-      "closePrice": "$45.76",
-      "closePriceValue": 45.76,
-      "premiumDiscount": "0.53%",
-      "premiumDiscountValue": 0.53,
+      "closePrice": "$46.12",
+      "closePriceValue": 46.12,
+      "premiumDiscount": "0.68%",
+      "premiumDiscountValue": 0.68,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
@@ -2460,8 +2460,8 @@
           "mo1Text": "-3.32%",
           "mo3": 1.71,
           "mo3Text": "1.71%",
-          "qtd": 0.44,
-          "qtdText": "0.44%",
+          "qtd": 1.41,
+          "qtdText": "1.41%",
           "ytd": 9.67,
           "ytdText": "9.67%",
           "yr1": 15.13,
@@ -2482,7 +2482,7 @@
           "yr3": null,
           "yr5": 9.22,
           "yr10": 9.19,
-          "sinceInception": null
+          "sinceInception": 8.65
         }
       },
       "metrics": {
@@ -2504,7 +2504,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 660,
-      "history": 2745
+      "history": 2749
     },
     {
       "ticker": "GSJY",
@@ -2518,22 +2518,22 @@
       "terValue": 0.25,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$55.55",
-      "navValue": 55.55,
-      "aum": "$99.99 M",
-      "aumValue": 99990000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$53.92",
+      "navValue": 53.92,
+      "aum": "$97.05 M",
+      "aumValue": 97050000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Mar 02 2016",
       "exchange": "NYSE Arca",
-      "closePrice": "$56.03",
-      "closePriceValue": 56.03,
-      "premiumDiscount": "0.86%",
-      "premiumDiscountValue": 0.86,
+      "closePrice": "$54.69",
+      "closePriceValue": 54.69,
+      "premiumDiscount": "1.43%",
+      "premiumDiscountValue": 1.43,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "06/24/2026",
-        "dividend": "0.412"
+        "dividend": "0.4118"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2543,8 +2543,8 @@
           "mo1Text": "1.62%",
           "mo3": 7.48,
           "mo3Text": "7.48%",
-          "qtd": 0.28,
-          "qtdText": "0.28%",
+          "qtd": -2.19,
+          "qtdText": "-2.19%",
           "ytd": 21.3,
           "ytdText": "21.30%",
           "yr1": 25.77,
@@ -2565,7 +2565,7 @@
           "yr3": null,
           "yr5": 9.67,
           "yr10": 9.36,
-          "sinceInception": null
+          "sinceInception": 9.84
         }
       },
       "metrics": {
@@ -2587,7 +2587,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 157,
-      "history": 2667
+      "history": 2671
     },
     {
       "ticker": "GSLC",
@@ -2684,22 +2684,22 @@
       "terValue": 0.2,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$86.36",
-      "navValue": 86.36,
-      "aum": "$1.05 B",
-      "aumValue": 1049270000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$85.78",
+      "navValue": 85.78,
+      "aum": "$1.04 B",
+      "aumValue": 1042250000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jun 28 2017",
       "exchange": "NYSE Arca",
-      "closePrice": "$86.29",
-      "closePriceValue": 86.29,
-      "premiumDiscount": "-0.08%",
-      "premiumDiscountValue": -0.08,
+      "closePrice": "$85.84",
+      "closePriceValue": 85.84,
+      "premiumDiscount": "0.07%",
+      "premiumDiscountValue": 0.07,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.198"
+        "dividend": "0.1975"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2709,8 +2709,8 @@
           "mo1Text": "-4.21%",
           "mo3": -5.82,
           "mo3Text": "-5.82%",
-          "qtd": 0.12,
-          "qtdText": "0.12%",
+          "qtd": -1.89,
+          "qtdText": "-1.89%",
           "ytd": 14.27,
           "ytdText": "14.27%",
           "yr1": 15.7,
@@ -2753,7 +2753,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1324,
-      "history": 2328
+      "history": 2332
     },
     {
       "ticker": "GSST",
@@ -2767,22 +2767,22 @@
       "terValue": 0.16,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$50.34",
-      "navValue": 50.34,
-      "aum": "$1.67 B",
-      "aumValue": 1669910000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$50.37",
+      "navValue": 50.37,
+      "aum": "$1.71 B",
+      "aumValue": 1707400000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Apr 15 2019",
       "exchange": "Cboe BZX",
-      "closePrice": "$50.36",
-      "closePriceValue": 50.36,
-      "premiumDiscount": "0.04%",
-      "premiumDiscountValue": 0.04,
+      "closePrice": "$50.41",
+      "closePriceValue": 50.41,
+      "premiumDiscount": "0.08%",
+      "premiumDiscountValue": 0.08,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.193"
+        "dividend": "0.1934"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2792,8 +2792,8 @@
           "mo1Text": "0.16%",
           "mo3": 0.85,
           "mo3Text": "0.85%",
-          "qtd": 0.12,
-          "qtdText": "0.12%",
+          "qtd": 0.24,
+          "qtdText": "0.24%",
           "ytd": 2.69,
           "ytdText": "2.69%",
           "yr1": 3.88,
@@ -2836,7 +2836,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 391,
-      "history": 1882
+      "history": 1886
     },
     {
       "ticker": "GSUS",
@@ -2850,22 +2850,22 @@
       "terValue": 0.07,
       "terGross": "0.09%",
       "terGrossValue": 0.09,
-      "nav": "$107.75",
-      "navValue": 107.75,
-      "aum": "$3.48 B",
-      "aumValue": 3480210000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$106.74",
+      "navValue": 106.74,
+      "aum": "$3.45 B",
+      "aumValue": 3447700000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 12 2020",
       "exchange": "Cboe BZX",
-      "closePrice": "$107.72",
-      "closePriceValue": 107.72,
-      "premiumDiscount": "-0.03%",
-      "premiumDiscountValue": -0.03,
+      "closePrice": "$106.76",
+      "closePriceValue": 106.76,
+      "premiumDiscount": "0.02%",
+      "premiumDiscountValue": 0.02,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.254"
+        "dividend": "0.2538"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2875,8 +2875,8 @@
           "mo1Text": "-0.25%",
           "mo3": 2.49,
           "mo3Text": "2.49%",
-          "qtd": 1.9,
-          "qtdText": "1.90%",
+          "qtd": -0.15,
+          "qtdText": "-0.15%",
           "ytd": 12.67,
           "ytdText": "12.67%",
           "yr1": 15.4,
@@ -2919,7 +2919,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 414,
-      "history": 1608
+      "history": 1612
     },
     {
       "ticker": "GSWO",
@@ -2933,22 +2933,22 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$65.45",
-      "navValue": 65.45,
-      "aum": "$1.80 B",
-      "aumValue": 1803850000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$65.01",
+      "navValue": 65.01,
+      "aum": "$1.79 B",
+      "aumValue": 1791560000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Mar 15 2022",
       "exchange": "Cboe BZX",
-      "closePrice": "$65.56",
-      "closePriceValue": 65.56,
-      "premiumDiscount": "0.17%",
-      "premiumDiscountValue": 0.17,
+      "closePrice": "$65.11",
+      "closePriceValue": 65.11,
+      "premiumDiscount": "0.15%",
+      "premiumDiscountValue": 0.15,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.204"
+        "dividend": "0.2039"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2958,8 +2958,8 @@
           "mo1Text": "-0.91%",
           "mo3": 2.48,
           "mo3Text": "2.48%",
-          "qtd": 1.39,
-          "qtdText": "1.39%",
+          "qtd": 0.03,
+          "qtdText": "0.03%",
           "ytd": 13.32,
           "ytdText": "13.32%",
           "yr1": 15.32,
@@ -3002,7 +3002,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 0,
-      "history": 1146
+      "history": 1150
     },
     {
       "ticker": "GTEK",
@@ -3016,22 +3016,22 @@
       "terValue": 0.75,
       "terGross": "0.75%",
       "terGrossValue": 0.75,
-      "nav": "$60.89",
-      "navValue": 60.89,
-      "aum": "$254.20 M",
-      "aumValue": 254200000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$54.78",
+      "navValue": 54.78,
+      "aum": "$228.73 M",
+      "aumValue": 228730000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 14 2021",
       "exchange": "NYSE Arca",
-      "closePrice": "$60.62",
-      "closePriceValue": 60.62,
-      "premiumDiscount": "-0.44%",
-      "premiumDiscountValue": -0.44,
+      "closePrice": "$54.90",
+      "closePriceValue": 54.9,
+      "premiumDiscount": "0.21%",
+      "premiumDiscountValue": 0.21,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "12/26/2023",
-        "dividend": "0.071"
+        "dividend": "0.0713"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3041,8 +3041,8 @@
           "mo1Text": "2.82%",
           "mo3": -5.66,
           "mo3Text": "-5.66%",
-          "qtd": 0.25,
-          "qtdText": "0.25%",
+          "qtd": -10.84,
+          "qtdText": "-10.84%",
           "ytd": 46.29,
           "ytdText": "46.29%",
           "yr1": 50.12,
@@ -3085,7 +3085,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 63,
-      "history": 1273
+      "history": 1277
     },
     {
       "ticker": "GTIP",
@@ -3099,22 +3099,22 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$46.40",
-      "navValue": 46.4,
-      "aum": "$290.01 M",
-      "aumValue": 290010000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$46.83",
+      "navValue": 46.83,
+      "aum": "$291.52 M",
+      "aumValue": 291520000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 02 2018",
       "exchange": "Cboe BZX",
-      "closePrice": "$46.43",
-      "closePriceValue": 46.43,
-      "premiumDiscount": "0.05%",
-      "premiumDiscountValue": 0.05,
+      "closePrice": "$46.79",
+      "closePriceValue": 46.79,
+      "premiumDiscount": "-0.09%",
+      "premiumDiscountValue": -0.09,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
         "exDate": "10/01/2026",
-        "dividend": "0.054"
+        "dividend": "0.0541"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3124,8 +3124,8 @@
           "mo1Text": "-2.61%",
           "mo3": -3.35,
           "mo3Text": "-3.35%",
-          "qtd": 0.13,
-          "qtdText": "0.13%",
+          "qtd": 1.12,
+          "qtdText": "1.12%",
           "ytd": -2.11,
           "ytdText": "-2.11%",
           "yr1": -2.09,
@@ -3168,7 +3168,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 38,
-      "history": 2005
+      "history": 2009
     },
     {
       "ticker": "GTOP",
@@ -3182,17 +3182,17 @@
       "terValue": 0.65,
       "terGross": "0.65%",
       "terGrossValue": 0.65,
-      "nav": "$52.53",
-      "navValue": 52.53,
-      "aum": "$794.72 M",
-      "aumValue": 794720000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$50.02",
+      "navValue": 50.02,
+      "aum": "$728.32 M",
+      "aumValue": 728320000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 01 1999",
       "exchange": "NASDAQ",
-      "closePrice": "$52.53",
-      "closePriceValue": 52.53,
-      "premiumDiscount": "-0.01%",
-      "premiumDiscountValue": -0.01,
+      "closePrice": "$50.02",
+      "closePriceValue": 50.02,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
@@ -3207,8 +3207,8 @@
           "mo1Text": "5.37%",
           "mo3": 2.81,
           "mo3Text": "2.81%",
-          "qtd": 0.86,
-          "qtdText": "0.86%",
+          "qtd": -5.86,
+          "qtdText": "-5.86%",
           "ytd": 29.55,
           "ytdText": "29.55%",
           "yr1": 29.65,
@@ -3229,7 +3229,7 @@
           "yr3": null,
           "yr5": 15.27,
           "yr10": 20.79,
-          "sinceInception": null
+          "sinceInception": 10.92
         }
       },
       "metrics": {
@@ -3251,7 +3251,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 38,
-      "history": 212
+      "history": 216
     },
     {
       "ticker": "GTPE",
@@ -3265,17 +3265,17 @@
       "terValue": 0.5,
       "terGross": "0.5%",
       "terGrossValue": 0.5,
-      "nav": "$61.11",
-      "navValue": 61.11,
-      "aum": "$30.55 M",
-      "aumValue": 30550000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$60.03",
+      "navValue": 60.03,
+      "aum": "$30.02 M",
+      "aumValue": 30020000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Oct 21 2025",
       "exchange": "NASDAQ",
-      "closePrice": "$60.88",
-      "closePriceValue": 60.88,
-      "premiumDiscount": "-0.37%",
-      "premiumDiscountValue": -0.37,
+      "closePrice": "$60.34",
+      "closePriceValue": 60.34,
+      "premiumDiscount": "0.51%",
+      "premiumDiscountValue": 0.51,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
@@ -3290,8 +3290,8 @@
           "mo1Text": "-1.87%",
           "mo3": -2.57,
           "mo3Text": "-2.57%",
-          "qtd": -0.12,
-          "qtdText": "-0.12%",
+          "qtd": -2.01,
+          "qtdText": "-2.01%",
           "ytd": 16.96,
           "ytdText": "16.96%",
           "yr1": null,
@@ -3302,8 +3302,8 @@
           "yr5Text": "—",
           "yr10": null,
           "yr10Text": "—",
-          "sinceInception": null,
-          "sinceInceptionText": "—"
+          "sinceInception": 20.57,
+          "sinceInceptionText": "20.57%"
         },
         "quarterEnd": {
           "asOfDate": "Sep 30 2026",
@@ -3324,7 +3324,7 @@
         "cagr3y": null,
         "cagr5y": null,
         "cagr10y": null,
-        "siAnn": null,
+        "siAnn": 20.57,
         "dividendYield": null,
         "dividendYieldText": "—",
         "dividendYieldBasis": null,
@@ -3334,7 +3334,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1371,
-      "history": 243
+      "history": 247
     },
     {
       "ticker": "GUMI",
@@ -3348,17 +3348,17 @@
       "terValue": 0.16,
       "terGross": "0.16%",
       "terGrossValue": 0.16,
-      "nav": "$50.13",
-      "navValue": 50.13,
-      "aum": "$62.67 M",
-      "aumValue": 62670000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$50.22",
+      "navValue": 50.22,
+      "aum": "$64.03 M",
+      "aumValue": 64030000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 23 2024",
       "exchange": "NYSE Arca",
-      "closePrice": "$50.12",
-      "closePriceValue": 50.12,
-      "premiumDiscount": "-0.02%",
-      "premiumDiscountValue": -0.02,
+      "closePrice": "$50.24",
+      "closePriceValue": 50.24,
+      "premiumDiscount": "0.04%",
+      "premiumDiscountValue": 0.04,
       "frequencyCode": "01 - Monthly",
       "distributions": {
         "frequency": "Monthly",
@@ -3373,8 +3373,8 @@
           "mo1Text": "-0.29%",
           "mo3": 0.1,
           "mo3Text": "0.10%",
-          "qtd": 0.16,
-          "qtdText": "0.16%",
+          "qtd": 0.34,
+          "qtdText": "0.34%",
           "ytd": 1.51,
           "ytdText": "1.51%",
           "yr1": 2.24,
@@ -3417,7 +3417,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 231,
-      "history": 556
+      "history": 560
     },
     {
       "ticker": "GUSA",
@@ -3431,22 +3431,22 @@
       "terValue": 0.1,
       "terGross": "0.1%",
       "terGrossValue": 0.1,
-      "nav": "$67.18",
-      "navValue": 67.18,
-      "aum": "$2.45 B",
-      "aumValue": 2454030000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$66.57",
+      "navValue": 66.57,
+      "aum": "$2.43 B",
+      "aumValue": 2431700000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Apr 05 2022",
       "exchange": "NYSE",
-      "closePrice": "$67.18",
-      "closePriceValue": 67.18,
-      "premiumDiscount": "0.00%",
-      "premiumDiscountValue": 0,
+      "closePrice": "$66.58",
+      "closePriceValue": 66.58,
+      "premiumDiscount": "0.02%",
+      "premiumDiscountValue": 0.02,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.16"
+        "dividend": "0.1597"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3456,8 +3456,8 @@
           "mo1Text": "-0.62%",
           "mo3": 1.71,
           "mo3Text": "1.71%",
-          "qtd": 1.69,
-          "qtdText": "1.69%",
+          "qtd": -0.29,
+          "qtdText": "-0.29%",
           "ytd": 12.41,
           "ytdText": "12.41%",
           "yr1": 15.03,
@@ -3500,7 +3500,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1013,
-      "history": 1128
+      "history": 1132
     },
     {
       "ticker": "GUSE",
@@ -3514,22 +3514,22 @@
       "terValue": 0.3,
       "terGross": "0.3%",
       "terGrossValue": 0.3,
-      "nav": "$46.72",
-      "navValue": 46.72,
-      "aum": "$365.22 M",
-      "aumValue": 365220000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$46.15",
+      "navValue": 46.15,
+      "aum": "$359.85 M",
+      "aumValue": 359850000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jan 31 2008",
       "exchange": "NASDAQ",
-      "closePrice": "$46.70",
-      "closePriceValue": 46.7,
-      "premiumDiscount": "-0.04%",
-      "premiumDiscountValue": -0.04,
+      "closePrice": "$46.15",
+      "closePriceValue": 46.15,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
         "exDate": "12/23/2025",
-        "dividend": "0.295"
+        "dividend": "0.2949"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3539,8 +3539,8 @@
           "mo1Text": "0.00%",
           "mo3": 1.33,
           "mo3Text": "1.33%",
-          "qtd": 1.99,
-          "qtdText": "1.99%",
+          "qtd": -0.39,
+          "qtdText": "-0.39%",
           "ytd": 13.03,
           "ytdText": "13.03%",
           "yr1": 15.7,
@@ -3561,7 +3561,7 @@
           "yr3": null,
           "yr5": 13.15,
           "yr10": 15.56,
-          "sinceInception": null
+          "sinceInception": 12.61
         }
       },
       "metrics": {
@@ -3583,7 +3583,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 122,
-      "history": 226
+      "history": 230
     },
     {
       "ticker": "GVIP",
@@ -3597,22 +3597,22 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$172.98",
-      "navValue": 172.98,
-      "aum": "$583.80 M",
-      "aumValue": 583800000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$167.11",
+      "navValue": 167.11,
+      "aum": "$564.01 M",
+      "aumValue": 564010000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 01 2016",
       "exchange": "NYSE Arca",
-      "closePrice": "$173.00",
-      "closePriceValue": 173,
+      "closePrice": "$167.12",
+      "closePriceValue": 167.12,
       "premiumDiscount": "0.01%",
       "premiumDiscountValue": 0.01,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "12/23/2025",
-        "dividend": "0.519"
+        "dividend": "0.5194"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3622,8 +3622,8 @@
           "mo1Text": "-0.38%",
           "mo3": -9.91,
           "mo3Text": "-9.91%",
-          "qtd": 0.34,
-          "qtdText": "0.34%",
+          "qtd": -4.39,
+          "qtdText": "-4.39%",
           "ytd": 9.83,
           "ytdText": "9.83%",
           "yr1": 11.25,
@@ -3666,7 +3666,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 51,
-      "history": 2491
+      "history": 2495
     },
     {
       "ticker": "GVLE",
@@ -3676,26 +3676,26 @@
       "dataFile": "./funds/GVLE/meta.json",
       "cusip": "38149W416",
       "isin": "US38149W4160",
-      "ter": "—",
-      "terValue": null,
-      "terGross": "—",
-      "terGrossValue": null,
-      "nav": "$48.33",
-      "navValue": 48.33,
-      "aum": "$39.35 M",
-      "aumValue": 39351930.56,
-      "asOfDate": "Oct 09 2026",
+      "ter": "0.45%",
+      "terValue": 0.45,
+      "terGross": "0.45%",
+      "terGrossValue": 0.45,
+      "nav": "$48.34",
+      "navValue": 48.34,
+      "aum": "$40.34 M",
+      "aumValue": 40340000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jul 31 2015",
-      "exchange": "NGM",
-      "closePrice": "$48.31",
-      "closePriceValue": 48.31,
-      "premiumDiscount": "-0.03%",
-      "premiumDiscountValue": -0.03,
+      "exchange": "NASDAQ",
+      "closePrice": "$48.34",
+      "closePriceValue": 48.34,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "12 - Annually",
       "distributions": {
         "frequency": "Annually",
         "exDate": "12/23/2025",
-        "dividend": "0.474"
+        "dividend": "0.4741"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3705,8 +3705,8 @@
           "mo1Text": "-2.60%",
           "mo3": 0.28,
           "mo3Text": "0.28%",
-          "qtd": 2.34,
-          "qtdText": "2.34%",
+          "qtd": 1.79,
+          "qtdText": "1.79%",
           "ytd": 15.95,
           "ytdText": "15.95%",
           "yr1": 19.05,
@@ -3727,7 +3727,7 @@
           "yr3": null,
           "yr5": 11.67,
           "yr10": 11.86,
-          "sinceInception": null
+          "sinceInception": 10.58
         }
       },
       "metrics": {
@@ -3749,7 +3749,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 33,
-      "history": 226
+      "history": 230
     },
     {
       "ticker": "GVUS",
@@ -3763,17 +3763,17 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$65.08",
-      "navValue": 65.08,
-      "aum": "$436.03 M",
-      "aumValue": 436030000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$65.73",
+      "navValue": 65.73,
+      "aum": "$440.40 M",
+      "aumValue": 440400000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Nov 28 2023",
       "exchange": "NYSE Arca",
-      "closePrice": "$65.07",
-      "closePriceValue": 65.07,
-      "premiumDiscount": "-0.02%",
-      "premiumDiscountValue": -0.02,
+      "closePrice": "$65.73",
+      "closePriceValue": 65.73,
+      "premiumDiscount": "0.00%",
+      "premiumDiscountValue": 0,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
@@ -3788,8 +3788,8 @@
           "mo1Text": "-3.13%",
           "mo3": 2.57,
           "mo3Text": "2.57%",
-          "qtd": 2.62,
-          "qtdText": "2.62%",
+          "qtd": 3.08,
+          "qtdText": "3.08%",
           "ytd": 19.17,
           "ytdText": "19.17%",
           "yr1": 23.64,
@@ -3832,7 +3832,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 856,
-      "history": 718
+      "history": 722
     },
     {
       "ticker": "GXUS",
@@ -3846,22 +3846,22 @@
       "terValue": 0.18,
       "terGross": "0.18%",
       "terGrossValue": 0.18,
-      "nav": "$62.13",
-      "navValue": 62.13,
-      "aum": "$627.81 M",
-      "aumValue": 627810000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$61.04",
+      "navValue": 61.04,
+      "aum": "$616.81 M",
+      "aumValue": 616810000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "May 31 2023",
       "exchange": "NYSE",
-      "closePrice": "$62.37",
-      "closePriceValue": 62.37,
-      "premiumDiscount": "0.39%",
-      "premiumDiscountValue": 0.39,
+      "closePrice": "$61.64",
+      "closePriceValue": 61.64,
+      "premiumDiscount": "0.99%",
+      "premiumDiscountValue": 0.99,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.487"
+        "dividend": "0.4872"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3871,8 +3871,8 @@
           "mo1Text": "-2.33%",
           "mo3": 0.49,
           "mo3Text": "0.49%",
-          "qtd": -0.11,
-          "qtdText": "-0.11%",
+          "qtd": -1.43,
+          "qtdText": "-1.43%",
           "ytd": 14.01,
           "ytdText": "14.01%",
           "yr1": 19.56,
@@ -3915,7 +3915,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 2467,
-      "history": 836
+      "history": 840
     },
     {
       "ticker": "JUST",
@@ -3929,22 +3929,22 @@
       "terValue": 0.2,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$111.22",
-      "navValue": 111.22,
-      "aum": "$572.78 M",
-      "aumValue": 572780000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$110.39",
+      "navValue": 110.39,
+      "aum": "$568.51 M",
+      "aumValue": 568510000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Jun 07 2018",
       "exchange": "NYSE Arca",
-      "closePrice": "$111.20",
-      "closePriceValue": 111.2,
+      "closePrice": "$110.37",
+      "closePriceValue": 110.37,
       "premiumDiscount": "-0.02%",
       "premiumDiscountValue": -0.02,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.247"
+        "dividend": "0.2472"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -3954,8 +3954,8 @@
           "mo1Text": "-1.00%",
           "mo3": 2.26,
           "mo3Text": "2.26%",
-          "qtd": 1.97,
-          "qtdText": "1.97%",
+          "qtd": 0.34,
+          "qtdText": "0.34%",
           "ytd": 13.58,
           "ytdText": "13.58%",
           "yr1": 17.25,
@@ -3998,7 +3998,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 468,
-      "history": 2093
+      "history": 2097
     }
   ]
 }

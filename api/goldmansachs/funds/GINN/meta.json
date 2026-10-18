@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028085/0000940400-26-028085.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GINN",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028085, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$82.21",
-    "value": 82.21,
-    "asOfDate": "Oct 09 2026"
+    "display": "$81.32",
+    "value": 81.32,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$82.12",
-    "value": 82.12,
-    "asOfDate": "Oct 09 2026",
+    "display": "$81.24",
+    "value": 81.24,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.11%",
-    "value": -0.11,
-    "asOfDate": "Oct 09 2026",
+    "display": "-0.10%",
+    "value": -0.1,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$180.87 M",
-    "value": 180870000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$178.90 M",
+    "value": 178900000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 472,
-    "bidAskMidpoint": 82.13,
+    "publishedTotalHoldings": 473,
+    "bidAskMidpoint": 81.29,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 1,
+    "atNavDays": 1,
+    "discountDays": 62
   },
   "yields": {
     "dividendYield": 1.14,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.62%",
       "mo3": 3.1,
       "mo3Text": "3.10%",
-      "qtd": 1.1,
-      "qtdText": "1.10%",
+      "qtd": -1.23,
+      "qtdText": "-1.23%",
       "ytd": 10.87,
       "ytdText": "10.87%",
       "yr1": 11.04,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,7 +163,7 @@
     "rows": [
       [
         "12/24/2020",
-        "0.04"
+        "0.0401"
       ],
       [
         "03/25/2021",
@@ -171,23 +171,23 @@
       ],
       [
         "06/24/2021",
-        "0.105"
+        "0.1045"
       ],
       [
         "09/24/2021",
-        "0.185"
+        "0.1855"
       ],
       [
         "12/27/2021",
-        "0.068"
+        "0.0675"
       ],
       [
         "03/25/2022",
-        "0.084"
+        "0.0837"
       ],
       [
         "06/24/2022",
-        "0.125"
+        "0.1251"
       ],
       [
         "09/26/2022",
@@ -195,15 +195,15 @@
       ],
       [
         "12/27/2022",
-        "0.055"
+        "0.0547"
       ],
       [
         "12/26/2023",
-        "0.532"
+        "0.5317"
       ],
       [
         "12/23/2024",
-        "0.775"
+        "0.7748"
       ],
       [
         "12/23/2025",
@@ -211,7 +211,53 @@
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 16.88,
+    "rows": [
+      {
+        "name": "Apple Inc",
+        "weight": 2.22
+      },
+      {
+        "name": "Microsoft Corp",
+        "weight": 2.19
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 2.01
+      },
+      {
+        "name": "Meta Platforms Inc",
+        "weight": 2
+      },
+      {
+        "name": "NVIDIA Corp",
+        "weight": 1.97
+      },
+      {
+        "name": "Amazon.com Inc",
+        "weight": 1.89
+      },
+      {
+        "name": "Intel Corp",
+        "weight": 1.22
+      },
+      {
+        "name": "Tesla Inc",
+        "weight": 1.21
+      },
+      {
+        "name": "Tencent Holdings Ltd",
+        "weight": 1.09
+      },
+      {
+        "name": "Moderna Inc",
+        "weight": 1.08
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -223,7 +269,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028085, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 472
+    "publishedTotalHoldings": 473
   },
   "history": {
     "pages": [
@@ -231,8 +277,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1487,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1491,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

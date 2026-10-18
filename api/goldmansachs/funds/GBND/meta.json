@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109040/38149W473/goldman-sachs-core-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109040/38149W473/goldman-sachs-core-bond-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028069/0000940400-26-028069.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GBND",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028069, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,7 +26,7 @@
     "exchange": "NYSE Arca",
     "morningstarCategory": null,
     "navTicker": "GBND.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.25%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.06",
-    "value": 48.06,
-    "asOfDate": "Oct 09 2026"
+    "display": "$48.44",
+    "value": 48.44,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$48.10",
-    "value": 48.1,
-    "asOfDate": "Oct 09 2026",
+    "display": "$48.47",
+    "value": 48.47,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.08%",
-    "value": 0.08,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.06%",
+    "value": 0.06,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$599.55 M",
-    "value": 599550000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$609.07 M",
+    "value": 609070000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 717,
-    "bidAskMidpoint": 48.1,
+    "publishedTotalHoldings": 716,
+    "bidAskMidpoint": 48.47,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 62,
+    "atNavDays": 0,
+    "discountDays": 2
   },
   "yields": {
     "dividendYield": 4.01,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.83%",
       "mo3": -3.79,
       "mo3Text": "-3.79%",
-      "qtd": 0.26,
-      "qtdText": "0.26%",
+      "qtd": 1,
+      "qtdText": "1.00%",
       "ytd": -3.09,
       "ytdText": "-3.09%",
       "yr1": -2.05,
@@ -155,7 +155,7 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -167,7 +167,7 @@
       ],
       [
         "09/02/2025",
-        "0.169"
+        "0.1687"
       ],
       [
         "10/01/2025",
@@ -175,39 +175,39 @@
       ],
       [
         "11/03/2025",
-        "0.183"
+        "0.1829"
       ],
       [
         "12/01/2025",
-        "0.144"
+        "0.1439"
       ],
       [
         "12/31/2025",
-        "0.21"
+        "0.2097"
       ],
       [
         "02/02/2026",
-        "0.072"
+        "0.0723"
       ],
       [
         "03/02/2026",
-        "0.151"
+        "0.1514"
       ],
       [
         "04/01/2026",
-        "0.136"
+        "0.1355"
       ],
       [
         "05/01/2026",
-        "0.093"
+        "0.0927"
       ],
       [
         "06/01/2026",
-        "0.166"
+        "0.1661"
       ],
       [
         "07/01/2026",
-        "0.184"
+        "0.1841"
       ],
       [
         "08/03/2026",
@@ -215,15 +215,61 @@
       ],
       [
         "09/01/2026",
-        "0.189"
+        "0.1891"
       ],
       [
         "10/01/2026",
-        "0.193"
+        "0.1933"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 29.58,
+    "rows": [
+      {
+        "name": "US GOVT 3.875% 30 NOV 2029",
+        "weight": 6.78
+      },
+      {
+        "name": "FNCL 2.50 11/26 TBA",
+        "weight": 4.53
+      },
+      {
+        "name": "US GOVT 3.375% 29 FEB 2028",
+        "weight": 2.86
+      },
+      {
+        "name": "US GOVT 4.25% 31 JUL 2028",
+        "weight": 2.79
+      },
+      {
+        "name": "US GOVT 5% 15 MAY 2056",
+        "weight": 2.71
+      },
+      {
+        "name": "US GOVT 4.5% 15 NOV 2054",
+        "weight": 2.43
+      },
+      {
+        "name": "US GOVT 4.25% 15 AUG 2054",
+        "weight": 2.33
+      },
+      {
+        "name": "FNCL 6.00 11/26 TBA",
+        "weight": 1.79
+      },
+      {
+        "name": "FREDDIE MAC STRIPS GA 2026-473 4.8% 25 SEP 2031",
+        "weight": 1.69
+      },
+      {
+        "name": "US GOVT 4.625% 15 FEB 2046",
+        "weight": 1.67
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -236,15 +282,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028069, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 717
+    "publishedTotalHoldings": 716
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 326,
-    "asOf": "Oct 12 2026",
+    "totalRows": 330,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

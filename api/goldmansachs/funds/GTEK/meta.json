@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028067/0000940400-26-028067.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTEK",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028067, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$60.89",
-    "value": 60.89,
-    "asOfDate": "Oct 09 2026"
+    "display": "$54.78",
+    "value": 54.78,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$60.62",
-    "value": 60.62,
-    "asOfDate": "Oct 09 2026",
+    "display": "$54.90",
+    "value": 54.9,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.44%",
-    "value": -0.44,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.21%",
+    "value": 0.21,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$254.20 M",
-    "value": 254200000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$228.73 M",
+    "value": 228730000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 59,
-    "bidAskMidpoint": 60.69,
+    "publishedTotalHoldings": 58,
+    "bidAskMidpoint": 55.11,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 37,
+    "atNavDays": 0,
+    "discountDays": 27
   },
   "yields": {
     "dividendYield": 0,
@@ -86,8 +86,8 @@
       "mo1Text": "2.82%",
       "mo3": -5.66,
       "mo3Text": "-5.66%",
-      "qtd": 0.25,
-      "qtdText": "0.25%",
+      "qtd": -10.84,
+      "qtdText": "-10.84%",
       "ytd": 46.29,
       "ytdText": "46.29%",
       "yr1": 50.12,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,23 +163,69 @@
     "rows": [
       [
         "06/24/2022",
-        "0.001"
+        "0.0009"
       ],
       [
         "09/26/2022",
-        "0.003"
+        "0.0031"
       ],
       [
         "12/27/2022",
-        "0.002"
+        "0.0017"
       ],
       [
         "12/26/2023",
-        "0.071"
+        "0.0713"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 30.59,
+    "rows": [
+      {
+        "name": "Marvell Technology Inc",
+        "weight": 4.23
+      },
+      {
+        "name": "Jentech Precision Industrial Co Ltd",
+        "weight": 3.76
+      },
+      {
+        "name": "ASE Technology Holding Co Ltd",
+        "weight": 3.27
+      },
+      {
+        "name": "Cloudflare Inc",
+        "weight": 3.07
+      },
+      {
+        "name": "MediaTek Inc",
+        "weight": 2.92
+      },
+      {
+        "name": "Elite Material Co Ltd",
+        "weight": 2.81
+      },
+      {
+        "name": "SK Square Co Ltd",
+        "weight": 2.74
+      },
+      {
+        "name": "Snowflake Inc",
+        "weight": 2.73
+      },
+      {
+        "name": "Amphenol Corp",
+        "weight": 2.61
+      },
+      {
+        "name": "Delta Electronics Inc",
+        "weight": 2.45
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -190,7 +236,7 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028067, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 59
+    "publishedTotalHoldings": 58
   },
   "history": {
     "pages": [
@@ -198,8 +244,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1273,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1277,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

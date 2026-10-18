@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104218/38149W739/goldman-sachs-active-beta-world-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSWO",
     "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$65.45",
-    "value": 65.45,
-    "asOfDate": "Oct 09 2026"
+    "display": "$65.01",
+    "value": 65.01,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$65.56",
-    "value": 65.56,
-    "asOfDate": "Oct 09 2026",
+    "display": "$65.11",
+    "value": 65.11,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.17%",
-    "value": 0.17,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.15%",
+    "value": 0.15,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.80 B",
-    "value": 1803850000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$1.79 B",
+    "value": 1791560000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 742,
-    "bidAskMidpoint": 65.6,
+    "publishedTotalHoldings": 743,
+    "bidAskMidpoint": 65.13,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 42,
+    "atNavDays": 2,
+    "discountDays": 20
   },
   "yields": {
     "dividendYield": 1.45,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.91%",
       "mo3": 2.48,
       "mo3Text": "2.48%",
-      "qtd": 1.39,
-      "qtdText": "1.39%",
+      "qtd": 0.03,
+      "qtdText": "0.03%",
       "ytd": 13.32,
       "ytdText": "13.32%",
       "yr1": 15.32,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,7 +163,7 @@
     "rows": [
       [
         "06/24/2022",
-        "0.305"
+        "0.3054"
       ],
       [
         "09/26/2022",
@@ -171,47 +171,47 @@
       ],
       [
         "12/27/2022",
-        "0.198"
+        "0.1979"
       ],
       [
         "03/27/2023",
-        "0.165"
+        "0.1652"
       ],
       [
         "06/26/2023",
-        "0.314"
+        "0.3139"
       ],
       [
         "09/25/2023",
-        "0.161"
+        "0.1614"
       ],
       [
         "12/26/2023",
-        "0.259"
+        "0.2587"
       ],
       [
         "03/22/2024",
-        "0.15"
+        "0.1503"
       ],
       [
         "06/24/2024",
-        "0.32"
+        "0.3202"
       ],
       [
         "09/24/2024",
-        "0.184"
+        "0.1841"
       ],
       [
         "12/23/2024",
-        "0.213"
+        "0.2126"
       ],
       [
         "03/25/2025",
-        "0.163"
+        "0.1632"
       ],
       [
         "06/24/2025",
-        "0.374"
+        "0.3744"
       ],
       [
         "09/24/2025",
@@ -219,23 +219,69 @@
       ],
       [
         "12/23/2025",
-        "0.226"
+        "0.2261"
       ],
       [
         "03/25/2026",
-        "0.188"
+        "0.1882"
       ],
       [
         "06/24/2026",
-        "0.317"
+        "0.3169"
       ],
       [
         "09/24/2026",
-        "0.204"
+        "0.2039"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 28.56,
+    "rows": [
+      {
+        "name": "NVIDIA Corp",
+        "weight": 5.74
+      },
+      {
+        "name": "Apple Inc",
+        "weight": 5.5
+      },
+      {
+        "name": "Microsoft Corp",
+        "weight": 4.31
+      },
+      {
+        "name": "Amazon.com Inc",
+        "weight": 2.72
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 2.28
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 1.96
+      },
+      {
+        "name": "Meta Platforms Inc",
+        "weight": 1.8
+      },
+      {
+        "name": "Broadcom Inc",
+        "weight": 1.76
+      },
+      {
+        "name": "Micron Technology Inc",
+        "weight": 1.26
+      },
+      {
+        "name": "Eli Lilly & Co",
+        "weight": 1.23
+      }
+    ]
+  },
   "holdings": {
     "pages": [],
     "pageSize": 250,
@@ -243,7 +289,7 @@
     "asOfDate": null,
     "asOf": "—",
     "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 742
+    "publishedTotalHoldings": 743
   },
   "history": {
     "pages": [
@@ -251,8 +297,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1146,
-    "asOf": "Oct 12 2026",
+    "totalRows": 1150,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

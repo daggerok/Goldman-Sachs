@@ -2,7 +2,7 @@
   "ticker": "GIGB",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2349,
+  "totalRows": 2353,
   "headers": [
     "Date",
     "Close",
@@ -2103,6 +2103,30 @@
       "Close": "43.64099884033203",
       "Adj Close": "43.64",
       "Volume": "585600"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "43.619998931884766",
+      "Adj Close": "43.62",
+      "Volume": "36100"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "43.65999984741211",
+      "Adj Close": "43.66",
+      "Volume": "244700"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "43.970001220703125",
+      "Adj Close": "43.97",
+      "Volume": "57800"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "43.90999984741211",
+      "Adj Close": "43.91",
+      "Volume": "48000"
     }
   ]
 }

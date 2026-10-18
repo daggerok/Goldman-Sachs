@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCPB",
     "holdingsSource": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,7 +26,7 @@
     "exchange": "NYSE",
     "morningstarCategory": null,
     "navTicker": "GCPB.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.4%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.37",
-    "value": 48.37,
-    "asOfDate": "Oct 09 2026"
+    "display": "$48.74",
+    "value": 48.74,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$48.42",
-    "value": 48.42,
-    "asOfDate": "Oct 09 2026",
+    "display": "$48.71",
+    "value": 48.71,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "asOfDate": "Oct 09 2026",
+    "display": "-0.06%",
+    "value": -0.06,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$147.39 M",
-    "value": 147390000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$150.96 M",
+    "value": 150960000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 338,
-    "bidAskMidpoint": 48.44,
+    "publishedTotalHoldings": 339,
+    "bidAskMidpoint": 48.71,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 30,
+    "atNavDays": 28,
+    "discountDays": 6
   },
   "yields": {
     "dividendYield": 0.61,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.95%",
       "mo3": -4.04,
       "mo3Text": "-4.04%",
-      "qtd": 0.25,
-      "qtdText": "0.25%",
+      "qtd": 1.06,
+      "qtdText": "1.06%",
       "ytd": -3.34,
       "ytdText": "-3.34%",
       "yr1": -1.82,
@@ -108,7 +108,7 @@
       "yr3": null,
       "yr5": -0.65,
       "yr10": 1.5,
-      "sinceInception": null
+      "sinceInception": 3.3
     }
   },
   "officialMarketPriceReturns": {
@@ -128,8 +128,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": -17.69,
+      "sinceInceptionText": "-17.69%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -147,31 +147,113 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": -17.69,
+      "sinceInceptionText": "-17.69%"
     }
   },
   "distributions": {
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
     ],
     "rows": [
       [
+        "12/10/2019",
+        "0.0009"
+      ],
+      [
+        "12/10/2020",
+        "0.0008"
+      ],
+      [
+        "12/10/2021",
+        "0.0023"
+      ],
+      [
+        "12/07/2022",
+        "0.001"
+      ],
+      [
+        "12/06/2024",
+        "0.0035"
+      ],
+      [
+        "12/05/2025",
+        "0.0031"
+      ],
+      [
+        "12/22/2025",
+        "0.0011"
+      ],
+      [
+        "06/29/2026",
+        "0.0656"
+      ],
+      [
+        "07/30/2026",
+        "0.0523"
+      ],
+      [
         "09/01/2026",
-        "0.13"
+        "0.1298"
       ],
       [
         "10/01/2026",
-        "0.188"
+        "0.1879"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 25.56,
+    "rows": [
+      {
+        "name": "US GOVT T-BILL 31 DEC 2026",
+        "weight": 5.06
+      },
+      {
+        "name": "FNCL 5.50 11/26 TBA",
+        "weight": 4.42
+      },
+      {
+        "name": "US GOVT 3.875% 15 JUN 2028",
+        "weight": 3
+      },
+      {
+        "name": "US GOVT 1.375% 15 NOV 2031",
+        "weight": 2.94
+      },
+      {
+        "name": "FREDDIE MAC STRIPS GA 2026-473 4.8% 25 SEP 2031",
+        "weight": 2.25
+      },
+      {
+        "name": "US GOVT T-BILL 15 DEC 2026",
+        "weight": 1.95
+      },
+      {
+        "name": "G2SF 6.00 11/26 TBA",
+        "weight": 1.94
+      },
+      {
+        "name": "VIBRANT CLO XVI A1A2 2026-16A FRN 15 JUL 2036 144A",
+        "weight": 1.36
+      },
+      {
+        "name": "FNCL SD7571",
+        "weight": 1.33
+      },
+      {
+        "name": "KKR FINANCIAL CLO A 2025-57A FRN 15 JUL 2038 144A",
+        "weight": 1.31
+      }
+    ]
+  },
   "holdings": {
     "pages": [],
     "pageSize": 250,
@@ -179,15 +261,15 @@
     "asOfDate": null,
     "asOf": "—",
     "source": "offline seed snapshot carries no holdings for this fund (SEC EDGAR Form N-PORT-P refresh in CI)",
-    "publishedTotalHoldings": 338
+    "publishedTotalHoldings": 339
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 45,
-    "asOf": "Oct 12 2026",
+    "totalRows": 49,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

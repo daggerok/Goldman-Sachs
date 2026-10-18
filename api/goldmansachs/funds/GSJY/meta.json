@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028076/0000940400-26-028076.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSJY",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028076, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$55.55",
-    "value": 55.55,
-    "asOfDate": "Oct 09 2026"
+    "display": "$53.92",
+    "value": 53.92,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$56.03",
-    "value": 56.03,
-    "asOfDate": "Oct 09 2026",
+    "display": "$54.69",
+    "value": 54.69,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.86%",
-    "value": 0.86,
-    "asOfDate": "Oct 09 2026",
+    "display": "1.43%",
+    "value": 1.43,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$99.99 M",
-    "value": 99990000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$97.05 M",
+    "value": 97050000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 160,
-    "bidAskMidpoint": 56.02,
+    "bidAskMidpoint": 54.66,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 43,
+    "atNavDays": 0,
+    "discountDays": 21
   },
   "yields": {
     "dividendYield": 1.92,
@@ -86,8 +86,8 @@
       "mo1Text": "1.62%",
       "mo3": 7.48,
       "mo3Text": "7.48%",
-      "qtd": 0.28,
-      "qtdText": "0.28%",
+      "qtd": -2.19,
+      "qtdText": "-2.19%",
       "ytd": 21.3,
       "ytdText": "21.30%",
       "yr1": 25.77,
@@ -108,7 +108,7 @@
       "yr3": null,
       "yr5": 9.67,
       "yr10": 9.36,
-      "sinceInception": null
+      "sinceInception": 9.84
     }
   },
   "officialMarketPriceReturns": {
@@ -128,8 +128,8 @@
       "yr5Text": "9.66%",
       "yr10": 9.12,
       "yr10Text": "9.12%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 9.79,
+      "sinceInceptionText": "9.79%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -147,15 +147,15 @@
       "yr5Text": "9.66%",
       "yr10": 9.12,
       "yr10Text": "9.12%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 9.79,
+      "sinceInceptionText": "9.79%"
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,23 +163,23 @@
     "rows": [
       [
         "06/23/2016",
-        "0.196"
+        "0.1964"
       ],
       [
         "09/23/2016",
-        "0.052"
+        "0.0521"
       ],
       [
         "12/22/2016",
-        "0.322"
+        "0.3216"
       ],
       [
         "03/24/2017",
-        "0.002"
+        "0.0019"
       ],
       [
         "06/23/2017",
-        "0.226"
+        "0.2256"
       ],
       [
         "09/22/2017",
@@ -187,83 +187,137 @@
       ],
       [
         "12/21/2017",
-        "0.342"
+        "0.3424"
+      ],
+      [
+        "03/23/2018",
+        "0.0004"
       ],
       [
         "06/25/2018",
-        "0.271"
+        "0.2712"
       ],
       [
         "12/24/2018",
-        "0.675"
+        "0.6745"
       ],
       [
         "06/24/2019",
-        "0.255"
+        "0.2552"
       ],
       [
         "12/24/2019",
-        "0.67"
+        "0.6704"
+      ],
+      [
+        "06/24/2020",
+        "0.1338"
       ],
       [
         "09/24/2020",
-        "0.029"
+        "0.0291"
       ],
       [
         "12/24/2020",
-        "0.292"
+        "0.2917"
       ],
       [
         "06/24/2021",
-        "0.222"
+        "0.2215"
       ],
       [
         "09/24/2021",
-        "0.049"
+        "0.0493"
       ],
       [
         "12/27/2021",
-        "0.366"
+        "0.3655"
       ],
       [
         "06/24/2022",
-        "0.298"
+        "0.2982"
       ],
       [
         "12/27/2022",
-        "0.345"
+        "0.3454"
       ],
       [
         "06/26/2023",
-        "0.304"
+        "0.3036"
       ],
       [
         "12/26/2023",
-        "0.441"
+        "0.4406"
       ],
       [
         "06/24/2024",
-        "0.298"
+        "0.2976"
       ],
       [
         "12/23/2024",
-        "0.321"
+        "0.3211"
       ],
       [
         "06/24/2025",
-        "0.266"
+        "0.2663"
       ],
       [
         "12/23/2025",
-        "0.659"
+        "0.6589"
       ],
       [
         "06/24/2026",
-        "0.412"
+        "0.4118"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 28.35,
+    "rows": [
+      {
+        "name": "Mitsubishi UFJ Financial Group Inc",
+        "weight": 4.23
+      },
+      {
+        "name": "Advantest Corp",
+        "weight": 3.73
+      },
+      {
+        "name": "Hitachi Ltd",
+        "weight": 2.91
+      },
+      {
+        "name": "Toyota Motor Corp",
+        "weight": 2.89
+      },
+      {
+        "name": "Tokyo Electron Ltd",
+        "weight": 2.89
+      },
+      {
+        "name": "Recruit Holdings Co Ltd",
+        "weight": 2.85
+      },
+      {
+        "name": "Sumitomo Mitsui Financial Group Inc",
+        "weight": 2.54
+      },
+      {
+        "name": "Sony Group Corp",
+        "weight": 2.44
+      },
+      {
+        "name": "Mizuho Financial Group Inc",
+        "weight": 2.16
+      },
+      {
+        "name": "Mitsubishi Corp",
+        "weight": 1.71
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -283,8 +337,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2667,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2671,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

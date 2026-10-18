@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028062/0000940400-26-028062.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPRF",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028062, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.86",
-    "value": 47.86,
-    "asOfDate": "Oct 09 2026"
+    "display": "$47.96",
+    "value": 47.96,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$47.88",
-    "value": 47.88,
-    "asOfDate": "Oct 09 2026",
+    "display": "$48.04",
+    "value": 48.04,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.16%",
+    "value": 0.16,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$167.50 M",
-    "value": 167500000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$167.84 M",
+    "value": 167840000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 534,
-    "bidAskMidpoint": 47.88,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": 48.04,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 15,
+    "atNavDays": 0,
+    "discountDays": 49
   },
   "yields": {
     "dividendYield": 5.83,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.26%",
       "mo3": -2.47,
       "mo3Text": "-2.47%",
-      "qtd": -0.11,
-      "qtdText": "-0.11%",
+      "qtd": -0.04,
+      "qtdText": "-0.04%",
       "ytd": -1.11,
       "ytdText": "-1.11%",
       "yr1": -0.95,
@@ -155,7 +155,7 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,79 +163,79 @@
     "rows": [
       [
         "09/03/2024",
-        "0.145"
+        "0.1449"
       ],
       [
         "10/01/2024",
-        "0.071"
+        "0.0709"
       ],
       [
         "11/01/2024",
-        "0.22"
+        "0.2196"
       ],
       [
         "12/02/2024",
-        "0.196"
+        "0.1963"
       ],
       [
         "12/31/2024",
-        "0.424"
+        "0.4238"
       ],
       [
         "02/03/2025",
-        "0.24"
+        "0.2403"
       ],
       [
         "03/03/2025",
-        "0.189"
+        "0.1888"
       ],
       [
         "04/01/2025",
-        "0.282"
+        "0.2822"
       ],
       [
         "05/01/2025",
-        "0.202"
+        "0.2024"
       ],
       [
         "06/02/2025",
-        "0.208"
+        "0.2076"
       ],
       [
         "07/01/2025",
-        "0.282"
+        "0.2823"
       ],
       [
         "08/01/2025",
-        "0.214"
+        "0.2144"
       ],
       [
         "09/02/2025",
-        "0.212"
+        "0.2116"
       ],
       [
         "10/01/2025",
-        "0.274"
+        "0.2738"
       ],
       [
         "11/03/2025",
-        "0.207"
+        "0.2067"
       ],
       [
         "12/01/2025",
-        "0.191"
+        "0.1913"
       ],
       [
         "12/31/2025",
-        "0.22"
+        "0.2205"
       ],
       [
         "02/02/2026",
-        "0.402"
+        "0.4021"
       ],
       [
         "03/02/2026",
-        "0.06"
+        "0.0604"
       ],
       [
         "04/01/2026",
@@ -243,7 +243,7 @@
       ],
       [
         "05/01/2026",
-        "0.241"
+        "0.2409"
       ],
       [
         "06/01/2026",
@@ -251,19 +251,19 @@
       ],
       [
         "07/01/2026",
-        "0.265"
+        "0.2653"
       ],
       [
         "08/03/2026",
-        "0.211"
+        "0.2112"
       ],
       [
         "09/01/2026",
-        "0.214"
+        "0.2141"
       ],
       [
         "10/01/2026",
-        "0.273"
+        "0.2731"
       ]
     ]
   },
@@ -278,16 +278,15 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028062, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 534
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 551,
-    "asOf": "Oct 12 2026",
+    "totalRows": 555,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

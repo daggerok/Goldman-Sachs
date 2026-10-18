@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102392/381430305/goldman-sachs-active-beta-europe-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102392/381430305/goldman-sachs-active-beta-europe-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028066/0000940400-26-028066.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEU",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028066, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$46.90",
-    "value": 46.9,
-    "asOfDate": "Oct 09 2026"
+    "display": "$47.61",
+    "value": 47.61,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$47.19",
-    "value": 47.19,
-    "asOfDate": "Oct 09 2026",
+    "display": "$47.89",
+    "value": 47.89,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.62%",
-    "value": 0.62,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.60%",
+    "value": 0.6,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$166.50 M",
-    "value": 166500000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$169.02 M",
+    "value": 169020000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 339,
-    "bidAskMidpoint": 47.17,
+    "bidAskMidpoint": 47.87,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 54,
+    "atNavDays": 1,
+    "discountDays": 9
   },
   "yields": {
     "dividendYield": 2.82,
@@ -86,8 +86,8 @@
       "mo1Text": "-4.38%",
       "mo3": -1.12,
       "mo3Text": "-1.12%",
-      "qtd": 0.56,
-      "qtdText": "0.56%",
+      "qtd": 2.26,
+      "qtdText": "2.26%",
       "ytd": 6.35,
       "ytdText": "6.35%",
       "yr1": 12.88,
@@ -108,7 +108,7 @@
       "yr3": null,
       "yr5": 9.09,
       "yr10": 9.28,
-      "sinceInception": null
+      "sinceInception": 9.48
     }
   },
   "officialMarketPriceReturns": {
@@ -128,8 +128,8 @@
       "yr5Text": "9.11%",
       "yr10": 9.2,
       "yr10Text": "9.20%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 9.45,
+      "sinceInceptionText": "9.45%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -147,15 +147,15 @@
       "yr5Text": "9.11%",
       "yr10": 9.2,
       "yr10Text": "9.20%",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 9.45,
+      "sinceInceptionText": "9.45%"
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,27 +163,27 @@
     "rows": [
       [
         "06/23/2016",
-        "0.48"
+        "0.4804"
       ],
       [
         "09/23/2016",
-        "0.115"
+        "0.1152"
       ],
       [
         "12/22/2016",
-        "0.107"
+        "0.1066"
       ],
       [
         "03/24/2017",
-        "0.122"
+        "0.1221"
       ],
       [
         "06/23/2017",
-        "0.399"
+        "0.3987"
       ],
       [
         "09/22/2017",
-        "0.103"
+        "0.1034"
       ],
       [
         "12/21/2017",
@@ -191,111 +191,161 @@
       ],
       [
         "03/23/2018",
-        "0.112"
+        "0.1125"
       ],
       [
         "06/25/2018",
-        "0.507"
+        "0.5067"
       ],
       [
         "09/24/2018",
-        "0.174"
+        "0.1739"
       ],
       [
         "12/24/2018",
-        "0.104"
+        "0.1036"
       ],
       [
         "03/25/2019",
-        "0.272"
+        "0.2725"
       ],
       [
         "06/24/2019",
-        "0.726"
+        "0.7264"
       ],
       [
         "12/24/2019",
-        "0.168"
+        "0.1681"
       ],
       [
         "03/25/2020",
-        "0.162"
+        "0.1621"
+      ],
+      [
+        "06/24/2020",
+        "0.2587"
       ],
       [
         "09/24/2020",
-        "0.125"
+        "0.1247"
       ],
       [
         "12/24/2020",
-        "0.062"
+        "0.0615"
       ],
       [
         "03/25/2021",
-        "0.199"
+        "0.1992"
       ],
       [
         "06/24/2021",
-        "0.468"
+        "0.4681"
       ],
       [
         "09/24/2021",
-        "0.334"
+        "0.3342"
       ],
       [
         "12/27/2021",
-        "0.016"
+        "0.0156"
       ],
       [
         "03/25/2022",
-        "0.217"
+        "0.2168"
       ],
       [
         "06/24/2022",
-        "0.671"
+        "0.6713"
       ],
       [
         "09/26/2022",
-        "0.02"
+        "0.0201"
       ],
       [
         "12/27/2022",
-        "0.089"
+        "0.0891"
       ],
       [
         "06/26/2023",
-        "0.913"
+        "0.9132"
       ],
       [
         "12/26/2023",
-        "0.272"
+        "0.2722"
       ],
       [
         "06/24/2024",
-        "0.593"
+        "0.5925"
       ],
       [
         "12/23/2024",
-        "0.165"
+        "0.1648"
       ],
       [
         "12/31/2024",
-        "0.057"
+        "0.0572"
       ],
       [
         "06/24/2025",
-        "0.83"
+        "0.8297"
       ],
       [
         "12/23/2025",
-        "0.415"
+        "0.4152"
       ],
       [
         "06/24/2026",
-        "0.412"
+        "0.9317"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 18.71,
+    "rows": [
+      {
+        "name": "ASML Holding NV",
+        "weight": 4.28
+      },
+      {
+        "name": "Roche Holding AG",
+        "weight": 2.14
+      },
+      {
+        "name": "HSBC Holdings PLC",
+        "weight": 2
+      },
+      {
+        "name": "Novartis AG",
+        "weight": 1.91
+      },
+      {
+        "name": "Shell PLC",
+        "weight": 1.71
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "weight": 1.59
+      },
+      {
+        "name": "Banco Santander SA",
+        "weight": 1.41
+      },
+      {
+        "name": "SAP SE",
+        "weight": 1.24
+      },
+      {
+        "name": "Siemens AG",
+        "weight": 1.23
+      },
+      {
+        "name": "Nestle SA",
+        "weight": 1.2
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -316,8 +366,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2667,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2671,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

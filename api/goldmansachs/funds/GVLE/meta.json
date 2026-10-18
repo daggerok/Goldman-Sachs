@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": null,
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028129/0000940400-26-028129.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,58 +15,58 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVLE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028129, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
     "cusip": "38149W416",
     "isin": "US38149W4160",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": null,
-    "exchange": null,
+    "indexTicker": "Russell 1000 Value Index",
+    "exchange": "NASDAQ",
     "morningstarCategory": null,
-    "navTicker": null,
+    "navTicker": "GVLE.NV",
     "iopvTicker": null
   },
   "expenseRatio": {
-    "display": "—",
-    "value": null,
-    "gross": null,
+    "display": "0.45%",
+    "value": 0.45,
+    "gross": 0.45,
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.33",
-    "value": 48.33,
-    "asOfDate": "Oct 09 2026"
+    "display": "$48.34",
+    "value": 48.34,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$48.31",
-    "value": 48.31,
-    "asOfDate": "Oct 09 2026",
+    "display": "$48.34",
+    "value": 48.34,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.03,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$39.35 M",
-    "value": 39351930.56,
-    "asOfDate": "May 31 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$40.34 M",
+    "value": 40340000,
+    "asOfDate": "Oct 15 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 48.32,
+    "publishedTotalHoldings": 31,
+    "bidAskMidpoint": 48.34,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 46,
+    "atNavDays": 2,
+    "discountDays": 16
   },
   "yields": {
     "dividendYield": 1,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.60%",
       "mo3": 0.28,
       "mo3Text": "0.28%",
-      "qtd": 2.34,
-      "qtdText": "2.34%",
+      "qtd": 1.79,
+      "qtdText": "1.79%",
       "ytd": 15.95,
       "ytdText": "15.95%",
       "yr1": 19.05,
@@ -108,7 +108,7 @@
       "yr3": null,
       "yr5": 11.67,
       "yr10": 11.86,
-      "sinceInception": null
+      "sinceInception": 10.58
     }
   },
   "officialMarketPriceReturns": {
@@ -128,8 +128,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 29.06,
+      "sinceInceptionText": "29.06%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -147,15 +147,15 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 29.06,
+      "sinceInceptionText": "29.06%"
     }
   },
   "distributions": {
     "frequency": "Annually",
     "frequencyCode": "12 - Annually",
     "paymentsPerYear": 1,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,11 +163,57 @@
     "rows": [
       [
         "12/23/2025",
-        "0.474"
+        "0.4741"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 50.48,
+    "rows": [
+      {
+        "name": "Microsoft Corp",
+        "weight": 9.58
+      },
+      {
+        "name": "Amazon.com Inc",
+        "weight": 7.86
+      },
+      {
+        "name": "Merck & Co Inc",
+        "weight": 4.72
+      },
+      {
+        "name": "ConocoPhillips",
+        "weight": 4.35
+      },
+      {
+        "name": "Thermo Fisher Scientific Inc",
+        "weight": 4.33
+      },
+      {
+        "name": "JPMorgan Chase & Co",
+        "weight": 4.3
+      },
+      {
+        "name": "Berkshire Hathaway Inc",
+        "weight": 4.11
+      },
+      {
+        "name": "Eaton Corp PLC",
+        "weight": 3.95
+      },
+      {
+        "name": "Walmart Inc",
+        "weight": 3.77
+      },
+      {
+        "name": "Procter & Gamble Co",
+        "weight": 3.51
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -177,15 +223,16 @@
     "asOfDate": "2026-05-31",
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028129, report period 2026-05-31)",
-    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)"
+    "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
+    "publishedTotalHoldings": 31
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 226,
-    "asOf": "Oct 12 2026",
+    "totalRows": 230,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

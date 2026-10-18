@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1882879/000094040026028142/0000940400-26-028142.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GXUS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028142, report period 2026-05-29)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$62.13",
-    "value": 62.13,
-    "asOfDate": "Oct 09 2026"
+    "display": "$61.04",
+    "value": 61.04,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$62.37",
-    "value": 62.37,
-    "asOfDate": "Oct 09 2026",
+    "display": "$61.64",
+    "value": 61.64,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.39%",
-    "value": 0.39,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.99%",
+    "value": 0.99,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$627.81 M",
-    "value": 627810000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$616.81 M",
+    "value": 616810000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 2578,
-    "bidAskMidpoint": 62.38,
+    "publishedTotalHoldings": 2577,
+    "bidAskMidpoint": 61.66,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 48,
+    "atNavDays": 1,
+    "discountDays": 15
   },
   "yields": {
     "dividendYield": 2.56,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.33%",
       "mo3": 0.49,
       "mo3Text": "0.49%",
-      "qtd": -0.11,
-      "qtdText": "-0.11%",
+      "qtd": -1.43,
+      "qtdText": "-1.43%",
       "ytd": 14.01,
       "ytdText": "14.01%",
       "yr1": 19.56,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,59 +163,105 @@
     "rows": [
       [
         "09/25/2023",
-        "0.338"
+        "0.3375"
       ],
       [
         "12/26/2023",
-        "0.209"
+        "0.2091"
       ],
       [
         "03/22/2024",
-        "0.103"
+        "0.1031"
       ],
       [
         "06/24/2024",
-        "0.439"
+        "0.4393"
       ],
       [
         "09/24/2024",
-        "0.485"
+        "0.4853"
       ],
       [
         "12/23/2024",
-        "0.22"
+        "0.2197"
       ],
       [
         "03/25/2025",
-        "0.251"
+        "0.2513"
       ],
       [
         "06/24/2025",
-        "0.517"
+        "0.5169"
       ],
       [
         "09/24/2025",
-        "0.328"
+        "0.3282"
       ],
       [
         "12/23/2025",
-        "0.382"
+        "0.3824"
       ],
       [
         "03/25/2026",
-        "0.171"
+        "0.1707"
       ],
       [
         "06/24/2026",
-        "0.56"
+        "0.5598"
       ],
       [
         "09/24/2026",
-        "0.487"
+        "0.4872"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 14.64,
+    "rows": [
+      {
+        "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+        "weight": 4.79
+      },
+      {
+        "name": "Samsung Electronics Co Ltd",
+        "weight": 1.93
+      },
+      {
+        "name": "ASML Holding NV",
+        "weight": 1.66
+      },
+      {
+        "name": "SK hynix Inc",
+        "weight": 1.4
+      },
+      {
+        "name": "Tencent Holdings Ltd",
+        "weight": 0.88
+      },
+      {
+        "name": "HSBC Holdings PLC",
+        "weight": 0.86
+      },
+      {
+        "name": "Roche Holding AG",
+        "weight": 0.86
+      },
+      {
+        "name": "Shell PLC",
+        "weight": 0.8
+      },
+      {
+        "name": "Novartis AG",
+        "weight": 0.73
+      },
+      {
+        "name": "Royal Bank of Canada",
+        "weight": 0.73
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -235,15 +281,15 @@
     "asOf": "May 29 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028142, report period 2026-05-29)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 2578
+    "publishedTotalHoldings": 2577
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 836,
-    "asOf": "Oct 12 2026",
+    "totalRows": 840,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

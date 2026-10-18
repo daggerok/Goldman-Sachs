@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109508/38149W424/goldman-sachs-enhanced-u-s-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109508/38149W424/goldman-sachs-enhanced-u-s-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028070/0000940400-26-028070.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GUSE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028070, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,7 +26,7 @@
     "exchange": "NASDAQ",
     "morningstarCategory": null,
     "navTicker": "GUSE.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.3%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$46.72",
-    "value": 46.72,
-    "asOfDate": "Oct 09 2026"
+    "display": "$46.15",
+    "value": 46.15,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$46.70",
-    "value": 46.7,
-    "asOfDate": "Oct 09 2026",
+    "display": "$46.15",
+    "value": 46.15,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.04,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$365.22 M",
-    "value": 365220000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$359.85 M",
+    "value": 359850000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 121,
-    "bidAskMidpoint": 46.7,
+    "bidAskMidpoint": 46.15,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 20,
+    "atNavDays": 2,
+    "discountDays": 42
   },
   "yields": {
     "dividendYield": 0.64,
@@ -86,8 +86,8 @@
       "mo1Text": "0.00%",
       "mo3": 1.33,
       "mo3Text": "1.33%",
-      "qtd": 1.99,
-      "qtdText": "1.99%",
+      "qtd": -0.39,
+      "qtdText": "-0.39%",
       "ytd": 13.03,
       "ytdText": "13.03%",
       "yr1": 15.7,
@@ -108,7 +108,7 @@
       "yr3": null,
       "yr5": 13.15,
       "yr10": 15.56,
-      "sinceInception": null
+      "sinceInception": 12.61
     }
   },
   "officialMarketPriceReturns": {
@@ -128,8 +128,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 21.6,
+      "sinceInceptionText": "21.60%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -147,15 +147,15 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 21.6,
+      "sinceInceptionText": "21.60%"
     }
   },
   "distributions": {
     "frequency": "Annually",
     "frequencyCode": "12 - Annually",
     "paymentsPerYear": 1,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,11 +163,57 @@
     "rows": [
       [
         "12/23/2025",
-        "0.295"
+        "0.2949"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 36.96,
+    "rows": [
+      {
+        "name": "NVIDIA Corp",
+        "weight": 7.97
+      },
+      {
+        "name": "Microsoft Corp",
+        "weight": 5.24
+      },
+      {
+        "name": "Apple Inc",
+        "weight": 5.24
+      },
+      {
+        "name": "Amazon.com Inc",
+        "weight": 4.25
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 3.53
+      },
+      {
+        "name": "Meta Platforms Inc",
+        "weight": 2.51
+      },
+      {
+        "name": "Broadcom Inc",
+        "weight": 2.38
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 2.25
+      },
+      {
+        "name": "Eli Lilly & Co",
+        "weight": 1.8
+      },
+      {
+        "name": "Coca-Cola Co",
+        "weight": 1.79
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -185,8 +231,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 226,
-    "asOf": "Oct 12 2026",
+    "totalRows": 230,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

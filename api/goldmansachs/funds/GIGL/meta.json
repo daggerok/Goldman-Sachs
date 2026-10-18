@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028063/0000940400-26-028063.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIGL",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028063, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,7 +26,7 @@
     "exchange": "NYSE Arca",
     "morningstarCategory": null,
     "navTicker": "GIGL.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.29%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.95",
-    "value": 47.95,
-    "asOfDate": "Oct 09 2026"
+    "display": "$48.32",
+    "value": 48.32,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$47.97",
-    "value": 47.97,
-    "asOfDate": "Oct 09 2026",
+    "display": "$48.30",
+    "value": 48.3,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.04,
-    "asOfDate": "Oct 09 2026",
+    "display": "-0.04%",
+    "value": -0.04,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$239.77 M",
-    "value": 239770000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$241.61 M",
+    "value": 241610000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 459,
-    "bidAskMidpoint": 47.98,
+    "bidAskMidpoint": 48.3,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 54,
+    "atNavDays": 3,
+    "discountDays": 7
   },
   "yields": {
     "dividendYield": 4.33,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.95%",
       "mo3": -4.05,
       "mo3Text": "-4.05%",
-      "qtd": 0.43,
-      "qtdText": "0.43%",
+      "qtd": 1.11,
+      "qtdText": "1.11%",
       "ytd": -3.18,
       "ytdText": "-3.18%",
       "yr1": -2.36,
@@ -155,7 +155,7 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,15 +163,15 @@
     "rows": [
       [
         "08/01/2025",
-        "0.236"
+        "0.2356"
       ],
       [
         "09/02/2025",
-        "0.182"
+        "0.1821"
       ],
       [
         "10/01/2025",
-        "0.178"
+        "0.1777"
       ],
       [
         "11/03/2025",
@@ -179,23 +179,23 @@
       ],
       [
         "12/01/2025",
-        "0.175"
+        "0.1751"
       ],
       [
         "12/31/2025",
-        "0.177"
+        "0.1774"
       ],
       [
         "02/02/2026",
-        "0.185"
+        "0.1851"
       ],
       [
         "03/02/2026",
-        "0.166"
+        "0.1664"
       ],
       [
         "04/01/2026",
-        "0.165"
+        "0.1652"
       ],
       [
         "05/01/2026",
@@ -203,27 +203,73 @@
       ],
       [
         "06/01/2026",
-        "0.179"
+        "0.1792"
       ],
       [
         "07/01/2026",
-        "0.197"
+        "0.1969"
       ],
       [
         "08/03/2026",
-        "0.205"
+        "0.2047"
       ],
       [
         "09/01/2026",
-        "0.19"
+        "0.1903"
       ],
       [
         "10/01/2026",
-        "0.195"
+        "0.1953"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 9.39,
+    "rows": [
+      {
+        "name": "FORD MOTOR CREDIT COMPANY LLC 5.42% 09 APR 2031-31",
+        "weight": 1.41
+      },
+      {
+        "name": "BIG SKY FUNDING LLC 5.75% 20 OCT 2035",
+        "weight": 1.14
+      },
+      {
+        "name": "BANK OF AMERICA CORPORATION 4.456% 06 FEB 2032-31",
+        "weight": 1.11
+      },
+      {
+        "name": "BANK OF AMERICA CORPORATION 2.482% 21 SEP 2036-31",
+        "weight": 1.09
+      },
+      {
+        "name": "SOLVENTUM CORPORATION 5.6% 23 MAR 2034-33",
+        "weight": 0.85
+      },
+      {
+        "name": "CITIGROUP INC. 3.057% 25 JAN 2033-32",
+        "weight": 0.8
+      },
+      {
+        "name": "BACARDI LIMITED 4.7% 15 MAY 2028-28 144A",
+        "weight": 0.79
+      },
+      {
+        "name": "JPMORGAN CHASE & CO. 5.193% 05 FEB 2037-36",
+        "weight": 0.76
+      },
+      {
+        "name": "ORACLE CORPORATION 5.35% 04 MAY 2033-33",
+        "weight": 0.72
+      },
+      {
+        "name": "EXPEDIA GROUP, INC. 5.4% 15 FEB 2035-34",
+        "weight": 0.72
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -242,8 +288,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 326,
-    "asOf": "Oct 12 2026",
+    "totalRows": 330,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

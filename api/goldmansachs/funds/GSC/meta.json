@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028128/0000940400-26-028128.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSC",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028128, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$62.26",
-    "value": 62.26,
-    "asOfDate": "Oct 09 2026"
+    "display": "$61.23",
+    "value": 61.23,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$62.30",
-    "value": 62.3,
-    "asOfDate": "Oct 09 2026",
+    "display": "$61.24",
+    "value": 61.24,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.02%",
+    "value": 0.02,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$278.62 M",
-    "value": 278620000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$281.68 M",
+    "value": 281680000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 99,
-    "bidAskMidpoint": 62.29,
+    "publishedTotalHoldings": 98,
+    "bidAskMidpoint": 61.24,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 48,
+    "atNavDays": 0,
+    "discountDays": 16
   },
   "yields": {
     "dividendYield": 0.22,
@@ -86,8 +86,8 @@
       "mo1Text": "-4.65%",
       "mo3": -10.68,
       "mo3Text": "-10.68%",
-      "qtd": -0.71,
-      "qtdText": "-0.71%",
+      "qtd": -3.11,
+      "qtdText": "-3.11%",
       "ytd": 13.88,
       "ytdText": "13.88%",
       "yr1": 16.3,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,59 +163,105 @@
     "rows": [
       [
         "12/26/2023",
-        "0.042"
+        "0.0423"
       ],
       [
         "12/28/2023",
-        "0.007"
+        "0.0073"
       ],
       [
         "03/22/2024",
-        "0.027"
+        "0.0272"
       ],
       [
         "06/24/2024",
-        "0.024"
+        "0.0243"
       ],
       [
         "09/24/2024",
-        "0.018"
+        "0.0176"
       ],
       [
         "12/23/2024",
-        "0.269"
+        "0.2694"
       ],
       [
         "03/25/2025",
-        "0.029"
+        "0.0288"
       ],
       [
         "06/24/2025",
-        "0.033"
+        "0.0328"
       ],
       [
         "09/24/2025",
-        "0.012"
+        "0.0119"
       ],
       [
         "12/23/2025",
-        "0.013"
+        "0.0127"
       ],
       [
         "03/25/2026",
-        "0.049"
+        "0.0488"
       ],
       [
         "06/24/2026",
-        "0.014"
+        "0.0139"
       ],
       [
         "09/24/2026",
-        "0.063"
+        "0.0633"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 16.12,
+    "rows": [
+      {
+        "name": "Manhattan Associates Inc",
+        "weight": 1.95
+      },
+      {
+        "name": "Glaukos Corp",
+        "weight": 1.74
+      },
+      {
+        "name": "Life Time Group Holdings Inc",
+        "weight": 1.69
+      },
+      {
+        "name": "Skyward Specialty Insurance Group Inc",
+        "weight": 1.65
+      },
+      {
+        "name": "Terreno Realty Corp",
+        "weight": 1.58
+      },
+      {
+        "name": "Piper Sandler Cos",
+        "weight": 1.54
+      },
+      {
+        "name": "Renasant Corp",
+        "weight": 1.51
+      },
+      {
+        "name": "Terex Corp",
+        "weight": 1.5
+      },
+      {
+        "name": "JFrog Ltd",
+        "weight": 1.49
+      },
+      {
+        "name": "Gates Industrial Corp Ltd",
+        "weight": 1.47
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -226,15 +272,15 @@
     "asOf": "May 31 2026",
     "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028128, report period 2026-05-31)",
     "marketValueBasis": "SEC Form N-PORT-P reported value (valUSD)",
-    "publishedTotalHoldings": 99
+    "publishedTotalHoldings": 98
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 756,
-    "asOf": "Oct 12 2026",
+    "totalRows": 760,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

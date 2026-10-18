@@ -2,7 +2,7 @@
   "ticker": "GEMD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1165,
+  "totalRows": 1169,
   "headers": [
     "Date",
     "Close",
@@ -999,6 +999,30 @@
       "Close": "39.869998931884766",
       "Adj Close": "39.87",
       "Volume": "3700"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "40.0099983215332",
+      "Adj Close": "40.01",
+      "Volume": "2000"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "39.9900016784668",
+      "Adj Close": "39.99",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "40.20000076293945",
+      "Adj Close": "40.2",
+      "Volume": "2100"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "40.12099838256836",
+      "Adj Close": "40.12",
+      "Volume": "1700"
     }
   ]
 }

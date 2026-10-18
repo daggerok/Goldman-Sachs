@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028136/0000940400-26-028136.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -26,7 +26,7 @@
     "exchange": "NASDAQ",
     "morningstarCategory": null,
     "navTicker": "GIEQ.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.3%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$41.02",
-    "value": 41.02,
-    "asOfDate": "Oct 09 2026"
+    "display": "$40.99",
+    "value": 40.99,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$41.26",
-    "value": 41.26,
-    "asOfDate": "Oct 09 2026",
+    "display": "$41.31",
+    "value": 41.31,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.58%",
-    "value": 0.58,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.77%",
+    "value": 0.77,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$43.07 M",
-    "value": 43070000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$43.04 M",
+    "value": 43040000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 289,
-    "bidAskMidpoint": 41.26,
+    "bidAskMidpoint": 41.31,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 42,
+    "atNavDays": 0,
+    "discountDays": 22
   },
   "yields": {
     "dividendYield": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.98%",
       "mo3": 1.07,
       "mo3Text": "1.07%",
-      "qtd": 0.22,
-      "qtdText": "0.22%",
+      "qtd": 0.46,
+      "qtdText": "0.46%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -98,8 +98,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 4.07,
+      "sinceInceptionText": "4.07%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -128,8 +128,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 3.69,
+      "sinceInceptionText": "3.69%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -162,7 +162,53 @@
     ],
     "rows": []
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 15.82,
+    "rows": [
+      {
+        "name": "ASML Holding NV",
+        "weight": 3.3
+      },
+      {
+        "name": "Roche Holding AG",
+        "weight": 2.14
+      },
+      {
+        "name": "Nestle SA",
+        "weight": 1.64
+      },
+      {
+        "name": "Siemens AG",
+        "weight": 1.5
+      },
+      {
+        "name": "BHP Group Ltd",
+        "weight": 1.34
+      },
+      {
+        "name": "Allianz SE",
+        "weight": 1.23
+      },
+      {
+        "name": "Unilever PLC",
+        "weight": 1.22
+      },
+      {
+        "name": "UBS Group AG",
+        "weight": 1.19
+      },
+      {
+        "name": "Mitsubishi UFJ Financial Group Inc",
+        "weight": 1.16
+      },
+      {
+        "name": "Safran SA",
+        "weight": 1.1
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -180,8 +226,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 99,
-    "asOf": "Oct 12 2026",
+    "totalRows": 103,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

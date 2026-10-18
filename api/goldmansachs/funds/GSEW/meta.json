@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028073/0000940400-26-028073.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028073, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund page + fund-page Distributions table + SEC EDGAR Form N-PORT-P holdings + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$95.59",
-    "value": 95.59,
-    "asOfDate": "Oct 09 2026"
+    "display": "$95.79",
+    "value": 95.79,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$95.63",
-    "value": 95.63,
-    "asOfDate": "Oct 09 2026",
+    "display": "$95.79",
+    "value": 95.79,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.04,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.15 B",
-    "value": 2150670000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$2.16 B",
+    "value": 2164880000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 497,
-    "bidAskMidpoint": 95.61,
+    "bidAskMidpoint": 95.81,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 48,
+    "atNavDays": 7,
+    "discountDays": 9
   },
   "yields": {
     "dividendYield": 1.44,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.95%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 1.89,
-      "qtdText": "1.89%",
+      "qtd": 1.57,
+      "qtdText": "1.57%",
       "ytd": 10.52,
       "ytdText": "10.52%",
       "yr1": 11.2,
@@ -155,7 +155,7 @@
     "frequency": "Quarterly",
     "frequencyCode": "04 - Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance chart dividend events (fund-page Distributions table unavailable)",
+    "source": "official fund-page Distributions table (distribution per share)",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -163,23 +163,23 @@
     "rows": [
       [
         "12/21/2017",
-        "0.234"
+        "0.2342"
       ],
       [
         "03/23/2018",
-        "0.141"
+        "0.1407"
       ],
       [
         "06/25/2018",
-        "0.163"
+        "0.1625"
       ],
       [
         "09/24/2018",
-        "0.181"
+        "0.1814"
       ],
       [
         "12/24/2018",
-        "0.13"
+        "0.1304"
       ],
       [
         "03/25/2019",
@@ -187,79 +187,79 @@
       ],
       [
         "06/24/2019",
-        "0.196"
+        "0.1958"
       ],
       [
         "09/24/2019",
-        "0.192"
+        "0.1925"
       ],
       [
         "12/24/2019",
-        "0.222"
+        "0.2225"
       ],
       [
         "03/25/2020",
-        "0.278"
+        "0.2779"
       ],
       [
         "06/24/2020",
-        "0.198"
+        "0.1984"
       ],
       [
         "09/24/2020",
-        "0.204"
+        "0.2036"
       ],
       [
         "12/24/2020",
-        "0.205"
+        "0.2048"
       ],
       [
         "03/25/2021",
-        "0.176"
+        "0.1762"
       ],
       [
         "06/24/2021",
-        "0.218"
+        "0.2177"
       ],
       [
         "09/24/2021",
-        "0.198"
+        "0.1976"
       ],
       [
         "12/27/2021",
-        "0.364"
+        "0.3645"
       ],
       [
         "03/25/2022",
-        "0.154"
+        "0.1536"
       ],
       [
         "06/24/2022",
-        "0.265"
+        "0.2652"
       ],
       [
         "09/26/2022",
-        "0.115"
+        "0.1152"
       ],
       [
         "12/27/2022",
-        "0.471"
+        "0.4712"
       ],
       [
         "03/27/2023",
-        "0.153"
+        "0.1532"
       ],
       [
         "06/26/2023",
-        "0.281"
+        "0.2811"
       ],
       [
         "09/25/2023",
-        "0.228"
+        "0.2276"
       ],
       [
         "12/26/2023",
-        "0.438"
+        "0.4384"
       ],
       [
         "03/22/2024",
@@ -267,11 +267,11 @@
       ],
       [
         "06/24/2024",
-        "0.292"
+        "0.2916"
       ],
       [
         "09/24/2024",
-        "0.251"
+        "0.2514"
       ],
       [
         "12/23/2024",
@@ -279,35 +279,81 @@
       ],
       [
         "03/25/2025",
-        "0.241"
+        "0.2408"
       ],
       [
         "06/24/2025",
-        "0.33"
+        "0.3299"
       ],
       [
         "09/24/2025",
-        "0.347"
+        "0.3474"
       ],
       [
         "12/23/2025",
-        "0.374"
+        "0.3743"
       ],
       [
         "03/25/2026",
-        "0.27"
+        "0.2698"
       ],
       [
         "06/24/2026",
-        "0.314"
+        "0.3141"
       ],
       [
         "09/24/2026",
-        "0.383"
+        "0.3828"
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 2.31,
+    "rows": [
+      {
+        "name": "Moderna Inc",
+        "weight": 0.24
+      },
+      {
+        "name": "Crown Castle Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Cognizant Technology Solutions Corp",
+        "weight": 0.23
+      },
+      {
+        "name": "Fair Isaac Corp",
+        "weight": 0.23
+      },
+      {
+        "name": "CDW Corp",
+        "weight": 0.23
+      },
+      {
+        "name": "Accenture PLC",
+        "weight": 0.23
+      },
+      {
+        "name": "eBay Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Equifax Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Estee Lauder Cos Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Expedia Group Inc",
+        "weight": 0.23
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -328,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2280,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2284,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

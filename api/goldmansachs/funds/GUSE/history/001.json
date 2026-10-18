@@ -2,7 +2,7 @@
   "ticker": "GUSE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 226,
+  "totalRows": 230,
   "headers": [
     "Date",
     "Close",
@@ -1364,7 +1364,31 @@
       "Date": "Oct 12 2026",
       "Close": "46.6870002746582",
       "Adj Close": "46.69",
-      "Volume": "3732"
+      "Volume": "3700"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "46.64500045776367",
+      "Adj Close": "46.65",
+      "Volume": "9300"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "46.025001525878906",
+      "Adj Close": "46.03",
+      "Volume": "15600"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "46.15299987792969",
+      "Adj Close": "46.15",
+      "Volume": "4000"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "45.5989990234375",
+      "Adj Close": "45.6",
+      "Volume": "2100"
     }
   ]
 }

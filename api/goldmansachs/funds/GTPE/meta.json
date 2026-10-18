@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
-    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
-    "productPageAsOf": "Oct 09 2026",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Oct 15 2026",
     "holdingsDownload": "https://www.sec.gov/Archives/edgar/data/1479026/000094040026028139/0000940400-26-028139.txt",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -26,7 +26,7 @@
     "exchange": "NASDAQ",
     "morningstarCategory": null,
     "navTicker": "GTPE.NV",
-    "iopvTicker": "N/A"
+    "iopvTicker": null
   },
   "expenseRatio": {
     "display": "0.5%",
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$61.11",
-    "value": 61.11,
-    "asOfDate": "Oct 09 2026"
+    "display": "$60.03",
+    "value": 60.03,
+    "asOfDate": "Oct 15 2026"
   },
   "marketPrice": {
-    "display": "$60.88",
-    "value": 60.88,
-    "asOfDate": "Oct 09 2026",
+    "display": "$60.34",
+    "value": 60.34,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.37%",
-    "value": -0.37,
-    "asOfDate": "Oct 09 2026",
+    "display": "0.51%",
+    "value": 0.51,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$30.55 M",
-    "value": 30550000,
-    "asOfDate": "Oct 09 2026",
+    "display": "$30.02 M",
+    "value": 30020000,
+    "asOfDate": "Oct 15 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 1597,
-    "bidAskMidpoint": 60.89,
+    "bidAskMidpoint": 60.32,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": null,
-    "atNavDays": null,
-    "discountDays": null
+    "premiumDays": 53,
+    "atNavDays": 2,
+    "discountDays": 9
   },
   "yields": {
     "dividendYield": null,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.87%",
       "mo3": -2.57,
       "mo3Text": "-2.57%",
-      "qtd": -0.12,
-      "qtdText": "-0.12%",
+      "qtd": -2.01,
+      "qtdText": "-2.01%",
       "ytd": 16.96,
       "ytdText": "16.96%",
       "yr1": null,
@@ -98,8 +98,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 20.57,
+      "sinceInceptionText": "20.57%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -128,8 +128,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 21.06,
+      "sinceInceptionText": "21.06%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -162,7 +162,53 @@
     ],
     "rows": []
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 15 2026",
+    "asOf": "Oct 15 2026",
+    "top10Pct": 20.06,
+    "rows": [
+      {
+        "name": "Advanced Micro Devices Inc",
+        "weight": 3.34
+      },
+      {
+        "name": "NVIDIA Corp",
+        "weight": 2.48
+      },
+      {
+        "name": "Palantir Technologies Inc",
+        "weight": 2.48
+      },
+      {
+        "name": "Broadcom Inc",
+        "weight": 2.01
+      },
+      {
+        "name": "GE Vernova Inc",
+        "weight": 1.88
+      },
+      {
+        "name": "Applied Materials Inc",
+        "weight": 1.75
+      },
+      {
+        "name": "Welltower Inc",
+        "weight": 1.62
+      },
+      {
+        "name": "Automatic Data Processing Inc",
+        "weight": 1.53
+      },
+      {
+        "name": "Lockheed Martin Corp",
+        "weight": 1.51
+      },
+      {
+        "name": "Bank of New York Mellon Corp",
+        "weight": 1.46
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -185,8 +231,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 243,
-    "asOf": "Oct 12 2026",
+    "totalRows": 247,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
