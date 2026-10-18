@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T05:20:11Z",
+  "generatedAt": "2026-10-18T08:51:19Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -13,7 +13,7 @@
   "counts": {
     "funds": 48,
     "holdings": 24663,
-    "history": 59322
+    "history": 59326
   },
   "funds": [
     {
@@ -2601,22 +2601,22 @@
       "terValue": 0.09,
       "terGross": "0.09%",
       "terGrossValue": 0.09,
-      "nav": "$148.25",
-      "navValue": 148.25,
-      "aum": "$15.35 B",
-      "aumValue": 15351160000,
-      "asOfDate": "Oct 09 2026",
+      "nav": "$147.38",
+      "navValue": 147.38,
+      "aum": "$15.26 B",
+      "aumValue": 15261160000,
+      "asOfDate": "Oct 15 2026",
       "inceptionDate": "Sep 17 2015",
       "exchange": "NYSE Arca",
-      "closePrice": "$148.24",
-      "closePriceValue": 148.24,
-      "premiumDiscount": "-0.01%",
-      "premiumDiscountValue": -0.01,
+      "closePrice": "$147.40",
+      "closePriceValue": 147.4,
+      "premiumDiscount": "0.01%",
+      "premiumDiscountValue": 0.01,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/24/2026",
-        "dividend": "0.457"
+        "dividend": "0.4571"
       },
       "returns": {
         "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
@@ -2626,8 +2626,8 @@
           "mo1Text": "-0.58%",
           "mo3": 2.45,
           "mo3Text": "2.45%",
-          "qtd": 1.88,
-          "qtdText": "1.88%",
+          "qtd": 0.15,
+          "qtdText": "0.15%",
           "ytd": 10.46,
           "ytdText": "10.46%",
           "yr1": 12.47,
@@ -2648,7 +2648,7 @@
           "yr3": null,
           "yr5": 12.44,
           "yr10": 14.44,
-          "sinceInception": null
+          "sinceInception": 13.86
         }
       },
       "metrics": {
@@ -2670,7 +2670,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 437,
-      "history": 2781
+      "history": 2785
     },
     {
       "ticker": "GSSC",

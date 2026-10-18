@@ -2,7 +2,7 @@
   "ticker": "GSLC",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2781,
+  "totalRows": 2785,
   "headers": [
     "Date",
     "Close",
@@ -4695,6 +4695,30 @@
       "Close": "148.25",
       "Adj Close": "148.25",
       "Volume": "130700"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "148.2100067138672",
+      "Adj Close": "148.21",
+      "Volume": "136500"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "146.8000030517578",
+      "Adj Close": "146.8",
+      "Volume": "148000"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "147.39999389648438",
+      "Adj Close": "147.4",
+      "Volume": "141600"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "145.72999572753906",
+      "Adj Close": "145.73",
+      "Volume": "168800"
     }
   ]
 }
