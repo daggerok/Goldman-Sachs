@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-18T08:56:09Z",
+  "generatedAt": "2026-10-18T09:30:18Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
     "site": "https://am.gs.com",
     "catalog": "https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100",
     "catalogFallback": "https://r.jina.ai/https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100",
-    "holdings": "SEC EDGAR Form N-PORT-P per fund (the issuer publishes only top-10 holdings)",
+    "holdings": "Goldman Sachs fund data API All Holdings per fund (daily; SEC EDGAR Form N-PORT-P fallback)",
     "distributions": "official fund-page Distributions table per fund (Yahoo dividend events fallback)",
     "history": "Yahoo Finance public chart API (adjusted close)"
   },
   "counts": {
     "funds": 48,
-    "holdings": 24663,
+    "holdings": 24715,
     "history": 59514
   },
   "funds": [
@@ -428,7 +428,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-09-30"
       },
-      "holdings": 1768,
+      "holdings": 1820,
       "history": 1528
     },
     {
