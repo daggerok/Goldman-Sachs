@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSST",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.37",
-    "value": 50.37,
-    "asOfDate": "Oct 15 2026"
+    "display": "$50.38",
+    "value": 50.38,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$50.41",
-    "value": 50.41,
-    "asOfDate": "Oct 15 2026",
+    "display": "$50.42",
+    "value": 50.42,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
     "display": "0.08%",
     "value": 0.08,
-    "asOfDate": "Oct 15 2026",
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$1.71 B",
-    "value": 1707400000,
-    "asOfDate": "Oct 15 2026",
+    "value": 1713080000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 345,
-    "bidAskMidpoint": 50.41,
+    "publishedTotalHoldings": 343,
+    "bidAskMidpoint": 50.43,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 58,
@@ -86,8 +86,8 @@
       "mo1Text": "0.16%",
       "mo3": 0.85,
       "mo3Text": "0.85%",
-      "qtd": 0.24,
-      "qtdText": "0.24%",
+      "qtd": 0.22,
+      "qtdText": "0.22%",
       "ytd": 2.69,
       "ytdText": "2.69%",
       "yr1": 3.88,
@@ -512,49 +512,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
-    "top10Pct": 10.38,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
+    "top10Pct": 10.23,
     "rows": [
       {
         "name": "US GOVT T-BILL 25 FEB 2027",
-        "weight": 2.4
+        "weight": 2.36
       },
       {
         "name": "HUNTINGTON NATIONAL BANK (TH 4.871% 12 APR 2028-27",
-        "weight": 1.09
+        "weight": 1.07
       },
       {
         "name": "WELLS FARGO & COMPANY FRN 22 APR 2028-27",
-        "weight": 1.01
+        "weight": 1
       },
       {
         "name": "US GOVT 4.125% 31 AUG 2028",
-        "weight": 0.95
+        "weight": 0.94
       },
       {
         "name": "AERCAP IRELAND CAPITAL DESIGNATE 3% 29 OCT 2028-28",
-        "weight": 0.91
-      },
-      {
-        "name": "DAIMLER TRUCK FINANCE NORTH A FRN 25 SEP 2027 144A",
         "weight": 0.9
       },
       {
+        "name": "DAIMLER TRUCK FINANCE NORTH A FRN 25 SEP 2027 144A",
+        "weight": 0.89
+      },
+      {
         "name": "US GOVT 4.375% 15 JUL 2027",
-        "weight": 0.83
+        "weight": 0.82
       },
       {
         "name": "VOLKSWAGEN GROUP OF AMERICA 5.1% 15 SEP 2028 144A",
-        "weight": 0.79
-      },
-      {
-        "name": "NTT FINANCE CORPORATION FRN 20 JUN 2029 144A",
         "weight": 0.78
       },
       {
+        "name": "NTT FINANCE CORPORATION FRN 20 JUN 2029 144A",
+        "weight": 0.76
+      },
+      {
         "name": "SALESFORCE, INC. 4.5% 15 MAR 2028-28",
-        "weight": 0.72
+        "weight": 0.71
       }
     ]
   },
@@ -564,12 +564,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 394,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "totalRows": 393,
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 345
+    "publishedTotalHoldings": 343
   },
   "history": {
     "pages": [
@@ -577,8 +577,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1886,
-    "asOf": "Oct 16 2026",
+    "totalRows": 1887,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GXUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 840,
+  "totalRows": 841,
   "headers": [
     "Date",
     "Close",
@@ -5048,6 +5048,12 @@
       "Date": "Oct 16 2026",
       "Close": "61.29399871826172",
       "Adj Close": "61.29",
+      "Volume": "300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "61.198001861572266",
+      "Adj Close": "61.2",
       "Volume": "300"
     }
   ]

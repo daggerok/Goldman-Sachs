@@ -2,7 +2,7 @@
   "ticker": "GSWO",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1150,
+  "totalRows": 1151,
   "headers": [
     "Date",
     "Close",
@@ -909,6 +909,12 @@
       "Close": "64.56999969482422",
       "Adj Close": "64.57",
       "Volume": "94200"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "64.76000213623047",
+      "Adj Close": "64.76",
+      "Volume": "78900"
     }
   ]
 }

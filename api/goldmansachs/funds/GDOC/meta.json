@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103944/38149W770/goldman-sachs-future-health-care-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GDOC",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$37.29",
-    "value": 37.29,
-    "asOfDate": "Oct 15 2026"
+    "display": "$36.93",
+    "value": 36.93,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$37.33",
-    "value": 37.33,
-    "asOfDate": "Oct 15 2026",
+    "display": "$36.87",
+    "value": 36.87,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "asOfDate": "Oct 15 2026",
+    "display": "-0.17%",
+    "value": -0.17,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$19.58 M",
-    "value": 19580000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$19.39 M",
+    "value": 19390000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 39,
-    "bidAskMidpoint": 37.29,
+    "publishedTotalHoldings": 40,
+    "bidAskMidpoint": 36.88,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 24,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.62%",
       "mo3": 3,
       "mo3Text": "3.00%",
-      "qtd": 0.96,
-      "qtdText": "0.96%",
+      "qtd": 0.99,
+      "qtdText": "0.99%",
       "ytd": 4.13,
       "ytdText": "4.13%",
       "yr1": 15.87,
@@ -176,29 +176,29 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
-    "top10Pct": 57.24,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
+    "top10Pct": 55.33,
     "rows": [
       {
         "name": "Eli Lilly & Co",
-        "weight": 13.2
-      },
-      {
-        "name": "Johnson & Johnson",
-        "weight": 7.92
+        "weight": 13.39
       },
       {
         "name": "Merck & Co Inc",
-        "weight": 7.31
+        "weight": 7.42
       },
       {
         "name": "UnitedHealth Group Inc",
-        "weight": 6.05
+        "weight": 6.03
+      },
+      {
+        "name": "Johnson & Johnson",
+        "weight": 5.99
       },
       {
         "name": "Agilent Technologies Inc",
-        "weight": 4.02
+        "weight": 4
       },
       {
         "name": "Thermo Fisher Scientific Inc",
@@ -206,19 +206,19 @@
       },
       {
         "name": "Vertex Pharmaceuticals Inc",
-        "weight": 3.93
-      },
-      {
-        "name": "Guardant Health Inc",
-        "weight": 3.74
+        "weight": 3.89
       },
       {
         "name": "Dexcom Inc",
-        "weight": 3.73
+        "weight": 3.69
+      },
+      {
+        "name": "Guardant Health Inc",
+        "weight": 3.61
       },
       {
         "name": "Edwards Lifesciences Corp",
-        "weight": 3.38
+        "weight": 3.35
       }
     ]
   },
@@ -227,12 +227,12 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 44,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "totalRows": 45,
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 39
+    "publishedTotalHoldings": 40
   },
   "history": {
     "pages": [
@@ -240,8 +240,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1237,
-    "asOf": "Oct 16 2026",
+    "totalRows": 1238,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

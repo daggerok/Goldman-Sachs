@@ -2,7 +2,7 @@
   "ticker": "GSEE",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1612,
+  "totalRows": 1613,
   "headers": [
     "Date",
     "Close",
@@ -3680,6 +3680,12 @@
       "Date": "Oct 16 2026",
       "Close": "64.77400207519531",
       "Adj Close": "64.77",
+      "Volume": "600"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "65.27400207519531",
+      "Adj Close": "65.27",
       "Volume": "600"
     }
   ]

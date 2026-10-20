@@ -2,7 +2,7 @@
   "ticker": "GUSE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 230,
+  "totalRows": 231,
   "headers": [
     "Date",
     "Close",
@@ -1389,6 +1389,12 @@
       "Close": "45.5989990234375",
       "Adj Close": "45.6",
       "Volume": "2100"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "45.84199905395508",
+      "Adj Close": "45.84",
+      "Volume": "6620"
     }
   ]
 }

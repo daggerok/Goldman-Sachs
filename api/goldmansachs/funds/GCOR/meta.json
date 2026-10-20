@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCOR",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$39.55",
-    "value": 39.55,
-    "asOfDate": "Oct 15 2026"
+    "display": "$39.59",
+    "value": 39.59,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$39.56",
-    "value": 39.56,
-    "asOfDate": "Oct 15 2026",
+    "display": "$39.57",
+    "value": 39.57,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Oct 15 2026",
+    "display": "-0.06%",
+    "value": -0.06,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$806.87 M",
-    "value": 806870000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$807.59 M",
+    "value": 807590000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 39.56,
+    "publishedTotalHoldings": 1814,
+    "bidAskMidpoint": 39.58,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 49,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.70%",
       "mo3": -3.62,
       "mo3Text": "-3.62%",
-      "qtd": 0.97,
-      "qtdText": "0.97%",
+      "qtd": 0.71,
+      "qtdText": "0.71%",
       "ytd": -2.99,
       "ytdText": "-2.99%",
       "yr1": -2.04,
@@ -448,8 +448,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
     "top10Pct": 22.66,
     "rows": [
       {
@@ -507,10 +507,11 @@
     ],
     "pageSize": 250,
     "totalRows": 1820,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
-    "marketValueBasis": "Goldman Sachs fund data API market value (USD)"
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
+    "publishedTotalHoldings": 1814
   },
   "history": {
     "pages": [
@@ -518,8 +519,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1528,
-    "asOf": "Oct 16 2026",
+    "totalRows": 1529,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

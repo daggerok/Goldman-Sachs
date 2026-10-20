@@ -2,7 +2,7 @@
   "ticker": "GGUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 722,
+  "totalRows": 723,
   "headers": [
     "Date",
     "Close",
@@ -4341,6 +4341,12 @@
       "Close": "65.93499755859375",
       "Adj Close": "65.93",
       "Volume": "9700"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "66.59600067138672",
+      "Adj Close": "66.6",
+      "Volume": "14800"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GTIP",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2009,
+  "totalRows": 2010,
   "headers": [
     "Date",
     "Close",
@@ -63,6 +63,12 @@
       "Close": "46.91999816894531",
       "Adj Close": "46.92",
       "Volume": "21700"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "46.77000045776367",
+      "Adj Close": "46.77",
+      "Volume": "16100"
     }
   ]
 }

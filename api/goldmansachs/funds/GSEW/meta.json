@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$95.79",
-    "value": 95.79,
-    "asOfDate": "Oct 15 2026"
+    "display": "$95.20",
+    "value": 95.2,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$95.79",
-    "value": 95.79,
-    "asOfDate": "Oct 15 2026",
+    "display": "$95.19",
+    "value": 95.19,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Oct 15 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.16 B",
-    "value": 2164880000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$2.15 B",
+    "value": 2146710000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 497,
-    "bidAskMidpoint": 95.81,
+    "bidAskMidpoint": 95.21,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.95%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 1.57,
-      "qtdText": "1.57%",
+      "qtd": 1.29,
+      "qtdText": "1.29%",
       "ytd": 10.52,
       "ytdText": "10.52%",
       "yr1": 11.2,
@@ -308,16 +308,16 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
-    "top10Pct": 2.31,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
+    "top10Pct": 2.3,
     "rows": [
       {
-        "name": "Moderna Inc",
+        "name": "Crown Castle Inc",
         "weight": 0.24
       },
       {
-        "name": "Crown Castle Inc",
+        "name": "Accenture PLC",
         "weight": 0.23
       },
       {
@@ -329,15 +329,7 @@
         "weight": 0.23
       },
       {
-        "name": "CDW Corp",
-        "weight": 0.23
-      },
-      {
-        "name": "Accenture PLC",
-        "weight": 0.23
-      },
-      {
-        "name": "eBay Inc",
+        "name": "ConocoPhillips",
         "weight": 0.23
       },
       {
@@ -345,12 +337,20 @@
         "weight": 0.23
       },
       {
-        "name": "Estee Lauder Cos Inc",
+        "name": "Moderna Inc",
         "weight": 0.23
       },
       {
-        "name": "Expedia Group Inc",
+        "name": "Verisk Analytics Inc",
         "weight": 0.23
+      },
+      {
+        "name": "Cboe Global Markets Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Keurig Dr Pepper Inc",
+        "weight": 0.22
       }
     ]
   },
@@ -361,9 +361,9 @@
     ],
     "pageSize": 250,
     "totalRows": 498,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 497
   },
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2284,
-    "asOf": "Oct 16 2026",
+    "totalRows": 2285,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

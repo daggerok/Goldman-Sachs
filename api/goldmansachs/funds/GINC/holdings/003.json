@@ -2,7 +2,7 @@
   "ticker": "GINC",
   "page": 3,
   "pageSize": 250,
-  "totalRows": 501,
+  "totalRows": 503,
   "headers": [
     "Name",
     "Ticker",
@@ -18,11 +18,37 @@
   ],
   "rows": [
     {
+      "Name": "USD MARGIN CURRENCY",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.22",
+      "Market Value": "461283.94",
+      "Shares Held": "461283.94",
+      "Asset Category": "",
+      "Coupon": "3.89",
+      "Maturity": "2026-10-16",
+      "ISIN": "",
+      "SEDOL": ""
+    },
+    {
+      "Name": "USD CCP MARGIN CURRENCY",
+      "Ticker": "-",
+      "Identifier": "",
+      "Weight": "0.01",
+      "Market Value": "13683.74",
+      "Shares Held": "13683.74",
+      "Asset Category": "",
+      "Coupon": "3.89",
+      "Maturity": "2026-10-16",
+      "ISIN": "",
+      "SEDOL": ""
+    },
+    {
       "Name": "THE MICHAELS COMPANIES, I",
       "Ticker": "-",
       "Identifier": "59408QAB2",
-      "Weight": "0.42",
-      "Market Value": "900102.21",
+      "Weight": "0.43",
+      "Market Value": "902070.65",
       "Shares Held": "910000",
       "Asset Category": "",
       "Coupon": "8.5",

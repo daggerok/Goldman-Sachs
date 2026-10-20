@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GHYB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$43.14",
-    "value": 43.14,
-    "asOfDate": "Oct 15 2026"
+    "display": "$43.17",
+    "value": 43.17,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$43.16",
-    "value": 43.16,
-    "asOfDate": "Oct 15 2026",
+    "display": "$43.20",
+    "value": 43.2,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.05%",
-    "value": 0.05,
-    "asOfDate": "Oct 15 2026",
+    "display": "0.07%",
+    "value": 0.07,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$133.74 M",
-    "value": 133740000.00000001,
-    "asOfDate": "Oct 15 2026",
+    "display": "$129.51 M",
+    "value": 129509999.99999999,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 43.18,
+    "publishedTotalHoldings": 888,
+    "bidAskMidpoint": 43.08,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 13,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.47%",
       "mo3": -1.77,
       "mo3Text": "-1.77%",
-      "qtd": 0.21,
-      "qtdText": "0.21%",
+      "qtd": -0.09,
+      "qtdText": "-0.09%",
       "ytd": -0.12,
       "ytdText": "-0.12%",
       "yr1": 1.13,
@@ -592,8 +592,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
     "top10Pct": 4.04,
     "rows": [
       {
@@ -646,11 +646,12 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 905,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
-    "marketValueBasis": "Goldman Sachs fund data API market value (USD)"
+    "totalRows": 890,
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
+    "publishedTotalHoldings": 888
   },
   "history": {
     "pages": [
@@ -659,8 +660,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2278,
-    "asOf": "Oct 16 2026",
+    "totalRows": 2279,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

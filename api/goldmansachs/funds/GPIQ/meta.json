@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPIQ",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$56.82",
-    "value": 56.82,
-    "asOfDate": "Oct 15 2026"
+    "display": "$55.55",
+    "value": 55.55,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$56.84",
-    "value": 56.84,
-    "asOfDate": "Oct 15 2026",
+    "display": "$55.55",
+    "value": 55.55,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.04,
-    "asOfDate": "Oct 15 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$6.38 B",
-    "value": 6382350000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$6.27 B",
+    "value": 6266680000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 108,
-    "bidAskMidpoint": 56.82,
+    "publishedTotalHoldings": 107,
+    "bidAskMidpoint": 55.54,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 51,
@@ -86,8 +86,8 @@
       "mo1Text": "2.64%",
       "mo3": 0.31,
       "mo3Text": "0.31%",
-      "qtd": -3.58,
-      "qtdText": "-3.58%",
+      "qtd": -2.45,
+      "qtdText": "-2.45%",
       "ytd": 18.69,
       "ytdText": "18.69%",
       "yr1": 22.76,
@@ -304,49 +304,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 15 2026",
-    "asOf": "Oct 15 2026",
-    "top10Pct": 47.65,
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
+    "top10Pct": 47.67,
     "rows": [
       {
         "name": "NVIDIA Corp",
-        "weight": 8.11
+        "weight": 8.18
       },
       {
         "name": "Apple Inc",
-        "weight": 7.73
+        "weight": 7.94
       },
       {
         "name": "Microsoft Corp",
-        "weight": 6.19
+        "weight": 6.25
       },
       {
         "name": "Micron Technology Inc",
-        "weight": 4.49
+        "weight": 4.34
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 4.18
+        "weight": 4.2
       },
       {
         "name": "Alphabet Inc",
-        "weight": 3.98
+        "weight": 3.96
       },
       {
         "name": "Advanced Micro Devices Inc",
-        "weight": 3.95
+        "weight": 3.79
       },
       {
         "name": "Meta Platforms Inc",
-        "weight": 3.43
+        "weight": 3.4
       },
       {
         "name": "Tesla Inc",
-        "weight": 2.86
+        "weight": 2.87
       },
       {
         "name": "Space Exploration Technologies Corp",
-        "weight": 2.73
+        "weight": 2.74
       }
     ]
   },
@@ -355,20 +355,20 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 109,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "totalRows": 108,
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 108
+    "publishedTotalHoldings": 107
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 745,
-    "asOf": "Oct 16 2026",
+    "totalRows": 746,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

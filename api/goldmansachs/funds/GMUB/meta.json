@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105934/38149W549/goldman-sachs-municipal-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105934/38149W549/goldman-sachs-municipal-income-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105934/38149W549/goldman-sachs-municipal-income-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GMUB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$49.44",
-    "value": 49.44,
-    "asOfDate": "Oct 15 2026"
+    "display": "$49.46",
+    "value": 49.46,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$49.34",
-    "value": 49.34,
-    "asOfDate": "Oct 15 2026",
+    "display": "$49.48",
+    "value": 49.48,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.20%",
-    "value": -0.2,
-    "asOfDate": "Oct 15 2026",
+    "display": "0.03%",
+    "value": 0.03,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$640.22 M",
-    "value": 640220000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$640.45 M",
+    "value": 640450000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 49.42,
+    "publishedTotalHoldings": 901,
+    "bidAskMidpoint": 49.48,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 58,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.36%",
       "mo3": -4.43,
       "mo3Text": "-4.43%",
-      "qtd": 0.98,
-      "qtdText": "0.98%",
+      "qtd": 0.88,
+      "qtdText": "0.88%",
       "ytd": -2.31,
       "ytdText": "-2.31%",
       "yr1": -0.66,
@@ -276,19 +276,20 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 894,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
-    "marketValueBasis": "Goldman Sachs fund data API market value (USD)"
+    "totalRows": 904,
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
+    "publishedTotalHoldings": 901
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 558,
-    "asOf": "Oct 16 2026",
+    "totalRows": 559,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

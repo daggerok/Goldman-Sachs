@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103623/38150K103/goldman-sachs-physical-gold-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": null,
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,35 +35,35 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$40.92",
-    "value": 40.92,
-    "asOfDate": "Oct 15 2026"
+    "display": "$41.28",
+    "value": 41.28,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$41.15",
-    "value": 41.15,
-    "asOfDate": "Oct 15 2026",
+    "display": "$41.07",
+    "value": 41.07,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.56%",
-    "value": 0.56,
-    "asOfDate": "Oct 15 2026",
+    "display": "-0.51%",
+    "value": -0.51,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.65 B",
-    "value": 2647990000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$2.66 B",
+    "value": 2657060000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": null,
-    "bidAskMidpoint": 41.15,
-    "lbmaGoldPrice": 4089.25,
-    "lbmaGoldPriceAsOf": "Oct 14 2026",
+    "bidAskMidpoint": 41.08,
+    "lbmaGoldPrice": 4152.25,
+    "lbmaGoldPriceAsOf": "Oct 15 2026",
     "premiumDays": 32,
     "atNavDays": 1,
     "discountDays": 31
@@ -86,8 +86,8 @@
       "mo1Text": "-8.47%",
       "mo3": 3.68,
       "mo3Text": "3.68%",
-      "qtd": -0.19,
-      "qtdText": "-0.19%",
+      "qtd": -0.8,
+      "qtdText": "-0.80%",
       "ytd": -3.18,
       "ytdText": "-3.18%",
       "yr1": 8.98,
@@ -178,8 +178,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2054,
-    "asOf": "Oct 16 2026",
+    "totalRows": 2055,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

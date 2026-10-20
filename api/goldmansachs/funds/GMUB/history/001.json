@@ -2,7 +2,7 @@
   "ticker": "GMUB",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 558,
+  "totalRows": 559,
   "headers": [
     "Date",
     "Close",
@@ -3357,6 +3357,12 @@
       "Close": "49.474998474121094",
       "Adj Close": "49.47",
       "Volume": "284500"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "49.415000915527344",
+      "Adj Close": "49.42",
+      "Volume": "356900"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GTEK",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1277,
+  "totalRows": 1278,
   "headers": [
     "Date",
     "Close",
@@ -1671,6 +1671,12 @@
       "Close": "52.95000076293945",
       "Adj Close": "52.95",
       "Volume": "8300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "53.7400016784668",
+      "Adj Close": "53.74",
+      "Volume": "16000"
     }
   ]
 }

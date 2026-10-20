@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 15 2026",
+    "productPageAsOf": "Oct 16 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPRF",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.96",
-    "value": 47.96,
-    "asOfDate": "Oct 15 2026"
+    "display": "$47.93",
+    "value": 47.93,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$48.04",
-    "value": 48.04,
-    "asOfDate": "Oct 15 2026",
+    "display": "$47.90",
+    "value": 47.9,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.16%",
-    "value": 0.16,
-    "asOfDate": "Oct 15 2026",
+    "display": "-0.07%",
+    "value": -0.07,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$167.84 M",
-    "value": 167840000,
-    "asOfDate": "Oct 15 2026",
+    "display": "$167.74 M",
+    "value": 167740000,
+    "asOfDate": "Oct 16 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": null,
-    "bidAskMidpoint": 48.04,
+    "publishedTotalHoldings": 534,
+    "bidAskMidpoint": 47.9,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 15,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.26%",
       "mo3": -2.47,
       "mo3Text": "-2.47%",
-      "qtd": -0.04,
-      "qtdText": "-0.04%",
+      "qtd": -0.27,
+      "qtdText": "-0.27%",
       "ytd": -1.11,
       "ytdText": "-1.11%",
       "yr1": -0.95,
@@ -267,7 +267,53 @@
       ]
     ]
   },
-  "topHoldings": null,
+  "topHoldings": {
+    "asOfDate": "Oct 16 2026",
+    "asOf": "Oct 16 2026",
+    "top10Pct": 7.16,
+    "rows": [
+      {
+        "name": "BP CAPITAL MARKETS P.L.C. 4.875% 22 MAR 2049-30",
+        "weight": 0.84
+      },
+      {
+        "name": "CITIGROUP INC. 6.875% 15 AUG 2049-30",
+        "weight": 0.78
+      },
+      {
+        "name": "WELLS FARGO & COMPANY 6.125% 15 JUN 2049-31",
+        "weight": 0.73
+      },
+      {
+        "name": "CITIGROUP INC. 6.625% 15 FEB 2049-31",
+        "weight": 0.73
+      },
+      {
+        "name": "JPMORGAN CHASE & CO. 6.1% 01 JUL 2049-31",
+        "weight": 0.73
+      },
+      {
+        "name": "JPMORGAN CHASE & CO. 6.5% 01 APR 2049-30",
+        "weight": 0.72
+      },
+      {
+        "name": "VERIZON COMMUNICATIONS INC. 6.6% 15 FEB 2059-33",
+        "weight": 0.68
+      },
+      {
+        "name": "CVS HEALTH CORPORATION 7% 10 MAR 2055-29",
+        "weight": 0.68
+      },
+      {
+        "name": "JPMORGAN CHASE & CO. 6.875% 01 JUN 2049-29",
+        "weight": 0.65
+      },
+      {
+        "name": "BANK OF AMERICA CORPORATION 6.25% 26 JUL 2049-30",
+        "weight": 0.62
+      }
+    ]
+  },
   "holdings": {
     "pages": [
       "holdings/001.json",
@@ -276,18 +322,19 @@
     ],
     "pageSize": 250,
     "totalRows": 536,
-    "asOfDate": "2026-10-15",
-    "asOf": "Oct 15 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-15)",
-    "marketValueBasis": "Goldman Sachs fund data API market value (USD)"
+    "asOfDate": "2026-10-16",
+    "asOf": "Oct 16 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
+    "publishedTotalHoldings": 534
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 555,
-    "asOf": "Oct 16 2026",
+    "totalRows": 556,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

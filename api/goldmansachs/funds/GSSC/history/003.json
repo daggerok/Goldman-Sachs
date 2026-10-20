@@ -2,7 +2,7 @@
   "ticker": "GSSC",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2332,
+  "totalRows": 2333,
   "headers": [
     "Date",
     "Close",
@@ -2001,6 +2001,12 @@
       "Close": "84.52999877929688",
       "Adj Close": "84.53",
       "Volume": "17400"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "84.80000305175781",
+      "Adj Close": "84.8",
+      "Volume": "19444"
     }
   ]
 }
