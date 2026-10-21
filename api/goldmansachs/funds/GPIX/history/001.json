@@ -2,7 +2,7 @@
   "ticker": "GPIX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 746,
+  "totalRows": 747,
   "headers": [
     "Date",
     "Close",
@@ -4484,7 +4484,13 @@
       "Date": "Oct 19 2026",
       "Close": "55.81999969482422",
       "Adj Close": "55.82",
-      "Volume": "1096200"
+      "Volume": "1109200"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "55.959999084472656",
+      "Adj Close": "55.96",
+      "Volume": "1481100"
     }
   ]
 }

@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
-    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 16 2026",
+    "productPageRendering": "read-only rendering proxy (r.jina.ai) of the official fund page",
+    "productPageAsOf": "Oct 19 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105259/38149W630/goldman-sachs-nasdaq-100-premium-income-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -15,7 +15,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPIQ",
     "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "official fund-page Distributions table (distribution per share)",
+    "distributionsSource": "official fund-page Distributions table (distribution per share, via read-only rendering proxy)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -35,38 +35,38 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$55.55",
-    "value": 55.55,
-    "asOfDate": "Oct 16 2026"
+    "display": "$56.17",
+    "value": 56.17,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
-    "display": "$55.55",
-    "value": 55.55,
-    "asOfDate": "Oct 16 2026",
+    "display": "$56.20",
+    "value": 56.2,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Oct 16 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$6.27 B",
-    "value": 6266680000,
-    "asOfDate": "Oct 16 2026",
+    "display": "$6.37 B",
+    "value": 6365010000,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 107,
-    "bidAskMidpoint": 55.54,
+    "bidAskMidpoint": 56.18,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
-    "premiumDays": 51,
-    "atNavDays": 9,
-    "discountDays": 4
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
   },
   "yields": {
     "dividendYield": 9.86,
@@ -86,8 +86,8 @@
       "mo1Text": "2.64%",
       "mo3": 0.31,
       "mo3Text": "0.31%",
-      "qtd": -2.45,
-      "qtdText": "-2.45%",
+      "qtd": -2.57,
+      "qtdText": "-2.57%",
       "ytd": 18.69,
       "ytdText": "18.69%",
       "yr1": 22.76,
@@ -155,112 +155,12 @@
     "frequency": "Monthly",
     "frequencyCode": "01 - Monthly",
     "paymentsPerYear": 12,
-    "source": "official fund-page Distributions table (distribution per share)",
+    "source": "official fund-page Distributions table (distribution per share, via read-only rendering proxy)",
     "headers": [
       "Ex-Date",
       "Amount"
     ],
     "rows": [
-      [
-        "12/04/2023",
-        "0.3755"
-      ],
-      [
-        "12/28/2023",
-        "0.3874"
-      ],
-      [
-        "02/02/2024",
-        "0.3909"
-      ],
-      [
-        "03/04/2024",
-        "0.4045"
-      ],
-      [
-        "04/02/2024",
-        "0.407"
-      ],
-      [
-        "05/02/2024",
-        "0.3882"
-      ],
-      [
-        "06/04/2024",
-        "0.4059"
-      ],
-      [
-        "07/02/2024",
-        "0.4197"
-      ],
-      [
-        "08/02/2024",
-        "0.4096"
-      ],
-      [
-        "09/04/2024",
-        "0.4115"
-      ],
-      [
-        "10/02/2024",
-        "0.4185"
-      ],
-      [
-        "11/04/2024",
-        "0.4137"
-      ],
-      [
-        "12/03/2024",
-        "0.4308"
-      ],
-      [
-        "01/03/2025",
-        "0.4285"
-      ],
-      [
-        "02/03/2025",
-        "0.4377"
-      ],
-      [
-        "03/03/2025",
-        "0.4148"
-      ],
-      [
-        "04/01/2025",
-        "0.3856"
-      ],
-      [
-        "05/01/2025",
-        "0.3883"
-      ],
-      [
-        "06/02/2025",
-        "0.4146"
-      ],
-      [
-        "07/01/2025",
-        "0.4345"
-      ],
-      [
-        "08/01/2025",
-        "0.4421"
-      ],
-      [
-        "09/02/2025",
-        "0.443"
-      ],
-      [
-        "10/01/2025",
-        "0.4579"
-      ],
-      [
-        "11/03/2025",
-        "0.4737"
-      ],
-      [
-        "12/01/2025",
-        "0.4652"
-      ],
       [
         "01/02/2026",
         "0.4633"
@@ -303,53 +203,7 @@
       ]
     ]
   },
-  "topHoldings": {
-    "asOfDate": "Oct 16 2026",
-    "asOf": "Oct 16 2026",
-    "top10Pct": 47.67,
-    "rows": [
-      {
-        "name": "NVIDIA Corp",
-        "weight": 8.18
-      },
-      {
-        "name": "Apple Inc",
-        "weight": 7.94
-      },
-      {
-        "name": "Microsoft Corp",
-        "weight": 6.25
-      },
-      {
-        "name": "Micron Technology Inc",
-        "weight": 4.34
-      },
-      {
-        "name": "Amazon.com Inc",
-        "weight": 4.2
-      },
-      {
-        "name": "Alphabet Inc",
-        "weight": 3.96
-      },
-      {
-        "name": "Advanced Micro Devices Inc",
-        "weight": 3.79
-      },
-      {
-        "name": "Meta Platforms Inc",
-        "weight": 3.4
-      },
-      {
-        "name": "Tesla Inc",
-        "weight": 2.87
-      },
-      {
-        "name": "Space Exploration Technologies Corp",
-        "weight": 2.74
-      }
-    ]
-  },
+  "topHoldings": null,
   "holdings": {
     "pages": [
       "holdings/001.json"
@@ -367,8 +221,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 746,
-    "asOf": "Oct 19 2026",
+    "totalRows": 747,
+    "asOf": "Oct 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

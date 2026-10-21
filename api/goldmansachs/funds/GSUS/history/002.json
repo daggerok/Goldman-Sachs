@@ -2,7 +2,7 @@
   "ticker": "GSUS",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1613,
+  "totalRows": 1614,
   "headers": [
     "Date",
     "Close",
@@ -3687,6 +3687,12 @@
       "Close": "105.99500274658203",
       "Adj Close": "106",
       "Volume": "57600"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "106.26000213623047",
+      "Adj Close": "106.26",
+      "Volume": "48500"
     }
   ]
 }

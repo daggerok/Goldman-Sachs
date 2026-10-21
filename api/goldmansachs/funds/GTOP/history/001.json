@@ -2,7 +2,7 @@
   "ticker": "GTOP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 217,
+  "totalRows": 218,
   "headers": [
     "Date",
     "Close",
@@ -1311,6 +1311,12 @@
       "Close": "49.0620002746582",
       "Adj Close": "49.06",
       "Volume": "7600"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "48.972999572753906",
+      "Adj Close": "48.97",
+      "Volume": "4100"
     }
   ]
 }

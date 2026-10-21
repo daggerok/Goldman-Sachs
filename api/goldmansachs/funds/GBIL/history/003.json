@@ -2,7 +2,7 @@
   "ticker": "GBIL",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2538,
+  "totalRows": 2539,
   "headers": [
     "Date",
     "Close",
@@ -3237,6 +3237,12 @@
       "Close": "100.0199966430664",
       "Adj Close": "100.02",
       "Volume": "585600"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "100.02999877929688",
+      "Adj Close": "100.03",
+      "Volume": "826400"
     }
   ]
 }

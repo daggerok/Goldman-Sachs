@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 16 2026",
+    "productPageAsOf": "Oct 19 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTIP",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$46.96",
-    "value": 46.96,
-    "asOfDate": "Oct 16 2026"
+    "display": "$46.80",
+    "value": 46.8,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
-    "display": "$46.92",
-    "value": 46.92,
-    "asOfDate": "Oct 16 2026",
+    "display": "$46.77",
+    "value": 46.77,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.09,
-    "asOfDate": "Oct 16 2026",
+    "display": "-0.05%",
+    "value": -0.05,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$292.29 M",
-    "value": 292290000,
-    "asOfDate": "Oct 16 2026",
+    "display": "$291.34 M",
+    "value": 291340000,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 41,
-    "bidAskMidpoint": 46.93,
+    "bidAskMidpoint": 46.78,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 44,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.61%",
       "mo3": -3.35,
       "mo3Text": "-3.35%",
-      "qtd": 0.8,
-      "qtdText": "0.80%",
+      "qtd": 1.1,
+      "qtdText": "1.10%",
       "ytd": -2.11,
       "ytdText": "-2.11%",
       "yr1": -2.09,
@@ -456,13 +456,13 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 16 2026",
-    "asOf": "Oct 16 2026",
-    "top10Pct": 44.8,
+    "asOfDate": "Oct 19 2026",
+    "asOf": "Oct 19 2026",
+    "top10Pct": 44.84,
     "rows": [
       {
         "name": "US GOVT TIPS 1.875% 15 JUL 2034",
-        "weight": 6.08
+        "weight": 6.07
       },
       {
         "name": "US GOVT TIPS 0.625% 15 JUL 2032",
@@ -470,7 +470,7 @@
       },
       {
         "name": "US GOVT TIPS 2.375% 15 OCT 2028",
-        "weight": 4.83
+        "weight": 4.85
       },
       {
         "name": "US GOVT TIPS 1.875% 15 JUL 2035",
@@ -478,11 +478,11 @@
       },
       {
         "name": "US GOVT TIPS 0.125% 15 JAN 2030",
-        "weight": 4.61
+        "weight": 4.62
       },
       {
         "name": "US GOVT TIPS 0.25% 15 JUL 2029",
-        "weight": 4.34
+        "weight": 4.35
       },
       {
         "name": "US GOVT TIPS 1.375% 15 JUL 2033",
@@ -498,7 +498,7 @@
       },
       {
         "name": "US GOVT TIPS 1.625% 15 OCT 2027",
-        "weight": 3.48
+        "weight": 3.49
       }
     ]
   },
@@ -508,9 +508,9 @@
     ],
     "pageSize": 250,
     "totalRows": 43,
-    "asOfDate": "2026-10-16",
-    "asOf": "Oct 16 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "asOfDate": "2026-10-19",
+    "asOf": "Oct 19 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 41
   },
@@ -521,8 +521,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2010,
-    "asOf": "Oct 19 2026",
+    "totalRows": 2011,
+    "asOf": "Oct 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

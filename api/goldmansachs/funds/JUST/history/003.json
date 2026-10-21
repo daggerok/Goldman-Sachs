@@ -2,7 +2,7 @@
   "ticker": "JUST",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2098,
+  "totalRows": 2099,
   "headers": [
     "Date",
     "Close",
@@ -597,6 +597,12 @@
       "Close": "109.81900024414062",
       "Adj Close": "109.82",
       "Volume": "5700"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "110.02899932861328",
+      "Adj Close": "110.03",
+      "Volume": "1300"
     }
   ]
 }

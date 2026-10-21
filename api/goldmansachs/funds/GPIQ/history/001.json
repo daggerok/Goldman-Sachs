@@ -2,7 +2,7 @@
   "ticker": "GPIQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 746,
+  "totalRows": 747,
   "headers": [
     "Date",
     "Close",
@@ -4485,6 +4485,12 @@
       "Close": "56.20000076293945",
       "Adj Close": "56.2",
       "Volume": "1639400"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "56.130001068115234",
+      "Adj Close": "56.13",
+      "Volume": "1334900"
     }
   ]
 }

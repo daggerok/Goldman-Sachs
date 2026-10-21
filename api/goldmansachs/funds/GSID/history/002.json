@@ -2,7 +2,7 @@
   "ticker": "GSID",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1613,
+  "totalRows": 1614,
   "headers": [
     "Date",
     "Close",
@@ -3687,6 +3687,12 @@
       "Close": "74.13800048828125",
       "Adj Close": "74.14",
       "Volume": "8100"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "74.68499755859375",
+      "Adj Close": "74.68",
+      "Volume": "2400"
     }
   ]
 }

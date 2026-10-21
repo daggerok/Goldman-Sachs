@@ -2,7 +2,7 @@
   "ticker": "GSEW",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2285,
+  "totalRows": 2286,
   "headers": [
     "Date",
     "Close",
@@ -1719,6 +1719,12 @@
       "Close": "94.93000030517578",
       "Adj Close": "94.93",
       "Volume": "56900"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "96.02999877929688",
+      "Adj Close": "96.03",
+      "Volume": "130500"
     }
   ]
 }

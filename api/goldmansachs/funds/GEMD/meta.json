@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 16 2026",
+    "productPageAsOf": "Oct 19 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102979/381430388/goldman-sachs-access-emerging-markets-usd-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GEMD",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$40.22",
-    "value": 40.22,
-    "asOfDate": "Oct 16 2026"
+    "display": "$40.07",
+    "value": 40.07,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
-    "display": "$40.12",
-    "value": 40.12,
-    "asOfDate": "Oct 16 2026",
+    "display": "$39.90",
+    "value": 39.9,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.25%",
-    "value": -0.25,
-    "asOfDate": "Oct 16 2026",
+    "display": "-0.42%",
+    "value": -0.42,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$34.19 M",
-    "value": 34190000,
-    "asOfDate": "Oct 16 2026",
+    "display": "$34.06 M",
+    "value": 34060000,
+    "asOfDate": "Oct 19 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 202,
-    "bidAskMidpoint": 40.12,
+    "bidAskMidpoint": 39.91,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 1,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.41%",
       "mo3": -4.46,
       "mo3Text": "-4.46%",
-      "qtd": 1.09,
-      "qtdText": "1.09%",
+      "qtd": 1.37,
+      "qtdText": "1.37%",
       "ytd": -2.19,
       "ytdText": "-2.19%",
       "yr1": 0.9,
@@ -384,13 +384,13 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 16 2026",
-    "asOf": "Oct 16 2026",
+    "asOfDate": "Oct 19 2026",
+    "asOf": "Oct 19 2026",
     "top10Pct": 10.71,
     "rows": [
       {
         "name": "ARGENTINIAN GOVT 4.125% 09 JUL 2035",
-        "weight": 1.33
+        "weight": 1.31
       },
       {
         "name": "BRAZILIAN GOVT 4.625% 13 JAN 2028",
@@ -406,7 +406,7 @@
       },
       {
         "name": "URUGUAYAN GOVT 4.375% 23 JAN 2031",
-        "weight": 1.05
+        "weight": 1.06
       },
       {
         "name": "CHINESE GOVT 4.25% 20 NOV 2029 REGS",
@@ -414,7 +414,7 @@
       },
       {
         "name": "KENYAN GOVT 8.25% 28 FEB 2048 REGS",
-        "weight": 1.02
+        "weight": 1.03
       },
       {
         "name": "PERUVIAN GOVT 8.75% 21 NOV 2033",
@@ -436,9 +436,9 @@
     ],
     "pageSize": 250,
     "totalRows": 205,
-    "asOfDate": "2026-10-16",
-    "asOf": "Oct 16 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-16)",
+    "asOfDate": "2026-10-19",
+    "asOf": "Oct 19 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 202
   },
@@ -448,8 +448,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1170,
-    "asOf": "Oct 19 2026",
+    "totalRows": 1171,
+    "asOf": "Oct 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
