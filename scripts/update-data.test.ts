@@ -20,6 +20,7 @@ import {
   firstNumber,
   frequencyCodeLabel,
   gsDetailVariables,
+  holdingsGuard,
   indexRowFromMeta,
   inferDistributionFrequency,
   installSystemCa,
@@ -430,12 +431,13 @@ const FUND_DETAIL_JSON = JSON.stringify({ data: { fundsDetail: {
   topHoldings: { asAtDate: '2026-09-17', data: { series: [{ name: 'Top Ten Holdings', dataset: [{ name: 'US GOVT T-BILL 08 OCT 2026', y: 7.2 }, { name: 'US GOVT T-BILL 27 NOV 2026', y: 7.15 }] }] } },
 } } });
 
-// allHoldings of the fund data API (the fund page's daily All Holdings table), trimmed to four positions.
+// allHoldings of the fund data API (the fund page's daily All Holdings table), trimmed to five positions.
 const ALL_HOLDINGS = { asAtDate: '2026-10-15', holdings: [
   { order: '1', holding: 'JOHNSON & JOHNSON', ticker: 'JNJ', cusip: '478160AV6', isin: 'US478160AV64', sedol: 'BBMT8C9', coupon: '4.5', maturityDate: '2040-09-01', marketValue: '305166.61', numberOfShares: '340000', portfolio: '0.04' },
   { order: '0', holding: 'US GOVT T-BILL 08 OCT 2026', ticker: 'B', cusip: '912797QA1', isin: null, sedol: null, coupon: null, maturityDate: '2026-10-08', marketValue: '567000000.00', numberOfShares: '570000000', portfolio: '7.20' },
   { order: '2', holding: 'CMRC/EMINI S&P 500 12/2026', ticker: 'ESZ6', cusip: null, isin: null, sedol: 'ESZ6', coupon: null, maturityDate: null, marketValue: '98556150.00', numberOfShares: '253', portfolio: '0.65' },
   { order: '3', holding: 'US DOLLAR', ticker: 'USD', cusip: '911990257', isin: 'USD018400003', sedol: null, coupon: '3.88', maturityDate: '2026-10-15', marketValue: '-87293699.35', numberOfShares: '-8.729369935E7', portfolio: null },
+  { order: '4', holding: 'GOLDMAN SACHS FS TREASURY OBLIGATIONS INSTL', ticker: 'FTOXX', cusip: '38141W323', isin: 'US38141W3234', sedol: null, coupon: null, maturityDate: null, marketValue: '7210000000.00', numberOfShares: '7210000000', portfolio: '91.46' },
 ] };
 const detailWithHoldings = (holdings: unknown) => FUND_DETAIL_JSON.replace('"premiumsAndDiscount":', `"allHoldings":${JSON.stringify(holdings)},"premiumsAndDiscount":`);
 
@@ -809,7 +811,7 @@ describe('parsing', () => {
     const sheet = parseProductPage(detailWithHoldings(ALL_HOLDINGS), 'GBIL').allHoldings;
     expect(sheet?.asOfDate).toBe('2026-10-15');
     expect(sheet?.headers).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category', 'Coupon', 'Maturity', 'ISIN', 'SEDOL']);
-    expect(sheet?.rows.map((row) => row.Name)).toEqual(['US GOVT T-BILL 08 OCT 2026', 'JOHNSON & JOHNSON', 'CMRC/EMINI S&P 500 12/2026', 'US DOLLAR']);
+    expect(sheet?.rows.map((row) => row.Name)).toEqual(['US GOVT T-BILL 08 OCT 2026', 'JOHNSON & JOHNSON', 'CMRC/EMINI S&P 500 12/2026', 'US DOLLAR', 'GOLDMAN SACHS FS TREASURY OBLIGATIONS INSTL']);
     expect(sheet?.rows[1]).toEqual({ Name: 'JOHNSON & JOHNSON', Ticker: '-', Identifier: '478160AV6', Weight: '0.04', 'Market Value': '305166.61', 'Shares Held': '340000', 'Asset Category': '', Coupon: '4.5', Maturity: '2040-09-01', ISIN: 'US478160AV64', SEDOL: 'BBMT8C9' });
     expect(sheet?.rows[2]).toMatchObject({ Ticker: 'ESZ6', Identifier: 'ESZ6', Coupon: '', Maturity: '' });
     expect(sheet?.rows[3]).toMatchObject({ Weight: '', 'Shares Held': '-87293699.35', 'Market Value': '-87293699.35' });
@@ -925,6 +927,21 @@ describe('parsing', () => {
     expect(checkNportFiling('S000001', 'S000001', '2026-03-31', '2026-06-30', 'SEC EDGAR Form N-PORT-P').reason).toContain('older than the published holdings');
     // a legacy published top-10 snapshot is not "fresher" than a real filing
     expect(checkNportFiling('S000001', 'S000001', '2026-06-30', '2026-09-17', 'offline seed snapshot: official top-10 holdings').ok).toBe(true);
+  });
+
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6\u200B0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
   test('the 48-ETF universe seed is complete and consistent', () => {
@@ -1217,11 +1234,11 @@ describe('pipeline', () => {
     const world = mockWorld({ handler: (url) => (url.includes('/services/funds/detail/PV102645/') ? new Response(answer) : undefined) });
     await run({ TICKERS: THREE });
     const meta = readJson(world, 'funds/GBIL/meta.json');
-    expect(meta.holdings).toMatchObject({ totalRows: 4, asOfDate: '2026-10-15', marketValueBasis: 'Goldman Sachs fund data API market value (USD)' });
+    expect(meta.holdings).toMatchObject({ totalRows: 5, asOfDate: '2026-10-15', marketValueBasis: 'Goldman Sachs fund data API market value (USD)' });
     expect(meta.holdings.source).toContain('fund data API All Holdings');
     expect(meta.holdings.publishedTotalHoldings).toBe(40); // the page's own count, not the row count
     expect(readJson(world, 'funds/GBIL/holdings/001.json').rows[1]).toMatchObject({ Ticker: '-', Identifier: '478160AV6', Weight: '0.04' });
-    expect(rowFor(readJson(world, 'index.json'), 'GBIL').holdings).toBe(4);
+    expect(rowFor(readJson(world, 'index.json'), 'GBIL').holdings).toBe(5);
     const published = snapshot(world.api);
     await run({ TICKERS: THREE });
     expect(snapshot(world.api)).toEqual(published); // same data: zero diff
@@ -1233,8 +1250,20 @@ describe('pipeline', () => {
       answer = next;
       await run({ TICKERS: 'GBIL' });
       expect(holdingsDir()).toEqual(sheet);
-      expect(readJson(world, 'funds/GBIL/meta.json').holdings).toMatchObject({ totalRows: 4, asOfDate: '2026-10-15' });
+      expect(readJson(world, 'funds/GBIL/meta.json').holdings).toMatchObject({ totalRows: 5, asOfDate: '2026-10-15' });
     }
+  }, 30_000);
+
+  test('holdings that fail the guard keep the fund exactly as published and report it failed', async () => {
+    let answer = detailWithHoldings(ALL_HOLDINGS);
+    const world = mockWorld({ handler: (url) => (url.includes('/services/funds/detail/PV102645/') ? new Response(answer) : undefined) });
+    await run({ TICKERS: THREE });
+    const published = snapshot(world.api);
+    // the fund data API renames its weight field: every Weight cell of the fresh list comes back empty
+    answer = detailWithHoldings({ ...ALL_HOLDINGS, holdings: ALL_HOLDINGS.holdings.map(({ portfolio, ...row }) => ({ ...row, portfolioWeight: portfolio })) });
+    await run({ TICKERS: 'GBIL' });
+    expect(snapshot(world.api)).toEqual(published);
+    expect(process.exitCode).toBe(1);
   }, 30_000);
 
   test('a Yahoo 404 is an honest empty history, not a failed fund', async () => {
