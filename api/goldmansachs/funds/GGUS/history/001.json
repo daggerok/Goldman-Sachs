@@ -2,7 +2,7 @@
   "ticker": "GGUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 724,
+  "totalRows": 727,
   "headers": [
     "Date",
     "Close",
@@ -4353,6 +4353,24 @@
       "Close": "66.47100067138672",
       "Adj Close": "66.47",
       "Volume": "10400"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "67.13899993896484",
+      "Adj Close": "67.14",
+      "Volume": "5400"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "65.16300201416016",
+      "Adj Close": "65.16",
+      "Volume": "9100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "64.9260025024414",
+      "Adj Close": "64.93",
+      "Volume": "9000"
     }
   ]
 }

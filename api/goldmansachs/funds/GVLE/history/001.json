@@ -2,7 +2,7 @@
   "ticker": "GVLE",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 232,
+  "totalRows": 235,
   "headers": [
     "Date",
     "Close",
@@ -1401,6 +1401,24 @@
       "Close": "48.45500183105469",
       "Adj Close": "48.46",
       "Volume": "1000"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "48.757999420166016",
+      "Adj Close": "48.76",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "48.290000915527344",
+      "Adj Close": "48.29",
+      "Volume": "700"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "48.018001556396484",
+      "Adj Close": "48.02",
+      "Volume": "600"
     }
   ]
 }

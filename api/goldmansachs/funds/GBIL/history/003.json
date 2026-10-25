@@ -2,7 +2,7 @@
   "ticker": "GBIL",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2539,
+  "totalRows": 2542,
   "headers": [
     "Date",
     "Close",
@@ -3243,6 +3243,24 @@
       "Close": "100.02999877929688",
       "Adj Close": "100.03",
       "Volume": "826400"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "100.05999755859375",
+      "Adj Close": "100.06",
+      "Volume": "556200"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "100.08999633789062",
+      "Adj Close": "100.09",
+      "Volume": "699700"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "100.0999984741211",
+      "Adj Close": "100.1",
+      "Volume": "936400"
     }
   ]
 }

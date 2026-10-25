@@ -2,7 +2,7 @@
   "ticker": "GSJY",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2673,
+  "totalRows": 2676,
   "headers": [
     "Date",
     "Close",
@@ -4047,6 +4047,24 @@
       "Close": "54.70500183105469",
       "Adj Close": "54.71",
       "Volume": "3000"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "54.86399841308594",
+      "Adj Close": "54.86",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "54.20600128173828",
+      "Adj Close": "54.21",
+      "Volume": "4500"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "53.93299865722656",
+      "Adj Close": "53.93",
+      "Volume": "5000"
     }
   ]
 }

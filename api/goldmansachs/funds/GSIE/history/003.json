@@ -2,7 +2,7 @@
   "ticker": "GSIE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2751,
+  "totalRows": 2754,
   "headers": [
     "Date",
     "Close",
@@ -4515,6 +4515,24 @@
       "Close": "46.209999084472656",
       "Adj Close": "46.21",
       "Volume": "304300"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "46.40999984741211",
+      "Adj Close": "46.41",
+      "Volume": "543100"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "46.060001373291016",
+      "Adj Close": "46.06",
+      "Volume": "493300"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "45.8849983215332",
+      "Adj Close": "45.88",
+      "Volume": "313300"
     }
   ]
 }

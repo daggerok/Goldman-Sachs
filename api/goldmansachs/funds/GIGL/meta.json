@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 19 2026",
+    "productPageAsOf": "Oct 22 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIGL",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.14",
-    "value": 48.14,
-    "asOfDate": "Oct 19 2026"
+    "display": "$48.63",
+    "value": 48.63,
+    "asOfDate": "Oct 22 2026"
   },
   "marketPrice": {
-    "display": "$48.17",
-    "value": 48.17,
-    "asOfDate": "Oct 19 2026",
+    "display": "$48.62",
+    "value": 48.62,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Oct 19 2026",
+    "display": "-0.02%",
+    "value": -0.02,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$240.69 M",
-    "value": 240690000,
-    "asOfDate": "Oct 19 2026",
+    "display": "$243.13 M",
+    "value": 243130000,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 462,
-    "bidAskMidpoint": 48.19,
+    "publishedTotalHoldings": null,
+    "bidAskMidpoint": 48.63,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 54,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.95%",
       "mo3": -4.05,
       "mo3Text": "-4.05%",
-      "qtd": 0.79,
-      "qtdText": "0.79%",
+      "qtd": 1.59,
+      "qtdText": "1.59%",
       "ytd": -3.18,
       "ytdText": "-3.18%",
       "yr1": -2.36,
@@ -224,17 +224,17 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 19 2026",
-    "asOf": "Oct 19 2026",
-    "top10Pct": 9.4,
+    "asOfDate": "Oct 22 2026",
+    "asOf": "Oct 22 2026",
+    "top10Pct": 9.37,
     "rows": [
       {
         "name": "FORD MOTOR CREDIT COMPANY LLC 5.42% 09 APR 2031-31",
-        "weight": 1.42
+        "weight": 1.41
       },
       {
         "name": "BIG SKY FUNDING LLC 5.75% 20 OCT 2035",
-        "weight": 1.14
+        "weight": 1.13
       },
       {
         "name": "BANK OF AMERICA CORPORATION 4.456% 06 FEB 2032-31",
@@ -254,18 +254,18 @@
       },
       {
         "name": "BACARDI LIMITED 4.7% 15 MAY 2028-28 144A",
-        "weight": 0.79
+        "weight": 0.78
       },
       {
         "name": "JPMORGAN CHASE & CO. 5.193% 05 FEB 2037-36",
         "weight": 0.76
       },
       {
-        "name": "GENERAL MOTORS FINANCIAL COMPANY 6% 09 JAN 2028-27",
+        "name": "EXPEDIA GROUP, INC. 5.4% 15 FEB 2035-34",
         "weight": 0.72
       },
       {
-        "name": "EXPEDIA GROUP, INC. 5.4% 15 FEB 2035-34",
+        "name": "GENERAL MOTORS FINANCIAL COMPANY 6% 09 JAN 2028-27",
         "weight": 0.72
       }
     ]
@@ -276,20 +276,19 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 477,
-    "asOfDate": "2026-10-19",
-    "asOf": "Oct 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
-    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 462
+    "totalRows": 481,
+    "asOfDate": "2026-10-22",
+    "asOf": "Oct 22 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)"
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 332,
-    "asOf": "Oct 20 2026",
+    "totalRows": 335,
+    "asOf": "Oct 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GHYB",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2280,
+  "totalRows": 2283,
   "headers": [
     "Date",
     "Close",
@@ -1689,6 +1689,24 @@
       "Close": "43.053001403808594",
       "Adj Close": "43.05",
       "Volume": "1400"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "43.099998474121094",
+      "Adj Close": "43.1",
+      "Volume": "2300"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "43.17499923706055",
+      "Adj Close": "43.17",
+      "Volume": "2700"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "43.13100051879883",
+      "Adj Close": "43.13",
+      "Volume": "35800"
     }
   ]
 }

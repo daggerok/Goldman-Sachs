@@ -2,7 +2,7 @@
   "ticker": "GVIP",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2497,
+  "totalRows": 2500,
   "headers": [
     "Date",
     "Close",
@@ -2991,6 +2991,24 @@
       "Close": "164.45399475097656",
       "Adj Close": "164.45",
       "Volume": "4700"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "165.82000732421875",
+      "Adj Close": "165.82",
+      "Volume": "11600"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "160.37100219726562",
+      "Adj Close": "160.37",
+      "Volume": "8700"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "159.53199768066406",
+      "Adj Close": "159.53",
+      "Volume": "16500"
     }
   ]
 }

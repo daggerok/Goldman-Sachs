@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 19 2026",
+    "productPageAsOf": "Oct 22 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIND",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$23.73",
-    "value": 23.73,
-    "asOfDate": "Oct 19 2026"
+    "display": "$23.31",
+    "value": 23.31,
+    "asOfDate": "Oct 22 2026"
   },
   "marketPrice": {
-    "display": "$23.71",
-    "value": 23.71,
-    "asOfDate": "Oct 19 2026",
+    "display": "$23.50",
+    "value": 23.5,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.07,
-    "asOfDate": "Oct 19 2026",
+    "display": "0.83%",
+    "value": 0.83,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$159.02 M",
-    "value": 159020000,
-    "asOfDate": "Oct 19 2026",
+    "display": "$156.20 M",
+    "value": 156200000,
+    "asOfDate": "Oct 22 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 126,
-    "bidAskMidpoint": 23.72,
+    "bidAskMidpoint": 23.5,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 14,
@@ -86,8 +86,8 @@
       "mo1Text": "-6.23%",
       "mo3": -1.81,
       "mo3Text": "-1.81%",
-      "qtd": 2.57,
-      "qtdText": "2.57%",
+      "qtd": -1.76,
+      "qtdText": "-1.76%",
       "ytd": -9.13,
       "ytdText": "-9.13%",
       "yr1": -7.51,
@@ -168,21 +168,21 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 19 2026",
-    "asOf": "Oct 19 2026",
-    "top10Pct": 27.21,
+    "asOfDate": "Oct 22 2026",
+    "asOf": "Oct 22 2026",
+    "top10Pct": 27.47,
     "rows": [
       {
         "name": "ICICI Bank Ltd",
-        "weight": 5.75
+        "weight": 5.93
       },
       {
         "name": "HDFC Bank Ltd",
-        "weight": 3.4
+        "weight": 3.38
       },
       {
         "name": "Reliance Industries Ltd",
-        "weight": 2.87
+        "weight": 2.88
       },
       {
         "name": "Axis Bank Ltd",
@@ -190,27 +190,27 @@
       },
       {
         "name": "Mahindra & Mahindra Ltd",
-        "weight": 2.5
+        "weight": 2.51
       },
       {
         "name": "Kotak Mahindra Bank Ltd",
-        "weight": 2.34
+        "weight": 2.35
       },
       {
         "name": "Bajaj Finance Ltd",
-        "weight": 2.13
-      },
-      {
-        "name": "Eternal Ltd",
-        "weight": 1.97
+        "weight": 2.14
       },
       {
         "name": "Sun Pharmaceutical Industries Ltd",
-        "weight": 1.88
+        "weight": 1.93
+      },
+      {
+        "name": "Eternal Ltd",
+        "weight": 1.91
       },
       {
         "name": "Tata Consultancy Services Ltd",
-        "weight": 1.74
+        "weight": 1.81
       }
     ]
   },
@@ -220,9 +220,9 @@
     ],
     "pageSize": 250,
     "totalRows": 129,
-    "asOfDate": "2026-10-19",
-    "asOf": "Oct 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-19)",
+    "asOfDate": "2026-10-22",
+    "asOf": "Oct 22 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 126
   },
@@ -231,8 +231,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 389,
-    "asOf": "Oct 20 2026",
+    "totalRows": 392,
+    "asOf": "Oct 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GSWO",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1152,
+  "totalRows": 1155,
   "headers": [
     "Date",
     "Close",
@@ -921,6 +921,24 @@
       "Close": "65.00499725341797",
       "Adj Close": "65",
       "Volume": "110500"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "65.33499908447266",
+      "Adj Close": "65.33",
+      "Volume": "69500"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "64.48999786376953",
+      "Adj Close": "64.49",
+      "Volume": "58200"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "64.20999908447266",
+      "Adj Close": "64.21",
+      "Volume": "55000"
     }
   ]
 }

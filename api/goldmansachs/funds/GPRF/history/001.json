@@ -2,7 +2,7 @@
   "ticker": "GPRF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 557,
+  "totalRows": 560,
   "headers": [
     "Date",
     "Close",
@@ -3351,6 +3351,24 @@
       "Close": "47.915000915527344",
       "Adj Close": "47.92",
       "Volume": "9500"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "47.775001525878906",
+      "Adj Close": "47.78",
+      "Volume": "3800"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "47.75",
+      "Adj Close": "47.75",
+      "Volume": "7100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "47.7400016784668",
+      "Adj Close": "47.74",
+      "Volume": "6400"
     }
   ]
 }
