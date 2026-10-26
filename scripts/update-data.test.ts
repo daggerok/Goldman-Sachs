@@ -51,6 +51,7 @@ import {
   parseRange,
   parseRanges,
   parseSecCompanyNames,
+  parseUsListings,
   parseSecFundTickers,
   paymentsPerYearForFrequency,
   performanceAsOf,
@@ -846,10 +847,15 @@ describe('parsing 2', () => {
       line('CMRC/EMINI S&P 500 12/2026', 'ESZ6', '', 'ESZ6'), line('CONTRA CYBERARK SOFTWARE LTD.', 'CYBR', '000M26CNT069'), line('US DOLLAR', 'USD', 'USD018400003'),
       line('APPLE INC', 'AAPL', '', '037833100'), line('BOND LINE', '-', 'US91282CJL68'),
     ];
-    expect(gsListedTickers(rows, names).map((row) => row.Ticker)).toEqual(['-', 'MRK', 'ACN', '-', 'ASML', 'BPOP', '-', '-', '-', 'AAPL', '-']);
+    // Nasdaq Trader directories (Q33): the U.S. listing of the same company; SHEL is the ADR of Shell, not its London line
+    const listings = parseUsListings(['Symbol|Security Name|Test Issue|ETF\nSTX|Seagate Technology Holdings PLC - Ordinary Shares (Ireland)|N|N\nFile Creation Time: 1026202614:01|||',
+      'ACT Symbol|Security Name|Exchange|ETF|Test Issue\nACN|Accenture plc Class A Ordinary Shares (Ireland)|N|N|N\nAON|Aon plc Class A Ordinary Shares (Ireland)|N|N|N\nAER|AerCap Holdings N.V. Ordinary Shares|N|N|N\nSHEL|Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares)|N|N|N\nFile Creation Time: 1026202614:01||||']);
+    expect(gsListedTickers(rows, names, listings).map((row) => row.Ticker)).toEqual(['-', 'MRK', 'ACN', '-', 'ASML', 'BPOP', '-', '-', '-', 'AAPL', '-']);
     // issuer spellings: PUBLIC LIMITED COMPANY is plc, a name cut short still matches the SEC title it starts
     const irish = [line('AON PUBLIC LIMITED COMPANY', 'AON', 'IE00BLP1HW54'), line('SEAGATE TECHNOLOGY HOLDIN PLC', 'STX', 'IE00BKVD2N49'), line('AERCAP HOLDINGS NV', 'AER', 'NL0000687663'), line('MERCK KGAA', 'MRK', 'DE0006599905')];
-    expect(gsListedTickers(irish, names).map((row) => row.Ticker)).toEqual(['AON', 'STX', 'AER', '-']);
+    expect(gsListedTickers(irish, names, listings).map((row) => row.Ticker)).toEqual(['AON', 'STX', 'AER', '-']);
+    const shell = [line('SHELL PLC', 'SHEL', 'GB00BP6MXD84')];
+    expect([gsListedTickers(shell, parseSecCompanyNames({ 0: { ticker: 'SHEL', title: 'Shell plc' } }), listings)[0].Ticker, gsListedTickers(irish, names)[0].Ticker]).toEqual(['-', '-']);
     // without SEC's company table no foreign line keeps its ticker
     expect(gsListedTickers(rows, null).map((row) => row.Ticker).slice(0, 4)).toEqual(['-', 'MRK', '-', '-']);
   });
