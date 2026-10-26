@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T03:09:01Z",
+  "generatedAt": "2026-10-26T19:35:37Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -13,7 +13,7 @@
   "counts": {
     "funds": 48,
     "holdings": 27780,
-    "history": 59726
+    "history": 59727
   },
   "funds": [
     {
@@ -28,17 +28,17 @@
       "terValue": 0.18,
       "terGross": "0.18%",
       "terGrossValue": 0.18,
-      "nav": "$39.89",
-      "navValue": 39.89,
-      "aum": "$2.57 B",
-      "aumValue": 2567600000,
-      "asOfDate": "Oct 22 2026",
+      "nav": "$39.55",
+      "navValue": 39.55,
+      "aum": "$2.55 B",
+      "aumValue": 2545400000,
+      "asOfDate": "Oct 23 2026",
       "inceptionDate": "Jul 26 2018",
       "exchange": "Cboe BZX",
-      "closePrice": "$39.67",
-      "closePriceValue": 39.67,
-      "premiumDiscount": "-0.55%",
-      "premiumDiscountValue": -0.55,
+      "closePrice": "$39.40",
+      "closePriceValue": 39.4,
+      "premiumDiscount": "-0.38%",
+      "premiumDiscountValue": -0.38,
       "frequencyCode": "00 - None",
       "distributions": {
         "frequency": "None",
@@ -53,8 +53,8 @@
           "mo1Text": "-8.47%",
           "mo3": 3.68,
           "mo3Text": "3.68%",
-          "qtd": -4.25,
-          "qtdText": "-4.25%",
+          "qtd": -3.99,
+          "qtdText": "-3.99%",
           "ytd": -3.18,
           "ytdText": "-3.18%",
           "yr1": 8.98,
@@ -97,7 +97,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 0,
-      "history": 2059
+      "history": 2060
     },
     {
       "ticker": "GBIL",
