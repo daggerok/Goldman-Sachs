@@ -21,6 +21,7 @@ import {
   firstNumber,
   frequencyCodeLabel,
   gsDetailVariables,
+  gsListedTickers,
   holdingsGuard,
   holdingsWeightCount,
   indexRowFromMeta,
@@ -836,6 +837,23 @@ describe('parsing 2', () => {
     expect(gsDetailVariables('https://am.gs.com/en-us/individual/funds')).toBeNull();
   });
 
+  test('holdings tickers: a bare ticker only for a U.S. listing; local codes, futures, contra lines and cash get -', () => {
+    const line = (Name: string, Ticker: string, ISIN: string, Identifier = ISIN) => ({ Name, Ticker, Identifier, ISIN });
+    const names = parseSecCompanyNames({ 0: { ticker: 'MRK', title: 'Merck & Co., Inc.' }, 1: { ticker: 'ACN', title: 'Accenture plc' }, 2: { ticker: 'III', title: 'Information Services Group Inc.' }, 3: { ticker: 'AON', title: 'Aon plc' }, 4: { ticker: 'STX', title: 'Seagate Technology Holdings plc' }, 5: { ticker: 'AER', title: 'AerCap Holdings N.V.' } });
+    const rows = [
+      line('MERCK KGAA', 'MRK', 'DE0006599905'), line('MERCK & CO INC', 'MRK', 'US58933Y1055', '58933Y105'), line('ACCENTURE PLC CL A', 'ACN', 'IE00B4BNMY34'),
+      line('3I GROUP PLC', 'III', 'GB00B1YW4409'), line('ASML HOLDING N.V.-ADR', 'ASML', 'USN070592100'), line('POPULAR, INC.', 'BPOP', 'PR7331747001'),
+      line('CMRC/EMINI S&P 500 12/2026', 'ESZ6', '', 'ESZ6'), line('CONTRA CYBERARK SOFTWARE LTD.', 'CYBR', '000M26CNT069'), line('US DOLLAR', 'USD', 'USD018400003'),
+      line('APPLE INC', 'AAPL', '', '037833100'), line('BOND LINE', '-', 'US91282CJL68'),
+    ];
+    expect(gsListedTickers(rows, names).map((row) => row.Ticker)).toEqual(['-', 'MRK', 'ACN', '-', 'ASML', 'BPOP', '-', '-', '-', 'AAPL', '-']);
+    // issuer spellings: PUBLIC LIMITED COMPANY is plc, a name cut short still matches the SEC title it starts
+    const irish = [line('AON PUBLIC LIMITED COMPANY', 'AON', 'IE00BLP1HW54'), line('SEAGATE TECHNOLOGY HOLDIN PLC', 'STX', 'IE00BKVD2N49'), line('AERCAP HOLDINGS NV', 'AER', 'NL0000687663'), line('MERCK KGAA', 'MRK', 'DE0006599905')];
+    expect(gsListedTickers(irish, names).map((row) => row.Ticker)).toEqual(['AON', 'STX', 'AER', '-']);
+    // without SEC's company table no foreign line keeps its ticker
+    expect(gsListedTickers(rows, null).map((row) => row.Ticker).slice(0, 4)).toEqual(['-', 'MRK', '-', '-']);
+  });
+
   test('page-loaded check: the pricing table and the performance tables must both be present', () => {
     const cut = (html: string, from: string, to: string) => html.slice(0, html.indexOf(from)) + html.slice(html.indexOf(to));
     const partial = cut(FUND_PAGE_HTML, '<h2>Performance</h2>', '<div>Top 10 Holdings');
@@ -1475,6 +1493,23 @@ describe('pipeline 5', () => {
     expect(snapshot(world.api)).toEqual(first);
     expect(process.exitCode).toBe(1);
     expect(holdingsWeightCount(['Name', 'Weight'], [['A', '-'], ['B', '2']])).toBe(1);
+  }, 30_000);
+
+  test('a foreign line keeps its ticker only when SEC lists it for the same company; without SEC the published sheet stays', async () => {
+    const merck = { order: '5', holding: 'MERCK KGAA', ticker: 'MRK', cusip: null, isin: 'DE0006599905', sedol: '4741844', coupon: null, maturityDate: null, marketValue: '1', numberOfShares: '1', portfolio: '0.01' };
+    let answer = detailWithHoldings({ ...ALL_HOLDINGS, holdings: [...ALL_HOLDINGS.holdings, merck] });
+    let sec = true;
+    const world = mockWorld({ handler: (url) => (url.includes('/services/funds/detail/PV102645/') ? new Response(answer) : sec && url.endsWith('/files/company_tickers.json') ? Response.json({ 0: { ticker: 'MRK', title: 'Merck & Co., Inc.' } }) : undefined) });
+    await run({ TICKERS: 'GBIL' });
+    const sheet = () => snapshot(join(world.api, 'funds', 'GBIL', 'holdings'));
+    const rows = readJson(world, 'funds/GBIL/holdings/001.json').rows;
+    expect(rows.map((row: Record<string, string>) => row.Ticker)).toEqual(['-', '-', '-', '-', 'FTOXX', '-']);
+    const published = sheet();
+    sec = false;
+    answer = detailWithHoldings({ ...ALL_HOLDINGS, asAtDate: '2026-10-16', holdings: [...ALL_HOLDINGS.holdings, merck] });
+    await run({ TICKERS: 'GBIL' });
+    expect(sheet()).toEqual(published);
+    expect(process.exitCode ?? 0).toBe(0); // the rest of the fund still updates
   }, 30_000);
 
   test('TICKERS outside the live catalog stops the run before any fund request; a stale catalog-only row is dropped (Q27)', async () => {
