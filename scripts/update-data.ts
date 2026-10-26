@@ -772,6 +772,8 @@ const BOND_HOLDINGS_HEADERS = [...HOLDINGS_HEADERS, 'Coupon', 'Maturity'];
 const GS_HOLDINGS_EXTRA_HEADERS = ['ISIN', 'SEDOL'];
 /** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
 const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {};
+/** Funds the issuer closed, each confirmed from an SEC filing or the issuer notice (`source`): never fetched or guarded, last published data kept, index row marked closed. */
+export const CLOSED_FUNDS: ClosedFund[] = [];
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const TRUTHY = new Set(['1', 'true', 'yes', 'y', 'on']);
 const AUM_BOUNDS = { nano: [0, 10_000_000], micro: [10_000_000, 300_000_000], small: [300_000_000, 2_000_000_000], mid: [2_000_000_000, 10_000_000_000], large: [10_000_000_000, undefined] } as const;
@@ -3493,6 +3495,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   if (skipReasons.length) {
     return { __skipped: true, ticker: fund.ticker, __skipReasons: skipReasons };
   }
+  // A new fund (nothing published) that no source answered (no fund page read, no fresh holdings, no Yahoo closes) is not
+  // published as an empty meta.json: it fails and keeps its catalog-only index row (dataFile null).
+  if (!previousMeta && !summary && !holdingsFresh && !(chart && chart.days.length)) throw new Error('no source answered (fund page, holdings and Yahoo chart); no data published for this fund yet');
   // Fresh holdings that look broken (no weight column, non-numeric weights, a bad weight sum, half the rows gone) never replace
   // the published ones; a fund with nothing published is not written. Checked after the filters: a skipped fund never fails.
   const holdingsProblem = holdingsFresh
@@ -3760,7 +3765,8 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   // MAX_FETCHES batches walk the filtered set (TICKERS and catalog-level filters) in ticker order from the
   // saved cursor and wrap around. A TICKERS run is an explicit selection: it never reads, moves or deletes the cursor.
-  const filtered = universe.filter((fund) => !catalogFilterReasons(fund, config).length);
+  // A closed fund is dropped here, before any per-fund request and before the MAX_FETCHES budget: never fetched, guarded or reported.
+  const filtered = withoutClosedFunds(universe.filter((fund) => !catalogFilterReasons(fund, config).length), (fund) => fund.ticker, CLOSED_FUNDS);
   const useCursor = !config.tickers;
   let state: JsonRecord = {};
   if (useCursor) { try { state = JSON.parse(await readFile(STATE_FILE, 'utf8')) as JsonRecord; } catch { state = {}; } }
@@ -3784,7 +3790,9 @@ export async function main(env: Record<string, string | undefined> = process.env
       if (!fund) return;
       const before = await output.before(fund.ticker);
       try {
-        const row = await processFund(fund, config, previous.get(fund.ticker) || {});
+        // A catalog-only row (dataFile null: nothing published yet) is no published state: its placeholders never stand in for data.
+        const published = previous.get(fund.ticker);
+        const row = await processFund(fund, config, published && published.dataFile !== null ? published : {});
         if (row.__skipped) {
           await output.result(fund.ticker, before, 'skipped', (row.__skipReasons || ['not eligible']).join(', '));
         } else {
@@ -3807,8 +3815,9 @@ export async function main(env: Record<string, string | undefined> = process.env
   const merged = new Map(previous);
   for (const fund of universe) if (!merged.has(fund.ticker)) merged.set(fund.ticker, placeholderRow(fund));
   for (const row of results) merged.set(String(row.ticker), row);
-  const funds: JsonRecord[] = [];
-  for (const row of [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)))) funds.push(await finalizeRow(row));
+  const finalized: JsonRecord[] = [];
+  for (const row of [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)))) finalized.push(await finalizeRow(row));
+  const funds = markClosedFunds(finalized, CLOSED_FUNDS);
   const counts = { funds: funds.length, holdings: funds.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: funds.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
   // The index is written last, after every fund's files.
   await writeIfChanged(INDEX_FILE, {
@@ -3923,7 +3932,7 @@ if ((import.meta as { main?: boolean }).main) {
  * Weight (%) or Market Weight) are required, >= 80% of the rows carry a numeric weight, the weights add up to
  * 50..150 and the sheet keeps >= 50% of the previously published rows. `relax` switches off the checks a fund
  * legitimately fails: 'numeric' and 'sum' (geared, inverse, futures, look-through, top-N lists) and 'count'.
- * Rows are arrays in header order or objects keyed by the header text.
+ * Rows are arrays in header order or objects keyed by the header text. A fund in the brand's CLOSED_FUNDS never reaches the guard.
  */
 export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, previousRows: number | null | undefined, relax: ReadonlyArray<string> = []): string | null {
   const previous = Number(previousRows) > 0 ? Number(previousRows) : 0;
@@ -3958,5 +3967,44 @@ function holdingsGuardNumber(value: unknown): number | null {
   if (negative) text = text.slice(1, -1);
   if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(text)) return null;
   return negative ? -Number(text) : Number(text);
+}
+
+/** A fund its issuer closed (liquidated, delisted or merged away), confirmed from an official source: an SEC filing or the issuer's notice. */
+export type ClosedFund = { ticker: string; closed: string; source: string };
+
+/**
+ * The brand's CLOSED_FUNDS entry for a ticker, or null. A closed fund is never fetched, never guarded and never reported failed: it keeps
+ * its last published data and its index row carries `status: 'closed'`, `closedDate` and `closedSource`. A malformed entry throws, so a
+ * typo (no ISO date, no https source) never ships.
+ */
+export function closedFund(list: ReadonlyArray<ClosedFund>, ticker: unknown): ClosedFund | null {
+  const wanted = String(ticker === null || ticker === undefined ? '' : ticker).trim().toUpperCase();
+  let found: ClosedFund | null = null;
+  for (let i = 0; i < list.length; i++) {
+    const fund = list[i];
+    if (!/^[A-Z0-9][A-Z0-9.-]{0,9}$/.test(fund.ticker) || !/^\d{4}-\d{2}-\d{2}$/.test(fund.closed) || !/^https:\/\/\S+$/.test(fund.source)) throw new Error(`CLOSED_FUNDS: ${fund.ticker} needs an upper-case ticker, an ISO closing date and an https source`);
+    if (fund.ticker === wanted) found = fund;
+  }
+  return found;
+}
+
+/** The index rows with every closed fund marked (`status: 'closed'`, `closedDate`, `closedSource`); other rows are returned as they are. */
+export function markClosedFunds<T extends object>(rows: ReadonlyArray<T>, list: ReadonlyArray<ClosedFund>): T[] {
+  return rows.map((row) => {
+    const fund = closedFund(list, (row as { ticker?: unknown }).ticker);
+    return fund ? ({ ...row, status: 'closed', closedDate: fund.closed, closedSource: fund.source } as T) : row;
+  });
+}
+
+/** A run's queue without the closed funds, which are named once in the log: they are neither fetched nor counted as failed. */
+export function withoutClosedFunds<T>(queue: ReadonlyArray<T>, tickerOf: (item: T) => string, list: ReadonlyArray<ClosedFund>): T[] {
+  const closed: string[] = [];
+  const open: T[] = [];
+  for (let i = 0; i < queue.length; i++) {
+    if (closedFund(list, tickerOf(queue[i]))) closed.push(tickerOf(queue[i]));
+    else open.push(queue[i]);
+  }
+  if (closed.length) console.log(`[ closed   ] ${closed.join(', ')}: closed by the issuer, published data kept`);
+  return open;
 }
 // </holdings-guard>
