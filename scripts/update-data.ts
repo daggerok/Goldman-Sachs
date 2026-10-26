@@ -2442,6 +2442,47 @@ function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
   return secState.names;
 }
 
+/** A holdings line whose API ticker needs SEC's company table: a ticker on a foreign (non-U.S., non-Puerto Rico) ISIN. */
+export function gsNeedsNameCheck(row: JsonRecord): boolean {
+  const isin = String(row.ISIN ?? '').toUpperCase();
+  return String(row.Ticker ?? '-') !== '-' && /^[A-Z]{2}[0-9A-Z]{9}[0-9]$/.test(isin) && !/^(US|PR)/.test(isin);
+}
+
+/**
+ * Holdings tickers, a bare symbol only for a U.S. listing (brand ticker hygiene): the API ticker of a foreign line is its local
+ * code (MRK = Merck KGaA on Xetra, III, KPN, 2330), which would merge it with the U.S. company of that symbol. A ticker stays on
+ * a U.S. or Puerto Rico ISIN (ADRs and CINS issues included) or a U.S. CUSIP with no ISIN, and on a foreign ISIN only when SEC's
+ * company table (`names`, parseSecCompanyNames) lists that same ticker for the same company (Accenture, Linde, Eaton trade in
+ * the U.S. under their own symbol). Futures (no ISIN), contra lines (000 codes) and currency cash get '-'.
+ */
+export function gsListedTickers(rows: ReadonlyArray<JsonRecord>, names: Map<string, string> | null): JsonRecord[] {
+  const keysOf = new Map<string, string[]>();
+  if (names) names.forEach((ticker, key) => keysOf.set(ticker, (keysOf.get(ticker) || []).concat(key)));
+  /** SEC lists `ticker` for this company: the same name key, or (an API name cut short, two words or more) a key starting with it. */
+  const secListed = (name: unknown, ticker: string): boolean => {
+    const keys = keysOf.get(ticker) || [];
+    const text = String(name ?? '');
+    // the name as given and with PUBLIC LIMITED COMPANY spelled plc (SEC titles use both)
+    return [text, text.replace(/\bPUBLIC\s+(?:LIMITED|LTD)(?:\s+(?:COMPANY|COMP[A-Z]*|CO))?\b/gi, 'PLC')].some((spelling) => {
+      const key = nportNameKey(spelling);
+      const core = key.replace(/ CL [A-Z]$/, '');
+      return Boolean(core) && (keys.indexOf(key) >= 0 || keys.indexOf(core) >= 0 || (core.split(' ').length >= 2 && keys.some((secKey) => secKey.indexOf(core) === 0)));
+    });
+  };
+  return rows.map((row) => {
+    const ticker = String(row.Ticker ?? '-');
+    if (ticker === '-') return row;
+    const isin = String(row.ISIN ?? '').toUpperCase();
+    const cash = /^[A-Z]{3}$/.test(ticker) && /\b(DOLLAR|CURRENCY|CASH)\b/i.test(String(row.Name ?? ''));
+    let listed = false;
+    if (cash) listed = false;
+    else if (/^(US|PR)[0-9A-Z]{9}[0-9]$/.test(isin)) listed = true;
+    else if (gsNeedsNameCheck(row)) listed = secListed(row.Name, ticker);
+    else listed = !isin && /^[0-9]{3}[0-9A-Z]{5}[0-9]$/.test(String(row.Identifier ?? ''));
+    return listed ? row : { ...row, Ticker: '-' };
+  });
+}
+
 /**
  * The Goldman Sachs holdings sheet of an N-PORT filing: HOLDINGS_HEADERS, plus Coupon and Maturity when the filing holds debt.
  * A missing number stays empty (never 0), a missing text is '-'; tickers come from nportTickers (U.S. equities only).
@@ -3207,8 +3248,11 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     const published = toIsoDate(previousMeta?.holdings?.asOfDate ?? '');
     const stale = apiHoldings.asOfDate !== null && /^\d{4}-\d{2}-\d{2}$/.test(published) && apiHoldings.asOfDate < published;
     if (stale) outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: fund data API list ${apiHoldings.asOfDate} is older than the published holdings ${published}; keeping the published holdings`);
-    else {
-      holdingsRows = apiHoldings.rows;
+    else if (apiHoldings.rows.some(gsNeedsNameCheck) && !(await loadCompanyNames(config).catch(() => null))) {
+      // a foreign line's ticker cannot be checked without SEC's company table: the published sheet stays, never local codes
+      outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: SEC company ticker table unavailable, keeping the published holdings`);
+    } else {
+      holdingsRows = gsListedTickers(apiHoldings.rows, apiHoldings.rows.some(gsNeedsNameCheck) ? await loadCompanyNames(config) : null);
       holdingsHeaders = apiHoldings.headers;
       holdingsAsOf = apiHoldings.asOfDate;
       holdingsDownload = fund.fundPage;
@@ -4031,7 +4075,9 @@ export function nportIdentifier(position: NportPosition): string {
 
 /** A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. */
 export function nportNameKey(value: unknown): string {
-  let text = nportText(String(value === null || value === undefined ? '' : value)).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ');
+  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/"): drop a trailing one
+  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*\/\s*[A-Za-z]{2,3}\s*\/?)+\s*$/, '');
+  let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ');
   text = text.replace(/\bCLASS\s+([A-Z])\b/g, 'CL $1').replace(/\bCL\s+([A-Z])\b/g, 'CL $1');
   const share = /\bCL [A-Z]\b/.exec(text);
   text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|NV|AG|SE|SPA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, ' ').replace(/\s+/g, ' ').trim();
