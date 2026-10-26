@@ -2461,13 +2461,10 @@ export function gsListedTickers(rows: ReadonlyArray<JsonRecord>, names: Map<stri
   /** SEC lists `ticker` for this company: the same name key, or (an API name cut short, two words or more) a key starting with it. */
   const secListed = (name: unknown, ticker: string): boolean => {
     const keys = keysOf.get(ticker) || [];
-    const text = String(name ?? '');
-    // the name as given and with PUBLIC LIMITED COMPANY spelled plc (SEC titles use both)
-    return [text, text.replace(/\bPUBLIC\s+(?:LIMITED|LTD)(?:\s+(?:COMPANY|COMP[A-Z]*|CO))?\b/gi, 'PLC')].some((spelling) => {
-      const key = nportNameKey(spelling);
-      const core = key.replace(/ CL [A-Z]$/, '');
-      return Boolean(core) && (keys.indexOf(key) >= 0 || keys.indexOf(core) >= 0 || (core.split(' ').length >= 2 && keys.some((secKey) => secKey.indexOf(core) === 0)));
-    });
+    // nportNameKey already reads PUBLIC LIMITED COMPANY as plc and N.V. as NV (shared block)
+    const key = nportNameKey(name);
+    const core = key.replace(/ CL [A-Z]$/, '');
+    return Boolean(core) && (keys.indexOf(key) >= 0 || keys.indexOf(core) >= 0 || (core.split(' ').length >= 2 && keys.some((secKey) => secKey.indexOf(core) === 0)));
   };
   return rows.map((row) => {
     const ticker = String(row.Ticker ?? '-');
@@ -4073,14 +4070,29 @@ export function nportIdentifier(position: NportPosition): string {
   return position.cusip || position.isin || position.other;
 }
 
-/** A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. */
+/**
+ * A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. Initials are one
+ * word whether written with dots, spaces or a slash (`N.V.` = `N V` = `NV`, `C.H. ROBINSON` = `C H ROBINSON`, `A/S` = `A S`,
+ * `S.A.B. de C.V.` = `SAB DE CV`), `PUBLIC LIMITED COMPANY` is `plc`, and a leading `US` stays (`U.S. BANCORP` is not
+ * `BANCORP, INC.`), so both spellings of one issuer give one key.
+ */
 export function nportNameKey(value: unknown): string {
-  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/"): drop a trailing one
-  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*\/\s*[A-Za-z]{2,3}\s*\/?)+\s*$/, '');
-  let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ');
+  // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/", "US BANCORP \DE\"): drop a trailing one
+  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*[\/\\]\s*[A-Za-z]{2,3}\s*[\/\\]?)+\s*$/, '');
+  let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ').trim();
   text = text.replace(/\bCLASS\s+([A-Z])\b/g, 'CL $1').replace(/\bCL\s+([A-Z])\b/g, 'CL $1');
+  // a run of single letters is one word, never the class letter after CL
+  const words: string[] = [];
+  let joining = false;
+  text.split(' ').forEach((word) => {
+    const letter = /^[A-Z]$/.test(word);
+    if (letter && joining) words[words.length - 1] += word;
+    else words.push(word);
+    joining = letter && (joining || words[words.length - 2] !== 'CL');
+  });
+  text = words.join(' ').replace(/\bPUBLIC (?:(?:LIMITED|LTD)(?: (?:COMP[A-Z]*|CO))?|(?:COMPANY|CO) (?:LIMITED|LTD))\b/g, 'PLC').replace(/\b(?:S DE RL )?DE CV\b/g, ' ');
   const share = /\bCL [A-Z]\b/.exec(text);
-  text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|NV|AG|SE|SPA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, ' ').replace(/\s+/g, ' ').trim();
+  text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|SAB|NV|AG|SE|SPA|AS|ASA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, (word: string, _name: string, at: number) => (word === 'US' && at === 0 ? word : ' ')).replace(/\s+/g, ' ').trim();
   if (share && !/\bCL [A-Z]\b/.test(text)) text = `${text} ${share[0]}`;
   return text;
 }
