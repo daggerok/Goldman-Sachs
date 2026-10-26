@@ -1,5 +1,5 @@
 // Bun's test runner provides these globals at runtime.
-// @ts-ignore the repository intentionally keeps runtime dependencies at zero.
+/// <reference types="bun" />
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
@@ -1261,6 +1261,9 @@ describe('pipeline', () => {
     const published = snapshot(world.api);
     // the fund data API renames its weight field: every Weight cell of the fresh list comes back empty
     answer = detailWithHoldings({ ...ALL_HOLDINGS, holdings: ALL_HOLDINGS.holdings.map(({ portfolio, ...row }) => ({ ...row, portfolioWeight: portfolio })) });
+    // a fund the post-fetch filters skip (AUM is judged after the fetch) is skipped, never failed by the guard
+    await run({ TICKERS: 'GBIL', AUM: '1T:' });
+    expect([snapshot(world.api), process.exitCode ?? 0]).toEqual([published, 0]);
     await run({ TICKERS: 'GBIL' });
     expect(snapshot(world.api)).toEqual(published);
     expect(process.exitCode).toBe(1);
