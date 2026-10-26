@@ -3408,12 +3408,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       outputNote(`[ ${'nport'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
-  // Fresh holdings (fund data API or N-PORT, never the previous sheet) that look broken (no weight column, non-numeric
-  // weights, a bad weight sum, half the rows gone) never replace the published ones; a fund with nothing published is not written.
-  const holdingsProblem = holdingsRows.length
-    ? holdingsGuard(holdingsHeaders, holdingsRows, numberOrNull(previousMeta?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[fund.ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [])
-    : null;
-  if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previousMeta ? 'kept the published data' : 'no data published for this fund yet'}`);
+  const holdingsFresh = holdingsRows.length > 0; // fund data API or N-PORT; false when the previous sheet is re-read below
   if (!holdingsRows.length) {
     holdingsRows = await readPreviousSheet(fund.ticker, 'holdings');
     holdingsHeaders = (await readPreviousHeaders(fund.ticker, 'holdings')) || holdingsHeaders;
@@ -3498,6 +3493,12 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   if (skipReasons.length) {
     return { __skipped: true, ticker: fund.ticker, __skipReasons: skipReasons };
   }
+  // Fresh holdings that look broken (no weight column, non-numeric weights, a bad weight sum, half the rows gone) never replace
+  // the published ones; a fund with nothing published is not written. Checked after the filters: a skipped fund never fails.
+  const holdingsProblem = holdingsFresh
+    ? holdingsGuard(holdingsHeaders, holdingsRows, numberOrNull(previousMeta?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[fund.ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [])
+    : null;
+  if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previousMeta ? 'kept the published data' : 'no data published for this fund yet'}`);
 
   // 6. Write sheets, meta.json and the index row --------------------------------
   const historyAsOf = derived.asOfDate || previousMeta?.history?.asOf || null;
