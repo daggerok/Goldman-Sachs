@@ -6,6 +6,7 @@ import { pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
+  CLOSED_FUNDS,
   CONTROL_NAMES,
   DERIVED_RETURNS_BASIS,
   NO_DATA_BASIS,
@@ -14,6 +15,7 @@ import {
   aumToUsd,
   checkNportFiling,
   cleanHoldingTicker,
+  closedFund,
   deriveMetrics,
   fetchText,
   firstDate,
@@ -617,7 +619,9 @@ describe('controls', () => {
     expect(postFetchFilterReasons(fund, { tr10y: null, cagr5y: null }, readConfig({}))).toEqual([]);
     expect(postFetchFilterReasons({ ...fund, ter: null } as typeof fund, {}, readConfig({ TER: ':0.5' }))).toEqual(['TER']);
   });
+});
 
+describe('controls 2', () => {
   test('the scheduled path equals the config defaults and the environment overrides the file', async () => {
     const defaults = configFile();
     expect(resolveControls(defaults, {}, {}, {})).toEqual(defaults);
@@ -760,7 +764,9 @@ describe('parsing', () => {
     expect(html.topHoldings).toMatchObject({ top10Pct: 35.85, rows: [{ name: 'NVIDIA Corp', weight: 8.01 }, { name: 'Apple Inc', weight: 7.45 }] });
     expect(html.officialReturns.monthEnd.nav).toEqual({ asOfDate: '2026-08-31', mo1: 2.47, mo3: 2.14, ytd: 11.11, yr1: 16.62, cagr3y: 19.58, cagr5y: 11.38, cagr10y: 14.48, siAnn: null });
   });
+});
 
+describe('parsing 2', () => {
   test('fund data API (direct path): finder and fund detail answers, identity checks, missing values are null', () => {
     const funds = parseCatalogText(FUND_FINDER_JSON.replace('"funds":[', `"funds":[${JSON.stringify({ ...JSON.parse(FUND_FINDER_JSON).data.fundShareClasses.funds[0], ticker: 'GXXX', fundType: 'MF' })},`));
     expect(funds.map((fund) => fund.ticker)).toEqual(['AAAU', 'GBIL']); // mutual funds are skipped
@@ -885,7 +891,9 @@ describe('parsing', () => {
     expect(selectDistributionFrequency('', 'None', 0, 'Annually')).toBe('Annually');
     expect(selectDistributionFrequency('—', 'Unknown', 1, null)).toBe('—');
   });
+});
 
+describe('parsing 3', () => {
   test('Yahoo chart: null closes are dropped, dividends sorted, no result throws', () => {
     const chart = parseChart({
       chart: { result: [{
@@ -995,6 +1003,10 @@ describe('metrics', () => {
     expect(unknown.returnsBasis).toBeTruthy();
     for (const [input, expected] of [['', null], ['—', null], ['Aug 31 2026', '2026-08-31'], ['2026-8-5', '2026-08-05']] as const) expect(performanceAsOf(input)).toBe(expected);
   });
+});
+
+describe('metrics 2', () => {
+  const day = (date: string, close: number) => ({ date, close, adjClose: close, volume: 0 });
 
   test('every index row has the same metrics key set; official returns and TER net/gross are mapped', async () => {
     const world = mockWorld();
@@ -1175,7 +1187,9 @@ describe('pipeline', () => {
     await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
     expect(lastAdj()).toEqual(['23.9', '24.97', '25.98']);
   }, 30_000);
+});
 
+describe('pipeline 2', () => {
   test('a failed source keeps the fund exactly as published; other funds still update; all failed -> exit 1', async () => {
     let outage = false;
     const world = mockWorld({
@@ -1269,6 +1283,71 @@ describe('pipeline', () => {
     expect(process.exitCode).toBe(1);
   }, 30_000);
 
+  test('a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing', async () => {
+    const entry = { ticker: 'GBIL', closed: '2026-10-01', source: 'https://www.sec.gov/Archives/edgar/data/1/notice.htm' };
+    expect(() => closedFund([{ ...entry, closed: 'soon' }], 'GBIL')).toThrow('CLOSED_FUNDS');
+    expect(closedFund([entry], 'gbil')).toEqual(entry);
+    let answer = detailWithHoldings(ALL_HOLDINGS);
+    const world = mockWorld({ handler: (url) => (url.includes('/services/funds/detail/PV102645/') ? new Response(answer) : undefined) });
+    await run({ TICKERS: THREE });
+    const first = snapshot(world.api);
+    const rows = readJson(world, 'index.json').funds.length;
+    // the guard would reject these holdings: every Weight cell comes back empty
+    answer = detailWithHoldings({ ...ALL_HOLDINGS, holdings: ALL_HOLDINGS.holdings.map(({ portfolio, ...row }) => ({ ...row, portfolioWeight: portfolio })) });
+    CLOSED_FUNDS.push(entry);
+    try {
+      world.hits.length = 0;
+      await run({ TICKERS: 'GBIL' });
+      expect(world.hits.filter((hit) => /GBIL|PV102645/i.test(hit.url))).toEqual([]);
+      expect(process.exitCode ?? 0).not.toBe(1);
+      const closed = snapshot(world.api);
+      for (const path of Object.keys(first)) if (path !== 'index.json') expect([path, closed[path]]).toEqual([path, first[path]]);
+      const index = readJson(world, 'index.json');
+      expect(index.funds).toHaveLength(rows);
+      expect(rowFor(index, 'GBIL')).toMatchObject({ status: 'closed', closedDate: '2026-10-01', closedSource: entry.source, dataFile: './funds/GBIL/meta.json' });
+      expect(index.funds.filter((row: { status?: string }) => row.status === 'closed')).toHaveLength(1);
+      await run({ TICKERS: THREE });
+      expect(snapshot(world.api)).toEqual(closed);
+    } finally {
+      CLOSED_FUNDS.splice(CLOSED_FUNDS.indexOf(entry), 1);
+    }
+  }, 30_000);
+});
+
+describe('pipeline 3', () => {
+  test('a new fund whose first refresh fails (guard rejection, failed source, no source answered) is failed with a catalog-only row', async () => {
+    const broken = detailWithHoldings({ ...ALL_HOLDINGS, holdings: ALL_HOLDINGS.holdings.map(({ portfolio, ...row }) => ({ ...row, portfolioWeight: portfolio })) });
+    let mode = 'guard';
+    const world = mockWorld({
+      handler: (url) => {
+        if (mode === 'guard' && url.includes('/services/funds/detail/PV102645/')) return new Response(broken);
+        if (mode === 'down' && url.includes('yahoo')) return new Response('down', { status: 503 });
+        if (mode === 'none' && url.includes('yahoo')) return new Response('{"chart":{"result":null}}', { status: 404 });
+        return undefined;
+      },
+    });
+    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics);
+    for (const [next, env] of <Array<[string, Record<string, string>]>>[['guard', {}], ['down', {}], ['none', { SKIP_GOLDMANSACHS: 'true' }], ['none', { SKIP_GOLDMANSACHS: 'true', SKIP_YAHOO: 'true' }]]) {
+      mode = next;
+      const log: string[] = [];
+      await run({ TICKERS: 'GBIL', ...env }, { log });
+      expect([next, existsSync(join(world.api, 'funds')), process.exitCode]).toEqual([next, false, 1]);
+      expect(log.find((line) => line.includes('GBIL') && /\bfailed\b/.test(line))).toBeDefined();
+      const row = rowFor(readJson(world, 'index.json'), 'GBIL');
+      expect(row).toMatchObject({ dataFile: null, holdings: 0 });
+      expect(Object.keys(row.metrics)).toEqual(keys);
+      expect(row.metrics.returnsBasis).toBeTruthy();
+      process.exitCode = 0;
+    }
+    // the catalog-only row is not the published state: the next good refresh writes what a first run on an empty feed writes
+    mode = 'ok';
+    await run({ TICKERS: 'GBIL', SKIP_GOLDMANSACHS: 'true' });
+    const after = snapshot(join(world.api, 'funds'));
+    const fresh = mockWorld();
+    await run({ TICKERS: 'GBIL', SKIP_GOLDMANSACHS: 'true' });
+    expect(after).toEqual(snapshot(join(fresh.api, 'funds')));
+  }, 30_000);
+
   test('a Yahoo 404 is an honest empty history, not a failed fund', async () => {
     const world = mockWorld({ handler: (url) => (url.includes('yahoo') ? new Response('{"chart":{"result":null}}', { status: 404 }) : undefined) });
     await run({ TICKERS: 'GBIL' });
@@ -1290,7 +1369,9 @@ describe('pipeline', () => {
     await run({ TICKERS: 'GBIL,GSLC', AUM: '1T:' });
     expect(existsSync(join(world.api, 'funds'))).toBe(false);
   });
+});
 
+describe('pipeline 4', () => {
   test('MAX_FETCHES walks the filtered set with a cursor and wraps; a TICKERS run never touches it', async () => {
     const world = mockWorld();
     const state = () => readJson(world, 'update-state.json').cursor;
