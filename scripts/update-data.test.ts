@@ -451,6 +451,8 @@ const detailWithHoldings = (holdings: unknown) => FUND_DETAIL_JSON.replace('"pre
 // ---------------------------------------------------------------------------
 
 const realFetch = globalThis.fetch;
+// the seven 52-week keys withRange52w puts into every index row in front of returnsBasis and performanceAsOf (range-52w block)
+const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
 const realLog = console.log;
 const initialExitCode = process.exitCode;
 const initialTz = process.env.TZ;
@@ -1046,7 +1048,7 @@ describe('metrics 2', () => {
     await run({ TICKERS: 'GSLC' });
     const index = readJson(world, 'index.json');
     expect(index.funds.length).toBeGreaterThan(40);
-    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'];
+    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', ...RANGE_KEYS, 'returnsBasis', 'performanceAsOf'];
     for (const row of index.funds) {
       expect(Object.keys(row.metrics).slice(0, keys.length)).toEqual(keys);
       expect(row.metrics.returnsBasis.length).toBeGreaterThan(5);
@@ -1091,8 +1093,9 @@ describe('metrics 2', () => {
     const meta = readJson(world, 'funds/GSLC/meta.json');
     const rebuilt = indexRowFromMeta(meta)!.metrics;
     const placeholder = placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics;
-    expect(Object.keys(rebuilt).sort()).toEqual(Object.keys(fresh).sort());
-    expect(Object.keys(placeholder).sort()).toEqual(Object.keys(fresh).sort());
+    // the index row also has the 52-week keys, added from the history pages right before index.json is written
+    expect([...Object.keys(rebuilt), ...RANGE_KEYS].sort()).toEqual(Object.keys(fresh).sort());
+    expect([...Object.keys(placeholder), ...RANGE_KEYS].sort()).toEqual(Object.keys(fresh).sort());
     expect(rebuilt.dividendYieldBasis).toBe('official-trailing-12m');
     expect(placeholder).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
     // a row published before the key existed: the code is taken from its meta.json
@@ -1179,6 +1182,7 @@ describe('pipeline', () => {
     const others = snapshot(join(world.api, 'funds', 'AAAU'));
     await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
     expect(readJson(world, 'index.json').funds.length).toBe(rows);
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     expect(snapshot(join(world.api, 'funds', 'AAAU'))).toEqual(others);
     expect(readdirSync(join(world.api, 'funds')).sort()).toEqual(['AAAU', 'GBIL', 'GSLC']);
   });
@@ -1359,7 +1363,7 @@ describe('pipeline 3', () => {
         return undefined;
       },
     });
-    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics);
+    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics).flatMap((key) => (key === 'returnsBasis' ? [...RANGE_KEYS, key] : [key]));
     for (const [next, env] of <Array<[string, Record<string, string>]>>[['guard', {}], ['down', {}], ['none', { SKIP_GOLDMANSACHS: 'true' }], ['none', { SKIP_GOLDMANSACHS: 'true', SKIP_YAHOO: 'true' }]]) {
       mode = next;
       const log: string[] = [];
