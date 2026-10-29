@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 22 2026",
+    "productPageAsOf": "Oct 28 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVIP",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$160.46",
-    "value": 160.46,
-    "asOfDate": "Oct 22 2026"
+    "display": "$163.68",
+    "value": 163.68,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$160.37",
-    "value": 160.37,
-    "asOfDate": "Oct 22 2026",
+    "display": "$163.56",
+    "value": 163.56,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.06%",
-    "value": -0.06,
-    "asOfDate": "Oct 22 2026",
+    "display": "-0.07%",
+    "value": -0.07,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$541.56 M",
-    "value": 541560000,
-    "asOfDate": "Oct 22 2026",
+    "display": "$552.42 M",
+    "value": 552420000,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 50,
-    "bidAskMidpoint": 160.52,
+    "bidAskMidpoint": 163.89,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 37,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.38%",
       "mo3": -9.91,
       "mo3Text": "-9.91%",
-      "qtd": -6.44,
-      "qtdText": "-6.44%",
+      "qtd": -3.69,
+      "qtdText": "-3.69%",
       "ytd": 9.83,
       "ytdText": "9.83%",
       "yr1": 11.25,
@@ -240,49 +240,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 22 2026",
-    "asOf": "Oct 22 2026",
-    "top10Pct": 25.02,
+    "asOfDate": "Oct 28 2026",
+    "asOf": "Oct 28 2026",
+    "top10Pct": 24.46,
     "rows": [
       {
         "name": "Thermo Fisher Scientific Inc",
-        "weight": 2.62
+        "weight": 2.67
+      },
+      {
+        "name": "Advanced Micro Devices Inc",
+        "weight": 2.51
       },
       {
         "name": "Apple Inc",
-        "weight": 2.59
+        "weight": 2.51
       },
       {
         "name": "Visa Inc",
-        "weight": 2.59
-      },
-      {
-        "name": "Mastercard Inc",
-        "weight": 2.53
+        "weight": 2.45
       },
       {
         "name": "Eli Lilly & Co",
-        "weight": 2.52
-      },
-      {
-        "name": "Meta Platforms Inc",
-        "weight": 2.5
-      },
-      {
-        "name": "Berkshire Hathaway Inc",
-        "weight": 2.47
+        "weight": 2.44
       },
       {
         "name": "S&P Global Inc",
-        "weight": 2.46
+        "weight": 2.39
+      },
+      {
+        "name": "Berkshire Hathaway Inc",
+        "weight": 2.39
+      },
+      {
+        "name": "Mastercard Inc",
+        "weight": 2.39
       },
       {
         "name": "Microsoft Corp",
         "weight": 2.39
       },
       {
-        "name": "Space Exploration Technologies Corp",
-        "weight": 2.35
+        "name": "Meta Platforms Inc",
+        "weight": 2.32
       }
     ]
   },
@@ -292,9 +292,9 @@
     ],
     "pageSize": 250,
     "totalRows": 51,
-    "asOfDate": "2026-10-22",
-    "asOf": "Oct 22 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
+    "asOfDate": "2026-10-28",
+    "asOf": "Oct 28 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 50
   },
@@ -305,8 +305,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2500,
-    "asOf": "Oct 23 2026",
+    "totalRows": 2504,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GINN",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1496,
+  "totalRows": 1500,
   "headers": [
     "Date",
     "Close",
@@ -2985,6 +2985,30 @@
       "Close": "79.99500274658203",
       "Adj Close": "80",
       "Volume": "1700"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "80.0989990234375",
+      "Adj Close": "80.1",
+      "Volume": "300"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "80.76000213623047",
+      "Adj Close": "80.76",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "81.0999984741211",
+      "Adj Close": "81.1",
+      "Volume": "700"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "81.13999938964844",
+      "Adj Close": "81.14",
+      "Volume": "266"
     }
   ]
 }

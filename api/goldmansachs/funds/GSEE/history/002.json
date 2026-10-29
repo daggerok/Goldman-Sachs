@@ -2,7 +2,7 @@
   "ticker": "GSEE",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1617,
+  "totalRows": 1621,
   "headers": [
     "Date",
     "Close",
@@ -3711,6 +3711,30 @@
       "Close": "63.821998596191406",
       "Adj Close": "63.82",
       "Volume": "500"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "63.790000915527344",
+      "Adj Close": "63.79",
+      "Volume": "1200"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "64.40499877929688",
+      "Adj Close": "64.4",
+      "Volume": "1200"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "65.19300079345703",
+      "Adj Close": "65.19",
+      "Volume": "5200"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "65.19300079345703",
+      "Adj Close": "65.19",
+      "Volume": "22"
     }
   ]
 }

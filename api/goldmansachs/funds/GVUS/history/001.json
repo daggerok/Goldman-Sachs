@@ -2,7 +2,7 @@
   "ticker": "GVUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 727,
+  "totalRows": 731,
   "headers": [
     "Date",
     "Close",
@@ -4371,6 +4371,30 @@
       "Close": "66.08999633789062",
       "Adj Close": "66.09",
       "Volume": "1400"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "66.3270034790039",
+      "Adj Close": "66.33",
+      "Volume": "179700"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "66.38099670410156",
+      "Adj Close": "66.38",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "66.3759994506836",
+      "Adj Close": "66.38",
+      "Volume": "3400"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "66.3761978149414",
+      "Adj Close": "66.38",
+      "Volume": "224"
     }
   ]
 }

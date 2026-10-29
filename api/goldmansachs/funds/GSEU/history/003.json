@@ -2,7 +2,7 @@
   "ticker": "GSEU",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2676,
+  "totalRows": 2680,
   "headers": [
     "Date",
     "Close",
@@ -4065,6 +4065,30 @@
       "Close": "47.479000091552734",
       "Adj Close": "47.48",
       "Volume": "4800"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "47.72100067138672",
+      "Adj Close": "47.72",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "47.900001525878906",
+      "Adj Close": "47.9",
+      "Volume": "3500"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "47.972999572753906",
+      "Adj Close": "47.97",
+      "Volume": "6900"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "47.973201751708984",
+      "Adj Close": "47.97",
+      "Volume": "1260"
     }
   ]
 }

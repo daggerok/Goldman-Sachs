@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 22 2026",
+    "productPageAsOf": "Oct 28 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVLE",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.31",
-    "value": 48.31,
-    "asOfDate": "Oct 22 2026"
+    "display": "$48.68",
+    "value": 48.68,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$48.29",
-    "value": 48.29,
-    "asOfDate": "Oct 22 2026",
+    "display": "$48.67",
+    "value": 48.67,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.04,
-    "asOfDate": "Oct 22 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$42.24 M",
-    "value": 42240000,
-    "asOfDate": "Oct 22 2026",
+    "display": "$40.62 M",
+    "value": 40620000,
+    "asOfDate": "Oct 28 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 29,
-    "bidAskMidpoint": 48.31,
+    "bidAskMidpoint": 48.71,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 46,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.60%",
       "mo3": 0.28,
       "mo3Text": "0.28%",
-      "qtd": 1.39,
-      "qtdText": "1.39%",
+      "qtd": 3,
+      "qtdText": "3.00%",
       "ytd": 15.95,
       "ytdText": "15.95%",
       "yr1": 19.05,
@@ -168,49 +168,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 22 2026",
-    "asOf": "Oct 22 2026",
-    "top10Pct": 52.91,
+    "asOfDate": "Oct 28 2026",
+    "asOf": "Oct 28 2026",
+    "top10Pct": 53.05,
     "rows": [
       {
         "name": "Microsoft Corp",
-        "weight": 9.28
+        "weight": 9.39
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 7.79
+        "weight": 7.86
       },
       {
         "name": "Merck & Co Inc",
-        "weight": 5.66
+        "weight": 5.38
       },
       {
         "name": "JPMorgan Chase & Co",
         "weight": 4.76
       },
       {
-        "name": "Berkshire Hathaway Inc",
-        "weight": 4.6
-      },
-      {
-        "name": "Walmart Inc",
+        "name": "ConocoPhillips",
         "weight": 4.54
       },
       {
-        "name": "ConocoPhillips",
-        "weight": 4.46
+        "name": "Berkshire Hathaway Inc",
+        "weight": 4.51
+      },
+      {
+        "name": "Walmart Inc",
+        "weight": 4.41
       },
       {
         "name": "Thermo Fisher Scientific Inc",
-        "weight": 4.2
+        "weight": 4.34
       },
       {
         "name": "Morgan Stanley",
-        "weight": 3.92
+        "weight": 4.02
       },
       {
-        "name": "Procter & Gamble Co",
-        "weight": 3.7
+        "name": "Eaton Corp PLC",
+        "weight": 3.84
       }
     ]
   },
@@ -220,9 +220,9 @@
     ],
     "pageSize": 250,
     "totalRows": 30,
-    "asOfDate": "2026-10-22",
-    "asOf": "Oct 22 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-22)",
+    "asOfDate": "2026-10-28",
+    "asOf": "Oct 28 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 29
   },
@@ -231,8 +231,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 235,
-    "asOf": "Oct 23 2026",
+    "totalRows": 239,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
