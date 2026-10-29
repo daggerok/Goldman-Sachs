@@ -132,7 +132,7 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+  return `[ ${`${String(index).padStart(width)}/${total}`.padEnd(8)} ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -1713,7 +1713,7 @@ export function recordIssuerDirectResult(denied: boolean): boolean {
   }
   return issuerDirectDisabled;
 }
-const ISSUER_PROXY_NOTICE = `[ ${'issuer'.padEnd(9)}] direct requests are denied from this network; using the read-only rendering proxy for the rest of the run`;
+const ISSUER_PROXY_NOTICE = `[ ${'issuer'.padEnd(8)} ] direct requests are denied from this network; using the read-only rendering proxy for the rest of the run`;
 export function resetIssuerDirectState(): void { issuerDirectDenials = 0; issuerDirectDisabled = false; }
 
 /**
@@ -2425,7 +2425,7 @@ export function resetSecState(): void {
 /** SEC's ticker -> registrant CIK + series id table, loaded once per run (a failed load is asked again by the next fund). */
 function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSeriesRef>> {
   if (!secState.funds) {
-    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[edgar   ] fund ticker table', config, secHeaders()).then((payload) => parseSecFundTickers(payload));
+    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[ edgar    ] fund ticker table', config, secHeaders()).then((payload) => parseSecFundTickers(payload));
     secState.funds = loading;
     loading.catch(() => { if (secState.funds === loading) secState.funds = null; });
   }
@@ -2435,7 +2435,7 @@ function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSe
 /** SEC's company name -> ticker table for the N-PORT rows, loaded once per run. */
 function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
   if (!secState.names) {
-    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[edgar   ] company ticker table', config, secHeaders()).then((payload) => parseSecCompanyNames(payload));
+    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[ edgar    ] company ticker table', config, secHeaders()).then((payload) => parseSecCompanyNames(payload));
     secState.names = loading;
     loading.catch(() => { if (secState.names === loading) secState.names = null; });
   }
@@ -3191,7 +3191,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     try {
       // Direct: the fund data API the page reads (identity-checked by ticker); a server-rendered page still
       // validates too. Fallback: the rendered public page through the read-only proxy.
-      const label = `[product ] ${fund.ticker}`;
+      const label = `[ product  ] ${fund.ticker}`;
       const variables = gsDetailVariables(fund.fundPage);
       const page = await fetchIssuerText(fund.fundPage, label, config, (text) => isGsFundDetail(text, fund.ticker) || (!gsApiData(text) && /Net Asset Value|Total Fund Assets|Fund Inception Date/i.test(text)), undefined, { cache: false, direct: variables ? () => fetchGsApi(GS_DETAIL_QUERY, variables, label, config) : undefined });
       productVia = page.via;
@@ -3222,9 +3222,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       throw new Error(`official fund page unavailable (${error instanceof Error ? error.message : String(error)}); kept the published data`);
     }
   }
-  // A partial page keeps what was published as official (one `[ kept ]` notice per fund naming the sections).
+  // A partial page keeps what was published as official (one `[ kept     ]` notice per fund naming the sections).
   const keptSections = summary ? retainPublishedSections(summary, fund, previousMeta) : [];
-  if (keptSections.length) console.log(`[ ${'kept'.padEnd(9)}] ${fund.ticker}: fund page came back partial, kept the published ${keptSections.join(', ')}`);
+  if (keptSections.length) console.log(`[ ${'kept'.padEnd(8)} ] ${fund.ticker}: fund page came back partial, kept the published ${keptSections.join(', ')}`);
   // Only with SKIP_GOLDMANSACHS (no page read at all) the published fee and yield stand in; a page
   // that was read and omits a value is an honest null and is never refilled from the previous run.
   const carry = !summary;
@@ -3255,13 +3255,13 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   if (apiHoldings) {
     const published = toIsoDate(previousMeta?.holdings?.asOfDate ?? '');
     const stale = apiHoldings.asOfDate !== null && /^\d{4}-\d{2}-\d{2}$/.test(published) && apiHoldings.asOfDate < published;
-    if (stale) outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: fund data API list ${apiHoldings.asOfDate} is older than the published holdings ${published}; keeping the published holdings`);
+    if (stale) outputNote(`[ ${'holdings'.padEnd(8)} ] ${fund.ticker}: fund data API list ${apiHoldings.asOfDate} is older than the published holdings ${published}; keeping the published holdings`);
     else if (apiHoldings.rows.some(gsNeedsNameCheck) && !(await loadCompanyNames(config).catch(() => null))) {
       // a foreign line's ticker cannot be checked without SEC's company table: the published sheet stays, never local codes
-      outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: SEC company ticker table unavailable, keeping the published holdings`);
+      outputNote(`[ ${'holdings'.padEnd(8)} ] ${fund.ticker}: SEC company ticker table unavailable, keeping the published holdings`);
     } else {
       const foreignLines = apiHoldings.rows.some(gsNeedsNameCheck);
-      holdingsRows = gsListedTickers(apiHoldings.rows, foreignLines ? await loadCompanyNames(config) : null, foreignLines ? await loadUsListings((url, label) => fetchText(url, `[holdings] ${label}`, config, secHeaders())) : null);
+      holdingsRows = gsListedTickers(apiHoldings.rows, foreignLines ? await loadCompanyNames(config) : null, foreignLines ? await loadUsListings((url, label) => fetchText(url, `[ holdings ] ${label}`, config, secHeaders())) : null);
       holdingsHeaders = apiHoldings.headers;
       holdingsAsOf = apiHoldings.asOfDate;
       holdingsDownload = fund.fundPage;
@@ -3274,11 +3274,11 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       // the fund's own newest filing, read only when strictly newer than the published holdings (shared nport-reader block)
       const ref = (await loadFundTickerTable(config)).get(fund.ticker) || SEC_SERIES_OVERRIDES[fund.ticker] || null;
       const read = ref
-        ? await readNportHoldings({ ticker: fund.ticker, cik: ref.cik, seriesId: ref.seriesId }, { asOf: previousMeta?.holdings?.asOfDate, rows: numberOrNull(previousMeta?.holdings?.totalRows) ?? 0 }, (url, label) => fetchText(url, `[nport   ] ${label}`, config, secHeaders()), { cache: secState.reader })
+        ? await readNportHoldings({ ticker: fund.ticker, cik: ref.cik, seriesId: ref.seriesId }, { asOf: previousMeta?.holdings?.asOfDate, rows: numberOrNull(previousMeta?.holdings?.totalRows) ?? 0 }, (url, label) => fetchText(url, `[ nport    ] ${label}`, config, secHeaders()), { cache: secState.reader })
         : { problem: `${fund.ticker}: not in the SEC fund ticker table` };
-      if ('problem' in read) outputNote(`[ ${'nport'.padEnd(9)}] ${read.problem}`);
+      if ('problem' in read) outputNote(`[ ${'nport'.padEnd(8)} ] ${read.problem}`);
       else {
-        const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[nport   ] ${label}`, config, secHeaders()))));
+        const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[ nport    ] ${label}`, config, secHeaders()))));
         holdingsRows = sheet.rows;
         holdingsHeaders = sheet.headers;
         holdingsAsOf = read.filing.repPdDate || null;
@@ -3288,7 +3288,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
         marketValueBasis = 'SEC Form N-PORT-P reported value (valUSD)';
       }
     } catch (error) {
-      outputNote(`[ ${'nport'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+      outputNote(`[ ${'nport'.padEnd(8)} ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
   const holdingsFresh = holdingsRows.length > 0; // fund data API or N-PORT; false when the previous sheet is re-read below
@@ -3315,7 +3315,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     try {
       // Explicit period1/period2 (HISTORY_RANGE=Ny really shrinks the window; Yahoo ignores `range` next to period1).
       const query = yahooChartQuery(config.historyRange);
-      const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[chart   ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
+      const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[ chart    ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
       const fetched = parseChart(payload);
       // A HISTORY_RANGE window never shrinks the published history (and with it 3y, 5y, 10y and since inception)
       chart = config.historyRange !== 'max' ? mergeWindowedChart(fetched, await readPreviousSheet(fund.ticker, 'history'), Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions.rows : []) : fetched;
@@ -3326,7 +3326,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       // Yahoo answers HTTP 404 / "no result" for a symbol it has no chart for: that is an honest empty
       // history (the published rows stay), not a failed source. Everything else fails the whole fund.
       if (!/\b404\b|no result/i.test(message)) throw new Error(`Yahoo chart unavailable (${message}); kept the published data`);
-      outputNote(`[ ${'chart'.padEnd(9)}] ${fund.ticker}: ${message}`);
+      outputNote(`[ ${'chart'.padEnd(8)} ] ${fund.ticker}: ${message}`);
     }
   }
   const previousHistory = await readPreviousSheet(fund.ticker, 'history');
@@ -3614,7 +3614,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   if (!config.skipGoldmanSachs) {
     try {
       // Direct: the finder's fund data API query (ETF filter); fallback: the rendered finder through the proxy.
-      const finderLabel = '[catalog ] fund finder';
+      const finderLabel = '[ catalog  ] fund finder';
       const fetched = await fetchIssuerText(GS_CATALOG_URL, finderLabel, config, (text) => isGsFinder(text) || (/\/funds\/detail\/PV\d+\//i.test(text) && /Average Annual Returns|Distribution Frequency/i.test(text)), undefined, { cache: false, direct: () => fetchGsApi(GS_FINDER_QUERY, gsFinderVariables(), finderLabel, config) });
       const parsed = parseCatalogText(fetched.text);
       for (const fund of parsed) catalog.set(fund.ticker, fund);
@@ -3626,7 +3626,7 @@ export async function main(env: Record<string, string | undefined> = process.env
         await writeFile(new URL(`fund-finder-${new Date().toISOString().slice(0, 10)}.${fetched.via === 'proxy' ? 'md' : gsApiData(fetched.text) ? 'json' : 'html'}`, raw), fetched.text, 'utf8');
       }
     } catch (error) {
-      console.warn(`[ ${'catalog'.padEnd(9)}] ${(error instanceof Error ? error.message : String(error)).replace(/^\[[^\]]*\] ?/, '')} - keeping the published feed`);
+      console.warn(`[ ${'catalog'.padEnd(8)} ] ${(error instanceof Error ? error.message : String(error)).replace(/^\[[^\]]*\] ?/, '')} - keeping the published feed`);
     }
   }
   // The checked-in universe seed pins the catalog: seed funds the live finder
@@ -3641,7 +3641,7 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   const universe = [...catalog.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
   if (!universe.length) throw new Error('No catalog rows available. Run this where am.gs.com is reachable or seed api/goldmansachs/index.json first.');
-  console.log(`[ ${'catalog'.padEnd(9)}] ${universe.length} Goldman Sachs ETFs (${catalogSource})`);
+  console.log(`[ ${'catalog'.padEnd(8)} ] ${universe.length} Goldman Sachs ETFs (${catalogSource})`);
 
   // Q27: a TICKERS entry outside the live catalog (and the seed) and the published funds stops the run before any fund request
   assertKnownTickers(config.tickers ? Array.from(config.tickers) : null, knownTickers(live, Array.from(previous.values())).concat(seeds.map((seed) => seed.ticker)), 'the Goldman Sachs ETF catalog or published feed');
@@ -3656,7 +3656,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   const cursor = useCursor && typeof state.cursor === 'string' ? state.cursor : '';
   const ordered = rotateAfterCursor(filtered, cursor);
   const candidates = config.maxFetches > 0 ? ordered.slice(0, config.maxFetches) : ordered;
-  if (cursor) console.log(`[ ${'cursor'.padEnd(9)}] resuming after ${cursor}`);
+  if (cursor) console.log(`[ ${'cursor'.padEnd(8)} ] resuming after ${cursor}`);
 
   const queue = candidates.slice();
   const finished = new Set<string>();
@@ -3691,7 +3691,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   };
   // One pacing lane per worker (see paceRequests).
   await Promise.all(Array.from({ length: config.concurrency }, (_, lane) => runOnLane(lane, worker)));
-  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft deadline reached after ${Math.round((Date.now() - startedAt) / 1000)}s: ${queue.length} fund(s) left for the next run`);
+  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(8)} ] soft deadline reached after ${Math.round((Date.now() - startedAt) / 1000)}s: ${queue.length} fund(s) left for the next run`);
 
   // Every known fund keeps its published row (a filtered, bounded, failed or interrupted run never drops one);
   // refreshed rows replace their old ones; catalog funds without data get a placeholder row (dataFile null).
@@ -3734,7 +3734,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   console.log(outputCounts(counts.funds, counts.holdings, counts.history));
   if (env.GITHUB_STEP_SUMMARY) await appendFile(env.GITHUB_STEP_SUMMARY, `### Goldman Sachs data update\n\n- updated: ${results.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`, 'utf8');
   if (finished.size > 0 && failures === finished.size) {
-    console.error(`[ ${'failed'.padEnd(9)}] every selected fund failed`);
+    console.error(`[ ${'failed'.padEnd(8)} ] every selected fund failed`);
     process.exitCode = 1;
   }
 }
