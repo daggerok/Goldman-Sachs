@@ -1470,6 +1470,7 @@ describe('pipeline 4', () => {
 describe('pipeline 5', () => {
   test('a HISTORY_RANGE run after a full run keeps the older history and writes nothing (Q25)', async () => {
     let days = 0;
+    let lone = false;
     const windowed = () => {
       const payload = JSON.parse(chartJson());
       const result = payload.chart.result[0];
@@ -1477,6 +1478,10 @@ describe('pipeline 5', () => {
       result.indicators.quote[0].close = result.indicators.quote[0].close.slice(-days);
       result.indicators.quote[0].volume = result.indicators.quote[0].volume.slice(-days);
       result.indicators.adjclose[0].adjclose = result.indicators.adjclose[0].adjclose.slice(-days);
+      if (lone) {
+        result.timestamp = [Date.UTC(2026, 8, 30) / 1000];
+        for (const list of [result.indicators.quote[0].close, result.indicators.quote[0].volume, result.indicators.adjclose[0].adjclose]) list.splice(0, list.length, list[0]);
+      }
       return new Response(JSON.stringify(payload));
     };
     const world = mockWorld({ handler: (url) => (days && url.includes('query1.finance.yahoo.com') ? windowed() : undefined) });
@@ -1485,6 +1490,14 @@ describe('pipeline 5', () => {
     days = 300;
     await run({ TICKERS: 'GBIL', HISTORY_RANGE: '1y' });
     expect(snapshot(world.api)).toEqual(first);
+    expect(readJson(world, 'funds/GBIL/meta.json').history.totalRows).toBe(400);
+    // a truncated `max` answer (Yahoo served 2 bars for some funds on 2026-10-29) never shrinks the history either:
+    // one that joins the published days keeps them all, one that does not join keeps the fund as published
+    days = 3;
+    await run({ TICKERS: 'GBIL' });
+    expect(snapshot(world.api)).toEqual(first);
+    lone = true;
+    await run({ TICKERS: 'GBIL' });
     expect(readJson(world, 'funds/GBIL/meta.json').history.totalRows).toBe(400);
   }, 30_000);
 

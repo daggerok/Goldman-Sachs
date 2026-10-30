@@ -3317,9 +3317,11 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       const query = yahooChartQuery(config.historyRange);
       const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[ chart    ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
       const fetched = parseChart(payload);
-      // A HISTORY_RANGE window never shrinks the published history (and with it 3y, 5y, 10y and since inception)
-      chart = config.historyRange !== 'max' ? mergeWindowedChart(fetched, await readPreviousSheet(fund.ticker, 'history'), Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions.rows : []) : fetched;
-      if (!chart) throw new Error(`chart window does not join the published history (${config.historyRange})`);
+      // A fresh chart never shrinks the published history (and with it 3y, 5y, 10y and since inception): this covers a
+      // HISTORY_RANGE window and a truncated `max` answer (2026-10-29: Yahoo served 2 bars for some funds). A full `max`
+      // answer starts at inception: nothing older is published, so the chart stays unchanged
+      chart = mergeWindowedChart(fetched, await readPreviousSheet(fund.ticker, 'history'), Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions.rows : []);
+      if (!chart) throw new Error(`chart does not join the published history (${config.historyRange}, ${fetched.days.length} days)`);
       days = chart.days;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
