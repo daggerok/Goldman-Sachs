@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 28 2026",
+    "productPageAsOf": "Oct 29 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$96.55",
-    "value": 96.55,
-    "asOfDate": "Oct 28 2026"
+    "display": "$97.51",
+    "value": 97.51,
+    "asOfDate": "Oct 29 2026"
   },
   "marketPrice": {
-    "display": "$96.61",
-    "value": 96.61,
-    "asOfDate": "Oct 28 2026",
+    "display": "$97.56",
+    "value": 97.56,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Oct 28 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.17 B",
-    "value": 2167520000,
-    "asOfDate": "Oct 28 2026",
+    "display": "$2.19 B",
+    "value": 2189130000,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 497,
-    "bidAskMidpoint": 96.6,
+    "bidAskMidpoint": 97.51,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.95%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 3.86,
-      "qtdText": "3.86%",
+      "qtd": 3.07,
+      "qtdText": "3.07%",
       "ytd": 10.52,
       "ytdText": "10.52%",
       "yr1": 11.2,
@@ -308,8 +308,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 28 2026",
-    "asOf": "Oct 28 2026",
+    "asOfDate": "Oct 29 2026",
+    "asOf": "Oct 29 2026",
     "top10Pct": 2.4,
     "rows": [
       {
@@ -322,6 +322,10 @@
       },
       {
         "name": "Equifax Inc",
+        "weight": 0.25
+      },
+      {
+        "name": "Roper Technologies Inc",
         "weight": 0.24
       },
       {
@@ -329,27 +333,23 @@
         "weight": 0.24
       },
       {
-        "name": "Dow Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "Roper Technologies Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "Zscaler Inc",
-        "weight": 0.24
-      },
-      {
         "name": "CDW Corp",
         "weight": 0.24
       },
       {
-        "name": "GE HealthCare Technologies Inc",
+        "name": "Dow Inc",
+        "weight": 0.24
+      },
+      {
+        "name": "L3Harris Technologies Inc",
         "weight": 0.23
       },
       {
-        "name": "ROBLOX Corp",
+        "name": "Aon PLC",
+        "weight": 0.23
+      },
+      {
+        "name": "GE HealthCare Technologies Inc",
         "weight": 0.23
       }
     ]
@@ -361,9 +361,9 @@
     ],
     "pageSize": 250,
     "totalRows": 498,
-    "asOfDate": "2026-10-28",
-    "asOf": "Oct 28 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "asOfDate": "2026-10-29",
+    "asOf": "Oct 29 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 497
   },
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2293,
-    "asOf": "Oct 29 2026",
+    "totalRows": 2294,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

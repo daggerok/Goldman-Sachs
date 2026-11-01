@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 28 2026",
+    "productPageAsOf": "Oct 29 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEE",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$64.97",
-    "value": 64.97,
-    "asOfDate": "Oct 28 2026"
+    "display": "$64.35",
+    "value": 64.35,
+    "asOfDate": "Oct 29 2026"
   },
   "marketPrice": {
-    "display": "$65.19",
-    "value": 65.19,
-    "asOfDate": "Oct 28 2026",
+    "display": "$64.34",
+    "value": 64.34,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.34%",
-    "value": 0.34,
-    "asOfDate": "Oct 28 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$129.93 M",
-    "value": 129930000,
-    "asOfDate": "Oct 28 2026",
+    "display": "$128.70 M",
+    "value": 128699999.99999999,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 1804,
-    "bidAskMidpoint": 65.23,
+    "bidAskMidpoint": 64.38,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 34,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.69%",
       "mo3": -0.81,
       "mo3Text": "-0.81%",
-      "qtd": -5.27,
-      "qtdText": "-5.27%",
+      "qtd": -8.86,
+      "qtdText": "-8.86%",
       "ytd": 22.01,
       "ytdText": "22.01%",
       "yr1": 27.24,
@@ -220,49 +220,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 28 2026",
-    "asOf": "Oct 28 2026",
-    "top10Pct": 35.48,
+    "asOfDate": "Oct 29 2026",
+    "asOf": "Oct 29 2026",
+    "top10Pct": 35.31,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 14.47
+        "weight": 14.48
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 6.79
+        "weight": 6.58
       },
       {
         "name": "SK hynix Inc",
-        "weight": 5.04
+        "weight": 5.23
       },
       {
         "name": "Tencent Holdings Ltd",
-        "weight": 2.47
+        "weight": 2.43
       },
       {
         "name": "Alibaba Group Holding Ltd",
-        "weight": 1.85
+        "weight": 1.82
       },
       {
         "name": "MediaTek Inc",
-        "weight": 1.51
+        "weight": 1.45
       },
       {
         "name": "China Construction Bank Corp",
-        "weight": 0.96
+        "weight": 0.99
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 0.91
+        "weight": 0.89
       },
       {
         "name": "Hon Hai Precision Industry Co Ltd",
-        "weight": 0.76
+        "weight": 0.75
       },
       {
         "name": "Delta Electronics Inc",
-        "weight": 0.72
+        "weight": 0.69
       }
     ]
   },
@@ -279,9 +279,9 @@
     ],
     "pageSize": 250,
     "totalRows": 1828,
-    "asOfDate": "2026-10-28",
-    "asOf": "Oct 28 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "asOfDate": "2026-10-29",
+    "asOf": "Oct 29 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 1804
   },
@@ -291,8 +291,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1621,
-    "asOf": "Oct 29 2026",
+    "totalRows": 1622,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GINC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 58,
+  "totalRows": 59,
   "headers": [
     "Date",
     "Close",
@@ -354,9 +354,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "48.880001068115234",
-      "Adj Close": "48.88",
-      "Volume": "2112"
+      "Close": "48.93000030517578",
+      "Adj Close": "48.93",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "48.90999984741211",
+      "Adj Close": "48.91",
+      "Volume": "19100"
     }
   ]
 }

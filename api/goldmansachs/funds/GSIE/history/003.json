@@ -2,7 +2,7 @@
   "ticker": "GSIE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2758,
+  "totalRows": 2759,
   "headers": [
     "Date",
     "Close",
@@ -4554,9 +4554,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "46.5",
-      "Adj Close": "46.5",
-      "Volume": "318588"
+      "Close": "46.529998779296875",
+      "Adj Close": "46.53",
+      "Volume": "335500"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "46.150001525878906",
+      "Adj Close": "46.15",
+      "Volume": "428800"
     }
   ]
 }

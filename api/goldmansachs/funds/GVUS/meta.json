@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 28 2026",
+    "productPageAsOf": "Oct 29 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVUS",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$66.37",
-    "value": 66.37,
-    "asOfDate": "Oct 28 2026"
+    "display": "$66.94",
+    "value": 66.94,
+    "asOfDate": "Oct 29 2026"
   },
   "marketPrice": {
-    "display": "$66.38",
-    "value": 66.38,
-    "asOfDate": "Oct 28 2026",
+    "display": "$66.92",
+    "value": 66.92,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Oct 28 2026",
+    "display": "-0.03%",
+    "value": -0.03,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$449.68 M",
-    "value": 449680000,
-    "asOfDate": "Oct 28 2026",
+    "display": "$455.18 M",
+    "value": 455180000,
+    "asOfDate": "Oct 29 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 860,
-    "bidAskMidpoint": 66.4,
+    "bidAskMidpoint": 66.94,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 40,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.13%",
       "mo3": 2.57,
       "mo3Text": "2.57%",
-      "qtd": 4.26,
-      "qtdText": "4.26%",
+      "qtd": 4.24,
+      "qtdText": "4.24%",
       "ytd": 19.17,
       "ytdText": "19.17%",
       "yr1": 23.64,
@@ -212,29 +212,29 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 28 2026",
-    "asOf": "Oct 28 2026",
-    "top10Pct": 29.5,
+    "asOfDate": "Oct 29 2026",
+    "asOf": "Oct 29 2026",
+    "top10Pct": 29.18,
     "rows": [
       {
         "name": "Apple Inc",
-        "weight": 5.99
+        "weight": 6.03
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 5.96
+        "weight": 5.65
       },
       {
         "name": "Microsoft Corp",
-        "weight": 5.19
+        "weight": 5.14
       },
       {
         "name": "Berkshire Hathaway Inc",
-        "weight": 2.65
+        "weight": 2.63
       },
       {
         "name": "JPMorgan Chase & Co",
-        "weight": 2.39
+        "weight": 2.4
       },
       {
         "name": "ExxonMobil Holdings Corp",
@@ -242,19 +242,19 @@
       },
       {
         "name": "Johnson & Johnson",
-        "weight": 1.72
+        "weight": 1.73
       },
       {
         "name": "Walmart Inc",
-        "weight": 1.25
+        "weight": 1.27
       },
       {
         "name": "AbbVie Inc",
-        "weight": 1.23
+        "weight": 1.24
       },
       {
-        "name": "Intel Corp",
-        "weight": 1.15
+        "name": "Chevron Corp",
+        "weight": 1.12
       }
     ]
   },
@@ -267,9 +267,9 @@
     ],
     "pageSize": 250,
     "totalRows": 861,
-    "asOfDate": "2026-10-28",
-    "asOf": "Oct 28 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-28)",
+    "asOfDate": "2026-10-29",
+    "asOf": "Oct 29 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 860
   },
@@ -278,8 +278,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 731,
-    "asOf": "Oct 29 2026",
+    "totalRows": 732,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

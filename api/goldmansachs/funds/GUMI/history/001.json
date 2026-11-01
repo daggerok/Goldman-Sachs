@@ -2,7 +2,7 @@
   "ticker": "GUMI",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 569,
+  "totalRows": 570,
   "headers": [
     "Date",
     "Close",
@@ -3420,9 +3420,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "50.41999816894531",
-      "Adj Close": "50.42",
-      "Volume": "23560"
+      "Close": "50.43000030517578",
+      "Adj Close": "50.43",
+      "Volume": "30100"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "50.439998626708984",
+      "Adj Close": "50.44",
+      "Volume": "33300"
     }
   ]
 }

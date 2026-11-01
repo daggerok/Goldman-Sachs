@@ -2,7 +2,7 @@
   "ticker": "GVUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 731,
+  "totalRows": 732,
   "headers": [
     "Date",
     "Close",
@@ -4392,9 +4392,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "66.3761978149414",
-      "Adj Close": "66.38",
-      "Volume": "224"
+      "Close": "66.91899871826172",
+      "Adj Close": "66.92",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "66.37300109863281",
+      "Adj Close": "66.37",
+      "Volume": "9100"
     }
   ]
 }
