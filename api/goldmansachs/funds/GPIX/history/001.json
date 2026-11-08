@@ -2,7 +2,7 @@
   "ticker": "GPIX",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 755,
+  "totalRows": 760,
   "headers": [
     "Date",
     "Close",
@@ -4539,6 +4539,36 @@
       "Close": "55.13999938964844",
       "Adj Close": "55.14",
       "Volume": "1778500"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "54.470001220703125",
+      "Adj Close": "54.47",
+      "Volume": "1360900"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "54.68000030517578",
+      "Adj Close": "54.68",
+      "Volume": "1376900"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "55.4900016784668",
+      "Adj Close": "55.49",
+      "Volume": "1021100"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "53.20000076293945",
+      "Adj Close": "53.2",
+      "Volume": "2395300"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "53.36000061035156",
+      "Adj Close": "53.36",
+      "Volume": "1627700"
     }
   ]
 }

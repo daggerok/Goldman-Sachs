@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103686/38149W820/goldman-sachs-innovate-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GINN",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$81.12",
-    "value": 81.12,
-    "asOfDate": "Oct 29 2026"
+    "display": "$78.65",
+    "value": 78.65,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$81.02",
-    "value": 81.02,
-    "asOfDate": "Oct 29 2026",
+    "display": "$78.24",
+    "value": 78.24,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.12,
-    "asOfDate": "Oct 29 2026",
+    "display": "-0.52%",
+    "value": -0.52,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$178.47 M",
-    "value": 178470000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$173.03 M",
+    "value": 173030000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 473,
-    "bidAskMidpoint": 81.06,
+    "bidAskMidpoint": 78.18,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 1,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.62%",
       "mo3": 3.1,
       "mo3Text": "3.10%",
-      "qtd": -1.73,
-      "qtdText": "-1.73%",
+      "qtd": -2.92,
+      "qtdText": "-2.92%",
       "ytd": 10.87,
       "ytdText": "10.87%",
       "yr1": 11.04,
@@ -212,25 +212,25 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 16.2,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 16.28,
     "rows": [
       {
         "name": "Apple Inc",
-        "weight": 2.27
+        "weight": 2.31
       },
       {
         "name": "Microsoft Corp",
-        "weight": 2.16
-      },
-      {
-        "name": "NVIDIA Corp",
-        "weight": 1.95
+        "weight": 2.25
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 1.81
+        "weight": 1.99
+      },
+      {
+        "name": "NVIDIA Corp",
+        "weight": 1.71
       },
       {
         "name": "Meta Platforms Inc",
@@ -238,23 +238,23 @@
       },
       {
         "name": "Alphabet Inc",
-        "weight": 1.63
+        "weight": 1.68
       },
       {
         "name": "Tesla Inc",
-        "weight": 1.36
+        "weight": 1.19
       },
       {
-        "name": "Intel Corp",
-        "weight": 1.18
+        "name": "Tencent Holdings Ltd",
+        "weight": 1.16
       },
       {
         "name": "Eli Lilly & Co",
-        "weight": 1.12
+        "weight": 1.15
       },
       {
         "name": "Moderna Inc",
-        "weight": 1.02
+        "weight": 1.14
       }
     ]
   },
@@ -265,9 +265,9 @@
     ],
     "pageSize": 250,
     "totalRows": 481,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 473
   },
@@ -277,8 +277,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1501,
-    "asOf": "Oct 30 2026",
+    "totalRows": 1506,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

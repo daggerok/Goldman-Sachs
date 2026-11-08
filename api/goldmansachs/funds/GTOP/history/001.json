@@ -2,7 +2,7 @@
   "ticker": "GTOP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 226,
+  "totalRows": 231,
   "headers": [
     "Date",
     "Close",
@@ -1365,6 +1365,36 @@
       "Close": "46.821998596191406",
       "Adj Close": "46.82",
       "Volume": "6000"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "45.91999816894531",
+      "Adj Close": "45.92",
+      "Volume": "17200"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "46.439998626708984",
+      "Adj Close": "46.44",
+      "Volume": "5100"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "46.654998779296875",
+      "Adj Close": "46.65",
+      "Volume": "29400"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "43.61000061035156",
+      "Adj Close": "43.61",
+      "Volume": "73100"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "44.165000915527344",
+      "Adj Close": "44.17",
+      "Volume": "7400"
     }
   ]
 }

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102393/381430404/goldman-sachs-active-beta-japan-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSJY",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$54.26",
-    "value": 54.26,
-    "asOfDate": "Oct 29 2026"
+    "display": "$52.87",
+    "value": 52.87,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$54.40",
-    "value": 54.4,
-    "asOfDate": "Oct 29 2026",
+    "display": "$50.61",
+    "value": 50.61,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.26%",
-    "value": 0.26,
-    "asOfDate": "Oct 29 2026",
+    "display": "-4.28%",
+    "value": -4.28,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$97.67 M",
-    "value": 97670000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$95.17 M",
+    "value": 95170000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 160,
-    "bidAskMidpoint": 54.42,
+    "bidAskMidpoint": 50.62,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 43,
@@ -86,8 +86,8 @@
       "mo1Text": "1.62%",
       "mo3": 7.48,
       "mo3Text": "7.48%",
-      "qtd": -4.16,
-      "qtdText": "-4.16%",
+      "qtd": -9.3,
+      "qtdText": "-9.30%",
       "ytd": 21.3,
       "ytdText": "21.30%",
       "yr1": 25.77,
@@ -272,49 +272,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 28.46,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 28.36,
     "rows": [
       {
         "name": "Mitsubishi UFJ Financial Group Inc",
-        "weight": 4.27
-      },
-      {
-        "name": "Advantest Corp",
-        "weight": 4.01
+        "weight": 4.37
       },
       {
         "name": "Toyota Motor Corp",
-        "weight": 2.93
+        "weight": 3.45
+      },
+      {
+        "name": "Advantest Corp",
+        "weight": 3.27
       },
       {
         "name": "Recruit Holdings Co Ltd",
-        "weight": 2.91
-      },
-      {
-        "name": "Tokyo Electron Ltd",
-        "weight": 2.78
-      },
-      {
-        "name": "Hitachi Ltd",
-        "weight": 2.62
-      },
-      {
-        "name": "Sumitomo Mitsui Financial Group Inc",
-        "weight": 2.55
+        "weight": 2.85
       },
       {
         "name": "Sony Group Corp",
-        "weight": 2.46
+        "weight": 2.7
+      },
+      {
+        "name": "Sumitomo Mitsui Financial Group Inc",
+        "weight": 2.57
+      },
+      {
+        "name": "Hitachi Ltd",
+        "weight": 2.53
+      },
+      {
+        "name": "Tokyo Electron Ltd",
+        "weight": 2.49
       },
       {
         "name": "Mizuho Financial Group Inc",
-        "weight": 2.14
+        "weight": 2.16
       },
       {
         "name": "Mitsubishi Corp",
-        "weight": 1.79
+        "weight": 1.97
       }
     ]
   },
@@ -324,9 +324,9 @@
     ],
     "pageSize": 250,
     "totalRows": 162,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 160
   },
@@ -337,8 +337,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2681,
-    "asOf": "Oct 30 2026",
+    "totalRows": 2686,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

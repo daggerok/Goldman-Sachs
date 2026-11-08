@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$97.51",
-    "value": 97.51,
-    "asOfDate": "Oct 29 2026"
+    "display": "$94.87",
+    "value": 94.87,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$97.56",
-    "value": 97.56,
-    "asOfDate": "Oct 29 2026",
+    "display": "$94.92",
+    "value": 94.92,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
     "display": "0.05%",
     "value": 0.05,
-    "asOfDate": "Oct 29 2026",
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.19 B",
-    "value": 2189130000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$2.18 B",
+    "value": 2177290000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 497,
-    "bidAskMidpoint": 97.51,
+    "publishedTotalHoldings": 495,
+    "bidAskMidpoint": 94.9,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.95%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 3.07,
-      "qtdText": "3.07%",
+      "qtd": 1.25,
+      "qtdText": "1.25%",
       "ytd": 10.52,
       "ytdText": "10.52%",
       "yr1": 11.2,
@@ -308,49 +308,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 2.4,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 2.42,
     "rows": [
       {
-        "name": "Crown Castle Inc",
-        "weight": 0.25
+        "name": "Kimberly-Clark Corp",
+        "weight": 0.38
       },
       {
-        "name": "Lockheed Martin Corp",
-        "weight": 0.25
+        "name": "AppLovin Corp",
+        "weight": 0.27
       },
       {
-        "name": "Equifax Inc",
-        "weight": 0.25
-      },
-      {
-        "name": "Roper Technologies Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "Accenture PLC",
-        "weight": 0.24
-      },
-      {
-        "name": "CDW Corp",
-        "weight": 0.24
-      },
-      {
-        "name": "Dow Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "L3Harris Technologies Inc",
+        "name": "Liberty Media Corp",
         "weight": 0.23
       },
       {
-        "name": "Aon PLC",
-        "weight": 0.23
+        "name": "Tapestry Inc",
+        "weight": 0.22
       },
       {
-        "name": "GE HealthCare Technologies Inc",
-        "weight": 0.23
+        "name": "Corpay Inc",
+        "weight": 0.22
+      },
+      {
+        "name": "Royal Gold Inc",
+        "weight": 0.22
+      },
+      {
+        "name": "CF Industries Holdings Inc",
+        "weight": 0.22
+      },
+      {
+        "name": "Motorola Solutions Inc",
+        "weight": 0.22
+      },
+      {
+        "name": "Verisk Analytics Inc",
+        "weight": 0.22
+      },
+      {
+        "name": "Charter Communications Inc",
+        "weight": 0.22
       }
     ]
   },
@@ -360,12 +360,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 498,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "totalRows": 496,
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 497
+    "publishedTotalHoldings": 495
   },
   "history": {
     "pages": [
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2294,
-    "asOf": "Oct 30 2026",
+    "totalRows": 2299,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

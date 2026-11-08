@@ -2,7 +2,7 @@
   "ticker": "GPIQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 755,
+  "totalRows": 760,
   "headers": [
     "Date",
     "Close",
@@ -4539,6 +4539,36 @@
       "Close": "54.290000915527344",
       "Adj Close": "54.29",
       "Volume": "4763900"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "53.11000061035156",
+      "Adj Close": "53.11",
+      "Volume": "2593400"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "53.459999084472656",
+      "Adj Close": "53.46",
+      "Volume": "1520600"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "53.939998626708984",
+      "Adj Close": "53.94",
+      "Volume": "1884400"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "50.58000183105469",
+      "Adj Close": "50.58",
+      "Volume": "6403500"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "51.2599983215332",
+      "Adj Close": "51.26",
+      "Volume": "2842600"
     }
   ]
 }

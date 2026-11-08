@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSC",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$64.41",
-    "value": 64.41,
-    "asOfDate": "Oct 29 2026"
+    "display": "$60.40",
+    "value": 60.4,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$63.23",
-    "value": 63.23,
-    "asOfDate": "Oct 29 2026",
+    "display": "$60.45",
+    "value": 60.45,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.09,
-    "asOfDate": "Oct 29 2026",
+    "display": "0.08%",
+    "value": 0.08,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$302.72 M",
-    "value": 302720000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$295.98 M",
+    "value": 295980000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 99,
-    "bidAskMidpoint": 63.2,
+    "publishedTotalHoldings": 98,
+    "bidAskMidpoint": 60.41,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-4.65%",
       "mo3": -10.68,
       "mo3Text": "-10.68%",
-      "qtd": 1.46,
-      "qtdText": "1.46%",
+      "qtd": -1.41,
+      "qtdText": "-1.41%",
       "ytd": 13.88,
       "ytdText": "13.88%",
       "yr1": 16.3,
@@ -216,49 +216,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 16.51,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 17.05,
     "rows": [
       {
-        "name": "Glaukos Corp",
-        "weight": 2.42
-      },
-      {
         "name": "Life Time Group Holdings Inc",
-        "weight": 1.8
+        "weight": 2.04
       },
       {
         "name": "Manhattan Associates Inc",
-        "weight": 1.61
-      },
-      {
-        "name": "Piper Sandler Cos",
-        "weight": 1.56
-      },
-      {
-        "name": "Terreno Realty Corp",
-        "weight": 1.55
-      },
-      {
-        "name": "Valley National Bancorp",
-        "weight": 1.54
-      },
-      {
-        "name": "Terex Corp",
-        "weight": 1.53
+        "weight": 1.84
       },
       {
         "name": "Skyward Specialty Insurance Group Inc",
-        "weight": 1.53
+        "weight": 1.8
       },
       {
-        "name": "Charles River Laboratories International Inc",
-        "weight": 1.49
+        "name": "Terreno Realty Corp",
+        "weight": 1.7
       },
       {
-        "name": "JFrog Ltd",
-        "weight": 1.48
+        "name": "Glaukos Corp",
+        "weight": 1.67
+      },
+      {
+        "name": "Piper Sandler Cos",
+        "weight": 1.64
+      },
+      {
+        "name": "Valley National Bancorp",
+        "weight": 1.63
+      },
+      {
+        "name": "Terex Corp",
+        "weight": 1.59
+      },
+      {
+        "name": "Glacier Bancorp Inc",
+        "weight": 1.58
+      },
+      {
+        "name": "NMI Holdings Inc",
+        "weight": 1.56
       }
     ]
   },
@@ -267,20 +267,20 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 101,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "totalRows": 100,
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 99
+    "publishedTotalHoldings": 98
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 770,
-    "asOf": "Oct 30 2026",
+    "totalRows": 775,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GBND",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 340,
+  "totalRows": 345,
   "headers": [
     "Date",
     "Close",
@@ -2049,6 +2049,36 @@
       "Close": "48.9900016784668",
       "Adj Close": "48.99",
       "Volume": "76400"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "48.869998931884766",
+      "Adj Close": "48.87",
+      "Volume": "54000"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "48.8120002746582",
+      "Adj Close": "48.81",
+      "Volume": "386600"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "49.029998779296875",
+      "Adj Close": "49.03",
+      "Volume": "87700"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "49.130001068115234",
+      "Adj Close": "49.13",
+      "Volume": "212000"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "49.11000061035156",
+      "Adj Close": "49.11",
+      "Volume": "137400"
     }
   ]
 }

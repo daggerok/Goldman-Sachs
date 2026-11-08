@@ -2,7 +2,7 @@
   "ticker": "GTIP",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2019,
+  "totalRows": 2024,
   "headers": [
     "Date",
     "Close",
@@ -123,6 +123,36 @@
       "Close": "47.4900016784668",
       "Adj Close": "47.49",
       "Volume": "22200"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "47.119998931884766",
+      "Adj Close": "47.12",
+      "Volume": "58700"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "47.029998779296875",
+      "Adj Close": "47.03",
+      "Volume": "18900"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "47.02000045776367",
+      "Adj Close": "47.02",
+      "Volume": "17900"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "47.119998931884766",
+      "Adj Close": "47.12",
+      "Volume": "15900"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "47.130001068115234",
+      "Adj Close": "47.13",
+      "Volume": "38900"
     }
   ]
 }

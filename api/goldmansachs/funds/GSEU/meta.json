@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102392/381430305/goldman-sachs-active-beta-europe-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102392/381430305/goldman-sachs-active-beta-europe-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102392/381430305/goldman-sachs-active-beta-europe-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEU",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.17",
-    "value": 48.17,
-    "asOfDate": "Oct 29 2026"
+    "display": "$49.03",
+    "value": 49.03,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$48.43",
-    "value": 48.43,
-    "asOfDate": "Oct 29 2026",
+    "display": "$48.74",
+    "value": 48.74,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.54%",
-    "value": 0.54,
-    "asOfDate": "Oct 29 2026",
+    "display": "-0.59%",
+    "value": -0.59,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$171.01 M",
-    "value": 171010000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$174.07 M",
+    "value": 174070000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 337,
-    "bidAskMidpoint": 48.41,
+    "publishedTotalHoldings": 339,
+    "bidAskMidpoint": 48.71,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 54,
@@ -86,8 +86,8 @@
       "mo1Text": "-4.38%",
       "mo3": -1.12,
       "mo3Text": "-1.12%",
-      "qtd": 2.67,
-      "qtdText": "2.67%",
+      "qtd": 2.69,
+      "qtdText": "2.69%",
       "ytd": 6.35,
       "ytdText": "6.35%",
       "yr1": 12.88,
@@ -300,49 +300,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 18.69,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 17.97,
     "rows": [
       {
         "name": "ASML Holding NV",
-        "weight": 4.33
+        "weight": 3.56
       },
       {
         "name": "Roche Holding AG",
-        "weight": 2.25
+        "weight": 2.19
       },
       {
         "name": "Novartis AG",
-        "weight": 1.98
+        "weight": 2.01
       },
       {
         "name": "HSBC Holdings PLC",
         "weight": 1.82
       },
       {
-        "name": "Shell PLC",
-        "weight": 1.77
+        "name": "AstraZeneca PLC",
+        "weight": 1.74
       },
       {
-        "name": "AstraZeneca PLC",
-        "weight": 1.63
+        "name": "Shell PLC",
+        "weight": 1.64
       },
       {
         "name": "SAP SE",
-        "weight": 1.26
-      },
-      {
-        "name": "Siemens AG",
-        "weight": 1.22
-      },
-      {
-        "name": "Banco Santander SA",
-        "weight": 1.22
+        "weight": 1.29
       },
       {
         "name": "Nestle SA",
-        "weight": 1.21
+        "weight": 1.28
+      },
+      {
+        "name": "Banco Santander SA",
+        "weight": 1.24
+      },
+      {
+        "name": "Siemens AG",
+        "weight": 1.2
       }
     ]
   },
@@ -352,12 +352,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 344,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "totalRows": 346,
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 337
+    "publishedTotalHoldings": 339
   },
   "history": {
     "pages": [
@@ -366,8 +366,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2681,
-    "asOf": "Oct 30 2026",
+    "totalRows": 2686,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

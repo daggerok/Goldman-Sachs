@@ -1,0 +1,129 @@
+{
+  "ticker": "GXUS",
+  "page": 12,
+  "pageSize": 250,
+  "totalRows": 2760,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "SWISS FRANC",
+      "Ticker": "-",
+      "Identifier": "CSH_CHF",
+      "Weight": "-0.02",
+      "Market Value": "-94744.28",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_CHF",
+      "SEDOL": "CSH_CHF"
+    },
+    {
+      "Name": "SWEDISH KRONE",
+      "Ticker": "-",
+      "Identifier": "CSH_SEK",
+      "Weight": "0.01",
+      "Market Value": "42943.29",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_SEK",
+      "SEDOL": "CSH_SEK"
+    },
+    {
+      "Name": "HUNGARIAN FORINT",
+      "Ticker": "-",
+      "Identifier": "CSH_HUF",
+      "Weight": "0",
+      "Market Value": "11298.83",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_HUF",
+      "SEDOL": "CSH_HUF"
+    },
+    {
+      "Name": "CNY",
+      "Ticker": "-",
+      "Identifier": "CSH_CNY",
+      "Weight": "-0.03",
+      "Market Value": "-173270.59",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_CNY",
+      "SEDOL": "CSH_CNY"
+    },
+    {
+      "Name": "SOUTH AFRICA RAND",
+      "Ticker": "-",
+      "Identifier": "CSH_ZAR",
+      "Weight": "0.03",
+      "Market Value": "160979.88",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_ZAR",
+      "SEDOL": "CSH_ZAR"
+    },
+    {
+      "Name": "SINGAPORE DOLLAR",
+      "Ticker": "-",
+      "Identifier": "CSH_SGD",
+      "Weight": "0.03",
+      "Market Value": "182922.63",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_SGD",
+      "SEDOL": "CSH_SGD"
+    },
+    {
+      "Name": "HONG KONG DOLLAR",
+      "Ticker": "-",
+      "Identifier": "CSH_HKD",
+      "Weight": "-0.09",
+      "Market Value": "-577983.92",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_HKD",
+      "SEDOL": "CSH_HKD"
+    },
+    {
+      "Name": "CHINESE RENMINBI OFFSHORE",
+      "Ticker": "-",
+      "Identifier": "CSH_CNY",
+      "Weight": "-0.03",
+      "Market Value": "-173270.59",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_CNY",
+      "SEDOL": "CSH_CNY"
+    },
+    {
+      "Name": "BRAZILIAN REAL",
+      "Ticker": "-",
+      "Identifier": "CSH_BRL",
+      "Weight": "0.01",
+      "Market Value": "89682.51",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_BRL",
+      "SEDOL": "CSH_BRL"
+    },
+    {
+      "Name": "AUSTRALIAN DOLLAR",
+      "Ticker": "-",
+      "Identifier": "CSH_AUD",
+      "Weight": "-0.08",
+      "Market Value": "-482597.12",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_AUD",
+      "SEDOL": "CSH_AUD"
+    }
+  ]
+}

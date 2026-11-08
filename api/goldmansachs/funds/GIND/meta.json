@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Oct 29 2026",
+    "productPageAsOf": "Nov 05 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIND",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$23.45",
-    "value": 23.45,
-    "asOfDate": "Oct 29 2026"
+    "display": "$24.91",
+    "value": 24.91,
+    "asOfDate": "Nov 05 2026"
   },
   "marketPrice": {
-    "display": "$23.53",
-    "value": 23.53,
-    "asOfDate": "Oct 29 2026",
+    "display": "$24.68",
+    "value": 24.68,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.32%",
-    "value": 0.32,
-    "asOfDate": "Oct 29 2026",
+    "display": "-0.92%",
+    "value": -0.92,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$157.11 M",
-    "value": 157110000,
-    "asOfDate": "Oct 29 2026",
+    "display": "$166.91 M",
+    "value": 166910000,
+    "asOfDate": "Nov 05 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 127,
-    "bidAskMidpoint": 23.53,
+    "publishedTotalHoldings": 128,
+    "bidAskMidpoint": 24.68,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 14,
@@ -86,8 +86,8 @@
       "mo1Text": "-6.23%",
       "mo3": -1.81,
       "mo3Text": "-1.81%",
-      "qtd": 1.12,
-      "qtdText": "1.12%",
+      "qtd": 7.04,
+      "qtdText": "7.04%",
       "ytd": -9.13,
       "ytdText": "-9.13%",
       "yr1": -7.51,
@@ -168,37 +168,37 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Oct 29 2026",
-    "asOf": "Oct 29 2026",
-    "top10Pct": 27.46,
+    "asOfDate": "Nov 05 2026",
+    "asOf": "Nov 05 2026",
+    "top10Pct": 27.97,
     "rows": [
       {
         "name": "ICICI Bank Ltd",
-        "weight": 5.82
+        "weight": 5.95
       },
       {
         "name": "HDFC Bank Ltd",
-        "weight": 3.29
+        "weight": 3.46
       },
       {
         "name": "Reliance Industries Ltd",
-        "weight": 2.81
+        "weight": 2.99
       },
       {
         "name": "Axis Bank Ltd",
-        "weight": 2.63
+        "weight": 2.6
       },
       {
         "name": "Mahindra & Mahindra Ltd",
-        "weight": 2.51
+        "weight": 2.57
       },
       {
         "name": "Kotak Mahindra Bank Ltd",
-        "weight": 2.45
+        "weight": 2.36
       },
       {
         "name": "Bajaj Finance Ltd",
-        "weight": 2.11
+        "weight": 2.27
       },
       {
         "name": "Eternal Ltd",
@@ -206,11 +206,11 @@
       },
       {
         "name": "Sun Pharmaceutical Industries Ltd",
-        "weight": 1.92
+        "weight": 1.88
       },
       {
         "name": "Bharti Airtel Ltd",
-        "weight": 1.82
+        "weight": 1.79
       }
     ]
   },
@@ -219,20 +219,20 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 130,
-    "asOfDate": "2026-10-29",
-    "asOf": "Oct 29 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-10-29)",
+    "totalRows": 131,
+    "asOfDate": "2026-11-05",
+    "asOf": "Nov 05 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 127
+    "publishedTotalHoldings": 128
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 397,
-    "asOf": "Oct 30 2026",
+    "totalRows": 402,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
