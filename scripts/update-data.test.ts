@@ -455,6 +455,7 @@ const realFetch = globalThis.fetch;
 const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
 // the nine swing keys of the swing block follow the range keys, in front of returnsBasis and performanceAsOf
 const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
+const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y'];
 const realLog = console.log;
 const initialExitCode = process.exitCode;
 const initialTz = process.env.TZ;
@@ -488,7 +489,7 @@ function chartJson(days = 400): string {
   const timestamp: number[] = [];
   const close: number[] = [];
   for (let i = 0; i < days; i += 1) { timestamp.push(end - (days - 1 - i) * 86_400); close.push(100 + i * 0.05); }
-  return JSON.stringify({ chart: { result: [{ meta: { exchangeName: 'PCX', regularMarketPrice: 120, regularMarketTime: end, firstTradeDate: timestamp[0] }, timestamp, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: {} } }] } });
+  return JSON.stringify({ chart: { result: [{ meta: { exchangeName: 'PCX', dataGranularity: '1d', regularMarketPrice: 120, regularMarketTime: end, firstTradeDate: timestamp[0] }, timestamp, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: { [Date.UTC(2026, 8, 10) / 1000]: { amount: 0.25, date: Date.UTC(2026, 8, 10) / 1000 } } } }] } });
 }
 
 /** Mocks catalog, fund pages and Yahoo in a temp output dir; `handler` may override any URL (undefined falls through). */
@@ -1050,7 +1051,7 @@ describe('metrics 2', () => {
     await run({ TICKERS: 'GSLC' });
     const index = readJson(world, 'index.json');
     expect(index.funds.length).toBeGreaterThan(40);
-    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', ...RANGE_KEYS, ...SWING_KEYS, 'returnsBasis', 'performanceAsOf'];
+    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, 'returnsBasis', 'performanceAsOf'];
     for (const row of index.funds) {
       expect(Object.keys(row.metrics).slice(0, keys.length)).toEqual(keys);
       expect(row.metrics.returnsBasis.length).toBeGreaterThan(5);
@@ -1096,8 +1097,8 @@ describe('metrics 2', () => {
     const rebuilt = indexRowFromMeta(meta)!.metrics;
     const placeholder = placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics;
     // the index row also has the 52-week and swing keys, added from the history pages right before index.json is written
-    expect([...Object.keys(rebuilt), ...RANGE_KEYS, ...SWING_KEYS].sort()).toEqual(Object.keys(fresh).sort());
-    expect([...Object.keys(placeholder), ...RANGE_KEYS, ...SWING_KEYS].sort()).toEqual(Object.keys(fresh).sort());
+    expect([...Object.keys(rebuilt), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS].sort()).toEqual(Object.keys(fresh).sort());
+    expect([...Object.keys(placeholder), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS].sort()).toEqual(Object.keys(fresh).sort());
     expect(rebuilt.dividendYieldBasis).toBe('official-trailing-12m');
     expect(placeholder).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
     // a row published before the key existed: the code is taken from its meta.json
@@ -1182,11 +1183,18 @@ describe('pipeline', () => {
     await run({ TICKERS: THREE });
     const rows = readJson(world, 'index.json').funds.length;
     const others = snapshot(join(world.api, 'funds', 'AAAU'));
+    world.hits.length = 0;
     await run({ TICKERS: 'GBIL', HISTORY_PAGE_SIZE: '500' });
     expect(readJson(world, 'index.json').funds.length).toBe(rows);
     for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     // the swing keys from the Close column of the same pages (shared swing block), in front of returnsBasis and performanceAsOf
-    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-11, -2)).toEqual(SWING_KEYS);
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-17, -8)).toEqual(SWING_KEYS);
+    // the dividend keys from one Yahoo daily chart request per updated fund (dividends block): 0.25 in the last year, the rest null
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-8, -2)).toEqual(DIVIDEND_KEYS);
+    const gbilDividends = rowFor(readJson(world, 'index.json'), 'GBIL').metrics;
+    expect([gbilDividends.dividendRate, gbilDividends.dividendGrowth, gbilDividends.dividendGrowth3y, gbilDividends.dividendGrowth5y, gbilDividends.dividendStreak, gbilDividends.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
+    const dividendUrls = world.hits.filter((hit) => /chart\/[^?]+\?period1=0&.*includePrePost=false/.test(hit.url)).map((hit) => /chart\/([^?]+)/.exec(hit.url)?.[1]);
+    expect(dividendUrls).toEqual(['GBIL']);
     const gbil = rowFor(readJson(world, 'index.json'), 'GBIL').metrics;
     expect([typeof gbil.athPrice, gbil.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     expect(snapshot(join(world.api, 'funds', 'AAAU'))).toEqual(others);
@@ -1369,7 +1377,7 @@ describe('pipeline 3', () => {
         return undefined;
       },
     });
-    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics).flatMap((key) => (key === 'returnsBasis' ? [...RANGE_KEYS, ...SWING_KEYS, key] : [key]));
+    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics).flatMap((key) => (key === 'returnsBasis' ? [...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, key] : [key]));
     for (const [next, env] of <Array<[string, Record<string, string>]>>[['guard', {}], ['down', {}], ['none', { SKIP_GOLDMANSACHS: 'true' }], ['none', { SKIP_GOLDMANSACHS: 'true', SKIP_YAHOO: 'true' }]]) {
       mode = next;
       const log: string[] = [];
