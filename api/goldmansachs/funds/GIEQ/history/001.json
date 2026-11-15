@@ -2,7 +2,7 @@
   "ticker": "GIEQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 118,
+  "totalRows": 123,
   "headers": [
     "Date",
     "Close",
@@ -717,6 +717,36 @@
       "Close": "40.349998474121094",
       "Adj Close": "40.35",
       "Volume": "2200"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "41.439998626708984",
+      "Adj Close": "41.44",
+      "Volume": "8100"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "41.29999923706055",
+      "Adj Close": "41.3",
+      "Volume": "15100"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "41.459999084472656",
+      "Adj Close": "41.46",
+      "Volume": "4400"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "41.2400016784668",
+      "Adj Close": "41.24",
+      "Volume": "2000"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "41.380001068115234",
+      "Adj Close": "41.38",
+      "Volume": "6700"
     }
   ]
 }

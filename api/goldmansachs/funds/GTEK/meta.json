@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 05 2026",
+    "productPageAsOf": "Nov 12 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTEK",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$46.23",
-    "value": 46.23,
-    "asOfDate": "Nov 05 2026"
+    "display": "$49.22",
+    "value": 49.22,
+    "asOfDate": "Nov 12 2026"
   },
   "marketPrice": {
-    "display": "$44.15",
-    "value": 44.15,
-    "asOfDate": "Nov 05 2026",
+    "display": "$49.48",
+    "value": 49.48,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-4.50%",
-    "value": -4.5,
-    "asOfDate": "Nov 05 2026",
+    "display": "0.53%",
+    "value": 0.53,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$193.01 M",
-    "value": 193010000,
-    "asOfDate": "Nov 05 2026",
+    "display": "$209.17 M",
+    "value": 209170000,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 58,
-    "bidAskMidpoint": 44.27,
+    "bidAskMidpoint": 49.51,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 37,
@@ -72,34 +72,34 @@
     "dividendYield": 0,
     "dividendYieldText": "0.00%",
     "dividendYieldBasis": "official-trailing-12m",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Sep 30 2026",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Oct 31 2026",
     "distributionRate": 0,
-    "secYield": -0.25,
-    "secYieldText": "-0.25%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
+    "secYield": -0.27,
+    "secYieldText": "-0.27%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Oct 31 2026"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": 2.82,
-      "mo1Text": "2.82%",
-      "mo3": -5.66,
-      "mo3Text": "-5.66%",
-      "qtd": -23.08,
-      "qtdText": "-23.08%",
-      "ytd": 46.29,
-      "ytdText": "46.29%",
-      "yr1": 50.12,
-      "yr1Text": "50.12%",
-      "yr3": 35.41,
-      "yr3Text": "35.41%",
-      "yr5": 8.86,
-      "yr5Text": "8.86%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -11.89,
+      "mo1Text": "-11.89%",
+      "mo3": -4.4,
+      "mo3Text": "-4.40%",
+      "qtd": -18,
+      "qtdText": "-18.00%",
+      "ytd": 28.9,
+      "ytdText": "28.90%",
+      "yr1": 24.85,
+      "yr1Text": "24.85%",
+      "yr3": 32.35,
+      "yr3Text": "32.35%",
+      "yr5": 5.13,
+      "yr5Text": "5.13%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 7.81,
-      "sinceInceptionText": "7.81%"
+      "sinceInception": 5.05,
+      "sinceInceptionText": "5.05%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -113,23 +113,23 @@
   },
   "officialMarketPriceReturns": {
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": 3.4,
-      "mo1Text": "3.40%",
-      "mo3": -6.67,
-      "mo3Text": "-6.67%",
-      "ytd": 46.86,
-      "ytdText": "46.86%",
-      "yr1": 50.45,
-      "yr1Text": "50.45%",
-      "yr3": 35.64,
-      "yr3Text": "35.64%",
-      "yr5": 8.87,
-      "yr5Text": "8.87%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -13.02,
+      "mo1Text": "-13.02%",
+      "mo3": -5.29,
+      "mo3Text": "-5.29%",
+      "ytd": 27.74,
+      "ytdText": "27.74%",
+      "yr1": 23.82,
+      "yr1Text": "23.82%",
+      "yr3": 31.91,
+      "yr3Text": "31.91%",
+      "yr5": 4.89,
+      "yr5Text": "4.89%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 7.84,
-      "sinceInceptionText": "7.84%"
+      "sinceInception": 4.81,
+      "sinceInceptionText": "4.81%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -180,49 +180,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 05 2026",
-    "asOf": "Nov 05 2026",
-    "top10Pct": 29.55,
+    "asOfDate": "Nov 12 2026",
+    "asOf": "Nov 12 2026",
+    "top10Pct": 29.87,
     "rows": [
       {
-        "name": "SK Square Co Ltd",
+        "name": "Cloudflare Inc",
         "weight": 3.44
       },
       {
-        "name": "Jentech Precision Industrial Co Ltd",
-        "weight": 3.4
+        "name": "Marvell Technology Inc",
+        "weight": 3.2
+      },
+      {
+        "name": "SK Square Co Ltd",
+        "weight": 3.19
       },
       {
         "name": "ASE Technology Holding Co Ltd",
-        "weight": 3.25
+        "weight": 3.12
       },
       {
-        "name": "eBay Inc",
-        "weight": 2.86
+        "name": "Jentech Precision Industrial Co Ltd",
+        "weight": 3.08
       },
       {
         "name": "MediaTek Inc",
-        "weight": 2.84
-      },
-      {
-        "name": "Motorola Solutions Inc",
-        "weight": 2.83
-      },
-      {
-        "name": "Cloudflare Inc",
-        "weight": 2.81
-      },
-      {
-        "name": "Marvell Technology Inc",
-        "weight": 2.77
+        "weight": 2.96
       },
       {
         "name": "Amphenol Corp",
-        "weight": 2.72
+        "weight": 2.83
       },
       {
-        "name": "Elite Material Co Ltd",
-        "weight": 2.63
+        "name": "Motorola Solutions Inc",
+        "weight": 2.73
+      },
+      {
+        "name": "Snowflake Inc",
+        "weight": 2.71
+      },
+      {
+        "name": "eBay Inc",
+        "weight": 2.61
       }
     ]
   },
@@ -231,10 +231,10 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 64,
-    "asOfDate": "2026-11-05",
-    "asOf": "Nov 05 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "totalRows": 65,
+    "asOfDate": "2026-11-12",
+    "asOf": "Nov 12 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 58
   },
@@ -244,8 +244,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1292,
-    "asOf": "Nov 06 2026",
+    "totalRows": 1297,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

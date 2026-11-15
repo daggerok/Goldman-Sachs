@@ -2,7 +2,7 @@
   "ticker": "GTIP",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2024,
+  "totalRows": 2029,
   "headers": [
     "Date",
     "Close",
@@ -13,115 +13,115 @@
     {
       "Date": "Oct 06 2026",
       "Close": "46.310001373291016",
-      "Adj Close": "46.31",
+      "Adj Close": "46.09",
       "Volume": "163800"
     },
     {
       "Date": "Oct 07 2026",
       "Close": "46.34000015258789",
-      "Adj Close": "46.34",
+      "Adj Close": "46.12",
       "Volume": "25200"
     },
     {
       "Date": "Oct 08 2026",
       "Close": "46.47999954223633",
-      "Adj Close": "46.48",
+      "Adj Close": "46.26",
       "Volume": "33400"
     },
     {
       "Date": "Oct 09 2026",
       "Close": "46.43000030517578",
-      "Adj Close": "46.43",
+      "Adj Close": "46.21",
       "Volume": "13600"
     },
     {
       "Date": "Oct 12 2026",
       "Close": "46.459999084472656",
-      "Adj Close": "46.46",
+      "Adj Close": "46.24",
       "Volume": "20700"
     },
     {
       "Date": "Oct 13 2026",
       "Close": "46.47999954223633",
-      "Adj Close": "46.48",
+      "Adj Close": "46.26",
       "Volume": "55700"
     },
     {
       "Date": "Oct 14 2026",
       "Close": "46.61000061035156",
-      "Adj Close": "46.61",
+      "Adj Close": "46.39",
       "Volume": "79000"
     },
     {
       "Date": "Oct 15 2026",
       "Close": "46.790000915527344",
-      "Adj Close": "46.79",
+      "Adj Close": "46.57",
       "Volume": "30500"
     },
     {
       "Date": "Oct 16 2026",
       "Close": "46.91999816894531",
-      "Adj Close": "46.92",
+      "Adj Close": "46.7",
       "Volume": "21700"
     },
     {
       "Date": "Oct 19 2026",
       "Close": "46.77000045776367",
-      "Adj Close": "46.77",
+      "Adj Close": "46.55",
       "Volume": "16100"
     },
     {
       "Date": "Oct 20 2026",
       "Close": "46.90999984741211",
-      "Adj Close": "46.91",
+      "Adj Close": "46.69",
       "Volume": "26300"
     },
     {
       "Date": "Oct 21 2026",
       "Close": "46.91999816894531",
-      "Adj Close": "46.92",
+      "Adj Close": "46.7",
       "Volume": "23000"
     },
     {
       "Date": "Oct 22 2026",
       "Close": "47.27000045776367",
-      "Adj Close": "47.27",
+      "Adj Close": "47.05",
       "Volume": "20900"
     },
     {
       "Date": "Oct 23 2026",
       "Close": "47.22999954223633",
-      "Adj Close": "47.23",
+      "Adj Close": "47.01",
       "Volume": "19900"
     },
     {
       "Date": "Oct 26 2026",
       "Close": "47.25",
-      "Adj Close": "47.25",
+      "Adj Close": "47.03",
       "Volume": "18900"
     },
     {
       "Date": "Oct 27 2026",
       "Close": "47.27000045776367",
-      "Adj Close": "47.27",
+      "Adj Close": "47.05",
       "Volume": "10500"
     },
     {
       "Date": "Oct 28 2026",
       "Close": "47.2400016784668",
-      "Adj Close": "47.24",
+      "Adj Close": "47.02",
       "Volume": "18600"
     },
     {
       "Date": "Oct 29 2026",
       "Close": "47.310001373291016",
-      "Adj Close": "47.31",
+      "Adj Close": "47.09",
       "Volume": "17100"
     },
     {
       "Date": "Oct 30 2026",
       "Close": "47.4900016784668",
-      "Adj Close": "47.49",
+      "Adj Close": "47.27",
       "Volume": "22200"
     },
     {
@@ -153,6 +153,36 @@
       "Close": "47.130001068115234",
       "Adj Close": "47.13",
       "Volume": "38900"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "47.0099983215332",
+      "Adj Close": "47.01",
+      "Volume": "19800"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "46.65999984741211",
+      "Adj Close": "46.66",
+      "Volume": "36600"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "46.66999816894531",
+      "Adj Close": "46.67",
+      "Volume": "21900"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "46.439998626708984",
+      "Adj Close": "46.44",
+      "Volume": "21200"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "46.349998474121094",
+      "Adj Close": "46.35",
+      "Volume": "20400"
     }
   ]
 }

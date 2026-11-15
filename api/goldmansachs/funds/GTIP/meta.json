@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 05 2026",
+    "productPageAsOf": "Nov 12 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102998/381430362/goldman-sachs-access-inflation-protected-usd-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTIP",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.11",
-    "value": 47.11,
-    "asOfDate": "Nov 05 2026"
+    "display": "$46.44",
+    "value": 46.44,
+    "asOfDate": "Nov 12 2026"
   },
   "marketPrice": {
-    "display": "$47.12",
-    "value": 47.12,
-    "asOfDate": "Nov 05 2026",
+    "display": "$46.44",
+    "value": 46.44,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Nov 05 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$292.07 M",
-    "value": 292070000,
-    "asOfDate": "Nov 05 2026",
+    "display": "$287.95 M",
+    "value": 287950000,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 41,
-    "bidAskMidpoint": 47.1,
+    "bidAskMidpoint": 46.43,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 44,
@@ -86,8 +86,8 @@
       "mo1Text": "2.60%",
       "mo3": -0.04,
       "mo3Text": "-0.04%",
-      "qtd": 1.57,
-      "qtdText": "1.57%",
+      "qtd": 0.37,
+      "qtdText": "0.37%",
       "ytd": 0.44,
       "ytdText": "0.44%",
       "yr1": 0.09,
@@ -460,13 +460,13 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 05 2026",
-    "asOf": "Nov 05 2026",
-    "top10Pct": 44.89,
+    "asOfDate": "Nov 12 2026",
+    "asOf": "Nov 12 2026",
+    "top10Pct": 44.92,
     "rows": [
       {
         "name": "US GOVT TIPS 1.875% 15 JUL 2034",
-        "weight": 5.79
+        "weight": 5.77
       },
       {
         "name": "US GOVT TIPS 0.625% 15 JUL 2032",
@@ -474,35 +474,35 @@
       },
       {
         "name": "US GOVT TIPS 2.375% 15 OCT 2028",
-        "weight": 4.82
+        "weight": 4.87
       },
       {
         "name": "US GOVT TIPS 1.875% 15 JUL 2035",
-        "weight": 4.74
+        "weight": 4.72
       },
       {
         "name": "US GOVT TIPS 1.875% 15 JAN 2036",
-        "weight": 4.57
+        "weight": 4.55
       },
       {
         "name": "US GOVT TIPS 0.125% 15 JAN 2030",
-        "weight": 4.33
+        "weight": 4.35
       },
       {
         "name": "US GOVT TIPS 1.375% 15 JUL 2033",
-        "weight": 4.23
+        "weight": 4.22
       },
       {
         "name": "US GOVT TIPS 0.25% 15 JUL 2029",
-        "weight": 4.05
+        "weight": 4.08
       },
       {
         "name": "US GOVT TIPS 1.75% 15 JAN 2034",
-        "weight": 3.66
+        "weight": 3.65
       },
       {
         "name": "US GOVT TIPS 0.125% 15 JUL 2031",
-        "weight": 3.61
+        "weight": 3.62
       }
     ]
   },
@@ -512,9 +512,9 @@
     ],
     "pageSize": 250,
     "totalRows": 43,
-    "asOfDate": "2026-11-05",
-    "asOf": "Nov 05 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "asOfDate": "2026-11-12",
+    "asOf": "Nov 12 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 41
   },
@@ -525,8 +525,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2024,
-    "asOf": "Nov 06 2026",
+    "totalRows": 2029,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

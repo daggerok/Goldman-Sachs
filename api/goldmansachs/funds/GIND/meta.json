@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 05 2026",
+    "productPageAsOf": "Nov 12 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV106306/38149W481/goldman-sachs-india-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIND",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$24.91",
-    "value": 24.91,
-    "asOfDate": "Nov 05 2026"
+    "display": "$25.59",
+    "value": 25.59,
+    "asOfDate": "Nov 12 2026"
   },
   "marketPrice": {
-    "display": "$24.68",
-    "value": 24.68,
-    "asOfDate": "Nov 05 2026",
+    "display": "$25.63",
+    "value": 25.63,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.92%",
-    "value": -0.92,
-    "asOfDate": "Nov 05 2026",
+    "display": "0.16%",
+    "value": 0.16,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$166.91 M",
-    "value": 166910000,
-    "asOfDate": "Nov 05 2026",
+    "display": "$171.45 M",
+    "value": 171450000,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 128,
-    "bidAskMidpoint": 24.68,
+    "publishedTotalHoldings": 127,
+    "bidAskMidpoint": 25.63,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 14,
@@ -69,37 +69,37 @@
     "discountDays": 50
   },
   "yields": {
-    "dividendYield": 0.73,
-    "dividendYieldText": "0.73%",
+    "dividendYield": 0.74,
+    "dividendYieldText": "0.74%",
     "dividendYieldBasis": "official-trailing-12m",
-    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Sep 30 2026",
-    "distributionRate": 0.73,
-    "secYield": -0.26,
-    "secYieldText": "-0.26%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Oct 31 2026",
+    "distributionRate": 0.74,
+    "secYield": -0.27,
+    "secYieldText": "-0.27%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Oct 31 2026"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -6.23,
-      "mo1Text": "-6.23%",
-      "mo3": -1.81,
-      "mo3Text": "-1.81%",
-      "qtd": 7.04,
-      "qtdText": "7.04%",
-      "ytd": -9.13,
-      "ytdText": "-9.13%",
-      "yr1": -7.51,
-      "yr1Text": "-7.51%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -0.72,
+      "mo1Text": "-0.72%",
+      "mo3": -4.76,
+      "mo3Text": "-4.76%",
+      "qtd": 9.57,
+      "qtdText": "9.57%",
+      "ytd": -9.79,
+      "ytdText": "-9.79%",
+      "yr1": -11.54,
+      "yr1Text": "-11.54%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -3.18,
-      "sinceInceptionText": "-3.18%"
+      "sinceInception": -3.45,
+      "sinceInceptionText": "-3.45%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -113,23 +113,23 @@
   },
   "officialMarketPriceReturns": {
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -5.71,
-      "mo1Text": "-5.71%",
-      "mo3": -3.13,
-      "mo3Text": "-3.13%",
-      "ytd": -10.6,
-      "ytdText": "-10.60%",
-      "yr1": -8.86,
-      "yr1Text": "-8.86%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": 0.58,
+      "mo1Text": "0.58%",
+      "mo3": -3.83,
+      "mo3Text": "-3.83%",
+      "ytd": -10.09,
+      "ytdText": "-10.09%",
+      "yr1": -11.9,
+      "yr1Text": "-11.90%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -3.63,
-      "sinceInceptionText": "-3.63%"
+      "sinceInception": -3.09,
+      "sinceInceptionText": "-3.09%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -168,49 +168,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 05 2026",
-    "asOf": "Nov 05 2026",
-    "top10Pct": 27.97,
+    "asOfDate": "Nov 12 2026",
+    "asOf": "Nov 12 2026",
+    "top10Pct": 28.53,
     "rows": [
       {
         "name": "ICICI Bank Ltd",
-        "weight": 5.95
+        "weight": 6.13
       },
       {
         "name": "HDFC Bank Ltd",
-        "weight": 3.46
+        "weight": 3.59
       },
       {
         "name": "Reliance Industries Ltd",
-        "weight": 2.99
-      },
-      {
-        "name": "Axis Bank Ltd",
-        "weight": 2.6
+        "weight": 2.96
       },
       {
         "name": "Mahindra & Mahindra Ltd",
-        "weight": 2.57
+        "weight": 2.71
+      },
+      {
+        "name": "Axis Bank Ltd",
+        "weight": 2.65
       },
       {
         "name": "Kotak Mahindra Bank Ltd",
-        "weight": 2.36
+        "weight": 2.4
       },
       {
         "name": "Bajaj Finance Ltd",
-        "weight": 2.27
+        "weight": 2.3
       },
       {
         "name": "Eternal Ltd",
-        "weight": 2.1
+        "weight": 2.07
       },
       {
         "name": "Sun Pharmaceutical Industries Ltd",
         "weight": 1.88
       },
       {
-        "name": "Bharti Airtel Ltd",
-        "weight": 1.79
+        "name": "Divis Laboratories Ltd",
+        "weight": 1.84
       }
     ]
   },
@@ -219,20 +219,20 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 131,
-    "asOfDate": "2026-11-05",
-    "asOf": "Nov 05 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "totalRows": 129,
+    "asOfDate": "2026-11-12",
+    "asOf": "Nov 12 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 128
+    "publishedTotalHoldings": 127
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 402,
-    "asOf": "Nov 06 2026",
+    "totalRows": 407,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

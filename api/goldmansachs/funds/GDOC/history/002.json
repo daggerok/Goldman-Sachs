@@ -2,7 +2,7 @@
   "ticker": "GDOC",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1252,
+  "totalRows": 1257,
   "headers": [
     "Date",
     "Close",
@@ -1520,6 +1520,36 @@
       "Date": "Nov 06 2026",
       "Close": "38.470001220703125",
       "Adj Close": "38.47",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "39.4119987487793",
+      "Adj Close": "39.41",
+      "Volume": "900"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "39.42399978637695",
+      "Adj Close": "39.42",
+      "Volume": "200"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "39.507999420166016",
+      "Adj Close": "39.51",
+      "Volume": "200"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "39.143001556396484",
+      "Adj Close": "39.14",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "39.32699966430664",
+      "Adj Close": "39.33",
       "Volume": "100"
     }
   ]

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 05 2026",
+    "productPageAsOf": "Nov 12 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110568/38151N809/goldman-sachs-core-plus-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCPB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$49.34",
-    "value": 49.34,
-    "asOfDate": "Nov 05 2026"
+    "display": "$48.69",
+    "value": 48.69,
+    "asOfDate": "Nov 12 2026"
   },
   "marketPrice": {
-    "display": "$49.35",
-    "value": 49.35,
-    "asOfDate": "Nov 05 2026",
+    "display": "$48.91",
+    "value": 48.91,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Nov 05 2026",
+    "display": "0.45%",
+    "value": 0.45,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$155.30 M",
-    "value": 155300000,
-    "asOfDate": "Nov 05 2026",
+    "display": "$153.22 M",
+    "value": 153220000,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 359,
-    "bidAskMidpoint": 49.35,
+    "publishedTotalHoldings": 363,
+    "bidAskMidpoint": 48.94,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 30,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.95%",
       "mo3": -4.04,
       "mo3Text": "-4.04%",
-      "qtd": 2.32,
-      "qtdText": "2.32%",
+      "qtd": 1.16,
+      "qtdText": "1.16%",
       "ytd": -3.34,
       "ytdText": "-3.34%",
       "yr1": -1.82,
@@ -212,49 +212,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 05 2026",
-    "asOf": "Nov 05 2026",
-    "top10Pct": 26.64,
+    "asOfDate": "Nov 12 2026",
+    "asOf": "Nov 12 2026",
+    "top10Pct": 26.18,
     "rows": [
       {
         "name": "US GOVT T-BILL 31 DEC 2026",
-        "weight": 5.03
+        "weight": 5.1
       },
       {
         "name": "FNCL 5.50 12/26 TBA",
-        "weight": 3.74
+        "weight": 3.73
       },
       {
         "name": "US GOVT T-BILL 26 JAN 2027",
-        "weight": 3.4
+        "weight": 3.45
       },
       {
         "name": "US GOVT 3.875% 15 JUN 2028",
-        "weight": 2.94
+        "weight": 2.96
       },
       {
         "name": "US GOVT 1.375% 15 NOV 2031",
-        "weight": 2.91
+        "weight": 2.9
       },
       {
         "name": "FREDDIE MAC STRIPS GA 2026-473 4.8% 25 SEP 2031",
-        "weight": 2.21
-      },
-      {
-        "name": "G2SF 6.00 11/26 TBA",
-        "weight": 1.91
+        "weight": 2.18
       },
       {
         "name": "US GOVT T-BILL 15 DEC 2026",
-        "weight": 1.9
+        "weight": 1.93
       },
       {
         "name": "VIBRANT CLO XVI A1A2 2026-16A FRN 15 JUL 2036 144A",
-        "weight": 1.32
+        "weight": 1.34
       },
       {
         "name": "KKR FINANCIAL CLO A 2025-57A FRN 15 JUL 2038 144A",
-        "weight": 1.28
+        "weight": 1.3
+      },
+      {
+        "name": "FNCL SD7571",
+        "weight": 1.29
       }
     ]
   },
@@ -264,20 +264,20 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 385,
-    "asOfDate": "2026-11-05",
-    "asOf": "Nov 05 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "totalRows": 394,
+    "asOfDate": "2026-11-12",
+    "asOf": "Nov 12 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 359
+    "publishedTotalHoldings": 363
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 64,
-    "asOf": "Nov 06 2026",
+    "totalRows": 69,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

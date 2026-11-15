@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 05 2026",
+    "productPageAsOf": "Nov 12 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$94.87",
-    "value": 94.87,
-    "asOfDate": "Nov 05 2026"
+    "display": "$97.77",
+    "value": 97.77,
+    "asOfDate": "Nov 12 2026"
   },
   "marketPrice": {
-    "display": "$94.92",
-    "value": 94.92,
-    "asOfDate": "Nov 05 2026",
+    "display": "$97.78",
+    "value": 97.78,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.05%",
-    "value": 0.05,
-    "asOfDate": "Nov 05 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.18 B",
-    "value": 2177290000,
-    "asOfDate": "Nov 05 2026",
+    "display": "$2.23 B",
+    "value": 2229240000,
+    "asOfDate": "Nov 12 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 495,
-    "bidAskMidpoint": 94.9,
+    "publishedTotalHoldings": 494,
+    "bidAskMidpoint": 97.82,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-3.95%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 1.25,
-      "qtdText": "1.25%",
+      "qtd": 4.34,
+      "qtdText": "4.34%",
       "ytd": 10.52,
       "ytdText": "10.52%",
       "yr1": 11.2,
@@ -308,49 +308,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 05 2026",
-    "asOf": "Nov 05 2026",
-    "top10Pct": 2.42,
+    "asOfDate": "Nov 12 2026",
+    "asOf": "Nov 12 2026",
+    "top10Pct": 2.62,
     "rows": [
       {
         "name": "Kimberly-Clark Corp",
-        "weight": 0.38
+        "weight": 0.36
       },
       {
         "name": "AppLovin Corp",
+        "weight": 0.29
+      },
+      {
+        "name": "Fox Corp",
         "weight": 0.27
       },
       {
-        "name": "Liberty Media Corp",
+        "name": "Ubiquiti Inc",
+        "weight": 0.26
+      },
+      {
+        "name": "Rocket Lab Corp",
+        "weight": 0.25
+      },
+      {
+        "name": "Coherent Corp",
+        "weight": 0.24
+      },
+      {
+        "name": "Cloudflare Inc",
+        "weight": 0.24
+      },
+      {
+        "name": "Advanced Micro Devices Inc",
+        "weight": 0.24
+      },
+      {
+        "name": "Arista Networks Inc",
+        "weight": 0.24
+      },
+      {
+        "name": "CoreWeave Inc",
         "weight": 0.23
-      },
-      {
-        "name": "Tapestry Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "Corpay Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "Royal Gold Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "CF Industries Holdings Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "Motorola Solutions Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "Verisk Analytics Inc",
-        "weight": 0.22
-      },
-      {
-        "name": "Charter Communications Inc",
-        "weight": 0.22
       }
     ]
   },
@@ -360,12 +360,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 496,
-    "asOfDate": "2026-11-05",
-    "asOf": "Nov 05 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-05)",
+    "totalRows": 495,
+    "asOfDate": "2026-11-12",
+    "asOf": "Nov 12 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 495
+    "publishedTotalHoldings": 494
   },
   "history": {
     "pages": [
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2299,
-    "asOf": "Nov 06 2026",
+    "totalRows": 2304,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

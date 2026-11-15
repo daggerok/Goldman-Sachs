@@ -2,7 +2,7 @@
   "ticker": "GSID",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1627,
+  "totalRows": 1632,
   "headers": [
     "Date",
     "Close",
@@ -3771,6 +3771,36 @@
       "Close": "73.37999725341797",
       "Adj Close": "73.38",
       "Volume": "16200"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "75.3949966430664",
+      "Adj Close": "75.39",
+      "Volume": "13400"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "74.8550033569336",
+      "Adj Close": "74.86",
+      "Volume": "8700"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "75.3499984741211",
+      "Adj Close": "75.35",
+      "Volume": "6100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "74.76599884033203",
+      "Adj Close": "74.77",
+      "Volume": "4600"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "74.88999938964844",
+      "Adj Close": "74.89",
+      "Volume": "15100"
     }
   ]
 }

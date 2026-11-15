@@ -2,7 +2,7 @@
   "ticker": "GTEK",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1292,
+  "totalRows": 1297,
   "headers": [
     "Date",
     "Close",
@@ -1761,6 +1761,36 @@
       "Close": "45.68000030517578",
       "Adj Close": "45.68",
       "Volume": "5900"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "48.56999969482422",
+      "Adj Close": "48.57",
+      "Volume": "7900"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "48.470001220703125",
+      "Adj Close": "48.47",
+      "Volume": "111600"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "50.4630012512207",
+      "Adj Close": "50.46",
+      "Volume": "9000"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "49.483001708984375",
+      "Adj Close": "49.48",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "48.70000076293945",
+      "Adj Close": "48.7",
+      "Volume": "20800"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GSUS",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1627,
+  "totalRows": 1632,
   "headers": [
     "Date",
     "Close",
@@ -3771,6 +3771,36 @@
       "Close": "101.45999908447266",
       "Adj Close": "101.46",
       "Volume": "96500"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "103.94000244140625",
+      "Adj Close": "103.94",
+      "Volume": "74800"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "103.55000305175781",
+      "Adj Close": "103.55",
+      "Volume": "91200"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "104.97000122070312",
+      "Adj Close": "104.97",
+      "Volume": "54900"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "104.63999938964844",
+      "Adj Close": "104.64",
+      "Volume": "50200"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "104.19000244140625",
+      "Adj Close": "104.19",
+      "Volume": "84000"
     }
   ]
 }
