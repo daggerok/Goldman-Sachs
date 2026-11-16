@@ -455,7 +455,10 @@ const realFetch = globalThis.fetch;
 const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
 // the nine swing keys of the swing block follow the range keys, in front of returnsBasis and performanceAsOf
 const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
-const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y'];
+const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y', 'paymentsPerYear', 'payFrequency'];
+const BENCHMARK_KEYS = ['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxDrawdown1y', 'maxDrawdown3y', 'maxDrawdown5y', 'maxDrawdown10y',
+  'vsSpy1y', 'vsSpy3y', 'vsSpy5y', 'vsSpy10y', 'beta1ySpy', 'corr1ySpy', 'upCapture3ySpy', 'downCapture3ySpy', 'relStrength3mSpy', 'stressReturnSpy', 'stressBasisSpy',
+  'vsQqq1y', 'vsQqq3y', 'vsQqq5y', 'vsQqq10y', 'beta1yQqq', 'corr1yQqq', 'upCapture3yQqq', 'downCapture3yQqq', 'relStrength3mQqq', 'stressReturnQqq', 'stressBasisQqq', 'benchmarkAsOf'];
 const realLog = console.log;
 const initialExitCode = process.exitCode;
 const initialTz = process.env.TZ;
@@ -1051,7 +1054,7 @@ describe('metrics 2', () => {
     await run({ TICKERS: 'GSLC' });
     const index = readJson(world, 'index.json');
     expect(index.funds.length).toBeGreaterThan(40);
-    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, 'returnsBasis', 'performanceAsOf'];
+    const keys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, ...BENCHMARK_KEYS, 'returnsBasis', 'performanceAsOf'];
     for (const row of index.funds) {
       expect(Object.keys(row.metrics).slice(0, keys.length)).toEqual(keys);
       expect(row.metrics.returnsBasis.length).toBeGreaterThan(5);
@@ -1097,8 +1100,8 @@ describe('metrics 2', () => {
     const rebuilt = indexRowFromMeta(meta)!.metrics;
     const placeholder = placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics;
     // the index row also has the 52-week and swing keys, added from the history pages right before index.json is written
-    expect([...Object.keys(rebuilt), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS].sort()).toEqual(Object.keys(fresh).sort());
-    expect([...Object.keys(placeholder), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS].sort()).toEqual(Object.keys(fresh).sort());
+    expect([...Object.keys(rebuilt), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, ...BENCHMARK_KEYS].sort()).toEqual(Object.keys(fresh).sort());
+    expect([...Object.keys(placeholder), ...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, ...BENCHMARK_KEYS].sort()).toEqual(Object.keys(fresh).sort());
     expect(rebuilt.dividendYieldBasis).toBe('official-trailing-12m');
     expect(placeholder).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
     // a row published before the key existed: the code is taken from its meta.json
@@ -1188,13 +1191,19 @@ describe('pipeline', () => {
     expect(readJson(world, 'index.json').funds.length).toBe(rows);
     for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     // the swing keys from the Close column of the same pages (shared swing block), in front of returnsBasis and performanceAsOf
-    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-17, -8)).toEqual(SWING_KEYS);
-    // the dividend keys from one Yahoo daily chart request per updated fund (dividends block): 0.25 in the last year, the rest null
-    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-8, -2)).toEqual(DIVIDEND_KEYS);
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-51, -42)).toEqual(SWING_KEYS);
+    // the dividend keys from one Yahoo daily chart request per updated fund (dividends block): 0.25 in the last year, the rest null (one payment over the mock's 400 daily bars is annual)
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-42, -34)).toEqual(DIVIDEND_KEYS);
+    // the 32 benchmark keys against SPY and QQQ from the same request (benchmark block), in front of returnsBasis and performanceAsOf
+    for (const row of readJson(world, 'index.json').funds) expect(Object.keys(row.metrics).slice(-34, -2)).toEqual(BENCHMARK_KEYS);
     const gbilDividends = rowFor(readJson(world, 'index.json'), 'GBIL').metrics;
-    expect([gbilDividends.dividendRate, gbilDividends.dividendGrowth, gbilDividends.dividendGrowth3y, gbilDividends.dividendGrowth5y, gbilDividends.dividendStreak, gbilDividends.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
+    expect([gbilDividends.dividendRate, gbilDividends.dividendGrowth, gbilDividends.dividendGrowth3y, gbilDividends.dividendGrowth5y, gbilDividends.dividendStreak, gbilDividends.dividendCut10y, gbilDividends.paymentsPerYear, gbilDividends.payFrequency]).toEqual([0.25, null, null, null, null, null, 1, 'annual']);
     const dividendUrls = world.hits.filter((hit) => /chart\/[^?]+\?period1=0&.*includePrePost=false/.test(hit.url)).map((hit) => /chart\/([^?]+)/.exec(hit.url)?.[1]);
-    expect(dividendUrls).toEqual(['GBIL']);
+    // one request per updated fund feeds dividends and benchmark; SPY and QQQ are read once as the benchmarks
+    expect([...dividendUrls].sort()).toEqual(['GBIL', 'QQQ', 'SPY']);
+    expect(dividendUrls.filter((ticker) => ticker === 'GBIL')).toHaveLength(1);
+    const gbilBenchmark = rowFor(readJson(world, 'index.json'), 'GBIL').metrics;
+    expect([gbilBenchmark.perf1y, gbilBenchmark.vsSpy1y, gbilBenchmark.beta1ySpy, gbilBenchmark.corr1ySpy, gbilBenchmark.relStrength3mQqq, gbilBenchmark.stressReturnSpy, gbilBenchmark.benchmarkAsOf]).toEqual([17.94, 0, 1, 1, 0, null, '2026-09-17']);
     const gbil = rowFor(readJson(world, 'index.json'), 'GBIL').metrics;
     expect([typeof gbil.athPrice, gbil.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     expect(snapshot(join(world.api, 'funds', 'AAAU'))).toEqual(others);
@@ -1377,7 +1386,7 @@ describe('pipeline 3', () => {
         return undefined;
       },
     });
-    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics).flatMap((key) => (key === 'returnsBasis' ? [...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, key] : [key]));
+    const keys = Object.keys(placeholderRow({ ticker: 'X', name: 'X', category: 'ETF', fundPage: '', cusip: '', isin: '' }).metrics).flatMap((key) => (key === 'returnsBasis' ? [...RANGE_KEYS, ...SWING_KEYS, ...DIVIDEND_KEYS, ...BENCHMARK_KEYS, key] : [key]));
     for (const [next, env] of <Array<[string, Record<string, string>]>>[['guard', {}], ['down', {}], ['none', { SKIP_GOLDMANSACHS: 'true' }], ['none', { SKIP_GOLDMANSACHS: 'true', SKIP_YAHOO: 'true' }]]) {
       mode = next;
       const log: string[] = [];
