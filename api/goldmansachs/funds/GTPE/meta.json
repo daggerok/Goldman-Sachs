@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTPE",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$58.72",
-    "value": 58.72,
-    "asOfDate": "Nov 12 2026"
+    "display": "$56.44",
+    "value": 56.44,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$58.57",
-    "value": 58.57,
-    "asOfDate": "Nov 12 2026",
+    "display": "$56.30",
+    "value": 56.3,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.26%",
-    "value": -0.26,
-    "asOfDate": "Nov 12 2026",
+    "display": "-0.25%",
+    "value": -0.25,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$29.36 M",
-    "value": 29360000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$28.22 M",
+    "value": 28220000,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1591,
-    "bidAskMidpoint": 58.57,
+    "publishedTotalHoldings": 1592,
+    "bidAskMidpoint": 56.35,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 53,
@@ -69,37 +69,37 @@
     "discountDays": 9
   },
   "yields": {
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldBasis": null,
-    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
-    "distributionRate": null,
-    "secYield": 1.24,
-    "secYieldText": "1.24%",
-    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Sep 30 2026"
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldBasis": "official-trailing-12m",
+    "dividendYieldKind": "12 Month Trailing Distribution Rate published on the official fund page as of Oct 31 2026",
+    "distributionRate": 0,
+    "secYield": 1.31,
+    "secYieldText": "1.31%",
+    "secYieldKind": "Standardized 30-Day Subsidized Yield published on the official fund page as of Oct 31 2026"
   },
   "returns": {
     "derivedFrom": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -1.87,
-      "mo1Text": "-1.87%",
-      "mo3": -2.57,
-      "mo3Text": "-2.57%",
-      "qtd": -4.5,
-      "qtdText": "-4.50%",
-      "ytd": 16.96,
-      "ytdText": "16.96%",
-      "yr1": null,
-      "yr1Text": "—",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -1.63,
+      "mo1Text": "-1.63%",
+      "mo3": -0.27,
+      "mo3Text": "-0.27%",
+      "qtd": -7.45,
+      "qtdText": "-7.45%",
+      "ytd": 15.06,
+      "ytdText": "15.06%",
+      "yr1": 18.13,
+      "yr1Text": "18.13%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": null,
-      "sinceInceptionText": "—"
+      "sinceInception": 18.07,
+      "sinceInceptionText": "18.07%"
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -108,48 +108,30 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 20.57
+      "sinceInception": null
     }
   },
   "officialMarketPriceReturns": {
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -1.82,
-      "mo1Text": "-1.82%",
-      "mo3": -2.17,
-      "mo3Text": "-2.17%",
-      "ytd": 17.34,
-      "ytdText": "17.34%",
-      "yr1": null,
-      "yr1Text": "—",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -2.41,
+      "mo1Text": "-2.41%",
+      "mo3": -0.92,
+      "mo3Text": "-0.92%",
+      "ytd": 14.51,
+      "ytdText": "14.51%",
+      "yr1": 17.41,
+      "yr1Text": "17.41%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 21.06,
-      "sinceInceptionText": "21.06%"
+      "sinceInception": 17.61,
+      "sinceInceptionText": "17.61%"
     },
-    "quarterEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": null,
-      "mo1Text": "—",
-      "mo3": null,
-      "mo3Text": "—",
-      "ytd": null,
-      "ytdText": "—",
-      "yr1": null,
-      "yr1Text": "—",
-      "yr3": null,
-      "yr3Text": "—",
-      "yr5": null,
-      "yr5Text": "—",
-      "yr10": null,
-      "yr10Text": "—",
-      "sinceInception": 21.06,
-      "sinceInceptionText": "21.06%"
-    }
+    "quarterEnd": null
   },
   "distributions": {
     "frequency": "Annually",
@@ -163,48 +145,48 @@
     "rows": []
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
-    "top10Pct": 19.9,
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
+    "top10Pct": 19.58,
     "rows": [
       {
         "name": "Advanced Micro Devices Inc",
-        "weight": 3.56
+        "weight": 3.2
       },
       {
         "name": "Broadcom Inc",
-        "weight": 2.17
+        "weight": 2.13
       },
       {
         "name": "Palantir Technologies Inc",
-        "weight": 2.17
+        "weight": 2.07
       },
       {
         "name": "NVIDIA Corp",
-        "weight": 1.94
-      },
-      {
-        "name": "Lockheed Martin Corp",
-        "weight": 1.76
+        "weight": 1.9
       },
       {
         "name": "Welltower Inc",
-        "weight": 1.73
+        "weight": 1.81
       },
       {
-        "name": "GE Vernova Inc",
-        "weight": 1.7
+        "name": "Lockheed Martin Corp",
+        "weight": 1.79
       },
       {
         "name": "Automatic Data Processing Inc",
-        "weight": 1.68
+        "weight": 1.76
+      },
+      {
+        "name": "GE Vernova Inc",
+        "weight": 1.69
       },
       {
         "name": "Bank of New York Mellon Corp",
-        "weight": 1.61
+        "weight": 1.65
       },
       {
-        "name": "Applied Materials Inc",
+        "name": "Starbucks Corp",
         "weight": 1.58
       }
     ]
@@ -220,20 +202,20 @@
       "holdings/007.json"
     ],
     "pageSize": 250,
-    "totalRows": 1602,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 1604,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 1591
+    "publishedTotalHoldings": 1592
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 267,
-    "asOf": "Nov 13 2026",
+    "totalRows": 270,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

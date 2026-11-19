@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSSC",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$86.66",
-    "value": 86.66,
-    "asOfDate": "Nov 12 2026"
+    "display": "$84.00",
+    "value": 84,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$86.63",
-    "value": 86.63,
-    "asOfDate": "Nov 12 2026",
+    "display": "$84.05",
+    "value": 84.05,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.03,
-    "asOfDate": "Nov 12 2026",
+    "display": "0.00%",
+    "value": 0,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.06 B",
-    "value": 1057270000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$1.02 B",
+    "value": 1024819999.9999999,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1364,
-    "bidAskMidpoint": 86.69,
+    "publishedTotalHoldings": 1363,
+    "bidAskMidpoint": 84.12,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 53,
@@ -86,8 +86,8 @@
       "mo1Text": "1.80%",
       "mo3": -1.85,
       "mo3Text": "-1.85%",
-      "qtd": 0.56,
-      "qtdText": "0.56%",
+      "qtd": -1.78,
+      "qtdText": "-1.78%",
       "ytd": 16.33,
       "ytdText": "16.33%",
       "yr1": 18.22,
@@ -312,48 +312,48 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
-    "top10Pct": 3.87,
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
+    "top10Pct": 3.82,
     "rows": [
       {
         "name": "CareDx Inc",
-        "weight": 0.63
+        "weight": 0.6
       },
       {
         "name": "10X Genomics Inc",
-        "weight": 0.46
-      },
-      {
-        "name": "Alkermes PLC",
-        "weight": 0.38
+        "weight": 0.45
       },
       {
         "name": "Supernus Inc",
+        "weight": 0.38
+      },
+      {
+        "name": "Alkermes PLC",
         "weight": 0.37
       },
       {
         "name": "Glaukos Corp",
-        "weight": 0.36
+        "weight": 0.37
       },
       {
         "name": "Zeta Global Holdings Corp",
-        "weight": 0.36
-      },
-      {
-        "name": "Acadian Asset Management Inc",
-        "weight": 0.35
-      },
-      {
-        "name": "Victorias Secret & Co",
         "weight": 0.34
       },
       {
-        "name": "TG Therapeutics Inc",
-        "weight": 0.31
+        "name": "Bright Horizon Energy Corp",
+        "weight": 0.34
       },
       {
-        "name": "Appian Corp",
+        "name": "Acadian Asset Management Inc",
+        "weight": 0.33
+      },
+      {
+        "name": "Victorias Secret & Co",
+        "weight": 0.33
+      },
+      {
+        "name": "BrightSpring Health Services Inc",
         "weight": 0.31
       }
     ]
@@ -368,12 +368,12 @@
       "holdings/006.json"
     ],
     "pageSize": 250,
-    "totalRows": 1369,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 1368,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 1364
+    "publishedTotalHoldings": 1363
   },
   "history": {
     "pages": [
@@ -382,8 +382,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2352,
-    "asOf": "Nov 13 2026",
+    "totalRows": 2355,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

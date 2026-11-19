@@ -1,0 +1,47 @@
+{
+  "ticker": "GIGB",
+  "page": 12,
+  "pageSize": 250,
+  "totalRows": 2752,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "ENBRIDGE INC.",
+      "Ticker": "-",
+      "Identifier": "29250NBY0",
+      "Weight": "0.02",
+      "Market Value": "173640.67",
+      "Shares Held": "170000",
+      "Asset Category": "",
+      "Coupon": "6.2",
+      "Maturity": "2030-11-15",
+      "ISIN": "US29250NBY04",
+      "SEDOL": "BN12KM7"
+    },
+    {
+      "Name": "MOBILITY GLOBAL INC.",
+      "Ticker": "-",
+      "Identifier": "60744MAB2",
+      "Weight": "0.02",
+      "Market Value": "200167.78",
+      "Shares Held": "200000",
+      "Asset Category": "",
+      "Coupon": "5.45",
+      "Maturity": "2031-06-15",
+      "ISIN": "US60744MAB28",
+      "SEDOL": ""
+    }
+  ]
+}

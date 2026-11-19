@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110567/38151N882/goldman-sachs-income-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GINC",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.57",
-    "value": 48.57,
-    "asOfDate": "Nov 12 2026"
+    "display": "$48.41",
+    "value": 48.41,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$48.59",
-    "value": 48.59,
-    "asOfDate": "Nov 12 2026",
+    "display": "$48.44",
+    "value": 48.44,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.04,
-    "asOfDate": "Nov 12 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$218.26 M",
-    "value": 218260000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$217.53 M",
+    "value": 217530000,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 493,
-    "bidAskMidpoint": 48.59,
+    "publishedTotalHoldings": 495,
+    "bidAskMidpoint": 48.44,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 21,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.26%",
       "mo3": -1.97,
       "mo3Text": "-1.97%",
-      "qtd": 0.85,
-      "qtdText": "0.85%",
+      "qtd": 0.62,
+      "qtdText": "0.62%",
       "ytd": -1.2,
       "ytdText": "-1.20%",
       "yr1": 0.16,
@@ -208,21 +208,21 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
-    "top10Pct": 9.92,
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
+    "top10Pct": 9.56,
     "rows": [
       {
         "name": "US GOVT T-BILL 24 NOV 2026",
-        "weight": 2.77
+        "weight": 2.41
       },
       {
         "name": "FREDDIE MAC STRIPS GA 2026-473 4.8% 25 SEP 2031",
-        "weight": 1.54
+        "weight": 1.55
       },
       {
         "name": "HSBC HOLDINGS PLC 6.75% 18 NOV 2049-32",
-        "weight": 0.92
+        "weight": 0.91
       },
       {
         "name": "MORGAN STANLEY 2.699% 22 JAN 2031-30",
@@ -238,19 +238,19 @@
       },
       {
         "name": "BANK OF AMERICA CORPORATION 2.496% 13 FEB 2031-30",
-        "weight": 0.64
-      },
-      {
-        "name": "5.5% 06 MAY 2036 144A",
-        "weight": 0.63
+        "weight": 0.65
       },
       {
         "name": "MSCI INC. 3.875% 15 FEB 2031-27 144A",
+        "weight": 0.63
+      },
+      {
+        "name": "5.5% 06 MAY 2036 144A",
         "weight": 0.62
       },
       {
         "name": "CONGOLESE GOVT 9.5% 26 MAY 2036 REGS",
-        "weight": 0.62
+        "weight": 0.61
       }
     ]
   },
@@ -261,20 +261,20 @@
       "holdings/003.json"
     ],
     "pageSize": 250,
-    "totalRows": 508,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 510,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 493
+    "publishedTotalHoldings": 495
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 69,
-    "asOf": "Nov 13 2026",
+    "totalRows": 72,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

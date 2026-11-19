@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GHYB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$43.15",
-    "value": 43.15,
-    "asOfDate": "Nov 12 2026"
+    "display": "$42.94",
+    "value": 42.94,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$43.08",
-    "value": 43.08,
-    "asOfDate": "Nov 12 2026",
+    "display": "$42.88",
+    "value": 42.88,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.16%",
-    "value": -0.16,
-    "asOfDate": "Nov 12 2026",
+    "display": "-0.13%",
+    "value": -0.13,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$127.30 M",
-    "value": 127300000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$126.67 M",
+    "value": 126670000,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 841,
-    "bidAskMidpoint": 43.09,
+    "publishedTotalHoldings": 848,
+    "bidAskMidpoint": 42.89,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 13,
@@ -86,8 +86,8 @@
       "mo1Text": "0.42%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": 0.4,
-      "qtdText": "0.40%",
+      "qtd": -0.14,
+      "qtdText": "-0.14%",
       "ytd": 0.3,
       "ytdText": "0.30%",
       "yr1": 1.35,
@@ -596,8 +596,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
     "top10Pct": 4.77,
     "rows": [
       {
@@ -606,7 +606,7 @@
       },
       {
         "name": "PARAMOUNT SKYDANCE CORP 4.875% 15 MAY 2030-30 144A",
-        "weight": 0.49
+        "weight": 0.48
       },
       {
         "name": "CLOUD SOFTWARE GROUP, LLC 6.5% 31 MAR 2029-27 144A",
@@ -614,11 +614,11 @@
       },
       {
         "name": "CENTENE CORPORATION 2.625% 01 AUG 2031-31",
-        "weight": 0.44
+        "weight": 0.45
       },
       {
         "name": "PARAMOUNT SKYDANCE CORP 4.904% 15 MAR 2032-31 144A",
-        "weight": 0.44
+        "weight": 0.43
       },
       {
         "name": "DAVITA INC. 4.625% 01 JUN 2030-27 144A",
@@ -626,14 +626,14 @@
       },
       {
         "name": "1261229 B.C. LTD. 10% 15 APR 2032-28 144A",
-        "weight": 0.41
-      },
-      {
-        "name": "IQVIA INC. 6.5% 15 MAY 2030-27 144A",
-        "weight": 0.4
+        "weight": 0.42
       },
       {
         "name": "WULF COMPUTE LLC 7.75% 15 OCT 2030-27 144A",
+        "weight": 0.4
+      },
+      {
+        "name": "IQVIA INC. 6.5% 15 MAY 2030-27 144A",
         "weight": 0.39
       },
       {
@@ -650,12 +650,12 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 843,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 850,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 841
+    "publishedTotalHoldings": 848
   },
   "history": {
     "pages": [
@@ -664,8 +664,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2298,
-    "asOf": "Nov 13 2026",
+    "totalRows": 2301,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

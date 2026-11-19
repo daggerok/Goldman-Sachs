@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSST",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.33",
-    "value": 50.33,
-    "asOfDate": "Nov 12 2026"
+    "display": "$50.37",
+    "value": 50.37,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$50.36",
-    "value": 50.36,
-    "asOfDate": "Nov 12 2026",
+    "display": "$50.39",
+    "value": 50.39,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Nov 12 2026",
+    "display": "0.04%",
+    "value": 0.04,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.79 B",
-    "value": 1794280000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$1.80 B",
+    "value": 1796780000,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 356,
-    "bidAskMidpoint": 50.36,
+    "publishedTotalHoldings": 358,
+    "bidAskMidpoint": 50.39,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 58,
@@ -86,8 +86,8 @@
       "mo1Text": "0.44%",
       "mo3": 0.97,
       "mo3Text": "0.97%",
-      "qtd": 0.5,
-      "qtdText": "0.50%",
+      "qtd": 0.54,
+      "qtdText": "0.54%",
       "ytd": 3.15,
       "ytdText": "3.15%",
       "yr1": 3.95,
@@ -516,13 +516,13 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
-    "top10Pct": 10.16,
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
+    "top10Pct": 10.12,
     "rows": [
       {
-        "name": "US GOVT T-BILL 25 FEB 2027",
-        "weight": 2.3
+        "name": "US GOVT T-BILL 02 MAR 2027",
+        "weight": 2.28
       },
       {
         "name": "HUNTINGTON NATIONAL BANK (TH 4.871% 12 APR 2028-27",
@@ -530,7 +530,7 @@
       },
       {
         "name": "WELLS FARGO & COMPANY FRN 22 APR 2028-27",
-        "weight": 0.96
+        "weight": 0.95
       },
       {
         "name": "US GOVT 4.125% 31 AUG 2028",
@@ -542,7 +542,7 @@
       },
       {
         "name": "DAIMLER TRUCK FINANCE NORTH A FRN 25 SEP 2027 144A",
-        "weight": 0.87
+        "weight": 0.86
       },
       {
         "name": "AERCAP IRELAND CAPITAL DESIGNATE 3% 29 OCT 2028-28",
@@ -568,12 +568,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 418,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 420,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 356
+    "publishedTotalHoldings": 358
   },
   "history": {
     "pages": [
@@ -581,8 +581,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1906,
-    "asOf": "Nov 13 2026",
+    "totalRows": 1909,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

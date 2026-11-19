@@ -1,0 +1,34 @@
+{
+  "ticker": "GBND",
+  "page": 4,
+  "pageSize": 250,
+  "totalRows": 751,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "ORACLE CORPORATION",
+      "Ticker": "-",
+      "Identifier": "68389XDM4",
+      "Weight": "0.02",
+      "Market Value": "101529.21",
+      "Shares Held": "124000",
+      "Asset Category": "",
+      "Coupon": "5.2",
+      "Maturity": "2035-09-26",
+      "ISIN": "US68389XDM48",
+      "SEDOL": "BVBFJW5"
+    }
+  ]
+}

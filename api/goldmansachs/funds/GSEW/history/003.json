@@ -2,7 +2,7 @@
   "ticker": "GSEW",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2304,
+  "totalRows": 2307,
   "headers": [
     "Date",
     "Close",
@@ -1833,6 +1833,24 @@
       "Close": "97.79000091552734",
       "Adj Close": "97.79",
       "Volume": "92600"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "96.31999969482422",
+      "Adj Close": "96.32",
+      "Volume": "240000"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "94.94000244140625",
+      "Adj Close": "94.94",
+      "Volume": "98500"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "94.68000030517578",
+      "Adj Close": "94.68",
+      "Volume": "213700"
     }
   ]
 }

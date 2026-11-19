@@ -2,7 +2,7 @@
   "ticker": "GIND",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 407,
+  "totalRows": 410,
   "headers": [
     "Date",
     "Close",
@@ -2451,6 +2451,24 @@
       "Close": "25.540000915527344",
       "Adj Close": "25.54",
       "Volume": "3700"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "25.399999618530273",
+      "Adj Close": "25.4",
+      "Volume": "8600"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "25.584999084472656",
+      "Adj Close": "25.58",
+      "Volume": "3200"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "25.393999099731445",
+      "Adj Close": "25.39",
+      "Volume": "400"
     }
   ]
 }

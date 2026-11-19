@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 12 2026",
+    "productPageAsOf": "Nov 17 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPRF",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.48",
-    "value": 47.48,
-    "asOfDate": "Nov 12 2026"
+    "display": "$47.26",
+    "value": 47.26,
+    "asOfDate": "Nov 17 2026"
   },
   "marketPrice": {
-    "display": "$47.54",
-    "value": 47.54,
-    "asOfDate": "Nov 12 2026",
+    "display": "$47.14",
+    "value": 47.14,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.12%",
-    "value": 0.12,
-    "asOfDate": "Nov 12 2026",
+    "display": "-0.25%",
+    "value": -0.25,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$166.18 M",
-    "value": 166180000,
-    "asOfDate": "Nov 12 2026",
+    "display": "$158.33 M",
+    "value": 158330000,
+    "asOfDate": "Nov 17 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 541,
-    "bidAskMidpoint": 47.54,
+    "publishedTotalHoldings": 536,
+    "bidAskMidpoint": 47.13,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 15,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.20%",
       "mo3": -2.42,
       "mo3Text": "-2.42%",
-      "qtd": -0.73,
-      "qtdText": "-0.73%",
+      "qtd": -0.96,
+      "qtdText": "-0.96%",
       "ytd": -1.31,
       "ytdText": "-1.31%",
       "yr1": -1.33,
@@ -272,9 +272,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 12 2026",
-    "asOf": "Nov 12 2026",
-    "top10Pct": 6.95,
+    "asOfDate": "Nov 17 2026",
+    "asOf": "Nov 17 2026",
+    "top10Pct": 6.93,
     "rows": [
       {
         "name": "BP CAPITAL MARKETS P.L.C. 4.875% 22 MAR 2049-30",
@@ -285,12 +285,12 @@
         "weight": 0.76
       },
       {
-        "name": "CITIGROUP INC. 6.875% 15 AUG 2049-30",
+        "name": "CVS HEALTH CORPORATION 7% 10 MAR 2055-29",
         "weight": 0.72
       },
       {
-        "name": "CVS HEALTH CORPORATION 7% 10 MAR 2055-29",
-        "weight": 0.72
+        "name": "CITIGROUP INC. 6.875% 15 AUG 2049-30",
+        "weight": 0.71
       },
       {
         "name": "JPMORGAN CHASE & CO. 6.875% 01 JUN 2049-29",
@@ -313,8 +313,8 @@
         "weight": 0.64
       },
       {
-        "name": "VERIZON COMMUNICATIONS INC. 6.05% 14 MAY 2058-33",
-        "weight": 0.62
+        "name": "WELLS FARGO & COMPANY 6.85% 15 SEP 2049-29",
+        "weight": 0.61
       }
     ]
   },
@@ -325,20 +325,20 @@
       "holdings/003.json"
     ],
     "pageSize": 250,
-    "totalRows": 541,
-    "asOfDate": "2026-11-12",
-    "asOf": "Nov 12 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-12)",
+    "totalRows": 538,
+    "asOfDate": "2026-11-17",
+    "asOf": "Nov 17 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 541
+    "publishedTotalHoldings": 536
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 575,
-    "asOf": "Nov 13 2026",
+    "totalRows": 578,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
