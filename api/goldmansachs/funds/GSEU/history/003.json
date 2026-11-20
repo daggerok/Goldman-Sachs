@@ -2,7 +2,7 @@
   "ticker": "GSEU",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2694,
+  "totalRows": 2696,
   "headers": [
     "Date",
     "Close",
@@ -4173,6 +4173,18 @@
       "Close": "47.17900085449219",
       "Adj Close": "47.18",
       "Volume": "7000"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "46.3390007019043",
+      "Adj Close": "46.34",
+      "Volume": "26300"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "45.25310134887695",
+      "Adj Close": "45.25",
+      "Volume": "51165"
     }
   ]
 }

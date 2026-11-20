@@ -2,7 +2,7 @@
   "ticker": "AAAU",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2077,
+  "totalRows": 2079,
   "headers": [
     "Date",
     "Close",
@@ -471,6 +471,18 @@
       "Close": "36.689998626708984",
       "Adj Close": "36.69",
       "Volume": "1606200"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "36.04999923706055",
+      "Adj Close": "36.05",
+      "Volume": "1941100"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "34.72999954223633",
+      "Adj Close": "34.73",
+      "Volume": "3670224"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "GCOR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1551,
+  "totalRows": 1553,
   "headers": [
     "Date",
     "Close",
@@ -3315,6 +3315,18 @@
       "Close": "39.625",
       "Adj Close": "39.63",
       "Volume": "65500"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "39.619998931884766",
+      "Adj Close": "39.62",
+      "Volume": "7322300"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "39.88999938964844",
+      "Adj Close": "39.89",
+      "Volume": "306476"
     }
   ]
 }

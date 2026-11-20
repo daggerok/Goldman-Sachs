@@ -1,0 +1,197 @@
+{
+  "ticker": "GSCZ",
+  "name": "Goldman Sachs Securitized Income ETF",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income",
+  "source": {
+    "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
+    "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
+    "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
+    "productPageAsOf": "Nov 19 2026",
+    "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
+    "distributionsDownload": null,
+    "navHistoryDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSCZ",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "38149W366",
+    "isin": "US38149W3667",
+    "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
+    "indexTicker": "FTSE 3-Month U.S. Treasury Bill Index",
+    "exchange": "NYSE Arca",
+    "morningstarCategory": null,
+    "navTicker": "GSCZ.NV",
+    "iopvTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.4%",
+    "value": 0.4,
+    "gross": 0.4,
+    "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
+  },
+  "nav": {
+    "display": "$50.03",
+    "value": 50.03,
+    "asOfDate": "Nov 19 2026"
+  },
+  "marketPrice": {
+    "display": "$50.01",
+    "value": 50.01,
+    "asOfDate": "Nov 19 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "premiumDiscount": {
+    "display": "-0.04%",
+    "value": -0.04,
+    "asOfDate": "Nov 19 2026",
+    "source": "official fund page Pricing Table"
+  },
+  "aum": {
+    "display": "$20.01 M",
+    "value": 20010000,
+    "asOfDate": "Nov 19 2026",
+    "source": "official fund page Total Fund Assets (Daily)"
+  },
+  "fundFacts": {
+    "sharesOutstanding": null,
+    "portfolioTurnover": null,
+    "publishedTotalHoldings": 86,
+    "bidAskMidpoint": 50.06,
+    "lbmaGoldPrice": null,
+    "lbmaGoldPriceAsOf": null,
+    "premiumDays": null,
+    "atNavDays": null,
+    "discountDays": null
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldBasis": null,
+    "dividendYieldKind": "indicated (latest distribution x inferred payments per year / NAV)",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not published on the official fund page for this fund"
+  },
+  "returns": {
+    "derivedFrom": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
+    "monthEnd": {
+      "asOfDate": "Nov 19 2026",
+      "mo1": null,
+      "mo1Text": "—",
+      "mo3": null,
+      "mo3Text": "—",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—"
+    },
+    "quarterEnd": {
+      "asOfDate": "Sep 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
+    }
+  },
+  "officialMarketPriceReturns": {
+    "monthEnd": null,
+    "quarterEnd": null
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "frequencyCode": "01 - Monthly",
+    "paymentsPerYear": 12,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "topHoldings": {
+    "asOfDate": "Nov 19 2026",
+    "asOf": "Nov 19 2026",
+    "top10Pct": 18.99,
+    "rows": [
+      {
+        "name": "CEDAR FUNDING VI AR3 2025-6A FRN 20 APR 2034 144A",
+        "weight": 2.34
+      },
+      {
+        "name": "MAGNETITE LI, LIM A1 2025-51A FRN 25 OCT 2038 144A",
+        "weight": 2.26
+      },
+      {
+        "name": "GOLDENTREE LOAN MA A 2026-29A FRN 20 APR 2038 144A",
+        "weight": 2.01
+      },
+      {
+        "name": "CIFC FUNDING 2021- AR 2025-7A FRN 23 JAN 2035 144A",
+        "weight": 2.01
+      },
+      {
+        "name": "PIKES PEAK CLO 18 A1 2025-18A FRN 20 APR 2038 144A",
+        "weight": 2.01
+      },
+      {
+        "name": "NISSAN AUTO LEASE TRUS A3 2026-C 5.29% 15 FEB 2030",
+        "weight": 2
+      },
+      {
+        "name": "DRYDEN 43 SENIOR AR3 2024-43A FRN 20 APR 2034 144A",
+        "weight": 1.84
+      },
+      {
+        "name": "DRYDEN 121 CLO, A2 2024-121A FRN 15 JAN 2037 144A",
+        "weight": 1.51
+      },
+      {
+        "name": "WIND RIVER 2023-1 BR 2025-1A FRN 25 JUL 2038 144A",
+        "weight": 1.51
+      },
+      {
+        "name": "WELLS FARGO COMME B 2024-1CHI FRN 15 JUL 2035 144A",
+        "weight": 1.5
+      }
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 93,
+    "asOfDate": "2026-11-19",
+    "asOf": "Nov 19 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
+    "publishedTotalHoldings": 86
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1,
+    "asOf": "Nov 19 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

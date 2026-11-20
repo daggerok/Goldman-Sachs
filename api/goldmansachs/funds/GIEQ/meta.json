@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 17 2026",
+    "productPageAsOf": "Nov 19 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110311/38149W382/goldman-sachs-data-enhanced-international-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIEQ",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$40.18",
-    "value": 40.18,
-    "asOfDate": "Nov 17 2026"
+    "display": "$39.51",
+    "value": 39.51,
+    "asOfDate": "Nov 19 2026"
   },
   "marketPrice": {
-    "display": "$40.21",
-    "value": 40.21,
-    "asOfDate": "Nov 17 2026",
+    "display": "$39.19",
+    "value": 39.19,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.06,
-    "asOfDate": "Nov 17 2026",
+    "display": "-0.81%",
+    "value": -0.81,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$72.33 M",
-    "value": 72330000,
-    "asOfDate": "Nov 17 2026",
+    "display": "$71.12 M",
+    "value": 71120000,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 336,
-    "bidAskMidpoint": 40.23,
+    "bidAskMidpoint": 39.19,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 42,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.49%",
       "mo3": -2.45,
       "mo3Text": "-2.45%",
-      "qtd": -3.09,
-      "qtdText": "-3.09%",
+      "qtd": -7.01,
+      "qtdText": "-7.01%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -163,49 +163,49 @@
     "rows": []
   },
   "topHoldings": {
-    "asOfDate": "Nov 17 2026",
-    "asOf": "Nov 17 2026",
-    "top10Pct": 15.71,
+    "asOfDate": "Nov 19 2026",
+    "asOf": "Nov 19 2026",
+    "top10Pct": 15.65,
     "rows": [
       {
         "name": "ASML Holding NV",
-        "weight": 2.82
+        "weight": 2.98
       },
       {
         "name": "Roche Holding AG",
-        "weight": 2.33
+        "weight": 2.31
       },
       {
         "name": "Novartis AG",
-        "weight": 1.55
+        "weight": 1.5
       },
       {
         "name": "Siemens AG",
-        "weight": 1.42
-      },
-      {
-        "name": "BHP Group Ltd",
-        "weight": 1.36
+        "weight": 1.43
       },
       {
         "name": "Nestle SA",
-        "weight": 1.36
+        "weight": 1.34
+      },
+      {
+        "name": "BHP Group Ltd",
+        "weight": 1.32
       },
       {
         "name": "Mitsubishi UFJ Financial Group Inc",
-        "weight": 1.3
+        "weight": 1.28
       },
       {
         "name": "Unilever PLC",
-        "weight": 1.26
+        "weight": 1.22
       },
       {
         "name": "UBS Group AG",
-        "weight": 1.19
+        "weight": 1.18
       },
       {
         "name": "TotalEnergies SE",
-        "weight": 1.12
+        "weight": 1.09
       }
     ]
   },
@@ -216,9 +216,9 @@
     ],
     "pageSize": 250,
     "totalRows": 342,
-    "asOfDate": "2026-11-17",
-    "asOf": "Nov 17 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
+    "asOfDate": "2026-11-19",
+    "asOf": "Nov 19 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 336
   },
@@ -227,8 +227,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 126,
-    "asOf": "Nov 18 2026",
+    "totalRows": 128,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

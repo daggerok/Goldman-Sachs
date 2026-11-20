@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 17 2026",
+    "productPageAsOf": "Nov 19 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCOR",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$39.52",
-    "value": 39.52,
-    "asOfDate": "Nov 17 2026"
+    "display": "$39.66",
+    "value": 39.66,
+    "asOfDate": "Nov 19 2026"
   },
   "marketPrice": {
-    "display": "$39.52",
-    "value": 39.52,
-    "asOfDate": "Nov 17 2026",
+    "display": "$39.62",
+    "value": 39.62,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Nov 17 2026",
+    "display": "-0.10%",
+    "value": -0.1,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$843.82 M",
-    "value": 843820000,
-    "asOfDate": "Nov 17 2026",
+    "display": "$846.71 M",
+    "value": 846710000,
+    "asOfDate": "Nov 19 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1885,
-    "bidAskMidpoint": 39.51,
+    "publishedTotalHoldings": 1883,
+    "bidAskMidpoint": 39.64,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 49,
@@ -86,8 +86,8 @@
       "mo1Text": "2.47%",
       "mo3": 0.09,
       "mo3Text": "0.09%",
-      "qtd": 1.51,
-      "qtdText": "1.51%",
+      "qtd": 2.18,
+      "qtdText": "2.18%",
       "ytd": -0.6,
       "ytdText": "-0.60%",
       "yr1": -0.26,
@@ -452,49 +452,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 17 2026",
-    "asOf": "Nov 17 2026",
-    "top10Pct": 21.04,
+    "asOfDate": "Nov 19 2026",
+    "asOf": "Nov 19 2026",
+    "top10Pct": 15.79,
     "rows": [
       {
-        "name": "US GOVT 3.875% 30 NOV 2029",
-        "weight": 4.13
-      },
-      {
         "name": "US GOVT 0.75% 31 JAN 2028",
-        "weight": 3.71
-      },
-      {
-        "name": "US GOVT 4% 31 OCT 2029",
-        "weight": 2.53
+        "weight": 3.29
       },
       {
         "name": "FNCL 5.50 12/26 TBA",
-        "weight": 2.17
-      },
-      {
-        "name": "US GOVT 1.25% 15 AUG 2031",
-        "weight": 1.92
-      },
-      {
-        "name": "FNCL 5.00 12/26 TBA",
-        "weight": 1.67
+        "weight": 2.1
       },
       {
         "name": "US GOVT 3.75% 15 APR 2028",
-        "weight": 1.45
+        "weight": 2.03
       },
       {
-        "name": "US GOVT 2.875% 15 MAY 2032",
-        "weight": 1.42
+        "name": "FNCL 5.00 12/26 TBA",
+        "weight": 1.57
       },
       {
-        "name": "US GOVT 4% 15 FEB 2034",
-        "weight": 1.04
+        "name": "US GOVT 3.875% 30 NOV 2029",
+        "weight": 1.28
+      },
+      {
+        "name": "US GOVT 4% 31 OCT 2029",
+        "weight": 1.25
+      },
+      {
+        "name": "US GOVT 4.875% 15 OCT 2029",
+        "weight": 1.21
+      },
+      {
+        "name": "FNCL SD7543",
+        "weight": 1.16
+      },
+      {
+        "name": "FNCL SD2903",
+        "weight": 0.96
       },
       {
         "name": "G2SF 5.00 12/26 TBA",
-        "weight": 1
+        "weight": 0.94
       }
     ]
   },
@@ -510,12 +510,12 @@
       "holdings/008.json"
     ],
     "pageSize": 250,
-    "totalRows": 1893,
-    "asOfDate": "2026-11-17",
-    "asOf": "Nov 17 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-17)",
+    "totalRows": 1891,
+    "asOfDate": "2026-11-19",
+    "asOf": "Nov 19 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 1885
+    "publishedTotalHoldings": 1883
   },
   "history": {
     "pages": [
@@ -523,8 +523,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1551,
-    "asOf": "Nov 18 2026",
+    "totalRows": 1553,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
