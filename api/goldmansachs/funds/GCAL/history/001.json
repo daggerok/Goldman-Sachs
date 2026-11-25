@@ -2,7 +2,7 @@
   "ticker": "GCAL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 581,
+  "totalRows": 583,
   "headers": [
     "Date",
     "Close",
@@ -3494,7 +3494,19 @@
       "Date": "Nov 20 2026",
       "Close": "49.61000061035156",
       "Adj Close": "49.61",
-      "Volume": "144216"
+      "Volume": "144200"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "49.689998626708984",
+      "Adj Close": "49.69",
+      "Volume": "66700"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "49.7599983215332",
+      "Adj Close": "49.76",
+      "Volume": "49408"
     }
   ]
 }

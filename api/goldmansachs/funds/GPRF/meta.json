@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 23 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105611/38149W127/goldman-sachs-access-u-s-preferred-stock-and-hybrid-securities-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GPRF",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$47.23",
-    "value": 47.23,
-    "asOfDate": "Nov 19 2026"
+    "display": "$47.52",
+    "value": 47.52,
+    "asOfDate": "Nov 23 2026"
   },
   "marketPrice": {
-    "display": "$47.17",
-    "value": 47.17,
-    "asOfDate": "Nov 19 2026",
+    "display": "$47.40",
+    "value": 47.4,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.14%",
-    "value": -0.14,
-    "asOfDate": "Nov 19 2026",
+    "display": "-0.25%",
+    "value": -0.25,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$158.23 M",
-    "value": 158230000,
-    "asOfDate": "Nov 19 2026",
+    "display": "$159.18 M",
+    "value": 159180000,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 536,
-    "bidAskMidpoint": 47.17,
+    "publishedTotalHoldings": 537,
+    "bidAskMidpoint": 47.45,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 15,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.20%",
       "mo3": -2.42,
       "mo3Text": "-2.42%",
-      "qtd": -1.07,
-      "qtdText": "-1.07%",
+      "qtd": -0.61,
+      "qtdText": "-0.61%",
       "ytd": -1.31,
       "ytdText": "-1.31%",
       "yr1": -1.33,
@@ -272,9 +272,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 6.93,
+    "asOfDate": "Nov 23 2026",
+    "asOf": "Nov 23 2026",
+    "top10Pct": 6.97,
     "rows": [
       {
         "name": "BP CAPITAL MARKETS P.L.C. 4.875% 22 MAR 2049-30",
@@ -282,7 +282,7 @@
       },
       {
         "name": "JPMORGAN CHASE & CO. 6.5% 01 APR 2049-30",
-        "weight": 0.76
+        "weight": 0.77
       },
       {
         "name": "CVS HEALTH CORPORATION 7% 10 MAR 2055-29",
@@ -302,7 +302,11 @@
       },
       {
         "name": "CITIGROUP INC. 6.625% 15 FEB 2049-31",
-        "weight": 0.66
+        "weight": 0.65
+      },
+      {
+        "name": "PRUDENTIAL FINANCIAL, INC. 4.5% 15 SEP 2047-27",
+        "weight": 0.65
       },
       {
         "name": "BANK OF AMERICA CORPORATION 6.25% 26 JUL 2049-30",
@@ -311,10 +315,6 @@
       {
         "name": "WELLS FARGO & COMPANY 6.125% 15 JUN 2049-31",
         "weight": 0.64
-      },
-      {
-        "name": "WELLS FARGO & COMPANY 6.85% 15 SEP 2049-29",
-        "weight": 0.61
       }
     ]
   },
@@ -325,20 +325,20 @@
       "holdings/003.json"
     ],
     "pageSize": 250,
-    "totalRows": 538,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "totalRows": 539,
+    "asOfDate": "2026-11-23",
+    "asOf": "Nov 23 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 536
+    "publishedTotalHoldings": 537
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 580,
-    "asOf": "Nov 20 2026",
+    "totalRows": 582,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

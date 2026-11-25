@@ -2,7 +2,7 @@
   "ticker": "GTIP",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2034,
+  "totalRows": 2036,
   "headers": [
     "Date",
     "Close",
@@ -212,7 +212,19 @@
       "Date": "Nov 20 2026",
       "Close": "46.84000015258789",
       "Adj Close": "46.84",
-      "Volume": "21190"
+      "Volume": "21200"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "46.79999923706055",
+      "Adj Close": "46.8",
+      "Volume": "60400"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "46.75",
+      "Adj Close": "46.75",
+      "Volume": "24600"
     }
   ]
 }

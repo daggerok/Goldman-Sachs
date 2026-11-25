@@ -2,7 +2,7 @@
   "ticker": "GUSA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1157,
+  "totalRows": 1159,
   "headers": [
     "Date",
     "Close",
@@ -950,7 +950,19 @@
       "Date": "Nov 20 2026",
       "Close": "59.5099983215332",
       "Adj Close": "59.51",
-      "Volume": "1630"
+      "Volume": "1600"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "62.37200164794922",
+      "Adj Close": "62.37",
+      "Volume": "400"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "62.03300094604492",
+      "Adj Close": "62.03",
+      "Volume": "37300"
     }
   ]
 }

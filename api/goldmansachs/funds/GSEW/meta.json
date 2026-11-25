@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 23 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$93.11",
-    "value": 93.11,
-    "asOfDate": "Nov 19 2026"
+    "display": "$93.71",
+    "value": 93.71,
+    "asOfDate": "Nov 23 2026"
   },
   "marketPrice": {
-    "display": "$93.11",
-    "value": 93.11,
-    "asOfDate": "Nov 19 2026",
+    "display": "$93.72",
+    "value": 93.72,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Nov 19 2026",
+    "display": "0.01%",
+    "value": 0.01,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.13 B",
-    "value": 2132280000.0000002,
-    "asOfDate": "Nov 19 2026",
+    "display": "$2.16 B",
+    "value": 2155220000,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 494,
-    "bidAskMidpoint": 93.13,
+    "publishedTotalHoldings": 495,
+    "bidAskMidpoint": 93.71,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "3.74%",
       "mo3": 2.26,
       "mo3Text": "2.26%",
-      "qtd": -3.6,
-      "qtdText": "-3.60%",
+      "qtd": -0.04,
+      "qtdText": "-0.04%",
       "ytd": 14.65,
       "ytdText": "14.65%",
       "yr1": 15.78,
@@ -308,21 +308,21 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 2.69,
+    "asOfDate": "Nov 23 2026",
+    "asOf": "Nov 23 2026",
+    "top10Pct": 2.66,
     "rows": [
       {
         "name": "Kimberly-Clark Corp",
         "weight": 0.37
       },
       {
-        "name": "AppLovin Corp",
-        "weight": 0.3
+        "name": "Insmed Inc",
+        "weight": 0.29
       },
       {
-        "name": "Insmed Inc",
-        "weight": 0.28
+        "name": "AppLovin Corp",
+        "weight": 0.29
       },
       {
         "name": "Fox Corp",
@@ -330,10 +330,10 @@
       },
       {
         "name": "Ubiquiti Inc",
-        "weight": 0.26
+        "weight": 0.25
       },
       {
-        "name": "Cloudflare Inc",
+        "name": "NRG Energy Inc",
         "weight": 0.24
       },
       {
@@ -341,16 +341,16 @@
         "weight": 0.24
       },
       {
+        "name": "Viking Holdings Ltd",
+        "weight": 0.24
+      },
+      {
         "name": "Okta Inc",
-        "weight": 0.24
+        "weight": 0.23
       },
       {
-        "name": "NRG Energy Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "Charter Communications Inc",
-        "weight": 0.24
+        "name": "Cloudflare Inc",
+        "weight": 0.23
       }
     ]
   },
@@ -360,12 +360,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 495,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "totalRows": 496,
+    "asOfDate": "2026-11-23",
+    "asOf": "Nov 23 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 494
+    "publishedTotalHoldings": 495
   },
   "history": {
     "pages": [
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2309,
-    "asOf": "Nov 20 2026",
+    "totalRows": 2311,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 23 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTEK",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$45.20",
-    "value": 45.2,
-    "asOfDate": "Nov 19 2026"
+    "display": "$44.00",
+    "value": 44,
+    "asOfDate": "Nov 23 2026"
   },
   "marketPrice": {
-    "display": "$44.54",
-    "value": 44.54,
-    "asOfDate": "Nov 19 2026",
+    "display": "$45.65",
+    "value": 45.65,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-1.46%",
-    "value": -1.46,
-    "asOfDate": "Nov 19 2026",
+    "display": "3.75%",
+    "value": 3.75,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$192.09 M",
-    "value": 192090000,
-    "asOfDate": "Nov 19 2026",
+    "display": "$186.98 M",
+    "value": 186980000,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 58,
-    "bidAskMidpoint": 44.59,
+    "bidAskMidpoint": 45.57,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 37,
@@ -86,8 +86,8 @@
       "mo1Text": "-11.89%",
       "mo3": -4.4,
       "mo3Text": "-4.40%",
-      "qtd": -31.32,
-      "qtdText": "-31.32%",
+      "qtd": -26.55,
+      "qtdText": "-26.55%",
       "ytd": 28.9,
       "ytdText": "28.90%",
       "yr1": 24.85,
@@ -180,49 +180,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 29.6,
+    "asOfDate": "Nov 23 2026",
+    "asOf": "Nov 23 2026",
+    "top10Pct": 29.53,
     "rows": [
       {
         "name": "Cloudflare Inc",
-        "weight": 3.57
-      },
-      {
-        "name": "SK Square Co Ltd",
-        "weight": 3.24
+        "weight": 3.52
       },
       {
         "name": "MediaTek Inc",
-        "weight": 3.11
-      },
-      {
-        "name": "Marvell Technology Inc",
-        "weight": 2.93
+        "weight": 3.17
       },
       {
         "name": "Amphenol Corp",
-        "weight": 2.93
+        "weight": 3.08
       },
       {
         "name": "Motorola Solutions Inc",
-        "weight": 2.92
+        "weight": 3.04
+      },
+      {
+        "name": "SK Square Co Ltd",
+        "weight": 3.03
       },
       {
         "name": "ASE Technology Holding Co Ltd",
-        "weight": 2.92
+        "weight": 2.87
       },
       {
         "name": "eBay Inc",
-        "weight": 2.77
+        "weight": 2.86
       },
       {
         "name": "Snowflake Inc",
-        "weight": 2.65
+        "weight": 2.75
       },
       {
         "name": "Cadence Design Systems Inc",
-        "weight": 2.56
+        "weight": 2.62
+      },
+      {
+        "name": "Spotify Technology SA",
+        "weight": 2.59
       }
     ]
   },
@@ -232,9 +232,9 @@
     ],
     "pageSize": 250,
     "totalRows": 64,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "asOfDate": "2026-11-23",
+    "asOf": "Nov 23 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 58
   },
@@ -244,8 +244,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1302,
-    "asOf": "Nov 20 2026",
+    "totalRows": 1304,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

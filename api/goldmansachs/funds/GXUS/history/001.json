@@ -2,7 +2,7 @@
   "ticker": "GXUS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 865,
+  "totalRows": 867,
   "headers": [
     "Date",
     "Close",
@@ -5196,9 +5196,21 @@
     },
     {
       "Date": "Nov 20 2026",
-      "Close": "55.21009826660156",
+      "Close": "55.209999084472656",
       "Adj Close": "55.21",
-      "Volume": "11460"
+      "Volume": "11500"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "57.33700180053711",
+      "Adj Close": "57.34",
+      "Volume": "15000"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "57.15999984741211",
+      "Adj Close": "57.16",
+      "Volume": "200"
     }
   ]
 }

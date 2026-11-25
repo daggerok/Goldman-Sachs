@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 23 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GGUS",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$58.82",
-    "value": 58.82,
-    "asOfDate": "Nov 19 2026"
+    "display": "$59.70",
+    "value": 59.7,
+    "asOfDate": "Nov 23 2026"
   },
   "marketPrice": {
-    "display": "$58.93",
-    "value": 58.93,
-    "asOfDate": "Nov 19 2026",
+    "display": "$59.74",
+    "value": 59.74,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.18,
-    "asOfDate": "Nov 19 2026",
+    "display": "0.07%",
+    "value": 0.07,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$458.79 M",
-    "value": 458790000,
-    "asOfDate": "Nov 19 2026",
+    "display": "$546.27 M",
+    "value": 546270000,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 369,
-    "bidAskMidpoint": 58.82,
+    "bidAskMidpoint": 59.74,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 36,
@@ -86,8 +86,8 @@
       "mo1Text": "-6.09%",
       "mo3": -0.37,
       "mo3Text": "-0.37%",
-      "qtd": -19.3,
-      "qtdText": "-19.30%",
+      "qtd": -14.51,
+      "qtdText": "-14.51%",
       "ytd": 0.89,
       "ytdText": "0.89%",
       "yr1": -1.31,
@@ -212,49 +212,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 48.26,
+    "asOfDate": "Nov 23 2026",
+    "asOf": "Nov 23 2026",
+    "top10Pct": 48.91,
     "rows": [
       {
         "name": "NVIDIA Corp",
-        "weight": 10.7
+        "weight": 11.92
       },
       {
         "name": "Alphabet Inc",
-        "weight": 5.07
-      },
-      {
-        "name": "Broadcom Inc",
-        "weight": 4.75
+        "weight": 5.17
       },
       {
         "name": "Apple Inc",
-        "weight": 4.63
+        "weight": 4.56
       },
       {
         "name": "Tesla Inc",
-        "weight": 4.18
+        "weight": 4.24
+      },
+      {
+        "name": "Broadcom Inc",
+        "weight": 4.23
       },
       {
         "name": "Alphabet Inc",
-        "weight": 4.11
+        "weight": 4.18
       },
       {
         "name": "Microsoft Corp",
-        "weight": 3.96
+        "weight": 3.86
       },
       {
         "name": "Eli Lilly & Co",
-        "weight": 3.84
-      },
-      {
-        "name": "Meta Platforms Inc",
         "weight": 3.82
       },
       {
-        "name": "Advanced Micro Devices Inc",
-        "weight": 3.2
+        "name": "Meta Platforms Inc",
+        "weight": 3.77
+      },
+      {
+        "name": "Micron Technology Inc",
+        "weight": 3.16
       }
     ]
   },
@@ -265,9 +265,9 @@
     ],
     "pageSize": 250,
     "totalRows": 371,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "asOfDate": "2026-11-23",
+    "asOf": "Nov 23 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 369
   },
@@ -276,8 +276,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 747,
-    "asOf": "Nov 20 2026",
+    "totalRows": 749,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

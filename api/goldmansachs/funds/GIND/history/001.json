@@ -2,7 +2,7 @@
   "ticker": "GIND",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 412,
+  "totalRows": 414,
   "headers": [
     "Date",
     "Close",
@@ -2480,7 +2480,19 @@
       "Date": "Nov 20 2026",
       "Close": "25.985000610351562",
       "Adj Close": "25.99",
-      "Volume": "28407"
+      "Volume": "28400"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "25.722999572753906",
+      "Adj Close": "25.72",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "26.040000915527344",
+      "Adj Close": "26.04",
+      "Volume": "1000"
     }
   ]
 }

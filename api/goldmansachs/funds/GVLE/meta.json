@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 23 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109509/38149W416/goldman-sachs-value-opportunities-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GVLE",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -37,31 +37,31 @@
   "nav": {
     "display": "$47.57",
     "value": 47.57,
-    "asOfDate": "Nov 19 2026"
+    "asOfDate": "Nov 23 2026"
   },
   "marketPrice": {
-    "display": "$47.58",
-    "value": 47.58,
-    "asOfDate": "Nov 19 2026",
+    "display": "$47.60",
+    "value": 47.6,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Nov 19 2026",
+    "display": "0.06%",
+    "value": 0.06,
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$39.70 M",
     "value": 39700000,
-    "asOfDate": "Nov 19 2026",
+    "asOfDate": "Nov 23 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 28,
-    "bidAskMidpoint": 47.57,
+    "bidAskMidpoint": 47.56,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 46,
@@ -86,8 +86,8 @@
       "mo1Text": "2.22%",
       "mo3": -0.14,
       "mo3Text": "-0.14%",
-      "qtd": -1.86,
-      "qtdText": "-1.86%",
+      "qtd": 0.76,
+      "qtdText": "0.76%",
       "ytd": 18.52,
       "ytdText": "18.52%",
       "yr1": 22.08,
@@ -168,49 +168,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 52.74,
+    "asOfDate": "Nov 23 2026",
+    "asOf": "Nov 23 2026",
+    "top10Pct": 52.65,
     "rows": [
       {
         "name": "Microsoft Corp",
-        "weight": 9.01
+        "weight": 8.91
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 8.13
+        "weight": 8.07
       },
       {
         "name": "Merck & Co Inc",
-        "weight": 5.19
+        "weight": 5.29
+      },
+      {
+        "name": "Walmart Inc",
+        "weight": 4.93
       },
       {
         "name": "Berkshire Hathaway Inc",
         "weight": 4.88
       },
       {
-        "name": "Walmart Inc",
-        "weight": 4.79
-      },
-      {
         "name": "JPMorgan Chase & Co",
-        "weight": 4.6
+        "weight": 4.54
       },
       {
         "name": "Thermo Fisher Scientific Inc",
-        "weight": 4.35
+        "weight": 4.34
       },
       {
         "name": "ConocoPhillips",
-        "weight": 4.2
+        "weight": 4.11
       },
       {
         "name": "Procter & Gamble Co",
-        "weight": 3.81
+        "weight": 3.85
       },
       {
         "name": "Morgan Stanley",
-        "weight": 3.78
+        "weight": 3.73
       }
     ]
   },
@@ -220,9 +220,9 @@
     ],
     "pageSize": 250,
     "totalRows": 29,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "asOfDate": "2026-11-23",
+    "asOf": "Nov 23 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 28
   },
@@ -231,8 +231,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 255,
-    "asOf": "Nov 20 2026",
+    "totalRows": 257,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
