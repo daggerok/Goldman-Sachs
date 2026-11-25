@@ -2,7 +2,7 @@
   "ticker": "GSLC",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2812,
+  "totalRows": 2813,
   "headers": [
     "Date",
     "Close",
@@ -4881,6 +4881,12 @@
       "Close": "138.02999877929688",
       "Adj Close": "138.03",
       "Volume": "230300"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "137.89999389648438",
+      "Adj Close": "137.9",
+      "Volume": "263684"
     }
   ]
 }

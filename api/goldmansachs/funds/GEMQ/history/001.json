@@ -2,7 +2,7 @@
   "ticker": "GEMQ",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 24,
+  "totalRows": 25,
   "headers": [
     "Date",
     "Close",
@@ -153,6 +153,12 @@
       "Close": "20.530000686645508",
       "Adj Close": "20.53",
       "Volume": "100"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "20.40369987487793",
+      "Adj Close": "20.4",
+      "Volume": "9"
     }
   ]
 }

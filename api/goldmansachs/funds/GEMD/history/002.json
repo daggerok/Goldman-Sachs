@@ -2,7 +2,7 @@
   "ticker": "GEMD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1196,
+  "totalRows": 1197,
   "headers": [
     "Date",
     "Close",
@@ -1185,6 +1185,12 @@
       "Close": "39.54499816894531",
       "Adj Close": "39.54",
       "Volume": "6200"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "39.724300384521484",
+      "Adj Close": "39.72",
+      "Volume": "1733"
     }
   ]
 }

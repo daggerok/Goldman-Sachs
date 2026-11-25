@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110439/38149W390/goldman-sachs-data-enhanced-emerging-markets-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GEMQ",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$20.10",
-    "value": 20.1,
-    "asOfDate": "Nov 23 2026"
+    "display": "$20.84",
+    "value": 20.84,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$20.93",
-    "value": 20.93,
-    "asOfDate": "Nov 23 2026",
+    "display": "$20.53",
+    "value": 20.53,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "4.14%",
-    "value": 4.14,
-    "asOfDate": "Nov 23 2026",
+    "display": "-1.49%",
+    "value": -1.49,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$8.04 M",
-    "value": 8039999.999999999,
-    "asOfDate": "Nov 23 2026",
+    "display": "$8.34 M",
+    "value": 8340000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 229,
-    "bidAskMidpoint": 20.93,
+    "bidAskMidpoint": 20.53,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 8,
@@ -163,49 +163,49 @@
     "rows": []
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 37.85,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 38.86,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 15.51
+        "weight": 16.4
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 7.24
+        "weight": 7.48
       },
       {
         "name": "SK hynix Inc",
-        "weight": 4.57
+        "weight": 4.72
       },
       {
         "name": "Tencent Holdings Ltd",
-        "weight": 2.68
-      },
-      {
-        "name": "Alibaba Group Holding Ltd",
-        "weight": 1.7
+        "weight": 2.57
       },
       {
         "name": "MediaTek Inc",
-        "weight": 1.53
+        "weight": 1.62
+      },
+      {
+        "name": "Alibaba Group Holding Ltd",
+        "weight": 1.62
       },
       {
         "name": "Industrial & Commercial Bank of China Ltd",
-        "weight": 1.39
+        "weight": 1.33
       },
       {
         "name": "Bank of China Ltd",
-        "weight": 1.15
+        "weight": 1.12
       },
       {
         "name": "Saudi National Bank",
-        "weight": 1.08
+        "weight": 1.03
       },
       {
         "name": "Saudi Arabian Oil Co",
-        "weight": 1
+        "weight": 0.97
       }
     ]
   },
@@ -214,10 +214,10 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 241,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 240,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 229
   },
@@ -226,8 +226,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 24,
-    "asOf": "Nov 24 2026",
+    "totalRows": 25,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

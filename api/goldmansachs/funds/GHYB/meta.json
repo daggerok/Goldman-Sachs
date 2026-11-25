@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GHYB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$42.88",
-    "value": 42.88,
-    "asOfDate": "Nov 23 2026"
+    "display": "$42.74",
+    "value": 42.74,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$42.79",
-    "value": 42.79,
-    "asOfDate": "Nov 23 2026",
+    "display": "$42.73",
+    "value": 42.73,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.22%",
-    "value": -0.22,
-    "asOfDate": "Nov 23 2026",
+    "display": "-0.01%",
+    "value": -0.01,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$124.34 M",
-    "value": 124340000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$123.96 M",
+    "value": 123960000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 843,
-    "bidAskMidpoint": 42.79,
+    "publishedTotalHoldings": 842,
+    "bidAskMidpoint": 42.74,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 13,
@@ -86,8 +86,8 @@
       "mo1Text": "0.42%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": -0.3,
-      "qtdText": "-0.30%",
+      "qtd": -0.19,
+      "qtdText": "-0.19%",
       "ytd": 0.3,
       "ytdText": "0.30%",
       "yr1": 1.35,
@@ -596,8 +596,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
     "top10Pct": 4.85,
     "rows": [
       {
@@ -614,7 +614,7 @@
       },
       {
         "name": "CENTENE CORPORATION 2.625% 01 AUG 2031-31",
-        "weight": 0.45
+        "weight": 0.46
       },
       {
         "name": "DAVITA INC. 4.625% 01 JUN 2030-27 144A",
@@ -630,14 +630,14 @@
       },
       {
         "name": "WULF COMPUTE LLC 7.75% 15 OCT 2030-27 144A",
-        "weight": 0.41
+        "weight": 0.4
       },
       {
         "name": "IQVIA INC. 6.5% 15 MAY 2030-27 144A",
         "weight": 0.4
       },
       {
-        "name": "SOFTBANK GROUP CORP. 9.25% 01 APR 2032-32 144A",
+        "name": "DIRECTV FINANCING, LLC 10% 15 FEB 2031-27 144A",
         "weight": 0.39
       }
     ]
@@ -650,12 +650,12 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 845,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 844,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 843
+    "publishedTotalHoldings": 842
   },
   "history": {
     "pages": [
@@ -664,8 +664,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2305,
-    "asOf": "Nov 24 2026",
+    "totalRows": 2306,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

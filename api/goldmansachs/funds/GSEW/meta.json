@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSEW",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,26 +35,26 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$93.71",
-    "value": 93.71,
-    "asOfDate": "Nov 23 2026"
+    "display": "$93.70",
+    "value": 93.7,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$93.72",
-    "value": 93.72,
-    "asOfDate": "Nov 23 2026",
+    "display": "$93.68",
+    "value": 93.68,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01,
-    "asOfDate": "Nov 23 2026",
+    "display": "-0.02%",
+    "value": -0.02,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.16 B",
-    "value": 2155220000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$2.13 B",
+    "value": 2126909999.9999998,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
@@ -86,8 +86,8 @@
       "mo1Text": "3.74%",
       "mo3": 2.26,
       "mo3Text": "2.26%",
-      "qtd": -0.04,
-      "qtdText": "-0.04%",
+      "qtd": 0.68,
+      "qtdText": "0.68%",
       "ytd": 14.65,
       "ytdText": "14.65%",
       "yr1": 15.78,
@@ -308,21 +308,21 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 2.66,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 2.71,
     "rows": [
       {
         "name": "Kimberly-Clark Corp",
-        "weight": 0.37
+        "weight": 0.38
       },
       {
         "name": "Insmed Inc",
-        "weight": 0.29
+        "weight": 0.33
       },
       {
         "name": "AppLovin Corp",
-        "weight": 0.29
+        "weight": 0.3
       },
       {
         "name": "Fox Corp",
@@ -333,11 +333,7 @@
         "weight": 0.25
       },
       {
-        "name": "NRG Energy Inc",
-        "weight": 0.24
-      },
-      {
-        "name": "Coherent Corp",
+        "name": "Charter Communications Inc",
         "weight": 0.24
       },
       {
@@ -345,11 +341,15 @@
         "weight": 0.24
       },
       {
-        "name": "Okta Inc",
+        "name": "ROBLOX Corp",
         "weight": 0.23
       },
       {
         "name": "Cloudflare Inc",
+        "weight": 0.23
+      },
+      {
+        "name": "Target Corp",
         "weight": 0.23
       }
     ]
@@ -361,9 +361,9 @@
     ],
     "pageSize": 250,
     "totalRows": 496,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 495
   },
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2311,
-    "asOf": "Nov 24 2026",
+    "totalRows": 2312,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

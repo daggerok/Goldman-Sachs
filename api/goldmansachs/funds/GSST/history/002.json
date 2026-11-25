@@ -2,7 +2,7 @@
   "ticker": "GSST",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1913,
+  "totalRows": 1914,
   "headers": [
     "Date",
     "Close",
@@ -5487,6 +5487,12 @@
       "Close": "50.439998626708984",
       "Adj Close": "50.44",
       "Volume": "197100"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "50.470001220703125",
+      "Adj Close": "50.47",
+      "Volume": "303657"
     }
   ]
 }

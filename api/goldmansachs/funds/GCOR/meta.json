@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103404/38149W101/goldman-sachs-access-u-s-aggregate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCOR",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$39.91",
-    "value": 39.91,
-    "asOfDate": "Nov 23 2026"
-  },
-  "marketPrice": {
     "display": "$39.89",
     "value": 39.89,
-    "asOfDate": "Nov 23 2026",
+    "asOfDate": "Nov 24 2026"
+  },
+  "marketPrice": {
+    "display": "$39.85",
+    "value": 39.85,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.05%",
-    "value": -0.05,
-    "asOfDate": "Nov 23 2026",
+    "display": "-0.10%",
+    "value": -0.1,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$584.66 M",
-    "value": 584660000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$568.40 M",
+    "value": 568400000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1478,
-    "bidAskMidpoint": 39.9,
+    "publishedTotalHoldings": 1445,
+    "bidAskMidpoint": 39.88,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 49,
@@ -86,8 +86,8 @@
       "mo1Text": "2.47%",
       "mo3": 0.09,
       "mo3Text": "0.09%",
-      "qtd": 2.07,
-      "qtdText": "2.07%",
+      "qtd": 2.51,
+      "qtdText": "2.51%",
       "ytd": -0.6,
       "ytdText": "-0.60%",
       "yr1": -0.26,
@@ -452,9 +452,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 15.4,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 15.39,
     "rows": [
       {
         "name": "US GOVT 0.75% 31 JAN 2028",
@@ -494,7 +494,7 @@
       },
       {
         "name": "US GOVT 3.875% 30 NOV 2029",
-        "weight": 0.93
+        "weight": 0.92
       }
     ]
   },
@@ -508,12 +508,12 @@
       "holdings/006.json"
     ],
     "pageSize": 250,
-    "totalRows": 1487,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 1453,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 1478
+    "publishedTotalHoldings": 1445
   },
   "history": {
     "pages": [
@@ -521,8 +521,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1555,
-    "asOf": "Nov 24 2026",
+    "totalRows": 1556,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

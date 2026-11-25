@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GXUS",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$56.51",
-    "value": 56.51,
-    "asOfDate": "Nov 23 2026"
+    "display": "$57.40",
+    "value": 57.4,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$57.34",
-    "value": 57.34,
-    "asOfDate": "Nov 23 2026",
+    "display": "$57.16",
+    "value": 57.16,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "1.46%",
-    "value": 1.46,
-    "asOfDate": "Nov 23 2026",
+    "display": "-0.42%",
+    "value": -0.42,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$571.02 M",
-    "value": 571020000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$580.02 M",
+    "value": 580020000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 2718,
-    "bidAskMidpoint": 57.35,
+    "bidAskMidpoint": 57.06,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.88%",
       "mo3": -2.7,
       "mo3Text": "-2.70%",
-      "qtd": -8.07,
-      "qtdText": "-8.07%",
+      "qtd": -8.2,
+      "qtdText": "-8.20%",
       "ytd": 10.73,
       "ytdText": "10.73%",
       "yr1": 13.91,
@@ -216,48 +216,48 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 13.73,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 14.11,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 4.25
+        "weight": 4.59
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 1.77
+        "weight": 1.86
       },
       {
         "name": "ASML Holding NV",
-        "weight": 1.51
+        "weight": 1.41
       },
       {
         "name": "SK hynix Inc",
-        "weight": 1.34
+        "weight": 1.41
       },
       {
         "name": "Roche Holding AG",
-        "weight": 0.96
-      },
-      {
-        "name": "HSBC Holdings PLC",
-        "weight": 0.81
+        "weight": 0.97
       },
       {
         "name": "Novartis AG",
         "weight": 0.79
       },
       {
-        "name": "Tencent Holdings Ltd",
-        "weight": 0.77
-      },
-      {
-        "name": "Shell PLC",
-        "weight": 0.77
+        "name": "HSBC Holdings PLC",
+        "weight": 0.78
       },
       {
         "name": "AstraZeneca PLC",
+        "weight": 0.78
+      },
+      {
+        "name": "Shell PLC",
+        "weight": 0.76
+      },
+      {
+        "name": "Tencent Holdings Ltd",
         "weight": 0.76
       }
     ]
@@ -278,9 +278,9 @@
     ],
     "pageSize": 250,
     "totalRows": 2750,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 2718
   },
@@ -289,8 +289,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 867,
-    "asOf": "Nov 24 2026",
+    "totalRows": 868,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

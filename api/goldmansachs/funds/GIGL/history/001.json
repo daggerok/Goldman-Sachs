@@ -2,7 +2,7 @@
   "ticker": "GIGL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 357,
+  "totalRows": 358,
   "headers": [
     "Date",
     "Close",
@@ -2151,6 +2151,12 @@
       "Close": "48.630001068115234",
       "Adj Close": "48.63",
       "Volume": "92900"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "48.859500885009766",
+      "Adj Close": "48.86",
+      "Volume": "48331"
     }
   ]
 }

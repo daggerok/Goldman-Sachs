@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 19 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV110834/38149W366/goldman-sachs-securitized-income-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSCZ",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -22,7 +22,7 @@
     "cusip": "38149W366",
     "isin": "US38149W3667",
     "isinBasis": "derived from the published CUSIP (US prefix + check digit)",
-    "indexTicker": "FTSE 3-Month U.S. Treasury Bill Index",
+    "indexTicker": "FTSE 3 Month US Treasury Bill Index",
     "exchange": "NYSE Arca",
     "morningstarCategory": null,
     "navTicker": "GSCZ.NV",
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.03",
-    "value": 50.03,
-    "asOfDate": "Nov 19 2026"
+    "display": "$50.16",
+    "value": 50.16,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$50.01",
-    "value": 50.01,
-    "asOfDate": "Nov 19 2026",
+    "display": "$50.20",
+    "value": 50.2,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.04,
-    "asOfDate": "Nov 19 2026",
+    "display": "0.08%",
+    "value": 0.08,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$20.01 M",
-    "value": 20010000,
-    "asOfDate": "Nov 19 2026",
+    "display": "$20.06 M",
+    "value": 20060000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 86,
-    "bidAskMidpoint": 50.06,
+    "publishedTotalHoldings": 95,
+    "bidAskMidpoint": 50.2,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": null,
@@ -81,7 +81,7 @@
   "returns": {
     "derivedFrom": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
     "monthEnd": {
-      "asOfDate": "Nov 19 2026",
+      "asOfDate": "Nov 25 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
@@ -127,17 +127,17 @@
     "rows": []
   },
   "topHoldings": {
-    "asOfDate": "Nov 19 2026",
-    "asOf": "Nov 19 2026",
-    "top10Pct": 18.99,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 18.21,
     "rows": [
       {
         "name": "CEDAR FUNDING VI AR3 2025-6A FRN 20 APR 2034 144A",
-        "weight": 2.34
+        "weight": 2.33
       },
       {
         "name": "MAGNETITE LI, LIM A1 2025-51A FRN 25 OCT 2038 144A",
-        "weight": 2.26
+        "weight": 2.25
       },
       {
         "name": "GOLDENTREE LOAN MA A 2026-29A FRN 20 APR 2038 144A",
@@ -145,14 +145,10 @@
       },
       {
         "name": "CIFC FUNDING 2021- AR 2025-7A FRN 23 JAN 2035 144A",
-        "weight": 2.01
+        "weight": 2
       },
       {
-        "name": "PIKES PEAK CLO 18 A1 2025-18A FRN 20 APR 2038 144A",
-        "weight": 2.01
-      },
-      {
-        "name": "NISSAN AUTO LEASE TRUS A3 2026-C 5.29% 15 FEB 2030",
+        "name": "NISSAN AUTO LEASE A3 2026-C 5.29% 15 FEB 2030 144A",
         "weight": 2
       },
       {
@@ -165,11 +161,15 @@
       },
       {
         "name": "WIND RIVER 2023-1 BR 2025-1A FRN 25 JUL 2038 144A",
-        "weight": 1.51
+        "weight": 1.5
       },
       {
         "name": "WELLS FARGO COMME B 2024-1CHI FRN 15 JUL 2035 144A",
         "weight": 1.5
+      },
+      {
+        "name": "ARINI US CLO VII LI C 2026-7A FRN 15 JUL 2039 144A",
+        "weight": 1.27
       }
     ]
   },
@@ -178,20 +178,20 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 93,
-    "asOfDate": "2026-11-19",
-    "asOf": "Nov 19 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-19)",
+    "totalRows": 102,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 86
+    "publishedTotalHoldings": 95
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1,
-    "asOf": "Nov 19 2026",
+    "totalRows": 3,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102957/381430396/goldman-sachs-just-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102957/381430396/goldman-sachs-just-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102957/381430396/goldman-sachs-just-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/JUST",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$103.58",
-    "value": 103.58,
-    "asOfDate": "Nov 23 2026"
+    "display": "$103.07",
+    "value": 103.07,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$103.80",
-    "value": 103.8,
-    "asOfDate": "Nov 23 2026",
+    "display": "$103.00",
+    "value": 103,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.21%",
-    "value": 0.21,
-    "asOfDate": "Nov 23 2026",
+    "display": "-0.07%",
+    "value": -0.07,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$528.24 M",
-    "value": 528240000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$525.67 M",
+    "value": 525669999.99999994,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 458,
-    "bidAskMidpoint": 103.56,
+    "bidAskMidpoint": 103.05,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 24,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.53%",
       "mo3": 0.67,
       "mo3Text": "0.67%",
-      "qtd": -5.5,
-      "qtdText": "-5.50%",
+      "qtd": -5.62,
+      "qtdText": "-5.62%",
       "ytd": 12.98,
       "ytdText": "12.98%",
       "yr1": 13.54,
@@ -296,49 +296,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 40.02,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 39.85,
     "rows": [
       {
         "name": "Apple Inc",
-        "weight": 8.75
-      },
-      {
-        "name": "NVIDIA Corp",
-        "weight": 6.68
+        "weight": 8.92
       },
       {
         "name": "Microsoft Corp",
-        "weight": 6.34
+        "weight": 6.42
+      },
+      {
+        "name": "NVIDIA Corp",
+        "weight": 6.32
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 5.29
+        "weight": 5.25
       },
       {
         "name": "Alphabet Inc",
-        "weight": 2.85
+        "weight": 2.83
       },
       {
         "name": "Broadcom Inc",
-        "weight": 2.53
+        "weight": 2.44
       },
       {
         "name": "Alphabet Inc",
-        "weight": 2.3
-      },
-      {
-        "name": "JPMorgan Chase & Co",
-        "weight": 1.95
+        "weight": 2.29
       },
       {
         "name": "Eli Lilly & Co",
-        "weight": 1.89
+        "weight": 1.96
+      },
+      {
+        "name": "JPMorgan Chase & Co",
+        "weight": 1.96
       },
       {
         "name": "ExxonMobil Holdings Corp",
-        "weight": 1.44
+        "weight": 1.46
       }
     ]
   },
@@ -349,9 +349,9 @@
     ],
     "pageSize": 250,
     "totalRows": 459,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 458
   },
@@ -362,8 +362,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2124,
-    "asOf": "Nov 24 2026",
+    "totalRows": 2125,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

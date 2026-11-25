@@ -2,7 +2,7 @@
   "ticker": "GMNY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 552,
+  "totalRows": 553,
   "headers": [
     "Date",
     "Close",
@@ -3321,6 +3321,12 @@
       "Close": "49.02000045776367",
       "Adj Close": "49.02",
       "Volume": "15400"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "49.21989822387695",
+      "Adj Close": "49.22",
+      "Volume": "2435"
     }
   ]
 }

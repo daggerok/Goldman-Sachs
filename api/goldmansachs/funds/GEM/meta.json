@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102391/381430206/goldman-sachs-active-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102391/381430206/goldman-sachs-active-beta-emerging-markets-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102391/381430206/goldman-sachs-active-beta-emerging-markets-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GEM",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$42.66",
-    "value": 42.66,
-    "asOfDate": "Nov 23 2026"
+    "display": "$44.06",
+    "value": 44.06,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$44.34",
-    "value": 44.34,
-    "asOfDate": "Nov 23 2026",
+    "display": "$43.54",
+    "value": 43.54,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "3.94%",
-    "value": 3.94,
-    "asOfDate": "Nov 23 2026",
+    "display": "-1.18%",
+    "value": -1.18,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$1.53 B",
-    "value": 1525050000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$1.58 B",
+    "value": 1575030000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 735,
-    "bidAskMidpoint": 44.39,
+    "bidAskMidpoint": 43.49,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 41,
@@ -86,8 +86,8 @@
       "mo1Text": "-7.99%",
       "mo3": -5.4,
       "mo3Text": "-5.40%",
-      "qtd": -14.51,
-      "qtdText": "-14.51%",
+      "qtd": -14.98,
+      "qtdText": "-14.98%",
       "ytd": 13.23,
       "ytdText": "13.23%",
       "yr1": 14.44,
@@ -296,49 +296,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 33.25,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 34.03,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 14.66
+        "weight": 15.25
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 5.99
+        "weight": 6.21
       },
       {
         "name": "SK hynix Inc",
-        "weight": 3.86
+        "weight": 4.01
       },
       {
         "name": "Tencent Holdings Ltd",
-        "weight": 2.49
+        "weight": 2.4
       },
       {
         "name": "MediaTek Inc",
-        "weight": 1.57
+        "weight": 1.63
       },
       {
         "name": "Alibaba Group Holding Ltd",
-        "weight": 1.5
-      },
-      {
-        "name": "China Construction Bank Corp",
-        "weight": 0.97
+        "weight": 1.44
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 0.89
+        "weight": 0.92
+      },
+      {
+        "name": "China Construction Bank Corp",
+        "weight": 0.91
       },
       {
         "name": "ICICI Bank Ltd",
-        "weight": 0.66
+        "weight": 0.63
       },
       {
         "name": "HDFC Bank Ltd",
-        "weight": 0.66
+        "weight": 0.63
       }
     ]
   },
@@ -350,10 +350,10 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 759,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 762,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 735
   },
@@ -364,8 +364,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2806,
-    "asOf": "Nov 24 2026",
+    "totalRows": 2807,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109041/38149W465/goldman-sachs-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GIGL",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$48.68",
-    "value": 48.68,
-    "asOfDate": "Nov 23 2026"
+    "display": "$48.62",
+    "value": 48.62,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$48.66",
-    "value": 48.66,
-    "asOfDate": "Nov 23 2026",
+    "display": "$48.63",
+    "value": 48.63,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.04,
-    "asOfDate": "Nov 23 2026",
+    "display": "0.02%",
+    "value": 0.02,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$697.37 M",
-    "value": 697370000,
-    "asOfDate": "Nov 23 2026",
+    "display": "$717.16 M",
+    "value": 717160000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 771,
-    "bidAskMidpoint": 48.68,
+    "publishedTotalHoldings": 769,
+    "bidAskMidpoint": 48.67,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 54,
@@ -86,8 +86,8 @@
       "mo1Text": "2.17%",
       "mo3": -0.38,
       "mo3Text": "-0.38%",
-      "qtd": 1.97,
-      "qtdText": "1.97%",
+      "qtd": 2.45,
+      "qtdText": "2.45%",
       "ytd": -1.08,
       "ytdText": "-1.08%",
       "yr1": -0.69,
@@ -228,9 +228,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
-    "top10Pct": 5.01,
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
+    "top10Pct": 4.96,
     "rows": [
       {
         "name": "BACARDI LIMITED 4.7% 15 MAY 2028-28 144A",
@@ -238,7 +238,7 @@
       },
       {
         "name": "FORD MOTOR CREDIT COMPANY LLC 5.42% 09 APR 2031-31",
-        "weight": 0.54
+        "weight": 0.53
       },
       {
         "name": "M&T BANK CORPORATION 5.385% 16 JAN 2036-35",
@@ -246,7 +246,7 @@
       },
       {
         "name": "KIOXIA HOLDINGS CORPORA 6.625% 24 JUL 2033-28 144A",
-        "weight": 0.5
+        "weight": 0.49
       },
       {
         "name": "ALLY FINANCIAL INC. 5.737% 15 MAY 2029-28",
@@ -254,22 +254,22 @@
       },
       {
         "name": "MEXICAN GOVT 6.35% 09 FEB 2035",
-        "weight": 0.48
-      },
-      {
-        "name": "CVS HEALTH CORPORATION 5.45% 15 SEP 2035-35",
-        "weight": 0.48
-      },
-      {
-        "name": "MEXICAN GOVT 5.625% 22 SEP 2035",
-        "weight": 0.48
-      },
-      {
-        "name": "BANK OF AMERICA CORPORATION 4.456% 06 FEB 2032-31",
         "weight": 0.47
       },
       {
-        "name": "B.A.T. CAPITAL CORPORATION 4.906% 02 APR 2030-30",
+        "name": "MEXICAN GOVT 5.625% 22 SEP 2035",
+        "weight": 0.47
+      },
+      {
+        "name": "CVS HEALTH CORPORATION 5.45% 15 SEP 2035-35",
+        "weight": 0.47
+      },
+      {
+        "name": "HCA INC. 5.75% 15 NOV 2033-33",
+        "weight": 0.47
+      },
+      {
+        "name": "BANK OF AMERICA CORPORATION 4.456% 06 FEB 2032-31",
         "weight": 0.47
       }
     ]
@@ -282,20 +282,20 @@
       "holdings/004.json"
     ],
     "pageSize": 250,
-    "totalRows": 793,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 785,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 771
+    "publishedTotalHoldings": 769
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 357,
-    "asOf": "Nov 24 2026",
+    "totalRows": 358,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

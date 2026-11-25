@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 23 2026",
+    "productPageAsOf": "Nov 24 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103157/381430230/goldman-sachs-ultra-short-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GSST",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$50.41",
-    "value": 50.41,
-    "asOfDate": "Nov 23 2026"
-  },
-  "marketPrice": {
     "display": "$50.42",
     "value": 50.42,
-    "asOfDate": "Nov 23 2026",
+    "asOfDate": "Nov 24 2026"
+  },
+  "marketPrice": {
+    "display": "$50.44",
+    "value": 50.44,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.02,
-    "asOfDate": "Nov 23 2026",
+    "display": "0.04%",
+    "value": 0.04,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$1.81 B",
-    "value": 1812270000,
-    "asOfDate": "Nov 23 2026",
+    "value": 1812430000,
+    "asOfDate": "Nov 24 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 359,
-    "bidAskMidpoint": 50.43,
+    "publishedTotalHoldings": 358,
+    "bidAskMidpoint": 50.44,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 58,
@@ -86,8 +86,8 @@
       "mo1Text": "0.44%",
       "mo3": 0.97,
       "mo3Text": "0.97%",
-      "qtd": 0.64,
-      "qtdText": "0.64%",
+      "qtd": 0.7,
+      "qtdText": "0.70%",
       "ytd": 3.15,
       "ytdText": "3.15%",
       "yr1": 3.95,
@@ -516,8 +516,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 23 2026",
-    "asOf": "Nov 23 2026",
+    "asOfDate": "Nov 24 2026",
+    "asOf": "Nov 24 2026",
     "top10Pct": 10.11,
     "rows": [
       {
@@ -568,12 +568,12 @@
       "holdings/002.json"
     ],
     "pageSize": 250,
-    "totalRows": 424,
-    "asOfDate": "2026-11-23",
-    "asOf": "Nov 23 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-23)",
+    "totalRows": 426,
+    "asOfDate": "2026-11-24",
+    "asOf": "Nov 24 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 359
+    "publishedTotalHoldings": 358
   },
   "history": {
     "pages": [
@@ -581,8 +581,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1913,
-    "asOf": "Nov 24 2026",
+    "totalRows": 1914,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

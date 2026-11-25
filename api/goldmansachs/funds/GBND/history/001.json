@@ -2,7 +2,7 @@
   "ticker": "GBND",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 357,
+  "totalRows": 358,
   "headers": [
     "Date",
     "Close",
@@ -2151,6 +2151,12 @@
       "Close": "48.86000061035156",
       "Adj Close": "48.86",
       "Volume": "45700"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "49.029998779296875",
+      "Adj Close": "49.03",
+      "Volume": "61608"
     }
   ]
 }
