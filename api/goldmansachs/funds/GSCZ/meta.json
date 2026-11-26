@@ -81,7 +81,7 @@
   "returns": {
     "derivedFrom": "estimated from Yahoo Finance adjusted market-price closes (chart API), not official Goldman Sachs NAV returns; performanceAsOf is the last close date",
     "monthEnd": {
-      "asOfDate": "Nov 25 2026",
+      "asOfDate": "Nov 20 2026",
       "mo1": null,
       "mo1Text": "—",
       "mo3": null,
@@ -190,8 +190,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
