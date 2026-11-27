@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102395/381430602/goldman-sachs-active-beta-u-s-small-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$83.76",
-    "value": 83.76,
-    "asOfDate": "Nov 24 2026"
+    "display": "$84.15",
+    "value": 84.15,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$83.65",
-    "value": 83.65,
-    "asOfDate": "Nov 24 2026",
+    "display": "$84.19",
+    "value": 84.19,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.13%",
-    "value": -0.13,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
     "display": "$1.02 B",
-    "value": 1017660000,
-    "asOfDate": "Nov 24 2026",
+    "value": 1022410000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 1360,
-    "bidAskMidpoint": 83.78,
+    "bidAskMidpoint": 84.13,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 53,
@@ -86,8 +86,8 @@
       "mo1Text": "1.80%",
       "mo3": -1.85,
       "mo3Text": "-1.85%",
-      "qtd": -2.29,
-      "qtdText": "-2.29%",
+      "qtd": -0.81,
+      "qtdText": "-0.81%",
       "ytd": 16.33,
       "ytdText": "16.33%",
       "yr1": 18.22,
@@ -312,36 +312,40 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 3.92,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 3.91,
     "rows": [
       {
         "name": "CareDx Inc",
-        "weight": 0.63
+        "weight": 0.61
       },
       {
         "name": "10X Genomics Inc",
-        "weight": 0.46
+        "weight": 0.44
       },
       {
         "name": "Alkermes PLC",
-        "weight": 0.41
+        "weight": 0.42
+      },
+      {
+        "name": "Supernus Inc",
+        "weight": 0.4
       },
       {
         "name": "Glaukos Corp",
         "weight": 0.39
       },
       {
-        "name": "Supernus Inc",
-        "weight": 0.39
+        "name": "Bright Horizon Energy Corp",
+        "weight": 0.34
       },
       {
         "name": "TG Therapeutics Inc",
-        "weight": 0.35
+        "weight": 0.34
       },
       {
-        "name": "Bright Horizon Energy Corp",
+        "name": "Abercrombie & Fitch Co",
         "weight": 0.33
       },
       {
@@ -350,10 +354,6 @@
       },
       {
         "name": "Travere Therapeutics Inc",
-        "weight": 0.32
-      },
-      {
-        "name": "Appian Corp",
         "weight": 0.32
       }
     ]
@@ -382,8 +382,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2360,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2361,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

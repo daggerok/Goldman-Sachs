@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV104572/38150W206/goldman-sachs-market-beta-total-international-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$57.40",
-    "value": 57.4,
-    "asOfDate": "Nov 24 2026"
+    "display": "$56.57",
+    "value": 56.57,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$57.16",
-    "value": 57.16,
-    "asOfDate": "Nov 24 2026",
+    "display": "$57.08",
+    "value": 57.08,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.42%",
-    "value": -0.42,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.91%",
+    "value": 0.91,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$580.02 M",
-    "value": 580020000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$571.71 M",
+    "value": 571710000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 2718,
-    "bidAskMidpoint": 57.06,
+    "publishedTotalHoldings": 2719,
+    "bidAskMidpoint": 57.07,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "-2.88%",
       "mo3": -2.7,
       "mo3Text": "-2.70%",
-      "qtd": -8.2,
-      "qtdText": "-8.20%",
+      "qtd": -6.48,
+      "qtdText": "-6.48%",
       "ytd": 10.73,
       "ytdText": "10.73%",
       "yr1": 13.91,
@@ -216,49 +216,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 14.11,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 13.67,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 4.59
+        "weight": 4.47
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 1.86
+        "weight": 1.7
       },
       {
         "name": "ASML Holding NV",
-        "weight": 1.41
+        "weight": 1.35
       },
       {
         "name": "SK hynix Inc",
-        "weight": 1.41
+        "weight": 1.27
       },
       {
         "name": "Roche Holding AG",
-        "weight": 0.97
+        "weight": 0.98
       },
       {
         "name": "Novartis AG",
-        "weight": 0.79
-      },
-      {
-        "name": "HSBC Holdings PLC",
-        "weight": 0.78
+        "weight": 0.8
       },
       {
         "name": "AstraZeneca PLC",
         "weight": 0.78
       },
       {
-        "name": "Shell PLC",
-        "weight": 0.76
+        "name": "HSBC Holdings PLC",
+        "weight": 0.78
       },
       {
-        "name": "Tencent Holdings Ltd",
-        "weight": 0.76
+        "name": "Nestle SA",
+        "weight": 0.77
+      },
+      {
+        "name": "Shell PLC",
+        "weight": 0.77
       }
     ]
   },
@@ -283,15 +283,15 @@
     "asOf": "Nov 25 2026",
     "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 2718
+    "publishedTotalHoldings": 2719
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 868,
-    "asOf": "Nov 25 2026",
+    "totalRows": 869,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

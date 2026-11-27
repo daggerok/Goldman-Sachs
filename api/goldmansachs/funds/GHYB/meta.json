@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102746/381430453/goldman-sachs-access-high-yield-corporate-bond-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GHYB",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "official fund-page Distributions table (distribution per share)",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$42.74",
-    "value": 42.74,
-    "asOfDate": "Nov 24 2026"
+    "display": "$42.69",
+    "value": 42.69,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$42.73",
-    "value": 42.73,
-    "asOfDate": "Nov 24 2026",
+    "display": "$42.79",
+    "value": 42.79,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.01,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.22%",
+    "value": 0.22,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$123.96 M",
-    "value": 123960000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$123.80 M",
+    "value": 123800000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 842,
-    "bidAskMidpoint": 42.74,
+    "bidAskMidpoint": 42.79,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 13,
@@ -86,8 +86,8 @@
       "mo1Text": "0.42%",
       "mo3": -1.09,
       "mo3Text": "-1.09%",
-      "qtd": -0.19,
-      "qtdText": "-0.19%",
+      "qtd": -0.09,
+      "qtdText": "-0.09%",
       "ytd": 0.3,
       "ytdText": "0.30%",
       "yr1": 1.35,
@@ -596,8 +596,8 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
     "top10Pct": 4.85,
     "rows": [
       {
@@ -651,9 +651,9 @@
     ],
     "pageSize": 250,
     "totalRows": 844,
-    "asOfDate": "2026-11-24",
-    "asOf": "Nov 24 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
+    "asOfDate": "2026-11-25",
+    "asOf": "Nov 25 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
     "publishedTotalHoldings": 842
   },
@@ -664,8 +664,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2306,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2307,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

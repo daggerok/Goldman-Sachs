@@ -2,7 +2,7 @@
   "ticker": "GCPB",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 77,
+  "totalRows": 78,
   "headers": [
     "Date",
     "Close",
@@ -471,6 +471,12 @@
       "Close": "49.279998779296875",
       "Adj Close": "49.28",
       "Volume": "15400"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "49.21900177001953",
+      "Adj Close": "49.22",
+      "Volume": "1165"
     }
   ]
 }

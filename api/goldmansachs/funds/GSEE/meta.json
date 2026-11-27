@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103363/381430164/goldman-sachs-market-beta-emerging-markets-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$59.23",
-    "value": 59.23,
-    "asOfDate": "Nov 24 2026"
+    "display": "$57.58",
+    "value": 57.58,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$58.39",
-    "value": 58.39,
-    "asOfDate": "Nov 24 2026",
+    "display": "$58.17",
+    "value": 58.17,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-1.42%",
-    "value": -1.42,
-    "asOfDate": "Nov 24 2026",
+    "display": "1.02%",
+    "value": 1.02,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$121.42 M",
-    "value": 121420000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$118.03 M",
+    "value": 118030000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 1769,
-    "bidAskMidpoint": 58.4,
+    "bidAskMidpoint": 58.17,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 34,
@@ -86,8 +86,8 @@
       "mo1Text": "-8.05%",
       "mo3": -5.58,
       "mo3Text": "-5.58%",
-      "qtd": -15.48,
-      "qtdText": "-15.48%",
+      "qtd": -13.24,
+      "qtdText": "-13.24%",
       "ytd": 12.19,
       "ytdText": "12.19%",
       "yr1": 12.39,
@@ -220,49 +220,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 33.75,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 32.88,
     "rows": [
       {
         "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "weight": 14.3
+        "weight": 14.11
       },
       {
         "name": "Samsung Electronics Co Ltd",
-        "weight": 5.79
+        "weight": 5.37
       },
       {
         "name": "SK hynix Inc",
-        "weight": 4.38
+        "weight": 4.01
       },
       {
         "name": "Tencent Holdings Ltd",
-        "weight": 2.38
+        "weight": 2.42
       },
       {
         "name": "Alibaba Group Holding Ltd",
-        "weight": 1.81
+        "weight": 1.84
       },
       {
         "name": "MediaTek Inc",
-        "weight": 1.55
+        "weight": 1.43
       },
       {
         "name": "China Construction Bank Corp",
-        "weight": 1.06
+        "weight": 1.08
       },
       {
         "name": "HDFC Bank Ltd",
-        "weight": 0.89
+        "weight": 0.96
       },
       {
         "name": "ICICI Bank Ltd",
-        "weight": 0.8
+        "weight": 0.86
       },
       {
-        "name": "Samsung Electronics Co Ltd",
-        "weight": 0.79
+        "name": "Reliance Industries Ltd",
+        "weight": 0.8
       }
     ]
   },
@@ -291,8 +291,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1640,
-    "asOf": "Nov 25 2026",
+    "totalRows": 1641,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

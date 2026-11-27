@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105434/38149W598/goldman-sachs-market-beta-russell-1000-growth-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$58.53",
-    "value": 58.53,
-    "asOfDate": "Nov 24 2026"
+    "display": "$58.18",
+    "value": 58.18,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$58.50",
-    "value": 58.5,
-    "asOfDate": "Nov 24 2026",
+    "display": "$58.13",
+    "value": 58.13,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.05%",
-    "value": -0.05,
-    "asOfDate": "Nov 24 2026",
+    "display": "-0.08%",
+    "value": -0.08,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$535.55 M",
-    "value": 535549999.99999994,
-    "asOfDate": "Nov 24 2026",
+    "display": "$535.30 M",
+    "value": 535299999.99999994,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 369,
-    "bidAskMidpoint": 58.57,
+    "bidAskMidpoint": 58.19,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 36,
@@ -86,8 +86,8 @@
       "mo1Text": "-6.09%",
       "mo3": -0.37,
       "mo3Text": "-0.37%",
-      "qtd": -15.05,
-      "qtdText": "-15.05%",
+      "qtd": -13.21,
+      "qtdText": "-13.21%",
       "ytd": 0.89,
       "ytdText": "0.89%",
       "yr1": -1.31,
@@ -212,49 +212,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 47.36,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 47.17,
     "rows": [
       {
         "name": "NVIDIA Corp",
-        "weight": 9.09
+        "weight": 8.78
       },
       {
         "name": "Apple Inc",
-        "weight": 7.13
+        "weight": 7.2
       },
       {
         "name": "Microsoft Corp",
-        "weight": 4.37
+        "weight": 4.34
       },
       {
         "name": "Tesla Inc",
-        "weight": 4.26
-      },
-      {
-        "name": "Alphabet Inc",
-        "weight": 4.13
-      },
-      {
-        "name": "Eli Lilly & Co",
-        "weight": 4.04
+        "weight": 4.24
       },
       {
         "name": "Meta Platforms Inc",
-        "weight": 4.03
-      },
-      {
-        "name": "Broadcom Inc",
-        "weight": 4.01
+        "weight": 4.19
       },
       {
         "name": "Alphabet Inc",
-        "weight": 3.34
+        "weight": 4.06
       },
       {
-        "name": "Micron Technology Inc",
-        "weight": 2.96
+        "name": "Broadcom Inc",
+        "weight": 4.03
+      },
+      {
+        "name": "Eli Lilly & Co",
+        "weight": 4.02
+      },
+      {
+        "name": "Alphabet Inc",
+        "weight": 3.29
+      },
+      {
+        "name": "Visa Inc",
+        "weight": 3.02
       }
     ]
   },
@@ -276,8 +276,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 750,
-    "asOf": "Nov 25 2026",
+    "totalRows": 751,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,13 +7,13 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV109407/38149W457/goldman-sachs-msci-world-private-equity-return-tracker-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GTPE",
-    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
+    "holdingsSource": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "Goldman Sachs Asset Management fund finder + official fund data API (fund page figures, Distributions table, daily All Holdings) + SEC EDGAR Form N-PORT-P holdings fallback + Yahoo Finance public chart API"
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$54.44",
-    "value": 54.44,
-    "asOfDate": "Nov 24 2026"
+    "display": "$54.49",
+    "value": 54.49,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$54.74",
-    "value": 54.74,
-    "asOfDate": "Nov 24 2026",
+    "display": "$54.67",
+    "value": 54.67,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.55%",
-    "value": 0.55,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.34%",
+    "value": 0.34,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$76.22 M",
-    "value": 76220000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$76.28 M",
+    "value": 76280000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 1595,
-    "bidAskMidpoint": 54.74,
+    "publishedTotalHoldings": 1596,
+    "bidAskMidpoint": 54.65,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 53,
@@ -86,8 +86,8 @@
       "mo1Text": "-1.63%",
       "mo3": -0.27,
       "mo3Text": "-0.27%",
-      "qtd": -9.93,
-      "qtdText": "-9.93%",
+      "qtd": -8.15,
+      "qtdText": "-8.15%",
       "ytd": 15.06,
       "ytdText": "15.06%",
       "yr1": 18.13,
@@ -145,49 +145,49 @@
     "rows": []
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 19.3,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 19.38,
     "rows": [
       {
         "name": "Advanced Micro Devices Inc",
-        "weight": 2.72
+        "weight": 2.68
       },
       {
         "name": "Palantir Technologies Inc",
-        "weight": 2.21
-      },
-      {
-        "name": "NVIDIA Corp",
-        "weight": 1.97
+        "weight": 2.25
       },
       {
         "name": "Broadcom Inc",
-        "weight": 1.94
+        "weight": 1.95
       },
       {
-        "name": "Welltower Inc",
-        "weight": 1.87
+        "name": "NVIDIA Corp",
+        "weight": 1.9
       },
       {
         "name": "Lockheed Martin Corp",
-        "weight": 1.85
+        "weight": 1.89
+      },
+      {
+        "name": "Welltower Inc",
+        "weight": 1.89
       },
       {
         "name": "Automatic Data Processing Inc",
-        "weight": 1.84
+        "weight": 1.88
       },
       {
         "name": "Bank of New York Mellon Corp",
-        "weight": 1.66
+        "weight": 1.68
       },
       {
         "name": "Starbucks Corp",
-        "weight": 1.62
+        "weight": 1.65
       },
       {
         "name": "GE Vernova Inc",
-        "weight": 1.62
+        "weight": 1.61
       }
     ]
   },
@@ -202,20 +202,20 @@
       "holdings/007.json"
     ],
     "pageSize": 250,
-    "totalRows": 1607,
-    "asOfDate": "2026-11-24",
-    "asOf": "Nov 24 2026",
-    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-24)",
+    "totalRows": 1609,
+    "asOfDate": "2026-11-25",
+    "asOf": "Nov 25 2026",
+    "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 1595
+    "publishedTotalHoldings": 1596
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 275,
-    "asOf": "Nov 25 2026",
+    "totalRows": 276,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

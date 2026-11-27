@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105433/38149W580/goldman-sachs-market-beta-russell-1000-value-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$65.17",
-    "value": 65.17,
-    "asOfDate": "Nov 24 2026"
+    "display": "$65.41",
+    "value": 65.41,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$65.15",
-    "value": 65.15,
-    "asOfDate": "Nov 24 2026",
+    "display": "$65.51",
+    "value": 65.51,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.03,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.15%",
+    "value": 0.15,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$461.07 M",
-    "value": 461070000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$462.76 M",
+    "value": 462760000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 858,
-    "bidAskMidpoint": 65.21,
+    "bidAskMidpoint": 65.42,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 40,
@@ -86,8 +86,8 @@
       "mo1Text": "4.37%",
       "mo3": 3.14,
       "mo3Text": "3.14%",
-      "qtd": 2.89,
-      "qtdText": "2.89%",
+      "qtd": 3.85,
+      "qtdText": "3.85%",
       "ytd": 24.37,
       "ytdText": "24.37%",
       "yr1": 28.5,
@@ -212,9 +212,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 29.74,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 29.36,
     "rows": [
       {
         "name": "Apple Inc",
@@ -222,11 +222,11 @@
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 6.01
+        "weight": 5.8
       },
       {
         "name": "Microsoft Corp",
-        "weight": 4.94
+        "weight": 4.86
       },
       {
         "name": "Berkshire Hathaway Inc",
@@ -234,23 +234,23 @@
       },
       {
         "name": "JPMorgan Chase & Co",
-        "weight": 2.27
+        "weight": 2.26
       },
       {
         "name": "Johnson & Johnson",
-        "weight": 1.79
+        "weight": 1.76
       },
       {
         "name": "ExxonMobil Holdings Corp",
-        "weight": 1.75
+        "weight": 1.74
       },
       {
         "name": "Walmart Inc",
-        "weight": 1.42
+        "weight": 1.41
       },
       {
         "name": "AbbVie Inc",
-        "weight": 1.31
+        "weight": 1.28
       },
       {
         "name": "Procter & Gamble Co",
@@ -278,8 +278,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 750,
-    "asOf": "Nov 25 2026",
+    "totalRows": 751,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

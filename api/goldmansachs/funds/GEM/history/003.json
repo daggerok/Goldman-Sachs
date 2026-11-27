@@ -2,7 +2,7 @@
   "ticker": "GEM",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2807,
+  "totalRows": 2808,
   "headers": [
     "Date",
     "Close",
@@ -4851,6 +4851,12 @@
       "Close": "43.29999923706055",
       "Adj Close": "43.3",
       "Volume": "372600"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "44.47999954223633",
+      "Adj Close": "44.48",
+      "Volume": "61812"
     }
   ]
 }

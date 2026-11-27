@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102787/381430438/goldman-sachs-equal-weight-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$93.70",
-    "value": 93.7,
-    "asOfDate": "Nov 24 2026"
+    "display": "$94.41",
+    "value": 94.41,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$93.68",
-    "value": 93.68,
-    "asOfDate": "Nov 24 2026",
+    "display": "$94.36",
+    "value": 94.36,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.02,
-    "asOfDate": "Nov 24 2026",
+    "display": "-0.05%",
+    "value": -0.05,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$2.13 B",
-    "value": 2126909999.9999998,
-    "asOfDate": "Nov 24 2026",
+    "display": "$2.14 B",
+    "value": 2143110000.0000002,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 495,
-    "bidAskMidpoint": 93.71,
+    "bidAskMidpoint": 94.38,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "3.74%",
       "mo3": 2.26,
       "mo3Text": "2.26%",
-      "qtd": 0.68,
-      "qtdText": "0.68%",
+      "qtd": 2.21,
+      "qtdText": "2.21%",
       "ytd": 14.65,
       "ytdText": "14.65%",
       "yr1": 15.78,
@@ -308,9 +308,9 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 2.71,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 2.72,
     "rows": [
       {
         "name": "Kimberly-Clark Corp",
@@ -322,34 +322,34 @@
       },
       {
         "name": "AppLovin Corp",
-        "weight": 0.3
+        "weight": 0.29
       },
       {
         "name": "Fox Corp",
         "weight": 0.28
       },
       {
+        "name": "Charter Communications Inc",
+        "weight": 0.26
+      },
+      {
         "name": "Ubiquiti Inc",
         "weight": 0.25
       },
       {
-        "name": "Charter Communications Inc",
+        "name": "ROBLOX Corp",
         "weight": 0.24
       },
       {
         "name": "Viking Holdings Ltd",
-        "weight": 0.24
-      },
-      {
-        "name": "ROBLOX Corp",
         "weight": 0.23
       },
       {
-        "name": "Cloudflare Inc",
+        "name": "Motorola Solutions Inc",
         "weight": 0.23
       },
       {
-        "name": "Target Corp",
+        "name": "CH Robinson Worldwide Inc",
         "weight": 0.23
       }
     ]
@@ -374,8 +374,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2312,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2313,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

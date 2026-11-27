@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV103849/38149W812/goldman-sachs-future-tech-leaders-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$44.38",
-    "value": 44.38,
-    "asOfDate": "Nov 24 2026"
+    "display": "$43.21",
+    "value": 43.21,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$43.62",
-    "value": 43.62,
-    "asOfDate": "Nov 24 2026",
+    "display": "$44.94",
+    "value": 44.94,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-1.71%",
-    "value": -1.71,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.97%",
+    "value": 0.97,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$188.62 M",
-    "value": 188620000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$183.65 M",
+    "value": 183650000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 58,
-    "bidAskMidpoint": 43.58,
+    "publishedTotalHoldings": 57,
+    "bidAskMidpoint": 43.55,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 37,
@@ -86,8 +86,8 @@
       "mo1Text": "-11.89%",
       "mo3": -4.4,
       "mo3Text": "-4.40%",
-      "qtd": -26.54,
-      "qtdText": "-26.54%",
+      "qtd": -23.14,
+      "qtdText": "-23.14%",
       "ytd": 28.9,
       "ytdText": "28.90%",
       "yr1": 24.85,
@@ -180,49 +180,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 29.74,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 29.75,
     "rows": [
       {
-        "name": "MediaTek Inc",
-        "weight": 3.44
-      },
-      {
         "name": "Cloudflare Inc",
-        "weight": 3.44
+        "weight": 3.49
       },
       {
-        "name": "SK Square Co Ltd",
-        "weight": 3.16
-      },
-      {
-        "name": "ASE Technology Holding Co Ltd",
-        "weight": 3.12
+        "name": "MediaTek Inc",
+        "weight": 3.17
       },
       {
         "name": "Motorola Solutions Inc",
-        "weight": 3.02
+        "weight": 3.17
       },
       {
         "name": "Amphenol Corp",
-        "weight": 2.9
+        "weight": 2.96
+      },
+      {
+        "name": "ASE Technology Holding Co Ltd",
+        "weight": 2.94
+      },
+      {
+        "name": "SK Square Co Ltd",
+        "weight": 2.89
       },
       {
         "name": "eBay Inc",
-        "weight": 2.74
-      },
-      {
-        "name": "Snowflake Inc",
-        "weight": 2.73
+        "weight": 2.86
       },
       {
         "name": "Spotify Technology SA",
-        "weight": 2.63
+        "weight": 2.78
+      },
+      {
+        "name": "Snowflake Inc",
+        "weight": 2.77
       },
       {
         "name": "Eternal Ltd",
-        "weight": 2.56
+        "weight": 2.72
       }
     ]
   },
@@ -236,7 +236,7 @@
     "asOf": "Nov 25 2026",
     "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 58
+    "publishedTotalHoldings": 57
   },
   "history": {
     "pages": [
@@ -244,8 +244,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1305,
-    "asOf": "Nov 25 2026",
+    "totalRows": 1306,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102394/381430503/goldman-sachs-active-beta-u-s-large-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$138.03",
-    "value": 138.03,
-    "asOfDate": "Nov 24 2026"
+    "display": "$137.85",
+    "value": 137.85,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$138.03",
-    "value": 138.03,
-    "asOfDate": "Nov 24 2026",
+    "display": "$137.90",
+    "value": 137.9,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.04%",
+    "value": 0.04,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$14.21 B",
-    "value": 14210450000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$14.19 B",
+    "value": 14185620000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 423,
-    "bidAskMidpoint": 138.08,
+    "bidAskMidpoint": 137.86,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 27,
@@ -86,8 +86,8 @@
       "mo1Text": "-0.46%",
       "mo3": 1.4,
       "mo3Text": "1.40%",
-      "qtd": -5.23,
-      "qtdText": "-5.23%",
+      "qtd": -3.77,
+      "qtdText": "-3.77%",
       "ytd": 9.95,
       "ytdText": "9.95%",
       "yr1": 10.42,
@@ -340,49 +340,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 34.29,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 33.9,
     "rows": [
       {
         "name": "Apple Inc",
-        "weight": 8.29
+        "weight": 8.33
       },
       {
         "name": "NVIDIA Corp",
-        "weight": 5.98
+        "weight": 5.76
       },
       {
         "name": "Microsoft Corp",
-        "weight": 5.53
+        "weight": 5.47
       },
       {
         "name": "Amazon.com Inc",
-        "weight": 3.6
+        "weight": 3.49
       },
       {
         "name": "Alphabet Inc",
-        "weight": 2.47
+        "weight": 2.42
+      },
+      {
+        "name": "Meta Platforms Inc",
+        "weight": 2.07
       },
       {
         "name": "Broadcom Inc",
         "weight": 2.02
       },
       {
-        "name": "Meta Platforms Inc",
-        "weight": 2
-      },
-      {
         "name": "Alphabet Inc",
-        "weight": 1.65
+        "weight": 1.62
       },
       {
         "name": "Eli Lilly & Co",
-        "weight": 1.58
+        "weight": 1.56
       },
       {
-        "name": "Tesla Inc",
-        "weight": 1.17
+        "name": "JPMorgan Chase & Co",
+        "weight": 1.16
       }
     ]
   },
@@ -406,8 +406,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2813,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2814,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

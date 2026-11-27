@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV105332/38149W614/goldman-sachs-small-cap-equity-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$61.29",
-    "value": 61.29,
-    "asOfDate": "Nov 24 2026"
+    "display": "$61.57",
+    "value": 61.57,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$61.35",
-    "value": 61.35,
-    "asOfDate": "Nov 24 2026",
+    "display": "$61.60",
+    "value": 61.6,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.1,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.05%",
+    "value": 0.05,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$311.06 M",
-    "value": 311060000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$312.47 M",
+    "value": 312470000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
     "publishedTotalHoldings": 95,
-    "bidAskMidpoint": 61.31,
+    "bidAskMidpoint": 61.56,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 48,
@@ -86,8 +86,8 @@
       "mo1Text": "2.22%",
       "mo3": -4.03,
       "mo3Text": "-4.03%",
-      "qtd": -1.16,
-      "qtdText": "-1.16%",
+      "qtd": 0.34,
+      "qtdText": "0.34%",
       "ytd": 16.4,
       "ytdText": "16.40%",
       "yr1": 19.3,
@@ -216,41 +216,41 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 17.13,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 17.18,
     "rows": [
       {
         "name": "Life Time Group Holdings Inc",
-        "weight": 2.02
+        "weight": 2.01
       },
       {
         "name": "Glaukos Corp",
-        "weight": 1.93
+        "weight": 1.94
       },
       {
         "name": "Skyward Specialty Insurance Group Inc",
-        "weight": 1.8
+        "weight": 1.79
       },
       {
         "name": "Manhattan Associates Inc",
-        "weight": 1.77
+        "weight": 1.78
       },
       {
         "name": "Terex Corp",
-        "weight": 1.68
-      },
-      {
-        "name": "Terreno Realty Corp",
-        "weight": 1.68
+        "weight": 1.69
       },
       {
         "name": "Alkermes PLC",
-        "weight": 1.64
+        "weight": 1.67
+      },
+      {
+        "name": "Terreno Realty Corp",
+        "weight": 1.67
       },
       {
         "name": "Valley National Bancorp",
-        "weight": 1.6
+        "weight": 1.61
       },
       {
         "name": "Renasant Corp",
@@ -258,7 +258,7 @@
       },
       {
         "name": "Teleflex Inc",
-        "weight": 1.5
+        "weight": 1.51
       }
     ]
   },
@@ -279,8 +279,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 788,
-    "asOf": "Nov 25 2026",
+    "totalRows": 789,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

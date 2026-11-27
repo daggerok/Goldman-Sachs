@@ -7,7 +7,7 @@
     "fundPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "officialProductPage": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "productPageRendering": "official fund data API behind the fund page (am.gs.com/services/funds, direct)",
-    "productPageAsOf": "Nov 24 2026",
+    "productPageAsOf": "Nov 25 2026",
     "holdingsDownload": "https://am.gs.com/en-us/individual/funds/detail/PV102634/381430545/goldman-sachs-hedge-industry-vip-etf",
     "distributionsDownload": null,
     "navHistoryDownload": null,
@@ -35,33 +35,33 @@
     "kind": "Net Expense Ratio published on the official fund page (gross expense ratio in `gross`)"
   },
   "nav": {
-    "display": "$148.07",
-    "value": 148.07,
-    "asOfDate": "Nov 24 2026"
+    "display": "$149.16",
+    "value": 149.16,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$147.89",
-    "value": 147.89,
-    "asOfDate": "Nov 24 2026",
+    "display": "$149.28",
+    "value": 149.28,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.12,
-    "asOfDate": "Nov 24 2026",
+    "display": "0.08%",
+    "value": 0.08,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Pricing Table"
   },
   "aum": {
-    "display": "$499.74 M",
-    "value": 499740000,
-    "asOfDate": "Nov 24 2026",
+    "display": "$503.42 M",
+    "value": 503420000,
+    "asOfDate": "Nov 25 2026",
     "source": "official fund page Total Fund Assets (Daily)"
   },
   "fundFacts": {
     "sharesOutstanding": null,
     "portfolioTurnover": null,
-    "publishedTotalHoldings": 52,
-    "bidAskMidpoint": 149.06,
+    "publishedTotalHoldings": 51,
+    "bidAskMidpoint": 149.24,
     "lbmaGoldPrice": null,
     "lbmaGoldPriceAsOf": null,
     "premiumDays": 37,
@@ -86,8 +86,8 @@
       "mo1Text": "-6.54%",
       "mo3": -5.84,
       "mo3Text": "-5.84%",
-      "qtd": -12.45,
-      "qtdText": "-12.45%",
+      "qtd": -10.73,
+      "qtdText": "-10.73%",
       "ytd": 2.64,
       "ytdText": "2.64%",
       "yr1": 2.69,
@@ -240,49 +240,49 @@
     ]
   },
   "topHoldings": {
-    "asOfDate": "Nov 24 2026",
-    "asOf": "Nov 24 2026",
-    "top10Pct": 21.32,
+    "asOfDate": "Nov 25 2026",
+    "asOf": "Nov 25 2026",
+    "top10Pct": 21.43,
     "rows": [
       {
-        "name": "Revolution Medicines Inc",
-        "weight": 2.28
+        "name": "Somnigroup International Inc",
+        "weight": 2.22
       },
       {
         "name": "API Group Corp",
         "weight": 2.21
       },
       {
-        "name": "Somnigroup International Inc",
-        "weight": 2.17
+        "name": "Revolution Medicines Inc",
+        "weight": 2.2
+      },
+      {
+        "name": "Compass Inc",
+        "weight": 2.18
       },
       {
         "name": "Ascendis Pharma A/S",
-        "weight": 2.12
+        "weight": 2.13
       },
       {
         "name": "Apple Inc",
-        "weight": 2.11
+        "weight": 2.1
       },
       {
-        "name": "Danaher Corp",
-        "weight": 2.09
+        "name": "Spotify Technology SA",
+        "weight": 2.1
+      },
+      {
+        "name": "Abivax SA",
+        "weight": 2.1
       },
       {
         "name": "United Therapeutics Corp",
-        "weight": 2.09
-      },
-      {
-        "name": "NVIDIA Corp",
-        "weight": 2.09
+        "weight": 2.1
       },
       {
         "name": "MercadoLibre Inc",
-        "weight": 2.08
-      },
-      {
-        "name": "Intel Corp",
-        "weight": 2.08
+        "weight": 2.09
       }
     ]
   },
@@ -296,7 +296,7 @@
     "asOf": "Nov 25 2026",
     "source": "Goldman Sachs fund data API All Holdings (am.gs.com/services/funds, daily, as of 2026-11-25)",
     "marketValueBasis": "Goldman Sachs fund data API market value (USD)",
-    "publishedTotalHoldings": 52
+    "publishedTotalHoldings": 51
   },
   "history": {
     "pages": [
@@ -305,8 +305,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2523,
-    "asOf": "Nov 25 2026",
+    "totalRows": 2524,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
