@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T23:19:32Z",
+  "generatedAt": "2026-11-27T09:42:32Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -12,7 +12,7 @@
   },
   "counts": {
     "funds": 49,
-    "holdings": 28178,
+    "holdings": 28179,
     "history": 60832
   },
   "funds": [
@@ -862,17 +862,17 @@
       "terValue": 0.75,
       "terGross": "0.75%",
       "terGrossValue": 0.75,
-      "nav": "$39.30",
-      "navValue": 39.3,
-      "aum": "$20.63 M",
-      "aumValue": 20630000,
-      "asOfDate": "Nov 24 2026",
+      "nav": "$39.08",
+      "navValue": 39.08,
+      "aum": "$20.51 M",
+      "aumValue": 20510000,
+      "asOfDate": "Nov 25 2026",
       "inceptionDate": "Nov 09 2021",
       "exchange": "NYSE Arca",
-      "closePrice": "$39.31",
-      "closePriceValue": 39.31,
-      "premiumDiscount": "0.02%",
-      "premiumDiscountValue": 0.02,
+      "closePrice": "$39.06",
+      "closePriceValue": 39.06,
+      "premiumDiscount": "-0.05%",
+      "premiumDiscountValue": -0.05,
       "frequencyCode": "04 - Quarterly",
       "distributions": {
         "frequency": "Quarterly",
@@ -1125,7 +1125,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-10-31"
       },
-      "holdings": 762,
+      "holdings": 761,
       "history": 2807
     },
     {
@@ -1403,7 +1403,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-10-31"
       },
-      "holdings": 240,
+      "holdings": 241,
       "history": 25
     },
     {
@@ -4183,7 +4183,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-10-31"
       },
-      "holdings": 900,
+      "holdings": 901,
       "history": 1640
     },
     {
@@ -5295,7 +5295,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-10-31"
       },
-      "holdings": 64,
+      "holdings": 63,
       "history": 1305
     },
     {
@@ -6685,7 +6685,7 @@
         "returnsBasis": "official Goldman Sachs fund-page NAV returns (month-end table; performanceAsOf is its date); periods the page does not publish stay null and are never estimated from market prices",
         "performanceAsOf": "2026-10-31"
       },
-      "holdings": 2750,
+      "holdings": 2751,
       "history": 868
     },
     {

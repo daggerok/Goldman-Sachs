@@ -1,0 +1,30 @@
+{
+  "ticker": "GXUS",
+  "page": 12,
+  "pageSize": 250,
+  "totalRows": 2751,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "ISIN",
+    "SEDOL"
+  ],
+  "rows": [
+    {
+      "Name": "AED",
+      "Ticker": "-",
+      "Identifier": "CSH_AED",
+      "Weight": "0",
+      "Market Value": "15968.46",
+      "Shares Held": "0",
+      "Asset Category": "",
+      "ISIN": "CSH_AED",
+      "SEDOL": "CSH_AED"
+    }
+  ]
+}
