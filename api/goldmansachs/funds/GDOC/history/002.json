@@ -2,7 +2,7 @@
   "ticker": "GDOC",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1265,
+  "totalRows": 1266,
   "headers": [
     "Date",
     "Close",
@@ -1599,6 +1599,12 @@
       "Close": "39.060001373291016",
       "Adj Close": "39.06",
       "Volume": "1200"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "39.165000915527344",
+      "Adj Close": "39.17",
+      "Volume": "100"
     }
   ]
 }
