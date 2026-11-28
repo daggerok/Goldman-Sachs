@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T22:57:45Z",
+  "generatedAt": "2026-11-28T00:05:14Z",
   "source": {
     "provider": "Goldman Sachs Asset Management, U.S.-listed ETFs",
     "market": "us",
@@ -2924,7 +2924,7 @@
         "beta1yQqq": 0.89,
         "corr1yQqq": 1,
         "upCapture3yQqq": 85.43,
-        "downCapture3yQqq": 78.32,
+        "downCapture3yQqq": 78.33,
         "relStrength3mQqq": -1.32,
         "stressReturnQqq": -17.78,
         "stressBasisQqq": "QQQ -20% 2026-10-06 to 2026-11-20",
@@ -4018,7 +4018,7 @@
         "maxDrawdown3y": null,
         "maxDrawdown5y": null,
         "maxDrawdown10y": null,
-        "vsSpy1y": -11.19,
+        "vsSpy1y": -11.2,
         "vsSpy3y": null,
         "vsSpy5y": null,
         "vsSpy10y": null,
@@ -6242,7 +6242,7 @@
         "maxDrawdown3y": -25.95,
         "maxDrawdown5y": -35.33,
         "maxDrawdown10y": -37.09,
-        "vsSpy1y": -8.03,
+        "vsSpy1y": -8.04,
         "vsSpy3y": 0.25,
         "vsSpy5y": -2.52,
         "vsSpy10y": -0.35,
